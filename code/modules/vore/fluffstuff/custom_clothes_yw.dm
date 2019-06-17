@@ -1051,6 +1051,10 @@
 	force = 2
 	punch_force = 2
 
+/obj/item/clothing/suit/storage/toggle/labcoat/fluff/jiao_labcoat/loadout
+	name = "Elegant Elongated Labcoat"
+	desc = "A white labcoat that seems to have been extended down to cover the legs as well, around the cuffs and bottom is a lay of fluff."
+
 
 // ************
 // RadiantFlash

@@ -33,6 +33,7 @@
 	var/mineral = null
 	var/justzap = 0
 	var/safe = 1
+	var/emergency = 0 // YW edit, is the door in emergency mode?
 	normalspeed = 1
 	var/obj/item/weapon/airlock_electronics/electronics = null
 	var/hasShocked = 0 //Prevents multiple shocks from happening
@@ -636,7 +637,7 @@ About the new airlock wires panel:
 	else if(!activate && !src.aiDisabledIdScanner)
 		src.aiDisabledIdScanner = 1
 		message = "IdScan feature has been disabled."
-
+	// TODO: See if this can be used to enable emergency mode
 	if(feedback && message)
 		to_chat(usr,message)
 

@@ -744,6 +744,7 @@ About the new airlock wires panel:
 	commands[++commands.len] = list("name" = "Safeties",				"command"= "safeties",				"active" = safe,					"enabled" = "Nominal",	"disabled" = "Overridden",	"danger" = 1, "act" = 0)
 	commands[++commands.len] = list("name" = "Timing",					"command"= "timing",				"active" = normalspeed,				"enabled" = "Nominal",	"disabled" = "Overridden",	"danger" = 1, "act" = 0)
 	commands[++commands.len] = list("name" = "Door State",				"command"= "open",					"active" = density,					"enabled" = "Closed",	"disabled" = "Opened", 		"danger" = 0, "act" = 0)
+	// commands[++commands.len] = list("name" = "Emergency Access",        "command"= "emergency override",    "active" = emergency,               "enabled" = "Active",   "disabled" = "Inactive",    "danger" = 0, "act" = 0)
 
 	data["commands"] = commands
 

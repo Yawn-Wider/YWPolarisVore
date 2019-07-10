@@ -33,7 +33,7 @@
         return
      if(!(D.arePowerSystemsOn())
         return
-    if() // check to see if opener has the appropriate access in door remote. If so, do something!
+    if(D.checkAccess(ID)) // check to see if opener has the appropriate access in door remote. If so, do something!
         switch(mode)
             if(REMOTE_OPEN)
                 if(D.checkAccess(ID))

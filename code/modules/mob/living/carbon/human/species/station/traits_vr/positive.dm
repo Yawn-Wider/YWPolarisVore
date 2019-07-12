@@ -146,7 +146,7 @@
 	name = "Winged Flight"
 	desc = "Allows you to fly by using your wings. Don't forget to bring them!"
 	cost = 1
-	var_changes = list("softfall" = TRUE) // YW change
+	var_changes = list("softfall" = 1) // YW change
 
 /datum/trait/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -184,6 +184,7 @@
 	name="Perceptive Hearing"
 	desc = "You can hear slight vibrations in the air very easily, if you focus."
 	cost = 1
+	
 /datum/trait/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/carbon/human/proc/sonar_ping

@@ -416,6 +416,45 @@
 	ship_prefixes = list("TTV" = "transport", "TTV" = "luxury transit")
 	destination_names = list()
 
+/datum/lore/organization/tsc/aphrodite //A tribute to another SS13 server that is no longer running. Many of the players migrated to yawn.
+	name = "Aphrodite Fulfillment Ltd."
+	short_name = "Aphrodite"
+	acronym = "ARF"
+	desc = "One of the less powerful TSCs, AphRodite Fulfillment Limited (ARF) focuses on consumer enjoyment and pleasure. \
+	While they cover a broad range of services, they are most known for their manufacture of exotic and erotic adult toys, as well as \
+	the interstellar 'pleasure cruises' that they offer which are frquently, though not always, adult in nature. They also offer other luxury \
+	services and products, such as custom-made prosthesises, unconventional (but not experimental) gene therapy, and luxury adult entertainment."				// One or two paragraph description of the organization, but only current stuff.  Currently unused.
+	history = ""
+	work = "luxury and adult goods and services"
+	headquarters = ""
+	motto = "Your pleasure is our pleasure"
+	ship_prefixes = list("ARFS" = "general supply", "ARFS" = "pleasure cruiser", "ARFS" = "transport")
+	ship_names = list(	//Generally love themed.
+		"Dallus", //the original ship map used by the ARFS server. Spelled with a u intentionally, because reasons.
+		"Endeavor", //another ship map used by the ARFS server. Citadel Station's RP server will likely use this map in future.
+		"Red Rocket",
+		"Silver Soul",
+		"Lusty Xenomorph Maid",
+		"Cupid's Arrow",
+		"Midnight Heart",
+		"Friendship Set To Music",
+		"Ahrima",
+		"Nidria",
+		"Adakias",
+		"Anurha",
+		"Pheonix",
+		"Eros", //greek god of love
+		"Bastet", //egyptian goddess of love (and cat(girls))
+		"Min", //egyptian goddess of reproduction and pleasure
+		"Freyja", //germanic goddess of love, the "norse aphrodite"
+		"Kama", //hindu god of love
+		"Yue-Lao", //chinese god of love
+		"Peng-Zu", //chinese god of sexual health
+		"Hedone" //greek goddess of pleasure
+		)
+	destination_names = list()
+	autogenerate_destination_names = TRUE
+
 /datum/lore/organization/tsc/independent
 	name = "Free Traders"
 	short_name = "Free Trader"

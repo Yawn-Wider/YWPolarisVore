@@ -83,3 +83,8 @@
 	<br><br>\
 	Vey-Med bodies are only accessible to the extremely wealthy, almost exclusively humans. Positronics find them unsettling in much the same way humans do Morpheus, and the idea of putting a drone in a Vey-Med body, if not a crude joke, is utterly ridiculous to anyone with any sort of sense. They are absolutely inappropriate for manual labor or combat, being fragile and usually fairly weak compared to other prosthetics."
 
+/datum/lore/codex/page/robo_aphrodite
+	name = "Aphrodite Ltd."
+	data = "While Aphrodite is not particularly know for prosthesis manufacturing, they never the less have a small hand in the field. Aphrodite cybernetics are exclusively custom designed for the user, and are generally more exotic than those of other manufacturers. One set of Aphrodite prothesises will very rarely look similar to another set. They cater to those with unusual body designs, or just those looking to achieve some strange fantasy with their bodies. \
+	<br><br>\
+	Aphrodite's prothesises and bodies tend to be more expensive and luxury than other companies. Not nearly as expensive as Vey-Med's product line, they are nevertheless expensive due to the extensive custom desinging proccess that goes into each set"

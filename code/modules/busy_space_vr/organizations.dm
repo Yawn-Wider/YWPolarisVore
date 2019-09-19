@@ -137,7 +137,7 @@
 	desc = "Hephaestus Industries is the largest supplier of arms, ammunition, and small millitary vehicles in Sol space. \
 	Hephaestus products have a reputation for reliability, and the corporation itself has a noted tendency to stay removed \
 	from corporate politics. They enforce their neutrality with the help of a fairly large asset-protection contingent which \
-	prevents any contracting polities from using their own materiel against them. SolGov itself is one of Hephastus’ largest \
+	prevents any contracting polities from using their own materiel against them. SolGov itself is one of Hephastusâ€™ largest \
 	bulk contractors owing to the above factors."
 	history = ""
 	work = "arms manufacturer"
@@ -177,8 +177,8 @@
 	Despite the suspicion and prejudice leveled at them for their alien origin, Vey-Med has obtained market dominance in \
 	the sale of medical equipment-- from surgical tools to large medical devices to the Oddyseus trauma response mecha \
 	and everything in between. Their equipment tends to be top-of-the-line, most obviously shown by their incredibly \
-	human-like FBP designs. Vey’s rise to stardom came from their introduction of ressurective cloning, although in \
-	recent years they’ve been forced to diversify as their patents expired and NanoTrasen-made medications became \
+	human-like FBP designs. Veyâ€™s rise to stardom came from their introduction of ressurective cloning, although in \
+	recent years theyâ€™ve been forced to diversify as their patents expired and NanoTrasen-made medications became \
 	essential to modern cloning."
 	history = ""
 	work = "medical equipment supplier"
@@ -214,8 +214,8 @@
 	acronym = "ZH"
 	desc = "Zeng-Hu is an old TSC, based in the Sol system. Until the discovery of Phoron, Zeng-Hu maintained a stranglehold \
 	on the market for medications, and many household names are patentted by Zeng-Hu-- Bicaridyne, Dylovene, Tricordrizine, \
-	and Dexalin all came from a Zeng-Hu medical laboratory. Zeng-Hu’s fortunes have been in decline as Nanotrasen’s near monopoly \
-	on phoron research cuts into their R&D and Vey-Med’s superior medical equipment effectively decimated their own equipment \
+	and Dexalin all came from a Zeng-Hu medical laboratory. Zeng-Huâ€™s fortunes have been in decline as Nanotrasenâ€™s near monopoly \
+	on phoron research cuts into their R&D and Vey-Medâ€™s superior medical equipment effectively decimated their own equipment \
 	interests. The three-way rivalry between these companies for dominance in the medical field is well-known and a matter of \
 	constant economic speculation."
 	history = ""
@@ -233,8 +233,8 @@
 	desc = "Ward-Takahashi focuses on the sale of small consumer electronics, with its computers, communicators, \
 	and even mid-class automobiles a fixture of many households. Less famously, Ward-Takahashi also supplies most \
 	of the AI cores on which vital control systems are mounted, and it is this branch of their industry that has \
-	led to their tertiary interest in the development and sale of high-grade AI systems. Ward-Takahashi’s economies \
-	of scale frequently steal market share from Nanotrasen’s high-price products, leading to a bitter rivalry in the \
+	led to their tertiary interest in the development and sale of high-grade AI systems. Ward-Takahashiâ€™s economies \
+	of scale frequently steal market share from Nanotrasenâ€™s high-price products, leading to a bitter rivalry in the \
 	consumer electronics market."
 	history = ""
 	work = "electronics manufacturer"
@@ -261,10 +261,10 @@
 	name = "Bishop Cybernetics"
 	short_name = "Bishop"
 	acronym = "BC"
-	desc = "Bishop’s focus is on high-class, stylish cybernetics. A favorite among transhumanists (and a bête noire for \
+	desc = "Bishopâ€™s focus is on high-class, stylish cybernetics. A favorite among transhumanists (and a bÃªte noire for \
 	bioconservatives), Bishop manufactures not only prostheses but also brain augmentation, synthetic organ replacements, \
 	and odds and ends like implanted wrist-watches. Their business model tends towards smaller, boutique operations, giving \
-	it a reputation for high price and luxury, with Bishop cyberware often rivalling Vey-Med’s for cost. Bishop’s reputation \
+	it a reputation for high price and luxury, with Bishop cyberware often rivalling Vey-Medâ€™s for cost. Bishopâ€™s reputation \
 	for catering towards the interests of human augmentation enthusiasts instead of positronics have earned it ire from the \
 	Positronic Rights Group and puts it in ideological (but not economic) comptetition with Morpheus Cyberkinetics."
 	history = ""
@@ -434,7 +434,6 @@
 		"Endeavor", //another ship map used by the ARFS server. Citadel Station's RP server will likely use this map in future.
 		"Red Rocket",
 		"Silver Soul",
-		"Lusty Xenomorph Maid",
 		"Cupid's Arrow",
 		"Midnight Heart",
 		"Friendship Set To Music",
@@ -725,7 +724,7 @@
 	motto = "The truth will set you free."
 	ship_prefixes = list("ONI" = "classified", "ONI" = "archeological", "ONI" = "exploration", "ONI" = "logistic") // It's all ONI but let's mix up what missions they do.
 	ship_names = list("Bastille",
-					"Fant�me",
+					"Fantôme",
 					"Harpocrates",
 					"Hoenir",
 					"Mata Hari",
@@ -808,7 +807,7 @@
 	history = "Originally only a strike of miners on the dusty, arid planet of Ares in the year 2540, the Ares Confederation was quickly \
     		established under the leadership of retired USDF Colonel Rodrick Gellaume, who is now Prime Minister."
 	work = "rebel fringe government"
-	headquarters = "Paraiso a Àstrea"
+	headquarters = "Paraiso a Ã€strea"
 	motto = "Liberty to the Stars!"
 
 	ship_prefixes = list("UFHV" = "military", "FFHV" = "shady")
@@ -844,7 +843,7 @@
 					"Torch")
 	destination_names = list("Drydocks of the Ares Confederation",
 						"a classified location",
-						"a Homestead on Paraiso a Àstrea",
+						"a Homestead on Paraiso a Ã€strea",
 						"a contested sector of ArCon space",
 						"one of our free colonies",
 						"the Gateway 98-C at Arest",

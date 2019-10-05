@@ -18,7 +18,7 @@
 	usesound = 'sound/items/wirecutter.ogg'
 	sharp = 1
 	edge = 1
-	toolspeed = 1
+	toolspeed = 1 // Yawn note, Toolspeed dosnt matter as nothing has a timer on cutting calls other then butchering
 	var/random_color = TRUE
 
 /obj/item/weapon/tool/wirecutters/New()
@@ -77,8 +77,8 @@
 	name = "strange wirecutters"
 	desc = "This cuts wires.  With <span class='alien'>Science!</span>"
 	icon_state = "hybcutters"
-	w_class = ITEMSIZE_NORMAL
-	slowdown = 0.1
+	//w_class = ITEMSIZE_NORMAL Yawn change no longer is a normal sized item
+	//slowdown = 0.1 Yawn change no long slows down
 	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_PHORON = 2)
 	attack_verb = list("pinched", "nipped", "warped", "blasted")
 	usesound = 'sound/effects/stealthoff.ogg'
@@ -86,7 +86,7 @@
 	reach = 2
 
 /obj/item/weapon/tool/wirecutters/hybrid/is_wirecutter()
-	if(prob(10))
+	if(prob(0)) //Yawn chnage no longer radiates
 		var/turf/T = get_turf(src)
 		radiation_repository.radiate(get_turf(src), 5)
 		T.visible_message("<span class='alien'>\The [src] shudders!</span>")

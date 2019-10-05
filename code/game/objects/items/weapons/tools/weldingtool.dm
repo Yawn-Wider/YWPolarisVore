@@ -441,11 +441,11 @@
 	desc = "An experimental welder capable of synthesizing its own fuel from spatial waveforms. It's like welding with a star!"
 	icon_state = "hybwelder"
 	max_fuel = 20
-	eye_safety_modifier = -2	// Brighter than the sun. Literally, you can look at the sun with a welding mask of proper grade, this will burn through that.
-	slowdown = 0.1
-	toolspeed = 0.25
+	//eye_safety_modifier = -2	// Brighter than the sun. Literally, you can look at the sun with a welding mask of proper grade, this will burn through that.  //Yawn change no longer needs "Brighter then a sun"
+	//slowdown = 0.1 //Yawn change no slow down
+	//toolspeed = 0.25 //Yawn change, not faster
 	w_class = ITEMSIZE_LARGE
-	flame_intensity = 5
+	//flame_intensity = 5 Yawn change no longer as harmfull
 	origin_tech = list(TECH_ENGINEERING = 5, TECH_PHORON = 4, TECH_PRECURSOR = 1)
 	reach = 2
 

@@ -62,7 +62,7 @@
 	reach = 2
 
 /obj/item/weapon/tool/crowbar/hybrid/is_crowbar()
-	if(prob(10))
+	if(prob(0)) //YAWN Change removes its radiate
 		var/turf/T = get_turf(src)
 		radiation_repository.radiate(get_turf(src), 5)
 		T.visible_message("<span class='alien'>\The [src] shudders!</span>")

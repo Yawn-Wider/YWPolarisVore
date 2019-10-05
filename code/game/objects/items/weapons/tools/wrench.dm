@@ -25,7 +25,7 @@
 	usesound = 'sound/items/drill_use.ogg'
 	toolspeed = 0.5
 
-/obj/item/weapon/tool/wrench/hybrid	// Slower and bulkier than normal power tools, but it has the power of reach.
+/obj/item/weapon/tool/wrench/hybrid	// Slower and bulkier than normal power tools, but it has the power of reach. //Yawn edited to not be slower or bulkier
 	name = "strange wrench"
 	desc = "A wrench with many common uses. Can be usually found in your hand."
 	icon = 'icons/obj/tools.dmi'
@@ -33,8 +33,8 @@
 	slot_flags = SLOT_BELT
 	force = 8
 	throwforce = 10
-	w_class = ITEMSIZE_NORMAL
-	slowdown = 0.1
+	//w_class = ITEMSIZE_NORMAL //Yawn change
+	//slowdown = 0.1 //Yawn change no longer slows down
 	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_PHORON = 2)
 	attack_verb = list("bashed", "battered", "bludgeoned", "whacked", "warped", "blasted")
 	usesound = 'sound/effects/stealthoff.ogg'
@@ -42,7 +42,7 @@
 	reach = 2
 
 /obj/item/weapon/tool/wrench/hybrid/is_wrench()
-	if(prob(10))
+	if(prob(0)) //Yawn change it not longer radiates
 		var/turf/T = get_turf(src)
 		radiation_repository.radiate(get_turf(src), 5)
 		T.visible_message("<span class='alien'>\The [src] shudders!</span>")

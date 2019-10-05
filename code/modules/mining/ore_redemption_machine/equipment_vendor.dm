@@ -28,6 +28,7 @@
 		new /datum/data/mining_equipment("Shelter Capsule",				/obj/item/device/survivalcapsule,									500),
 		// TODO new /datum/data/mining_equipment("Explorer's Webbing",	/obj/item/storage/belt/mining,										500),
 		new /datum/data/mining_equipment("Umbrella",					/obj/item/weapon/melee/umbrella/random,								200),
+		new /datum/data/mining_equipment("Telescopic Umbrella",			/obj/item/weapon/melee/umbrella/telescoping,						700), //Yawn addtion
 		new /datum/data/mining_equipment("Point Transfer Card",			/obj/item/weapon/card/mining_point_card,							500),
 		new /datum/data/mining_equipment("Survival Medipen",			/obj/item/weapon/reagent_containers/hypospray/autoinjector/miner,	500),
 		new /datum/data/mining_equipment("Mini-Translocator",			/obj/item/device/perfect_tele/one_beacon,							1200),

@@ -24,8 +24,8 @@
 		new /datum/data/mining_equipment("Extraction Equipment - Fulton Beacon",	/obj/item/fulton_core,									300),
 		new /datum/data/mining_equipment("Extraction Equipment - Fulton Pack",		/obj/item/extraction_pack,								125),
 		new /datum/data/mining_equipment("Umbrella",					/obj/item/weapon/melee/umbrella/random,								20),
+		new /datum/data/mining_equipment("Telescopic Umbrella",			/obj/item/weapon/melee/umbrella/telescoping,								30), //Yawn addtion
 		new /datum/data/mining_equipment("Shelter Capsule",			/obj/item/device/survivalcapsule,									50),
-		new /datum/data/mining_equipment("Telescopic Umbrella",			/obj/item/weapon/melee/umbrella/telescoping,						65), //Yawn addtion
 		new /datum/data/mining_equipment("Point Transfer Card",			/obj/item/weapon/card/mining_point_card/survey,						50),
 		new /datum/data/mining_equipment("Survival Medipen",			/obj/item/weapon/reagent_containers/hypospray/autoinjector/miner,	50),
 		new /datum/data/mining_equipment("Injector (L) - Glucose",/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/glucose,	50),

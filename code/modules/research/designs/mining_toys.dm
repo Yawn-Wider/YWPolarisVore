@@ -53,7 +53,7 @@
 /datum/design/item/weapon/mining/telescoping_umbrella
 	desc = "A telescopic umbrella."
 	id = "telescoping_umbrella"
-	req_tech = list(TECH_ENGINEERING = 3, TECH_BLUESPACE = 1,)
+	req_tech = list(TECH_ENGINEERING = 3, TECH_BLUESPACE = 1)
 	materials = list(DEFAULT_WALL_MATERIAL = 700, "plastic" = 1000)
 	build_path = /obj/item/weapon/melee/umbrella/telescoping
 	sort_string = "FBAAB"

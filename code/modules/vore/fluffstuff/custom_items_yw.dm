@@ -546,7 +546,7 @@
 
 /obj/item/weapon/melee/umbrella/telescoping
 	name = "telescoping umbrella"
-	desc = "A compack telescoping umbrella,use with caution on windy days.."
+	desc = "A compact telescoping umbrella, use with caution on windy days."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "umbrella_closed"
 	addblends = "umbrella_closed_a"

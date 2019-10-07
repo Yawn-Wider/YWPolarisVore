@@ -551,19 +551,11 @@
 	icon_state = "umbrella_closed"
 	addblends = "umbrella_closed_a"
 	slot_flags = SLOT_BELT
+	w_class = ITEMSIZE_SMALL
 	force = 2 //Its smaller
 	throwforce = 3
 
 /obj/item/weapon/melee/umbrella/telescoping/proc/extend_toggle_umbrella()
-	open = !open
-	icon_state = "umbrella_[open ? "open" : "closed"]"
-	addblends = icon_state + "_a"
-	item_state = icon_state
-	update_icon()
-	if(ishuman(src.loc))
-		var/mob/living/carbon/human/H = src.loc
-		H.update_inv_l_hand(0)
-		H.update_inv_r_hand()
 	..()
 	if(!open)
 		w_class = ITEMSIZE_SMALL

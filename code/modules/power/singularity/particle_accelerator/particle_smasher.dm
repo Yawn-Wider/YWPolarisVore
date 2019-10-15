@@ -376,3 +376,67 @@
 	required_atmos_temp_min = 3000
 	required_atmos_temp_max = 10000
 	probability = 1
+
+//YAWN Adds!
+/datum/particle_smasher_recipe/lead_diamond
+	reagents = list("carbon" = 50)
+
+	result = /obj/item/stack/material/diamond
+	required_material = /obj/item/stack/material/lead
+
+	required_energy_min = 400
+	required_energy_max = 450
+
+	required_atmos_temp_min = 5000 //Lots of heat to make sure we make a pure gem!
+	required_atmos_temp_max = 12000
+
+	probability = 90
+
+/datum/particle_smasher_recipe/hydrogen_verdantium
+
+	result = /obj/item/stack/material/verdantium
+	required_material = /obj/item/stack/material/mhydrogen
+
+	required_energy_min = 100 //Fickle power
+	required_energy_max = 175
+
+	required_atmos_temp_min = 100 //Fickle temps
+	required_atmos_temp_max = 150
+
+/datum/particle_smasher_recipe/mable_hydrogen
+	reagents = list("hydrogen" = 90) //Less then a full beaker
+
+	result = /obj/item/stack/material/mhydrogen
+	required_material = /obj/item/stack/material/marble
+
+	required_energy_min = 100 //Fickle power
+	required_energy_max = 175
+
+	required_atmos_temp_min = 100 //Fickle temps
+	required_atmos_temp_max = 150
+	probability = 20 //Low odds
+
+/datum/particle_smasher_recipe/iron_plasteel
+	reagents = list("phoron" = 10)
+
+	result = /obj/item/stack/material/plasteel
+	required_material = /obj/item/stack/material/steel
+
+	required_energy_min = 200 //Fickle power
+	required_energy_max = 270
+
+	probability = 99
+
+/datum/particle_smasher_recipe/plasteel_durasteel
+	reagents = list("carbon" = 110) //So large beakers can make it
+
+	result = /obj/item/stack/material/durasteel
+	required_material = /obj/item/stack/material/plasteel
+
+	required_energy_min = 600
+	required_energy_max = 800
+
+	required_atmos_temp_min = 60
+	required_atmos_temp_max = 105
+
+	probability = 55

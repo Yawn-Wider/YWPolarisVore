@@ -404,7 +404,7 @@
 	required_atmos_temp_max = 150
 
 /datum/particle_smasher_recipe/mable_hydrogen
-	reagents = list("hydrogen" = 90) //Less then a full beaker
+	reagents = list("hydrogen" = 90) //Less than a full beaker
 
 	result = /obj/item/stack/material/mhydrogen
 	required_material = /obj/item/stack/material/marble

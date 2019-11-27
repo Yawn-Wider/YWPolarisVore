@@ -337,9 +337,11 @@
 	icobase_tail = 1
 
 	inherent_verbs = list(
+	 //YW Changes
 		/mob/living/carbon/human/proc/succubus_drain,
 		/mob/living/carbon/human/proc/succubus_drain_finalize,
 		/mob/living/carbon/human/proc/succubus_drain_lethal,
+		//END YW Changes
 		/mob/proc/weaveWebBindings)
 
 	min_age = 18

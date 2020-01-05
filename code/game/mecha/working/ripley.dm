@@ -56,7 +56,7 @@
 
 /obj/mecha/working/ripley/deathripley/Initialize()
 	..()
-	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/tool/hydraulic_clamp/safety
+	var/obj/item/mecha_parts/mecha_equipment/ME = new /obj/item/mecha_parts/mecha_equipment/tool/safety_clamp
 	ME.attach(src)
 	return
 

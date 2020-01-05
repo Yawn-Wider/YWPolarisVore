@@ -1112,11 +1112,10 @@ default behaviour is:
 					pixel_y = V.mob_offset_y
 		else if(buckled)
 			anchored = 1
-			canmove = 1 //The line above already makes the chair not swooce away if the sitter presses a button. No need to incapacitate them as a criminally large amount of mechanics read this var as a type of stun.
+			canmove = 0
 			if(istype(buckled))
 				if(buckled.buckle_lying != -1)
 					lying = buckled.buckle_lying
-					canmove = buckled.buckle_movable
 				if(buckled.buckle_movable)
 					anchored = 0
 					canmove = 1

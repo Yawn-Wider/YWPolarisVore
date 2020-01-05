@@ -394,18 +394,6 @@
 	},
 /turf/simulated/floor/outdoors/dirt/virgo3b,
 /area/tether/outpost/solars_outside)
-"aQ" = (
-/obj/effect/floor_decal/borderfloor{
-	dir = 4
-	},
-/obj/effect/floor_decal/corner/purple/border{
-	dir = 4
-	},
-/obj/machinery/vending/wallmed_airlock{
-	pixel_x = 30
-	},
-/turf/simulated/floor/tiled,
-/area/rnd/outpost)
 "aR" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/power/solar_control,
@@ -6779,14 +6767,9 @@
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/anomaly_lab)
 "mm" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/storage/box/donkpockets,
-/obj/machinery/light_switch{
-	dir = 4;
-	pixel_x = -28
-	},
+/obj/structure/table/standard,
 /turf/simulated/floor/tiled,
-/area/rnd/outpost/breakroom)
+/area/rnd/outpost/anomaly_lab)
 "mn" = (
 /obj/machinery/washing_machine,
 /obj/structure/window/reinforced{
@@ -7183,10 +7166,14 @@
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/anomaly_lab)
 "mV" = (
-/obj/effect/floor_decal/rust,
-/obj/structure/reagent_dispensers/coolanttank,
-/turf/simulated/floor/tiled/steel_dirty,
-/area/rnd/outpost/storage)
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/glass/beaker/large,
+/obj/item/weapon/reagent_containers/dropper,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/rnd/outpost/anomaly_lab)
 "mW" = (
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
@@ -7250,12 +7237,13 @@
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/anomaly_lab)
 "nf" = (
-/obj/structure/table/woodentable,
-/obj/machinery/vending/wallmed1{
-	pixel_x = -30
+/obj/structure/table/standard,
+/obj/item/weapon/storage/box/beakers,
+/obj/structure/window/reinforced{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/outpost/breakroom)
+/area/rnd/outpost/anomaly_lab)
 "ng" = (
 /obj/effect/floor_decal/industrial/warning/corner,
 /obj/effect/floor_decal/industrial/warning/corner{
@@ -7269,12 +7257,11 @@
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/anomaly_lab)
 "ni" = (
-/obj/structure/table/woodentable,
-/obj/machinery/light{
-	dir = 8
-	},
+/obj/structure/table/standard,
+/obj/machinery/chemical_dispenser/full,
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
-/area/rnd/outpost/breakroom)
+/area/rnd/outpost/anomaly_lab)
 "nj" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/structure/window/reinforced{
@@ -7772,12 +7759,14 @@
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/xenoarch_storage)
 "of" = (
-/obj/structure/table/standard,
-/obj/machinery/vending/wallmed1{
-	pixel_y = 30
+/obj/effect/floor_decal/borderfloor{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple/border{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/rnd/outpost/anomaly_lab)
+/area/rnd/outpost)
 "og" = (
 /obj/structure/dispenser/oxygen,
 /turf/simulated/floor/tiled,
@@ -7921,12 +7910,10 @@
 /turf/simulated/floor/wood,
 /area/rnd/outpost/breakroom)
 "ow" = (
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/reagent_dispensers/watertank,
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/box/donkpockets,
 /turf/simulated/floor/tiled,
-/area/rnd/outpost/anomaly_lab)
+/area/rnd/outpost/breakroom)
 "ox" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -7997,13 +7984,10 @@
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/breakroom)
 "oH" = (
-/obj/structure/table/standard,
-/obj/machinery/light,
-/obj/item/weapon/storage/box/beakers,
-/obj/item/weapon/reagent_containers/glass/beaker/large,
-/obj/item/weapon/reagent_containers/dropper,
+/obj/structure/table/woodentable,
+/obj/machinery/microwave,
 /turf/simulated/floor/tiled,
-/area/rnd/outpost/anomaly_lab)
+/area/rnd/outpost/breakroom)
 "oI" = (
 /obj/structure/table/woodentable,
 /obj/machinery/microwave,
@@ -8089,17 +8073,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/anomaly_lab)
-"oS" = (
-/obj/structure/table/standard,
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/obj/structure/reagent_dispensers/acid{
-	pixel_y = -32
-	},
-/obj/machinery/reagentgrinder,
-/turf/simulated/floor/tiled,
-/area/rnd/outpost/anomaly_lab)
 "oT" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -8143,6 +8116,18 @@
 "oZ" = (
 /obj/structure/sign/science,
 /turf/simulated/wall,
+/area/rnd/outpost/breakroom)
+"pa" = (
+/obj/structure/table/woodentable,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/light_switch{
+	dir = 4;
+	pixel_x = -28
+	},
+/obj/item/weapon/storage/box/donkpockets,
+/turf/simulated/floor/tiled,
 /area/rnd/outpost/breakroom)
 "pb" = (
 /obj/machinery/alarm{
@@ -22517,7 +22502,7 @@ jE
 ml
 mG
 mU
-oH
+ni
 jx
 ab
 ab
@@ -22656,10 +22641,10 @@ ng
 nV
 lH
 jE
-of
+mm
 mG
-ow
-oS
+mV
+nf
 jx
 ab
 ab
@@ -24623,7 +24608,7 @@ dD
 ch
 lS
 oc
-aQ
+of
 fd
 fy
 fQ
@@ -24641,9 +24626,9 @@ ft
 lc
 oZ
 oI
-mm
-nf
-ni
+ow
+oH
+pa
 oG
 oP
 oX
@@ -25351,7 +25336,7 @@ iU
 jf
 jo
 ji
-mV
+hM
 hM
 ov
 op

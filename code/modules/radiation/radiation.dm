@@ -24,7 +24,6 @@
 		rad_power = new_power
 		if(!flat)
 			range = min(round(sqrt(rad_power / config.radiation_lower_limit)), 31)  // R = rad_power / dist**2 - Solve for dist
-	return
 
 /turf
 	var/cached_rad_resistance = 0
@@ -38,15 +37,13 @@
 		else if(O.density) //So open doors don't get counted
 			var/material/M = O.get_material()
 			if(!M)	continue
-			cached_rad_resistance += (M.weight + M.radiation_resistance) / config.radiation_material_resistance_divisor
+			cached_rad_resistance += M.weight + M.radiation_resistance
 	// Looks like storing the contents length is meant to be a basic check if the cache is stale due to items enter/exiting.  Better than nothing so I'm leaving it as is. ~Leshana
 	SSradiation.resistance_cache[src] = (length(contents) + 1)
-	return
 
 /turf/simulated/wall/calc_rad_resistance()
 	SSradiation.resistance_cache[src] = (length(contents) + 1)
-	cached_rad_resistance = (density ? material.weight / config.radiation_material_resistance_divisor : 0)
-	return
+	cached_rad_resistance = (density ? material.weight + material.radiation_resistance : 0)
 
 /obj
 	var/rad_resistance = 0  // Allow overriding rad resistance
@@ -60,4 +57,3 @@
 		src.apply_effect(severity, IRRADIATE, src.getarmor(null, "rad"))
 		for(var/atom/I in src)
 			I.rad_act(severity)
-	return

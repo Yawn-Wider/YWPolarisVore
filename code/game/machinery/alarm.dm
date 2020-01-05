@@ -767,10 +767,10 @@
 		return
 
 	if(istype(W, /obj/item/weapon/card/id) || istype(W, /obj/item/device/pda))// trying to unlock the interface with an ID card
-		togglelock()
+		togglelock() //YW Change
 	return ..()
 
-/obj/machinery/alarm/verb/togglelock(mob/user as mob)
+/obj/machinery/alarm/verb/togglelock(mob/user as mob) //YW Changes begin
 	if(stat & (NOPOWER|BROKEN))
 		to_chat(user, "It does nothing.")
 		return
@@ -784,7 +784,7 @@
 
 /obj/machinery/alarm/AltClick()
 	..()
-	togglelock()
+	togglelock() //YW Changes end
 
 /obj/machinery/alarm/power_change()
 	..()

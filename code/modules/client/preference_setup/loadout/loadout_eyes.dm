@@ -83,7 +83,7 @@
 /datum/gear/eyes/material
 	display_name = "Optical Material Scanners (Mining)"
 	path = /obj/item/clothing/glasses/material
-	allowed_roles = list("Shaft Miner","Quartermaster")
+	allowed_roles = list("Shaft Miner")
 
 /datum/gear/eyes/material/prescription
 	display_name = "Prescription Optical Material Scanners (Mining)"

@@ -7,7 +7,6 @@
 	icon_living = "panther"
 	icon_dead = "panther-dead"
 	icon = 'icons/mob/vore64x64.dmi'
-	vis_height = 64
 
 	faction = "panther"
 	maxHealth = 200

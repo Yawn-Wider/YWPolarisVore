@@ -103,7 +103,7 @@
 	var/flight_x_offset = 0
 	var/flight_y_offset = 0
 
-	var/obj/item/firing_pin/pin = /obj/item/firing_pin // YWStation add - Standard firing pin for most guns
+	var/obj/item/firing_pin/pin// = /obj/item/firing_pin // YWStation add - Standard firing pin for most guns
 
 /obj/item/weapon/gun/CtrlClick(mob/user)
 	if(can_flashlight && ishuman(user) && src.loc == usr && !user.incapacitated(INCAPACITATION_ALL))
@@ -126,8 +126,8 @@
 /obj/item/weapon/gun/New()
 	..()
 	// YWStation Add
-	if(pin)
-		pin = new pin(src)
+	//if(pin)
+		//pin = new pin(src)
 	// YWStation Add End
 
 	for(var/i in 1 to firemodes.len)
@@ -237,11 +237,10 @@
 		return
 
 	else
-		if(user.get_active_hand().can_trigger_gun(user))
+		return
+		/*if(user.get_active_hand().can_trigger_gun(user))
 			Fire(A, user, params) //Otherwise, fire normally.
-			return
-		else
-			return
+			return*/
 
 /*	//Commented out for quality control and testing
 	if(automatic == 1)//Are we are going to be using automatic shooting
@@ -263,10 +262,10 @@
 
 /obj/item/weapon/gun/attack(atom/A, mob/living/user, def_zone)
 	if (A == user && user.zone_sel.selecting == O_MOUTH && !mouthshoot)
-		if(istype(user))
+		/*if(istype(user))
 			var/mob/living/L = user
 			if(!can_trigger_gun(L))
-				return
+				return*/
 		handle_suicide(user)
 	else if(user.a_intent == I_HURT) //point blank shooting
 		if(user && user.client && user.aiming && user.aiming.active && user.aiming.aiming_at != A && A != user)
@@ -787,6 +786,7 @@
 		return FALSE
 
 /obj/item/weapon/gun/proc/handle_pins(mob/user)
+	return TRUE //TODO remove this
 	if(pin)
 		if(pin.pin_auth(user) || pin.emagged)
 			return TRUE

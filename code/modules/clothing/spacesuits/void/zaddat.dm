@@ -46,11 +46,13 @@
 			desc = "This rugged Shroud was created by the Xozi Engineering Guild."
 			icon_state = "zaddat_engie"
 			item_state = "zaddat_engie"
+			armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
 			if(helmet)
 				helmet.name = "\improper Engineer's Guild Shroud helmet"
 				helmet.desc = "A Shroud helmet designed for good visibility in low-light environments."
 				helmet.icon_state = "zaddat_engie"
 				helmet.item_state = "zaddat_engie"
+				helmet.armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 100, rad = 100)
 		if("Spacer")
 			name = "\improper Spacer's Guild Shroud"
 			base_name = "\improper Spacer's Guild Shroud"

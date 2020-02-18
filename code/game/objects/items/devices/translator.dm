@@ -11,12 +11,13 @@
 	var/audio = 0		//If you need to hear to get the message
 	var/listening = 0
 	var/datum/language/langset
+	var/universal = 0 //YW Edit. Can it understand ANY language?
 
 /obj/item/device/universal_translator/attack_self(mob/user)
 	if(!listening) //Turning ON
 		langset = input(user,"Translate to which of your languages?","Language Selection") as null|anything in user.languages
 		if(langset)
-			if(langset && ((langset.flags & NONVERBAL) || (langset.flags & HIVEMIND) || (!langset.machine_understands)))
+			if(langset && ((langset.flags & NONVERBAL) || (langset.flags & HIVEMIND) || (!langset.machine_understands && !universal)))
 				//Nonverbal means no spoken words to translate, so I didn't see the need to remove it.
 				to_chat(user, "<span class='warning'>\The [src] cannot output that language.</span>")
 				return
@@ -53,7 +54,7 @@
 	if (language && (language.flags & NONVERBAL))
 		return //Not gonna translate sign language
 
-	if (!language.machine_understands)
+	if (!language.machine_understands && !universal)
 		return //Any other languages that it can't translate.
 
 	if (visual && ((L.sdisabilities & BLIND) || L.eye_blind))

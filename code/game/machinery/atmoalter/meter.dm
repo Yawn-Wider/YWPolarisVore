@@ -94,7 +94,7 @@
 	else
 		t += "The connect error light is blinking."
 
-	to_chat(user,t)
+	user << t
 
 /obj/machinery/meter/Click()
 

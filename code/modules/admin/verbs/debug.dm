@@ -388,33 +388,33 @@
 	var/list/areas_without_intercom = areas_all - areas_with_intercom
 	var/list/areas_without_camera = areas_all - areas_with_camera
 
-	to_world("<b>AREAS WITHOUT AN APC:</b>")
+	world << "<b>AREAS WITHOUT AN APC:</b>"
 	for(var/areatype in areas_without_APC)
-		to_world("* [areatype]")
+		world << "* [areatype]"
 
-	to_world("<b>AREAS WITHOUT AN AIR ALARM:</b>")
+	world << "<b>AREAS WITHOUT AN AIR ALARM:</b>"
 	for(var/areatype in areas_without_air_alarm)
-		to_world("* [areatype]")
+		world << "* [areatype]"
 
-	to_world("<b>AREAS WITHOUT A REQUEST CONSOLE:</b>")
+	world << "<b>AREAS WITHOUT A REQUEST CONSOLE:</b>"
 	for(var/areatype in areas_without_RC)
-		to_world("* [areatype]")
+		world << "* [areatype]"
 
-	to_world("<b>AREAS WITHOUT ANY LIGHTS:</b>")
+	world << "<b>AREAS WITHOUT ANY LIGHTS:</b>"
 	for(var/areatype in areas_without_light)
-		to_world("* [areatype]")
+		world << "* [areatype]"
 
-	to_world("<b>AREAS WITHOUT A LIGHT SWITCH:</b>")
+	world << "<b>AREAS WITHOUT A LIGHT SWITCH:</b>"
 	for(var/areatype in areas_without_LS)
-		to_world("* [areatype]")
+		world << "* [areatype]"
 
-	to_world("<b>AREAS WITHOUT ANY INTERCOMS:</b>")
+	world << "<b>AREAS WITHOUT ANY INTERCOMS:</b>"
 	for(var/areatype in areas_without_intercom)
-		to_world("* [areatype]")
+		world << "* [areatype]"
 
-	to_world("<b>AREAS WITHOUT ANY CAMERAS:</b>")
+	world << "<b>AREAS WITHOUT ANY CAMERAS:</b>"
 	for(var/areatype in areas_without_camera)
-		to_world("* [areatype]")
+		world << "* [areatype]"
 
 /datum/admins/proc/cmd_admin_dress(input in getmobs())
 	set category = "Fun"

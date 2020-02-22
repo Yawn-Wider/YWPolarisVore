@@ -47,13 +47,13 @@
 			body_parts_covered = body_parts_covered & ~FACE
 			armor = list(melee = 0, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 0, rad = 0)
 			icon_state = "steriledown"
-			to_chat(usr, "You pull the mask below your chin.")
+			usr << "You pull the mask below your chin."
 		else
 			gas_transfer_coefficient = initial(gas_transfer_coefficient)
 			body_parts_covered = initial(body_parts_covered)
 			icon_state = initial(icon_state)
 			armor = initial(armor)
-			to_chat(usr, "You pull the mask up to cover your face.")
+			usr << "You pull the mask up to cover your face."
 		update_clothing_icon()
 
 /obj/item/clothing/mask/surgical/verb/toggle()

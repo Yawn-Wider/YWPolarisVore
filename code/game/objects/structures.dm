@@ -73,12 +73,12 @@
 		return 0
 
 	if (!user.Adjacent(src))
-		to_chat(user, "<span class='danger'>You can't climb there, the way is blocked.</span>")
+		user << "<span class='danger'>You can't climb there, the way is blocked.</span>"
 		return 0
 
 	var/obj/occupied = turf_is_crowded()
 	if(occupied)
-		to_chat(user, "<span class='danger'>There's \a [occupied] in the way.</span>")
+		user << "<span class='danger'>There's \a [occupied] in the way.</span>"
 		return 0
 	return 1
 
@@ -118,21 +118,21 @@
 /obj/structure/proc/structure_shaken()
 	for(var/mob/living/M in climbers)
 		M.Weaken(1)
-		to_chat(M, "<span class='danger'>You topple as you are shaken off \the [src]!</span>")
+		M << "<span class='danger'>You topple as you are shaken off \the [src]!</span>"
 		climbers.Cut(1,2)
 
 	for(var/mob/living/M in get_turf(src))
 		if(M.lying) return //No spamming this on people.
 
 		M.Weaken(3)
-		to_chat(M, "<span class='danger'>You topple as \the [src] moves under you!</span>")
+		M << "<span class='danger'>You topple as \the [src] moves under you!</span>"
 
 		if(prob(25))
 
 			var/damage = rand(15,30)
 			var/mob/living/carbon/human/H = M
 			if(!istype(H))
-				to_chat(H, "<span class='danger'>You land heavily!</span>")
+				H << "<span class='danger'>You land heavily!</span>"
 				M.adjustBruteLoss(damage)
 				return
 
@@ -151,12 +151,12 @@
 					affecting = H.get_organ(BP_HEAD)
 
 			if(affecting)
-				to_chat(M, "<span class='danger'>You land heavily on your [affecting.name]!</span>")
+				M << "<span class='danger'>You land heavily on your [affecting.name]!</span>"
 				affecting.take_damage(damage, 0)
 				if(affecting.parent)
 					affecting.parent.add_autopsy_data("Misadventure", damage)
 			else
-				to_chat(H, "<span class='danger'>You land heavily!</span>")
+				H << "<span class='danger'>You land heavily!</span>"
 				H.adjustBruteLoss(damage)
 
 			H.UpdateDamageIcon()
@@ -169,12 +169,12 @@
 	if(!Adjacent(user))
 		return 0
 	if (user.restrained() || user.buckled)
-		to_chat(user, "<span class='notice'>You need your hands and legs free for this.</span>")
+		user << "<span class='notice'>You need your hands and legs free for this.</span>"
 		return 0
 	if (user.stat || user.paralysis || user.sleeping || user.lying || user.weakened)
 		return 0
 	if (isAI(user))
-		to_chat(user, "<span class='notice'>You need hands for this.</span>")
+		user << "<span class='notice'>You need hands for this.</span>"
 		return 0
 	return 1
 

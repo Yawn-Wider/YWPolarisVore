@@ -56,11 +56,6 @@
 		user.set_machine(src)
 		interact(user)
 
-/obj/item/device/retail_scanner/examine(mob/user as mob)
-	..(user)
-	if(transaction_amount)
-		to_chat(user, "It has a purchase of [transaction_amount] pending[transaction_purpose ? " for [transaction_purpose]" : ""].")
-
 
 /obj/item/device/retail_scanner/interact(mob/user as mob)
 	var/dat = "<h2>Retail Scanner<hr></h2>"
@@ -100,7 +95,7 @@
 				if(allowed(usr))
 					locked = !locked
 				else
-					to_chat(usr, "\icon[src]<span class='warning'>Insufficient access.</span>")
+					usr << "\icon[src]<span class='warning'>Insufficient access.</span>"
 			if("link_account")
 				var/attempt_account_num = input("Enter account number", "New account number") as num
 				var/attempt_pin = input("Enter PIN", "Account PIN") as num
@@ -110,7 +105,7 @@
 						linked_account = null
 						src.visible_message("\icon[src]<span class='warning'>Account has been suspended.</span>")
 				else
-					to_chat(usr, "\icon[src]<span class='warning'>Account not found.</span>")
+					usr << "\icon[src]<span class='warning'>Account not found.</span>"
 			if("custom_order")
 				var/t_purpose = sanitize(input("Enter purpose", "New purpose") as text)
 				if (!t_purpose || !Adjacent(usr)) return
@@ -158,7 +153,7 @@
 					price_list.Cut()
 			if("reset_log")
 				transaction_logs.Cut()
-				to_chat(usr, "\icon[src]<span class='notice'>Transaction log reset.</span>")
+				usr << "\icon[src]<span class='notice'>Transaction log reset.</span>"
 	updateDialog()
 
 
@@ -172,7 +167,7 @@
 		var/obj/item/weapon/spacecash/ewallet/E = O
 		scan_wallet(E)
 	else if (istype(O, /obj/item/weapon/spacecash))
-		to_chat(usr, "<span class='warning'>This device does not accept cash.</span>")
+		usr << "<span class='warning'>This device does not accept cash.</span>"
 
 	else if(istype(O, /obj/item/weapon/card/emag))
 		return ..()
@@ -397,7 +392,7 @@
 
 /obj/item/device/retail_scanner/emag_act(var/remaining_charges, var/mob/user)
 	if(!emagged)
-		to_chat(user, "<span class='danger'>You stealthily swipe the cryptographic sequencer through \the [src].</span>")
+		user << "<span class='danger'>You stealthily swipe the cryptographic sequencer through \the [src].</span>"
 		playsound(src, "sparks", 50, 1)
 		req_access = list()
 		emagged = 1

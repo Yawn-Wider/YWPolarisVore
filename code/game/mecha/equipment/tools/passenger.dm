@@ -16,7 +16,7 @@
 /obj/item/mecha_parts/mecha_equipment/tool/passenger/destroy()
 	for(var/atom/movable/AM in src)
 		AM.forceMove(get_turf(src))
-		to_chat(AM, "<span class='danger'>You tumble out of the destroyed [src.name]!</span>")
+		AM << "<span class='danger'>You tumble out of the destroyed [src.name]!</span>"
 	return ..()
 
 /obj/item/mecha_parts/mecha_equipment/tool/passenger/Exit(atom/movable/O)
@@ -107,13 +107,13 @@
 		return
 
 	if (!isturf(usr.loc))
-		to_chat(usr, "<span class='danger'>You can't reach the passenger compartment from here.</span>")
+		usr << "<span class='danger'>You can't reach the passenger compartment from here.</span>"
 		return
 
 	if(iscarbon(usr))
 		var/mob/living/carbon/C = usr
 		if(C.handcuffed)
-			to_chat(usr, "<span class='danger'>Kinda hard to climb in while handcuffed don't you think?</span>")
+			usr << "<span class='danger'>Kinda hard to climb in while handcuffed don't you think?</span>"
 			return
 
 	if(isliving(usr))
@@ -139,13 +139,13 @@
 	//didn't find anything
 	switch (feedback)
 		if (OCCUPIED)
-			to_chat(usr, "<span class='danger'>The passenger compartment is already occupied!</span>")
+			usr << "<span class='danger'>The passenger compartment is already occupied!</span>"
 		if (LOCKED)
-			to_chat(usr, "<span class='warning'>The passenger compartment hatch is locked!</span>")
+			usr << "<span class='warning'>The passenger compartment hatch is locked!</span>"
 		if (OCCUPIED|LOCKED)
-			to_chat(usr, "<span class='danger'>All of the passenger compartments are already occupied or locked!</span>")
+			usr << "<span class='danger'>All of the passenger compartments are already occupied or locked!</span>"
 		if (0)
-			to_chat(usr, "<span class='warning'>\The [src] doesn't have a passenger compartment.</span>")
+			usr << "<span class='warning'>\The [src] doesn't have a passenger compartment.</span>"
 
 #undef LOCKED
 #undef OCCUPIED

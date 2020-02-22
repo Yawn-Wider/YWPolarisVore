@@ -15,12 +15,12 @@
 
 /obj/item/stack/medical/attack(mob/living/carbon/M as mob, mob/user as mob)
 	if (!istype(M))
-		to_chat(user, "<span class='warning'>\The [src] cannot be applied to [M]!</span>")
+		user << "<span class='warning'>\The [src] cannot be applied to [M]!</span>"
 		return 1
 
 	if ( ! (istype(user, /mob/living/carbon/human) || \
 			istype(user, /mob/living/silicon)) )
-		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
+		user << "<span class='warning'>You don't have the dexterity to do this!</span>"
 		return 1
 
 	if (istype(M, /mob/living/carbon/human))
@@ -28,24 +28,24 @@
 		var/obj/item/organ/external/affecting = H.get_organ(user.zone_sel.selecting)
 
 		if(!affecting)
-			to_chat(user, "<span class='warning'>No body part there to work on!</span>")
+			user << "<span class='warning'>No body part there to work on!</span>"
 			return 1
 
 		if(affecting.organ_tag == BP_HEAD)
 			if(H.head && istype(H.head,/obj/item/clothing/head/helmet/space))
-				to_chat(user, "<span class='warning'>You can't apply [src] through [H.head]!</span>")
+				user << "<span class='warning'>You can't apply [src] through [H.head]!</span>"
 				return 1
 		else
 			if(H.wear_suit && istype(H.wear_suit,/obj/item/clothing/suit/space))
-				to_chat(user, "<span class='warning'>You can't apply [src] through [H.wear_suit]!</span>")
+				user << "<span class='warning'>You can't apply [src] through [H.wear_suit]!</span>"
 				return 1
 
 		if(affecting.robotic == ORGAN_ROBOT)
-			to_chat(user, "<span class='warning'>This isn't useful at all on a robotic limb.</span>")
+			user << "<span class='warning'>This isn't useful at all on a robotic limb.</span>"
 			return 1
 
 		if(affecting.robotic >= ORGAN_LIFELIKE)
-			to_chat(user, "<span class='warning'>You apply the [src], but it seems to have no effect...</span>")
+			user << "<span class='warning'>You apply the [src], but it seems to have no effect...</span>"
 			use(1)
 			return 1
 

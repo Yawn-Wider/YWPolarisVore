@@ -54,10 +54,7 @@ var/datum/controller/supply/supply_controller = new()
 
 	for(var/typepath in subtypesof(/datum/supply_pack))
 		var/datum/supply_pack/P = new typepath()
-		if(P.name)
-			supply_pack[P.name] = P
-		else
-			qdel(P)
+		supply_pack[P.name] = P
 
 /datum/controller/process/supply/setup()
 	name = "supply controller"

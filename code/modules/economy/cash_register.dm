@@ -33,13 +33,11 @@
 
 /obj/machinery/cash_register/examine(mob/user as mob)
 	..(user)
-	if(transaction_amount)
-		to_chat(user, "It has a purchase of [transaction_amount] pending[transaction_purpose ? " for [transaction_purpose]" : ""].")
 	if(cash_open)
 		if(cash_stored)
-			to_chat(user, "It holds [cash_stored] Thaler\s of money.")
+			user << "It holds [cash_stored] Thaler\s of money."
 		else
-			to_chat(user, "It's completely empty.")
+			user << "It's completely empty."
 
 
 /obj/machinery/cash_register/attack_hand(mob/user as mob)
@@ -103,7 +101,7 @@
 				if(allowed(usr))
 					locked = !locked
 				else
-					to_chat(usr, "\icon[src]<span class='warning'>Insufficient access.</span>")
+					usr << "\icon[src]<span class='warning'>Insufficient access.</span>"
 			if("toggle_cash_lock")
 				cash_locked = !cash_locked
 			if("link_account")
@@ -115,7 +113,7 @@
 						linked_account = null
 						src.visible_message("\icon[src]<span class='warning'>Account has been suspended.</span>")
 				else
-					to_chat(usr, "\icon[src]<span class='warning'>Account not found.</span>")
+					usr << "\icon[src]<span class='warning'>Account not found.</span>"
 			if("custom_order")
 				var/t_purpose = sanitize(input("Enter purpose", "New purpose") as text)
 				if (!t_purpose || !Adjacent(usr)) return
@@ -163,7 +161,7 @@
 					price_list.Cut()
 			if("reset_log")
 				transaction_logs.Cut()
-				to_chat(usr, "\icon[src]<span class='notice'>Transaction log reset.</span>")
+				usr << "\icon[src]<span class='notice'>Transaction log reset.</span>"
 	updateDialog()
 
 
@@ -179,7 +177,7 @@
 	else if (istype(O, /obj/item/weapon/spacecash))
 		var/obj/item/weapon/spacecash/SC = O
 		if(cash_open)
-			to_chat(user, "You neatly sort the cash into the box.")
+			user << "You neatly sort the cash into the box."
 			cash_stored += SC.worth
 			overlays |= "register_cash"
 			if(ishuman(user))
@@ -219,7 +217,7 @@
 
 	if (cash_open)
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 25)
-		to_chat(usr, "\icon[src]<span class='warning'>The cash box is open.</span>")
+		usr << "\icon[src]<span class='warning'>The cash box is open.</span>"
 		return
 
 	if((item_list.len > 1 || item_list[item_list[1]] > 1) && !confirm(I))
@@ -284,7 +282,7 @@
 
 	if (cash_open)
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 25)
-		to_chat(usr, "\icon[src]<span class='warning'>The cash box is open.</span>")
+		usr << "\icon[src]<span class='warning'>The cash box is open.</span>"
 		return
 
 	if((item_list.len > 1 || item_list[item_list[1]] > 1) && !confirm(E))
@@ -322,7 +320,7 @@
 
 	if (cash_open)
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 25)
-		to_chat(usr, "\icon[src]<span class='warning'>The cash box is open.</span>")
+		usr << "\icon[src]<span class='warning'>The cash box is open.</span>"
 		return
 
 	if((item_list.len > 1 || item_list[item_list[1]] > 1) && !confirm(SC))
@@ -355,7 +353,7 @@
 		return
 	if (cash_open)
 		playsound(src, 'sound/machines/buzz-sigh.ogg', 25)
-		to_chat(usr, "\icon[src]<span class='warning'>The cash box is open.</span>")
+		usr << "\icon[src]<span class='warning'>The cash box is open.</span>"
 		return
 
 	// First check if item has a valid price
@@ -478,7 +476,7 @@
 		if(cash_stored)
 			overlays += "register_cash"
 	else
-		to_chat(usr, "<span class='warning'>The cash box is locked.</span>")
+		usr << "<span class='warning'>The cash box is locked.</span>"
 
 
 /obj/machinery/cash_register/proc/toggle_anchors(obj/item/weapon/tool/wrench/W, mob/user)

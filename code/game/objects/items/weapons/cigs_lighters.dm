@@ -144,15 +144,15 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/smoke_percent = round((smoketime / max_smoketime) * 100)
 	switch(smoke_percent)
 		if(90 to INFINITY)
-			to_chat(user, "[src] is still fresh.")
+			user << "[src] is still fresh."
 		if(60 to 90)
-			to_chat(user, "[src] has a good amount of burn time remaining.")
+			user << "[src] has a good amount of burn time remaining."
 		if(30 to 60)
-			to_chat(user, "[src] is about half finished.")
+			user << "[src] is about half finished."
 		if(10 to 30)
-			to_chat(user, "[src] is starting to burn low.")
+			user << "[src] is starting to burn low."
 		else
-			to_chat(user, "[src] is nearly burnt out!")
+			user << "[src] is nearly burnt out!"
 
 
 /obj/item/clothing/mask/smokable/proc/light(var/flavor_text = "[usr] lights the [name].")
@@ -202,7 +202,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 		if(ismob(loc))
 			var/mob/living/M = loc
 			if (!nomessage)
-				to_chat(M, "<span class='notice'>Your [name] goes out, and you empty the ash.</span>")
+				M << "<span class='notice'>Your [name] goes out, and you empty the ash.</span>"
 			lit = 0
 			icon_state = initial(icon_state)
 			item_state = initial(item_state)
@@ -302,12 +302,12 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if(istype(glass)) //you can dip cigarettes into beakers
 		var/transfered = glass.reagents.trans_to_obj(src, chem_volume)
 		if(transfered)	//if reagents were transfered, show the message
-			to_chat(user, "<span class='notice'>You dip \the [src] into \the [glass].</span>")
+			user << "<span class='notice'>You dip \the [src] into \the [glass].</span>"
 		else			//if not, either the beaker was empty, or the cigarette was full
 			if(!glass.reagents.total_volume)
-				to_chat(user, "<span class='notice'>[glass] is empty.</span>")
+				user << "<span class='notice'>[glass] is empty.</span>"
 			else
-				to_chat(user, "<span class='notice'>[src] is full.</span>")
+				user << "<span class='notice'>[src] is full.</span>"
 
 /obj/item/clothing/mask/smokable/cigarette/attack_self(mob/user as mob)
 	if(lit == 1)
@@ -420,10 +420,10 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if (istype(W, /obj/item/weapon/reagent_containers/food/snacks))
 		var/obj/item/weapon/reagent_containers/food/snacks/grown/G = W
 		if (!G.dry)
-			to_chat(user, "<span class='notice'>[G] must be dried before you stuff it into [src].</span>")
+			user << "<span class='notice'>[G] must be dried before you stuff it into [src].</span>"
 			return
 		if (smoketime)
-			to_chat(user, "<span class='notice'>[src] is already packed.</span>")
+			user << "<span class='notice'>[src] is already packed.</span>"
 			return
 		max_smoketime = 1000
 		smoketime = 1000
@@ -479,10 +479,10 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	if (istype(W, /obj/item/weapon/reagent_containers/food/snacks))
 		var/obj/item/weapon/reagent_containers/food/snacks/grown/G = W
 		if (!G.dry)
-			to_chat(user, "<span class='notice'>[G] must be dried before you roll it into [src].</span>")
+			user << "<span class='notice'>[G] must be dried before you roll it into [src].</span>"
 			return
 		var/obj/item/clothing/mask/smokable/cigarette/joint/J = new /obj/item/clothing/mask/smokable/cigarette/joint(user.loc)
-		to_chat(usr, "<span class='notice'>You roll the [G.name] into a joint!</span>")
+		to_chat(usr,"<span class='notice'>You roll the [G.name] into a joint!</span>")
 		J.add_fingerprint(user)
 		if(G.reagents)
 			G.reagents.trans_to_obj(J, G.reagents.total_volume)
@@ -532,7 +532,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 			if(prob(95))
 				user.visible_message("<span class='notice'>After a few attempts, [user] manages to light the [src].</span>")
 			else
-				to_chat(user, "<span class='warning'>You burn yourself while lighting the lighter.</span>")
+				user << "<span class='warning'>You burn yourself while lighting the lighter.</span>"
 				if (user.get_left_hand() == src)
 					user.apply_damage(2,BURN,"l_hand")
 				else

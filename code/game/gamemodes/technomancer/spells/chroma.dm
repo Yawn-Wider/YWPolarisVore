@@ -35,7 +35,7 @@
 	var/turf/T = get_turf(hit_atom)
 	if(T)
 		new /obj/effect/chroma(T, color_to_use)
-		to_chat(user, "<span class='notice'>You shift the light onto \the [T].</span>")
+		user << "<span class='notice'>You shift the light onto \the [T].</span>"
 		qdel(src)
 
 /obj/item/weapon/spell/chroma/on_use_cast(mob/user)

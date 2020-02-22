@@ -28,14 +28,14 @@
 		set_slowdown()
 		force = 3
 		if(icon_base) icon_state = "[icon_base]0"
-		to_chat(user, "You disable the mag-pulse traction system.")
+		user << "You disable the mag-pulse traction system."
 	else
 		item_flags |= NOSLIP
 		magpulse = 1
 		set_slowdown()
 		force = 5
 		if(icon_base) icon_state = "[icon_base]1"
-		to_chat(user, "You enable the mag-pulse traction system.")
+		user << "You enable the mag-pulse traction system."
 	user.update_inv_shoes()	//so our mob-overlays update
 	user.update_action_buttons()
 
@@ -79,7 +79,7 @@
 	var/state = "disabled"
 	if(item_flags & NOSLIP)
 		state = "enabled"
-	to_chat(user, "Its mag-pulse traction system appears to be [state].")
+	user << "Its mag-pulse traction system appears to be [state]."
 
 /obj/item/clothing/shoes/magboots/vox
 

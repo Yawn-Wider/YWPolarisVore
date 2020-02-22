@@ -105,25 +105,25 @@
 	//	return
 	..()
 	if (beakers.len)
-		to_chat(user, "<font color='blue'>[src] contains:</font>")
+		user << "<font color='blue'>[src] contains:</font>"
 		for(var/obj/item/weapon/reagent_containers/glass/beaker/B in beakers)
 			if(B.reagents && B.reagents.reagent_list.len)
 				for(var/datum/reagent/R in B.reagents.reagent_list)
-					to_chat(user, "<font color='blue'>[R.volume] units of [R.name]</font>")
+					user << "<font color='blue'>[R.volume] units of [R.name]</font>"
 
 /obj/item/weapon/gun/projectile/dartgun/attackby(obj/item/I as obj, mob/user as mob)
 	if(istype(I, /obj/item/weapon/reagent_containers/glass))
 		if(!istype(I, container_type))
-			to_chat(user, "<font color='blue'>[I] doesn't seem to fit into [src].</font>")
+			user << "<font color='blue'>[I] doesn't seem to fit into [src].</font>"
 			return
 		if(beakers.len >= max_beakers)
-			to_chat(user, "<font color='blue'>[src] already has [max_beakers] beakers in it - another one isn't going to fit!</font>")
+			user << "<font color='blue'>[src] already has [max_beakers] beakers in it - another one isn't going to fit!</font>"
 			return
 		var/obj/item/weapon/reagent_containers/glass/beaker/B = I
 		user.drop_item()
 		B.loc = src
 		beakers += B
-		to_chat(user, "<font color='blue'>You slot [B] into [src].</font>")
+		user << "<font color='blue'>You slot [B] into [src].</font>"
 		src.updateUsrDialog()
 		return 1
 	..()
@@ -194,7 +194,7 @@
 		if(index <= beakers.len)
 			if(beakers[index])
 				var/obj/item/weapon/reagent_containers/glass/beaker/B = beakers[index]
-				to_chat(usr, "You remove [B] from [src].")
+				usr << "You remove [B] from [src]."
 				mixing -= B
 				beakers -= B
 				B.loc = get_turf(src)

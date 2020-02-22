@@ -661,11 +661,11 @@
 		if(user.back != src && user.belt != src)
 			return 0
 		else if(!src.allowed(user))
-			to_chat(user, "<span class='danger'>Unauthorized user. Access denied.</span>")
+			user << "<span class='danger'>Unauthorized user. Access denied.</span>"
 			return 0
 
 	else if(!ai_override_enabled)
-		to_chat(user, "<span class='danger'>Synthetic access disabled. Please consult hardware provider.</span>")
+		user << "<span class='danger'>Synthetic access disabled. Please consult hardware provider.</span>"
 		return 0
 
 	return 1
@@ -711,7 +711,7 @@
 /obj/item/weapon/rig/proc/notify_ai(var/message)
 	for(var/obj/item/rig_module/ai_container/module in installed_modules)
 		if(module.integrated_ai && module.integrated_ai.client && !module.integrated_ai.stat)
-			to_chat(module.integrated_ai, "[message]")
+			module.integrated_ai << "[message]"
 			. = 1
 
 /obj/item/weapon/rig/equipped(mob/living/carbon/human/M)
@@ -785,7 +785,7 @@
 				holder = use_obj.loc
 				if(istype(holder))
 					if(use_obj && check_slot == use_obj)
-						to_chat(H, "<font color='blue'><b>Your [use_obj.name] [use_obj.gender == PLURAL ? "retract" : "retracts"] swiftly.</b></font>")
+						H << "<font color='blue'><b>Your [use_obj.name] [use_obj.gender == PLURAL ? "retract" : "retracts"] swiftly.</b></font>"
 						use_obj.canremove = 1
 						holder.drop_from_inventory(use_obj)
 						use_obj.forceMove(get_turf(src))
@@ -800,10 +800,10 @@
 			if(!H.equip_to_slot_if_possible(use_obj, equip_to, 0, 1))
 				use_obj.forceMove(src)
 				if(check_slot)
-					to_chat(H, "<span class='danger'>You are unable to deploy \the [piece] as \the [check_slot] [check_slot.gender == PLURAL ? "are" : "is"] in the way.</span>")
+					H << "<span class='danger'>You are unable to deploy \the [piece] as \the [check_slot] [check_slot.gender == PLURAL ? "are" : "is"] in the way.</span>"
 					return
 			else
-				to_chat(H, "<span class='notice'>Your [use_obj.name] [use_obj.gender == PLURAL ? "deploy" : "deploys"] swiftly.</span>")
+				H << "<span class='notice'>Your [use_obj.name] [use_obj.gender == PLURAL ? "deploy" : "deploys"] swiftly.</span>"
 
 	if(piece == "helmet" && helmet)
 		helmet.update_light(H)
@@ -918,17 +918,17 @@
 
 	if(wearer)
 		if(dam_module.damage >= 2)
-			to_chat(wearer, "<span class='danger'>The [source] has disabled your [dam_module.interface_name]!</span>")
+			wearer << "<span class='danger'>The [source] has disabled your [dam_module.interface_name]!</span>"
 		else
-			to_chat(wearer, "<span class='warning'>The [source] has damaged your [dam_module.interface_name]!</span>")
+			wearer << "<span class='warning'>The [source] has damaged your [dam_module.interface_name]!</span>"
 	dam_module.deactivate()
 
 /obj/item/weapon/rig/proc/malfunction_check(var/mob/living/carbon/human/user)
 	if(malfunction_delay)
 		if(offline)
-			to_chat(user, "<span class='danger'>The suit is completely unresponsive.</span>")
+			user << "<span class='danger'>The suit is completely unresponsive.</span>"
 		else
-			to_chat(user, "<span class='danger'>ERROR: Hardware fault. Rebooting interface...</span>")
+			user << "<span class='danger'>ERROR: Hardware fault. Rebooting interface...</span>"
 		return 1
 	return 0
 
@@ -952,20 +952,17 @@
 			return 0
 		var/obj/item/rig_module/ai_container/module = user.loc.loc
 		if(!istype(module) || module.damage >= 2)
-			to_chat(user, "<span class='warning'>Your host module is unable to interface with the suit.</span>")
+			user << "<span class='warning'>Your host module is unable to interface with the suit.</span>"
 			return 0
 
 	if(offline || !cell || !cell.charge || locked_down)
-		if(user)
-			to_chat(user, "<span class='warning'>Your host rig is unpowered and unresponsive.</span>")
+		if(user) user << "<span class='warning'>Your host rig is unpowered and unresponsive.</span>"
 		return 0
 	if(!wearer || (wearer.back != src && wearer.belt != src))
-		if(user)
-			to_chat(user, "<span class='warning'>Your host rig is not being worn.</span>")
+		if(user) user << "<span class='warning'>Your host rig is not being worn.</span>"
 		return 0
 	if(!wearer.stat && !control_overridden && !ai_override_enabled)
-		if(user)
-			to_chat(user, "<span class='warning'>You are locked out of the suit servo controller.</span>")
+		if(user) user << "<span class='warning'>You are locked out of the suit servo controller.</span>"
 		return 0
 	return 1
 
@@ -973,7 +970,7 @@
 	if(!ai_can_move_suit(user, check_user_module = 1))
 		return
 	wearer.lay_down()
-	to_chat(user, "<span class='notice'>\The [wearer] is now [wearer.resting ? "resting" : "getting up"].</span>")
+	user << "<span class='notice'>\The [wearer] is now [wearer.resting ? "resting" : "getting up"].</span>"
 
 /obj/item/weapon/rig/proc/forced_move(var/direction, var/mob/user)
 
@@ -1013,7 +1010,7 @@
 			for(var/mob/M in range(wearer, 1))
 				if(M.pulling == wearer)
 					if(!M.restrained() && M.stat == 0 && M.canmove && wearer.Adjacent(M))
-						to_chat(user, "<span class='notice'>Your host is restrained! They can't move!</span>")
+						user << "<span class='notice'>Your host is restrained! They can't move!</span>"
 						return 0
 					else
 						M.stop_pulling()

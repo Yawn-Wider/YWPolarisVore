@@ -2056,9 +2056,6 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/obj/effect/landmark{
-	name = "morphspawn"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/security/recstorage)
 "cW" = (
@@ -8632,12 +8629,19 @@
 /turf/simulated/floor/tiled/dark,
 /area/storage/tech)
 "mE" = (
-/obj/machinery/hologram/holopad,
-/obj/effect/landmark{
-	name = "morphspawn"
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/ai_server_room)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/storage/tech)
 "mF" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/highsecurity{
@@ -11565,22 +11569,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/station/port)
 "rf" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/effect/landmark{
-	name = "morphspawn"
-	},
-/turf/simulated/floor/tiled/dark,
-/area/storage/tech)
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/techfloor,
+/area/ai_server_room)
 "rg" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -15199,9 +15190,6 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/techfloor,
-/obj/effect/landmark{
-	name = "morphspawn"
-	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/resleeving)
 "wZ" = (
@@ -15670,12 +15658,6 @@
 /obj/structure/railing,
 /turf/simulated/floor,
 /area/maintenance/station/medbay)
-"xJ" = (
-/obj/effect/landmark{
-	name = "morphspawn"
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/recoveryrestroom)
 "xK" = (
 /obj/item/clothing/suit/straight_jacket,
 /obj/item/clothing/mask/muzzle,
@@ -27897,7 +27879,7 @@ aP
 aP
 lv
 ej
-rf
+mE
 pA
 nY
 aP
@@ -33613,7 +33595,7 @@ BM
 Cf
 Cz
 CM
-xJ
+Ce
 EG
 EQ
 aa
@@ -36272,7 +36254,7 @@ iK
 dZ
 hh
 mV
-mE
+rf
 ng
 hh
 lm

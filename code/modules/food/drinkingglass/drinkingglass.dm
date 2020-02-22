@@ -32,17 +32,17 @@
 
 	for(var/I in extras)
 		if(istype(I, /obj/item/weapon/glass_extra))
-			to_chat(M, "There is \a [I] in \the [src].")
+			M << "There is \a [I] in \the [src]."
 		else if(istype(I, /obj/item/weapon/reagent_containers/food/snacks/fruit_slice))
-			to_chat(M, "There is \a [I] on the rim.")
+			M << "There is \a [I] on the rim."
 		else
-			to_chat(M, "There is \a [I] somewhere on the glass. Somehow.")
+			M << "There is \a [I] somewhere on the glass. Somehow."
 
 	if(has_ice())
-		to_chat(M, "There is some ice floating in the drink.")
+		M << "There is some ice floating in the drink."
 
 	if(has_fizz())
-		to_chat(M, "It is fizzing slightly.")
+		M << "It is fizzing slightly."
 
 /obj/item/weapon/reagent_containers/food/drinks/glass2/proc/has_ice()
 	if(reagents.reagent_list.len > 0)
@@ -154,7 +154,7 @@
 		if(standard_splash_mob(user, target))
 			return 1
 		if(reagents && reagents.total_volume) //They are on harm intent, aka wanting to spill it.
-			to_chat(user, "<span class='notice'>You splash the solution onto [target].</span>")
+			user << "<span class='notice'>You splash the solution onto [target].</span>"
 			reagents.splash(target, reagents.total_volume)
 			return 1
 	..()

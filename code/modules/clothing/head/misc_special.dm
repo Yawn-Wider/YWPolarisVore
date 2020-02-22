@@ -150,10 +150,10 @@
 /obj/item/clothing/head/ushanka/attack_self(mob/user as mob)
 	if(src.icon_state == "ushankadown")
 		src.icon_state = "ushankaup"
-		to_chat(user, "You raise the ear flaps on the ushanka.")
+		user << "You raise the ear flaps on the ushanka."
 	else
 		src.icon_state = "ushankadown"
-		to_chat(user, "You lower the ear flaps on the ushanka.")
+		user << "You lower the ear flaps on the ushanka."
 
 /*
  * Pumpkin head

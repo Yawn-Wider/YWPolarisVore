@@ -38,7 +38,7 @@
 
 /obj/machinery/computer/telescience/examine(mob/user)
 	..()
-	to_chat(user, "There are [crystals.len ? crystals.len : "no"] bluespace crystal\s in the crystal slots.")
+	user << "There are [crystals.len ? crystals.len : "no"] bluespace crystal\s in the crystal slots."
 
 /obj/machinery/computer/telescience/Initialize()
 	. = ..()
@@ -49,7 +49,7 @@
 /obj/machinery/computer/telescience/attackby(obj/item/W, mob/user, params)
 	if(istype(W, /obj/item/weapon/ore/bluespace_crystal))
 		if(crystals.len >= max_crystals)
-			to_chat(user, "<span class='warning'>There are not enough crystal slots.</span>")
+			user << "<span class='warning'>There are not enough crystal slots.</span>"
 			return
 		if(!user.unEquip(W))
 			return
@@ -68,7 +68,7 @@
 		if(M.connectable && istype(M.connectable, /obj/machinery/telepad))
 			telepad = M.connectable
 			M.connectable = null
-			to_chat(user, "<span class='caution'>You upload the data from the [W.name]'s buffer.</span>")
+			user << "<span class='caution'>You upload the data from the [W.name]'s buffer.</span>"
 	else
 		return ..()
 

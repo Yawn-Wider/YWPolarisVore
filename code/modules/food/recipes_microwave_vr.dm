@@ -196,7 +196,6 @@
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/sharkmeatcubes
 
-/*
 /datum/recipe/microwave/margheritapizzacargo
 	reagents = list()
 	items = list(
@@ -224,11 +223,10 @@
 		/obj/item/weapon/reagent_containers/food/snacks/pizza/vegfrozen
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegcargo
-*/
 
 //// food cubes
 
 /datum/recipe/microwave/foodcubes
-	reagents = list("enzyme" = 20, "virusfood" = 5, "nutriment" = 15, "protein" = 15) // labor intensive
+	reagents = list("enzyme" = 20,"virusfood" = 5, "nutriment" = 15, "protein" = 15) // labor intensive
 	items = list()
 	result = /obj/item/weapon/storage/box/wings/tray

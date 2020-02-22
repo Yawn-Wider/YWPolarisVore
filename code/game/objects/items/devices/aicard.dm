@@ -19,7 +19,7 @@
 		return ..()
 	else
 		M.death()
-		to_chat(user, "<b>ERROR ERROR ERROR</b>")
+		user << "<b>ERROR ERROR ERROR</b>"
 
 /obj/item/device/aicard/attack_self(mob/user)
 

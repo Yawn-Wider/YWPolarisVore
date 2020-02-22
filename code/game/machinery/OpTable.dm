@@ -127,9 +127,9 @@
 /obj/machinery/optable/proc/check_table(mob/living/carbon/patient as mob)
 	check_victim()
 	if(victim && get_turf(victim) == get_turf(src) && victim.lying)
-		to_chat(usr, "<span class='warning'>\The [src] is already occupied!</span>")
+		usr << "<span class='warning'>\The [src] is already occupied!</span>"
 		return 0
 	if(patient.buckled)
-		to_chat(usr, "<span class='notice'>Unbuckle \the [patient] first!</span>")
+		usr << "<span class='notice'>Unbuckle \the [patient] first!</span>"
 		return 0
 	return 1

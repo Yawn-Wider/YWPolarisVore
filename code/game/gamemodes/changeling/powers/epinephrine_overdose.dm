@@ -28,7 +28,7 @@
 	changeling.chem_charges -= 30
 
 	var/mob/living/carbon/human/C = src
-	to_chat(C, "<span class='notice'>Energy rushes through us.  [C.lying ? "We arise." : ""]</span>")
+	C << "<span class='notice'>Energy rushes through us.  [C.lying ? "We arise." : ""]</span>"
 	C.stat = 0
 	C.SetParalysis(0)
 	C.SetStunned(0)

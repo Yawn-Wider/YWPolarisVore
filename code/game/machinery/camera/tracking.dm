@@ -161,7 +161,7 @@
 	if(U.cameraFollow)
 		U.ai_cancel_tracking()
 	U.cameraFollow = target
-	to_chat(U, "Now tracking [target.name] on camera.")
+	U << "Now tracking [target.name] on camera."
 	target.tracking_initiated()
 
 	spawn (0)
@@ -171,7 +171,7 @@
 
 			switch(target.tracking_status())
 				if(TRACKING_NO_COVERAGE)
-					to_chat(U, "Target is not near any active cameras.")
+					U << "Target is not near any active cameras."
 					sleep(100)
 					continue
 				if(TRACKING_TERMINATE)

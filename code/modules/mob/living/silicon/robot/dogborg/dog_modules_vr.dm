@@ -182,9 +182,9 @@
 	if(!..(user, 1))
 		return
 	if(water.energy)
-		to_chat(user, "<span class='notice'>[src] is wet. Just like it should be.</span>")
+		user <<"<span class='notice'>[src] is wet. Just like it should be.</span>"
 	if(water.energy < 5)
-		to_chat(user, "<span class='notice'>[src] is dry.</span>")
+		user <<"<span class='notice'>[src] is dry.</span>"
 
 /obj/item/device/dogborg/tongue/attack_self(mob/user)
 	var/mob/living/silicon/robot.R = user

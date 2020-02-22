@@ -43,7 +43,7 @@
 		return
 
 	if(state != 4)
-		to_chat(usr, "The washing machine cannot run in this state.")
+		usr << "The washing machine cannot run in this state."
 		return
 
 	if(locate(/mob,washing))
@@ -94,7 +94,7 @@
 			return
 	/*if(W.is_screwdriver())
 		panel = !panel
-		to_chat(user, "<span class='notice'>You [panel ? "open" : "close"] the [src]'s maintenance panel</span>")*/
+		user << "<span class='notice'>You [panel ? "open" : "close"] the [src]'s maintenance panel</span>"*/
 	if(istype(W,/obj/item/weapon/pen/crayon) || istype(W,/obj/item/weapon/stamp))
 		if(state in list(	1, 3, 6))
 			if(!crayon)
@@ -116,7 +116,7 @@
 			..()
 
 	else if(is_type_in_list(W, disallowed_types))
-		to_chat(user, "<span class='warning'>You can't fit \the [W] inside.</span>")
+		user << "<span class='warning'>You can't fit \the [W] inside.</span>"
 		return
 
 	else if(istype(W, /obj/item/clothing) || istype(W, /obj/item/weapon/bedsheet))
@@ -127,9 +127,9 @@
 				washing += W
 				state = 3
 			else
-				to_chat(user, "<span class='notice'>You can't put the item in right now.</span>")
+				user << "<span class='notice'>You can't put the item in right now.</span>"
 		else
-			to_chat(user, "<span class='notice'>The washing machine is full.</span>")
+			user << "<span class='notice'>The washing machine is full.</span>"
 	else
 		..()
 	update_icon()
@@ -153,7 +153,7 @@
 			washing.Cut()
 			state = 1
 		if(5)
-			to_chat(user, "<span class='warning'>The [src] is busy.</span>")
+			user << "<span class='warning'>The [src] is busy.</span>"
 		if(6)
 			state = 7
 		if(7)

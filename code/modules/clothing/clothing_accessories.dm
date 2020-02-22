@@ -70,7 +70,7 @@
 	..(user)
 	if(LAZYLEN(accessories))
 		for(var/obj/item/clothing/accessory/A in accessories)
-			to_chat(user, "\A [A] is attached to it.")
+			user << "\A [A] is attached to it."
 
 /**
  *  Attach accessory A to src

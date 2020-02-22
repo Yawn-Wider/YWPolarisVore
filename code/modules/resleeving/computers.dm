@@ -71,12 +71,12 @@
 			pods += P
 			P.connected = src
 			P.name = "[initial(P.name)] #[pods.len]"
-			to_chat(user, "<span class='notice'>You connect [P] to [src].</span>")
+			user << "<span class='notice'>You connect [P] to [src].</span>"
 	else if(istype(W, /obj/item/weapon/disk/transcore) && SStranscore && !SStranscore.core_dumped)
 		user.unEquip(W)
 		disk = W
 		disk.forceMove(src)
-		to_chat(user, "<span class='notice'>You insert \the [W] into \the [src].</span>")
+		user << "<span class='notice'>You insert \the [W] into \the [src].</span>"
 	if(istype(W, /obj/item/weapon/disk/body_record))
 		var/obj/item/weapon/disk/body_record/brDisk = W
 		if(!brDisk.stored)
@@ -391,7 +391,7 @@
 
 /obj/item/weapon/cmo_disk_holder/attack_self(var/mob/attacker)
 	playsound(src, 'sound/items/poster_ripped.ogg', 50)
-	to_chat(attacker, "<span class='warning'>You tear open \the [name].</span>")
+	attacker << "<span class='warning'>You tear open \the [name].</span>"
 	attacker.unEquip(src)
 	var/obj/item/weapon/disk/transcore/newdisk = new(get_turf(src))
 	attacker.put_in_any_hand_if_possible(newdisk)

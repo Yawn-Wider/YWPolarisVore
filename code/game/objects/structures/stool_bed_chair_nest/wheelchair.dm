@@ -33,7 +33,7 @@
 		if(user==pulling)
 			pulling = null
 			user.pulledby = null
-			to_chat(user, "<span class='warning'>You lost your grip!</span>")
+			user << "<span class='warning'>You lost your grip!</span>"
 		return
 	if(has_buckled_mobs() && pulling && user in buckled_mobs)
 		if(pulling.stat || pulling.stunned || pulling.weakened || pulling.paralysis || pulling.lying || pulling.restrained())
@@ -51,10 +51,10 @@
 		if(user==pulling)
 			return
 	if(pulling && (get_dir(src.loc, pulling.loc) == direction))
-		to_chat(user, "<span class='warning'>You cannot go there.</span>")
+		user << "<span class='warning'>You cannot go there.</span>"
 		return
 	if(pulling && has_buckled_mobs() && (user in buckled_mobs))
-		to_chat(user, "<span class='warning'>You cannot drive while being pushed.</span>")
+		user << "<span class='warning'>You cannot drive while being pushed.</span>"
 		return
 
 	// Let's roll
@@ -109,7 +109,7 @@
 						unbuckle_mob()
 				if (pulling && (get_dist(src, pulling) > 1))
 					pulling.pulledby = null
-					to_chat(pulling, "<span class='warning'>You lost your grip!</span>")
+					pulling << "<span class='warning'>You lost your grip!</span>"
 					pulling = null
 			else
 				if (occupant && (src.loc != occupant.loc))
@@ -128,7 +128,7 @@
 	if(in_range(src, user))
 		if(!ishuman(user))	return
 		if(has_buckled_mobs() && user in buckled_mobs)
-			to_chat(user, "<span class='warning'>You realize you are unable to push the wheelchair you sit in.</span>")
+			user << "<span class='warning'>You realize you are unable to push the wheelchair you sit in.</span>"
 			return
 		if(!pulling)
 			pulling = user
@@ -136,9 +136,9 @@
 			if(user.pulling)
 				user.stop_pulling()
 			user.set_dir(get_dir(user, src))
-			to_chat(user, "You grip \the [name]'s handles.")
+			user << "You grip \the [name]'s handles."
 		else
-			to_chat(usr, "You let go of \the [name]'s handles.")
+			usr << "You let go of \the [name]'s handles."
 			pulling.pulledby = null
 			pulling = null
 		return

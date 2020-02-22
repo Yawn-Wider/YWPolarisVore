@@ -1,5 +1,6 @@
 
 /**********************Ore box**************************/
+//Why the hell is this file called satchel_ore_boxdm.dm? -CK
 /obj/structure/ore_box
 	icon = 'icons/obj/mining.dmi'
 	icon_state = "orebox0"
@@ -11,8 +12,11 @@
 
 /obj/structure/ore_box/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/weapon/ore))
-		user.remove_from_mob(W)
-		src.contents += W
+		if (W.name != "strange rock")
+			user.remove_from_mob(W)
+			src.contents += W
+		else
+			to_chat(user,"<span class='notice'>The [W] bounces out of the [src]!</span>")
 
 	else if (istype(W, /obj/item/weapon/storage))
 		var/obj/item/weapon/storage/S = W
@@ -20,8 +24,11 @@
 			return
 		S.hide_from(usr)
 		for(var/obj/item/weapon/ore/O in S.contents)
-			S.remove_from_storage(O, src) //This will move the item to this item's contents
-		to_chat(user, "<span class='notice'>You empty the satchel into the box.</span>")
+			if (O.name != "strange rock")
+				S.remove_from_storage(O, src) //This will move the item to this item's contents
+			else
+				to_chat(user,"<span class='notice'>The [O] bounces out of the [src]!</span>")
+		to_chat(user,"<span class='notice'>You empty the satchel into the [src].</span>")
 
 	update_ore_count()
 
@@ -32,15 +39,18 @@
 	stored_ore = list()
 
 	for(var/obj/item/weapon/ore/O in contents)
-
 		if(stored_ore[O.name])
 			stored_ore[O.name]++
 		else
 			stored_ore[O.name] = 1
 
 /obj/structure/ore_box/examine(mob/user)
-	to_chat(user, "That's an [src].")
-	to_chat(user, desc)
+	user << "That's an [src]."
+	user << desc
+
+	// Borgs can now check contents too.
+	if((!istype(user, /mob/living/carbon/human)) && (!istype(user, /mob/living/silicon/robot)))
+		return
 
 	if(!Adjacent(user)) //Can only check the contents of ore boxes if you can physically reach them.
 		return
@@ -48,16 +58,16 @@
 	add_fingerprint(user)
 
 	if(!contents.len)
-		to_chat(user, "It is empty.")
+		user << "It is empty."
 		return
 
 	if(world.time > last_update + 10)
 		update_ore_count()
 		last_update = world.time
 
-	to_chat(user, "It holds:")
+	user << "It holds:"
 	for(var/ore in stored_ore)
-		to_chat(user, "- [stored_ore[ore]] [ore]")
+		user << "- [stored_ore[ore]] [ore]"
 	return
 
 /obj/structure/ore_box/verb/empty_box()
@@ -65,27 +75,27 @@
 	set category = "Object"
 	set src in view(1)
 
-	if(!ishuman(usr) && !isrobot(usr)) //Only living, intelligent creatures with gripping aparatti can empty ore boxes.
-		to_chat(usr, "<span class='warning'>You are physically incapable of emptying the ore box.</span>")
+	if(!istype(usr, /mob/living/carbon/human) && !istype(usr, /mob/living/silicon/robot)) //Only living, intelligent creatures with gripping aparatti can empty ore boxes.
+		usr << "<font color='red'>You are physically incapable of emptying the ore box.</font>"
 		return
 
-	if(usr.stat || usr.restrained())
+	if( usr.stat || usr.restrained() )
 		return
 
 	if(!Adjacent(usr)) //You can only empty the box if you can physically reach it
-		to_chat(usr, "You cannot reach the ore box.")
+		usr << "You cannot reach the ore box."
 		return
 
 	add_fingerprint(usr)
 
 	if(contents.len < 1)
-		to_chat(usr, "<span class='warning'>The ore box is empty.</span>")
+		usr << "<font color='red'>The ore box is empty.</font>"
 		return
 
 	for (var/obj/item/weapon/ore/O in contents)
 		contents -= O
 		O.loc = src.loc
-	to_chat(usr, "<span class='notice'>You empty the ore box.</span>")
+	usr << "<font color='blue'>You empty the ore box.</font>"
 
 	return
 

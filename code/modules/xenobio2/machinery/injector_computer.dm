@@ -38,9 +38,9 @@
 				var/obj/machinery/xenobio2/manualinjector/I = P.connectable
 				injector = I
 				I.computer = src
-				to_chat(user, "<span class='warning'> You link the [src] to the [P.connectable]!</span>")
+				user << "<span class='warning'> You link the [src] to the [P.connectable]!</span>"
 		else
-			to_chat(user, "<span class='warning'> You store the [src] in the [P]'s buffer!</span>")
+			user << "<span class='warning'> You store the [src] in the [P]'s buffer!</span>"
 			P.connectable = src
 		return
 

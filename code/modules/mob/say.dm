@@ -19,7 +19,7 @@
 	set category = "IC"
 
 	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<font color='red'>Speech is currently admin-disabled.</font>")
+		usr << "<font color='red'>Speech is currently admin-disabled.</font>"
 		return
 
 	//VOREStation Edit Start
@@ -36,7 +36,7 @@
 
 /mob/proc/say_dead(var/message)
 	if(say_disabled)	//This is here to try to identify lag problems
-		to_chat(usr, "<span class='danger'>Speech is currently admin-disabled.</span>")
+		usr << "<span class='danger'>Speech is currently admin-disabled.</span>"
 		return
 
 	if(!client)
@@ -48,7 +48,7 @@
 			return
 
 	if(!is_preference_enabled(/datum/client_preference/show_dsay))
-		to_chat(usr, "<span class='danger'>You have deadchat muted.</span>")
+		usr << "<span class='danger'>You have deadchat muted.</span>"
 		return
 
 	message = encode_html_emphasis(message)

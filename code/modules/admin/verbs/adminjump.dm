@@ -54,7 +54,7 @@
 				A.on_mob_jump()
 				A.loc = T
 			else
-				to_chat(A, "This mob is not located in the game world.")
+				A << "This mob is not located in the game world."
 	else
 		alert("Admin jumping disabled")
 

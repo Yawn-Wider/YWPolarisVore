@@ -116,7 +116,7 @@
 						continue
 					loc_landmark = tripai
 		if (!loc_landmark)
-			to_chat(O, "Oh god sorry we can't find an unoccupied AI spawn location, so we're spawning you on top of someone.")
+			O << "Oh god sorry we can't find an unoccupied AI spawn location, so we're spawning you on top of someone."
 			for(var/obj/effect/landmark/start/sloc in landmarks_list)
 				if (sloc.name == "AI")
 					loc_landmark = sloc
@@ -212,7 +212,7 @@
 	new_xeno.a_intent = I_HURT
 	new_xeno.key = key
 
-	to_chat(new_xeno, "<B>You are now an alien.</B>")
+	new_xeno << "<B>You are now an alien.</B>"
 	qdel(src)
 	return
 
@@ -234,7 +234,7 @@
 	new_corgi.a_intent = I_HURT
 	new_corgi.key = key
 
-	to_chat(new_corgi, "<B>You are now a Corgi. Yap Yap!</B>")
+	new_corgi << "<B>You are now a Corgi. Yap Yap!</B>"
 	qdel(src)
 	return
 
@@ -244,7 +244,7 @@
 	var/mobpath = input("Which type of mob should [src] turn into?", "Choose a type") in mobtypes
 
 	if(!safe_animal(mobpath))
-		to_chat(usr, "<font color='red'>Sorry but this mob type is currently unavailable.</font>")
+		usr << "<font color='red'>Sorry but this mob type is currently unavailable.</font>"
 		return
 
 	if(transforming)
@@ -267,7 +267,7 @@
 	new_mob.a_intent = I_HURT
 
 
-	to_chat(new_mob, "You suddenly feel more... animalistic.")
+	new_mob << "You suddenly feel more... animalistic."
 	spawn()
 		qdel(src)
 	return
@@ -278,14 +278,14 @@
 	var/mobpath = input("Which type of mob should [src] turn into?", "Choose a type") in mobtypes
 
 	if(!safe_animal(mobpath))
-		to_chat(usr, "<font color='red'>Sorry but this mob type is currently unavailable.</font>")
+		usr << "<font color='red'>Sorry but this mob type is currently unavailable.</font>"
 		return
 
 	var/mob/new_mob = new mobpath(src.loc)
 
 	new_mob.key = key
 	new_mob.a_intent = I_HURT
-	to_chat(new_mob, "You feel more... animalistic")
+	new_mob << "You feel more... animalistic"
 
 	qdel(src)
 

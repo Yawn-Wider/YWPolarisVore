@@ -402,9 +402,9 @@
 
 	if(OCCUPANT.client)
 		if(user != OCCUPANT)
-			to_chat(OCCUPANT, "<font color='blue'>The machine kicks you out!</font>")
+			OCCUPANT << "<font color='blue'>The machine kicks you out!</font>"
 		if(user.loc != src.loc)
-			to_chat(OCCUPANT, "<font color='blue'>You leave the not-so-cozy confines of the SSU.</font>")
+			OCCUPANT << "<font color='blue'>You leave the not-so-cozy confines of the SSU.</font>"
 
 		OCCUPANT.client.eye = OCCUPANT.client.mob
 		OCCUPANT.client.perspective = MOB_PERSPECTIVE
@@ -959,7 +959,7 @@
 /obj/machinery/suit_cycler/proc/eject_occupant(mob/user as mob)
 
 	if(locked || active)
-		to_chat(user, "<span class='warning'>The cycler is locked.</span>")
+		user << "<span class='warning'>The cycler is locked.</span>"
 		return
 
 	if(!occupant)

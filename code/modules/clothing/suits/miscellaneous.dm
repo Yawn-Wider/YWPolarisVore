@@ -779,11 +779,11 @@ obj/item/clothing/suit/kamishimo
 	if(rolled == 0)
 		rolled = 1
 		body_parts_covered &= ~(ARMS)
-		to_chat(usr, "<span class='notice'>You roll up the sleeves of your [src].</span>")
+		usr << "<span class='notice'>You roll up the sleeves of your [src].</span>"
 	else
 		rolled = 0
 		body_parts_covered = initial(body_parts_covered)
-		to_chat(usr, "<span class='notice'>You roll down the sleeves of your [src].</span>")
+		usr << "<span class='notice'>You roll down the sleeves of your [src].</span>"
 	update_icon()
 
 /obj/item/clothing/suit/storage/flannel/verb/tuck()
@@ -795,10 +795,10 @@ obj/item/clothing/suit/kamishimo
 
 	if(tucked == 0)
 		tucked = 1
-		to_chat(usr, "<span class='notice'>You tuck in your your [src].</span>")
+		usr << "<span class='notice'>You tuck in your your [src].</span>"
 	else
 		tucked = 0
-		to_chat(usr, "<span class='notice'>You untuck your [src].</span>")
+		usr << "<span class='notice'>You untuck your [src].</span>"
 	update_icon()
 
 /obj/item/clothing/suit/storage/flannel/verb/button()
@@ -811,11 +811,11 @@ obj/item/clothing/suit/kamishimo
 	if(buttoned == 0)
 		buttoned = 1
 		flags_inv = HIDETIE|HIDEHOLSTER
-		to_chat(usr, "<span class='notice'>You button your [src].</span>")
+		usr << "<span class='notice'>You button your [src].</span>"
 	else
 		buttoned = 0
 		flags_inv = HIDEHOLSTER
-		to_chat(usr, "<span class='notice'>You unbutton your [src].</span>")
+		usr<<"<span class='notice'>You unbutton your [src].</span>"
 	update_icon()
 
 /obj/item/clothing/suit/storage/flannel/update_icon()

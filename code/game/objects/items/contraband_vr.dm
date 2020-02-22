@@ -12,13 +12,13 @@
 		switch(spawn_chance)
 			if(0 to 49)
 				new /obj/random/gun/guarenteed(usr.loc)
-				to_chat(usr, "You got a thing!")
+				usr << "You got a thing!"
 			if(50 to 99)
 				new /obj/item/weapon/bikehorn/rubberducky(usr.loc)
 				new /obj/item/weapon/bikehorn(usr.loc)
-				to_chat(usr, "You got two things!")
+				usr << "You got two things!"
 			if(100)
-				to_chat(usr, "The box contained nothing!")
+				usr << "The box contained nothing!"
 				return
 		*/
 		var/loot = pick(/obj/effect/landmark/costume,

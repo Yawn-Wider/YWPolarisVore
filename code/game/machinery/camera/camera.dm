@@ -68,7 +68,7 @@
 	for(var/obj/machinery/camera/C in cameranet.cameras)
 		var/list/tempnetwork = C.network&src.network
 		if(C != src && C.c_tag == src.c_tag && tempnetwork.len)
-			to_world_log("[src.c_tag] [src.x] [src.y] [src.z] conflicts with [C.c_tag] [C.x] [C.y] [C.z]")
+			world.log << "[src.c_tag] [src.x] [src.y] [src.z] conflicts with [C.c_tag] [C.x] [C.y] [C.z]"
 	*/
 	if(!src.network || src.network.len < 1)
 		if(loc)
@@ -174,7 +174,7 @@
 	update_coverage()
 	// DECONSTRUCTION
 	if(W.is_screwdriver())
-		//to_chat(user, "<span class='notice'>You start to [panel_open ? "close" : "open"] the camera's panel.</span>")
+		//user << "<span class='notice'>You start to [panel_open ? "close" : "open"] the camera's panel.</span>"
 		//if(toggle_panel(user)) // No delay because no one likes screwdrivers trying to be hip and have a duration cooldown
 		panel_open = !panel_open
 		user.visible_message("<span class='warning'>[user] screws the camera's panel [panel_open ? "open" : "closed"]!</span>",
@@ -195,10 +195,10 @@
 				assembly.dir = src.dir
 				if(stat & BROKEN)
 					assembly.state = 2
-					to_chat(user, "<span class='notice'>You repaired \the [src] frame.</span>")
+					user << "<span class='notice'>You repaired \the [src] frame.</span>"
 				else
 					assembly.state = 1
-					to_chat(user, "<span class='notice'>You cut \the [src] free from the wall.</span>")
+					user << "<span class='notice'>You cut \the [src] free from the wall.</span>"
 					new /obj/item/stack/cable_coil(src.loc, length=2)
 				assembly = null //so qdel doesn't eat it.
 			qdel(src)
@@ -219,31 +219,28 @@
 			P = W
 			itemname = P.name
 			info = P.notehtml
-		to_chat(U, "You hold \a [itemname] up to the camera ...")
+		U << "You hold \a [itemname] up to the camera ..."
 		for(var/mob/living/silicon/ai/O in living_mob_list)
-			if(!O.client)
-				continue
-			if(U.name == "Unknown")
-				to_chat(O, "<b>[U]</b> holds \a [itemname] up to one of your cameras ...")
-			else
-				to_chat(O, "<b><a href='byond://?src=\ref[O];track2=\ref[O];track=\ref[U];trackname=[U.name]'>[U]</a></b> holds \a [itemname] up to one of your cameras ...")
+			if(!O.client) continue
+			if(U.name == "Unknown") O << "<b>[U]</b> holds \a [itemname] up to one of your cameras ..."
+			else O << "<b><a href='byond://?src=\ref[O];track2=\ref[O];track=\ref[U];trackname=[U.name]'>[U]</a></b> holds \a [itemname] up to one of your cameras ..."
 			O << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", itemname, info), text("window=[]", itemname))
 		for(var/mob/O in player_list)
 			if (istype(O.machine, /obj/machinery/computer/security))
 				var/obj/machinery/computer/security/S = O.machine
 				if (S.current_camera == src)
-					to_chat(O, "[U] holds \a [itemname] up to one of the cameras ...")
+					O << "[U] holds \a [itemname] up to one of the cameras ..."
 					O << browse(text("<HTML><HEAD><TITLE>[]</TITLE></HEAD><BODY><TT>[]</TT></BODY></HTML>", itemname, info), text("window=[]", itemname))
 
 	else if (istype(W, /obj/item/weapon/camera_bug))
 		if (!src.can_use())
-			to_chat(user, "<span class='warning'>Camera non-functional.</span>")
+			user << "<span class='warning'>Camera non-functional.</span>"
 			return
 		if (src.bugged)
-			to_chat(user, "<span class='notice'>Camera bug removed.</span>")
+			user << "<span class='notice'>Camera bug removed.</span>"
 			src.bugged = 0
 		else
-			to_chat(user, "<span class='notice'>Camera bugged.</span>")
+			user << "<span class='notice'>Camera bugged.</span>"
 			src.bugged = 1
 
 	else if(W.damtype == BRUTE || W.damtype == BURN) //bashing cameras
@@ -399,7 +396,7 @@
 		return 0
 
 	// Do after stuff here
-	to_chat(user, "<span class='notice'>You start to weld [src]..</span>")
+	user << "<span class='notice'>You start to weld [src]..</span>"
 	playsound(src.loc, WT.usesound, 50, 1)
 	WT.eyecheck(user)
 	busy = 1
@@ -416,7 +413,7 @@
 		return
 
 	if(stat & BROKEN)
-		to_chat(user, "<span class='warning'>\The [src] is broken.</span>")
+		user << "<span class='warning'>\The [src] is broken.</span>"
 		return
 
 	user.set_machine(src)

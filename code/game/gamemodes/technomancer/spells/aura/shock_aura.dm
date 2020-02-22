@@ -30,7 +30,7 @@
 			continue
 
 		if(L.isSynthetic())
-			to_chat(L, "<span class='danger'>ERROR: Electrical fault detected!</span>")
+			L << "<span class='danger'>ERROR: Electrical fault detected!</span>"
 			L.stuttering += 3
 
 		if(ishuman(L))

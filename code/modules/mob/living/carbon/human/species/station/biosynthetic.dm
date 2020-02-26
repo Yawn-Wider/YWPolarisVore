@@ -43,6 +43,7 @@
 	max_age = 150 //biosynths are functionally immortal if properly maintained, but let's not encourage people too much (and they are somewhat-new)
 
 	economic_modifier = 10
+	rarity_value = 4
 	metabolic_rate = 0.2				// Biosynths *can* process reagents, and with no unusual effects, but they do so *extremely* slowly; 45 brute takes around 5 minutes w/ injected bica.
 	bloodloss_rate = 0.8				// Biosynth 'blood' is thicker and thus lost slower. offsets the fact it's harder for them to regen it (iron will be processed slower, etc.)
 	hunger_factor = 0.10				// On the other hand their energy demands are quite high, so they need to eat almost as often as tesh

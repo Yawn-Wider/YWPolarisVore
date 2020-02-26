@@ -66,7 +66,7 @@
 
 /datum/reagent/toxin/neurotoxic_protein/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien != IS_DIONA)
+	if(alien != IS_DIONA || alien != IS_BIOSYNTH) //YW EDIT
 		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space))
 			step(M, pick(cardinal))
 		if(prob(5))
@@ -167,6 +167,8 @@
 	metabolism = REM * 2
 
 /datum/reagent/toxin/cyanide/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		return
 	..()
 	M.adjustOxyLoss(20 * removed)
 	M.sleeping += 1
@@ -214,6 +216,8 @@
 	strength = 3
 
 /datum/reagent/toxin/stimm/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		return
 	if(alien == IS_TAJARA)
 		removed *= 1.25
 	..()
@@ -237,6 +241,8 @@
 
 /datum/reagent/toxin/potassium_chloride/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		return
 	if(alien == IS_SLIME)
 		M.adjustFireLoss(removed * 2)
 
@@ -263,6 +269,8 @@
 
 /datum/reagent/toxin/potassium_chlorophoride/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		return
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(H.stat != 1)
@@ -286,7 +294,7 @@
 
 /datum/reagent/toxin/zombiepowder/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	M.status_flags |= FAKEDEATH
 	M.adjustOxyLoss(3 * removed)
@@ -312,7 +320,7 @@
 
 /datum/reagent/toxin/lichpowder/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	M.status_flags |= FAKEDEATH
 	M.adjustOxyLoss(1 * removed)
@@ -403,7 +411,7 @@
 	..()
 
 /datum/reagent/toxin/sifslurry/overdose(var/mob/living/carbon/M, var/alien, var/removed) // Overdose effect.
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -465,7 +473,7 @@
 	filtered_organs = list(O_SPLEEN)
 
 /datum/reagent/condensedcapsaicin/venom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(prob(50))
 		M.adjustToxLoss(0.5 * removed)
@@ -488,7 +496,7 @@
 	overdose = REAGENTS_OVERDOSE
 
 /datum/reagent/lexorin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(alien == IS_SLIME)
 		M.apply_effect(5, AGONY, 0)
@@ -585,7 +593,7 @@
 	color = "#801E28"
 
 /datum/reagent/slimejelly/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(alien == IS_SLIME) //Partially made of the stuff. Why would it hurt them?
 		if(prob(75))
@@ -612,7 +620,7 @@
 	overdose = REAGENTS_OVERDOSE
 
 /datum/reagent/soporific/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 
 	var/threshold = 1
@@ -660,7 +668,7 @@
 	overdose_mod = 5	//For that good, lethal feeling
 
 /datum/reagent/chloralhydrate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 
 	var/threshold = 1
@@ -723,7 +731,7 @@
 	overdose = REAGENTS_OVERDOSE
 
 /datum/reagent/space_drugs/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 
 	var/drug_strength = 15
@@ -750,7 +758,7 @@
 	overdose = REAGENTS_OVERDOSE
 
 /datum/reagent/serotrotium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(prob(7))
 		M.emote(pick("twitch", "drool", "moan", "gasp"))
@@ -764,7 +772,7 @@
 	filtered_organs = list(O_SPLEEN)
 
 /datum/reagent/serotrotium/venom/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(prob(30))
 		if(prob(25))
@@ -783,7 +791,7 @@
 	overdose = REAGENTS_OVERDOSE
 
 /datum/reagent/cryptobiolin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	var/drug_strength = 4
 
@@ -807,7 +815,7 @@
 	filtered_organs = list(O_SPLEEN)
 
 /datum/reagent/impedrezene/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	M.jitteriness = max(M.jitteriness - 5, 0)
 	if(prob(80))
@@ -828,7 +836,7 @@
 	overdose = REAGENTS_OVERDOSE
 
 /datum/reagent/mindbreaker/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 
 	var/drug_strength = 100
@@ -851,7 +859,7 @@
 	metabolism = REM * 0.5
 
 /datum/reagent/psilocybin/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 
 	var/threshold = 1
@@ -905,7 +913,7 @@
 	overdose = REAGENTS_OVERDOSE
 
 datum/reagent/talum_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 
 	var/drug_strength = 29

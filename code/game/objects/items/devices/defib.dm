@@ -262,8 +262,8 @@
 
 //Checks for various conditions to see if the mob is revivable
 /obj/item/weapon/shockpaddles/proc/can_defib(mob/living/carbon/human/H) //This is checked before doing the defib operation
-	if((H.species.flags & NO_SCAN))
-		return "buzzes, \"Unrecogized physiology. Operation aborted.\""
+	if((H.species.flags & NO_SCAN) && !(H.species.name == SPECIES_BIOSYNTH)) //YWEDIT: added biosynth noscan bypass
+		return "buzzes, \"Unrecognized physiology. Operation aborted.\""
 	else if(H.isSynthetic() && !use_on_synthetic)
 		return "buzzes, \"Synthetic Body. Operation aborted.\""
 	else if(!H.isSynthetic() && use_on_synthetic)
@@ -280,7 +280,7 @@
 /obj/item/weapon/shockpaddles/proc/can_revive(mob/living/carbon/human/H) //This is checked right before attempting to revive
 
 	var/deadtime = world.time - H.timeofdeath
-	if (deadtime > DEFIB_TIME_LIMIT && !H.isSynthetic())
+	if (deadtime > DEFIB_TIME_LIMIT && !H.isSynthetic() && !(H.species.name == SPECIES_BIOSYNTH)) //YWEDIT - biosynths can revive after a long delay like synths
 		return "buzzes, \"Resuscitation failed - Excessive neural degeneration. Further attempts futile.\""
 
 	H.updatehealth()
@@ -288,6 +288,25 @@
 	if(H.isSynthetic())
 		if(H.health + H.getOxyLoss() + H.getToxLoss() <= config.health_threshold_dead)
 			return "buzzes, \"Resuscitation failed - Severe damage detected. Begin manual repair before further attempts futile.\""
+	
+	//YW ADDITIONS BEGIN
+	//this is a bit hacky but it's the best solution I have for now- I figure it's reasonable enough
+	//each time you zap them you'll wipe out a little bit of brute and burn, so multiple zaps can be used to revive
+	//but as soon as they hit the -100 threshold it hits the interface check, so it's not free/infinite healing, and can't be used on husks
+	else if(H.species.name == SPECIES_BIOSYNTH)
+		if(H.health <= config.health_threshold_dead)
+			H.adjustBruteLoss(-10)
+			H.adjustFireLoss(-10)
+			return "buzzes, \"\'Jumpkit\' protocol engaged - multiple applications may be required for complete biosynthetic resuscitation.\""
+		//check how dead we are. it's a pretty narrow gap: husking occurs at 250 total burn, and biosynths don't die until 225.
+		if(H.health <= config.health_threshold_dead && H.health >= -150)
+			H.adjustBruteLoss(-10)
+			H.adjustFireLoss(-10)
+			return "buzzes, \"\'Jumpkit\' protocol engaged - multiple applications may be required for complete biosynthetic resuscitation.\""
+		//we're absolutely fucked up beyond reasonable repair, fail recovery attempts
+		else if(H.health <= -150 || (HUSK in H.mutations))
+			return "buzzes, \"\'Jumpkit\' protocol failed - excessive biosynthetic tissue damage detected. Resuscitation of this unit is likely impossible.\""
+	//YW ADDITIONS END
 
 	else if(H.health + H.getOxyLoss() <= config.health_threshold_dead || (HUSK in H.mutations) || !H.can_defib)
 		return "buzzes, \"Resuscitation failed - Severe tissue damage makes recovery of patient impossible via defibrillator. Further attempts futile.\""
@@ -430,7 +449,7 @@
 
 	if(H.isSynthetic())
 		H.adjustToxLoss(-H.getToxLoss())
-
+		
 	make_announcement("pings, \"Resuscitation successful.\"", "notice")
 	playsound(get_turf(src), 'sound/machines/defib_success.ogg', 50, 0)
 

@@ -47,7 +47,7 @@ datum
 	result_amount = 2
 
 /datum/reagent/benzilate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH)
 		return
 	var/drug_strength = 12
 	if(alien == IS_SKRELL)

@@ -15,7 +15,7 @@
 	var/modifier_duration = 2 SECONDS	// How long, per unit dose, will this last?
 
 /datum/reagent/modapplying/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	M.add_modifier(modifier_to_add, dose * modifier_duration)
 

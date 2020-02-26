@@ -8,7 +8,7 @@
 	scannable = 1
 
 /datum/reagent/adranol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(M.confused)
 		M.Confuse(-8*removed)

@@ -54,7 +54,7 @@
 	overdose = 5 //This is intentionally low, as we want the ling to take some tox damage, to discourage spamming the ability.
 
 /datum/reagent/epinephrine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	M.add_chemical_effect(CE_SPEEDBOOST, 3)
 	M.add_chemical_effect(CE_PAINKILLER, 60)

@@ -278,7 +278,7 @@
 	mrate_static = TRUE
 
 /datum/reagent/adrenaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	M.SetParalysis(0)
 	M.SetWeakened(0)

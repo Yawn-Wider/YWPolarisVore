@@ -101,7 +101,7 @@
 		strength_mod *= 1.25
 	if(alien == IS_UNATHI)
 		strength_mod *= 0.75
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		strength_mod = 0
 	if(alien == IS_SLIME)
 		strength_mod *= 2 // VOREStation Edit - M.adjustToxLoss(removed)
@@ -146,7 +146,7 @@
 		strength_mod *= 1.25
 	if(alien == IS_UNATHI)
 		strength_mod *= 0.75
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		strength_mod = 0
 	if(alien == IS_SLIME)
 		strength_mod *= 2 // VOREStation Edit - M.adjustToxLoss(removed * 2)
@@ -240,7 +240,7 @@
 	color = "#808080"
 
 /datum/reagent/lithium/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien != IS_DIONA)
+	if(alien != IS_DIONA || alien != IS_BIOSYNTH) //YW EDIT
 		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space))
 			step(M, pick(cardinal))
 		if(prob(5))
@@ -255,7 +255,7 @@
 	color = "#484848"
 
 /datum/reagent/mercury/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien != IS_DIONA)
+	if(alien != IS_DIONA || alien != IS_BIOSYNTH) //YW EDIT
 		if(M.canmove && !M.restrained() && istype(M.loc, /turf/space))
 			step(M, pick(cardinal))
 		if(prob(5))

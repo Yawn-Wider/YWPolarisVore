@@ -141,7 +141,7 @@
 	return
 
 /datum/reagent/proc/overdose(var/mob/living/carbon/M, var/alien, var/removed) // Overdose effect.
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M

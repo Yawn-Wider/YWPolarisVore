@@ -216,7 +216,7 @@
 	scannable = 1
 
 /datum/reagent/carthatoline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(M.getToxLoss() && prob(10))
 		M.vomit(1)
@@ -465,6 +465,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/tramadol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		return
 	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.8
@@ -488,6 +490,8 @@
 	mrate_static = TRUE
 
 /datum/reagent/oxycodone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		return
 	var/chem_effective = 1
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
@@ -516,7 +520,7 @@
 
 /datum/reagent/synaptizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(alien == IS_SLIME)
 		if(dose >= 5) //Not effective in small doses, though it causes toxloss at higher ones, it will make the regeneration for brute and burn more 'efficient' at the cost of more nutrition.
@@ -566,7 +570,7 @@
 	scannable = 1
 
 /datum/reagent/alkysine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	var/chem_effective = 1
 	if(alien == IS_SLIME)
@@ -1021,7 +1025,7 @@
 	scannable = 1
 
 /datum/reagent/arithrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	M.radiation = max(M.radiation - 70 * removed, 0)
 	M.adjustToxLoss(-10 * removed)
@@ -1244,7 +1248,7 @@
 	scannable = 1
 
 /datum/reagent/rezadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	var/mob/living/carbon/human/H = M
 	if(alien == IS_SLIME && istype(H))
@@ -1296,7 +1300,7 @@
 	data = 0
 
 /datum/reagent/methylphenidate/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(volume <= 0.1 && data != -1)
 		data = -1
@@ -1319,7 +1323,7 @@
 	data = 0
 
 /datum/reagent/citalopram/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(volume <= 0.1 && data != -1)
 		data = -1
@@ -1342,7 +1346,7 @@
 	data = 0
 
 /datum/reagent/paroxetine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(volume <= 0.1 && data != -1)
 		data = -1
@@ -1369,7 +1373,7 @@
 	data = 0
 
 /datum/reagent/qerr_quem/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA)
+	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
 		return
 	if(volume <= 0.1 && data != -1)
 		data = -1

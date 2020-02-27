@@ -49,13 +49,10 @@
 	hunger_factor = 0.10				// On the other hand their energy demands are quite high, so they need to eat almost as often as tesh
 							// I tried cranking it higher but it turns out that didn't play well with the reduced metabolic rate; you'd starve faster than you can metabolize nutrition from food
 
-	total_health = 		125			// They're technically not as durable as a custom species with the right traits in terms of raw HP, but their pain immunity and softcrit mechanics pick up a lot of slack
 	blood_volume = 		700			// Biosynths have a dual purpose neurovascular system, so there's more vessels - and more 'blood' filling the network
 	brute_mod =     	1			// No change here, for now. Their increased health pool and pain immunity is more than enough.
 	burn_mod =      	1.2			// Biosynthetic 'tissue' sort of... 'melts'. It's really gross. And it smells absolutely horrendous.
 	oxy_mod =		0			// No oxy damage from any source, just to be safe. Might help with crit stuff?
-	toxins_mod =		0			// Ditto toxins damage. In case NO_POISON has some weird edge-cases or whatever.
-	radiation_mod =		0.2			// Biosynths don't really give a shit about radiation, but too much of it can still have bad effects on them.
 	flash_mod =		1.5			// High-quality optical sensors mean flash-sensitivity built in.
 	sound_mod =		1.5			// Sensitive audio receptors are extra-vulnerable to the bang part of flashbangs, too.
 	siemens_coefficient = 	1.5			// The biosynthetic neurovascular system is a little *too* good at what it does. They really, really don't like getting shocked.
@@ -83,7 +80,7 @@
 	primitive_form = null
 
 	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_FBP_CONSTRUCTION | SPECIES_NO_FBP_CHARGEN
-	flags = NO_SCAN | NO_INFECT | NO_PAIN | NO_POISON //Biosynth 'DNA' is impossible to replicate. On the plus side, immune to infections and viruses, don't feel pain, and most toxins don't hurt them
+	flags = NO_SCAN | NO_INFECT | NO_PAIN //Biosynth 'DNA' is impossible to replicate. On the plus side, immune to infections and viruses, don't feel pain, and most toxins don't hurt them
 	reagent_tag = IS_BIOSYNTH	//I don't have any unique interactions in mind right now, but it might be possible to come up with some stuff later?
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 

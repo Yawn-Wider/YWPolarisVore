@@ -3,6 +3,7 @@
 	desc = "A curious mass of synthetic materials that looks more mechanical than meaty."
 	icon_state = "core_assisted"
 	decays = 0
+	can_assist = FALSE
 	can_reject = FALSE
 
 /obj/item/organ/internal/eyes/biosynth

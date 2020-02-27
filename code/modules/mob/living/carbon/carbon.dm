@@ -96,6 +96,43 @@
 
 	return
 
+//YW ADDITIONS START
+//holy shit this actually worked
+/mob/living/carbon/emp_act(severity)
+	if(species.name == SPECIES_BIOSYNTH)
+		to_chat(src, "<span class='danger'><B>*BZZZT*</B></span>")
+		switch(severity)
+			if(1) //highest intensity, absolutely sucks
+				src.adjustToxLoss(10,15)
+				Confuse(5)
+				Weaken(1)
+				Blind(1)
+				to_chat(src, "<span class='danger'>DANGER: Extreme EM flux detected!</span>")
+				if(prob(75))
+					src.emote(pick("twitch", "pale", "blink_r", "shiver", "sneeze", "vomit", "gasp", "cough", "drool"))
+			if(2)
+				src.adjustToxLoss(7.5,12.5)
+				Confuse(4)
+				Blind(1)
+				to_chat(src, "<span class='danger'>Danger: High EM Flux detected!</span>")
+				if(prob(55))
+					src.emote(pick("twitch", "pale", "blink_r", "shiver", "sneeze", "vomit", "gasp", "cough", "drool"))
+			if(3)
+				src.adjustToxLoss(5,10)
+				Confuse(3)
+				Blind(1)
+				to_chat(src, "<span class='danger'>Warning: Moderate EM flux detected!</span>")
+				if(prob(35))
+					src.emote(pick("twitch", "pale", "blink", "shiver", "sneeze", "gasp", "cough", "drool"))
+			if(4) //lowest intensity
+				src.adjustToxLoss(2.5,7.5)
+				Confuse(2)
+				to_chat(src, "<span class='danger'>Warning: Minor EM flux detected!</span>")
+				if(prob(15))
+					src.emote(pick("twitch", "pale", "blink", "shiver", "sneeze", "gasp", "cough"))
+	..()
+//YW ADDITIONS END
+
 /mob/living/carbon/electrocute_act(var/shock_damage, var/obj/source, var/siemens_coeff = 1.0, var/def_zone = null, var/stun = 1)
 	if(status_flags & GODMODE)	return 0	//godmode
 	if(def_zone == "l_hand" || def_zone == "r_hand") //Diona (And any other potential plant people) hands don't get shocked.

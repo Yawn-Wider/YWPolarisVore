@@ -73,6 +73,8 @@
 
 /datum/reagent/vermicetol/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		chem_effective = 0.5
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)

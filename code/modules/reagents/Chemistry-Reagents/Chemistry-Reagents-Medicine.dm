@@ -52,6 +52,8 @@
 
 /datum/reagent/bicaridine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		chem_effective = 0.5
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -89,6 +91,8 @@
 
 /datum/reagent/bicaridine/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		chem_effective = 0.5
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -133,6 +137,8 @@
 
 /datum/reagent/kelotane/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		chem_effective = 0.5
 	if(alien == IS_SLIME)
 		chem_effective = 0.5
 		M.adjustBruteLoss(2 * removed) //Mends burns, but has negative effects with a Promethean's skeletal structure.
@@ -152,6 +158,8 @@
 
 /datum/reagent/dermaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		chem_effective = 0.5
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -172,6 +180,8 @@
 
 /datum/reagent/dermaline/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		chem_effective = 0.5
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -180,6 +190,8 @@
 
 /datum/reagent/dermaline/topical/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		chem_effective = 0.5
 	if(alien == IS_SLIME)
 		chem_effective = 0.75
 	if(alien != IS_DIONA)
@@ -216,7 +228,7 @@
 	scannable = 1
 
 /datum/reagent/carthatoline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
+	if(alien == IS_DIONA)
 		return
 	if(M.getToxLoss() && prob(10))
 		M.vomit(1)
@@ -295,6 +307,8 @@
 /datum/reagent/tricordrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1
+		if(alien == IS_BIOSYNTH) //YW EDIT
+			chem_effective = 0.5
 		if(alien == IS_SLIME)
 			chem_effective = 0.5
 		M.adjustOxyLoss(-3 * removed * chem_effective)
@@ -318,6 +332,8 @@
 /datum/reagent/tricorlidaze/affect_touch(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien != IS_DIONA)
 		var/chem_effective = 1
+		if(alien == IS_BIOSYNTH) //YW EDIT
+			chem_effective = 0.5
 		if(alien == IS_SLIME)
 			chem_effective = 0.5
 		M.adjustOxyLoss(-2 * removed * chem_effective)
@@ -355,6 +371,8 @@
 /datum/reagent/cryoxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170)
 		var/chem_effective = 1
+		if(alien == IS_BIOSYNTH) //YW EDIT
+			chem_effective = 0.5
 		if(alien == IS_SLIME)
 			chem_effective = 0.25
 			to_chat(M, "<span class='danger'>It's cold. Something causes your cellular mass to harden occasionally, resulting in vibration.</span>")
@@ -380,6 +398,8 @@
 /datum/reagent/clonexadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170)
 		var/chem_effective = 1
+		if(alien == IS_BIOSYNTH) //YW EDIT
+			chem_effective = 0.5
 		if(alien == IS_SLIME)
 			if(prob(10))
 				to_chat(M, "<span class='danger'>It's so cold. Something causes your cellular mass to harden sporadically, resulting in seizure-like twitching.</span>")
@@ -414,6 +434,8 @@
 /datum/reagent/necroxadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(M.bodytemperature < 170 || (M.stat == DEAD && M.has_modifier_of_type(/datum/modifier/bloodpump_corpse)))
 		var/chem_effective = 1
+		if(alien == IS_BIOSYNTH) //YW EDIT
+			chem_effective = 0.5
 		if(alien == IS_SLIME)
 			if(prob(10))
 				to_chat(M, "<span class='danger'>It's so cold. Something causes your cellular mass to harden sporadically, resulting in seizure-like twitching.</span>")
@@ -520,7 +542,7 @@
 
 /datum/reagent/synaptizine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/chem_effective = 1
-	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
+	if(alien == IS_DIONA)
 		return
 	if(alien == IS_SLIME)
 		if(dose >= 5) //Not effective in small doses, though it causes toxloss at higher ones, it will make the regeneration for brute and burn more 'efficient' at the cost of more nutrition.
@@ -697,6 +719,8 @@
 
 /datum/reagent/respirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/repair_strength = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		repair_strength = 0.5
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
 	if(ishuman(M))
@@ -728,6 +752,8 @@
 
 /datum/reagent/gastirodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/repair_strength = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		repair_strength = 0.5
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
 	if(ishuman(M))
@@ -759,6 +785,8 @@
 
 /datum/reagent/hepanephrodaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/repair_strength = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		repair_strength = 0.5
 	if(alien == IS_SLIME)
 		repair_strength = 0.4
 	if(ishuman(M))
@@ -792,6 +820,8 @@
 
 /datum/reagent/cordradaxon/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	var/repair_strength = 1
+	if(alien == IS_BIOSYNTH) //YW EDIT
+		repair_strength = 0.5
 	if(alien == IS_SLIME)
 		repair_strength = 0.6
 	if(ishuman(M))
@@ -1025,7 +1055,7 @@
 	scannable = 1
 
 /datum/reagent/arithrazine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
+	if(alien == IS_DIONA)
 		return
 	M.radiation = max(M.radiation - 70 * removed, 0)
 	M.adjustToxLoss(-10 * removed)
@@ -1248,7 +1278,7 @@
 	scannable = 1
 
 /datum/reagent/rezadone/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
-	if(alien == IS_DIONA || alien == IS_BIOSYNTH) //YW EDIT
+	if(alien == IS_DIONA)
 		return
 	var/mob/living/carbon/human/H = M
 	if(alien == IS_SLIME && istype(H))

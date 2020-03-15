@@ -29,7 +29,6 @@
 		set src in usr
 		if(!usr.canmove || usr.stat || usr.restrained())
 			return 0
-	
 		if(open == 1) //Will check whether icon state is currently set to the "open" or "closed" state and switch it around with a message to the user
 			open = 0
 			icon_state = "secjacket"

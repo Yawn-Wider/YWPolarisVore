@@ -586,7 +586,7 @@
 	var/electrified = 0
 
 	//Departments that the cycler can paint suits to look like.
-	var/list/departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control","Exploration","Pilot Blue","Pilot") //VORESTATION EDIT
+	var/list/departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Emergency Medical Response","Crowd Control","Black Sec","Exploration","Pilot Blue","Pilot") //VORESTATION EDIT + YW EDIT
 	//Species that the suits can be configured to fit.
 	var/list/species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJ, SPECIES_TESHARI, "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid", "Xenochimera","Vasilissan", "Rapala", /*yawngreyedit*/SPECIES_GREY_YW) //VORESTATION EDIT
 
@@ -628,7 +628,7 @@
 	name = "Security suit cycler"
 	model_text = "Security"
 	req_access = list(access_security)
-	departments = list("Security","Crowd Control")
+	departments = list("Security","Crowd Control","Black Sec") //YW ADD
 
 /obj/machinery/suit_cycler/medical
 	name = "Medical suit cycler"
@@ -767,7 +767,7 @@
 	//Clear the access reqs, disable the safeties, and open up all paintjobs.
 	//YW EDIT: add new type
 	to_chat(user, "<span class='danger'>You run the sequencer across the interface, corrupting the operating protocols.</span>")
-	departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Crowd Control","Emergency Medical Response","^%###^%$", "Charring")
+	departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Crowd Control","Black Sec","Emergency Medical Response","^%###^%$", "Charring")
 	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJ, SPECIES_TESHARI, "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid", "Vasilissan", "Rapala",/*YWEDITGREYADD*/SPECIES_GREY_YW) //VORESTATION EDIT
 
 	emagged = 1
@@ -1056,6 +1056,19 @@
 				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuit_riot"
 				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuit_riot"
 				suit.desc = "A heavily armored voidsuit, designed to intimidate people who find black intimidating. Surprisingly slimming."
+		if("Black Sec")
+			if(helmet)
+				helmet.name = "security voidsuit helmet"
+				helmet.icon_state = "rig0-secalt"
+				helmet.item_state = "rig0-secalt"
+				helmet.desc = "A special helmet designed for work in a hazardous, low pressure environment. Has an additional layer of armor. Painted black, for an extra touch of intimidation."
+			if(suit)
+				suit.name = "security voidsuit"
+				suit.icon_state = "rig-secalt"
+				suit.item_state = "rig-secalt"
+				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuit_riot"
+				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuit_riot"
+				suit.desc = "A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor. Painted black, for an extra touch of intimidation."
 		if("Atmos")
 			if(helmet)
 				helmet.name = "atmospherics voidsuit helmet"

@@ -190,30 +190,34 @@
 	siemens_coefficient = 0.7
 
 //Security Crowd Control Voidsuit
-
+//YW EDITS: moved armor stats to here from the other subtype below, so it can actually do its intended job properly
 /obj/item/clothing/head/helmet/space/void/security/riot
 	name = "crowd control voidsuit helmet"
+	desc = "A somewhat tacky voidsuit helmet, a fact mitigated by heavy armor plating."
 	icon_state = "rig0-sec_riot"
 	item_state_slots = list(slot_r_hand_str = "sec_helm_riot", slot_l_hand_str = "sec_helm_riot")
+	armor = list(melee = 70, bullet = 20, laser = 30, energy = 5, bomb = 35, bio = 100, rad = 10) //YW EDIT: riot suits now have riot protection
+	siemens_coefficient = 0.4 //YW EDIT: good protection from stray tasers and rioters using improv stun prods/gloves
 
 /obj/item/clothing/suit/space/void/security/riot
 	name = "crowd control voidsuit"
+	desc = "A heavily armored voidsuit, designed to intimidate people who find black intimidating. Surprisingly slimming."
 	icon_state = "rig-sec_riot"
 	item_state_slots = list(slot_r_hand_str = "sec_voidsuit_riot", slot_l_hand_str = "sec_voidsuit_riot")
+	armor = list(melee = 70, bullet = 20, laser = 30, energy = 5, bomb = 35, bio = 100, rad = 10) //YW EDIT: riot suits now have riot protection
+	siemens_coefficient = 0.4 //YW EDIT: good protection from stray tasers and rioters using improv stun prods/gloves
 
 //Security Surplus Voidsuit
+//YW EDITS: moved armor stats to the riot subtype, making this a purely cosmetic alternative. most species lack sprites for this, so it shouldn't be used!
 /obj/item/clothing/head/helmet/space/void/security/alt
-	name = "riot security voidsuit helmet"
-	desc = "A somewhat tacky voidsuit helmet, a fact mitigated by heavy armor plating."
+	name = "security voidsuit helmet"
 	icon_state = "rig0-secalt"
-	armor = list(melee = 70, bullet = 20, laser = 30, energy = 5, bomb = 35, bio = 100, rad = 10)
+	desc = "A special helmet designed for work in a hazardous, low pressure environment. Has an additional layer of armor. Painted black, for an extra touch of intimidation."
 
 /obj/item/clothing/suit/space/void/security/alt
 	icon_state = "rig-secalt"
-	name = "riot security voidsuit"
-	desc = "A heavily armored voidsuit, designed to intimidate people who find black intimidating. Surprisingly slimming."
-	armor = list(melee = 70, bullet = 20, laser = 30, energy = 5, bomb = 35, bio = 100, rad = 10)
-	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/melee/baton)
+	name = "security voidsuit"
+	desc = "A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor. Painted black, for an extra touch of intimidation."
 
 //Atmospherics
 /obj/item/clothing/head/helmet/space/void/atmos

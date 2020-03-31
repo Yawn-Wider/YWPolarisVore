@@ -765,6 +765,7 @@
 		return
 
 	//Clear the access reqs, disable the safeties, and open up all paintjobs.
+	//YW EDIT: add new type
 	to_chat(user, "<span class='danger'>You run the sequencer across the interface, corrupting the operating protocols.</span>")
 	departments = list("Engineering","Mining","Medical","Security","Atmos","HAZMAT","Construction","Biohazard","Crowd Control","Emergency Medical Response","^%###^%$", "Charring")
 	species = list(SPECIES_HUMAN,SPECIES_SKRELL,SPECIES_UNATHI,SPECIES_TAJ, SPECIES_TESHARI, "Nevrean", "Akula", "Sergal", "Flatland Zorren", "Highlander Zorren", "Vulpkanin", "Promethean", "Xenomorph Hybrid", "Vasilissan", "Rapala",/*YWEDITGREYADD*/SPECIES_GREY_YW) //VORESTATION EDIT
@@ -979,6 +980,7 @@
 	return
 
 //There HAS to be a less bloated way to do this. TODO: some kind of table/icon name coding? ~Z
+//YW EDITS: a fucking ton, every suit gets its desc set now
 /obj/machinery/suit_cycler/proc/apply_paintjob()
 
 	if(!target_species || !target_department)
@@ -1007,12 +1009,14 @@
 				helmet.name = "mining voidsuit helmet"
 				helmet.icon_state = "rig0-mining"
 				helmet.item_state = "rig0-mining"
+				helmet.desc = "A special helmet designed for work in a hazardous, low pressure environment. Has reinforced plating."
 			if(suit)
 				suit.name = "mining voidsuit"
 				suit.icon_state = "rig-mining"
 				suit.item_state = "rig-mining"
 				suit.item_state_slots[slot_r_hand_str] = "mining_voidsuit"
 				suit.item_state_slots[slot_l_hand_str] = "mining_voidsuit"
+				suit.desc = "A special suit that protects against hazardous, low pressure environments. Has reinforced plating."
 		if("Medical")
 			if(helmet)
 				helmet.name = "medical voidsuit helmet"
@@ -1031,23 +1035,27 @@
 				helmet.name = "security voidsuit helmet"
 				helmet.icon_state = "rig0-sec"
 				helmet.item_state = "rig0-sec"
+				helmet.desc = "A special helmet designed for work in a hazardous, low pressure environment. Has an additional layer of armor."
 			if(suit)
 				suit.name = "security voidsuit"
 				suit.icon_state = "rig-sec"
 				suit.item_state = "rig-sec"
 				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuit"
 				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuit"
+				suit.desc = "A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor."
 		if("Crowd Control")
 			if(helmet)
 				helmet.name = "crowd control voidsuit helmet"
 				helmet.icon_state = "rig0-sec_riot"
 				helmet.item_state = "rig0-sec_riot"
+				helmet.desc = "A somewhat tacky voidsuit helmet, a fact mitigated by heavy armor plating."
 			if(suit)
 				suit.name = "crowd control voidsuit"
 				suit.icon_state = "rig-sec_riot"
 				suit.item_state = "rig-sec_riot"
 				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuit_riot"
 				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuit_riot"
+				suit.desc = "A heavily armored voidsuit, designed to intimidate people who find black intimidating. Surprisingly slimming."
 		if("Atmos")
 			if(helmet)
 				helmet.name = "atmospherics voidsuit helmet"
@@ -1118,67 +1126,79 @@
 				helmet.name = "blood-red voidsuit helmet"
 				helmet.icon_state = "rig0-syndie"
 				helmet.item_state = "rig0-syndie"
+				helmet.desc = "An advanced helmet designed for work in special operations."
 			if(suit)
 				suit.name = "blood-red voidsuit"
 				suit.item_state = "rig-syndie"
 				suit.icon_state = "rig-syndie"
 				suit.item_state_slots[slot_r_hand_str] = "syndie_voidsuit"
 				suit.item_state_slots[slot_l_hand_str] = "syndie_voidsuit"
+				suit.desc = "An advanced suit that protects against injuries during special operations."
 		if("Charring")
 			if(helmet)
 				helmet.name = "soot-covered voidsuit helmet"
 				helmet.icon_state = "rig0-firebug"
 				helmet.item_state = "rig0-firebug"
+				helmet.desc = "A blackened helmet that has had many of its protective plates coated in or replaced with high-grade thermal insulation, to protect against incineration."
 			if(suit)
 				suit.name = "soot-covered voidsuit"
 				suit.item_state = "rig-firebug"
 				suit.icon_state = "rig-firebug"
 				suit.item_state_slots[slot_r_hand_str] = "rig-firebug"
 				suit.item_state_slots[slot_l_hand_str] = "rig-firebug"
+				suit.desc = "A blackened suit that has had many of its protective plates coated in or replaced with high-grade thermal insulation, to protect against incineration."
 		if("Exploration")
 			if(helmet)
 				helmet.name = "exploration voidsuit helmet"
 				helmet.icon_state = "helm_explorer"
 				helmet.item_state = "helm_explorer"
+				helmet.desc = "A radiation-resistant helmet made especially for exploring unknown planetary environments."
 			if(suit)
 				suit.name = "exploration voidsuit"
 				suit.icon_state = "void_explorer"
 				suit.item_state = "void_explorer"
 				suit.item_state_slots[slot_r_hand_str] = "wiz_voidsuit"
 				suit.item_state_slots[slot_l_hand_str] = "wiz_voidsuit"
+				suit.desc = "A lightweight, radiation-resistant voidsuit, featuring the Explorer emblem on its chest plate. Designed for exploring unknown planetary environments."
 		if("Old Exploration")
 			if(helmet)
 				helmet.name = "exploration voidsuit helmet"
 				helmet.icon_state = "helm_explorer2"
 				helmet.item_state = "helm_explorer2"
+				helmet.desc = "A radiation-resistant helmet retrofitted for exploring unknown planetary environments."
 			if(suit)
 				suit.name = "exploration voidsuit"
 				suit.icon_state = "void_explorer2"
 				suit.item_state = "void_explorer2"
 				suit.item_state_slots[slot_r_hand_str] = "wiz_voidsuit"
 				suit.item_state_slots[slot_l_hand_str] = "wiz_voidsuit"
+				suit.desc = "A lightweight, radiation-resistant voidsuit. Retrofitted for exploring unknown planetary environments."
 		if("Pilot")
 			if(helmet)
 				helmet.name = "pilot voidsuit helmet"
 				helmet.icon_state = "rig0_pilot"
 				helmet.item_state = "pilot_helm"
+				helmet.desc = "An atmos resistant helmet for space and planet exploration."
 			if(suit)
 				suit.name = "pilot voidsuit"
 				suit.icon_state = "rig-pilot"
 				suit.item_state = "rig-pilot"
 				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuitTG"
 				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuitTG"
+				suit.desc = "An atmos resistant voidsuit for space and planet exploration."
 		if("Pilot Blue")
 			if(helmet)
 				helmet.name = "pilot voidsuit helmet"
 				helmet.icon_state = "rig0_pilot2"
 				helmet.item_state = "pilot_helm2"
+				helmet.desc = "An atmos resistant helmet for space and planet exploration."
 			if(suit)
 				suit.name = "pilot voidsuit"
 				suit.icon_state = "rig-pilot2"
 				suit.item_state = "rig-pilot2"
 				suit.item_state_slots[slot_r_hand_str] = "sec_voidsuitTG"
 				suit.item_state_slots[slot_l_hand_str] = "sec_voidsuitTG"
+				suit.desc = "An atmos resistant voidsuit for space and planet exploration."
 
 
 	if(helmet) helmet.name = "refitted [helmet.name]"

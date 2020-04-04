@@ -190,28 +190,31 @@
 	siemens_coefficient = 0.7
 
 //Security Crowd Control Voidsuit
+
 /obj/item/clothing/head/helmet/space/void/security/riot
 	name = "crowd control voidsuit helmet"
-	desc = "A somewhat tacky voidsuit helmet, a fact mitigated by heavy armor plating."
 	icon_state = "rig0-sec_riot"
 	item_state_slots = list(slot_r_hand_str = "sec_helm_riot", slot_l_hand_str = "sec_helm_riot")
 
 /obj/item/clothing/suit/space/void/security/riot
 	name = "crowd control voidsuit"
-	desc = "A heavily armored voidsuit, designed to intimidate people who find black intimidating. Surprisingly slimming."
 	icon_state = "rig-sec_riot"
 	item_state_slots = list(slot_r_hand_str = "sec_voidsuit_riot", slot_l_hand_str = "sec_voidsuit_riot")
 
 //Security Surplus Voidsuit
 /obj/item/clothing/head/helmet/space/void/security/alt
+	name = "riot security voidsuit helmet"
+	desc = "A somewhat tacky voidsuit helmet, a fact mitigated by heavy armor plating."
 	name = "security voidsuit helmet"
 	icon_state = "rig0-secalt"
-	desc = "A special helmet designed for work in a hazardous, low pressure environment. Has an additional layer of armor. Painted black, for an extra touch of intimidation."
+	armor = list(melee = 70, bullet = 20, laser = 30, energy = 5, bomb = 35, bio = 100, rad = 10)
 
 /obj/item/clothing/suit/space/void/security/alt
 	icon_state = "rig-secalt"
-	name = "security voidsuit"
-	desc = "A special suit that protects against hazardous, low pressure environments. Has an additional layer of armor. Painted black, for an extra touch of intimidation."
+	name = "riot security voidsuit"
+	desc = "A heavily armored voidsuit, designed to intimidate people who find black intimidating. Surprisingly slimming."
+	armor = list(melee = 70, bullet = 20, laser = 30, energy = 5, bomb = 35, bio = 100, rad = 10)
+	allowed = list(/obj/item/weapon/gun,/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit,/obj/item/weapon/melee/baton)
 
 //Atmospherics
 /obj/item/clothing/head/helmet/space/void/atmos

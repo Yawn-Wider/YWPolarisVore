@@ -11,7 +11,7 @@
 var/global/datum/global_init/init = new ()
 
 /*
-	Pre-map initialization stuff should go here.
+	Pre-map initialization stuff should go here.ignore
 */
 /datum/global_init/New()
 /* VOREStation Removal - Ours is even earlier, in world/New()

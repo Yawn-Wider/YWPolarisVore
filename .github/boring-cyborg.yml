@@ -4,9 +4,9 @@
 # ** matches anything including /
 
 labelPRBasedOnFilePath:
-  # Add 'Type: Map' to any changes to .dmm files
+  # Add 'Type: Map' to any changes to /yw/*.dmm files
   "Type: Map":
-    - '**.dmm'
+    - '/yw/**.dmm'
 
   # Add 'Type: Map' to any changes to image files
   "Type: Icon":
@@ -20,10 +20,10 @@ labelPRBasedOnFilePath:
     - '**.mp3'
     - '**.wav'
 
-  # Add 'Type: Fluff' to any change to *custom_items*
+  # Add 'Type: Fluff' to any change to *custom_items_yw or loadout_fluffitems_yw*
   "Type: Fluff":
-    - '**custom_items**'
-    - '**loadout_fluff**'
+    - '**custom_**_yw**'
+    - '**loadout_fluffitems_yw**'
 
   # Contains changes to system folders
   "Type: .git or .github":

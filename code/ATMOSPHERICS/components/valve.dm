@@ -288,6 +288,9 @@
 				open()
 
 /obj/machinery/atmospherics/valve/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+	if(istype(W, /obj/item/multitool))
+		update_multitool_menu(user)
+		return 1
 	if (!W.is_wrench())
 		return ..()
 	if (istype(src, /obj/machinery/atmospherics/valve/digital) && !src.allowed(user))
@@ -309,3 +312,11 @@
 /obj/machinery/atmospherics/valve/examine(mob/user)
 	. = ..()
 	. += "It is [open ? "open" : "closed"]."
+
+/obj/machinery/atmospherics/binary/valve/digital/multitool_menu(var/mob/user,var/obj/item/multitool/P)
+	return {"
+		<ul>
+			<li><b>Frequency:</b> <a href="?src=\ref[src];set_freq=-1">[format_frequency(frequency)] GHz</a> (<a href="?src=\ref[src];set_freq=[ATMOS_VENTSCRUB]">Reset</a>)</li>
+			<li>[format_tag("ID Tag","id_tag","set_id")]</a></li>
+		</ul>
+		"}

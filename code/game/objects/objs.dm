@@ -217,39 +217,39 @@
 				sleep(rand(2,4))
 
 
-/obj/proc/multitool_menu(var/mob/user,var/obj/item/multitool/P)
+/obj/machinery/proc/multitool_menu(var/mob/user,var/obj/item/multitool/P)
 	return "<b>NO MULTITOOL_MENU!</b>"
 
-/obj/proc/linkWith(var/mob/user, var/obj/buffer, var/link/context)
+/obj/machinery/proc/linkWith(var/mob/user, var/obj/buffer, var/link/context)
 	return 0
 
-/obj/proc/unlinkFrom(var/mob/user, var/obj/buffer)
+/obj/machinery/proc/unlinkFrom(var/mob/user, var/obj/buffer)
 	return 0
 
-/obj/proc/canLink(var/obj/O, var/link/context)
+/obj/machinery/proc/canLink(var/obj/O, var/link/context)
 	return 0
 
-/obj/proc/isLinkedWith(var/obj/O)
+/obj/machinery/machinery/proc/isLinkedWith(var/obj/O)
 	return 0
 
-/obj/proc/getLink(var/idx)
+/obj/machinery/proc/getLink(var/idx)
 	return null
 
-/obj/proc/linkMenu(var/obj/O)
+/obj/machinery/proc/linkMenu(var/obj/O)
 	var/dat=""
 	if(canLink(O, list()))
 		dat += " <a href='?src=\ref[src];link=1'>\[Link\]</a> "
 	return dat
 
-/obj/proc/format_tag(var/label,var/varname, var/act="set_tag")
+/obj/machinery/proc/format_tag(var/label,var/varname, var/act="set_tag")
 	var/value = vars[varname]
 	if(!value || value=="")
 		value="-----"
 	return "<b>[label]:</b> <a href=\"?src=\ref[src];[act]=[varname]\">[value]</a>"
 
 
-/obj/proc/update_multitool_menu(mob/user as mob)
-	var/obj/item/multitool/P = get_multitool(user)
+/obj/machinery/proc/update_multitool_menu(mob/user as mob)
+	var/obj/item/device/multitool/P = get_multitool(user)
 
 	if(!istype(P))
 		return 0
@@ -279,9 +279,7 @@ a {
 			if(P)
 				if(P.buffer)
 					var/id = null
-					if(istype(P.buffer, /obj/machinery/telecomms))
-						id=P.buffer:id
-					else if("id_tag" in P.buffer.vars)
+					if("id_tag" in P.buffer.vars)
 						id=P.buffer:id_tag
 					dat += "<p><b>MULTITOOL BUFFER:</b> [P.buffer] [id ? "([id])" : ""]"
 

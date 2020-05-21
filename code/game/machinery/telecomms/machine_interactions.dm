@@ -98,7 +98,7 @@
 
 		if(P)
 			if(P.buffer)
-				dat += "<br><br>MULTITOOL BUFFER: [P.buffer] ([P.buffer.id]) <a href='?src=\ref[src];link=1'>\[Link\]</a> <a href='?src=\ref[src];flush=1'>\[Flush\]"
+				dat += "<br><br>MULTITOOL BUFFER: [P.buffer] [id ? "([id])" : ""] <a href='?src=\ref[src];link=1'>\[Link\]</a> <a href='?src=\ref[src];flush=1'>\[Flush\]"
 			else
 				dat += "<br><br>MULTITOOL BUFFER: <a href='?src=\ref[src];buffer=1'>\[Add Machine\]</a>"
 			P.update_icon()
@@ -332,11 +332,11 @@
 
 		if(P)
 			if(P.buffer && P.buffer != src)
-				if(!(src in P.buffer.links))
+				/*if(!(src in P.buffer.links))
 					P.buffer.links.Add(src)
 
 				if(!(P.buffer in src.links))
-					src.links.Add(P.buffer)
+					src.links.Add(P.buffer)*/
 
 				temp = "<font color = #666633>-% Successfully linked with \ref[P.buffer] [P.buffer.name] %-</font>"
 

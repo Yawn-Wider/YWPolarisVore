@@ -291,7 +291,7 @@ a {
 				else
 					dat += "<p><b>MULTITOOL BUFFER:</b> <a href='?src=/ref[src];buffer=1'>\[Add Machine\]</a></p>"
 	else
-		dat += "<b>ACCESS DENIED</a>"
+		dat += "ACCESS DENIED</a>"
 	dat += "</body></html>"
 	user << browse(dat, "window=mtcomputer")
 	user.set_machine(src)

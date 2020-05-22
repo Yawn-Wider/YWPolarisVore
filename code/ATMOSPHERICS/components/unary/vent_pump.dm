@@ -24,6 +24,8 @@
 	level = 1
 	var/area_uid
 	var/id_tag = null
+	var/advcontrol = 0
+	Mtoollink = 1
 
 	var/hibernate = 0 //Do we even process?
 	var/pump_direction = 1 //0 = siphoning, 1 = releasing
@@ -184,7 +186,7 @@
 		soundloop.stop()
 		return 0
 	if(!use_power)
-		soundloop.stop() 
+		soundloop.stop()
 		return 0
 	if(welded)
 		soundloop.stop()
@@ -410,6 +412,9 @@
 		else
 			to_chat(user, "<span class='warning'>You need more welding fuel to complete this task.</span>")
 			return 1
+	if(istype(W, /obj/item/device/multitool))
+		update_multitool_menu(user)
+		return 1
 	else
 		..()
 
@@ -450,6 +455,35 @@
 			"<span class='notice'>You have unfastened \the [src].</span>", \
 			"You hear a ratchet.")
 		deconstruct()
+
+/obj/machinery/atmospherics/unary/vent_pump/multitool_menu(var/mob/user,var/obj/item/device/multitool/P)
+	return {"
+	<ul>
+		<li><b>Frequency:</b> <a href="?src=\ref[src];set_freq=-1">[format_frequency(frequency)] GHz</a> (<a href="?src=\ref[src];set_freq=1439">Reset</a>)</li>
+		<li>[format_tag("ID Tag","id_tag","set_id")]</li>
+		<li><b>AAC Access:</b> <a href="?src=\ref[src];toggleadvcontrol=1">[advcontrol ? "Allowed" : "Blocked"]</a>
+		</ul>
+	"}
+
+/obj/machinery/atmospherics/unary/vent_pump/multitool_topic(var/mob/user, var/list/href_list, var/obj/O)
+	if("toggleadvcontrol" in href_list)
+		advcontrol = !advcontrol
+		return TRUE
+
+	if("set_id" in href_list)
+		var/newid = copytext(reject_bad_text(input(usr, "Specify the new ID tag for this machine", src, src.id_tag) as null|text), 1, MAX_MESSAGE_LEN)
+		if(!newid)
+			return
+		if(frequency == 1439)
+			initial_loc.air_vent_info -= id_tag
+			initial_loc.air_vent_names -= id_tag
+
+		id_tag = newid
+		broadcast_status()
+
+		return TRUE
+
+	return ..()
 
 #undef DEFAULT_PRESSURE_DELTA
 

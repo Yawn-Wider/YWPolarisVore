@@ -224,8 +224,9 @@
 	pipe_state = "dvalve"
 
 	var/frequency = 0
-	var/id = null
+	var/id_tag = null
 	var/datum/radio_frequency/radio_connection
+	settagwhitelist = list("id_tag")
 
 /obj/machinery/atmospherics/valve/digital/Destroy()
 	unregister_radio(src, frequency)
@@ -269,7 +270,7 @@
 		set_frequency(frequency)
 
 /obj/machinery/atmospherics/valve/digital/receive_signal(datum/signal/signal)
-	if(!signal.data["tag"] || (signal.data["tag"] != id))
+	if(!signal.data["tag"] || (signal.data["tag"] != id_tag))
 		return 0
 
 	switch(signal.data["command"])

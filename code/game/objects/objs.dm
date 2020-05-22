@@ -229,7 +229,7 @@
 /obj/machinery/proc/canLink(var/obj/O, var/link/context)
 	return 0
 
-/obj/machinery/machinery/proc/isLinkedWith(var/obj/O)
+/obj/machinery/proc/isLinkedWith(var/obj/O)
 	return 0
 
 /obj/machinery/proc/getLink(var/idx)
@@ -281,6 +281,8 @@ a {
 					var/id = null
 					if("id_tag" in P.buffer.vars)
 						id=P.buffer:id_tag
+					else if("id" in P.buffer.vars)
+						id=P.buffer:id
 					dat += "<p><b>MULTITOOL BUFFER:</b> [P.buffer] [id ? "([id])" : ""]"
 
 					dat += linkMenu(P.buffer)

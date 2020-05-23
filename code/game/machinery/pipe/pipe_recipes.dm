@@ -40,6 +40,7 @@ var/global/list/all_pipe_recipes = null	// VOREStation Add
 			new /datum/pipe_recipe/pipe("Gas Mixer 'T'",		/obj/machinery/atmospherics/trinary/mixer/t_mixer),
 			new /datum/pipe_recipe/pipe("Omni Gas Mixer",		/obj/machinery/atmospherics/omni/mixer),
 			new /datum/pipe_recipe/pipe("Omni Gas Filter",		/obj/machinery/atmospherics/omni/atmos_filter),
+			new /datum/pipe_recipe/air_sensor("Gas Sensor"),
 		),
 		"Heat Exchange" = list(
 			new /datum/pipe_recipe/pipe("Pipe",					/obj/machinery/atmospherics/pipe/simple/heat_exchanging),
@@ -135,6 +136,20 @@ var/global/list/all_pipe_recipes = null	// VOREStation Add
 
 /datum/pipe_recipe/meter/Params()
 	return "makemeter=1"
+
+//
+// Subtype for meters
+//
+/datum/pipe_recipe/air_sensor
+	dirtype = PIPE_ONEDIR
+	icon_state = "gsensor"
+
+/datum/pipe_recipe/air_sensor/New(label)
+	name = label
+
+/datum/pipe_recipe/air_sensor/Params()
+	return "makesensor=1"
+
 
 //
 // Subtype for disposal pipes

@@ -254,7 +254,7 @@
 			return
 
 		if(EATING_MODE) //Eating pipes
-			if(!(istype(A, /obj/item/pipe) || istype(A, /obj/item/pipe_meter) || istype(A, /obj/structure/disposalconstruct)))
+			if(!(istype(A, /obj/item/pipe) || istype(A, /obj/item/pipe_meter) || istype(A, /obj/item/pipe_gsensor) || istype(A, /obj/structure/disposalconstruct)))
 				return ..()
 			to_chat(user, "<span class='notice'>You start destroying a pipe...</span>")
 			playsound(get_turf(src), 'sound/machines/click.ogg', 50, 1)
@@ -271,6 +271,14 @@
 				if(do_after(user, 2, target = A))
 					activate()
 					var/obj/item/pipe_meter/PM = new /obj/item/pipe_meter(get_turf(A))
+					PM.setAttachLayer(queued_piping_layer)
+					if(wrench_mode)
+						do_wrench(PM, user)
+			else if(istype(recipe, /datum/pipe_recipe/air_sensor)) 
+				to_chat(user, "<span class='notice'>You start building a meter...</span>")
+				if(do_after(user, 2, target = A))
+					activate()
+					var/obj/item/pipe_gsensor/PM = new /obj/item/pipe_gsensor(get_turf(A))
 					PM.setAttachLayer(queued_piping_layer)
 					if(wrench_mode)
 						do_wrench(PM, user)

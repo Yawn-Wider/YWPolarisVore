@@ -26,6 +26,7 @@
 	var/id_tag = null
 	var/advcontrol = 0
 	Mtoollink = 1
+	settagwhitelist = list("id_tag")
 
 	var/hibernate = 0 //Do we even process?
 	var/pump_direction = 1 //0 = siphoning, 1 = releasing

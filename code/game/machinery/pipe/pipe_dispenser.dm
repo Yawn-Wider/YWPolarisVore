@@ -72,6 +72,12 @@
 			wait = 1
 			spawn(15)
 				wait = 0
+	else if(href_list["makesensor"])
+		if(!wait)
+			new /obj/item/pipe_gsensor
+			wait = 1
+			spawn(15)
+				wait = 0
 	return
 
 /obj/machinery/pipedispenser/attackby(var/obj/item/W as obj, var/mob/user as mob)

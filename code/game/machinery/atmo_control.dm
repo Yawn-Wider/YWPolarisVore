@@ -11,6 +11,7 @@
 	var/frequency = 1439
 
 	var/on = 1
+	var/bolts = 1
 	var/output = 3
 	//Flags:
 	// 1 for pressure
@@ -58,6 +59,61 @@
 				signal.data["carbon_dioxide"] = 0
 		signal.data["sigtype"]="status"
 		radio_connection.post_signal(src, signal, radio_filter = RADIO_ATMOSIA)
+
+/obj/machinery/air_sensor/multitool_menu(var/mob/user, var/obj/item/multitool/P)
+	return {"
+	<b>Main</b>
+	<ul>
+		<li><b>Frequency:</b> <a href="?src=\ref[src];set_freq=-1">[format_frequency(frequency)] GHz</a> (<a href="?src=\ref[src];set_freq=[initial(frequency)]">Reset</a>)</li>
+		<li>[format_tag("ID Tag","id_tag", "set_id")]</li>
+		<li>Floor Bolts: <a href="?src=\ref[src];toggle_bolts=1">[bolts ? "Enabled" : "Disabled"]</a>
+		<li>Monitor Pressure: <a href="?src=\ref[src];toggle_out_flag=1">[output&1 ? "Yes" : "No"]</a>
+		<li>Monitor Temperature: <a href="?src=\ref[src];toggle_out_flag=2">[output&2 ? "Yes" : "No"]</a>
+		<li>Monitor Oxygen Concentration: <a href="?src=\ref[src];toggle_out_flag=4">[output&4 ? "Yes" : "No"]</a>
+		<li>Monitor Plasma Concentration: <a href="?src=\ref[src];toggle_out_flag=8">[output&8 ? "Yes" : "No"]</a>
+		<li>Monitor Nitrogen Concentration: <a href="?src=\ref[src];toggle_out_flag=16">[output&16 ? "Yes" : "No"]</a>
+		<li>Monitor Carbon Dioxide Concentration: <a href="?src=\ref[src];toggle_out_flag=32">[output&32 ? "Yes" : "No"]</a>
+	</ul>"}
+
+/obj/machinery/air_sensor/multitool_topic(var/mob/user, var/list/href_list, var/obj/O)
+	. = ..()
+	if(.)
+		return .
+
+	if("toggle_out_flag" in href_list)
+		var/bitflag_value = text2num(href_list["toggle_out_flag"])//this is a string normally
+		if(!(bitflag_value in list(1, 2, 4, 8, 16, 32))) //Here to prevent breaking the sensors with HREF exploits
+			return 0
+		if(output&bitflag_value)//the bitflag is on ATM
+			output &= ~bitflag_value
+		else//can't not be off
+			output |= bitflag_value
+		return TRUE
+	if("toggle_bolts" in href_list)
+		bolts = !bolts
+		if(bolts)
+			visible_message("You hear a quite click as the [src] bolts to the floor", "You hear a quite click")
+		else
+			visible_message("You hear a quite click as the [src]'s floor bolts raise", "You hear a quite click")
+		return TRUE
+
+/obj/machinery/air_sensor/attackby(var/obj/item/W as obj, var/mob/user as mob)
+	if(istype(W, /obj/item/device/multitool))
+		update_multitool_menu(user)
+		return 1
+	if(istype(W, /obj/item/weapon/tool/wrench))
+		if(bolts)
+			to_chat(usr, "The [src] is bolted to the floor! You can't detach it like this.")
+			return 1
+		playsound(loc, W.usesound, 50, 1)
+		to_chat(user, "<span class='notice'>You begin to unfasten \the [src]...</span>")
+		if(do_after(user, 40 * W.toolspeed, target = src))
+			user.visible_message("[user] unfastens \the [src].", "<span class='notice'>You have unfastened \the [src].</span>", "You hear ratchet.")
+			new /obj/item/pipe_gsensor(src.loc)
+			qdel(src)
+			return 1
+		return
+	return ..()
 
 /obj/machinery/air_sensor/proc/set_frequency(new_frequency)
 	radio_controller.remove_object(src, frequency)

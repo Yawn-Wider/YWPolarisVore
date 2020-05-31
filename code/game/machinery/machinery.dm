@@ -547,12 +547,15 @@ Class Procs:
 	if("set_id" in href_list)
 		if(!("id_tag" in vars) && !("id" in vars))
 			warning("set_id: [type] has no id_tag or id var.")
-		var/newid = copytext(reject_bad_text(input(usr, "Specify the new ID tag for this machine", src, src:id_tag) as null|text),1,MAX_MESSAGE_LEN)
-		if(newid)
-			if("id_tag" in vars)
+		var/newid
+		if("id_tag" in vars)
+			newid = copytext(reject_bad_text(input(usr, "Specify the new ID tag for this machine", src, src:id_tag) as null|text),1,MAX_MESSAGE_LEN)
+			if(newid)
 				src:id_tag = newid
 				return TRUE
-			else if("id" in vars)
+		else if("id" in vars)
+			newid = copytext(reject_bad_text(input(usr, "Specify the new ID tag for this machine", src, src:id) as null|text),1,MAX_MESSAGE_LEN)
+			if(newid)
 				src:id = newid
 				return TRUE
 	if("set_freq" in href_list)

@@ -74,7 +74,7 @@
 				wait = 0
 	else if(href_list["makesensor"])
 		if(!wait)
-			new /obj/item/pipe_gsensor
+			new /obj/item/pipe_gsensor(src.loc)
 			wait = 1
 			spawn(15)
 				wait = 0

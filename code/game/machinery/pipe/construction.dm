@@ -289,8 +289,16 @@ Buildable meters
 	item_state = "buildpipe"
 	w_class = ITEMSIZE_LARGE
 
+/obj/item/pipe_gsensor/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+	if(W.is_wrench())
+		return wrench_act(user, W)
+	return ..()
+
 /obj/item/pipe_gsensor/proc/wrench_act(var/mob/living/user, var/obj/item/weapon/tool/wrench/W)
-	new/obj/machinery/air_sensor(loc)
+	//if(!(/turf in loc))
+		//to_chat(user, "<span class='warning'>You need to fasten it to a floor.</span>")
+		//return TRUE
+	new /obj/machinery/air_sensor(loc)
 	playsound(src, W.usesound, 50, 1)
 	to_chat(user, "<span class='notice'>You have fastened the gas sensor.</span>")
 	qdel(src)

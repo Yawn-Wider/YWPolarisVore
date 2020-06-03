@@ -13,7 +13,7 @@
 	item_icons = list(
 		slot_l_hand_str = 'icons/mob/items/lefthand_vr.dmi',
 		slot_r_hand_str = 'icons/mob/items/righthand_vr.dmi',
-	)	
+	)
 	flags = NOBLUDGEON
 	force = 10
 	throwforce = 10
@@ -279,6 +279,13 @@
 					activate()
 					var/obj/item/pipe_meter/PM = new /obj/item/pipe_meter(get_turf(A))
 					PM.setAttachLayer(queued_piping_layer)
+					if(wrench_mode)
+						do_wrench(PM, user)
+			else if(istype(recipe, /datum/pipe_recipe/air_sensor))
+				to_chat(user, "<span class='notice'>You start building a sensor...</span>")
+				if(do_after(user, 2, target = A))
+					activate()
+					var/obj/item/pipe_gsensor/PM = new /obj/item/pipe_gsensor(get_turf(A))
 					if(wrench_mode)
 						do_wrench(PM, user)
 			else if(istype(recipe, /datum/pipe_recipe/pipe))

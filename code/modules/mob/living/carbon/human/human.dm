@@ -1652,6 +1652,11 @@
 	msg += get_display_species()
 	return msg
 
+/mob/living/carbon/human/reduce_cuff_time()
+	if(istype(gloves, /obj/item/clothing/gloves/gauntlets/rig))
+		return 2
+	return ..()
+
 /mob/living/carbon/human/pull_damage()
 	if(((health - halloss) <= config.health_threshold_softcrit))
 		for(var/name in organs_by_name)
@@ -1665,7 +1670,8 @@
 
 // Drag damage is handled in a parent
 /mob/living/carbon/human/dragged(var/mob/living/dragger, var/oldloc)
-	if(prob(getBruteLoss() * 200 / maxHealth))
+	var/area/A = get_area(src)
+	if(lying && !buckled && A.has_gravity() && prob(getBruteLoss() * 200 / maxHealth))
 		var/bloodtrail = 1
 		if(species?.flags & NO_BLOOD)
 			bloodtrail = 0

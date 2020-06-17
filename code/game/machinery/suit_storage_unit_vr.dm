@@ -30,20 +30,17 @@
 	species -= SPECIES_TESHARI
 	return ..()
 
-/obj/machinery/suit_cycler/vintage
-	name = "Vintage suit cycler"
-	model_text = "Vintage"
-	departments = list("Vintage Crew","Vintage Engineering","Vintage Marine","Vintage Medical","Vintage Officer")
-	
-/obj/machinery/suit_cycler/vintage/Initialize() //No Teshari Sprites
-	species -= SPECIES_TESHARI
-	return ..()
-
 /obj/machinery/suit_cycler/vintage/tcrew
 	name = "Talon crew suit cycler"
 	model_text = "Talon crew"
 	req_access = list(access_talon)
 	departments = list("Talon Crew")
+
+/obj/machinery/suit_cycler/vintage/tpilot
+	name = "Talon pilot suit cycler"
+	model_text = "Talon pilot"
+	req_access = list(access_talon)
+	departments = list("Talon Pilot (Bubble Helm)","Talon Pilot (Closed Helm)")
 
 /obj/machinery/suit_cycler/vintage/tengi
 	name = "Talon engineer suit cycler"
@@ -55,13 +52,13 @@
 	name = "Talon guard suit cycler"
 	model_text = "Talon guard"
 	req_access = list(access_talon)
-	departments = list("Talon Marine")
+	departments = list("Talon Marine","Talon Mercenary")
 
 /obj/machinery/suit_cycler/vintage/tmedic
 	name = "Talon doctor suit cycler"
 	model_text = "Talon doctor"
 	req_access = list(access_talon)
-	departments = list("Talon Medical")
+	departments = list("Talon Medical (Bubble Helm)","Talon Medical (Closed Helm)")
 
 /obj/machinery/suit_cycler/vintage/tcaptain
 	name = "Talon captain suit cycler"

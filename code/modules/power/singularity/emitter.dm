@@ -147,6 +147,10 @@
 
 /obj/machinery/power/emitter/attackby(obj/item/W, mob/user)
 
+	if(istype(W, /obj/item/device/multitool))
+		update_multitool_menu(user)
+		return 1
+
 	if(W.is_wrench())
 		if(active)
 			to_chat(user, "Turn off [src] first.")
@@ -289,3 +293,10 @@
 
 /obj/machinery/power/emitter/proc/get_emitter_beam()
 	return new /obj/item/projectile/beam/emitter(get_turf(src))
+
+/obj/machinery/power/emitter/multitool_menu(var/mob/user,var/obj/item/multitool/P)
+	return {"
+	<ul>
+		<li>[format_tag("ID Tag","id","set_id")]</a></li>
+	</ul>
+	"}

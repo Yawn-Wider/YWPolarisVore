@@ -291,7 +291,7 @@ a {
 						dat += "<a href='?src=\ref[src];flush=1'>\[Flush\]</a>"
 					dat += "</p>"
 				else
-					dat += "<p><b>MULTITOOL BUFFER:</b> <a href='?src=/ref[src];buffer=1'>\[Add Machine\]</a></p>"
+					dat += "<p><b>MULTITOOL BUFFER:</b> <a href='?src=\ref[src];buffer=1'>\[Add Machine\]</a></p>"
 	else
 		dat += "ACCESS DENIED</a>"
 	dat += "</body></html>"

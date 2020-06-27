@@ -484,10 +484,12 @@ Class Procs:
 /obj/machinery/proc/handle_multitool_topic(var/href, var/list/href_list, var/mob/user)
 	if(!allowed(user))//no, not even HREF exploits
 		return FALSE
-	var/obj/item/device/multitool/P = get_multitool(usr)
+	var/obj/item/device/multitool/P = get_multitool(user)
+	to_chat(world, "[P]")
 	if(P && istype(P,/obj/item/device/multitool))
+		to_chat(world, "LABAXURIAS LABALÁ")
 		var/update_mt_menu = FALSE
-		if("set_tag" in href_list)
+		if(href_list["set_tag"])
 			if(!(href_list["set_tag"] in settagwhitelist))//I see you're trying Href exploits, I see you're failing, I SEE ADMIN WARNING. (seriously though, this is a powerfull HREF, I originally found this loophole, I'm not leaving it in on my PR)
 				message_admins("set_tag HREF (var attempted to edit: [href_list["set_tag"]]) exploit attempted by [key_name_admin(user)] on [src] (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)")
 				return FALSE
@@ -500,7 +502,7 @@ Class Procs:
 				vars[href_list["set_tag"]] = newid
 				update_mt_menu = TRUE
 
-		if("unlink" in href_list)
+		if(href_list["unlink"])
 			var/idx = text2num(href_list["unlink"])
 			if(!idx)
 				return FALSE
@@ -518,7 +520,7 @@ Class Procs:
 				to_chat(usr, "<span class='warning'>A red light flashes on \the [P].  It appears something went wrong when unlinking the two devices.</span>")
 			update_mt_menu = TRUE
 
-		if("link" in href_list)
+		if(href_list["link"])
 			var/obj/O = P.buffer
 			if(!O)
 				return FALSE
@@ -535,12 +537,12 @@ Class Procs:
 				to_chat(usr, "<span class='warning'>A red light flashes on \the [P].  It appears something went wrong when linking the two devices.</span>")
 			update_mt_menu = TRUE
 
-		if("buffer" in href_list)
+		if(href_list["buffer"])
 			P.buffer = src
 			to_chat(usr, "<span class='notice'>A green light flashes, and the device appears in the multitool buffer.</span>")
 			update_mt_menu = TRUE
 
-		if("flush" in href_list)
+		if(href_list["flush"])
 			to_chat(usr, "<span class='notice'>A green light flashes, and the device disappears from the multitool buffer.</span>")
 			P.buffer = null
 			update_mt_menu = TRUE
@@ -554,7 +556,7 @@ Class Procs:
 			return TRUE
 
 /obj/machinery/proc/multitool_topic(var/mob/user,var/list/href_list,var/obj/O)
-	if("set_id" in href_list)
+	if(href_list["set_id"])
 		if(!("id_tag" in vars) && !("id" in vars))
 			warning("set_id: [type] has no id_tag or id var.")
 		var/newid
@@ -568,7 +570,7 @@ Class Procs:
 			if(newid)
 				src:id = newid
 				return TRUE
-	if("set_freq" in href_list)
+	if(href_list["set_freq"])
 		if(!("frequency" in vars))
 			warning("set_freq: [type] has no frequency var.")
 			return FALSE

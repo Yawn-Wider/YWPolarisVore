@@ -34,6 +34,7 @@
 	company_name  = "NanoTrasen"
 	company_short = "NT"
 	starsys_name  = "Vir"
+	use_overmap = TRUE
 
 	shuttle_docked_message = "The scheduled shuttle to the %dock_name% has docked with the station at docks one and two. It will depart in approximately %ETD%."
 	shuttle_leaving_dock = "The Crew Transfer Shuttle has left the station. Estimate %ETA% until the shuttle docks at %dock_name%."
@@ -79,30 +80,41 @@
 							)
 	usable_email_tlds = list("freemail.nt")
 	allowed_spawns = list("Arrivals Shuttle","Gateway", "Cryogenic Storage", "Cyborg Storage")
-	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
 
+	default_skybox = /datum/skybox_settings/southern_cross
+
+	unit_test_exempt_areas = list(/area/ninja_dojo, /area/ninja_dojo/firstdeck, /area/ninja_dojo/arrivals_dock)
 	unit_test_exempt_from_atmos = list(/area/tcomm/chamber)
 
+	planet_datums_to_make = list(/datum/planet/sif)
 
-// Short range computers see only the six main levels, others can see the surrounding surface levels.
-/datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)
-	if (long_range && (srcz in map_levels))
-		return map_levels
-	else if (srcz == Z_LEVEL_TRANSIT)
-		return list() // Nothing on these z-levels- sensors won't show, and GPSes won't see each other.
-	else if (srcz >= Z_LEVEL_STATION_ONE && srcz <= Z_LEVEL_STATION_THREE) // Station can see other decks.
-		return list(
+	map_levels = list(
 			Z_LEVEL_STATION_ONE,
 			Z_LEVEL_STATION_TWO,
 			Z_LEVEL_STATION_THREE,
 			Z_LEVEL_SURFACE,
 			Z_LEVEL_SURFACE_MINE,
-			Z_LEVEL_SURFACE_WILD)
+			Z_LEVEL_SURFACE_WILD
+		)
+
+// Short range computers see only the six main levels, others can see the surrounding surface levels.
+/datum/map/southern_cross/get_map_levels(var/srcz, var/long_range = TRUE)
+	if (long_range && (srcz in map_levels))
+		return map_levels
+	else if (srcz == Z_LEVEL_TRANSIT && !long_range)
+		return list() // Nothing on these z-levels- sensors won't show, and GPSes won't see each other.
+	else if (srcz >= Z_LEVEL_STATION_ONE && srcz <= Z_LEVEL_STATION_THREE) // Station can see other decks.
+		return list(
+				Z_LEVEL_STATION_ONE,
+				Z_LEVEL_STATION_TWO,
+				Z_LEVEL_STATION_THREE,
+			)
 	else if(srcz in list(Z_LEVEL_SURFACE, Z_LEVEL_SURFACE_MINE, Z_LEVEL_SURFACE_WILD)) // Being on the surface lets you see other surface Zs.
 		return list(
-			Z_LEVEL_SURFACE,
-			Z_LEVEL_SURFACE_MINE,
-			Z_LEVEL_SURFACE_WILD)
+				Z_LEVEL_SURFACE,
+				Z_LEVEL_SURFACE_MINE,
+				Z_LEVEL_SURFACE_WILD
+			)
 	else
 		return list(srcz) //prevents runtimes when using CMC. any Z-level not defined above will be 'isolated' and only show to GPSes/CMCs on that same Z (e.g. CentCom).
 
@@ -124,6 +136,11 @@
 	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_SURFACE_MINE, 64, 64)         // Create the mining ore distribution map.
 	// Todo: Forest generation.
 	return 1
+
+// Skybox Settings
+/datum/skybox_settings/southern_cross
+	icon_state = "dyable"
+	random_color = TRUE
 
 // For making the 6-in-1 holomap, we calculate some offsets
 #define SOUTHERN_CROSS_MAP_SIZE 160 // Width and height of compiled in Southern Cross z levels.
@@ -271,13 +288,6 @@
 	teleport_y = src.y + 4
 	teleport_z = src.z
 	return ..()
-
-/datum/planet/sif
-	expected_z_levels = list(
-		Z_LEVEL_SURFACE,
-		Z_LEVEL_SURFACE_MINE,
-		Z_LEVEL_SURFACE_WILD
-	)
 
 //Suit Storage Units
 

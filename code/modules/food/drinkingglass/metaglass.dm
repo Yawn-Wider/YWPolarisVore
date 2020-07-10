@@ -9,10 +9,21 @@
 	matter = list("glass" = 500)
 	icon = 'icons/obj/drinks.dmi'
 
+/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint
+	name = "metamorphic pint glass"
+	desc = "This glass changes shape and form depending on the drink inside... fancy!"
+	icon_state = "pglass_empty"
+	volume = 60
+
 /obj/item/weapon/reagent_containers/food/drinks/metaglass/on_reagent_change()
 	if (reagents.reagent_list.len > 0)
 		var/datum/reagent/R = reagents.get_master_reagent()
 
+		if(R.glass_icon_file)
+			icon = R.glass_icon_file
+		else
+			icon = initial(icon)
+		
 		if(R.glass_icon_state)
 			icon_state = R.glass_icon_state
 		else
@@ -38,11 +49,17 @@
 		else
 			price_tag = null
 	else
-		icon_state = "glass_empty"
-		name = "metamorphic glass"
-		desc = "This glass changes shape and form depending on the drink inside... fancy!"
-		center_of_mass = list("x"=16, "y"=10)
-		return
+		if(type == /obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint)
+			icon_state = "pglass_empty"
+			name = "metamorphic pint glass"
+			desc = "This glass changes shape and form depending on the drink inside... fancy!"
+			center_of_mass = list("x"=16, "y"=10)
+		else
+			icon_state = "glass_empty"
+			name = "metamorphic glass"
+			desc = "This glass changes shape and form depending on the drink inside... fancy!"
+			center_of_mass = list("x"=16, "y"=10)
+			return
 
 
 /*
@@ -50,6 +67,7 @@ Drinks Data
 */
 
 /datum/reagent
+	var/glass_icon_file = null
 	var/glass_icon_state = null
 	var/glass_center_of_mass = null
 
@@ -390,7 +408,7 @@ Drinks Data
 	glass_icon_state = "gintonicglass"
 
 /datum/reagent/ethanol/goldschlager
-	glass_icon_state = "ginvodkaglass"
+	glass_icon_state = "goldschlagerglass"
 	glass_center_of_mass = list("x"=16, "y"=12)
 
 /datum/reagent/ethanol/hippies_delight
@@ -635,6 +653,10 @@ Drinks Data
 	glass_icon_state = "appleade"
 	glass_center_of_mass = list("x"=16, "y"=8)
 
+/datum/reagent/drink/mintapplesparkle
+	glass_icon_state = "mintapplesparkle"
+	glass_center_of_mass = list("x"=16, "y"=8)
+
 /datum/reagent/drink/soda/pineappleade
 	glass_icon_state = "pineappleade"
 	glass_center_of_mass = list("x"=16, "y"=8)
@@ -646,3 +668,6 @@ Drinks Data
 /datum/reagent/drink/arnold_palmer
 	glass_icon_state = "arnoldpalmer"
 	glass_center_of_mass = list("x"=16, "y"=8)
+
+/datum/reagent/ethanol/mojito
+	glass_icon_state = "mojito"

@@ -19,11 +19,12 @@
 	economic_modifier = 10
 
 	health_hud_intensity = 3
+	//DropEdit Remove loneliness!
 	//YW Edit: Readding loneliness
-	var/warning_cap = 300
-	var/hallucination_cap = 25
+	//var/warning_cap = 300
+	//var/hallucination_cap = 25
 	//YW Edit End
-
+	//DropEdit End
 	male_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	female_cough_sounds = list('sound/effects/mob_effects/tesharicougha.ogg','sound/effects/mob_effects/tesharicoughb.ogg')
 	male_sneeze_sound = 'sound/effects/mob_effects/tesharisneeze.ogg'
@@ -139,7 +140,8 @@
 /datum/species/teshari/equip_survival_gear(var/mob/living/carbon/human/H)
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
-
+//DropEdit Remove Loneliness and weldervision Start
+/*
 /datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
 	spawn(0)
 		// If they're dead or unconcious they're a bit beyond this kind of thing.
@@ -191,7 +193,7 @@
 				if(world.time >= H.next_loneliness_time)
 					to_chat(H, "[A] calms you down...")
 					H.next_loneliness_time = world.time+500
-					
+
 		/*for(var/obj/item/toy/plushie/P in range(5, H))
 			if(H.loneliness_stage > 0)
 				H.loneliness_stage -= 4
@@ -233,3 +235,5 @@
 		return SEE_SELF|SEE_MOBS
 	else
 		return SEE_SELF
+		*/
+	//Dropedit End

@@ -44558,24 +44558,7 @@
 /turf/simulated/floor/plating,
 /area/cryogaia/station/explorer_meeting)
 "bCJ" = (
-/obj/effect/floor_decal/rust,
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
-	},
-/obj/machinery/shield_gen/external,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
-/area/engineering/storage)
-"bCK" = (
-/obj/machinery/shield_gen/external,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
-/area/engineering/storage)
-"bCL" = (
-/obj/machinery/shield_gen,
-/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/shield_generator,
 /turf/simulated/floor,
 /area/engineering/storage)
 "bCM" = (
@@ -64453,18 +64436,6 @@
 /turf/simulated/wall/rshull,
 /area/shuttle/security)
 "liz" = (
-/obj/structure/shuttle/engine/heater{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/yellow/airless,
-/area/shuttle/belter)
-"lnB" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4
-	},
 /obj/structure/shuttle/engine/heater{
 	dir = 8
 	},
@@ -93899,7 +93870,7 @@ aLR
 abk
 aag
 bBt
-bCK
+bCJ
 bEb
 bFn
 bGB
@@ -94151,7 +94122,7 @@ byJ
 aRg
 bxD
 bBt
-bCL
+bCJ
 bEb
 bFn
 bGC
@@ -115091,7 +115062,7 @@ bKk
 aag
 qWO
 wKa
-lnB
+liz
 liz
 liz
 wKa

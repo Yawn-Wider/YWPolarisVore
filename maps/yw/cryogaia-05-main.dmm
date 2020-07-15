@@ -44557,27 +44557,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/explorer_meeting)
-"bCJ" = (
-/obj/effect/floor_decal/rust,
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1";
-	pixel_y = 0
-	},
-/obj/machinery/shield_gen/external,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
-/area/engineering/storage)
-"bCK" = (
-/obj/machinery/shield_gen/external,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
-/area/engineering/storage)
-"bCL" = (
-/obj/machinery/shield_gen,
-/obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor,
-/area/engineering/storage)
 "bCM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -64461,18 +64440,6 @@
 	},
 /turf/simulated/shuttle/floor/yellow/airless,
 /area/shuttle/belter)
-"lnB" = (
-/obj/structure/bed/chair/shuttle{
-	dir = 4
-	},
-/obj/structure/shuttle/engine/heater{
-	dir = 8
-	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
-/turf/simulated/shuttle/floor/yellow/airless,
-/area/shuttle/belter)
 "lyv" = (
 /obj/machinery/camera/network/outside{
 	c_tag = "Plains Access Shed";
@@ -65279,6 +65246,17 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
+"rrQ" = (
+/obj/effect/floor_decal/rust,
+/obj/machinery/light{
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/shield_generator,
+/turf/simulated/floor,
+/area/engineering/storage)
 "rvG" = (
 /obj/machinery/light{
 	dir = 1
@@ -65925,6 +65903,11 @@
 /obj/item/device/gps/security,
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
+"vKZ" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/power/shield_generator,
+/turf/simulated/floor,
+/area/engineering/storage)
 "vLQ" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 1
@@ -93647,7 +93630,7 @@ aLR
 abk
 aag
 bBt
-bCJ
+rrQ
 bEb
 bFn
 bGB
@@ -93899,7 +93882,7 @@ aLR
 abk
 aag
 bBt
-bCK
+vKZ
 bEb
 bFn
 bGB
@@ -94151,7 +94134,7 @@ byJ
 aRg
 bxD
 bBt
-bCL
+vKZ
 bEb
 bFn
 bGC
@@ -115091,7 +115074,7 @@ bKk
 aag
 qWO
 wKa
-lnB
+liz
 liz
 liz
 wKa

@@ -17,6 +17,7 @@
 
 	TgsNew()
 	VgsNew() // VOREStation Edit - VGS
+	extools_initialize() //YW Edit - extools
 
 	config.post_load()
 

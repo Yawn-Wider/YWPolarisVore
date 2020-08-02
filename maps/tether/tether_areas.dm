@@ -647,43 +647,43 @@
 
 // Xenobiology Outpost Areas
 /area/rnd/outpost/xenobiology/outpost_north_airlock
-	name = "\improper Xenobiology Northern Airlock"
+	name = "\improper Xenbiology Northern Airlock"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_south_airlock
-	name = "\improper Xenobiology Southern Airlock"
+	name = "\improper Xenbiology Southern Airlock"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_hallway
-	name = "\improper Xenobiology Access Corridor"
+	name = "\improper Xenbiology Access Corridor"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_breakroom
-	name = "\improper Xenobiology Breakroom"
+	name = "\improper Xenbiology Breakroom"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_office
-	name = "\improper Xenobiology Main Office"
+	name = "\improper Xenbiology Main Office"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_autopsy
-	name = "\improper Xenobiology Alien Autopsy Room"
+	name = "\improper Xenbiology Alien Autopsy Room"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_decon
-	name = "\improper Xenobiology Decontamination and Showers"
+	name = "\improper Xenbiology Decontamination and Showers"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_first_aid
-	name = "\improper Xenobiology First Aid"
+	name = "\improper Xenbiology First Aid"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_slimepens
-	name = "\improper Xenobiology Slime and Xenos Containment"
+	name = "\improper Xenbiology Slime and Xenos Containment"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_main
-	name = "\improper Xenobiology Main Outpost"
+	name = "\improper Xenbiology Main Outpost"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_storage
-	name = "\improper Xenobiology Equipment Storage"
+	name = "\improper Xenbiology Equipment Storage"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_stairs
-	name = "\improper Xenobiology Stairwell"
+	name = "\improper Xenbiology Stairwell"
 	icon_state = "research"
 /area/rnd/outpost/xenobiology/outpost_substation
-	name = "\improper Xenobiology SMES Substation"
+	name = "\improper Xenbiology SMES Substation"
 	icon_state = "research"
 
 // Misc

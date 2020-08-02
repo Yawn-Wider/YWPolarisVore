@@ -203,7 +203,7 @@
 			// if(params["id"] == "del_rec" && active_record)
 			// 	var/obj/item/weapon/card/id/C = usr.get_active_hand()
 			// 	if(!istype(C) && !istype(C, /obj/item/device/pda))
-			// 		set_temp("ID not in hand.", "danger")
+			// 		set_temp("ID not in hand.", "bad")
 			// 		return
 			// 	if(check_access(C))
 			// 		records.Remove(active_record)
@@ -211,7 +211,7 @@
 			// 		set_temp("Record deleted.", "success")
 			// 		menu = MENU_RECORDS
 			// 	else
-			// 		set_temp("Access denied.", "danger")
+			// 		set_temp("Access denied.", "bad")
 			return
 
 	switch(action)
@@ -223,21 +223,21 @@
 			if(istype(active_br))
 				if(isnull(active_br.ckey))
 					qdel(active_br)
-					set_temp("Error: Record corrupt.", "danger")
+					set_temp("Error: Record corrupt.", "bad")
 				else
 					var/can_grow_active = 1
 					if(!synthetic_capable && active_br.synthetic) //Disqualified due to being synthetic in an organic only.
 						can_grow_active = 0
-						set_temp("Error: Cannot grow [active_br.mydna.name] due to lack of synthfabs.", "danger")
+						set_temp("Error: Cannot grow [active_br.mydna.name] due to lack of synthfabs.", "bad")
 					else if(!organic_capable && !active_br.synthetic) //Disqualified for the opposite.
 						can_grow_active = 0
-						set_temp("Error: Cannot grow [active_br.mydna.name] due to lack of cloners.", "danger")
+						set_temp("Error: Cannot grow [active_br.mydna.name] due to lack of cloners.", "bad")
 					else if(!synthetic_capable && !organic_capable) //What have you done??
 						can_grow_active = 0
-						set_temp("Error: Cannot grow [active_br.mydna.name] due to lack of synthfabs and cloners.", "danger")
+						set_temp("Error: Cannot grow [active_br.mydna.name] due to lack of synthfabs and cloners.", "bad")
 					else if(active_br.toocomplex)
 						can_grow_active = 0
-						set_temp("Error: Cannot grow [active_br.mydna.name] due to species complexity.", "danger")
+						set_temp("Error: Cannot grow [active_br.mydna.name] due to species complexity.", "bad")
 					var/list/payload = list(
 						activerecord = "\ref[active_br]",
 						realname = sanitize(active_br.mydna.name),
@@ -251,7 +251,7 @@
 					tgui_modal_message(src, action, "", null, payload)
 			else
 				active_br = null
-				set_temp("Error: Record missing.", "danger")
+				set_temp("Error: Record missing.", "bad")
 		if("view_m_rec")
 			var/ref = params["ref"]
 			if(!length(ref))
@@ -260,21 +260,18 @@
 			if(istype(active_mr))
 				if(isnull(active_mr.ckey))
 					qdel(active_mr)
-					set_temp("Error: Record corrupt.", "danger")
+					set_temp("Error: Record corrupt.", "bad")
 				else
 					var/can_sleeve_active = 1
 					if(!LAZYLEN(sleevers))
 						can_sleeve_active = 0
-						set_temp("Error: Cannot sleeve due to no sleevers.", "danger")
-						return
+						set_temp("Error: Cannot sleeve due to no sleevers.", "bad")
 					if(!selected_sleever)
 						can_sleeve_active = 0
-						set_temp("Error: Cannot sleeve due to no selected sleever.", "danger")
-						return
+						set_temp("Error: Cannot sleeve due to no selected sleever.", "bad")
 					if(selected_sleever && !selected_sleever.occupant)
 						can_sleeve_active = 0
-						set_temp("Error: Cannot sleeve due to lack of sleever occupant.", "danger")
-						return
+						set_temp("Error: Cannot sleeve due to lack of sleever occupant.", "bad")
 					var/list/payload = list(
 						activerecord = "\ref[active_mr]",
 						realname = sanitize(active_mr.mindname),
@@ -285,7 +282,7 @@
 					tgui_modal_message(src, action, "", null, payload)
 			else
 				active_mr = null
-				set_temp("Error: Record missing.", "danger")
+				set_temp("Error: Record missing.", "bad")
 		if("coredump")
 			if(disk)
 				SStranscore.core_dump(disk)
@@ -301,117 +298,107 @@
 			if(istype(active_br))
 				//Tried to grow a synth but no synth pods.
 				if(active_br.synthetic && !spods.len)
-					set_temp("Error: No SynthFabs detected.", "danger")
+					set_temp("Error: No SynthFabs detected.", "bad")
 				//Tried to grow an organic but no growpods.
 				else if(!active_br.synthetic && !pods.len)
-					set_temp("Error: No growpods detected.", "danger")
+					set_temp("Error: No growpods detected.", "Bad")
 				//We have the machines. We can rebuild them. Probably.
 				else
 					//We're cloning a synth.
 					if(active_br.synthetic)
 						var/obj/machinery/transhuman/synthprinter/spod = selected_printer
 						if(!istype(spod))
-							set_temp("Error: No SynthFab selected.", "danger")
+							set_temp("Error: No SynthFab selected.", "bad")
 							return
 
 						//Already doing someone.
 						if(spod.busy)
-							set_temp("Error: SynthFab is currently busy.", "danger")
+							set_temp("Error: SynthFab is currently busy.", "bad")
 							return
 
 						//Not enough steel or glass
 						else if(spod.stored_material[DEFAULT_WALL_MATERIAL] < spod.body_cost)
-							set_temp("Error: Not enough [DEFAULT_WALL_MATERIAL] in SynthFab.", "danger")
+							set_temp("Error: Not enough [DEFAULT_WALL_MATERIAL] in SynthFab.", "bad")
 							return
 						else if(spod.stored_material["glass"] < spod.body_cost)
-							set_temp("Error: Not enough glass in SynthFab.", "danger")
+							set_temp("Error: Not enough glass in SynthFab.", "bad")
 							return
 
 						//Gross pod (broke mid-cloning or something).
 						else if(spod.broken)
-							set_temp("Error: SynthFab malfunction.", "danger")
+							set_temp("Error: SynthFab malfunction.", "bad")
 							return
 
 						//Do the cloning!
 						else if(spod.print(active_br))
-							set_temp("Initiating printing cycle...", "success")
+							set_temp("Initiating printing cycle...", "good")
 							menu = 1
 						else
-							set_temp("Initiating printing cycle... Error: Post-initialisation failed. Printing cycle aborted.", "danger")
+							set_temp("Initiating printing cycle... Error: Post-initialisation failed. Printing cycle aborted.", "bad")
 							return
 
 					//We're cloning an organic.
 					else
 						var/obj/machinery/clonepod/transhuman/pod = selected_pod
 						if(!istype(pod))
-							set_temp("Error: No clonepod selected.", "danger")
-							tgui_modal_clear(src)
+							set_temp("Error: No clonepod selected.", "bad")
 							return
 
 						//Already doing someone.
 						if(pod.occupant)
-							set_temp("Error: Growpod is currently occupied.", "danger")
-							tgui_modal_clear(src)
+							set_temp("Error: Growpod is currently occupied.", "bad")
 							return
 
 						//Not enough materials.
 						else if(pod.get_biomass() < CLONE_BIOMASS)
-							set_temp("Error: Not enough biomass.", "danger")
-							tgui_modal_clear(src)
+							set_temp("Error: Not enough biomass.", "bad")
 							return
 
 						//Gross pod (broke mid-cloning or something).
 						else if(pod.mess)
-							set_temp("Error: Growpod malfunction.", "danger")
-							tgui_modal_clear(src)
+							set_temp("Error: Growpod malfunction.", "bad")
 							return
 
 						//Disabled in config.
 						else if(!config.revival_cloning)
-							set_temp("Error: Unable to initiate growing cycle.", "danger")
-							tgui_modal_clear(src)
+							set_temp("Error: Unable to initiate growing cycle.", "bad")
 							return
 
 						//Do the cloning!
 						else if(pod.growclone(active_br))
-							set_temp("Initiating growing cycle...", "success")
-							tgui_modal_clear(src)
+							set_temp("Initiating growing cycle...", "good")
+							menu = 1
 						else
-							set_temp("Initiating growing cycle... Error: Post-initialisation failed. Growing cycle aborted.", "danger")
-							tgui_modal_clear(src)
+							set_temp("Initiating growing cycle... Error: Post-initialisation failed. Growing cycle aborted.", "bad")
 							return
 
 			//The body record is broken somehow.
 			else
-				set_temp("Error: Data corruption.", "danger")
-				tgui_modal_clear(src)
+				set_temp("Error: Data corruption.", "bad")
 				return
 
 		if("sleeve")
 			if(istype(active_mr))
 				if(!sleevers.len)
-					set_temp("Error: No sleevers detected.", "danger")
+					set_temp("Error: No sleevers detected.", "bad")
 				else
 					var/mode = text2num(params["mode"])
 					var/override
 					var/obj/machinery/transhuman/resleever/sleever = selected_sleever
 					if(!istype(sleever))
-						set_temp("Error: No resleeving pod selected.", "danger")
-						tgui_modal_clear(src)
+						set_temp("Error: No resleeving pod selected.", "bad")
 						return
 
 					switch(mode)
 						if(1) //Body resleeving
 							//No body to sleeve into.
 							if(!sleever.occupant)
-								set_temp("Error: Resleeving pod is not occupied.", "danger")
-								tgui_modal_clear(src)
+								set_temp("Error: Resleeving pod is not occupied.", "bad")
 								return
 
 							//OOC body lock thing.
 							if(sleever.occupant.resleeve_lock && active_mr.ckey != sleever.occupant.resleeve_lock)
-								set_temp("Error: Mind incompatible with body.", "danger")
-								tgui_modal_clear(src)
+								set_temp("Error: Mind incompatible with body.", "bad")
 								return
 
 							var/list/subtargets = list()
@@ -423,14 +410,12 @@
 								var/oc_sanity = sleever.occupant
 								override = input(usr,"Multiple bodies detected. Select target for resleeving of [active_mr.mindname] manually. Sleeving of primary body is unsafe with sub-contents, and is not listed.", "Resleeving Target") as null|anything in subtargets
 								if(!override || oc_sanity != sleever.occupant || !(override in sleever.occupant))
-									set_temp("Error: Target selection aborted.", "danger")
-									tgui_modal_clear(src)
+									set_temp("Error: Target selection aborted.", "bad")
 									return
 
 						if(2) //Card resleeving
 							if(sleever.sleevecards <= 0)
-								set_temp("Error: No available cards in resleever.", "danger")
-								tgui_modal_clear(src)
+								set_temp("Error: No available cards in resleever.", "bad")
 								return
 
 					//Body to sleeve into, but mind is in another living body.
@@ -439,15 +424,16 @@
 
 						//They declined to be moved.
 						if(answer == "No")
-							set_temp("Initiating resleeving... Error: Post-initialisation failed. Resleeving cycle aborted.", "danger")
-							tgui_modal_clear(src)
+							set_temp("Initiating resleeving... Error: Post-initialisation failed. Resleeving cycle aborted.", "bad")
+							menu = MENU_MAIN
 							return TRUE
 
 					//They were dead, or otherwise available.
-					sleever.putmind(active_mr,mode,override)
-					set_temp("Initiating resleeving...")
-					tgui_modal_clear(src)
-
+					if(!temp)
+						sleever.putmind(active_mr,mode,override)
+						set_temp("Initiating resleeving...")
+						menu = 1
+						return
 		if("refresh")
 			SStgui.update_uis(src)
 		if("selectpod")

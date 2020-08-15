@@ -190,3 +190,28 @@
 	layer = MOB_LAYER
 	if(client)
 		client.time_died_as_mouse = world.time
+
+/mob/living/simple_mob/animal/passive/thrumbo
+	name = "Snowbull"
+	desc = "Some white furred bull with a single curved horn."
+	tt_desc = "legionis gayus"
+	icon = 'icons/mob/cryogaia64x64.dmi'
+	icon_state = "snowbull"
+	icon_living = "snowbull"
+	icon_dead = "snowbull-dead"
+	minbodytemp = 0
+	maxbodytemp = 1000
+	min_oxy = 0				// Oxygen in moles, minimum, 0 is 'no minimum'
+	max_oxy = 0					// Oxygen in moles, maximum, 0 is 'no maximum'
+	min_tox = 0					// Phoron min
+	max_tox = 0					// Phoron max
+	min_co2 = 0					// CO2 min
+	max_co2 = 0					// CO2 max
+	min_n2 = 0					// N2 min
+	max_n2 = 0					// N2 max
+	unsuitable_atoms_damage = 2	// This damage is taken when atmos doesn't fit all the requirements above
+	attack_sharp = 1
+	special_attack_delay = 1
+
+/mob/living/simple_mob/animal/passive/thrumbo/handle_special()
+

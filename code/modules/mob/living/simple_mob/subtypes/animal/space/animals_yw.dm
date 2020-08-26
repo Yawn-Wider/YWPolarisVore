@@ -199,6 +199,15 @@
 	icon_state = "snowbull"
 	icon_living = "snowbull"
 	icon_dead = "snowbull-dead"
+	maxHealth = 150
+	health = 150
+	faction = "virgo3b"
+	pixel_x = -16
+	special_attack_min_range = 2
+	special_attack_max_range = 8
+	special_attack_cooldown = 10 SECONDS
+	var/charging = 0
+	var/charging_warning = 0.5 SECONDS
 	minbodytemp = 0
 	maxbodytemp = 1000
 	min_oxy = 0				// Oxygen in moles, minimum, 0 is 'no minimum'
@@ -209,9 +218,62 @@
 	max_co2 = 0					// CO2 max
 	min_n2 = 0					// N2 min
 	max_n2 = 0					// N2 max
-	unsuitable_atoms_damage = 2	// This damage is taken when atmos doesn't fit all the requirements above
 	attack_sharp = 1
-	special_attack_delay = 1
+	melee_damage_lower = 30 // Because fuck anyone who hurts this sweet, innocent creature.
+	melee_damage_upper = 30
 
-/mob/living/simple_mob/animal/passive/thrumbo/handle_special()
+	ai_holder_type = /datum/ai_holder/simple_mob/gaslamp
+
+/mob/living/simple_mob/animal/passive/thrumbo/do_special_attack(atom/A)
+	set waitfor = FALSE
+	set_AI_busy(TRUE)
+	var/chargeturf = get_turf(A)
+	if(!chargeturf)
+		return
+	var/dir = get_dir(src, chargeturf)
+	var/turf/T = get_ranged_target_turf(chargeturf, dir, 2)
+	if(!T)
+		return
+	charging = 1
+	movement_shake_radius = 2
+	movement_sound = 'sound/mecha/mechstep.ogg'
+	walk(src, 0)
+	set_dir(dir)
+	visible_message(span("danger","\The [src] charges at \the [A]!"))
+	icon_state = "snowbull-charge"
+	sleep(charging_warning)
+	walk_towards(src, T, 2)
+	sleep((get_dist(src, T) * 2))
+	walk(src, 0) // cancel the movement
+	charging = 0
+	icon_state = "snowbull"
+	movement_shake_radius = 0
+	movement_sound = null
+	set_AI_busy(FALSE)
+
+/mob/living/simple_mob/animal/passive/thrumbo/Bump(var/mob/living/M)
+	if(charging)
+		if(istype(M))
+			visible_message("<span class='warning'>[src] knocks over [M]!</span>")
+			M.Stun(5)
+			M.Weaken(3)
+			M.throw_at_random(0, 1, 2)
+			runOver(M)
+	..()
+
+/mob/living/simple_mob/animal/passive/thrumbo/proc/runOver(var/mob/living/M)
+	if(istype(M)) // At this point, MULEBot has somehow crossed over onto your tile with you still on it. CRRRNCH.
+		visible_message("<span class='warning'>[src] runs over [M]!</span>")
+		playsound(src, 'sound/effects/splat.ogg', 50, 1)
+		var/damage = rand(5, 7)
+		M.apply_damage(2 * damage, BRUTE, BP_HEAD)
+		M.apply_damage(2 * damage, BRUTE, BP_TORSO)
+		M.apply_damage(0.5 * damage, BRUTE, BP_L_LEG)
+		M.apply_damage(0.5 * damage, BRUTE, BP_R_LEG)
+		M.apply_damage(0.5 * damage, BRUTE, BP_L_ARM)
+		M.apply_damage(0.5 * damage, BRUTE, BP_R_ARM)
+		blood_splatter(src, M, 1)
+
+
+
 

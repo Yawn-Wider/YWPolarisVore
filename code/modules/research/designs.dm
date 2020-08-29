@@ -29,7 +29,7 @@ other types of metals and chemistry for reagents).
 	var/list/chemicals = list()		//List of chemicals.
 	var/build_path = null			//The path of the object that gets created.
 	var/time = 10					//How many ticks it requires to build
-	var/category = null 			//Primarily used for Mech Fabricators, but can be used for anything.
+	var/list/category = list() 			//Primarily used for Mech Fabricators, but can be used for anything.
 	var/sort_string = "ZZZZZ"		//Sorting order
 	var/maxstack = 1                //YW Edit, used by autolathe, says how many stacks a item can have or the limit of how many you can spawn at once
 	var/autolathe_build = 0         //YW Edit, makes other designs able to be built or added in autolathe, be via design disk or something else(added due to can't have two designs with same build_path without unit test getting angry)
@@ -37,6 +37,9 @@ other types of metals and chemistry for reagents).
 
 /datum/design/New()
 	..()
+	if(!islist(category))
+		log_runtime(EXCEPTION("Warning: Design [type] defined a non-list category. Please fix this."))
+		category = list(category)
 	item_name = name
 	AssembleDesignInfo()
 

@@ -69,7 +69,7 @@
 	id = "advance_device"
 	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 50)
 	build_path = /obj/item/weapon/cell/device/weapon
-	category = "Misc"
+	category = list("Misc")
 	sort_string = "BAABB"
 
 /datum/design/item/powercell/super_device
@@ -78,7 +78,7 @@
 	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2)
 	materials = list(DEFAULT_WALL_MATERIAL = 700, "glass" = 70, "gold" = 50, "silver" = 20,)
 	build_path = /obj/item/weapon/cell/device/super
-	category = "Misc"
+	category = list("Misc")
 	sort_string = "BAABC"
 
 /datum/design/item/powercell/hype_device
@@ -87,7 +87,7 @@
 	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
 	materials = list(DEFAULT_WALL_MATERIAL = 1400, "glass" = 1400, "gold" = 150, "silver" = 150)
 	build_path = /obj/item/weapon/cell/device/hyper
-	category = "Misc"
+	category = list("Misc")
 	sort_string = "BAABD"
 
 /datum/design/item/powercell/omni_device
@@ -97,6 +97,6 @@
 	id = "omni-device"
 	materials = list(DEFAULT_WALL_MATERIAL = 1700, "glass" = 550, MAT_DURASTEEL = 230, MAT_MORPHIUM = 320, MAT_METALHYDROGEN = 600, MAT_URANIUM = 60, MAT_VERDANTIUM = 150, MAT_PHORON = 900)
 	build_path = /obj/item/weapon/cell/device/weapon/recharge/alien/omni
-	category = "Misc"
+	category = list("Misc")
 	sort_string = "BAABE"
 //End of Yawn add

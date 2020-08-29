@@ -117,7 +117,9 @@
 "aF" = (
 /obj/machinery/door/airlock/hatch{
 	frequency = 1331;
+	icon_state = "door_closed";
 	id_tag = "vox_southwest_lock";
+	locked = 0;
 	req_access = list(150)
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
@@ -127,13 +129,16 @@
 /obj/machinery/atmospherics/pipe/simple/visible,
 /obj/structure/closet/crate/solar,
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
 "aJ" = (
 /mob/living/simple_mob/humanoid/merc/ranged/laser,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/vrworld)
@@ -211,7 +216,9 @@
 "ba" = (
 /obj/machinery/door/airlock/hatch{
 	frequency = 1331;
+	icon_state = "door_closed";
 	id_tag = "vox_northwest_lock";
+	locked = 0;
 	req_access = list(150)
 	},
 /turf/simulated/shuttle/plating,
@@ -219,6 +226,7 @@
 "bc" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Barracks";
+	opacity = 1;
 	req_access = list(150);
 	req_one_access = list()
 	},
@@ -306,6 +314,7 @@
 "bA" = (
 /obj/item/weapon/gun/projectile/silenced,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/vrworld)
@@ -366,6 +375,7 @@
 	pixel_y = -5
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
@@ -386,7 +396,9 @@
 /area/holodeck/source_chess)
 "bR" = (
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -406,6 +418,7 @@
 "bV" = (
 /obj/structure/sink{
 	dir = 8;
+	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 2
 	},
@@ -440,6 +453,7 @@
 "cc" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Suit Storage";
+	opacity = 1;
 	req_access = list(150);
 	req_one_access = list()
 	},
@@ -649,6 +663,7 @@
 /area/vrworld)
 "df" = (
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/vrworld)
@@ -679,7 +694,8 @@
 /area/vrworld)
 "dm" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 1;
+	icon_state = "warning"
 	},
 /obj/structure/largecrate/hoverpod,
 /turf/simulated/shuttle/floor/black,
@@ -892,7 +908,9 @@
 	broadcasting = 1;
 	dir = 1;
 	frequency = 1213;
+	listening = 1;
 	name = "Syndicate Ops Intercom";
+	pixel_y = 0;
 	subspace_transmission = 1;
 	syndie = 1
 	},
@@ -1128,7 +1146,8 @@
 /area/syndicate_mothership)
 "fl" = (
 /obj/structure/shuttle/engine/heater{
-	dir = 4
+	dir = 4;
+	icon_state = "heater"
 	},
 /turf/simulated/shuttle/plating/airless,
 /area/shuttle/trade/centcom)
@@ -1177,6 +1196,7 @@
 "fA" = (
 /obj/structure/sink{
 	dir = 8;
+	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 2
 	},
@@ -1262,7 +1282,10 @@
 	pixel_x = 4;
 	pixel_y = 6
 	},
-/obj/item/weapon/storage/box/masks,
+/obj/item/weapon/storage/box/masks{
+	pixel_x = 0;
+	pixel_y = 0
+	},
 /obj/item/weapon/storage/box/gloves{
 	pixel_x = 3;
 	pixel_y = 4
@@ -1300,6 +1323,7 @@
 "gj" = (
 /obj/structure/sink{
 	dir = 8;
+	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 2
 	},
@@ -1359,9 +1383,11 @@
 "gz" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Restroom";
+	opacity = 1;
 	req_access = list(150)
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "bar"
 	},
 /area/syndicate_mothership)
@@ -1405,6 +1431,7 @@
 /obj/machinery/mecha_part_fabricator,
 /obj/machinery/status_display{
 	layer = 4;
+	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
@@ -1442,14 +1469,17 @@
 "gT" = (
 /obj/structure/sink{
 	dir = 8;
+	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 2
 	},
 /obj/structure/mirror{
 	dir = 4;
-	pixel_x = -28
+	pixel_x = -28;
+	pixel_y = 0
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership{
@@ -1463,7 +1493,9 @@
 "gY" = (
 /obj/structure/sink{
 	dir = 4;
-	pixel_x = 11
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/red,
 /area/shuttle/skipjack)
@@ -1524,6 +1556,7 @@
 	},
 /obj/item/weapon/soap/syndie,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership{
@@ -1630,6 +1663,7 @@
 /area/shuttle/trade/centcom)
 "hS" = (
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/vrworld)
@@ -1665,6 +1699,7 @@
 	desc = "Talk through this. Evilly";
 	frequency = 1213;
 	name = "Syndicate Intercom";
+	pixel_x = 0;
 	pixel_y = -32;
 	subspace_transmission = 1;
 	syndie = 1
@@ -1687,6 +1722,7 @@
 "ig" = (
 /mob/living/simple_mob/humanoid/merc/ranged/ionrifle,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/vrworld)
@@ -1949,14 +1985,17 @@
 "jb" = (
 /obj/structure/mirror{
 	dir = 4;
-	pixel_x = -32
+	pixel_x = -32;
+	pixel_y = 0
 	},
 /obj/structure/sink{
 	dir = 8;
+	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 2
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
@@ -2000,7 +2039,9 @@
 	pixel_y = 9
 	},
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -2034,7 +2075,8 @@
 /area/shuttle/mercenary)
 "jt" = (
 /turf/unsimulated/wall/fakeglass{
-	dir = 9
+	dir = 9;
+	icon_state = "fakewindows"
 	},
 /area/syndicate_mothership)
 "jv" = (
@@ -2045,6 +2087,7 @@
 "jy" = (
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/vrworld)
@@ -2078,7 +2121,8 @@
 /area/syndicate_mothership)
 "jM" = (
 /obj/structure/bed/chair/wood/wings{
-	dir = 4
+	dir = 4;
+	icon_state = "wooden_chair_wings"
 	},
 /turf/unsimulated/floor{
 	dir = 8;
@@ -2192,7 +2236,8 @@
 /area/shuttle/skipjack)
 "kt" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 1;
+	icon_state = "warning"
 	},
 /obj/structure/closet/crate/freezer/rations,
 /turf/simulated/shuttle/floor/black,
@@ -2316,6 +2361,7 @@
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
 	id_tag = "arrivals_shuttle";
+	pixel_x = 0;
 	pixel_y = 25;
 	req_one_access = list(13);
 	tag_door = "arrivals_shuttle_hatch"
@@ -2457,6 +2503,7 @@
 "lH" = (
 /obj/random/tetheraid,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/vrworld)
@@ -2491,6 +2538,7 @@
 	dir = 8
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
@@ -2535,6 +2583,7 @@
 "ma" = (
 /obj/machinery/status_display{
 	layer = 4;
+	pixel_x = 0;
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
@@ -2668,7 +2717,8 @@
 /area/syndicate_mothership/control)
 "mG" = (
 /turf/unsimulated/wall/fakeglass{
-	dir = 4
+	dir = 4;
+	icon_state = "fakewindows"
 	},
 /area/syndicate_mothership)
 "mI" = (
@@ -2676,6 +2726,7 @@
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
@@ -2712,7 +2763,8 @@
 /area/holodeck/source_courtroom)
 "mN" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 1;
+	icon_state = "warning"
 	},
 /obj/structure/largecrate/animal/cow,
 /turf/simulated/shuttle/floor/black,
@@ -2762,7 +2814,8 @@
 /area/shuttle/skipjack)
 "ng" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 1;
+	icon_state = "warning"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
@@ -2778,7 +2831,8 @@
 "nl" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
-	dir = 10
+	dir = 10;
+	icon_state = "spline_fancy"
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_picnicarea)
@@ -2801,6 +2855,7 @@
 /obj/random/multiple/gun/projectile/shotgun,
 /obj/item/weapon/storage/box/scattershot/large,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/vrworld)
@@ -2830,6 +2885,7 @@
 "nz" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Kitchen";
+	opacity = 1;
 	req_access = list(150);
 	req_one_access = list()
 	},
@@ -2896,6 +2952,7 @@
 /area/wizard_station)
 "nV" = (
 /obj/structure/mirror{
+	pixel_x = 0;
 	pixel_y = 28
 	},
 /turf/simulated/shuttle/floor/white,
@@ -2957,7 +3014,8 @@
 	})
 "op" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 10
+	dir = 10;
+	icon_state = "intact"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
@@ -3005,7 +3063,9 @@
 "oA" = (
 /obj/item/weapon/weldingtool,
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -3170,7 +3230,8 @@
 /area/syndicate_mothership)
 "pJ" = (
 /obj/structure/bed/chair/wood/wings{
-	dir = 8
+	dir = 8;
+	icon_state = "wooden_chair_wings"
 	},
 /turf/unsimulated/floor{
 	dir = 8;
@@ -3199,6 +3260,7 @@
 "pV" = (
 /obj/machinery/flasher{
 	id = "syndieflash";
+	pixel_x = 0;
 	pixel_y = 28
 	},
 /obj/machinery/light/small{
@@ -3399,7 +3461,8 @@
 /area/shuttle/trade/centcom)
 "qL" = (
 /obj/machinery/light/small{
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /obj/machinery/airlock_sensor{
 	frequency = 1331;
@@ -3488,7 +3551,8 @@
 /area/syndicate_mothership)
 "re" = (
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 1
+	dir = 1;
+	icon_state = "warningcorner"
 	},
 /obj/machinery/requests_console{
 	department = "Arrival shuttle";
@@ -3510,6 +3574,7 @@
 	},
 /obj/structure/closet/secure_closet/medical_wall{
 	pixel_x = 32;
+	pixel_y = 0;
 	req_access = list(150)
 	},
 /obj/item/weapon/storage/firstaid/fire{
@@ -3594,7 +3659,9 @@
 "rD" = (
 /obj/machinery/door/airlock/hatch{
 	frequency = 1331;
+	icon_state = "door_closed";
 	id_tag = "vox_northeast_lock";
+	locked = 0;
 	req_access = list(150)
 	},
 /turf/simulated/shuttle/plating,
@@ -3682,6 +3749,7 @@
 /obj/random/multiple/gun/projectile/shotgun,
 /obj/item/weapon/storage/box/scattershot/large,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/vrworld)
@@ -3694,6 +3762,7 @@
 "rZ" = (
 /obj/effect/decal/cleanable/blood,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership{
@@ -3833,10 +3902,13 @@
 "sI" = (
 /obj/structure/sink{
 	dir = 4;
-	pixel_x = 11
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
 	},
 /obj/structure/closet/secure_closet/medical_wall{
 	pixel_x = 32;
+	pixel_y = 0;
 	req_access = list(150)
 	},
 /obj/item/weapon/tank/anesthetic,
@@ -3873,6 +3945,7 @@
 	name = "Nuclear-Code"
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
@@ -3940,7 +4013,8 @@
 "tm" = (
 /obj/structure/flora/ausbushes/ywflowers,
 /obj/effect/floor_decal/spline/fancy/wood{
-	dir = 9
+	dir = 9;
+	icon_state = "spline_fancy"
 	},
 /turf/simulated/floor/holofloor/grass,
 /area/holodeck/source_picnicarea)
@@ -3957,6 +4031,7 @@
 	faction = "syndicate"
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/vrworld)
@@ -3976,6 +4051,7 @@
 "tC" = (
 /obj/structure/closet/secure_closet/medical_wall{
 	pixel_x = -32;
+	pixel_y = 0;
 	req_access = list(150)
 	},
 /obj/item/stack/medical/splint,
@@ -4127,7 +4203,8 @@
 /area/shuttle/mercenary)
 "um" = (
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
+	dir = 4;
+	icon_state = "warningcorner"
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/arrival/pre_game)
@@ -4195,7 +4272,9 @@
 /obj/item/weapon/storage/belt/utility/full,
 /obj/item/device/multitool,
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -4210,6 +4289,7 @@
 /obj/machinery/button/remote/blast_door{
 	id = "syndieshutters_telebay";
 	name = "remote shutter control";
+	pixel_x = 0;
 	pixel_y = -25;
 	req_access = list(150)
 	},
@@ -4489,7 +4569,8 @@
 /area/shuttle/skipjack)
 "vZ" = (
 /obj/structure/bed/chair/wood/wings{
-	dir = 1
+	dir = 1;
+	icon_state = "wooden_chair_wings"
 	},
 /turf/unsimulated/floor{
 	dir = 8;
@@ -4663,6 +4744,7 @@
 	pixel_y = 32
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership{
@@ -4716,7 +4798,9 @@
 	},
 /obj/item/clothing/glasses/night,
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -4842,10 +4926,12 @@
 "xF" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Bathroom";
+	opacity = 1;
 	req_access = list(150);
 	req_one_access = list()
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
@@ -4862,7 +4948,9 @@
 /area/syndicate_mothership)
 "xL" = (
 /obj/machinery/door/window{
+	base_state = "left";
 	dir = 8;
+	icon_state = "left";
 	name = "Preparation";
 	req_access = list(150)
 	},
@@ -5130,6 +5218,7 @@
 "zt" = (
 /obj/machinery/status_display{
 	layer = 4;
+	pixel_x = 0;
 	pixel_y = 32
 	},
 /obj/structure/table/steel_reinforced,
@@ -5168,6 +5257,7 @@
 /obj/structure/table/steel_reinforced,
 /obj/machinery/newscaster{
 	layer = 3.3;
+	pixel_x = 0;
 	pixel_y = 30
 	},
 /turf/unsimulated/floor{
@@ -5238,6 +5328,7 @@
 "zN" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdownside";
 	nostop = 1;
 	tiles = 0
@@ -5325,7 +5416,8 @@
 /obj/machinery/button/flasher{
 	id = "syndieflash";
 	name = "Flasher";
-	pixel_x = 27
+	pixel_x = 27;
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -5361,7 +5453,9 @@
 	pixel_x = -25
 	},
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -5425,6 +5519,7 @@
 /obj/item/clothing/gloves/sterile/latex,
 /obj/item/clothing/mask/surgical,
 /obj/item/weapon/surgical/retractor{
+	pixel_x = 0;
 	pixel_y = 6
 	},
 /obj/item/weapon/surgical/scalpel,
@@ -5461,6 +5556,7 @@
 	name = "Nuclear-Bomb"
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/syndicate_mothership)
@@ -5574,6 +5670,7 @@
 /area/shuttle/trade/centcom)
 "BM" = (
 /obj/machinery/door/airlock/multi_tile/glass{
+	dir = 4;
 	req_access = list(160)
 	},
 /turf/unsimulated/floor{
@@ -5667,6 +5764,12 @@
 /area/syndicate_mothership{
 	name = "\improper Trader Base"
 	})
+"Ci" = (
+/turf/unsimulated/floor{
+	dir = 2;
+	icon_state = "dark"
+	},
+/area/syndicate_mothership)
 "Cj" = (
 /obj/effect/landmark/start,
 /turf/unsimulated/floor{
@@ -5699,6 +5802,7 @@
 "Cs" = (
 /obj/machinery/door/window{
 	base_state = "right";
+	dir = 4;
 	icon_state = "right";
 	name = "Infirmary";
 	req_access = list(150)
@@ -5807,6 +5911,7 @@
 /area/shuttle/skipjack)
 "CO" = (
 /obj/machinery/door/window{
+	dir = 4;
 	name = "Brig";
 	req_access = list(150)
 	},
@@ -5838,12 +5943,14 @@
 	name = "Barracks"
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "bar"
 	},
 /area/syndicate_mothership)
 "CZ" = (
 /obj/machinery/light{
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
@@ -5899,7 +6006,8 @@
 /area/shuttle/trade/centcom)
 "Dm" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 5
+	dir = 5;
+	icon_state = "intact"
 	},
 /obj/machinery/atm{
 	pixel_x = -32
@@ -5936,6 +6044,7 @@
 /area/syndicate_mothership)
 "Dw" = (
 /obj/machinery/door/window{
+	dir = 4;
 	name = "Infirmary";
 	req_access = list(150)
 	},
@@ -5965,6 +6074,7 @@
 "DE" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdown";
 	tiles = 0
 	},
@@ -6081,6 +6191,7 @@
 "DZ" = (
 /obj/structure/mopbucket,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
@@ -6096,7 +6207,8 @@
 /area/syndicate_mothership)
 "Ee" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 1;
+	icon_state = "warning"
 	},
 /obj/structure/closet/crate/secure/loot,
 /turf/simulated/shuttle/floor/black,
@@ -6177,7 +6289,8 @@
 /area/vrworld)
 "EB" = (
 /obj/machinery/light/small{
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
@@ -6210,6 +6323,7 @@
 	id_tag = "trade_shuttle_bay";
 	name = "shuttle bay controller";
 	pixel_x = 25;
+	pixel_y = 0;
 	tag_door = "trade_shuttle_bay_door"
 	},
 /turf/unsimulated/floor{
@@ -6220,7 +6334,8 @@
 	})
 "EK" = (
 /obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
+	dir = 8;
+	icon_state = "warningcorner"
 	},
 /turf/unsimulated/floor{
 	dir = 5;
@@ -6315,6 +6430,7 @@
 "Fo" = (
 /obj/machinery/door/window{
 	base_state = "right";
+	dir = 4;
 	icon_state = "right";
 	name = "Brig";
 	req_access = list(150)
@@ -6330,7 +6446,8 @@
 "Fr" = (
 /obj/structure/window/reinforced,
 /obj/structure/shuttle/engine/heater{
-	dir = 1
+	dir = 1;
+	icon_state = "heater"
 	},
 /turf/simulated/floor/airless,
 /area/shuttle/syndicate_elite/mothership)
@@ -6353,6 +6470,7 @@
 "Fu" = (
 /obj/item/weapon/gun/projectile/automatic/stg,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/vrworld)
@@ -6398,7 +6516,8 @@
 /area/shuttle/trade/centcom)
 "FQ" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 5
+	dir = 5;
+	icon_state = "warning"
 	},
 /turf/unsimulated/floor{
 	icon_state = "plating";
@@ -6432,7 +6551,8 @@
 /obj/item/clothing/under/tactical,
 /obj/item/clothing/under/tactical,
 /obj/machinery/light/small{
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /turf/unsimulated/floor/steel,
 /area/vrworld)
@@ -6469,7 +6589,8 @@
 /area/holodeck/source_basketball)
 "Gb" = (
 /obj/machinery/light{
-	dir = 4
+	dir = 4;
+	icon_state = "tube1"
 	},
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = 28
@@ -6535,6 +6656,7 @@
 "Gt" = (
 /obj/item/weapon/gun/projectile/automatic/stg,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/vrworld)
@@ -6615,11 +6737,13 @@
 "GQ" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdown";
 	tiles = 0
 	},
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdown";
 	tiles = 0
 	},
@@ -6681,6 +6805,7 @@
 /obj/structure/table/woodentable,
 /obj/machinery/status_display{
 	layer = 4;
+	pixel_x = 0;
 	pixel_y = 32
 	},
 /obj/item/weapon/ore/slag{
@@ -6820,7 +6945,8 @@
 	req_access = list(150)
 	},
 /obj/machinery/atmospherics/pipe/simple/visible{
-	dir = 9
+	dir = 9;
+	icon_state = "intact"
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -6863,6 +6989,7 @@
 "HE" = (
 /obj/machinery/door/airlock/centcom{
 	name = "Kitchen";
+	opacity = 1;
 	req_access = list(150)
 	},
 /turf/unsimulated/floor{
@@ -7024,7 +7151,9 @@
 	pixel_y = 3
 	},
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -7040,6 +7169,7 @@
 "Iq" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdown";
 	tiles = 0
 	},
@@ -7105,7 +7235,9 @@
 /area/syndicate_mothership)
 "IQ" = (
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
@@ -7301,7 +7433,9 @@
 /area/shuttle/trade/centcom)
 "JK" = (
 /obj/structure/table/holotable,
-/obj/machinery/readybutton,
+/obj/machinery/readybutton{
+	pixel_y = 0
+	},
 /obj/effect/floor_decal/corner/red/full{
 	dir = 8
 	},
@@ -7424,7 +7558,9 @@
 "Kq" = (
 /obj/machinery/door/airlock/hatch{
 	frequency = 1331;
+	icon_state = "door_closed";
 	id_tag = "vox_southeast_lock";
+	locked = 0;
 	req_access = list(150)
 	},
 /obj/machinery/atmospherics/pipe/simple/visible,
@@ -7436,6 +7572,7 @@
 "Kw" = (
 /obj/machinery/newscaster{
 	layer = 3.3;
+	pixel_x = 0;
 	pixel_y = 30
 	},
 /obj/item/target,
@@ -7447,6 +7584,7 @@
 /area/wizard_station)
 "Kz" = (
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
@@ -7493,6 +7631,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership{
@@ -7518,8 +7657,10 @@
 	req_access = list(150)
 	},
 /obj/machinery/door/blast/regular{
+	icon_state = "pdoor1";
 	id = "syndicate_elite";
-	name = "Front Hull Door"
+	name = "Front Hull Door";
+	opacity = 1
 	},
 /turf/simulated/shuttle/plating,
 /area/shuttle/syndicate_elite/mothership)
@@ -7575,6 +7716,7 @@
 /obj/machinery/button/remote/blast_door{
 	id = "trade";
 	name = "Shop Shutters";
+	pixel_x = 0;
 	pixel_y = -26
 	},
 /turf/simulated/shuttle/floor/darkred,
@@ -7602,7 +7744,8 @@
 /area/wizard_station)
 "Lo" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 4
+	dir = 4;
+	icon_state = "warning"
 	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -7610,7 +7753,8 @@
 /area/wizard_station)
 "Lp" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 4
+	dir = 4;
+	icon_state = "warning"
 	},
 /turf/unsimulated/floor{
 	dir = 5;
@@ -8017,7 +8161,8 @@
 /area/syndicate_mothership)
 "Nd" = (
 /turf/unsimulated/wall/fakeglass{
-	dir = 1
+	dir = 1;
+	icon_state = "fakewindows"
 	},
 /area/syndicate_mothership)
 "Ne" = (
@@ -8034,7 +8179,8 @@
 /area/syndicate_mothership)
 "Nl" = (
 /turf/unsimulated/wall/fakeglass{
-	dir = 8
+	dir = 8;
+	icon_state = "fakewindows"
 	},
 /area/syndicate_mothership)
 "Nm" = (
@@ -8109,7 +8255,8 @@
 /obj/item/weapon/storage/firstaid/surgery,
 /obj/item/device/defib_kit/compact/combat,
 /obj/machinery/light/small{
-	dir = 4
+	dir = 4;
+	pixel_y = 0
 	},
 /turf/unsimulated/floor/steel,
 /area/vrworld)
@@ -8401,6 +8548,7 @@
 "OX" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdown";
 	tiles = 0
 	},
@@ -8431,7 +8579,8 @@
 /area/shuttle/mercenary)
 "Pa" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 4
+	dir = 4;
+	icon_state = "warning"
 	},
 /turf/unsimulated/floor{
 	icon_state = "plating";
@@ -8445,7 +8594,8 @@
 /area/shuttle/trade/centcom)
 "Pf" = (
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 1;
+	icon_state = "warning"
 	},
 /turf/simulated/shuttle/floor,
 /area/shuttle/arrival/pre_game)
@@ -8709,6 +8859,7 @@
 	frequency = 1380;
 	id_tag = "trade_shuttle";
 	pixel_x = -25;
+	pixel_y = 0;
 	req_one_access = list(101);
 	tag_door = "trade_shuttle_hatch"
 	},
@@ -8894,11 +9045,13 @@
 "RB" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdown";
 	tiles = 0
 	},
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdown";
 	tiles = 0
 	},
@@ -8942,6 +9095,7 @@
 /area/wizard_station)
 "RK" = (
 /turf/simulated/shuttle/wall{
+	dir = 2;
 	icon_state = "diagonalWall3"
 	},
 /area/syndicate_mothership{
@@ -9015,12 +9169,15 @@
 "Sk" = (
 /obj/structure/sink{
 	dir = 4;
-	pixel_x = 11
+	icon_state = "sink";
+	pixel_x = 11;
+	pixel_y = 0
 	},
 /obj/structure/mirror{
 	pixel_x = 28
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
@@ -9036,6 +9193,7 @@
 "Sr" = (
 /obj/machinery/door/airlock,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/vrworld)
@@ -9090,6 +9248,7 @@
 	})
 "SI" = (
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership{
@@ -9381,6 +9540,7 @@
 "Uk" = (
 /obj/item/weapon/gun/projectile/automatic/tommygun,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "dark"
 	},
 /area/vrworld)
@@ -9454,6 +9614,7 @@
 	},
 /obj/item/weapon/soap/syndie,
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
@@ -9583,6 +9744,7 @@
 /area/shuttle/trade/centcom)
 "Vw" = (
 /obj/machinery/door/airlock/multi_tile/glass{
+	dir = 4;
 	req_access = list(160)
 	},
 /turf/simulated/shuttle/floor/black,
@@ -9668,6 +9830,7 @@
 "VU" = (
 /obj/machinery/newscaster{
 	layer = 3.3;
+	pixel_x = 0;
 	pixel_y = 30
 	},
 /obj/structure/bedsheetbin,
@@ -9694,6 +9857,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor{
+	dir = 2;
 	icon_state = "freezerfloor"
 	},
 /area/syndicate_mothership)
@@ -9787,7 +9951,9 @@
 /area/syndicate_mothership)
 "WN" = (
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /obj/machinery/sleeper{
 	dir = 8
@@ -9851,7 +10017,9 @@
 	req_access = list()
 	},
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/black,
 /area/shuttle/trade/centcom)
@@ -10160,6 +10328,7 @@
 "YC" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdown";
 	tiles = 0
 	},
@@ -10188,6 +10357,7 @@
 "YL" = (
 /obj/effect/step_trigger/thrower{
 	affect_ghosts = 1;
+	direction = 2;
 	name = "thrower_throwdownside";
 	nostop = 1;
 	stopper = 0;
@@ -10212,7 +10382,9 @@
 /area/shuttle/arrival/pre_game)
 "YT" = (
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /obj/structure/closet/walllocker/emerglocker{
 	pixel_x = -28
@@ -10257,6 +10429,7 @@
 /obj/structure/bed/chair/wood/wings,
 /obj/machinery/newscaster{
 	layer = 3.3;
+	pixel_x = 0;
 	pixel_y = 30
 	},
 /turf/unsimulated/floor{
@@ -10311,6 +10484,7 @@
 	})
 "Zg" = (
 /obj/machinery/atmospherics/pipe/tank/air{
+	dir = 2;
 	start_pressure = 740.5
 	},
 /turf/simulated/shuttle/floor/black,
@@ -10324,7 +10498,8 @@
 	})
 "Zj" = (
 /obj/structure/shuttle/engine/propulsion{
-	dir = 1
+	dir = 1;
+	icon_state = "propulsion"
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/syndicate_elite/mothership)
@@ -10365,7 +10540,9 @@
 	syndie = 1
 	},
 /obj/machinery/light{
-	dir = 8
+	dir = 8;
+	icon_state = "tube1";
+	pixel_y = 0
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
@@ -10375,6 +10552,7 @@
 /area/wizard_station)
 "Zy" = (
 /obj/machinery/door/airlock/external{
+	density = 1;
 	frequency = 1331;
 	id_tag = "merc_shuttle_outer";
 	name = "Ship External Access";
@@ -10437,7 +10615,8 @@
 "ZF" = (
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/warning{
-	dir = 1
+	dir = 1;
+	icon_state = "warning"
 	},
 /obj/item/device/kit/paint/ripley/death,
 /obj/item/device/kit/paint/ripley/flames_blue,
@@ -10473,7 +10652,9 @@
 	})
 "ZQ" = (
 /obj/structure/table/holotable,
-/obj/machinery/readybutton,
+/obj/machinery/readybutton{
+	pixel_y = 0
+	},
 /obj/effect/floor_decal/corner/green/full{
 	dir = 4
 	},
@@ -32787,13 +32968,13 @@ dB
 dB
 dB
 dB
-Rg
-Rg
-Rg
-Rg
+Ci
+Ci
+Ci
+Ci
 bO
-Rg
-Rg
+Ci
+Ci
 NL
 zR
 PP
@@ -32949,13 +33130,13 @@ dB
 dB
 dB
 dB
-Rg
-Rg
-Rg
-Rg
-Rg
-Rg
-Rg
+Ci
+Ci
+Ci
+Ci
+Ci
+Ci
+Ci
 NP
 zR
 zR
@@ -33111,13 +33292,13 @@ dB
 dB
 uQ
 gB
-Rg
-Rg
-Rg
-Rg
-Rg
-Rg
-Rg
+Ci
+Ci
+Ci
+Ci
+Ci
+Ci
+Ci
 eV
 zR
 zR
@@ -33277,9 +33458,9 @@ yB
 xF
 yB
 yB
-Rg
-Rg
-Rg
+Ci
+Ci
+Ci
 yB
 zR
 zR
@@ -34574,7 +34755,7 @@ vR
 yB
 Dt
 Rg
-Rg
+Ci
 Rg
 qj
 yB
@@ -35374,7 +35555,7 @@ vR
 vR
 vR
 yB
-Rg
+Ci
 yB
 lI
 ky

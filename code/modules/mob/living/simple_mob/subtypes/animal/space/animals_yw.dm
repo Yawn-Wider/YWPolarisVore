@@ -231,19 +231,49 @@
 	if(!chargeturf)
 		return
 	var/dir = get_dir(src, chargeturf)
-	var/turf/T = get_ranged_target_turf(chargeturf, dir, 2)
+	var/turf/T = get_ranged_target_turf(chargeturf, dir, isDiagonal(dir) ? 1 : 2)
 	if(!T)
 		return
 	charging = 1
-	movement_shake_radius = 2
-	movement_sound = 'sound/mecha/mechstep.ogg'
+	movement_shake_radius = 3
+	movement_sound = 'sound/effects/mob_effects/snowbull_charge.ogg'
 	walk(src, 0)
 	set_dir(dir)
 	visible_message(span("danger","\The [src] charges at \the [A]!"))
 	icon_state = "snowbull-charge"
 	sleep(charging_warning)
-	walk_towards(src, T, 2)
-	sleep((get_dist(src, T) * 2))
+	SelfMove()
+	for(var/distance = get_dist(src.loc, T), src.loc!=T && distance>0, distance--)
+		var/movedir = get_dir(src.loc, T)
+		var/moveturf = get_step(src.loc, movedir)
+		if(!SelfMove(moveturf, movedir, 2)) //If not manages to move try to break what is on way
+			for(var/obj/structure/window/W in moveturf)
+				if(W.dir == reverse_dir[dir]) // So that windows get smashed in the right order
+					W.hit(80)
+				else if(W.is_fulltile())
+					W.hit(80)
+					break
+			for(var/obj/structure/obstacle in moveturf)
+				if(istype(obstacle, /obj/structure/table))
+					var/obj/structure/table/table = obstacle
+					var/tableflipdir = pick(turn(dir, 45), turn(dir, -45), turn(dir, 90), turn(dir, -90))
+					table.flip(tableflipdir)
+				if(istype(obstacle, /obj/structure/closet))
+					var/obj/structure/closet/closet = obstacle
+					closet.break_open()
+				else
+					obstacle.attack_generic(src, 20, "rams")
+			if(!SelfMove(moveturf, movedir, 2))
+				break
+		sleep(2 * world.tick_lag)
+	/*walk_towards(src, T, 2)
+	var/distance = get_dist(src.loc, T)
+	for(distance, distance>0, distance--)
+		playsound(src, 'sound/mecha/mechstep.ogg', 50, 0, 0)
+		for(var/mob/living/L in range(2, src))
+			shake_camera(L, 1, 2)
+		sleep(2 * world.tick_lag)*/
+	sleep((get_dist(src, T) * 2.2))
 	walk(src, 0) // cancel the movement
 	charging = 0
 	icon_state = "snowbull"
@@ -251,18 +281,19 @@
 	movement_sound = null
 	set_AI_busy(FALSE)
 
-/mob/living/simple_mob/animal/passive/thrumbo/Bump(var/mob/living/M)
+/mob/living/simple_mob/animal/passive/thrumbo/Bump(mob/living/M)
 	if(charging)
 		if(istype(M))
-			visible_message("<span class='warning'>[src] knocks over [M]!</span>")
+			visible_message("<span class='warning'>[src] rams [M]!</span>")
 			M.Stun(5)
 			M.Weaken(3)
-			M.throw_at_random(0, 1, 2)
+			var/throwdir = pick(turn(dir, 45), turn(dir, -45))
+			M.throw_at(get_step(src.loc, throwdir), 1, 1, src)
 			runOver(M)
 	..()
 
 /mob/living/simple_mob/animal/passive/thrumbo/proc/runOver(var/mob/living/M)
-	if(istype(M)) // At this point, MULEBot has somehow crossed over onto your tile with you still on it. CRRRNCH.
+	if(istype(M)) 
 		visible_message("<span class='warning'>[src] runs over [M]!</span>")
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
 		var/damage = rand(5, 7)
@@ -273,7 +304,6 @@
 		M.apply_damage(0.5 * damage, BRUTE, BP_L_ARM)
 		M.apply_damage(0.5 * damage, BRUTE, BP_R_ARM)
 		blood_splatter(src, M, 1)
-
-
+	
 
 

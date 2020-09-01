@@ -191,7 +191,7 @@
 	if(client)
 		client.time_died_as_mouse = world.time
 
-/mob/living/simple_mob/animal/passive/thrumbo
+/mob/living/simple_mob/animal/passive/snowbull
 	name = "Snowbull"
 	desc = "Some white furred bull with a single curved horn."
 	tt_desc = "legionis gayus"
@@ -199,15 +199,15 @@
 	icon_state = "snowbull"
 	icon_living = "snowbull"
 	icon_dead = "snowbull-dead"
-	maxHealth = 150
-	health = 150
-	faction = "virgo3b"
+	maxHealth = 250
+	health = 250
+	faction = "snowbull"
 	pixel_x = -16
 	special_attack_min_range = 2
 	special_attack_max_range = 8
 	special_attack_cooldown = 10 SECONDS
 	var/charging = 0
-	var/charging_warning = 0.5 SECONDS
+	var/charging_warning = 1 SECONDS
 	minbodytemp = 0
 	maxbodytemp = 1000
 	min_oxy = 0				// Oxygen in moles, minimum, 0 is 'no minimum'
@@ -222,77 +222,82 @@
 	melee_damage_lower = 30 // Because fuck anyone who hurts this sweet, innocent creature.
 	melee_damage_upper = 30
 
-	ai_holder_type = /datum/ai_holder/simple_mob/gaslamp
+	ai_holder_type = /datum/ai_holder/simple_mob/snowbull
+	say_list_type = /datum/say_list/snowbull
 
-/mob/living/simple_mob/animal/passive/thrumbo/do_special_attack(atom/A)
+/mob/living/simple_mob/animal/passive/snowbull/update_icon()
+	if(charging)
+		icon_state = snowbull-charge
+	..()
+	
+
+/mob/living/simple_mob/animal/passive/snowbull/do_special_attack(atom/A)
 	set waitfor = FALSE
 	set_AI_busy(TRUE)
+	
+	charging = 1
+	movement_shake_radius = 3
+	movement_sound = 'sound/effects/mob_effects/snowbull_charge.ogg'
+	walk(src, 0)
+	set_dir(dir)
+	visible_message(span("danger","\The [src] prepares to charge at \the [A]!"))
+	update_icon()
+	sleep(charging_warning)
 	var/chargeturf = get_turf(A)
 	if(!chargeturf)
 		return
 	var/dir = get_dir(src, chargeturf)
 	var/turf/T = get_ranged_target_turf(chargeturf, dir, isDiagonal(dir) ? 1 : 2)
 	if(!T)
+		visible_message(span("danger", "\The [src] desists from charging at \the [A]"))
 		return
-	charging = 1
-	movement_shake_radius = 3
-	movement_sound = 'sound/effects/mob_effects/snowbull_charge.ogg'
-	walk(src, 0)
-	set_dir(dir)
-	visible_message(span("danger","\The [src] charges at \the [A]!"))
-	icon_state = "snowbull-charge"
-	sleep(charging_warning)
-	SelfMove()
+	//SelfMove()
 	for(var/distance = get_dist(src.loc, T), src.loc!=T && distance>0, distance--)
 		var/movedir = get_dir(src.loc, T)
 		var/moveturf = get_step(src.loc, movedir)
-		if(!SelfMove(moveturf, movedir, 2)) //If not manages to move try to break what is on way
-			for(var/obj/structure/window/W in moveturf)
-				if(W.dir == reverse_dir[dir]) // So that windows get smashed in the right order
-					W.hit(80)
-				else if(W.is_fulltile())
-					W.hit(80)
-					break
-			for(var/obj/structure/obstacle in moveturf)
-				if(istype(obstacle, /obj/structure/table))
-					var/obj/structure/table/table = obstacle
-					var/tableflipdir = pick(turn(dir, 45), turn(dir, -45), turn(dir, 90), turn(dir, -90))
-					table.flip(tableflipdir)
-				if(istype(obstacle, /obj/structure/closet))
-					var/obj/structure/closet/closet = obstacle
-					closet.break_open()
-				else
-					obstacle.attack_generic(src, 20, "rams")
-			if(!SelfMove(moveturf, movedir, 2))
-				break
+		SelfMove(moveturf, movedir, 2)
 		sleep(2 * world.tick_lag)
-	/*walk_towards(src, T, 2)
-	var/distance = get_dist(src.loc, T)
-	for(distance, distance>0, distance--)
-		playsound(src, 'sound/mecha/mechstep.ogg', 50, 0, 0)
-		for(var/mob/living/L in range(2, src))
-			shake_camera(L, 1, 2)
-		sleep(2 * world.tick_lag)*/
 	sleep((get_dist(src, T) * 2.2))
 	walk(src, 0) // cancel the movement
 	charging = 0
-	icon_state = "snowbull"
+	update_icon()
 	movement_shake_radius = 0
 	movement_sound = null
 	set_AI_busy(FALSE)
 
-/mob/living/simple_mob/animal/passive/thrumbo/Bump(mob/living/M)
+/mob/living/simple_mob/animal/passive/snowbull/Bump(atom/movable/AM)
 	if(charging)
-		if(istype(M))
-			visible_message("<span class='warning'>[src] rams [M]!</span>")
+		if(istype(AM, /mob/living))
+			var/mob/living/M = AM
+			visible_message("<span class='warning'>[src] rams [AM]!</span>")
 			M.Stun(5)
 			M.Weaken(3)
 			var/throwdir = pick(turn(dir, 45), turn(dir, -45))
 			M.throw_at(get_step(src.loc, throwdir), 1, 1, src)
 			runOver(M)
+		if(istype(AM, /obj/structure))
+			if(istype(AM, /obj/structure/window))
+				var/obj/structure/window/window = AM
+				window.hit(80)
+			else if(istype(AM, /obj/structure/table))
+				var/obj/structure/table/table = AM
+				var/tableflipdir = pick(turn(dir, 90), turn(dir, -90))
+				if(!table.flip(tableflipdir))
+					AM.attack_generic(src, 20, "rams")
+			else if(istype(AM, /obj/structure/closet))
+				var/obj/structure/closet/closet = AM
+				closet.break_open()
+			else
+				AM.attack_generic(src, 20, "rams")
+		if(istype(AM, /turf/simulated/wall))
+			var/turf/simulated/wall/wall = AM
+			wall.take_damage(20)
+		if(istype(AM, /obj/machinery))	
+			var/obj/machinery/machinery = AM
+			machinery.attack_generic(src, 20)
 	..()
 
-/mob/living/simple_mob/animal/passive/thrumbo/proc/runOver(var/mob/living/M)
+/mob/living/simple_mob/animal/passive/snowbull/proc/runOver(var/mob/living/M)
 	if(istype(M)) 
 		visible_message("<span class='warning'>[src] runs over [M]!</span>")
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
@@ -304,6 +309,64 @@
 		M.apply_damage(0.5 * damage, BRUTE, BP_L_ARM)
 		M.apply_damage(0.5 * damage, BRUTE, BP_R_ARM)
 		blood_splatter(src, M, 1)
-	
 
+/mob/living/simple_mob/animal/passive/snowbull/handle_special()
+	if(ai_holder)
+		if(istype(ai_holder, /datum/ai_holder/simple_mob/snowbull))
+			var/datum/ai_holder/simple_mob/snowbull/changedAI = ai_holder
+			var/mobtension = 0
+			mobtension = get_tension()
+			if(mobtension > 170)
+				changedAI.untrusting = TRUE
+			if(mobtension > 270)
+				changedAI.untrusting = 2
+			if(mobtension < 170)
+				changedAI.untrusting = FALSE
+
+/mob/living/simple_mob/animal/passive/snowbull/update_icon()
+	
+	
+/datum/ai_holder/simple_mob/snowbull
+	hostile = TRUE //Not actually hostile but neede for a check otherwise it won't work
+	retaliate = TRUE
+	cooperative = TRUE
+	wander_delay = 12
+	can_breakthrough = TRUE
+	violent_breakthrough = TRUE
+	lose_target_timeout = 40 SECONDS
+	var/untrusting = FALSE
+	threaten = TRUE
+	threaten_delay = 7 SECONDS
+	threaten_timeout = 0 SECONDS
+	can_flee = FALSE
+
+/datum/ai_holder/simple_mob/snowbull/find_target(list/possible_targets, has_targets_list)
+	ai_log("find_target() : Entered.", AI_LOG_TRACE)
+	. = list()
+	if(!has_targets_list)
+		possible_targets = list_targets()
+	for(var/possible_target in possible_targets)
+		var/target_threatlevel
+		if(istype(possible_target, /atom/movable)) //Test
+			var/atom/movable/threatener = possible_target
+			target_threatlevel = threatener.get_threat(holder)
+		if(checkthreatened(possible_target, target_threatlevel)) //won't attack anything that ain't a big threat
+			if(can_attack(possible_target)) // Can we attack it?
+				. += possible_target
+	var/new_target = pick_target(.)
+	give_target(new_target)
+	return new_target
+
+/datum/ai_holder/simple_mob/snowbull/proc/checkthreatened(var/possible_target, var/target_threatlevel = 0)
+	if(check_attacker(possible_target))
+		return TRUE
+	if(untrusting == 1 && target_threatlevel > 130 && in range(5))
+		return TRUE
+	if(untrusting > 1 && target_threatlevel > 100)
+		return TRUE
+	else
+		return FALSE
+/datum/say_list/snowbull
+	say_threaten = list("^huffs, preparing to charge menacingly.", "^huffs, scratching the floor.")
+	
 

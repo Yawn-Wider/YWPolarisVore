@@ -44,7 +44,7 @@
 	overmap_event_areas = 10
 
 	usable_email_tlds = list("cryogaia.nt")
-	lobby_icon = 'icons/misc/title_yw2.dmi'
+	lobby_icon = 'icons/misc/title_yw.dmi'
 	lobby_screens = list("cryogaia")
 	id_hud_icons = 'icons/mob/hud_jobs_vr.dmi'
 
@@ -175,7 +175,7 @@
 		/area/maintenance/upper/maintroom1,
 		/area/maintenance/maintroom8
 		)
-		
+
 	unit_test_exempt_from_atmos = list(
 //		/area/engineering/atmos/intake
 		)
@@ -203,8 +203,8 @@
 		Z_LEVEL_CRYOGAIA_CENTCOM
 		)
 
-	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_MAIN)
-	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_TRANSIT)
+	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_UPPER)
+	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
 						 		 Z_LEVEL_ROGUEMINE_2,
 						 	 	 Z_LEVEL_ROGUEMINE_3,

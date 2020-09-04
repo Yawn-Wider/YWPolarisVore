@@ -203,7 +203,7 @@
 	health = 250
 	faction = "snowbull"
 	pixel_x = -16
-	special_attack_min_range = 2
+	special_attack_min_range = 3
 	special_attack_max_range = 8
 	special_attack_cooldown = 10 SECONDS
 	var/charging = 0
@@ -219,46 +219,46 @@
 	min_n2 = 0					// N2 min
 	max_n2 = 0					// N2 max
 	attack_sharp = 1
-	melee_damage_lower = 30 // Because fuck anyone who hurts this sweet, innocent creature.
-	melee_damage_upper = 30
+	melee_damage_lower = 20 // Because fuck anyone who hurts this sweet, innocent creature.
+	melee_damage_upper = 35
 
 	ai_holder_type = /datum/ai_holder/simple_mob/snowbull
 	say_list_type = /datum/say_list/snowbull
 
 /mob/living/simple_mob/animal/passive/snowbull/update_icon()
 	if(charging)
-		icon_state = snowbull-charge
+		icon_state = "[icon_living]-charge"
 	..()
-	
+
 
 /mob/living/simple_mob/animal/passive/snowbull/do_special_attack(atom/A)
 	set waitfor = FALSE
 	set_AI_busy(TRUE)
-	
 	charging = 1
 	movement_shake_radius = 3
 	movement_sound = 'sound/effects/mob_effects/snowbull_charge.ogg'
-	walk(src, 0)
-	set_dir(dir)
 	visible_message(span("danger","\The [src] prepares to charge at \the [A]!"))
 	update_icon()
 	sleep(charging_warning)
 	var/chargeturf = get_turf(A)
 	if(!chargeturf)
 		return
-	var/dir = get_dir(src, chargeturf)
-	var/turf/T = get_ranged_target_turf(chargeturf, dir, isDiagonal(dir) ? 1 : 2)
+	var/chargedir = get_dir(src, chargeturf)
+	set_dir(chargedir)
+	var/turf/T = get_ranged_target_turf(chargeturf, chargedir, isDiagonal(chargedir) ? 1 : 2)
 	if(!T)
+		charging = 0
+		movement_shake_radius = null
+		movement_sound = null
+		update_icon()
 		visible_message(span("danger", "\The [src] desists from charging at \the [A]"))
 		return
-	//SelfMove()
 	for(var/distance = get_dist(src.loc, T), src.loc!=T && distance>0, distance--)
 		var/movedir = get_dir(src.loc, T)
 		var/moveturf = get_step(src.loc, movedir)
 		SelfMove(moveturf, movedir, 2)
-		sleep(2 * world.tick_lag)
+		sleep(2 * world.tick_lag) //Speed it will move, default is two server ticks
 	sleep((get_dist(src, T) * 2.2))
-	walk(src, 0) // cancel the movement
 	charging = 0
 	update_icon()
 	movement_shake_radius = 0
@@ -274,34 +274,35 @@
 			M.Weaken(3)
 			var/throwdir = pick(turn(dir, 45), turn(dir, -45))
 			M.throw_at(get_step(src.loc, throwdir), 1, 1, src)
-			runOver(M)
+			runOver(M) // Actually should not use this, placeholder
 		if(istype(AM, /obj/structure))
 			if(istype(AM, /obj/structure/window))
 				var/obj/structure/window/window = AM
-				window.hit(80)
+				window.hit(80) //Shatters reinforced windows
 			else if(istype(AM, /obj/structure/table))
 				var/obj/structure/table/table = AM
 				var/tableflipdir = pick(turn(dir, 90), turn(dir, -90))
-				if(!table.flip(tableflipdir))
+				if(!table.flip(tableflipdir)) //If table don't gets flipped just generic attack it
 					AM.attack_generic(src, 20, "rams")
 			else if(istype(AM, /obj/structure/closet))
 				var/obj/structure/closet/closet = AM
-				closet.break_open()
+				closet.throw_at_random(0, 2, 2)
+				closet.break_open() //Lets not destroy closets that easily, instead just open it
 			else
-				AM.attack_generic(src, 20, "rams")
+				AM.attack_generic(src, 20, "rams") // Otherwise just attack_generic that structure
 		if(istype(AM, /turf/simulated/wall))
 			var/turf/simulated/wall/wall = AM
 			wall.take_damage(20)
-		if(istype(AM, /obj/machinery))	
+		if(istype(AM, /obj/machinery))
 			var/obj/machinery/machinery = AM
 			machinery.attack_generic(src, 20)
 	..()
 
 /mob/living/simple_mob/animal/passive/snowbull/proc/runOver(var/mob/living/M)
-	if(istype(M)) 
+	if(istype(M))
 		visible_message("<span class='warning'>[src] runs over [M]!</span>")
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
-		var/damage = rand(5, 7)
+		var/damage = rand(3, 5)
 		M.apply_damage(2 * damage, BRUTE, BP_HEAD)
 		M.apply_damage(2 * damage, BRUTE, BP_TORSO)
 		M.apply_damage(0.5 * damage, BRUTE, BP_L_LEG)
@@ -315,17 +316,27 @@
 		if(istype(ai_holder, /datum/ai_holder/simple_mob/snowbull))
 			var/datum/ai_holder/simple_mob/snowbull/changedAI = ai_holder
 			var/mobtension = 0
-			mobtension = get_tension()
+			mobtension = get_tension() //Check for their tension, based on dangerous mobs and allies nearby
 			if(mobtension > 170)
 				changedAI.untrusting = TRUE
 			if(mobtension > 270)
 				changedAI.untrusting = 2
 			if(mobtension < 170)
 				changedAI.untrusting = FALSE
+	var/beforehealth = icon_living
+	var/healthpercent = health/maxHealth
+	switch(healthpercent)
+		if(=< 0.25)
+			icon_living = "snowbull-25"
+		if(=< 0.50)
+			icon_living = "snowbull-50"
+		if(=< 0.75)
+			icon_living = "snowbull-75"	
+		if(> 0.75)
+			icon_living = "snowbull-100"
+	if(beforehealth != icon_living)
+		update_icon()
 
-/mob/living/simple_mob/animal/passive/snowbull/update_icon()
-	
-	
 /datum/ai_holder/simple_mob/snowbull
 	hostile = TRUE //Not actually hostile but neede for a check otherwise it won't work
 	retaliate = TRUE
@@ -333,12 +344,12 @@
 	wander_delay = 12
 	can_breakthrough = TRUE
 	violent_breakthrough = TRUE
-	lose_target_timeout = 40 SECONDS
-	var/untrusting = FALSE
-	threaten = TRUE
+	lose_target_timeout = 40 SECONDS //How much time till they forget who attacked them.
+	var/untrusting = FALSE //This will make the mob check other mobs if they're very dangerous or has intent to harm them.
+	threaten = TRUE //Threaten to attack the enemy.
 	threaten_delay = 7 SECONDS
-	threaten_timeout = 0 SECONDS
-	can_flee = FALSE
+	threaten_timeout = 0 SECONDS //we don't want to attack immediately when they get back, only if they don't behave after we warn
+	can_flee = FALSE //No, we don't flee, we attack back.
 
 /datum/ai_holder/simple_mob/snowbull/find_target(list/possible_targets, has_targets_list)
 	ai_log("find_target() : Entered.", AI_LOG_TRACE)
@@ -360,13 +371,47 @@
 /datum/ai_holder/simple_mob/snowbull/proc/checkthreatened(var/possible_target, var/target_threatlevel = 0)
 	if(check_attacker(possible_target))
 		return TRUE
-	if(untrusting == 1 && target_threatlevel > 130 && in range(5))
+	if(untrusting == 1 && target_threatlevel > 130 && possible_target in range(5))
 		return TRUE
 	if(untrusting > 1 && target_threatlevel > 100)
 		return TRUE
 	else
 		return FALSE
-/datum/say_list/snowbull
-	say_threaten = list("^huffs, preparing to charge menacingly.", "^huffs, scratching the floor.")
-	
+
+/datum/ai_holder/simple_mob/snowbull/threaten_target()
+	holder.face_atom(target) // Constantly face the target.
+
+	if(!threatening) // First tick.
+		threatening = TRUE
+		last_threaten_time = world.time
+
+		holder.visible_emote("Huffs, reacting to the threat of [target]")
+		//playsound(holder, holder.say_list.threaten_sound, 50, 1) // We do this twice to make the sound -very- noticable to the target.
+		//playsound(target, holder.say_list.threaten_sound, 50, 1) // Actual aim-mode also does that so at least it's consistant.
+	else // Otherwise we are waiting for them to go away or to wait long enough for escalate.
+		var/threatlevel = target.get_threat(holder)
+		if(target in list_targets() && checkthreatened(target, threatlevel)) // Are they still visible?
+			var/should_escalate = FALSE
+
+			if(threaten_delay && last_threaten_time + threaten_delay < world.time) // Waited too long.
+				should_escalate = TRUE
+
+			if(should_escalate)
+				threatening = FALSE
+				set_stance(STANCE_APPROACH)
+				if(holder.say_list)
+					holder.ISay(safepick(holder.say_list.say_escalate))
+			else
+				return // Wait a bit.
+
+		else // They left, or so we think.
+			if(last_threaten_time + threaten_timeout < world.time)	// They've been gone long enough, probably safe to stand down
+				threatening = FALSE
+			set_stance(STANCE_IDLE)
+			if(holder.say_list)
+				holder.ISay(safepick(holder.say_list.say_stand_down))
+				playsound(holder, holder.say_list.stand_down_sound, 50, 1) // We do this twice to make the sound -very- noticable to the target.
+				playsound(target, holder.say_list.stand_down_sound, 50, 1) // Actual aim-mode also does that so at least it's consistant.
+
+
 

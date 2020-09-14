@@ -223,7 +223,6 @@
 	melee_damage_upper = 35
 
 	ai_holder_type = /datum/ai_holder/simple_mob/snowbull
-	say_list_type = /datum/say_list/snowbull
 
 /mob/living/simple_mob/animal/passive/snowbull/update_icon()
 	if(charging)
@@ -325,15 +324,14 @@
 				changedAI.untrusting = FALSE
 	var/beforehealth = icon_living
 	var/healthpercent = health/maxHealth
-	switch(healthpercent)
-		if(=< 0.25)
-			icon_living = "snowbull-25"
-		if(=< 0.50)
-			icon_living = "snowbull-50"
-		if(=< 0.75)
-			icon_living = "snowbull-75"	
-		if(> 0.75)
-			icon_living = "snowbull-100"
+	if(healthpercent <=0.25)
+		icon_living = "snowbull-25"
+	else if(healthpercent <=0.50)
+		icon_living = "snowbull-50"
+	else if(healthpercent <=0.75)
+		icon_living = "snowbull-75"	
+	else if(healthpercent >0.75)
+		icon_living = "snowbull-100"
 	if(beforehealth != icon_living)
 		update_icon()
 
@@ -385,7 +383,7 @@
 		threatening = TRUE
 		last_threaten_time = world.time
 
-		holder.visible_emote("Huffs, reacting to the threat of [target]")
+		holder.visible_emote("<span class>'notice'>Huffs, reacting to the threat of [target]</span>")
 		//playsound(holder, holder.say_list.threaten_sound, 50, 1) // We do this twice to make the sound -very- noticable to the target.
 		//playsound(target, holder.say_list.threaten_sound, 50, 1) // Actual aim-mode also does that so at least it's consistant.
 	else // Otherwise we are waiting for them to go away or to wait long enough for escalate.
@@ -400,7 +398,7 @@
 				threatening = FALSE
 				set_stance(STANCE_APPROACH)
 				if(holder.say_list)
-					holder.ISay(safepick(holder.say_list.say_escalate))
+					holder.visible_emote("<span class>'notice'>Gets irritated, going after [target]!</span>")
 			else
 				return // Wait a bit.
 
@@ -408,6 +406,7 @@
 			if(last_threaten_time + threaten_timeout < world.time)	// They've been gone long enough, probably safe to stand down
 				threatening = FALSE
 			set_stance(STANCE_IDLE)
+			holder.visible_emote("<span class>'notice'>calms down, lowering their horns to [target]</span>")
 			if(holder.say_list)
 				holder.ISay(safepick(holder.say_list.say_stand_down))
 				playsound(holder, holder.say_list.stand_down_sound, 50, 1) // We do this twice to make the sound -very- noticable to the target.

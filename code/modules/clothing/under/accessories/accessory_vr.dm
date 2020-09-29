@@ -29,8 +29,9 @@
 	slot_flags = SLOT_TIE | SLOT_OCLOTHING
 	icon = 'icons/obj/clothing/ties_vr.dmi'
 	icon_override = 'icons/mob/ties_vr.dmi'
-	var/icon_previous_override //yw addition
+	icon_state = "collar_blk"
 	var/writtenon = 0
+	var/icon_previous_override //yw addition
 
 //ywedit start. forces different sprite sheet on equip
 /obj/item/clothing/accessory/collar/New()
@@ -93,6 +94,7 @@
 
 	if(!jingled)
 		usr.audible_message("[usr] jingles the [src]'s bell.")
+		playsound(src, 'sound/items/pickup/ring.ogg', 50, 1)
 		jingled = 1
 		addtimer(CALLBACK(src, .proc/jingledreset), 50)
 	return

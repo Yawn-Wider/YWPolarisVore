@@ -1391,40 +1391,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/north)
-"acZ" = (
-/obj/effect/floor_decal/borderfloor/shifted{
-	dir = 1;
-	icon_state = "borderfloor_shifted"
-	},
-/obj/effect/floor_decal/corner/lightorange/border/shifted{
-	dir = 1;
-	icon_state = "bordercolor_shifted"
-	},
-/obj/effect/floor_decal/corner/lightorange{
-	dir = 5;
-	icon_state = "corner_white"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/cryopod{
-	dir = 4
-	},
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
-/obj/machinery/computer/cryopod{
-	pixel_x = -32
-	},
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/security/solitary)
-"ada" = (
-/obj/machinery/cryopod{
-	dir = 4
-	},
-/obj/machinery/computer/cryopod{
-	pixel_x = -32
-	},
-/turf/simulated/floor/tiled/dark,
-/area/tether/surfacebase/security/brig)
 "adb" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1589,27 +1555,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/open,
 /area/maintenance/lower/north)
-"adq" = (
-/obj/machinery/door/airlock/maintenance/engi{
-	name = "Atmospherics";
-	req_access = list(24)
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/door/blast/regular{
-	density = 0;
-	dir = 1;
-	icon_state = "pdoor0";
-	id = "atmoslockdown";
-	layer = 1;
-	name = "Atmospherics Lockdown";
-	opacity = 0;
-	open_layer = 1
-	},
-/obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
-/area/engineering/atmos)
 "adr" = (
 /obj/structure/railing{
 	dir = 1
@@ -1717,53 +1662,6 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lower/north)
-"adE" = (
-/obj/item/device/radio/intercom{
-	dir = 1;
-	name = "Station Intercom (General)";
-	pixel_y = 21
-	},
-/obj/machinery/alarm{
-	pixel_x = 0;
-	pixel_y = 30
-	},
-/obj/machinery/computer/security/xenobio,
-/obj/machinery/camera/network/research/xenobio,
-/turf/simulated/floor/tiled/white,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
-"adF" = (
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiopen5";
-	name = "Pen 5 Containment";
-	pixel_x = -20;
-	pixel_y = -8;
-	req_access = list(55)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiopen3";
-	name = "Pen 3 Containment";
-	pixel_x = -20;
-	pixel_y = 8;
-	req_access = list(55)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiodiv3";
-	name = "Divider 3 Blast Doors";
-	pixel_x = -25;
-	pixel_y = 0;
-	req_access = list(55)
-	},
-/obj/machinery/alarm{
-	dir = 4;
-	pixel_x = -35;
-	pixel_y = 0
-	},
-/obj/machinery/camera/network/research/xenobio{
-	icon_state = "camera";
-	dir = 4
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
 "adG" = (
 /obj/structure/railing{
 	dir = 4
@@ -1893,34 +1791,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/lower/north)
-"adX" = (
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiodiv6";
-	name = "Divider 6 Blast Doors";
-	pixel_x = 38;
-	pixel_y = 0;
-	req_access = list(55)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiopen6";
-	name = "Pen 6 Containment";
-	pixel_x = 30;
-	pixel_y = 8;
-	req_access = list(55)
-	},
-/obj/machinery/button/remote/blast_door{
-	id = "xenobiopen8";
-	name = "Pen 8 Containment";
-	pixel_x = 30;
-	pixel_y = -8;
-	req_access = list(55)
-	},
-/obj/machinery/camera/network/research/xenobio{
-	icon_state = "camera";
-	dir = 9
-	},
-/turf/simulated/floor/tiled/dark,
-/area/rnd/outpost/xenobiology/outpost_slimepens)
 "adY" = (
 /turf/simulated/wall,
 /area/tether/surfacebase/surface_two_hall)
@@ -7805,6 +7675,27 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/tether/surfacebase/surface_two_hall)
+"apQ" = (
+/obj/machinery/door/airlock/maintenance/engi{
+	name = "Atmospherics";
+	req_access = list(24)
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/regular{
+	density = 0;
+	dir = 1;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	layer = 1;
+	name = "Atmospherics Lockdown";
+	opacity = 0;
+	open_layer = 1
+	},
+/turf/simulated/floor/plating,
+/area/engineering/atmos)
 "apR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -19462,6 +19353,20 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/outpost/xenobiology/outpost_slimepens)
+"aLt" = (
+/obj/item/device/radio/intercom{
+	dir = 1;
+	name = "Station Intercom (General)";
+	pixel_y = 21
+	},
+/obj/machinery/alarm{
+	pixel_x = 0;
+	pixel_y = 30
+	},
+/obj/machinery/computer/security/xenobio,
+/obj/machinery/camera/network/research,
+/turf/simulated/floor/tiled/white,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
 "aLu" = (
 /obj/machinery/button/remote/blast_door{
 	id = "xenobiodiv4";
@@ -21365,6 +21270,38 @@
 /obj/structure/table/standard,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/storage)
+"aPb" = (
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiopen5";
+	name = "Pen 5 Containment";
+	pixel_x = -20;
+	pixel_y = -8;
+	req_access = list(55)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiopen3";
+	name = "Pen 3 Containment";
+	pixel_x = -20;
+	pixel_y = 8;
+	req_access = list(55)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiodiv3";
+	name = "Divider 3 Blast Doors";
+	pixel_x = -25;
+	pixel_y = 0;
+	req_access = list(55)
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -35;
+	pixel_y = 0
+	},
+/obj/machinery/camera/network/research{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
 "aPc" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 8
@@ -21378,6 +21315,34 @@
 	network = list("Xenobiology")
 	},
 /turf/simulated/floor/reinforced,
+/area/rnd/outpost/xenobiology/outpost_slimepens)
+"aPd" = (
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiodiv6";
+	name = "Divider 6 Blast Doors";
+	pixel_x = 38;
+	pixel_y = 0;
+	req_access = list(55)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiopen6";
+	name = "Pen 6 Containment";
+	pixel_x = 30;
+	pixel_y = 8;
+	req_access = list(55)
+	},
+/obj/machinery/button/remote/blast_door{
+	id = "xenobiopen8";
+	name = "Pen 8 Containment";
+	pixel_x = 30;
+	pixel_y = -8;
+	req_access = list(55)
+	},
+/obj/machinery/camera/network/research{
+	dir = 8;
+	icon_state = "camera"
+	},
+/turf/simulated/floor/tiled/dark,
 /area/rnd/outpost/xenobiology/outpost_slimepens)
 "aPe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -24299,6 +24264,28 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/security/lowerhallway)
+"aTI" = (
+/obj/effect/floor_decal/borderfloor/shifted{
+	dir = 1;
+	icon_state = "borderfloor_shifted"
+	},
+/obj/effect/floor_decal/corner/lightorange/border/shifted{
+	dir = 1;
+	icon_state = "bordercolor_shifted"
+	},
+/obj/effect/floor_decal/corner/lightorange{
+	dir = 5;
+	icon_state = "corner_white"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/security/solitary)
 "aTJ" = (
 /obj/effect/floor_decal/borderfloor/shifted{
 	dir = 1;
@@ -26050,6 +26037,12 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/tether/surfacebase/security/interrogation)
+"aWo" = (
+/obj/machinery/cryopod{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/tether/surfacebase/security/brig)
 "aWq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -34989,7 +34982,7 @@ aIZ
 aJB
 aHT
 aKZ
-adF
+aPb
 aJB
 aKl
 aKZ
@@ -35266,7 +35259,7 @@ aab
 aab
 aab
 aHc
-adE
+aLt
 aHu
 aHx
 aHR
@@ -35561,7 +35554,7 @@ aLu
 aJF
 aKo
 aLa
-adX
+aPd
 aJF
 aKs
 aLa
@@ -37754,7 +37747,7 @@ aVx
 akg
 aVQ
 aWe
-ada
+aWo
 aUN
 acW
 adw
@@ -38795,7 +38788,7 @@ atJ
 axP
 auv
 azl
-adq
+apQ
 aAT
 aAT
 aBW
@@ -40298,7 +40291,7 @@ aab
 aab
 aab
 aTt
-acZ
+aTI
 aTZ
 aUk
 aUy

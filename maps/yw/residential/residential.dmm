@@ -1,4 +1,13 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "ac" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -15,6 +24,14 @@
 /obj/machinery/computer/arcade,
 /turf/simulated/floor/wood,
 /area/residential/mroom2)
+"ah" = (
+/obj/machinery/light_switch{
+	pixel_x = 0;
+	pixel_y = 28;
+	step_y = 0
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "ai" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/item/weapon/reagent_containers/food/condiment/enzyme,
@@ -261,6 +278,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/room6)
+"bk" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "bn" = (
 /obj/machinery/door/airlock{
 	name = "Unit 1"
@@ -473,6 +499,20 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
+"cx" = (
+/obj/structure/closet/secure_closet/freezer/fridge,
+/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/snacks/meat,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/obj/item/weapon/storage/box/beakers,
+/obj/item/weapon/material/knife,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/obj/item/weapon/reagent_containers/food/condiment/flour,
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room11)
 "cy" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -534,6 +574,15 @@
 /obj/item/clothing/under/bathrobe,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
+"cN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "cP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -1068,6 +1117,12 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/residential/room10)
+"fD" = (
+/obj/effect/floor_decal/corner/lightorange/border{
+	pixel_y = 6
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "fE" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -1604,6 +1659,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room10)
+"il" = (
+/obj/structure/bed/chair/bay/comfy/blue{
+	material = "plastic"
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "in" = (
 /obj/effect/forcefield,
 /turf/simulated/floor/reinforced,
@@ -2030,7 +2091,13 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/residential/ship_bay)
 "ko" = (
-/turf/simulated/floor/plating,
+/obj/structure/toilet{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
 /area/residential/room12)
 "kq" = (
 /obj/structure/closet/cabinet,
@@ -2137,13 +2204,11 @@
 /turf/simulated/floor/tiled,
 /area/residential/mroom1)
 "kS" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/old_cargo,
 /area/residential/room12)
 "kU" = (
 /obj/machinery/door/airlock/silver,
@@ -2653,6 +2718,9 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
+"nK" = (
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "nL" = (
 /obj/machinery/door/airlock/silver,
 /obj/machinery/door/firedoor/glass,
@@ -2713,6 +2781,11 @@
 /obj/item/weapon/storage/box/beakers,
 /turf/simulated/floor/wood,
 /area/residential/room10)
+"oa" = (
+/obj/structure/table/glass,
+/obj/item/modular_computer/tablet/preset/custom_loadout/advanced,
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "ob" = (
 /obj/machinery/door/airlock,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2943,6 +3016,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
+"pk" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "pl" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/material/knife,
@@ -3218,6 +3297,11 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
+"qJ" = (
+/obj/structure/table/marble,
+/obj/machinery/microwave,
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "qM" = (
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/wood,
@@ -3322,6 +3406,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
 /area/residential/mroom2)
+"rv" = (
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "rw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3585,6 +3672,15 @@
 "te" = (
 /turf/simulated/wall,
 /area/space)
+"tf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "tg" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 8
@@ -3652,6 +3748,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
+"tH" = (
+/obj/effect/floor_decal/corner/lightorange/border{
+	pixel_y = 6
+	},
+/obj/structure/hammock_kbraid_s,
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "tJ" = (
 /obj/structure/window/reinforced/tinted{
 	dir = 8
@@ -3848,7 +3951,10 @@
 	dir = 4;
 	pixel_x = -28
 	},
-/turf/simulated/floor/plating,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo,
 /area/residential/room12)
 "uH" = (
 /obj/structure/table/steel_reinforced,
@@ -3886,6 +3992,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room1)
+"uU" = (
+/obj/structure/closet/cabinet,
+/obj/item/clothing/under/seromi/undercoat/standard/white_grey,
+/obj/item/clothing/suit/storage/seromi/beltcloak/standard/blue_grey,
+/obj/item/clothing/glasses/fluff/avigoggles_yw,
+/obj/item/device/communicator/watch,
+/obj/item/weapon/card/id/residential/rs12,
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "vd" = (
 /obj/structure/table/bench/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3951,10 +4066,20 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room2)
+"vq" = (
+/obj/structure/table/reinforced,
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "vr" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/space)
+"vs" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "vt" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/light,
@@ -5379,6 +5504,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/ship_bay)
+"De" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = 2
+	},
+/obj/structure/window/basic,
+/obj/structure/curtain/open/privacy,
+/turf/simulated/floor/tiled/freezer,
+/area/residential/room12)
 "Df" = (
 /obj/structure/toilet{
 	dir = 8
@@ -5822,6 +5957,12 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/carpet,
 /area/residential/room4)
+"EK" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "EM" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -6332,6 +6473,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/mroom2)
+"Hg" = (
+/obj/structure/bed/chair{
+	material = null
+	},
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "Hh" = (
 /turf/simulated/wall,
 /area/residential/room12)
@@ -7731,6 +7878,11 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/space)
+"On" = (
+/obj/structure/curtain/black,
+/obj/structure/shuttle/window,
+/turf/simulated/floor/plating/eris/under,
+/area/residential/room12)
 "Or" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light{
@@ -8064,6 +8216,10 @@
 "PE" = (
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
+"PF" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "PG" = (
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/room9)
@@ -8282,11 +8438,26 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room2)
+"QU" = (
+/obj/structure/table/glass,
+/obj/item/toy/plushie/teshari/w_yw,
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "QW" = (
 /obj/machinery/microwave,
 /obj/structure/table/steel,
 /turf/simulated/floor/lino,
 /area/residential/room4)
+"QX" = (
+/obj/machinery/door/window,
+/obj/structure/window/basic,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/structure/curtain/open/privacy,
+/turf/simulated/floor/tiled/freezer,
+/area/residential/room12)
 "QY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -8531,11 +8702,9 @@
 /turf/simulated/floor/carpet/blue,
 /area/residential/room11)
 "Si" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
-/turf/simulated/floor/plating,
+/obj/machinery/alarm,
+/obj/structure/bed/chair/hammock_kbraid_n,
+/turf/simulated/floor/tiled/old_cargo,
 /area/residential/room12)
 "Sk" = (
 /obj/structure/closet/crate/trashcart,
@@ -8631,6 +8800,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"SB" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "SF" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
@@ -9122,6 +9295,15 @@
 /obj/machinery/microwave,
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
+"UT" = (
+/obj/machinery/recharger{
+	pixel_x = -1;
+	pixel_y = 7;
+	step_y = 0
+	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "UU" = (
 /obj/structure/fitness/weightlifter,
 /turf/simulated/floor/carpet,
@@ -9217,6 +9399,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room11)
+"Vq" = (
+/obj/structure/table/marble,
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "Vv" = (
 /obj/machinery/light_switch{
 	dir = 1;
@@ -9458,6 +9644,23 @@
 	},
 /turf/simulated/floor/lino,
 /area/residential/room1)
+"WS" = (
+/obj/machinery/shower{
+	dir = 8;
+	pixel_x = -5
+	},
+/obj/structure/window/basic{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/structure/mirror{
+	pixel_y = 25
+	},
+/obj/structure/curtain/open/privacy,
+/turf/simulated/floor/tiled/freezer,
+/area/residential/room12)
 "WV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
@@ -9653,6 +9856,16 @@
 /obj/structure/table/reinforced,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"Yg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/table/reinforced,
+/turf/simulated/floor/carpet/oracarpet,
+/area/residential/room12)
 "Yi" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -9778,6 +9991,10 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
+"YT" = (
+/obj/effect/floor_decal/corner/lightorange/border/shifted,
+/turf/simulated/floor/tiled/old_cargo,
+/area/residential/room12)
 "YU" = (
 /obj/machinery/light,
 /obj/structure/table/woodentable,
@@ -21858,15 +22075,15 @@ aZ
 aZ
 Hh
 ko
-ko
-ko
-ko
+De
+EK
+PF
 uG
 kS
-ko
-ko
-ko
-ko
+vs
+aa
+YT
+SB
 Hh
 aZ
 aZ
@@ -22019,16 +22236,16 @@ aZ
 aZ
 aZ
 Hh
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
+WS
+QX
+bk
+Yg
+tf
+cN
+rv
+Vq
+YT
+qJ
 Hh
 aZ
 aZ
@@ -22181,16 +22398,16 @@ aZ
 aZ
 aZ
 Hh
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
+nK
+fD
+nK
+QU
+rv
+rv
+Hg
+Vq
+YT
+SB
 Hh
 aZ
 aZ
@@ -22343,16 +22560,16 @@ aZ
 aZ
 aZ
 Hh
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
+ah
+fD
+nK
+oa
+il
+rv
+Hg
+Vq
+YT
+cx
 Hh
 aZ
 aZ
@@ -22506,15 +22723,15 @@ aZ
 aZ
 Hh
 Si
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
+tH
+nK
+UT
+vq
+rv
+rv
+Vq
+YT
+SB
 Hh
 aZ
 aZ
@@ -22667,16 +22884,16 @@ aZ
 aZ
 aZ
 Hh
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
-ko
+uU
+fD
+pk
+nK
+nK
+nK
+nK
+pk
+YT
+SB
 Hh
 aZ
 aZ
@@ -22832,10 +23049,10 @@ Hh
 Hh
 Hh
 Hh
-Hh
-Hh
-Hh
-Hh
+On
+On
+On
+On
 Hh
 Hh
 Hh

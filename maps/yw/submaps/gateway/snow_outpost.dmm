@@ -238,9 +238,7 @@
 	},
 /area/awaymission/snow_outpost/powered)
 "aR" = (
-/obj/mecha/combat/marauder/mauler{
-	operation_req_access = newlist()
-	},
+/obj/mecha/combat/marauder/mauler,
 /turf/simulated/floor/bluegrid{
 	name = "Mainframe Base";
 	nitrogen = 100;
@@ -582,7 +580,7 @@
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
 "bS" = (
-/obj/cryogaia_away_spawner/underdark_hard,
+/obj/tether_away_spawner/underdark_hard,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
 "bT" = (
@@ -1794,12 +1792,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/awaymission/snow_outpost/powered)
 "fV" = (
-/obj/cryogaia_away_spawner/aerostat_inside,
+/obj/tether_away_spawner/aerostat_inside,
 /turf/simulated/floor/snow/snow2,
 /area/awaymission/snow_outpost/dark)
 "fW" = (
 /obj/item/weapon/ore/gold,
-/obj/cryogaia_away_spawner/aerostat_inside,
+/obj/tether_away_spawner/aerostat_inside,
 /turf/simulated/floor/snow/snow2,
 /area/awaymission/snow_outpost/dark)
 "fX" = (
@@ -2608,6 +2606,20 @@
 "iN" = (
 /turf/simulated/floor/water/deep,
 /area/awaymission/snow_outpost/dark)
+"iP" = (
+/obj/machinery/atmospherics/unary/vent_pump,
+/obj/item/weapon/cell/slime,
+/turf/simulated/floor/tiled/white,
+/area/awaymission/snow_outpost/powered)
+"iQ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5;
+	icon_state = "intact"
+	},
+/obj/item/weapon/cell/infinite,
+/obj/item/weapon/cat_box,
+/turf/simulated/floor/tiled/white,
+/area/awaymission/snow_outpost/powered)
 "iR" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	dir = 8;
@@ -9169,8 +9181,8 @@ uy
 uy
 aO
 as
-by
-aA
+iP
+iQ
 aS
 yM
 bH

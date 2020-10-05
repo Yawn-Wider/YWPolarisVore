@@ -77,6 +77,11 @@
 	path = /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/jani
 	allowed_roles = list("Janitor")
 
+/datum/gear/suit/dept/beltcloak/rd
+	display_name = "research director belted cloak (Teshari)"
+	path = /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd
+	allowed_roles = list("Research Director")
+
 /datum/gear/suit/dept/cloak/command/New()
 	..()
 	var/list/cloaks = list()
@@ -210,6 +215,14 @@
 	var/list/cloaks = list()
 	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/iaa,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/iaa))
 		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
+		cloaks[initial(cloak_type.name)] = cloak_type
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
+
+/datum/gear/suit/dept/beltcloak/rd/New()
+	..()
+	var/list/cloaks = list()
+	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd/black))
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 

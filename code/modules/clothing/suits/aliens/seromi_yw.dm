@@ -572,3 +572,14 @@
 	desc = "A soft Teshari cloak made for the Janitor"
 	icon_state = "tesh_beltcloak_jani"
 	item_state = "tesh_beltcloak_jani"
+
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd
+	name = "research director belted cloak"
+	desc = "A soft Teshari cloak made for the Research Director"
+	icon_state = "tesh_beltcloak_rd"
+	item_state = "tesh_beltcloak_rd"
+/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd/black
+	name = "research director belted cloak (black)"
+	desc = "A soft Teshari cloak made for the Research Director"
+	icon_state = "tesh_beltcloak_rd2"
+	item_state = "tesh_beltcloak_rd2"

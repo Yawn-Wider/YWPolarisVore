@@ -31,7 +31,7 @@
 	name = "Antidepressant"
 	id = "antidepressant_yw"
 	description = "you can't stay sad at the taste of this."
-	taste_description = "a mixture of sweet, creamy, fruityness, the pain of life dulls a bit..."
+	taste_description = "a mixture of sweet, creamy, fruityness. The pain of life dulls a bit..."
 	color = "#ee757c" // rgb(238, 117, 124)
 
 	glass_name = "Antidepresant"

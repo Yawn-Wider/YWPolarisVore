@@ -27,3 +27,12 @@
 
 
 
+/datum/reagent/drink/antidepresant
+	name = "Antidepresant"
+	id = "antidepresant"
+	description = "you can't stay sad at the taste of this."
+	taste_description = "a mixture of sweet, creamy, fruityness, the pain of life dulls a bit..."
+	color = "#ee757c" // rgb(238, 117, 124)
+
+	glass_name = "Antidepresant"
+	glass_desc = "A soul lightenner."

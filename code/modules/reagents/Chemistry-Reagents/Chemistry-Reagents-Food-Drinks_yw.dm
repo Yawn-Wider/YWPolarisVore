@@ -30,12 +30,12 @@
 /datum/reagent/drink/antidepressant_yw
 	name = "Antidepressant"
 	id = "antidepressant_yw"
-	description = "you can't stay sad at the taste of this."
+	description = "A soul lightenner, you can't stay sad at the taste of this."
 	taste_description = "a mixture of sweet, creamy, fruityness. The pain of life dulls a bit..."
 	color = "#ee757c" // rgb(238, 117, 124)
 
 	glass_name = "Antidepresant"
-	glass_desc = "A soul lightenner."
+	glass_desc = "A Bright red coktail, warm as a roaring chimney, and bright as a smile."
 
 #define ANTIDEPRESSANT_MESSAGE_DELAY 5*60*10
 

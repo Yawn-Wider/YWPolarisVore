@@ -13,9 +13,9 @@
 	result_amount = 2
 
 
-/datum/chemical_reaction/drinks/antidepresant
-	name = "Antidepresant"
-	id = "antidepresant"
-	result = "antidepresant"
-	required_reagents = list ("cream" = 1, "sugar" = 1, "watermellon juice" = 1, "orange Juice" = 1, "lime juice" = 1)
+/datum/chemical_reaction/drinks/antidepressant_yw
+	name = "Antidepressant"
+	id = "antidepressant_yw"
+	result = "antidepressant_yw"
+	required_reagents = list ("cream" = 1, "sugar" = 1, "watermelonjuice" = 1, "orangejuice" = 1, "limejuice" = 1)
 	result_amount = 5

@@ -27,12 +27,25 @@
 
 
 
-/datum/reagent/drink/antidepresant
-	name = "Antidepresant"
-	id = "antidepresant"
+/datum/reagent/drink/antidepressant_yw
+	name = "Antidepressant"
+	id = "antidepressant_yw"
 	description = "you can't stay sad at the taste of this."
 	taste_description = "a mixture of sweet, creamy, fruityness, the pain of life dulls a bit..."
 	color = "#ee757c" // rgb(238, 117, 124)
 
 	glass_name = "Antidepresant"
 	glass_desc = "A soul lightenner."
+
+#define ANTIDEPRESSANT_MESSAGE_DELAY 5*60*10
+
+/datum/reagent/drink/antidepresant_yw/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	if(alien == IS_DIONA)
+		return
+	if(volume <= 0.1 && data != -1)
+		data = -1
+		to_chat(M, "<span class='warning'>Your feel nothing...</span>")
+	else
+		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
+			data = world.time
+			to_chat(M, "<span class='notice'>You feel soothed...</span>")

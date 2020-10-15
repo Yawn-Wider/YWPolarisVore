@@ -131,3 +131,4 @@
 		if(src && !M.stat && in_range(M,src))
 			to_chat(M, "You cannot rename Jeans! You hug her anyway.")
 			return 1
+

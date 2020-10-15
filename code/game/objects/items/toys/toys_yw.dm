@@ -107,3 +107,27 @@
 		slot_r_hand_str = 'icons/mob/items/righthand_toys_yw.dmi',
 		slot_back_str = 'icons/mob/toy_worn_yw.dmi',
 		slot_head_str = 'icons/mob/toy_worn_yw.dmi')
+
+/obj/item/toy/plushie/jeans
+	name = "Chocodoggo"
+	desc = "This plushie looks like a puppified version of Jeanne Petite. It seems as though it is watching you intently..."
+	icon_state = "Jeans_plushie"
+	item_state = "Jeans_plushie"
+	slot_flags = SLOT_HEAD
+	pokephrase = "pokerface"
+	icon = 'icons/vore/custom_items_yw.dmi'
+	item_icons = list(
+		slot_head_str = 'icons/vore/custom_onmob_yw.dmi')
+
+
+	rename_plushie()
+		set name = "Name Plushie"
+		set category = "Object"
+		set desc = "Give your plushie a cute name!"
+		var/mob/M = usr
+		if(!M.mind)
+			return 0
+
+		if(src && !M.stat && in_range(M,src))
+			to_chat(M, "You cannot rename Jeans! You hug her anyway.")
+			return 1

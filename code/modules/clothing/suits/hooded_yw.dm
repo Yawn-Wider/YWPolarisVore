@@ -48,3 +48,9 @@
 	hoodtype = /obj/item/clothing/head/hood/winter/snowsuit/science
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 10, bio = 0, rad = 0)
 	allowed = list (/obj/item/weapon/pen, /obj/item/weapon/paper, /obj/item/device/flashlight,/obj/item/weapon/tank/emergency/oxygen, /obj/item/weapon/storage/fancy/cigarettes,	/obj/item/weapon/storage/box/matches, /obj/item/weapon/reagent_containers/food/drinks/flask, /obj/item/device/suit_cooling_unit, /obj/item/device/analyzer,/obj/item/stack/medical,	/obj/item/weapon/dnainjector,/obj/item/weapon/reagent_containers/dropper,/obj/item/weapon/reagent_containers/syringe,/obj/item/weapon/reagent_containers/hypospray,	/obj/item/device/healthanalyzer,/obj/item/weapon/reagent_containers/glass/bottle,/obj/item/weapon/reagent_containers/glass/beaker,	/obj/item/weapon/reagent_containers/pill,/obj/item/weapon/storage/pill_bottle)
+
+/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/get_worn_icon_file(var/body_type, var/slot_name, var/default_icon, var/inhands)
+	if(body_type == SPECIES_TESHARI)
+		if(!inhands)
+			return 'icons/mob/species/seromi/suit_yw.dmi'
+	..()

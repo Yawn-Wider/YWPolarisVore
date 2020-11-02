@@ -1716,6 +1716,20 @@
 	item_state = "kbraid_head_s"
 	ear_protection = 1
 
+/obj/item/clothing/accessory/fluff/jeanscrystelchime
+	name = "valhollide chime"
+	desc = "a set of white crystal chimes attached to a silver ring. the sound they make when they clink together is otherworldly..."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "jeanscrystelchime"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	item_state = "jeanscrystelchime_s"
+	overlay_state = "jeanscrystelchime_s"
+	slot_flags = ACCESSORY_SLOT_DECOR
+	w_class = ITEMSIZE_TINY
+	species_restricted = list(SPECIES_TESHARI)
+	drop_sound = 'sound/items/pickup/ring.ogg'
+	pickup_sound = 'sound/items/pickup/ring.ogg'
+
 // ********
 // Whiteout
 // ********

@@ -199,8 +199,8 @@
 	icon_state = "snowbull"
 	icon_living = "snowbull"
 	icon_dead = "snowbull-dead"
-	maxHealth = 250
-	health = 250
+	maxHealth = 300
+	health = 300
 	faction = "snowbull"
 	pixel_x = -16
 	special_attack_min_range = 3
@@ -219,8 +219,8 @@
 	min_n2 = 0					// N2 min
 	max_n2 = 0					// N2 max
 	attack_sharp = 1
-	melee_damage_lower = 20 // Because fuck anyone who hurts this sweet, innocent creature.
-	melee_damage_upper = 35
+	melee_damage_lower = 15
+	melee_damage_upper = 20
 
 	ai_holder_type = /datum/ai_holder/simple_mob/snowbull
 
@@ -299,9 +299,9 @@
 
 /mob/living/simple_mob/animal/passive/snowbull/proc/runOver(var/mob/living/M)
 	if(istype(M))
-		visible_message("<span class='warning'>[src] runs over [M]!</span>")
+		visible_message("<span class='warning'>[src] rams [M] over!</span>")
 		playsound(src, 'sound/effects/splat.ogg', 50, 1)
-		var/damage = rand(3, 5)
+		var/damage = rand(3,4)
 		M.apply_damage(2 * damage, BRUTE, BP_HEAD)
 		M.apply_damage(2 * damage, BRUTE, BP_TORSO)
 		M.apply_damage(0.5 * damage, BRUTE, BP_L_LEG)
@@ -327,7 +327,7 @@
 	switch(healthpercent)
 		if(0.25 to 0)
 			icon_living = "snowbull-25"
-	 	if(0.50 to 0.26)
+		if(0.50 to 0.26)
 			icon_living = "snowbull-50"
 		if(0.75 to 0.51)
 			icon_living = "snowbull-75"	

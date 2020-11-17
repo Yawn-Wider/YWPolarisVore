@@ -150,6 +150,7 @@
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
+//YW EDIT: loneliness
 /datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
 	spawn(0)
 		// If they're dead or unconcious they're a bit beyond this kind of thing.

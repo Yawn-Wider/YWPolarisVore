@@ -32,9 +32,7 @@ BLIND     // can't see anything
 
 	sprite_sheets = list(
 		"Teshari" = 'icons/mob/species/seromi/eyes.dmi',
-		"Vox" = 'icons/mob/species/vox/eyes.dmi',
-		"Sergal" = 'icons/mob/species/sergal/eyes_yw.dmi',
-		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
+		"Vox" = 'icons/mob/species/vox/eyes.dmi'
 		)
 
 /obj/item/clothing/glasses/update_clothing_icon()
@@ -545,3 +543,38 @@ BLIND     // can't see anything
 	desc = "A set of implantable lenses designed to augment your vision"
 	icon_state = "thermalimplants"
 	item_state_slots = list(slot_r_hand_str = "sunglasses", slot_l_hand_str = "sunglasses")
+
+/obj/item/clothing/glasses/aerogelgoggles
+	name = "orange goggles"
+	desc = "Teshari designed lightweight goggles."
+	icon_state = "orange-g"
+	item_state_slots = list(slot_r_hand_str = "glasses", slot_l_hand_str = "glasses")
+	action_button_name = "Adjust Orange Goggles"
+	var/up = 0
+	item_flags = AIRTIGHT
+	body_parts_covered = EYES
+	species_restricted = list(SPECIES_TESHARI)
+
+/obj/item/clothing/glasses/aerogelgoggles/attack_self()
+	toggle()
+
+/obj/item/clothing/glasses/aerogelgoggles/verb/toggle()
+	set category = "Object"
+	set name = "Adjust Orange Goggles"
+	set src in usr
+
+	if(usr.canmove && !usr.stat && !usr.restrained())
+		if(src.up)
+			src.up = !src.up
+			flags_inv |= HIDEEYES
+			body_parts_covered |= EYES
+			icon_state = initial(icon_state)
+			to_chat(usr, "You flip \the [src] down to protect your eyes.")
+		else
+			src.up = !src.up
+			flags_inv &= ~HIDEEYES
+			body_parts_covered &= ~EYES
+			icon_state = "[initial(icon_state)]up"
+			to_chat(usr, "You push \the [src] up from in front of your eyes.")
+		update_clothing_icon()
+		usr.update_action_buttons()

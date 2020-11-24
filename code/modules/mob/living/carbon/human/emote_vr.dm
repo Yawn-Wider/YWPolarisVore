@@ -267,7 +267,7 @@
 	set desc = "Switch tail layer on top."
 	tail_alt = !tail_alt
 	update_tail_showing()
-	
+
 /mob/living/carbon/human/verb/hide_wings_vr()
 	set name = "Show/Hide wings"
 	set category = "IC"
@@ -280,4 +280,3 @@
 	else
 		message = "hides their wings."
 	visible_message("[src] [message]")
-	

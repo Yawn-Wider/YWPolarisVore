@@ -34,17 +34,32 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	if(!discovered_phororeagents)
 		discovered_phororeagents = list("bicordrazine")
 
-/obj/machinery/computer/phoronics/attack_hand(var/mob/user as mob)
-	return src.ui_interact(user)
+/obj/machinery/computer/phoronics/attack_ai(mob/user)
+	add_hiddenprint(user)
+	tgui_interact(user)
+
+/obj/machinery/computer/phoronics/attack_hand(mob/user)
+	add_fingerprint(user)
+	tgui_interact(user)
 
 
-/obj/machinery/computer/phoronics/ui_interact(mob/user, ui_key = "main", var/datum/nanoui/ui = null, var/force_open = 1)
+/obj/machinery/computer/phoronics/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+	if(!ui)
+		ui = new(user, src, "Phorochem", name)
+		ui.open()
 
-	var/data[0]
-	data["intensity"] =  intensity
-	data["timeLeft"] = timeLeft
-	data["timeLeftMax"] = timeLeftMax
-	data["message"] = message
+/obj/machinery/computer/phoronics/tgui_data(mob/user)
+	var/list/data = list(
+	"intensity" =  intensity,
+	"maxintensity" =  5,
+	"minintensity" =  1,
+	"timeLeft" = timeLeft,
+	"timeLeftMax" = timeLeftMax,
+	"message" = message,
+	"phoron" = phoron,
+	)
+	return data
 	if(source)
 		var/datum/gas_mixture/enviro = source.return_air()
 		if(enviro.gas["phoron"])
@@ -54,31 +69,25 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	else
 		data["phoron"] = 0
 
-	ui = SSnanoui.try_update_ui(user, src, ui_key, ui, data, force_open)
-	if (!ui)
-		ui = new(user, src, ui_key, "phorochem.tmpl", "Phorochemputer", 480, 400)
-		ui.set_initial_data(data)
-		ui.open()
-		ui.set_auto_update(1)	// auto update every Master Controller tick
-
-
-	return
-
-/obj/machinery/computer/phoronics/Topic(href, href_list)
-	if(href_list["beginTest"])
-		if(timeLeft == 0)
-			begin_test()
-
-	if(href_list["abortTest"])
-		if(timeLeft > 0)
-			aborting = 1
-
-	if(href_list["recalibrate"])
-		if(timeLeft == 0)
-			recalibrate()
-
-	if(href_list["intensity"])
-		intensity = min(max(text2num(href_list["intensity"]), 1), 5)
+/obj/machinery/computer/phoronics/tgui_act(action, params)
+	if(..())
+		return TRUE
+	switch(action)
+		if("beginTest")
+			if(timeLeft == 0)
+				begin_test()
+				. = TRUE
+		if("abortTest")
+			if(timeLeft > 0)
+				aborting = 1
+				. = TRUE
+		if("recalibrate")
+			if(timeLeft == 0)
+				recalibrate()
+				. = TRUE
+		if("intensity")
+			intensity = min(max(text2num("intensity"), 1), 5)
+			. = TRUE
 
 /obj/machinery/computer/phoronics/proc/recalibrate()
 	if(timeLeft > 0)
@@ -108,7 +117,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 							source = tile
 		if(source)
 			message = "Electromagnetic tile located at: [source.x], [source.y]"
-			SSnanoui.update_uis(src)
+			SStgui.update_uis(src)
 			source_pad = null
 			dest_pad = null
 			spawn(10)
@@ -234,7 +243,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	timeLeft *= 2 //half seconds to make escape impossible from electrical fields
 	timeLeftMax = timeLeft
 
-	SSnanoui.update_uis(src) //update progress bar with new timeLeftMax
+	SStgui.update_uis(src) //update progress bar with new timeLeftMax
 
 	var/obj/effect/electrical_field/small/field
 	var/obj/effect/electrical_field/big/field2

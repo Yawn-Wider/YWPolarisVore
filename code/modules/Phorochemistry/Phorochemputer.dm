@@ -19,6 +19,7 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	var/turf/source_loc
 	var/turf/dest_loc
 	var/field
+	var/phoron
 
 /obj/machinery/computer/phoronics/New()
 	intensity = 1
@@ -59,15 +60,15 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 	"message" = message,
 	"phoron" = phoron,
 	)
-	return data
 	if(source)
 		var/datum/gas_mixture/enviro = source.return_air()
 		if(enviro.gas["phoron"])
-			data["phoron"] = round(enviro.gas["phoron"])
+			phoron = round(enviro.gas["phoron"])
 		else
-			data["phoron"] = 0
+			phoron = 0
 	else
-		data["phoron"] = 0
+		phoron = 0
+	return data
 
 /obj/machinery/computer/phoronics/tgui_act(action, params)
 	if(..())

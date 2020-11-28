@@ -81,6 +81,7 @@ export const Phorochem = (props, context) => {
             <LabeledList.Item label="Progress">
               <ProgressBar
                 value={timeLeft}
+                maxValue={timeLeftMax}
                 ranges={{
                 }}>
                 {timeLeft + '%'}

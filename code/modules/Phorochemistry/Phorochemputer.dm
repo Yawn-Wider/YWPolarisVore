@@ -53,8 +53,6 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 /obj/machinery/computer/phoronics/tgui_data(mob/user)
 	var/list/data = list(
 	"intensity" =  intensity,
-	"maxintensity" =  5,
-	"minintensity" =  1,
 	"timeLeft" = timeLeft,
 	"timeLeftMax" = timeLeftMax,
 	"message" = message,
@@ -86,9 +84,15 @@ var/global/list/discovered_phororeagents //list of all phororeagents discovered 
 			if(timeLeft == 0)
 				recalibrate()
 				. = TRUE
-		if("intensity")
-			intensity = min(max(text2num("intensity"), 1), 5)
-			. = TRUE
+		if("remove_intensity")
+			if(intensity != 1)
+				intensity--
+				. = TRUE
+		if("add_intensity")
+			if(intensity != 5)
+				intensity++
+				. = TRUE
+
 
 /obj/machinery/computer/phoronics/proc/recalibrate()
 	if(timeLeft > 0)

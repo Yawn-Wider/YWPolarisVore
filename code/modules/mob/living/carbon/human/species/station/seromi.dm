@@ -69,6 +69,8 @@
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
 	push_flags = MONKEY|SLIME|SIMPLE_ANIMAL|ALIEN
 
+	body_temperature = 270
+
 	cold_level_1 = 180	//Default 260
 	cold_level_2 = 130	//Default 200
 	cold_level_3 = 70	//Default 120
@@ -129,8 +131,8 @@
 		)
 
 	unarmed_types = list(
-		/datum/unarmed_attack/bite/sharp,
 		/datum/unarmed_attack/claws,
+		/datum/unarmed_attack/bite/sharp,
 		/datum/unarmed_attack/stomp/weak
 		)
 
@@ -148,6 +150,7 @@
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
+//YW EDIT: loneliness
 /datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
 	spawn(0)
 		// If they're dead or unconcious they're a bit beyond this kind of thing.

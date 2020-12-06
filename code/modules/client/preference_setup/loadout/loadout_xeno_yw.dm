@@ -141,7 +141,7 @@
 /datum/gear/suit/dept/cloak/engineer/New()
 	..()
 	var/list/cloaks = list()
-	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/eningeer,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/eningeer))
+	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/beltcloak/jobs/eningeer,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/eningeer))
 		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))

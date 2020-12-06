@@ -19,7 +19,7 @@
 	allowed_roles = list("Chief Engineer", "Atmospheric Technician", "Station Engineer")
 
 
-//Added from CHOMP
+/* Commented out as a lot of these were added upstream if anything is missing add it to this file
 /datum/gear/suit/hood
 	display_name = "hooded cloak selection (Teshari)"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/standard
@@ -230,3 +230,4 @@
 	display_name = "white gear harness (Full Body Prosthetic, Diona)"
 	path = /obj/item/clothing/under/harness_white
 	sort_category = "Xenowear"
+	*/

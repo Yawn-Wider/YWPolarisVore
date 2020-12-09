@@ -296,19 +296,20 @@ turf/simulated/mineral/floor/light_corner
 		return
 
 	if(!density)
+		var/valid_tool = 0
+		var/digspeed = 40
 
-		var/list/usable_tools = list(
-			/obj/item/weapon/shovel,
-			/obj/item/weapon/pickaxe/diamonddrill,
-			/obj/item/weapon/pickaxe/drill,
-			/obj/item/weapon/pickaxe/borgdrill
-			)
+		if(istype(W, /obj/item/weapon/shovel))
+			var/obj/item/weapon/shovel/S = W
+			valid_tool = 1
+			digspeed = S.digspeed
 
-		var/valid_tool
-		for(var/valid_type in usable_tools)
-			if(istype(W,valid_type))
+		if(istype(W, /obj/item/weapon/pickaxe))
+			var/obj/item/weapon/pickaxe/P = W
+			if(P.sand_dig)
 				valid_tool = 1
-				break
+				digspeed = P.digspeed
+
 
 		if(valid_tool)
 			if (sand_dug)
@@ -536,7 +537,7 @@ turf/simulated/mineral/floor/light_corner
 	if(!density)
 		if(!sand_dug)
 			sand_dug = 1
-			for(var/i=0;i<(rand(3)+2);i++)
+			for(var/i=0;i<5;i++)
 				new/obj/item/weapon/ore/glass(src)
 			update_icon()
 		return

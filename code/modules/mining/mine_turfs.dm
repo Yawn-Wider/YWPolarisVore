@@ -297,7 +297,7 @@ turf/simulated/mineral/floor/light_corner
 
 	if(!density)
 		var/valid_tool = 0
-		var/digspeed = 40
+		var/digspeed = 30 //YAWN change. 30 from 40
 
 		if(istype(W, /obj/item/weapon/shovel))
 			var/obj/item/weapon/shovel/S = W
@@ -323,7 +323,7 @@ turf/simulated/mineral/floor/light_corner
 			to_chat(user, "<span class='notice'>You start digging.</span>")
 			playsound(user, 'sound/effects/rustle1.ogg', 50, 1)
 
-			if(!do_after(user,30)) return //YAWN change. 30 from 40
+			if(!do_after(user,digspeed)) return
 
 			to_chat(user, "<span class='notice'>You dug a hole.</span>")
 			GetDrilled()

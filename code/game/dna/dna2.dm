@@ -42,20 +42,29 @@
 #define DNA_UI_TAIL2_R     23
 #define DNA_UI_TAIL2_G     24
 #define DNA_UI_TAIL2_B     25
-#define DNA_UI_EARS_R      26
-#define DNA_UI_EARS_G      27
-#define DNA_UI_EARS_B      28
-#define DNA_UI_EARS2_R     29
-#define DNA_UI_EARS2_G     30
-#define DNA_UI_EARS2_B     31
-#define DNA_UI_WING_STYLE  32
-#define DNA_UI_WING_R      33
-#define DNA_UI_WING_G      34
-#define DNA_UI_WING_B      35
-#define DNA_UI_WING2_R     36
-#define DNA_UI_WING2_G     37
-#define DNA_UI_WING2_B     38 // VOREStation snippet end.
-#define DNA_UI_LENGTH      38 // VOREStation Edit - Needs to match the highest number above.
+#define DNA_UI_TAIL3_R     26
+#define DNA_UI_TAIL3_G     27
+#define DNA_UI_TAIL3_B     28
+#define DNA_UI_EARS_R      29
+#define DNA_UI_EARS_G      30
+#define DNA_UI_EARS_B      31
+#define DNA_UI_EARS2_R     32
+#define DNA_UI_EARS2_G     33
+#define DNA_UI_EARS2_B     34
+#define DNA_UI_EARS3_R     35
+#define DNA_UI_EARS3_G     36
+#define DNA_UI_EARS3_B     37
+#define DNA_UI_WING_STYLE  38
+#define DNA_UI_WING_R      39
+#define DNA_UI_WING_G      40
+#define DNA_UI_WING_B      41
+#define DNA_UI_WING2_R     42
+#define DNA_UI_WING2_G     43
+#define DNA_UI_WING2_B     44
+#define DNA_UI_WING3_R     45
+#define DNA_UI_WING3_G     46
+#define DNA_UI_WING3_B     47 // VOREStation snippet end.
+#define DNA_UI_LENGTH      47 // VOREStation Edit - Needs to match the highest number above.
 
 #define DNA_SE_LENGTH 49 // VOREStation Edit (original was UI+11)
 // For later:
@@ -229,6 +238,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	SetUIValueRange(DNA_UI_TAIL2_G,   character.g_tail2,   255,    1)
 	SetUIValueRange(DNA_UI_TAIL2_B,   character.b_tail2,   255,    1)
 
+	SetUIValueRange(DNA_UI_TAIL3_R,   character.r_tail3,   255,    1)
+	SetUIValueRange(DNA_UI_TAIL3_G,   character.g_tail3,   255,    1)
+	SetUIValueRange(DNA_UI_TAIL3_B,   character.b_tail3,   255,    1)
+
 	SetUIValueRange(DNA_UI_WING_R,    character.r_wing,    255,    1)
 	SetUIValueRange(DNA_UI_WING_G,    character.g_wing,    255,    1)
 	SetUIValueRange(DNA_UI_WING_B,    character.b_wing,    255,    1)
@@ -237,6 +250,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	SetUIValueRange(DNA_UI_WING2_G,    character.g_wing2,  255,    1)
 	SetUIValueRange(DNA_UI_WING2_B,    character.b_wing2,  255,    1)
 
+	SetUIValueRange(DNA_UI_WING3_R,    character.r_wing3,  255,    1)
+	SetUIValueRange(DNA_UI_WING3_G,    character.g_wing3,  255,    1)
+	SetUIValueRange(DNA_UI_WING3_B,    character.b_wing3,  255,    1)
+
 	SetUIValueRange(DNA_UI_EARS_R,    character.r_ears,    255,    1)
 	SetUIValueRange(DNA_UI_EARS_G,    character.g_ears,    255,    1)
 	SetUIValueRange(DNA_UI_EARS_B,    character.b_ears,    255,    1)
@@ -244,6 +261,10 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	SetUIValueRange(DNA_UI_EARS2_R,   character.r_ears2,   255,    1)
 	SetUIValueRange(DNA_UI_EARS2_G,   character.g_ears2,   255,    1)
 	SetUIValueRange(DNA_UI_EARS2_B,   character.b_ears2,   255,    1)
+
+	SetUIValueRange(DNA_UI_EARS3_R,   character.r_ears3,   255,    1)
+	SetUIValueRange(DNA_UI_EARS3_G,   character.g_ears3,   255,    1)
+	SetUIValueRange(DNA_UI_EARS3_B,   character.b_ears3,   255,    1)
 
 	// VORE Station Edit End
 
@@ -280,7 +301,7 @@ var/global/list/datum/dna/gene/dna_genes[0]
 // Set a DNA UI block's raw value.
 /datum/dna/proc/SetUIValue(var/block,var/value,var/defer=0)
 	if (block<=0) return
-	ASSERT(value>0)
+	ASSERT(value>=0)
 	ASSERT(value<=4095)
 	UI[block]=value
 	dirtyUI=1
@@ -296,17 +317,19 @@ var/global/list/datum/dna/gene/dna_genes[0]
 // Used in hair and facial styles (value being the index and maxvalue being the len of the hairstyle list)
 /datum/dna/proc/SetUIValueRange(var/block,var/value,var/maxvalue,var/defer=0)
 	if (block<=0) return
-	if (value==0) value = 1   // FIXME: hair/beard/eye RGB values if they are 0 are not set, this is a work around we'll encode it in the DNA to be 1 instead.
 	ASSERT(maxvalue<=4095)
 	var/range = (4095 / maxvalue)
+	if(value == 0) //VOREStation Edit
+		SetUIValue(block,0,defer)
+		return
 	if(value)
 		SetUIValue(block,round(value * range),defer)
 
 // Getter version of above.
 /datum/dna/proc/GetUIValueRange(var/block,var/maxvalue)
 	if (block<=0) return 0
-	var/value = GetUIValue(block)
-	return round(0.5 + (value / 4096) * maxvalue)
+	var/value = ((GetUIValue(block) / 4095) * maxvalue)
+	return round(0.5 + value)
 
 // Is the UI gene "on" or "off"?
 // For UI, this is simply a check of if the value is > 2050.
@@ -391,8 +414,8 @@ var/global/list/datum/dna/gene/dna_genes[0]
 // Getter version of above.
 /datum/dna/proc/GetSEValueRange(var/block,var/maxvalue)
 	if (block<=0) return 0
-	var/value = GetSEValue(block)
-	return round(1 +(value / 4096)*maxvalue)
+	var/value = ((GetSEValue(block) / 4095) * maxvalue)
+	return round(0.5 + value)
 
 // Is the block "on" (1) or "off" (0)? (Un-assigned genes are always off.)
 /datum/dna/proc/GetSEState(var/block)

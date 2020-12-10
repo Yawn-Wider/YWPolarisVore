@@ -151,7 +151,10 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 	if(lying && !species.prone_icon) //Only rotate them if we're not drawing a specific icon for being prone.
 		M.Turn(90)
 		M.Scale(desired_scale_x, desired_scale_y)
-		M.Translate(1,-6)
+		if(species.icon_height == 64)//VOREStation Edit
+			M.Translate(13,-22)
+		else
+			M.Translate(1,-6)
 		layer = MOB_LAYER -0.01 // Fix for a byond bug where turf entry order no longer matters
 	else
 		M.Scale(desired_scale_x, desired_scale_y)
@@ -501,6 +504,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	var/image/eyes_image = image(eyes_icon)
 	eyes_image.plane = PLANE_LIGHTING_ABOVE
+	eyes_image.appearance_flags = appearance_flags
 
 	overlays_standing[EYES_LAYER] = eyes_image
 	apply_layer(EYES_LAYER)

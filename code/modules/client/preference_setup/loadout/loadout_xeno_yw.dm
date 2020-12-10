@@ -19,7 +19,7 @@
 	allowed_roles = list("Chief Engineer", "Atmospheric Technician", "Station Engineer")
 
 
-//Added from CHOMP
+/* Commented out as a lot of these were added upstream if anything is missing add it to this file
 /datum/gear/suit/hood
 	display_name = "hooded cloak selection (Teshari)"
 	path = /obj/item/clothing/suit/storage/seromi/cloak/standard
@@ -76,6 +76,11 @@
 	display_name = "janitor belted cloak (Teshari)"
 	path = /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/jani
 	allowed_roles = list("Janitor")
+
+/datum/gear/suit/dept/beltcloak/rd
+	display_name = "research director belted cloak (Teshari)"
+	path = /obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd
+	allowed_roles = list("Research Director")
 
 /datum/gear/suit/dept/cloak/command/New()
 	..()
@@ -136,7 +141,7 @@
 /datum/gear/suit/dept/cloak/engineer/New()
 	..()
 	var/list/cloaks = list()
-	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/jobs/eningeer,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/eningeer))
+	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/cloak/beltcloak/jobs/eningeer,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/eningeer))
 		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/cloak_type = cloak
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
@@ -213,7 +218,16 @@
 		cloaks[initial(cloak_type.name)] = cloak_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
 
+/datum/gear/suit/dept/beltcloak/rd/New()
+	..()
+	var/list/cloaks = list()
+	for(var/cloak in typesof(/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd,/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd/black))
+		var/obj/item/clothing/suit/storage/seromi/beltcloak/jobs/rd/cloak_type = cloak
+		cloaks[initial(cloak_type.name)] = cloak_type
+	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(cloaks))
+
 /datum/gear/uniform/harness_white
 	display_name = "white gear harness (Full Body Prosthetic, Diona)"
 	path = /obj/item/clothing/under/harness_white
 	sort_category = "Xenowear"
+	*/

@@ -107,7 +107,8 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/quick_nif, //VOREStation Add,
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/client/proc/setckey //YW add - readds SetCkey proc
 	)
 
 var/list/admin_verbs_ban = list(
@@ -181,7 +182,6 @@ var/list/admin_verbs_server = list(
 	/datum/admins/proc/toggle_space_ninja,
 	/client/proc/toggle_random_events,
 	/client/proc/check_customitem_activity,
-	/client/proc/nanomapgen_DumpImage,
 	/client/proc/modify_server_news,
 	/client/proc/recipe_dump,
 	/client/proc/panicbunker,

@@ -292,6 +292,12 @@
 	description = "M-M-M-M-MONEY SHOT"
 	ckeywhitelist = list("dopiotl")
 	character_name = list("Jeanne Petite")
+/datum/gear/fluff/jeans_eiliplush
+	path = /obj/item/toy/plushie/teshari/eili
+	display_name = "Eili Plushi"
+	description = "My Favorite Pupil"
+	ckeywhitelist = list("dopiotl","kbraid")
+	character_name = list("Jeanne Petite","Eili","Braid")
 //dwaggy90
 //Saur Darastrix
 /datum/gear/fluff/saur_rig
@@ -635,6 +641,21 @@
 	description = "You're such a goggle head!"
 	ckeywhitelist = list("kbraid")
 	character_name = list("Eili")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
+
+/datum/gear/fluff/jeanscrystelchime
+	path = /obj/item/clothing/accessory/fluff/jeanscrystelchime
+	display_name = "valhollide chimes"
+	description = "a precious gift from a precious friend"
+	ckeywhitelist = list("kbraid")
+	character_name = list("Eili")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
+
+/datum/gear/fluff/jeansplushie
+	path = /obj/item/toy/plushie/jeans
+	display_name = "Jeans Plushi"
+	description = "Pupper Pitite"
+	ckeywhitelist = list("dopiotl","kbraid")
+	character_name = list("Jeanne Petite","Eili","Braid")
+
 //Braid
 /datum/gear/fluff/kbraidoutfit
 	path = /obj/item/clothing/suit/storage/hooded/fluff/kbraid

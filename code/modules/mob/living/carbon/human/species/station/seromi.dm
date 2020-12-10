@@ -69,6 +69,8 @@
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
 	push_flags = MONKEY|SLIME|SIMPLE_ANIMAL|ALIEN
 
+	body_temperature = 270
+
 	cold_level_1 = 180	//Default 260
 	cold_level_2 = 130	//Default 200
 	cold_level_3 = 70	//Default 120
@@ -129,8 +131,8 @@
 		)
 
 	unarmed_types = list(
-		/datum/unarmed_attack/bite/sharp,
 		/datum/unarmed_attack/claws,
+		/datum/unarmed_attack/bite/sharp,
 		/datum/unarmed_attack/stomp/weak
 		)
 
@@ -148,6 +150,7 @@
 	..()
 	H.equip_to_slot_or_del(new /obj/item/clothing/shoes/sandal(H),slot_shoes)
 
+//YW EDIT: loneliness
 /datum/species/teshari/handle_environment_special(var/mob/living/carbon/human/H)
 	spawn(0)
 		// If they're dead or unconcious they're a bit beyond this kind of thing.
@@ -199,15 +202,16 @@
 				if(world.time >= H.next_loneliness_time)
 					to_chat(H, "[A] calms you down...")
 					H.next_loneliness_time = world.time+500
-					
-		/*for(var/obj/item/toy/plushie/P in range(5, H))
+
+		//re-enabled for YawnWider
+		for(var/obj/item/toy/plushie/teshari/P in range(5, H))
 			if(H.loneliness_stage > 0)
 				H.loneliness_stage -= 4
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
 				if(world.time >= H.next_loneliness_time)
 					to_chat(H, "The [P] calms you down, reminding you of people...")
-					H.next_loneliness_time = world.time+500*/
+					H.next_loneliness_time = world.time+500
 
 		// No company? Suffer :(
 		if(H.loneliness_stage < warning_cap)

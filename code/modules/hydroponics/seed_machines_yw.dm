@@ -2,7 +2,8 @@
 /obj/machinery/botany/precisioneditor
 	name = "biochemical manipulator"
 	desc = "A machine used to perform more specialized mutations on plant seeds. Careful not to put your face on the glass."
-	icon_state = "traitcopier"
+	icon = 'icons/obj/hydroponics_machines_yw.dmi'
+	icon_state = "precisioneditor"
 	var/obj/item/weapon/reagent_containers/glass/loaded_beaker //Currently held beaker
 	var/screen_state = "main"
 	var/health = 2
@@ -27,7 +28,7 @@
 		)
 
 	var/list/datum/reagent/allowed_reagents = list() //compile the list of reagents we're allowed to splice in
-  
+
 
 /obj/machinery/botany/precisioneditor/Initialize()
   for(var/R in SSchemistry.chemical_reagents)
@@ -126,7 +127,7 @@
 
     //Remove the chosen chem from the plant's product
     //TODO: this will be a cheaper operation the fewer chems the plant already
-    //produces 
+    //produces
     if("prune")
       if(!isnull(SSplants.seeds[seed.seed.name]))
         seed.seed = seed.seed.diverge(1)
@@ -139,7 +140,7 @@
     //TODO: additionally allow for changing the plant's glow color, if applicable
     if("change_color")
       var/newcolor = uppertext(input(usr, "Choose the desired color for the plant in hex:", "Color preference", rgb(128,128,128)))
-      if(is_valid_hex(newcolor)) 
+      if(is_valid_hex(newcolor))
         if(!isnull(SSplants.seeds[seed.seed.name]))
           seed.seed = seed.seed.diverge(1)
           seed.seed_type = seed.seed.name
@@ -168,7 +169,7 @@
   var/safety_check = 1
   if(!(length(input) == 7))
     return FALSE       //input is either too short or too long
-  
+
   var/char = copytext(input, 1, 2)
   if(char != "#")
     return FALSE       //ensure that the first character is a #
@@ -178,9 +179,9 @@
     if(!(char in list("0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "A", "B", "C", "D", "E", "F")))
       return FALSE
     safety_check++
-  
+
   return TRUE
-    
+
 /obj/machinery/botany/precisioneditor/proc/add_chem_to_seed(var/chem_name)
   if(!loaded_beaker)
     return

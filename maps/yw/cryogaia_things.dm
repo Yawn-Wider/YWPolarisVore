@@ -706,7 +706,8 @@ obj/machinery/trailblazer/Initialize()
 		/mob/living/simple_mob/animal/space/goose = 1,
 		/mob/living/simple_mob/animal/giant_spider/frost = 5,
 		/mob/living/simple_mob/animal/sif/kururak = 3,
-		/mob/living/simple_mob/animal/sif/frostfly = 1
+		/mob/living/simple_mob/animal/sif/frostfly = 1,
+		/mob/living/simple_mob/animal/passive/snowbull = 2
 	)
 
 /obj/cryogaia_away_spawner/cryogaia

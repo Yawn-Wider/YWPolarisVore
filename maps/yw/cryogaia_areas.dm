@@ -479,7 +479,8 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/toilet
 	name = "\improper Medical bathroom"
-	icon_state = "toilet"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "medbay_restroom"
 	sound_env = SMALL_ENCLOSED
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/pyschwarde
@@ -488,7 +489,8 @@
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/triage
 	name = "\improper Medbay Triage"
-	icon_state = "medbay4"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "medbay_triage"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/scanning
 	name = "Medical Diagnostics Center"

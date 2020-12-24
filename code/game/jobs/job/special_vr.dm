@@ -28,23 +28,6 @@
 	title = "Emergency Responder"
 	departments = list("Central Command")
 	department_accounts = list(DEPARTMENT_COMMAND, DEPARTMENT_ENGINEERING, DEPARTMENT_MEDICAL, DEPARTMENT_RESEARCH, DEPARTMENT_SECURITY, DEPARTMENT_CARGO, DEPARTMENT_PLANET, DEPARTMENT_CIVILIAN)
-
-//YW UNCOMMENTINGSTART: INSTATE LOYALTY IMPLANT
-/datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
-	. = ..()
-	if(.)
-		H.implant_loyalty(src)
-
-/datum/job/emergency_responder/equip(var/mob/living/carbon/human/H)
-	. = ..()
-	if(.)
-		H.implant_loyalty(src)
-//YW UNCOMMENTING END
-
-/*/datum/job/centcom_visitor //For Pleasure // You mean for admin abuse... -Ace
-	title = "CentCom Visitor"
-	department = "Civilian"
-	head_position = 1
 	faction = "Station"
 	total_positions = 2
 	spawn_positions = 1
@@ -66,6 +49,18 @@
 
 	get_access()
 		return get_all_accesses().Copy()
+
+//YW UNCOMMENTINGSTART: INSTATE LOYALTY IMPLANT
+/datum/job/centcom_officer/equip(var/mob/living/carbon/human/H)
+	. = ..()
+	if(.)
+		H.implant_loyalty(src)
+
+/datum/job/emergency_responder/equip(var/mob/living/carbon/human/H)
+	. = ..()
+	if(.)
+		H.implant_loyalty(src)
+//YW UNCOMMENTING END
 
 /datum/job/clown
 	title = "Clown"

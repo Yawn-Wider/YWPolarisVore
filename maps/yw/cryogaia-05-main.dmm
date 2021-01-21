@@ -240,11 +240,8 @@
 /turf/simulated/floor,
 /area/engineering/engine_room)
 "aeS" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/cyan{
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -3381,10 +3378,10 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "bpz" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "bpI" = (
@@ -7601,10 +7598,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
 "cVy" = (
-/obj/structure/table/steel_reinforced,
-/obj/machinery/cell_charger,
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 5
+/obj/machinery/atmospherics/tvalve/mirrored/bypass{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -8050,7 +8045,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering";
-	req_one_access = list(10)
+	req_one_access = list(10,52)
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -8223,8 +8218,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "dhJ" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 4
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -11261,8 +11256,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/exit)
 "esm" = (
-/obj/machinery/atmospherics/binary/pump/high_power{
-	dir = 8
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -14260,7 +14255,6 @@
 /area/borealis2/outdoors/grounds)
 "fCN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -14272,6 +14266,9 @@
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -16647,9 +16644,14 @@
 	pixel_x = 5;
 	pixel_y = -32
 	},
-/obj/machinery/atmospherics/tvalve/mirrored{
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/table/steel_reinforced,
+/obj/machinery/cell_charger,
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "gvL" = (
@@ -19172,13 +19174,19 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery)
 "hyu" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 4
-	},
 /obj/structure/cable/heavyduty{
 	icon_state = "0-2"
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 5
+	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "hyz" = (
@@ -19393,13 +19401,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "hCr" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 9
-	},
-/obj/effect/decal/warning_stripes,
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "hCA" = (
@@ -24591,14 +24592,14 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
 "jJm" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 6
-	},
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
 /obj/machinery/camera/network/civilian{
 	c_tag = "Monastery Engineering Bay"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/universal{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -25370,6 +25371,11 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 6
+	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "kbq" = (
@@ -26077,13 +26083,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "kpt" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 6
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 8;
 	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -30242,6 +30248,9 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 10
+	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "lYX" = (
@@ -33640,12 +33649,10 @@
 /turf/simulated/floor/tiled/steel,
 /area/security/lobby)
 "niq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 10
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "nit" = (
@@ -38230,13 +38237,19 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "oZd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 4
-	},
 /obj/structure/table/steel_reinforced,
 /obj/random/tech_supply,
 /obj/random/maintenance/engineering,
 /obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "oZr" = (
@@ -43009,7 +43022,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering";
-	req_one_access = list(10)
+	req_one_access = list(10,52)
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -44243,10 +44256,6 @@
 /area/rnd/research)
 "ruO" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_engineering{
-	name = "Engineering Hallway";
-	req_one_access = list(10)
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -44263,6 +44272,9 @@
 	},
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
+	},
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering Hallway"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engineering_monitoring)
@@ -46506,14 +46518,11 @@
 /turf/simulated/floor/tiled/steel,
 /area/chapel/monastery)
 "soS" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/red{
-	dir = 1
-	},
 /obj/structure/cable{
 	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -46581,7 +46590,20 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/chief)
 "srk" = (
-/obj/structure/closet/secure_closet/chemical,
+/obj/structure/closet/secure_closet{
+	name = "Psychiatrist's Locker";
+	req_access = list(64)
+	},
+/obj/item/clothing/suit/straight_jacket,
+/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
+/obj/item/weapon/reagent_containers/pill/methylphenidate,
+/obj/item/weapon/reagent_containers/pill/citalopram,
+/obj/item/weapon/reagent_containers/pill/citalopram,
+/obj/item/weapon/reagent_containers/pill/methylphenidate,
+/obj/item/weapon/reagent_containers/syringe,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /obj/machinery/alarm{
 	frequency = 1441;
 	pixel_y = 22
@@ -50629,8 +50651,7 @@
 "tXX" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineering{
-	name = "Engineering Hallway";
-	req_one_access = list(10)
+	name = "Engineering Hallway"
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -51205,23 +51226,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/docking_lounge)
-"upV" = (
-/obj/structure/closet/secure_closet{
-	name = "Psychiatrist's Locker";
-	req_access = list(64)
-	},
-/obj/item/clothing/suit/straight_jacket,
-/obj/item/weapon/reagent_containers/glass/bottle/stoxin,
-/obj/item/weapon/reagent_containers/pill/methylphenidate,
-/obj/item/weapon/reagent_containers/pill/citalopram,
-/obj/item/weapon/reagent_containers/pill/citalopram,
-/obj/item/weapon/reagent_containers/pill/methylphenidate,
-/obj/item/weapon/reagent_containers/syringe,
-/obj/machinery/light/small{
-	dir = 1
-	},
-/turf/simulated/floor/wood,
-/area/medical/psych)
 "upW" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 8
@@ -52607,9 +52611,11 @@
 /turf/simulated/floor/tiled/white,
 /area/security/security_aid_station)
 "uUU" = (
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /obj/structure/cable{
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -54828,9 +54834,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
 "vRR" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d1 = 2;
 	d2 = 8;
@@ -54841,9 +54844,8 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/binary/passive_gate{
-	dir = 8;
-	target_pressure = 4500
+/obj/machinery/atmospherics/binary/pump{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -55671,18 +55673,16 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
 "wiQ" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "wje" = (
@@ -56132,8 +56132,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/workshop)
 "wqH" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 9
 	},
 /turf/simulated/floor/tiled,
@@ -56233,9 +56232,6 @@
 /turf/simulated/floor/tiled,
 /area/storage/primary)
 "wsJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/red{
-	dir = 9
-	},
 /obj/machinery/power/apc{
 	name = "south bump";
 	pixel_y = -24
@@ -56245,6 +56241,7 @@
 	pixel_y = -24
 	},
 /obj/structure/cable,
+/obj/machinery/atmospherics/pipe/manifold/visible/red,
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
 "wth" = (
@@ -57876,9 +57873,6 @@
 /turf/simulated/wall/r_wall,
 /area/teleporter)
 "wZJ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
@@ -60405,6 +60399,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "xZO" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 5
+	},
 /obj/machinery/atmospherics/pipe/manifold/visible/red,
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -60961,14 +60958,13 @@
 /turf/simulated/floor,
 /area/engineering/workshop)
 "ykl" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/atmos)
@@ -67712,7 +67708,7 @@ nKj
 nKj
 lta
 saa
-upV
+eRG
 pgH
 eRG
 saa

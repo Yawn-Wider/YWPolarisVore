@@ -8045,7 +8045,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering";
-	req_one_access = list(10)
+	req_one_access = list(10,52)
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -43022,7 +43022,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineeringatmos{
 	name = "Engineering";
-	req_one_access = list(10)
+	req_one_access = list(10,52)
 	},
 /obj/structure/cable{
 	d1 = 4;
@@ -44256,10 +44256,6 @@
 /area/rnd/research)
 "ruO" = (
 /obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_engineering{
-	name = "Engineering Hallway";
-	req_one_access = list(10)
-	},
 /obj/structure/cable/green{
 	d1 = 4;
 	d2 = 8;
@@ -44276,6 +44272,9 @@
 	},
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
+	},
+/obj/machinery/door/airlock/glass_engineering{
+	name = "Engineering Hallway"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/engineering_monitoring)
@@ -50652,8 +50651,7 @@
 "tXX" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_engineering{
-	name = "Engineering Hallway";
-	req_one_access = list(10)
+	name = "Engineering Hallway"
 	},
 /obj/structure/cable{
 	d1 = 4;

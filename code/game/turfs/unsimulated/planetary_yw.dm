@@ -30,3 +30,10 @@
 	icon_state = "Icerock"
 	alpha = 0xFF
 	CRYOGAIA_SET_ATMOS
+
+//Code below is to get rid of build errors in regard to virgo code and is not used by use
+/turf/unsimulated/wall/planetary/virgo3b
+	name = "facility wall"
+	desc = "An eight-meter tall carbyne wall. For when the wildlife on your planet is mostly militant megacorps."
+	alpha = 0xFF
+	VIRGO3B_SET_ATMOS

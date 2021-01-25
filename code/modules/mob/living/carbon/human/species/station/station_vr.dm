@@ -36,10 +36,11 @@
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
-	inherent_verbs = list(/mob/living/proc/shred_limb)
 
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
@@ -78,7 +79,6 @@
 	secondary_langs = list(LANGUAGE_SKRELLIAN)
 	name_language = LANGUAGE_SKRELLIAN
 	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/shred_limb)
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
 
 	min_age = 18
@@ -97,6 +97,8 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
 	primitive_form = "Sobaka"
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -125,7 +127,7 @@
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = LANGUAGE_BIRDSONG
 	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/shred_limb,/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
+	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
 	max_age = 110
@@ -141,6 +143,8 @@
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
 	primitive_form = "Sparra"
+
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
@@ -191,6 +195,8 @@
 	blood_color = "#240bc4"
 	color_mult = 1
 
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+
 	heat_discomfort_strings = list(
 		"Your fur prickles in the heat.",
 		"You feel uncomfortably warm.",
@@ -215,7 +221,7 @@
 //	gluttonous = 1
 	num_alternate_languages = 3
 	color_mult = 1
-	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
+	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
 
 	blurb = "Vulpkanin are a species of sharp-witted canine-pideds residing on the planet Altam just barely within the \
 	dual-star Vazzend system. Their politically de-centralized society and independent natures have led them to become a species and \
@@ -232,6 +238,8 @@
 	spawn_flags = SPECIES_CAN_JOIN
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
+
 	flesh_color = "#966464"
 	base_color = "#B43214"
 
@@ -247,7 +255,7 @@
 	color_mult = 1
 	min_age = 18
 	gluttonous = 0
-	inherent_verbs = list(/mob/living/proc/shred_limb)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 	wikilink="https://yawn.izac.live/Unathi"
 
@@ -259,8 +267,9 @@
 	color_mult = 1
 	min_age = 18
 	gluttonous = 0 //Moving this here so I don't have to fix this conflict every time polaris glances at station.dm
-	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/carbon/human/proc/lick_wounds)
+	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	wikilink="https://yawn.izac.live/Tajaran"
 	agility = 90
 
@@ -272,12 +281,14 @@
 	min_age = 18
 	reagent_tag = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	wikilink="https://yawn.izac.live/Skrell"
 
 /datum/species/zaddat
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
 	gluttonous = 0
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 	wikilink="https://yawn.izac.live/Zaddat"
 
@@ -292,6 +303,7 @@
 /datum/species/diona
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	wikilink="https://yawn.izac.live/Diona"
 
 /datum/species/teshari
@@ -305,6 +317,7 @@
 	push_flags = ~HEAVY //Allows them to use micro step code.
 	swap_flags = ~HEAVY
 	gluttonous = 0
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
 	wikilink="https://yawn.izac.live/Teshari"
 	agility = 90
@@ -312,7 +325,6 @@
 	inherent_verbs = list(
 		/mob/living/carbon/human/proc/sonar_ping,
 		/mob/living/proc/hide,
-		/mob/living/proc/shred_limb,
 		/mob/living/proc/toggle_pass_table
 		)
 
@@ -326,6 +338,7 @@
 	deform = 'icons/mob/human_races/r_def_human_vr.dmi'
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_EYE_COLOR
 	min_age = 18
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	base_color = "#EECEB3"
 	wikilink="https://yawn.izac.live/Human"
 
@@ -338,7 +351,6 @@
 	min_age = 18
 	icobase = 'icons/mob/human_races/r_vox_old.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
-	inherent_verbs = list(/mob/living/proc/shred_limb, /mob/living/proc/eat_trash)
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)
@@ -356,6 +368,7 @@ datum/species/harpy
 	secondary_langs = list(LANGUAGE_BIRDSONG)
 	name_language = null
 	color_mult = 1
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	inherent_verbs = list(/mob/living/proc/flying_toggle,/mob/living/proc/start_wings_hovering)
 
 	min_age = 18
@@ -441,8 +454,6 @@ datum/species/harpy
 	base_color = "#f0f0f0"
 	color_mult = 1
 
-	inherent_verbs = list(/mob/living/proc/shred_limb)
-
 	has_glowing_eyes = TRUE
 
 	male_cough_sounds = null
@@ -452,8 +463,7 @@ datum/species/harpy
 
 	speech_bubble_appearance = "ghost"
 
-	genders = list(PLURAL, NEUTER)		//no sexual dymorphism
-	ambiguous_genders = TRUE	//but just in case
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	breath_type = null
 	poison_type = null
@@ -514,6 +524,7 @@ datum/species/harpy
 	//primitive_form = "" //We don't have fennec-monkey sprites.
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	flesh_color = "#AFA59E"
 	base_color = "#333333"
@@ -553,6 +564,7 @@ datum/species/harpy
 
 	spawn_flags = SPECIES_IS_RESTRICTED
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_UNDERWEAR | HAS_SKIN_COLOR | HAS_EYE_COLOR
+	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	blood_color = "#12ff12"
 	flesh_color = "#201730"
@@ -563,4 +575,3 @@ datum/species/harpy
 		"You feel uncomfortably warm.",
 		"Your chitin feels hot."
 		)
-	inherent_verbs = list(/mob/living/proc/shred_limb)

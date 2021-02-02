@@ -38,7 +38,7 @@
 /area/turbolift/lumber_floor_upper_level
 	name = "surface (level 2)"
 	lift_floor_label = "Surface 2"
-	lift_floor_name = "Upper Level (Construction Area!)"
+	lift_floor_name = "Exploration, Mining Dock, Solars"
 	lift_announce_str = "Arriving at Upper Level."
 
 /area/turbolift/lumber_floor_main_level

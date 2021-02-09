@@ -5391,9 +5391,18 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload_foyer)
 "dCA" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/crew_quarters/sleep/Dorm_10)
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/fore)
 "dDi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/spline/plain{
@@ -5435,14 +5444,8 @@
 /turf/simulated/floor/plating,
 /area/hallway/primary/starboard)
 "dFr" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/obj/structure/railing{
-	dir = 4
-	},
-/turf/simulated/floor/water/hotspring,
-/area/crew_quarters/sleep/Dorm_6)
+/turf/simulated/wall/r_wall,
+/area/security/sorting)
 "dFP" = (
 /obj/structure/table/standard,
 /obj/machinery/newscaster{
@@ -6788,6 +6791,12 @@
 	},
 /obj/structure/cable{
 	icon_state = "1-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/library)
@@ -12889,8 +12898,14 @@
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
 "ion" = (
-/turf/simulated/floor/plating,
-/area/security/range)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/carpet,
+/area/library)
 "iot" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -13960,6 +13975,9 @@
 	},
 /obj/structure/table/woodentable,
 /obj/item/device/tvcamera,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
 /turf/simulated/floor/carpet,
 /area/library)
 "iUa" = (
@@ -14259,7 +14277,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/turf/simulated/wall,
+/turf/simulated/wall/r_wall,
 /area/security/sorting)
 "jbU" = (
 /obj/structure/cable/green{
@@ -14526,6 +14544,12 @@
 /turf/simulated/floor/plating,
 /area/vacant/vacant_shop)
 "jjc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
 /turf/simulated/floor/carpet,
 /area/library)
 "jjl" = (
@@ -16926,6 +16950,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "kvf" = (
@@ -17334,7 +17364,7 @@
 	},
 /obj/effect/mist,
 /turf/simulated/floor/water/hotspring,
-/area/crew_quarters/sleep/Dorm_6)
+/area/hallway/primary/starboard)
 "kFW" = (
 /obj/machinery/atmospherics/unary/vent_pump{
 	external_pressure_bound = 0;
@@ -21744,6 +21774,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
+"nqi" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/library)
 "nqC" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -22249,8 +22286,11 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_3)
 "nKc" = (
-/turf/simulated/wall,
-/area/security/prison)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/carpet,
+/area/library)
 "nKr" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
@@ -25600,9 +25640,12 @@
 /turf/simulated/floor,
 /area/borealis2/outdoors/grounds/tower/south)
 "pKp" = (
-/obj/structure/catwalk,
-/turf/simulated/floor/plating,
-/area/crew_quarters/sleep/Dorm_6)
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/carpet,
+/area/library)
 "pKL" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/double,
@@ -27102,6 +27145,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "qDO" = (
@@ -28371,15 +28420,11 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/wood,
 /area/library)
 "ryx" = (
@@ -29970,6 +30015,12 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/wood,
 /area/library)
@@ -33350,6 +33401,12 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/library)
 "uvX" = (
@@ -36605,6 +36662,10 @@
 	name = "Private Study";
 	req_access = list(37)
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood,
 /area/library)
 "wxH" = (
@@ -44536,7 +44597,7 @@ rvx
 wis
 nNt
 hhh
-ion
+hhh
 gEt
 xps
 deP
@@ -44697,7 +44758,7 @@ gEt
 gEt
 gEt
 ukv
-nKc
+gEt
 gEt
 gEt
 kZC
@@ -46155,7 +46216,7 @@ awE
 tQz
 jVK
 gEt
-nKc
+gEt
 gEt
 cDw
 heT
@@ -47290,7 +47351,7 @@ iFe
 dVg
 jVK
 byh
-udl
+dFr
 dJd
 jbL
 ueP
@@ -48428,7 +48489,7 @@ jVK
 jVK
 jVK
 jVK
-xoJ
+jVK
 jVK
 jVK
 lZr
@@ -48908,7 +48969,7 @@ wjn
 lsp
 lsp
 lsp
-cHk
+ibO
 cHk
 mIl
 mIl
@@ -51184,9 +51245,9 @@ lhr
 pqI
 utD
 jjc
-jjc
+pKp
 wxt
-nux
+nqi
 kuS
 iGj
 dDE
@@ -51345,7 +51406,7 @@ lzd
 ioh
 pqI
 jBh
-jjc
+ion
 rWn
 pqI
 lgT
@@ -51507,7 +51568,7 @@ qWZ
 wla
 pqI
 gwi
-jjc
+nKc
 iTk
 kas
 kas
@@ -52427,7 +52488,7 @@ ouU
 cnp
 cnp
 cnp
-cnp
+dCA
 tMK
 cnp
 cnp
@@ -54542,7 +54603,7 @@ umJ
 vku
 ufX
 ufX
-ufX
+dma
 dma
 xyQ
 dAN
@@ -57984,7 +58045,7 @@ tQZ
 iOG
 iOG
 iOG
-dFr
+ioF
 sRs
 afe
 uMo
@@ -58146,7 +58207,7 @@ tQZ
 hDZ
 iOG
 iOG
-pKp
+iOG
 sRs
 qOF
 xnc
@@ -58308,7 +58369,7 @@ tQZ
 tQZ
 iOG
 iOG
-pKp
+iOG
 sRs
 sRs
 sRs
@@ -58470,7 +58531,7 @@ whU
 tQZ
 nGm
 iOG
-dCA
+iOG
 pQN
 lPw
 plA
@@ -58632,7 +58693,7 @@ whU
 tQZ
 xXT
 iOG
-dCA
+iOG
 pQN
 oki
 vLW
@@ -58794,7 +58855,7 @@ xiF
 tQZ
 iOG
 iOG
-dCA
+iOG
 pQN
 lPw
 plA

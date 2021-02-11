@@ -2130,12 +2130,11 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "aQW" = (
-/obj/item/weapon/storage/box/matches,
-/obj/item/weapon/storage/fancy/cigarettes,
-/obj/item/weapon/deck/cards,
-/obj/structure/table/steel,
-/obj/random/maintenance/engineering,
-/turf/simulated/floor/plating,
+/obj/structure/disposalpipe/trunk{
+	dir = 8
+	},
+/obj/machinery/disposal,
+/turf/simulated/floor,
 /area/engineering/drone_fabrication)
 "aQX" = (
 /obj/effect/floor_decal/snow/floor/edges{
@@ -23888,11 +23887,12 @@
 /turf/simulated/floor/tiled/steel,
 /area/security/warden)
 "jvS" = (
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
-/obj/machinery/disposal,
-/turf/simulated/floor,
+/obj/item/weapon/storage/box/matches,
+/obj/item/weapon/storage/fancy/cigarettes,
+/obj/item/weapon/deck/cards,
+/obj/structure/table/steel,
+/obj/random/maintenance/engineering,
+/turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "jvY" = (
 /obj/structure/closet/secure_closet/freezer/kitchen,
@@ -26354,11 +26354,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/sortjunction{
-	dir = 1;
-	name = "Drone Fabrication";
-	sortType = "Drone Fabrication"
-	},
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "ktx" = (
@@ -29205,7 +29201,11 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/sortjunction{
+	dir = 1;
+	name = "Drone Fabrication";
+	sortType = "Drone Fabrication"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/drone_fabrication)
 "lCs" = (
@@ -73682,9 +73682,9 @@ gWY
 pXC
 wMW
 fTH
-jvS
+tDM
 aQW
-gWY
+jvS
 gWY
 vQV
 hxd

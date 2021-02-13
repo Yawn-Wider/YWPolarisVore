@@ -438,6 +438,7 @@
 	movement_cost = 0
 
 #define FOOTSTEP_SPRITE_AMT 2
+
 /turf/snow/Entered(atom/A)
     if(isliving(A) && !istype(A, /mob/living/simple_mob))
         var/mdir = "[A.dir]"

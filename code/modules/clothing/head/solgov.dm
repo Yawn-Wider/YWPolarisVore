@@ -207,6 +207,49 @@
 	desc = "A white beret denoting service in the Interstellar Health Service. For medics that are more inclined towards style than safety."
 	icon_state = "beret_white"
 
+//YW START
+/obj/item/clothing/head/beret/solgov/homeguard
+	name = "home guard beret"
+	desc = "A red beret denoting service in the Sol Home Guard. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_red"
+
+/obj/item/clothing/head/beret/solgov/gateway
+	name = "gateway administration beret"
+	desc = "An orange beret denoting service in the Gateway Administration. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_orange"
+
+/obj/item/clothing/head/beret/solgov/customs
+	name = "customs and trade beret"
+	desc = "A purple beret denoting service in the Customs and Trade Bureau. For personnel that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/orbital
+	name = "orbital assault beret"
+	desc = "A blue beret denoting orbital assault training. For helljumpers that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/research
+	name = "government research beret"
+	desc = "A green beret denoting service in the Bureau of Research. For explorers that are more inclined towards style than safety."
+
+/obj/item/clothing/head/beret/solgov/marcom
+	name = "\improper MARSCOM beret"
+	desc = "A red beret with a gold insignia, denoting service in the SCGDF Mars Central Command. For brass who are more inclined towards style than safety."
+	icon_state = "beret_redgold"
+
+/obj/item/clothing/head/beret/solgov/stratcom
+	name = "\improper STRATCOM beret"
+	desc = "A grey beret with a silver insignia, denoting service in the SCGDF Strategic Command. For intelligence personnel who are more inclined towards style than safety."
+	icon_state = "beret_graysilver"
+
+/obj/item/clothing/head/beret/solgov/diplomatic
+	name = "diplomatic security beret"
+	desc = "A tan beret denoting service in the SCG Marines Diplomatic Security Group. For security personnel who are more inclined towards style than safety."
+	icon_state = "beret_tan"
+
+/obj/item/clothing/head/beret/solgov/borderguard
+	name = "border security beret"
+	desc = "A green beret with a silver emblem, denoting service in the Bureau of Border Security. For border guards who are more inclined towards style than safety."
+	icon_state = "beret_greensilver"
+//YW END
 
 //SifGuard
 
@@ -249,6 +292,13 @@
 	name = "\improper SifGuard Anti-piracy beret"
 	desc = "An Sif Defense Force beret carrying insignia of the Anti-Piracy taskforce. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black_patrol"
+
+//YW START
+/obj/item/clothing/head/beret/solgov/sifguard/branch
+	name = "\improper Field Operations beret"
+	desc = "An Sif Defense Force beret carrying insignia of the Field Operations section of the Sif Defense Force. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_black_fieldOps"
+//YW END
 
 //Fleet
 
@@ -302,7 +352,7 @@
 	desc = "A white SCG Fleet beret with a golden crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_whiterim_com"
 
-/*
+//YW UNDO COMMENT OUT
 Unused Baylore Stuff
 /obj/item/clothing/head/beret/solgov/fleet/branch
 	name = "first fleet beret"
@@ -329,7 +379,7 @@ Unused Baylore Stuff
 	desc = "An SCG Fleet beret carrying insignia of Fifth Fleet, the Quick Reaction Force, recently formed and outfited with last tech. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy_fifth"
 
-*/
+//YW UNDO COMMENT OUT
 
 //ushanka
 

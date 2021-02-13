@@ -353,7 +353,7 @@
 	icon_state = "beret_whiterim_com"
 
 //YW UNDO COMMENT OUT
-Unused Baylore Stuff
+
 /obj/item/clothing/head/beret/solgov/fleet/branch
 	name = "first fleet beret"
 	desc = "An SCG Fleet beret carrying insignia of First Fleet, the Sol Guard, stationed in Sol. For personnel that are more inclined towards style than safety."

@@ -11,14 +11,14 @@
 		)
 
 /obj/item/clothing/head/soft/solgov/veteranhat
-	name = "veteran hat"
-	desc = "It's a tacky black ballcap bearing the yellow service ribbon of the Gaia Conflict."
+	name = "veteran cap"
+	desc = "It's a tacky black ballcap bearing the yellow service ribbon of the Almach War."
 	icon_state = "cap_veteran"
 
 /obj/item/clothing/head/soft/solgov/sifguard
 	name = "\improper SifGuard cap"
 	desc = "It's a black ballcap bearing a Sif Defense Force crest."
-	icon_state = "expeditionsoft"
+	icon_state = "sifguardsoft"
 	item_state_slots = list(
 		slot_l_hand_str = "blacksoft",
 		slot_r_hand_str = "blacksoft",
@@ -27,7 +27,7 @@
 /obj/item/clothing/head/soft/solgov/sifguard/co
 	name = "\improper SifGuard captain's cap"
 	desc = "It's a black ballcap bearing the Sif Defense Force crest. The brim has gold trim."
-	icon_state = "expeditioncomsoft"
+	icon_state = "sifguardcomsoft"
 
 /obj/item/clothing/head/soft/solgov/fleet
 	name = "fleet cap"
@@ -88,17 +88,17 @@
 /obj/item/clothing/head/service/sifguard
 	name = "\improper SifGuard peaked cap"
 	desc = "A peaked black uniform cap belonging to the Sif Defense Force Corps."
-	icon_state = "ecdresscap"
+	icon_state = "sifguarddresscap"
 
 /obj/item/clothing/head/service/sifguard/command
 	name = "\improper SifGuard officer's peaked cap"
 	desc = "A peaked black uniform cap belonging to the Sif Defense Force. This one is trimmed in gold."
-	icon_state = "ecdresscap_ofcr"
+	icon_state = "sifguarddresscap_ofcr"
 
 /obj/item/clothing/head/service/sifguard/captain
 	name = "\improper SifGuard captain's peaked cap"
 	desc = "A gold-trimmed peaked black uniform cap belonging to a Captain of the Sif Defense Force."
-	icon_state = "ecdresscap_capt"
+	icon_state = "sifguarddresscap_capt"
 
 /obj/item/clothing/head/service/sifguard/senior_command
 	name = "senior SifGuard officer's peaked cap"
@@ -127,7 +127,7 @@
 
 /obj/item/clothing/head/service/army/campaign
 	name = "campaign cover"
-	desc = "A green campaign cover with an SCG Marine crest. Only found on the heads of Drill Sergeants."
+	desc = "A green campaign cover with an SCG Marine crest. Typically found on the heads of Drill Sergeants."
 	icon_state = "greendrill"
 
 //Dress
@@ -170,11 +170,44 @@
 
 //Berets
 
+//Government Departments
+
 /obj/item/clothing/head/beret/solgov
-	name = "peacekeeper beret"
-	desc = "A beret in Solar Confederate Government colors. For peacekeepers that are more inclined towards style than safety."
+	name = "\improper SCG beret"
+	desc = "A beret in basic Solar Confederate Government colors. For peacekeepers that are more inclined towards style than safety."
 	icon_state = "beret_lightblue"
 
+/obj/item/clothing/head/beret/solgov/ttc
+	name = "transgressive technologies beret"
+	desc = "A purple beret denoting service in the Transgressive Technologies Commission. For g-men that are more inclined towards style than safety."
+	icon_state = "beret_purpleyellow"
+
+/obj/item/clothing/head/beret/solgov/eio
+	name = "intelligence oversight beret"
+	desc = "A blue beret denoting service in Emergent Intelligent Oversight. For g-men that are more inclined towards style than safety."
+	icon_state = "beret_blue"
+
+/obj/item/clothing/head/beret/solgov/survey
+	name = "government survey beret"
+	desc = "A green beret denoting service in the SCG Galactic Survey Administration. For explorers that are more inclined towards style than safety."
+	icon_state = "beret_green"
+
+/obj/item/clothing/head/beret/solgov/survey/extraplanar
+	name = "extraplanar survey beret"
+	desc = "A green beret with a silver emblem, denoting service in the Extraplanar Discovery Division of the GSA. For extraplanar explorers who are more inclined towards style than safety."
+	icon_state = "beret_greensilver"
+
+/obj/item/clothing/head/beret/solgov/inspector
+	name = "\improper Solar Inspection Group beret"
+	desc = "A grey beret with a silver insignia, denoting service in the Solar Inspection Group. For Almach-inspection personnel who are more inclined towards style than safety."
+	icon_state = "beret_graysilver"
+
+/obj/item/clothing/head/beret/solgov/health
+	name = "health service beret"
+	desc = "A white beret denoting service in the Interstellar Health Service. For medics that are more inclined towards style than safety."
+	icon_state = "beret_white"
+
+//YW START
 /obj/item/clothing/head/beret/solgov/homeguard
 	name = "home guard beret"
 	desc = "A red beret denoting service in the Sol Home Guard. For personnel that are more inclined towards style than safety."
@@ -188,22 +221,14 @@
 /obj/item/clothing/head/beret/solgov/customs
 	name = "customs and trade beret"
 	desc = "A purple beret denoting service in the Customs and Trade Bureau. For personnel that are more inclined towards style than safety."
-	icon_state = "beret_purpleyellow"
 
 /obj/item/clothing/head/beret/solgov/orbital
 	name = "orbital assault beret"
 	desc = "A blue beret denoting orbital assault training. For helljumpers that are more inclined towards style than safety."
-	icon_state = "beret_blue"
 
 /obj/item/clothing/head/beret/solgov/research
 	name = "government research beret"
 	desc = "A green beret denoting service in the Bureau of Research. For explorers that are more inclined towards style than safety."
-	icon_state = "beret_green"
-
-/obj/item/clothing/head/beret/solgov/health
-	name = "health service beret"
-	desc = "A white beret denoting service in the Interstellar Health Service. For medics that are more inclined towards style than safety."
-	icon_state = "beret_white"
 
 /obj/item/clothing/head/beret/solgov/marcom
 	name = "\improper MARSCOM beret"
@@ -224,6 +249,9 @@
 	name = "border security beret"
 	desc = "A green beret with a silver emblem, denoting service in the Bureau of Border Security. For border guards who are more inclined towards style than safety."
 	icon_state = "beret_greensilver"
+//YW END
+
+//SifGuard
 
 /obj/item/clothing/head/beret/solgov/sifguard
 	name = "\improper SifGuard beret"
@@ -260,15 +288,19 @@
 	desc = "A Sif Defense Force beret with a command crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black_command"
 
+/obj/item/clothing/head/beret/solgov/sifguard/patrol
+	name = "\improper SifGuard Anti-piracy beret"
+	desc = "An Sif Defense Force beret carrying insignia of the Anti-Piracy taskforce. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_black_patrol"
+
+//YW START
 /obj/item/clothing/head/beret/solgov/sifguard/branch
 	name = "\improper Field Operations beret"
 	desc = "An Sif Defense Force beret carrying insignia of the Field Operations section of the Sif Defense Force. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_black_fieldOps"
+//YW END
 
-/obj/item/clothing/head/beret/solgov/sifguard/branch/observatory
-	name = "\improper Observatory beret"
-	desc = "An Sif Defense Force beret carrying insignia of the Observatory section of the Sif Defense Force. For personnel that are more inclined towards style than safety."
-	icon_state = "beret_black_observatory"
+//Fleet
 
 /obj/item/clothing/head/beret/solgov/fleet
 	name = "fleet beret"
@@ -320,6 +352,8 @@
 	desc = "A white SCG Fleet beret with a golden crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_whiterim_com"
 
+//YW UNDO COMMENT OUT
+
 /obj/item/clothing/head/beret/solgov/fleet/branch
 	name = "first fleet beret"
 	desc = "An SCG Fleet beret carrying insignia of First Fleet, the Sol Guard, stationed in Sol. For personnel that are more inclined towards style than safety."
@@ -345,46 +379,44 @@
 	desc = "An SCG Fleet beret carrying insignia of Fifth Fleet, the Quick Reaction Force, recently formed and outfited with last tech. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy_fifth"
 
+//YW UNDO COMMENT OUT
+
 //ushanka
 
 /obj/item/clothing/head/ushanka/solgov
 	name = "\improper SifGuard fur hat"
 	desc = "An Sif Defense Force synthfur-lined hat for operating in cold environments."
-	icon_state = "ecushankadown"
-	//icon_state_up = "ecushankaup"
+	icon_state = "sifguardushankadown"
 
 /obj/item/clothing/head/ushanka/solgov/fleet
 	name = "fleet fur hat"
 	desc = "An SCG Fleet synthfur-lined hat for operating in cold environments."
 	icon_state = "flushankadown"
-	//icon_state_up = "flushankaup"
 
-/obj/item/clothing/head/ushanka/solgov/army
+/obj/item/clothing/head/ushanka/solgov/marine
 	name = "marine fur hat"
 	desc = "An SCG Marine synthfur-lined hat for operating in cold environments."
 	icon_state = "barushankadown"
-	//icon_state_up = "barushankaup"
 
-/obj/item/clothing/head/ushanka/solgov/army/green
-	name = "green marine fur hat"
-	desc = "An SCG Marine synthfur-lined hat for operating in cold environments."
+/obj/item/clothing/head/ushanka/solgov/marine/green
+	name = "\improper Hedberg-Hammarstrom fur hat"
+	desc = "An Hedberg-Hammarstrom private security synthfur-lined hat for operating in cold environments."
 	icon_state = "arushankadown"
-	//icon_state_up = "mcushankaup"
 
-//Terran
+//Almachi
 
-/obj/item/clothing/head/terran/navy/service
-	name = "ICCGN service cover"
-	desc = "A service uniform cover, worn by low-ranking crew within the Independent Navy."
-	icon_state = "terranservice"
-	item_state = "terranservice"
+/obj/item/clothing/head/almach
+	name = "\improper Almach Militia service cover"
+	desc = "A service uniform cover, occasionally worn by crew within the defunct Almach Militia."
+	icon_state = "almachhat"
+	item_state = "almachhat"
 	item_state_slots = list(
 		slot_l_hand_str = "helmet",
 		slot_r_hand_str = "helmet")
 	body_parts_covered = 0
 
 /obj/item/clothing/head/terran/navy/service/command
-	name = "ICCGN command service cover"
-	desc = "A service uniform cover, worn by high-ranking crew within the Independent Navy."
-	icon_state = "terranservice_comm"
-	item_state = "terranservice_comm"
+	name = "\improper Almach Militia command service cover"
+	desc = "A service uniform cover, occasionally worn by command crew within the defunct Almach Militia."
+	icon_state = "almachhat_comm"
+	item_state = "almachhat_comm"

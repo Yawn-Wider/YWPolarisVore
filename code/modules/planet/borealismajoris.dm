@@ -280,6 +280,8 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	transition_messages = list(
 		"The sky is dark, and rain falls down upon you."
 	)
+	outdoor_sounds_type = /datum/looping_sound/weather/rain
+	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
 /datum/weather/borealis2/rain/process_effects()
 	..()
@@ -325,6 +327,8 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		"Loud thunder is heard in the distance.",
 		"A bright flash heralds the approach of a storm."
 	)
+	outdoor_sounds_type = /datum/looping_sound/weather/rain
+	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
 
 	transition_chances = list(

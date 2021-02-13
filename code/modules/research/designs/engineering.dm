@@ -31,15 +31,6 @@
 	build_path = /obj/item/weapon/tool/crowbar/power
 	sort_string = "NAAAC"
 // YW addition begins
-/datum/design/item/tool/rpd
-	name = "Rapid Piping Device (RPD)"
-	desc = "A device used to rapidly pipe things."
-	id = "RPD"
-	req_tech = list(TECH_ENGINEERING = 3, TECH_MATERIAL = 2, TECH_BLUESPACE = 2)
-	materials = list(DEFAULT_WALL_MATERIAL = 300, "silver" = 100, "diamond" = 500)
-	build_path = /obj/item/weapon/pipe_dispenser
-	sort_string = "NAAAB"
-
 /datum/design/item/tool/rms
 	name = "Rapid Material Synthesizer (RMS)"
 	desc = "A tool that converts battery charge to materials."
@@ -48,8 +39,17 @@
 	materials = list(DEFAULT_WALL_MATERIAL = 500, "glass" = 500, "silver" = 300, "phoron" = 300, "diamond" = 500) //Probably change the price in the future just put something for now
 	build_path = /obj/item/weapon/rms
 	sort_string = "NAAAB"
-
 // YW addition end
+
+/datum/design/item/tool/rpd
+	name = "Rapid Pipe Dispenser"
+	desc = "A counterpart to the rapid construction device that allows creating and placing atmospheric and disposal pipes."
+	id = "rapidpipedispenser"
+	req_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 2)
+	materials = list(DEFAULT_WALL_MATERIAL = 4000, MAT_GLASS = 2000)
+	build_path = /obj/item/weapon/pipe_dispenser
+	sort_string = "NAAAD"
+
 // Other devices
 
 /datum/design/item/engineering/AssembleDesignName()

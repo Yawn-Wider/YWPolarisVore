@@ -193,6 +193,7 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Default",
 					"Usagi-II" = "tall2standard",
 					"Pyralis" = "Glitterfly-Standard",
+					"Decapod" = "decapod-Standard",
 					"Miss M" = "miss-standard" // YW change, Added Miss M
 					)
 
@@ -230,6 +231,7 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Surgeon",
+					"Decapod" = "decapod-Surgeon",
 					"Miss M" = "miss-medical" // YW change, Added Miss M
 					)
 
@@ -306,6 +308,7 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Med",
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Crisis",
+					"Decapod" = "decapod-Crisis",
 					"Miss M" = "miss-medical" // YW change, Added Miss M
 					)
 
@@ -384,6 +387,7 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-engineer",
 					"Usagi-II" = "tall2engineer",
 					"Pyralis" = "Glitterfly-Engineering",
+					"Decapod" = "decapod-Engineering",
 					"Servitor" = "servitor", //YW Addition to add new Servitor Sprite
 					"Miss M" = "miss-engineer" // YW change, Added Miss M
 					)
@@ -500,6 +504,7 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Sec",
 					"Usagi-II" = "tall2security",
 					"Pyralis" = "Glitterfly-Security",
+					"Decapod" = "decapod-Security",
 					"Miss M" = "miss-security" // YW change, Added Miss M
 					)
 
@@ -546,6 +551,7 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-janitor",
 					"Usagi-II" = "tall2janitor",
 					"Pyralis" = "Glitterfly-Janitor",
+					"Decapod" = "decapod-Janitor",
 					"Miss M" = "miss-janitor" // YW change, Added Miss M
 					)
 
@@ -609,6 +615,7 @@ var/global/list/robot_modules = list(
 					"Drone - Hydro" = "drone-hydro",
 					"Usagi-II" = "tall2service",
 					"Pyralis" = "Glitterfly-Service",
+					"Decapod" = "decapod-Service",
 					"Miss M" = "miss-service" // YW change, Added Miss M
 				  	)
 
@@ -663,7 +670,8 @@ var/global/list/robot_modules = list(
 					"Default" = "Service2",
 					"Drone" = "drone-blu",
 					"Usagi-II" = "tall2service",
-					"Pyralis" = "Glitterfly-Clerical"
+					"Pyralis" = "Glitterfly-Clerical",
+					"Decapod" = "decapod-Clerical"
 					)
 
 /obj/item/weapon/robot_module/robot/clerical/general/New()
@@ -702,6 +710,7 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-miner",
 					"Usagi-II" = "tall2miner",
 					"Pyralis" = "Glitterfly-Miner",
+					"Decapod" = "decapod-Miner",
 					"Miss M" = "miss-miner" // YW change, Added Miss M
 				)
 
@@ -732,7 +741,8 @@ var/global/list/robot_modules = list(
 					"Handy" = "handy-science",
 					"Insekt" = "insekt-Sci",
 					"Usagi-II" = "tall2peace",
-					"Pyralis" = "Glitterfly-Research"
+					"Pyralis" = "Glitterfly-Research",
+					"Decapod" = "decapod-Research"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()
@@ -797,7 +807,8 @@ var/global/list/robot_modules = list(
 	sprites = list(
 					"Haruka" = "marinaCB",
 					"Combat Android" = "droid-combat",
-					"Insekt" = "insekt-Combat"
+					"Insekt" = "insekt-Combat",
+					"Decapod" = "decapod-Combat"
 					)
 
 /obj/item/weapon/robot_module/robot/security/combat/New()

@@ -106,3 +106,14 @@
 	item_state = "web_bindings_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
+	//yw edit start - Teshari Sprite
+	sprite_sheets = list(
+		SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
+		)
+
+/obj/item/clothing/suit/weaversilk_bindings/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
+	if(body_type == SPECIES_TESHARI)
+		if(!inhands)
+			return 'icons/vore/custom_onmob_yw.dmi'
+	return ..()
+//yw edit end

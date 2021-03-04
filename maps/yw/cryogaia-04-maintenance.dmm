@@ -15512,8 +15512,11 @@
 /turf/simulated/floor,
 /area/maintenance/medical_lower)
 "jLd" = (
-/turf/simulated/wall,
-/area/tcommsat/entrance)
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/tcommsat/powercontrol)
 "jLp" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 8
@@ -36252,9 +36255,6 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/medical/morgue)
-"whZ" = (
-/turf/simulated/wall/r_wall,
-/area/maintenance/dormitory)
 "wis" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -50943,7 +50943,7 @@ mxM
 mxM
 mxM
 mxM
-jLd
+ieE
 ccF
 uMc
 ccF
@@ -50953,7 +50953,7 @@ pnK
 pnK
 pnK
 pnK
-mxM
+pnK
 mwy
 mwy
 jtl
@@ -51114,7 +51114,7 @@ aDP
 aQk
 ygt
 bVQ
-aDP
+jLd
 aDP
 mwy
 mwy
@@ -52237,7 +52237,7 @@ wrf
 wiZ
 ddo
 sZB
-iVu
+vKe
 ieE
 xnP
 wFo
@@ -53532,7 +53532,7 @@ chS
 aPa
 aPa
 rsK
-whZ
+aPa
 lUK
 jzl
 jzl
@@ -53694,7 +53694,7 @@ bEW
 kAb
 rRN
 eVc
-whZ
+aPa
 lUK
 pmi
 jzl
@@ -53856,7 +53856,7 @@ wxY
 wxY
 rsK
 aPa
-whZ
+aPa
 lUK
 baf
 cbM

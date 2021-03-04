@@ -5856,6 +5856,11 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/outpost)
 "cov" = (
@@ -9447,6 +9452,10 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
+/turf/simulated/floor/tiled/dark,
+/area/lawoffice)
+"dJy" = (
+/obj/structure/filingcabinet/chestdrawer,
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
 "dJF" = (
@@ -13124,6 +13133,11 @@
 	pixel_x = 32
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/outpost)
 "fhc" = (
@@ -22133,9 +22147,11 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "iJc" = (
-/obj/structure/filingcabinet/chestdrawer,
-/turf/simulated/floor/tiled/dark,
-/area/lawoffice)
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/red,
+/area/security/outpost)
 "iJj" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/structure/transit_tube,
@@ -30379,6 +30395,11 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/outpost)
@@ -53552,8 +53573,24 @@
 /turf/simulated/floor/tiled/steel,
 /area/engineering/engine_airlock)
 "voD" = (
-/turf/simulated/wall,
-/area/medical/scanning)
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/structure/window/reinforced,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/security/outpost)
 "voF" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 8
@@ -59056,8 +59093,17 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/emergency_storage/emergency)
 "xun" = (
-/turf/simulated/wall,
-/area/security/forensics)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable{
+	icon_state = "2-4"
+	},
+/turf/simulated/floor/tiled/red,
+/area/security/outpost)
 "xuu" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -67111,7 +67157,7 @@ bmi
 bQp
 tiw
 sKZ
-kUx
+vgT
 rcn
 lnx
 rcn
@@ -69011,7 +69057,7 @@ qTC
 mlO
 mlO
 lVh
-voD
+jXP
 jXP
 fau
 veO
@@ -69508,8 +69554,8 @@ bVr
 bVr
 kbE
 kbE
-svV
-iJc
+dJy
+vKG
 uRB
 hnB
 svV
@@ -71808,7 +71854,7 @@ heA
 dbZ
 dbZ
 mxh
-dUi
+fOV
 cER
 bBx
 bBx
@@ -72620,7 +72666,7 @@ dUi
 dUi
 dUi
 wBm
-xun
+aWp
 aWp
 tvJ
 tvJ
@@ -82125,9 +82171,9 @@ uDf
 qLE
 dOY
 bbF
-oyK
+iJc
 cor
-qtl
+xun
 fgA
 maO
 dnC
@@ -82287,9 +82333,9 @@ uDf
 qLE
 qLE
 qLE
-thx
+voD
 aqA
-thx
+voD
 qLE
 xWx
 thx

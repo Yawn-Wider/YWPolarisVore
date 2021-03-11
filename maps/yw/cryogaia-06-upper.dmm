@@ -9935,12 +9935,12 @@
 /area/borealis2/outdoors/grounds/upper)
 "Gb" = (
 /obj/structure/cable/yellow{
-	d1 = 1;
-	d2 = 8;
-	icon_state = "1-8"
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
+/area/borealis2/outdoors/grounds/upper/solars)
 "Gf" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -12542,6 +12542,14 @@
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/grounds/checkpoint)
+"UR" = (
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper/solars)
 "UT" = (
 /turf/simulated/wall/r_wall,
 /area/quartermaster/miningdock)
@@ -26974,11 +26982,11 @@ AN
 AN
 AN
 AN
-pJ
-Tv
-Tv
-KD
-KD
+AN
+AN
+AN
+va
+Gb
 KD
 qd
 KD
@@ -27136,11 +27144,11 @@ AN
 AN
 AN
 AN
-gj
+AN
 AN
 AN
 va
-va
+hG
 rx
 Sa
 oS
@@ -27298,11 +27306,11 @@ Tv
 Tv
 Tv
 Tv
-Gb
-AN
-AN
-va
-va
+Tv
+Tv
+Tv
+KD
+UR
 rx
 Sa
 oS
@@ -28736,7 +28744,7 @@ AN
 AN
 AN
 AN
-ld
+fS
 gg
 gJ
 hc
@@ -28898,7 +28906,7 @@ AN
 AN
 AN
 AN
-ld
+fS
 gk
 gK
 hd
@@ -29060,7 +29068,7 @@ AN
 AN
 AN
 AN
-ld
+fS
 gm
 gJ
 he
@@ -29222,7 +29230,7 @@ AN
 AN
 AN
 AN
-ld
+fS
 fS
 gL
 Al
@@ -29384,7 +29392,7 @@ AN
 AN
 AN
 AN
-ld
+fS
 gn
 gM
 Al

@@ -32,10 +32,6 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit,
 /turf/simulated/floor/tiled,
 /area/borealis2/outdoors/grounds/traderpad)
-"ft" = (
-/obj/effect/floor_decal/snow/floor/edges2,
-/turf/simulated/floor/outdoors/snow/snow/cryogaia,
-/area/borealis2/outdoors/exterior)
 "gh" = (
 /obj/structure/flora/tree/winter,
 /turf/simulated/floor/outdoors/snow/gravsnow,
@@ -133,13 +129,6 @@
 /obj/effect/floor_decal/snow/floor/edges2,
 /turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/traderpad)
-"jx" = (
-/obj/effect/floor_decal/snow/floor/edges2,
-/obj/effect/floor_decal/snow/floor/edges2{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/snow/snow/cryogaia,
-/area/borealis2/outdoors/exterior/explore1)
 "jG" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full{
@@ -304,12 +293,6 @@
 /mob/living/simple_mob/animal/sif/siffet,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior)
-"pA" = (
-/obj/effect/floor_decal/snow/floor/edges2{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/snow/snow/cryogaia,
-/area/borealis2/outdoors/exterior/explore1)
 "pH" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 4
@@ -585,13 +568,6 @@
 "DC" = (
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
-"DJ" = (
-/obj/effect/floor_decal/snow/floor/edges2,
-/obj/effect/floor_decal/snow/floor/edges2{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/snow/snow/cryogaia,
-/area/borealis2/outdoors/exterior)
 "DP" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 1
@@ -857,12 +833,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/traderpad)
-"NV" = (
-/obj/effect/floor_decal/snow/floor/edges2{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/snow/snow/cryogaia,
-/area/borealis2/outdoors/exterior/explore1)
 "OE" = (
 /obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/outdoors/ice,
@@ -1005,10 +975,6 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/exterior/explore1)
-"Ut" = (
-/obj/effect/floor_decal/snow/floor/edges2,
-/turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/exterior/explore1)
 "Vi" = (
 /obj/effect/floor_decal/snow/floor/edges{
@@ -10265,7 +10231,7 @@ VY
 qG
 Sz
 IF
-DJ
+IF
 IF
 IF
 IF
@@ -10427,7 +10393,7 @@ VY
 KS
 qG
 Sz
-ft
+IF
 IF
 IF
 IF
@@ -10590,8 +10556,8 @@ KS
 KS
 zV
 DC
-NV
-NV
+DC
+DC
 zc
 nJ
 IF
@@ -10755,7 +10721,7 @@ zF
 DC
 yz
 DC
-Ut
+DC
 IF
 IF
 IF
@@ -10916,7 +10882,7 @@ jP
 Hz
 WN
 DC
-pA
+DC
 Qj
 IF
 IF
@@ -11077,7 +11043,7 @@ KS
 qG
 DC
 DC
-jx
+DC
 IF
 IF
 IF

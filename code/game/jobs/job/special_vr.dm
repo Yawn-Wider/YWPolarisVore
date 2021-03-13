@@ -66,7 +66,7 @@
 	title = "Clown"
 	flag = CLOWN
 	departments = list(DEPARTMENT_CIVILIAN)
-	department_flag = CIVILIAN
+	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = -1 //YW EDIT
 	spawn_positions = -1 //YW EDIT
@@ -96,7 +96,7 @@
 	title = "Mime"
 	flag = MIME
 	departments = list(DEPARTMENT_CIVILIAN)
-	department_flag = CIVILIAN
+	department_flag = ENGSEC
 	faction = "Station"
 	total_positions = -1 //YW EDIT
 	spawn_positions = -1 //YW EDIT

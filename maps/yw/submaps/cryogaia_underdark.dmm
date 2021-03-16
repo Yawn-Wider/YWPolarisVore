@@ -37,12 +37,10 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/structure/railing,
 /turf/simulated/floor/outdoors/dirt,
 /area/mine/explored/underdark)
 "ho" = (
-/obj/structure/railing,
-/turf/simulated/floor/outdoors/dirt,
+/turf/unsimulated/mineral,
 /area/mine/explored/underdark)
 "jh" = (
 /turf/simulated/floor/outdoors/dirt,
@@ -67,9 +65,6 @@
 /obj/structure/cable/green{
 	icon_state = "1-5"
 	},
-/obj/structure/railing{
-	dir = 4
-	},
 /turf/simulated/floor/outdoors/dirt,
 /area/mine/explored/underdark)
 "oI" = (
@@ -82,17 +77,14 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/mine/explored/underdark)
 "qL" = (
-/obj/effect/step_trigger/teleporter/from_underdark{
-	dir = 8;
-	pixel_x = -16
-	},
-/turf/simulated/floor/tiled/steel_dirty,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored/underdark)
 "so" = (
-/obj/structure/railing{
-	dir = 4
+/obj/effect/map_effect/portal/master/side_b{
+	dir = 4;
+	portal_id = "underdark"
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored/underdark)
 "tN" = (
 /obj/item/weapon/newspaper{
@@ -101,10 +93,10 @@
 /turf/simulated/floor/outdoors/dirt,
 /area/mine/explored/underdark)
 "uj" = (
-/obj/structure/railing{
-	dir = 1
+/obj/effect/map_effect/portal/line/side_b{
+	dir = 4
 	},
-/turf/simulated/floor/outdoors/dirt,
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored/underdark)
 "wf" = (
 /turf/simulated/mineral/cryogaia/rich,
@@ -18138,10 +18130,10 @@ TZ
 TZ
 TZ
 TZ
-TZ
-TZ
-TZ
-TZ
+ho
+ho
+ho
+ho
 TZ
 VB
 VB
@@ -18300,10 +18292,10 @@ TZ
 TZ
 TZ
 TZ
-TZ
-TZ
-TZ
-TZ
+ho
+qL
+qL
+ho
 TZ
 VB
 oI
@@ -18462,10 +18454,10 @@ TZ
 TZ
 Bk
 Bk
-Bk
-Bk
-Bk
-Bk
+ho
+so
+uj
+ho
 Bk
 Bk
 oI
@@ -18623,10 +18615,10 @@ TZ
 TZ
 TZ
 Bk
-TZ
-TZ
-TZ
-TZ
+AZ
+jh
+jh
+jh
 xM
 jh
 AZ
@@ -18785,9 +18777,9 @@ TZ
 TZ
 TZ
 Bk
-TZ
-TZ
-TZ
+jh
+jh
+jh
 jh
 xQ
 jh
@@ -18947,7 +18939,7 @@ TZ
 TZ
 TZ
 Bk
-TZ
+jh
 lX
 jh
 jh
@@ -19597,7 +19589,7 @@ TZ
 Bk
 ei
 ov
-so
+jh
 jh
 AF
 AF
@@ -19758,9 +19750,9 @@ TZ
 TZ
 Bk
 fQ
-oI
-oI
-uj
+jh
+jh
+jh
 AF
 oI
 oI
@@ -19919,10 +19911,10 @@ TZ
 TZ
 TZ
 Bk
-ho
-qL
-qL
-uj
+jh
+jh
+jh
+jh
 AF
 AW
 DS
@@ -20082,8 +20074,8 @@ TZ
 TZ
 Bk
 jh
-oI
-oI
+jh
+jh
 jh
 AF
 AF

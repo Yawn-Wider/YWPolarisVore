@@ -486,33 +486,6 @@ var/global/list/latejoin_tram   = list()
 	for(var/i = 1 to 4)
 		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
 
-// Underdark Teleporters
-/obj/effect/step_trigger/teleporter/to_underdark
-	icon = 'icons/obj/structures/stairs_64x64.dmi'
-	icon_state = ""
-	invisibility = 0
-/obj/effect/step_trigger/teleporter/to_underdark/Initialize()
-	. = ..()
-	teleport_x = x
-	teleport_y = y
-	for(var/z_num in using_map.zlevels)
-		var/datum/map_z_level/Z = using_map.zlevels[z_num]
-		if(Z.name == "Underdark")
-			teleport_z = Z.z
-
-/obj/effect/step_trigger/teleporter/from_underdark
-	icon = 'icons/obj/structures/stairs_64x64.dmi'
-	icon_state = ""
-	invisibility = 0
-/obj/effect/step_trigger/teleporter/from_underdark/Initialize()
-	. = ..()
-	teleport_x = x
-	teleport_y = y
-	for(var/z_num in using_map.zlevels)
-		var/datum/map_z_level/Z = using_map.zlevels[z_num]
-		if(Z.name == "Mining Outpost")
-			teleport_z = Z.z
-
 // Used at centcomm for the elevator
 /obj/machinery/cryopod/robot/door/dorms
 	spawnpoint_type = /datum/spawnpoint/tram

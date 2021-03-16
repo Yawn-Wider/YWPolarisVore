@@ -3077,8 +3077,9 @@
 /turf/simulated/floor,
 /area/maintenance/mining)
 "hv" = (
-/obj/structure/railing{
-	dir = 8
+/obj/effect/map_effect/portal/master/side_a{
+	dir = 8;
+	portal_id = "underdark"
 	},
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored)
@@ -3922,9 +3923,10 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
 "jB" = (
-/turf/simulated/mineral/floor{
-	color = "#AAAAAA"
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
 	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/explored)
 "jC" = (
 /obj/structure/grille,
@@ -3999,10 +4001,6 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/outpost/mining_main/storage)
-"jM" = (
-/obj/structure/railing,
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
-/area/mine/explored)
 "jN" = (
 /obj/machinery/door/airlock/glass_research{
 	name = "Outpost Primary Access";
@@ -9569,13 +9567,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
-"xT" = (
-/obj/effect/step_trigger/teleporter/to_underdark{
-	dir = 8;
-	pixel_x = -16
-	},
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
-/area/mine/explored)
 "xU" = (
 /obj/structure/cable/blue{
 	d1 = 1;
@@ -13236,12 +13227,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/mining_main/medbay)
-"Gw" = (
-/obj/structure/railing{
-	dir = 1
-	},
-/turf/simulated/mineral/floor/ignore_mapgen/cave,
-/area/mine/explored)
 "Gx" = (
 /obj/machinery/button/remote/airlock{
 	id = "miningdorm1";
@@ -13342,9 +13327,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/hallway/entry)
-"GJ" = (
-/turf/simulated/floor/tiled/steel_dirty,
-/area/mine/explored)
 "GK" = (
 /obj/machinery/conveyor_switch{
 	id = "anotempload";
@@ -40954,8 +40936,8 @@ Zl
 Zl
 Zl
 Zl
-GJ
-GJ
+Zl
+Zl
 Zl
 Zl
 Zl
@@ -41115,10 +41097,10 @@ Zl
 Zl
 Zl
 Zl
-jM
-xT
-xT
-Gw
+Zl
+Zl
+Zl
+Zl
 Zl
 Zl
 Zl
@@ -41277,10 +41259,10 @@ Zl
 Zl
 Zl
 Zl
-jM
-jB
-jB
-Gw
+Zl
+Zl
+Zl
+Zl
 Zl
 Zl
 Zl
@@ -41440,8 +41422,8 @@ Zl
 Zl
 Zl
 Zl
-hv
-hv
+Zl
+Zl
 Zl
 Zl
 Zl
@@ -46624,7 +46606,7 @@ FC
 Zl
 Ze
 FC
-FC
+dz
 Zl
 FC
 FC
@@ -46785,10 +46767,10 @@ FC
 FC
 FC
 bi
-FC
-FC
-FC
-FC
+vT
+hv
+jB
+vT
 FC
 FC
 FC
@@ -46947,10 +46929,10 @@ kT
 kT
 kT
 kT
-kT
-kT
-kT
-kT
+vT
+Zl
+Zl
+vT
 kT
 kT
 FC
@@ -47109,10 +47091,10 @@ KS
 KS
 kT
 kT
-kT
-kT
-kT
-kT
+tI
+tI
+tI
+tI
 kT
 kT
 FC

@@ -53,6 +53,17 @@ var/const/BRIDGE			=(1<<12)
 var/const/PILOT 			=(1<<13) //VOREStation Add
 var/const/ENTERTAINER		=(1<<14) //VOREStation Add
 
+//YAWN Add START
+var/const/TALON				=(1<<3)
+
+var/const/TALCAP			=(1<<0)
+var/const/TALPIL			=(1<<1)
+var/const/TALDOC			=(1<<2)
+var/const/TALSEC			=(1<<3)
+var/const/TALENG			=(1<<4)
+//YAWN Add END
+
+
 var/list/assistant_occupations = list(
 )
 

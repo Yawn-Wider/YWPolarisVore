@@ -51,9 +51,10 @@
 	prob_fall = 50
 	//guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/giant_spider/hunter = 1,
-		/mob/living/simple_mob/animal/giant_spider/phorogenic/weak = 1,
-		/mob/living/simple_mob/animal/giant_spider/tunneler = 1,
+		/mob/living/simple_mob/animal/giant_spider/hunter = 3,
+		/mob/living/simple_mob/animal/giant_spider/phorogenic/weak = 3,
+		/mob/living/simple_mob/animal/giant_spider/tunneler = 3,
+		/mob/living/simple_mob/vore/oregrub = 1,
 	)
 
 /obj/cryogaia_away_spawner/underdark_hard
@@ -64,8 +65,9 @@
 	prob_fall = 50
 	//guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/vore/aggressive/corrupthound = 1,
-		/mob/living/simple_mob/vore/aggressive/rat/phoron = 2
+		/mob/living/simple_mob/vore/aggressive/corrupthound = 3,
+		/mob/living/simple_mob/vore/aggressive/rat/phoron = 6,
+		/mob/living/simple_mob/vore/oregrub/lava = 1,
 	)
 
 /obj/cryogaia_away_spawner/underdark_boss
@@ -267,19 +269,19 @@
 				)
 
 //POI STUFF
-VIRGO3B_TURF_CREATE(/turf/simulated/mineral/ignore_oregen)
-VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor/ignore_oregen)
-VIRGO3B_TURF_CREATE(/turf/simulated/mineral/ignore_cavegen)
-VIRGO3B_TURF_CREATE(/turf/simulated/mineral/floor/ignore_cavegen)
+CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/ignore_oregen)
+CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor/ignore_oregen)
+CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/ignore_cavegen)
+CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor/ignore_cavegen)
 
 //Vault2
-VIRGO3B_TURF_CREATE(/turf/simulated/floor/tiled/freezer)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/freezer)
 
 //Abandonedshelter
-VIRGO3B_TURF_CREATE(/turf/simulated/shuttle/floor/voidcraft)
+CRYOGAIA_TURF_CREATE(/turf/simulated/shuttle/floor/voidcraft)
 
 //Goldhall
-VIRGO3B_TURF_CREATE(/turf/simulated/floor/tiled/kafel_full/yellow)
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/kafel_full/yellow)
 
 //Mechbay
 /obj/mecha/working/ripley/abandoned/Initialize()

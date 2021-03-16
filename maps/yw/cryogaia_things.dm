@@ -486,45 +486,33 @@ var/global/list/latejoin_tram   = list()
 	for(var/i = 1 to 4)
 		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
 
-// Underdark mob spawners
-/*
-/obj/cryogaia_away_spawner/underdark_normal
-	name = "Underdark Normal Spawner"
-	faction = "underdark"
-	atmos_comp = TRUE
-	prob_spawn = 100
-	prob_fall = 50
-	guard = 20
-	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/space/jelly = 3,
-		/mob/living/simple_mob/animal/giant_spider/hunter = 1,
-		/mob/living/simple_mob/animal/giant_spider/phorogenic = 1,
-		/mob/living/simple_mob/animal/giant_spider/lurker = 1,
-	)
+// Underdark Teleporters
+/obj/effect/step_trigger/teleporter/to_underdark
+	icon = 'icons/obj/structures/stairs_64x64.dmi'
+	icon_state = ""
+	invisibility = 0
+/obj/effect/step_trigger/teleporter/to_underdark/Initialize()
+	. = ..()
+	teleport_x = x
+	teleport_y = y
+	for(var/z_num in using_map.zlevels)
+		var/datum/map_z_level/Z = using_map.zlevels[z_num]
+		if(Z.name == "Underdark")
+			teleport_z = Z.z
 
-/obj/cryogaia_away_spawner/underdark_hard
-	name = "Underdark Hard Spawner"
-	faction = "underdark"
-	atmos_comp = TRUE
-	prob_spawn = 100
-	prob_fall = 50
-	guard = 20
-	mobs_to_pick_from = list(
-		/mob/living/simple_mob/vore/aggressive/corrupthound = 1,
-		/mob/living/simple_mob/vore/aggressive/rat = 1
-	)
+/obj/effect/step_trigger/teleporter/from_underdark
+	icon = 'icons/obj/structures/stairs_64x64.dmi'
+	icon_state = ""
+	invisibility = 0
+/obj/effect/step_trigger/teleporter/from_underdark/Initialize()
+	. = ..()
+	teleport_x = x
+	teleport_y = y
+	for(var/z_num in using_map.zlevels)
+		var/datum/map_z_level/Z = using_map.zlevels[z_num]
+		if(Z.name == "Mining Outpost")
+			teleport_z = Z.z
 
-/obj/cryogaia_away_spawner/underdark_boss
-	name = "Underdark Boss Spawner"
-	faction = "underdark"
-	atmos_comp = TRUE
-	prob_spawn = 100
-	prob_fall = 100
-	guard = 70
-	mobs_to_pick_from = list(
-		/mob/living/simple_mob/vore/aggressive/dragon = 1
-	)
-*/
 // Used at centcomm for the elevator
 /obj/machinery/cryopod/robot/door/dorms
 	spawnpoint_type = /datum/spawnpoint/tram

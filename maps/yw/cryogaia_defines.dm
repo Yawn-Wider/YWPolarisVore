@@ -16,13 +16,15 @@
 #define Z_LEVEL_PLAINS					15
 #define Z_LEVEL_BEACH					16
 #define Z_LEVEL_BEACH_CAVE				17
-#define Z_LEVEL_AEROSTAT				18
+#define Z_LEVEL_UNDERDARK				18
 #define Z_LEVEL_AEROSTAT_SURFACE		19
-#define Z_LEVEL_DEBRISFIELD				20
-#define Z_LEVEL_UNDERDARK				21
+#define Z_LEVEL_AEROSTAT				20
+#define Z_LEVEL_DEBRISFIELD				21
 #define Z_LEVEL_GUTTERSITE				22
 #define Z_LEVEL_FUELDEPOT				23
 #define Z_LEVEL_GATEWAY					24
+#define Z_LEVEL_OFFMAP1					25
+#define Z_LEVEL_OFFMAP2					26
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -102,12 +104,14 @@
 							NETWORK_COMMUNICATORS,
 							NETWORK_ALARM_ATMOS,
 							NETWORK_ALARM_POWER,
-							NETWORK_ALARM_FIRE
+							NETWORK_ALARM_FIRE,
+							NETWORK_TALON_HELMETS,
+							NETWORK_TALON_SHIP
 							)
 
 	bot_patrolling = FALSE
 
-	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential")
+	allowed_spawns = list("Arrivals Shuttle","Gateway","Cryogenic Storage","Cyborg Storage","NCS Serenity Residential","ITV Talon Cryo")
 	spawnpoint_died = /datum/spawnpoint/tram
 	spawnpoint_left = /datum/spawnpoint/tram
 	spawnpoint_stayed = /datum/spawnpoint/cryo
@@ -184,7 +188,9 @@
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
 		list("Asteroid Belt 1","Asteroid Belt 2","Asteroid Belt 3","Asteroid Belt 4"),
+		list("Offmap Ship - Talon Z1","Offmap Ship - Talon Z2"),
 		list("Snow plains"),
+		list("Cryogaia - Underdark"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space"),
@@ -280,7 +286,9 @@
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list(Z_LEVEL_PLAINS,
 						  Z_LEVEL_CRYOGAIA_WILDERNESS,
-						  Z_LEVEL_CRYOGAIA_CAVES)
+						  Z_LEVEL_CRYOGAIA_CAVES,
+						  Z_LEVEL_UNDERDARK
+						  )
 
 /obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
 	. = ..()

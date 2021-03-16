@@ -1,4 +1,4 @@
-// This causes tether submap maps to get 'checked' and compiled, when undergoing a unit test.
+// This causes cryogaia submap maps to get 'checked' and compiled, when undergoing a unit test.
 // This is so Travis can validate PoIs, and ensure future changes don't break PoIs, as PoIs are loaded at runtime and the compiler can't catch errors.
 
 //////////////////////////////////////////////////////////////////////////////
@@ -165,7 +165,7 @@
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
 
 //////////////////////////////////////////////////////////////////////////////////////
-// Code Shenanigans for Tether lateload maps
+// Code Shenanigans for Cryogaia lateload maps
 /datum/map_template/cryogaia_lateload
 	allow_duplicates = FALSE
 	var/associated_map_datum
@@ -440,3 +440,59 @@
 	z = Z_LEVEL_ROGUEMINE_4
 
 //////////////////////////////////////////////////////////////////////////////
+//Underdark
+#include "underdark_pois/_templates.dm"
+#include "underdark_pois/underdark_things.dm"
+/datum/map_template/cryogaia_lateload/cryogaia_underdark
+	name = "Cryogaia - Underdark"
+	desc = "Mining, but harder."
+	mappath = 'cryogaia_underdark.dmm'
+
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/underdark
+
+/datum/map_z_level/cryogaia_lateload/underdark
+	name = "Underdark"
+	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	base_turf = /turf/simulated/mineral/floor
+	z = Z_LEVEL_UNDERDARK
+
+/datum/map_template/cryogaia_lateload/cryogaia_underdark/on_map_loaded(z)
+	. = ..()
+	seed_submaps(list(Z_LEVEL_UNDERDARK), 100, /area/mine/unexplored/underdark, /datum/map_template/underdark)
+	new /datum/random_map/automata/cave_system/no_cracks(null, 3, 3, Z_LEVEL_UNDERDARK, world.maxx - 4, world.maxy - 4) // Create the mining Z-level.
+	new /datum/random_map/noise/ore(null, 1, 1, Z_LEVEL_UNDERDARK, 64, 64)         // Create the mining ore distribution map.
+
+//////////////////////////////////////////////////////////////////////////////
+//Offmap Spawn Locations
+#include "../../offmap_vr/talon/talon.dm"
+#include "../../offmap_vr/talon/talon_areas.dm"
+
+#if MAP_TEST
+#include "../../offmap_vr/talon/talon1.dmm"
+#include "../../offmap_vr/talon/talon2.dmm"
+#endif
+
+// Talon offmap spawn
+/datum/map_template/cryogaia_lateload/offmap/talon1
+	name = "Offmap Ship - Talon Z1"
+	desc = "Offmap spawn ship, the Talon."
+	mappath = 'maps/offmap_vr/talon/talon1.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/talon1
+
+/datum/map_template/cryogaia_lateload/offmap/talon2
+	name = "Offmap Ship - Talon Z2"
+	desc = "Offmap spawn ship, the Talon."
+	mappath = 'maps/offmap_vr/talon/talon2.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/talon2
+
+/datum/map_z_level/cryogaia_lateload/talon1
+	name = "Talon Deck One"
+	flags = MAP_LEVEL_PLAYER
+	base_turf = /turf/space
+	z = Z_LEVEL_OFFMAP1
+
+/datum/map_z_level/cryogaia_lateload/talon2
+	name = "Talon Deck Two"
+	flags = MAP_LEVEL_PLAYER
+	base_turf = /turf/simulated/open
+	z = Z_LEVEL_OFFMAP2

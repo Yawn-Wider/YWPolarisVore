@@ -3076,6 +3076,13 @@
 /obj/random/trash_pile,
 /turf/simulated/floor,
 /area/maintenance/mining)
+"hv" = (
+/obj/effect/map_effect/portal/master/side_a{
+	dir = 8;
+	portal_id = "underdark"
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored)
 "hy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/cable/blue{
@@ -3915,6 +3922,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
+"jB" = (
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 8
+	},
+/turf/simulated/mineral/floor/ignore_mapgen/cave,
+/area/mine/explored)
 "jC" = (
 /obj/structure/grille,
 /obj/structure/window/phoronreinforced{
@@ -46593,7 +46606,7 @@ FC
 Zl
 Ze
 FC
-FC
+dz
 Zl
 FC
 FC
@@ -46754,10 +46767,10 @@ FC
 FC
 FC
 bi
-FC
-FC
-FC
-FC
+vT
+hv
+jB
+vT
 FC
 FC
 FC
@@ -46916,10 +46929,10 @@ kT
 kT
 kT
 kT
-kT
-kT
-kT
-kT
+vT
+Zl
+Zl
+vT
 kT
 kT
 FC
@@ -47078,10 +47091,10 @@ KS
 KS
 kT
 kT
-kT
-kT
-kT
-kT
+tI
+tI
+tI
+tI
 kT
 kT
 FC

@@ -20,8 +20,8 @@
 	icon_state = "shadekin"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	apply_restrictions = TRUE
-	species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
+	//apply_restrictions = TRUE YW EDIT COMMENT OUT
+	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW) YW EDIT COMMENT OUT
 
 // Ears avaliable to anyone
 

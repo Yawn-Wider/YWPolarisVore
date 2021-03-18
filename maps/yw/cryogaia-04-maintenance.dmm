@@ -2833,11 +2833,11 @@
 	name = "north bump";
 	pixel_y = 24
 	},
-/obj/item/device/paicard,
 /obj/structure/cable{
 	d2 = 2;
 	icon_state = "0-2"
 	},
+/obj/item/device/paicard,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "bXY" = (
@@ -8650,7 +8650,7 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
 "fMM" = (
-/obj/machinery/computer/arcade,
+/obj/machinery/computer/arcade/battle,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "fMV" = (
@@ -12139,6 +12139,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/item/device/paicard,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "hTR" = (
@@ -31164,6 +31165,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
+"tkl" = (
+/obj/structure/table/woodentable,
+/obj/machinery/recharger,
+/turf/simulated/floor/carpet,
+/area/crew_quarters/recreation_area)
 "tle" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -39089,12 +39095,11 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen/lower)
 "xWk" = (
-/obj/structure/table/woodentable,
 /obj/machinery/status_display{
 	layer = 4;
 	pixel_y = 32
 	},
-/obj/machinery/recharger,
+/obj/machinery/computer/arcade/clawmachine,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "xWz" = (
@@ -54611,7 +54616,7 @@ dtL
 fdu
 bZJ
 tjs
-tjs
+tkl
 gNp
 xyQ
 hSm

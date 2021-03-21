@@ -5118,6 +5118,13 @@
 /obj/item/weapon/book/manual/detective,
 /turf/simulated/floor/tiled/dark,
 /area/security/briefing_room)
+"bZj" = (
+/obj/machinery/firealarm{
+	dir = 1;
+	pixel_y = -24
+	},
+/turf/simulated/wall,
+/area/quartermaster/storage)
 "bZP" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/machinery/light{
@@ -17584,6 +17591,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
+"gOS" = (
+/obj/machinery/mech_recharger,
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 5;
+	pixel_y = -32
+	},
+/obj/structure/extinguisher_cabinet{
+	pixel_x = 25
+	},
+/obj/effect/landmark/robot_platform/cargo,
+/turf/simulated/floor/tiled,
+/area/quartermaster/storage)
 "gPf" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -17697,10 +17716,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "gRN" = (
-/obj/structure/extinguisher_cabinet{
-	pixel_x = 5;
-	pixel_y = -32
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
@@ -22324,6 +22339,7 @@
 	},
 /obj/machinery/firealarm{
 	dir = 1;
+	pixel_x = 6;
 	pixel_y = -24
 	},
 /obj/structure/disposalpipe/segment{
@@ -80779,7 +80795,7 @@ gPF
 llN
 ejt
 gRN
-xoR
+gOS
 oqx
 hWq
 pXn
@@ -80941,7 +80957,7 @@ jXp
 jgZ
 hSU
 iMR
-xoR
+bZj
 oqx
 jlX
 hrX

@@ -5490,6 +5490,11 @@
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 1
 	},
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/corner_oldtile/gray{
+	dir = 8
+	},
+/obj/effect/landmark/robot_platform/explorer,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "lI" = (
@@ -5629,6 +5634,14 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/machinery/mech_recharger,
+/obj/effect/floor_decal/corner_oldtile/gray{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_oldtile/gray{
+	dir = 1
+	},
+/obj/effect/landmark/robot_platform/explorer,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "mb" = (

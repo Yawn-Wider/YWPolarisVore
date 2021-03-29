@@ -120,7 +120,7 @@
 
 // TODO: Spidersilk clothing and actual bindings, once sprites are ready.
 
-/obj/item/clothing/suit/weaversilk_bindings
+/obj/item/clothing/suit/straight_jacket/weaversilk_bindings //YW EDIT
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_clothes_vr.dmi'
 	name = "weaversilk bindings"
@@ -128,34 +128,17 @@
 	icon_state = "web_bindings"
 	item_state = "web_bindings_mob"
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
-	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
+	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL|HIDETIE|HIDEHOLSTER //YW EDIT
 	//yw edit start - Teshari Sprite
-	var/resist_time = 600	// 1.5 minutes
-	slowdown = 3
+	resist_time = 600	// 1.5 minutes
+	slowdown = 1.5
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
 		)
 
-/obj/item/clothing/suit/weaversilk_bindings/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
+/obj/item/clothing/suit/straight_jacket/weaversilk_bindings/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
 	if(body_type == SPECIES_TESHARI)
 		if(!inhands)
 			return 'icons/vore/custom_onmob_yw.dmi'
 	return ..()
-
-/obj/item/clothing/suit/weaversilk_bindings/attack_hand(mob/living/user as mob)
-	if(ishuman(user))
-		var/mob/living/carbon/human/H = user
-		if(src == H.wear_suit)
-			to_chat(H, "<span class='notice'>You need help taking this off!</span>")
-			return
-	..()
-
-/obj/item/clothing/suit/weaversilk_bindings/equipped(var/mob/living/user,var/slot)
-	. = ..()
-	if(slot == slot_wear_suit)
-		user.drop_l_hand()
-		user.drop_r_hand()
-		if(ishuman(user))
-			var/mob/living/carbon/human/H = user
-			H.drop_from_inventory(H.handcuffed)
 //yw edit end

@@ -127,7 +127,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 		UpdateMineral()
 	update_icon()
 
-/turf/simulated/mineral/cryogaia/rich/make_ore(var/rare_ore)
+/turf/simulated/mineral/rich/make_ore(var/rare_ore)
 	if(mineral || ignore_mapgen)
 		return
 	var/mineral_name

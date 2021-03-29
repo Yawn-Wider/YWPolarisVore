@@ -11,20 +11,18 @@
 #define Z_LEVEL_CRYOGAIA_RESIDENTIAL	10
 #define Z_LEVEL_ROGUEMINE_1				11
 #define Z_LEVEL_ROGUEMINE_2				12
-#define Z_LEVEL_ROGUEMINE_3				13
-#define Z_LEVEL_ROGUEMINE_4				14
-#define Z_LEVEL_PLAINS					15
-#define Z_LEVEL_BEACH					16
-#define Z_LEVEL_BEACH_CAVE				17
-#define Z_LEVEL_UNDERDARK				18
-#define Z_LEVEL_AEROSTAT_SURFACE		19
-#define Z_LEVEL_AEROSTAT				20
-#define Z_LEVEL_DEBRISFIELD				21
-#define Z_LEVEL_GUTTERSITE				22
-#define Z_LEVEL_FUELDEPOT				23
-#define Z_LEVEL_GATEWAY					24
-#define Z_LEVEL_OFFMAP1					25
-#define Z_LEVEL_OFFMAP2					26
+#define Z_LEVEL_PLAINS					13
+#define Z_LEVEL_BEACH					14
+#define Z_LEVEL_BEACH_CAVE				15
+#define Z_LEVEL_UNDERDARK				16
+#define Z_LEVEL_AEROSTAT_SURFACE		17
+#define Z_LEVEL_AEROSTAT				18
+#define Z_LEVEL_DEBRISFIELD				19
+#define Z_LEVEL_GUTTERSITE				20
+#define Z_LEVEL_FUELDEPOT				21
+#define Z_LEVEL_GATEWAY					22
+#define Z_LEVEL_OFFMAP1					23
+#define Z_LEVEL_OFFMAP2					24
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -42,8 +40,8 @@
 
 	use_overmap = TRUE
 	overmap_z = Z_LEVEL_CRYOGAIA_MISC
-	overmap_size = 20
-	overmap_event_areas = 10
+	overmap_size = 25
+	overmap_event_areas = 18
 
 	usable_email_tlds = list("cryogaia.nt")
 	lobby_icon = 'icons/misc/title_yw.dmi'
@@ -187,7 +185,7 @@
 
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
-		list("Asteroid Belt 1","Asteroid Belt 2","Asteroid Belt 3","Asteroid Belt 4"),
+		list("Asteroid Belt 1","Asteroid Belt 2"),
 		list("Offmap Ship - Talon Z1","Offmap Ship - Talon Z2"),
 		list("Snow plains"),
 		list("Cryogaia - Underdark"),
@@ -210,10 +208,7 @@
 
 	belter_docked_z = 		list(Z_LEVEL_CRYOGAIA_UPPER)
 	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
-	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1,
-						 		 Z_LEVEL_ROGUEMINE_2,
-						 	 	 Z_LEVEL_ROGUEMINE_3,
-								 Z_LEVEL_ROGUEMINE_4)
+	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1, Z_LEVEL_ROGUEMINE_2)
 
 	lateload_single_pick = list( //Gateway missions
 		list("Snow Outpost"),

@@ -84,7 +84,7 @@
 			set_dir(L.dir)
 			can_buckle = 1
 			buckle_mob(L)
-			L.Stun(1 SECOND)
+			L.Stun(1 SECOND) //YW EDIT
 			to_chat(L, "<span class='danger'>The sticky fibers of \the [src] ensnare, trapping you in place!</span>")
 			trap_active = 0
 			can_buckle = initial(can_buckle)
@@ -107,6 +107,8 @@
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO|LEGS|FEET|ARMS|HANDS
 	flags_inv = HIDEGLOVES|HIDESHOES|HIDEJUMPSUIT|HIDETAIL
 	//yw edit start - Teshari Sprite
+	var/resist_time = 600	// 1.5 minutes
+	slowdown = 3
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/vore/custom_onmob_yw.dmi'
 		)
@@ -116,4 +118,21 @@
 		if(!inhands)
 			return 'icons/vore/custom_onmob_yw.dmi'
 	return ..()
+
+/obj/item/clothing/suit/weaversilk_bindings/attack_hand(mob/living/user as mob)
+	if(ishuman(user))
+		var/mob/living/carbon/human/H = user
+		if(src == H.wear_suit)
+			to_chat(H, "<span class='notice'>You need help taking this off!</span>")
+			return
+	..()
+
+/obj/item/clothing/suit/weaversilk_bindings/equipped(var/mob/living/user,var/slot)
+	. = ..()
+	if(slot == slot_wear_suit)
+		user.drop_l_hand()
+		user.drop_r_hand()
+		if(ishuman(user))
+			var/mob/living/carbon/human/H = user
+			H.drop_from_inventory(H.handcuffed)
 //yw edit end

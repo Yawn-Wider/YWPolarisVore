@@ -415,30 +415,6 @@
 	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
 	z = Z_LEVEL_ROGUEMINE_2
 
-/datum/map_template/cryogaia_lateload/cryogaia_roguemines3
-	name = "Asteroid Belt 3"
-	desc = "Mining, but rogue. Zone 3"
-	mappath = 'rogue_mines/rogue_mine3.dmm'
-
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines3
-
-/datum/map_z_level/cryogaia_lateload/roguemines3
-	name = "Belt 3"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
-	z = Z_LEVEL_ROGUEMINE_3
-
-/datum/map_template/cryogaia_lateload/cryogaia_roguemines4
-	name = "Asteroid Belt 4"
-	desc = "Mining, but rogue. Zone 4"
-	mappath = 'rogue_mines/rogue_mine4.dmm'
-
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines4
-
-/datum/map_z_level/cryogaia_lateload/roguemines4
-	name = "Belt 4"
-	flags = MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER
-	z = Z_LEVEL_ROGUEMINE_4
-
 //////////////////////////////////////////////////////////////////////////////
 //Underdark
 #include "underdark_pois/_templates.dm"
@@ -471,6 +447,31 @@
 #include "../../offmap_vr/talon/talon1.dmm"
 #include "../../offmap_vr/talon/talon2.dmm"
 #endif
+
+//////////////////////////////////////////////////////////////////////////////
+//Overmap ship spawns
+
+#include "../../offmap_vr/om_ships/hybridshuttle.dm"
+#include "../../offmap_vr/om_ships/screebarge.dm"
+#include "../../offmap_vr/om_ships/aro.dm"
+#include "../../offmap_vr/om_ships/aro2.dm"
+#include "../../offmap_vr/om_ships/bearcat.dm"
+#include "../../offmap_vr/om_ships/cruiser.dm"
+#include "../../offmap_vr/om_ships/vespa.dm"
+#include "../../offmap_vr/om_ships/generic_shuttle.dm"
+#include "../../offmap_vr/om_ships/salamander.dm"
+#include "../../offmap_vr/om_ships/geckos.dm"
+#include "../../offmap_vr/om_ships/mackerels.dm"
+#include "../../offmap_vr/om_ships/mercenarybase.dm"
+#include "../../offmap_vr/om_ships/mercship.dm"
+#include "../../offmap_vr/om_ships/curashuttle.dm"
+#include "../../offmap_vr/om_ships/itglight.dm"
+#include "../../offmap_vr/om_ships/abductor.dm"
+
+//////////////////////////////////////////////////////////////////////////////
+//Capsule deployed ships
+#include "../../offmap_vr/om_ships/shelter_5.dm"
+#include "../../offmap_vr/om_ships/shelter_6.dm"
 
 // Talon offmap spawn
 /datum/map_template/cryogaia_lateload/offmap/talon1

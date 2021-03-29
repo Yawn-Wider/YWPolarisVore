@@ -52,5 +52,5 @@
 /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/get_worn_icon_file(var/body_type, var/slot_name, var/default_icon, var/inhands)
 	if(body_type == SPECIES_TESHARI)
 		if(!inhands)
-			return 'icons/mob/species/seromi/suit_yw.dmi'
+			return 'icons/mob/species/teshari/suit_yw.dmi'
 	..()

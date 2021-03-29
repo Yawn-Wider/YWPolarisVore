@@ -12,7 +12,7 @@
 		SPECIES_FENNEC 			= 'icons/mob/species/vulpkanin/helmet.dmi',
 		SPECIES_PROMETHEAN		= 'icons/mob/species/skrell/helmet.dmi',
 		SPECIES_VOX 			= 'icons/mob/species/vox/head.dmi',
-		SPECIES_TESHARI 		= 'icons/mob/species/teshari/head.dmi'
+		SPECIES_TESHARI 		= 'icons/mob/species/teshari/head.dmi',
 		SPECIES_GREY_YW         = 'icons/mob/species/grey/helmet.dmi' /*ywedit*/
 		)
 

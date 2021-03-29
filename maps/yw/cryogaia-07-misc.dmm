@@ -1379,10 +1379,6 @@
 	},
 /turf/simulated/shuttle/floor/darkred,
 /area/shuttle/mercenary)
-"gF" = (
-/obj/effect/overmap/bluespace_rift,
-/turf/unsimulated/map,
-/area/overmap)
 "gH" = (
 /obj/machinery/mecha_part_fabricator,
 /obj/machinery/status_display{
@@ -3990,6 +3986,10 @@
 "uu" = (
 /turf/simulated/floor/holofloor/wood,
 /area/holodeck/source_meetinghall)
+"uv" = (
+/obj/effect/overmap/bluespace_rift,
+/turf/unsimulated/map,
+/area/overmap)
 "uw" = (
 /obj/structure/window/reinforced,
 /obj/structure/window/reinforced{
@@ -10217,7 +10217,7 @@ zR
 zR
 zR
 zR
-qp
+zR
 qp
 qp
 qp
@@ -10367,6 +10367,7 @@ vR
 Iq
 zR
 zR
+zR
 qp
 qp
 qp
@@ -10380,7 +10381,6 @@ qp
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -10529,6 +10529,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -10542,7 +10543,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -10691,6 +10691,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -10704,7 +10705,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -10853,6 +10853,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -10866,7 +10867,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -11015,6 +11015,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -11028,7 +11029,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -11177,12 +11177,13 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
 HM
 HM
-gF
+uv
 HM
 HM
 HM
@@ -11190,7 +11191,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -11339,6 +11339,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -11352,7 +11353,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -11501,6 +11501,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -11514,7 +11515,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -11663,6 +11663,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -11676,7 +11677,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -11825,6 +11825,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -11838,7 +11839,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -11987,6 +11987,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 qp
 qp
@@ -12000,7 +12001,6 @@ qp
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -12161,8 +12161,8 @@ zR
 zR
 zR
 zR
+zR
 qp
-HM
 HM
 HM
 HM
@@ -12311,6 +12311,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 qp
 qp
@@ -12324,7 +12325,6 @@ qp
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -12473,6 +12473,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -12486,7 +12487,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -12635,6 +12635,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -12648,7 +12649,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -12797,6 +12797,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -12810,7 +12811,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -12959,6 +12959,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -12972,7 +12973,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -13121,12 +13121,13 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
 HM
 HM
-gF
+uv
 HM
 HM
 HM
@@ -13134,7 +13135,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -13283,6 +13283,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -13296,7 +13297,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -13445,6 +13445,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -13458,7 +13459,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -13607,6 +13607,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -13620,7 +13621,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -13769,6 +13769,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 HM
 HM
@@ -13782,7 +13783,6 @@ HM
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -13931,6 +13931,7 @@ zR
 Iq
 zR
 zR
+zR
 qp
 qp
 qp
@@ -13944,7 +13945,6 @@ qp
 qp
 zR
 qp
-HM
 HM
 HM
 HM
@@ -14105,31 +14105,31 @@ zR
 zR
 zR
 zR
+zR
 qp
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
-HM
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
+qp
 qp
 "}
 (26,1,1) = {"
@@ -14267,32 +14267,32 @@ zR
 zR
 zR
 zR
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
-qp
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
+zR
 "}
 (27,1,1) = {"
 xA

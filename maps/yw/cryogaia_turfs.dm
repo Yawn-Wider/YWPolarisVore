@@ -127,6 +127,34 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 		UpdateMineral()
 	update_icon()
 
+/turf/simulated/mineral/cryogaia/rich/make_ore(var/rare_ore)
+	if(mineral || ignore_mapgen)
+		return
+	var/mineral_name
+	if(rare_ore)
+		mineral_name = pickweight(list(
+			"uranium" = 10,
+			"platinum" = 10,
+			"hematite" = 10,
+			"carbon" = 10,
+			"diamond" = 4,
+			"gold" = 15,
+			"silver" = 15))
+	else
+		mineral_name = pickweight(list(
+			"uranium" = 7,
+			"platinum" = 7,
+			"hematite" = 28,
+			"carbon" = 28,
+			"diamond" = 2,
+			"gold" = 7,
+			"silver" = 7))
+	if(mineral_name && (mineral_name in ore_data))
+		mineral = ore_data[mineral_name]
+		UpdateMineral()
+	update_icon()
+
+//Underdark
 /turf/simulated/mineral/rich/make_ore(var/rare_ore)
 	if(mineral || ignore_mapgen)
 		return

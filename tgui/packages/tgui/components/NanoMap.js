@@ -69,7 +69,6 @@ export class NanoMap extends Component {
       document.removeEventListener('mouseup', this.handleDragEnd);
       pauseEvent(e);
     };
-    
     this.handleZoom = (_e, value) => {
       this.setState(state => {
         const newZoom = Math.min(Math.max(value, 1), 8);
@@ -102,7 +101,7 @@ export class NanoMap extends Component {
     
     const mapUrl = config.map + "_nanomap_z" + config.mapZLevel + ".png";
     // (x * zoom), x Needs to be double the turf- map size. (for virgo, 140x140)
-    const mapSize = (280 * zoom) + 'px';
+    const mapSize = (320 * zoom) + 'px'; // YW EDIT
     const newStyle = {
       width: mapSize,
       height: mapSize,

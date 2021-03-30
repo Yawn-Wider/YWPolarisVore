@@ -111,16 +111,17 @@
 #include "space/pois/_templates.dm"
 #include "space/pois/debrisfield_things.dm"
 #include "space/_guttersite.dm"
+
 /datum/map_template/cryogaia_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
 	desc = "The Virgo 3 Debris Field away mission."
-	mappath = 'space/debrisfield.dmm'
+	mappath = 'maps/yw/submaps/space/debrisfield.dmm'
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_debrisfield
 
 /datum/map_template/cryogaia_lateload/away_debrisfield/on_map_loaded(z)
 	. = ..()
 	//Commented out until we actually get POIs
-	seed_submaps(list(Z_LEVEL_DEBRISFIELD), 200, /area/tether_away/debrisfield/unexplored, /datum/map_template/debrisfield)
+	seed_submaps(list(Z_LEVEL_DEBRISFIELD), 400, /area/space, /datum/map_template/debrisfield)
 
 /datum/map_z_level/cryogaia_lateload/away_debrisfield
 	name = "Away Mission - Debris Field"

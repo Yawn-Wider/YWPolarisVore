@@ -116,8 +116,7 @@
 /area/tether_away/guttersite/maint)
 "aC" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/storage)
@@ -201,8 +200,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 2;
@@ -371,16 +369,14 @@
 /area/tether_away/guttersite/atmos)
 "br" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
 "bs" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
@@ -477,8 +473,7 @@
 "bA" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1;
-	icon_state = "map-supply"
+	dir = 1
 	},
 /obj/structure/table/darkglass,
 /obj/structure/cable/cyan{
@@ -580,16 +575,14 @@
 /area/tether_away/guttersite/atmos)
 "bM" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
 "bN" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
@@ -648,9 +641,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/maint)
@@ -714,8 +705,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -725,7 +715,6 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -738,8 +727,7 @@
 /area/tether_away/guttersite/atmos)
 "cd" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
@@ -759,8 +747,7 @@
 /area/tether_away/guttersite/atmos)
 "ch" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	icon_state = "map_vent_out"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/storage)
@@ -781,14 +768,12 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1;
-	icon_state = "map-supply"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/structure/window/basic,
 /obj/structure/window/basic{
-	dir = 4;
-	icon_state = "window"
+	dir = 4
 	},
 /obj/structure/table/darkglass,
 /obj/structure/cable/cyan{
@@ -815,12 +800,10 @@
 /area/tether_away/guttersite/atmos)
 "cn" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 4;
-	icon_state = "intact"
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
@@ -831,8 +814,7 @@
 /area/tether_away/guttersite/unexplored)
 "cp" = (
 /obj/structure/window/basic{
-	dir = 8;
-	icon_state = "window"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/white/monofloor,
 /area/tether_away/guttersite/office)
@@ -853,8 +835,7 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6;
-	icon_state = "intact-supply"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/maint)
@@ -873,8 +854,7 @@
 /area/tether_away/guttersite/atmos)
 "cw" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 10
@@ -883,16 +863,14 @@
 /area/tether_away/guttersite/atmos)
 "cx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
 "cy" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 1;
-	icon_state = "map"
+	dir = 1
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
@@ -907,8 +885,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -919,12 +896,10 @@
 /area/tether_away/guttersite/maint)
 "cB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10;
-	icon_state = "intact-scrubbers"
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10;
-	icon_state = "intact-supply"
+	dir = 10
 	},
 /obj/structure/cable/cyan{
 	d1 = 2;
@@ -948,7 +923,6 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -984,8 +958,7 @@
 /area/tether_away/guttersite/commons)
 "cI" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/commons)
@@ -1007,9 +980,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/atmos)
@@ -1053,8 +1024,7 @@
 /area/tether_away/guttersite/commons)
 "cS" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	icon_state = "map_vent_out"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/commons)
@@ -1068,8 +1038,7 @@
 /area/tether_away/guttersite/commons)
 "cV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -1086,8 +1055,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/light,
 /obj/structure/cable/cyan{
@@ -1102,8 +1070,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance_hatch{
@@ -1122,8 +1089,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -1139,7 +1105,6 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1150,8 +1115,7 @@
 /area/tether_away/guttersite/commons)
 "dc" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/structure/table/darkglass,
 /obj/machinery/chemical_dispenser/bar_alc/full,
@@ -1161,7 +1125,6 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/plating/eris/under,
@@ -1177,8 +1140,7 @@
 /area/tether_away/guttersite/commons)
 "dg" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1;
-	icon_state = "map-supply"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/cyan{
@@ -1216,12 +1178,10 @@
 /area/tether_away/guttersite/commons)
 "dl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10;
-	icon_state = "intact-scrubbers"
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10;
-	icon_state = "intact-supply"
+	dir = 10
 	},
 /obj/structure/cable/cyan{
 	d1 = 2;
@@ -1353,8 +1313,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 8;
-	icon_state = "rwindow"
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -1374,8 +1333,7 @@
 	req_one_access = list()
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1411,15 +1369,13 @@
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
 	icon_state = "space";
 	layer = 4;
-	name = "EXTERNAL AIRLOCK";
-	pixel_x = 0
+	name = "EXTERNAL AIRLOCK"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
 "dC" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4;
-	icon_state = "map_vent_out"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/medbay)
@@ -1429,12 +1385,10 @@
 /area/tether_away/guttersite/medbay)
 "dE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10;
-	icon_state = "intact-supply"
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10;
-	icon_state = "intact-scrubbers"
+	dir = 10
 	},
 /obj/structure/cable/cyan{
 	d1 = 2;
@@ -1460,8 +1414,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 8;
-	icon_state = "rwindow"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
@@ -1470,8 +1423,7 @@
 	frequency = 448;
 	id_tag = "guttersite_northlock";
 	name = "Airlock controller";
-	pixel_x = -25;
-	pixel_y = 0
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
@@ -1480,8 +1432,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -1514,7 +1465,6 @@
 	alarms_hidden = 1;
 	breach_detection = 0;
 	dir = 1;
-	icon_state = "alarm0";
 	pixel_y = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -1540,7 +1490,6 @@
 /obj/machinery/airlock_sensor{
 	frequency = 448;
 	id_tag = "guttersite_northlock_sensor";
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -1549,8 +1498,7 @@
 /area/tether_away/guttersite/office)
 "dQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
@@ -1559,8 +1507,7 @@
 /area/tether_away/guttersite/office)
 "dS" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
@@ -1582,8 +1529,7 @@
 /area/tether_away/guttersite/office)
 "dW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -1605,8 +1551,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1;
-	icon_state = "map-supply"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/commons)
@@ -1669,8 +1614,7 @@
 /area/tether_away/guttersite/walkway)
 "ef" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/walkway)
@@ -1679,8 +1623,7 @@
 /area/tether_away/guttersite/bridge)
 "eh" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/bridge)
@@ -1690,8 +1633,7 @@
 /area/tether_away/guttersite/office)
 "ej" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -1703,8 +1645,7 @@
 /area/tether_away/guttersite/commons)
 "ek" = (
 /obj/structure/window/basic{
-	dir = 8;
-	icon_state = "window"
+	dir = 8
 	},
 /obj/structure/filingcabinet/filingcabinet,
 /turf/simulated/floor/tiled/eris/white/monofloor,
@@ -1717,9 +1658,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/commons)
@@ -1737,8 +1676,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -1777,8 +1715,7 @@
 /area/tether_away/guttersite/office)
 "et" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 1;
-	icon_state = "bay_comfychair_preview"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 1
@@ -1796,8 +1733,7 @@
 /area/tether_away/guttersite/commons)
 "eu" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 1;
-	icon_state = "bay_comfychair_preview"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/tether_away/guttersite/commons)
@@ -1808,8 +1744,7 @@
 /area/tether_away/guttersite/commons)
 "ew" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/commons)
@@ -1817,9 +1752,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/tether_away/guttersite/commons)
@@ -1852,8 +1785,7 @@
 /area/tether_away/guttersite/commons)
 "eA" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 4;
-	icon_state = "bay_comfychair_preview"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -1879,8 +1811,7 @@
 	dir = 1
 	},
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -1919,8 +1850,7 @@
 	dir = 1
 	},
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -1952,8 +1882,7 @@
 /area/tether_away/guttersite/medbay)
 "eI" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	icon_state = "map_vent_out"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/walkway)
@@ -1961,9 +1890,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/tether_away/guttersite/commons)
@@ -1983,22 +1910,19 @@
 /area/tether_away/guttersite/commons)
 "eL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	icon_state = "map_vent_out"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/bridge)
 "eM" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4;
-	icon_state = "map_vent_out"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/white/monofloor,
 /area/tether_away/guttersite/office)
 "eN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	icon_state = "intact"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
@@ -2102,12 +2026,10 @@
 /area/tether_away/guttersite/medbay)
 "eV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	icon_state = "intact-supply"
+	dir = 9
 	},
 /obj/structure/window/basic{
 	dir = 1
@@ -2121,8 +2043,7 @@
 /area/tether_away/guttersite/medbay)
 "eW" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8;
-	icon_state = "map_scrubber_on"
+	dir = 8
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -2146,8 +2067,7 @@
 	pixel_x = 24
 	},
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /obj/structure/cable/cyan{
 	d2 = 8;
@@ -2164,16 +2084,14 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10;
-	icon_state = "intact-supply"
+	dir = 10
 	},
 /obj/structure/filingcabinet/filingcabinet,
 /turf/simulated/floor/tiled/eris/white/monofloor,
 /area/tether_away/guttersite/office)
 "fb" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8;
-	icon_state = "map_scrubber_on"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/white/monofloor,
 /area/tether_away/guttersite/office)
@@ -2216,8 +2134,7 @@
 /area/tether_away/guttersite/vault)
 "ff" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	icon_state = "map_vent_out"
+	dir = 1
 	},
 /obj/structure/table/rack,
 /obj/random/firstaid,
@@ -2237,8 +2154,7 @@
 /area/tether_away/guttersite/office)
 "fh" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -2289,8 +2205,7 @@
 /area/tether_away/guttersite/commons)
 "fn" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 4;
-	icon_state = "bay_comfychair_preview"
+	dir = 4
 	},
 /mob/living/simple_mob/vore/catgirl{
 	name = "Lucy"
@@ -2320,8 +2235,7 @@
 /area/tether_away/guttersite/docking)
 "fs" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8;
-	icon_state = "map-scrubbers"
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -2352,8 +2266,7 @@
 /area/tether_away/guttersite/security)
 "fv" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1;
-	icon_state = "map-supply"
+	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/structure/cable/cyan{
@@ -2366,17 +2279,9 @@
 "fw" = (
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
-"fx" = (
-/obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
-	},
-/turf/simulated/floor/tiled/eris/dark/gray_perforated,
-/area/tether_away/guttersite/security)
 "fy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -2408,8 +2313,7 @@
 /area/tether_away/guttersite/security)
 "fC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6;
-	icon_state = "intact"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -2450,8 +2354,7 @@
 /area/tether_away/guttersite/security)
 "fJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -2469,8 +2372,7 @@
 /area/tether_away/guttersite/walkway)
 "fK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -2484,8 +2386,7 @@
 /area/tether_away/guttersite/bridge)
 "fL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -2503,8 +2404,7 @@
 /area/tether_away/guttersite/bridge)
 "fM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -2526,8 +2426,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1;
-	icon_state = "map-supply"
+	dir = 1
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -2538,12 +2437,10 @@
 /area/tether_away/guttersite/bridge)
 "fO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10;
-	icon_state = "intact-supply"
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9;
-	icon_state = "intact-scrubbers"
+	dir = 9
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -2582,8 +2479,7 @@
 /area/tether_away/guttersite/bridge)
 "fS" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6;
-	icon_state = "intact-supply"
+	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -2597,8 +2493,7 @@
 /area/tether_away/guttersite/office)
 "fT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -2611,9 +2506,7 @@
 	},
 /obj/machinery/door/airlock/hatch{
 	frequency = 12341;
-	icon_state = "door_closed";
 	id_tag = "gutter vault";
-	locked = 0;
 	req_access = list(150)
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -2626,8 +2519,7 @@
 /area/tether_away/guttersite/security)
 "fV" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	icon_state = "map_vent_out"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -2642,16 +2534,14 @@
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
 	icon_state = "space";
 	layer = 4;
-	name = "EXTERNAL AIRLOCK";
-	pixel_x = 0
+	name = "EXTERNAL AIRLOCK"
 	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced{
-	dir = 8;
-	icon_state = "rwindow"
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/tether_away/guttersite/security)
@@ -2666,8 +2556,7 @@
 /area/tether_away/guttersite/security)
 "fZ" = (
 /obj/structure/bed/chair/office/dark{
-	dir = 1;
-	icon_state = "officechair_dark"
+	dir = 1
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/smg/poi{
 	faction = "wolfgirl"
@@ -2688,9 +2577,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/commons)
@@ -2706,8 +2593,7 @@
 /area/tether_away/guttersite/security)
 "ge" = (
 /obj/structure/bed/chair/office/dark{
-	dir = 8;
-	icon_state = "officechair_dark"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -2751,7 +2637,6 @@
 /obj/machinery/airlock_sensor{
 	frequency = 1999;
 	id_tag = "westlock_sensor";
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -2791,15 +2676,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	icon_state = "map"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
 "gm" = (
 /obj/structure/bed/chair/office/dark{
-	dir = 4;
-	icon_state = "officechair_dark"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -2832,15 +2715,13 @@
 /area/tether_away/guttersite/security)
 "gr" = (
 /obj/structure/fence/door/locked{
-	dir = 8;
-	icon_state = "door_closed"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
 "gs" = (
 /obj/structure/bed/chair/office/dark{
-	dir = 8;
-	icon_state = "officechair_dark"
+	dir = 8
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/poi{
 	faction = "wolfgirl"
@@ -2873,8 +2754,7 @@
 /area/tether_away/guttersite/docking)
 "gw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -2894,8 +2774,7 @@
 /area/tether_away/guttersite/docking)
 "gy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -2904,23 +2783,19 @@
 /area/tether_away/guttersite/security)
 "gz" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
 "gA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/door/airlock/maintenance_hatch{
 	req_one_access = list(38)
@@ -2932,8 +2807,7 @@
 	dir = 1
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1;
-	icon_state = "map-supply"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -2942,15 +2816,13 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/commons)
 "gD" = (
 /obj/structure/bed/chair/office/dark{
-	dir = 1;
-	icon_state = "officechair_dark"
+	dir = 1
 	},
 /mob/living/simple_mob/humanoid/merc/melee/poi{
 	faction = "wolfgirl"
@@ -2961,7 +2833,6 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /obj/structure/table/darkglass,
@@ -2989,7 +2860,6 @@
 /obj/machinery/airlock_sensor{
 	frequency = 1380;
 	id_tag = "dock_d2a2_sensor";
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /obj/effect/map_helper/airlock/atmos/chamber_pump,
@@ -3014,8 +2884,7 @@
 /area/tether_away/guttersite/medbay)
 "gJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3044,9 +2913,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/walkway)
@@ -3054,9 +2921,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/medbay)
@@ -3073,23 +2938,20 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/medbay)
 "gO" = (
 /obj/structure/fence/end{
-	dir = 4;
-	icon_state = "end"
+	dir = 4
 	},
 /obj/structure/fence,
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
 "gP" = (
 /obj/structure/fence{
-	dir = 8;
-	icon_state = "straight"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -3126,8 +2988,7 @@
 /area/tether_away/guttersite/docking)
 "gT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3147,16 +3008,13 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/vault)
 "gW" = (
 /obj/structure/fence/door/opened{
-	dir = 8;
-	icon_state = "door_opened"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -3174,23 +3032,19 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
 "ha" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8;
-	icon_state = "map_scrubber_on"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
 "hb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -3204,15 +3058,13 @@
 /area/tether_away/guttersite/bridge)
 "hc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -3236,8 +3088,7 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9;
-	icon_state = "intact-scrubbers"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -3257,7 +3108,6 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3268,8 +3118,7 @@
 /area/tether_away/guttersite/unexplored)
 "hk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3291,25 +3140,21 @@
 /area/tether_away/guttersite/security)
 "hm" = (
 /obj/structure/fence/end{
-	dir = 8;
-	icon_state = "end"
+	dir = 8
 	},
 /obj/structure/fence/end{
-	dir = 4;
-	icon_state = "end"
+	dir = 4
 	},
 /obj/structure/fence,
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
 "hn" = (
 /obj/structure/fence/end{
-	dir = 8;
-	icon_state = "end"
+	dir = 8
 	},
 /obj/structure/fence,
 /obj/structure/fence/end{
-	dir = 1;
-	icon_state = "end"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -3329,8 +3174,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 8;
-	icon_state = "rwindow"
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 1
@@ -3344,9 +3188,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -3369,15 +3211,13 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 8;
-	icon_state = "rwindow"
+	dir = 8
 	},
 /obj/structure/sign/securearea{
 	desc = "A warning sign which reads 'EXTERNAL AIRLOCK'";
 	icon_state = "space";
 	layer = 4;
-	name = "EXTERNAL AIRLOCK";
-	pixel_x = 0
+	name = "EXTERNAL AIRLOCK"
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -3416,8 +3256,7 @@
 /area/tether_away/guttersite/unexplored)
 "hx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6;
-	icon_state = "intact"
+	dir = 6
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -3474,8 +3313,7 @@
 /area/tether_away/guttersite/vault)
 "hF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -3512,15 +3350,13 @@
 /area/tether_away/guttersite/docking)
 "hJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8;
-	icon_state = "intact"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
 "hK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3533,30 +3369,26 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/bridge)
 "hL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8;
-	icon_state = "intact"
+	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
 "hM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 9;
-	icon_state = "intact"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
 "hN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5;
-	icon_state = "intact-scrubbers"
+	dir = 5
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -3565,8 +3397,7 @@
 /area/tether_away/guttersite/docking)
 "hO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -3575,19 +3406,16 @@
 /area/tether_away/guttersite/docking)
 "hP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10;
-	icon_state = "intact-scrubbers"
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	icon_state = "intact-supply"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
 "hQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3600,7 +3428,6 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -3623,15 +3450,13 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/bridge)
 "hV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3650,22 +3475,19 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/vault)
 "hX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /obj/structure/window/basic{
-	dir = 8;
-	icon_state = "window"
+	dir = 8
 	},
 /obj/structure/window/basic,
 /obj/structure/table/darkglass,
@@ -3678,8 +3500,7 @@
 /area/tether_away/guttersite/office)
 "hY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3766,8 +3587,7 @@
 /area/tether_away/guttersite/unexplored)
 "ij" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3824,8 +3644,7 @@
 /area/tether_away/guttersite/unexplored)
 "is" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3842,8 +3661,7 @@
 /area/tether_away/guttersite/office)
 "it" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -3859,8 +3677,7 @@
 /area/tether_away/guttersite/office)
 "iv" = (
 /obj/structure/window/basic{
-	dir = 8;
-	icon_state = "window"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
@@ -3887,8 +3704,7 @@
 /area/tether_away/guttersite/office)
 "iy" = (
 /obj/structure/window/basic{
-	dir = 8;
-	icon_state = "window"
+	dir = 8
 	},
 /obj/machinery/papershredder,
 /turf/simulated/floor/tiled/eris/white/monofloor,
@@ -3927,8 +3743,7 @@
 /area/tether_away/guttersite/office)
 "iF" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 4;
-	icon_state = "bay_comfychair_preview"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
@@ -3938,8 +3753,7 @@
 /area/tether_away/guttersite/office)
 "iH" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
@@ -3947,8 +3761,7 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 8;
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -4005,8 +3818,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 8;
-	icon_state = "rwindow"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -4015,8 +3827,7 @@
 	frequency = 1276;
 	id_tag = "guttersite_lshuttle";
 	name = "Airlock controller";
-	pixel_x = -25;
-	pixel_y = 0
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -4030,16 +3841,14 @@
 /area/tether_away/guttersite/unexplored)
 "iT" = (
 /obj/structure/bed/chair/office/dark{
-	dir = 4;
-	icon_state = "officechair_dark"
+	dir = 4
 	},
 /obj/effect/landmark/corpse/clown,
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
 "iU" = (
 /obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/vault)
@@ -4066,8 +3875,7 @@
 /area/tether_away/guttersite/walkway)
 "ja" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 4;
-	icon_state = "bay_comfychair_preview"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/bridge)
@@ -4077,8 +3885,7 @@
 /area/tether_away/guttersite/bridge)
 "jc" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/bridge)
@@ -4110,8 +3917,7 @@
 "ji" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
@@ -4233,13 +4039,10 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/walkway)
@@ -4324,8 +4127,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 8;
-	pixel_x = 25;
-	pixel_y = 0
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -4398,8 +4200,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -4417,22 +4218,19 @@
 "jZ" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 6;
-	icon_state = "intact"
+	dir = 6
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
 "ka" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 4;
-	icon_state = "bay_comfychair_preview"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/tether_away/guttersite/commons)
 "kb" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/tether_away/guttersite/commons)
@@ -4527,7 +4325,6 @@
 "kq" = (
 /obj/structure/sink{
 	dir = 8;
-	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 8
 	},
@@ -4594,8 +4391,7 @@
 /area/tether_away/guttersite/commons)
 "kB" = (
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 4;
-	icon_state = "bay_comfychair_preview"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/commons)
@@ -4624,8 +4420,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4;
-	icon_state = "map_vent_out"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -4676,12 +4471,10 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	icon_state = "map"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden{
-	dir = 4;
-	icon_state = "map"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 1;
@@ -4705,8 +4498,7 @@
 /area/tether_away/guttersite/teleporter)
 "kL" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1;
-	icon_state = "map_vent_out"
+	dir = 1
 	},
 /obj/structure/table/darkglass,
 /obj/structure/window/basic,
@@ -4820,7 +4612,6 @@
 "la" = (
 /obj/structure/sink{
 	dir = 8;
-	icon_state = "sink";
 	pixel_x = -12;
 	pixel_y = 8
 	},
@@ -4828,8 +4619,7 @@
 /area/tether_away/guttersite/medbay)
 "lb" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/machinery/vending/engivend,
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -4952,8 +4742,7 @@
 	},
 /obj/structure/window/basic,
 /obj/structure/bed/chair/bay/comfy/black{
-	dir = 8;
-	icon_state = "bay_comfychair_preview"
+	dir = 8
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/storage)
@@ -4974,8 +4763,7 @@
 /area/tether_away/guttersite/vault)
 "lE" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 4;
-	icon_state = "map"
+	dir = 4
 	},
 /turf/simulated/floor/plating/eris/under,
 /area/tether_away/guttersite/atmos)
@@ -4985,17 +4773,9 @@
 /area/tether_away/guttersite/office)
 "lG" = (
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /turf/simulated/floor/plating/eris/under,
-/area/tether_away/guttersite/security)
-"lH" = (
-/obj/machinery/light{
-	dir = 8;
-	icon_state = "tube1"
-	},
-/turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
 "lI" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/blue{
@@ -5235,15 +5015,13 @@
 /area/tether_away/guttersite/atmos)
 "mt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -5258,8 +5036,7 @@
 /area/tether_away/guttersite/bridge)
 "mu" = (
 /obj/structure/window/basic{
-	dir = 4;
-	icon_state = "window"
+	dir = 4
 	},
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/eris/white/monofloor,
@@ -5394,7 +5171,6 @@
 /obj/machinery/airlock_sensor{
 	frequency = 1276;
 	id_tag = "guttersite_lshuttle_sensor";
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -5403,8 +5179,7 @@
 /area/tether_away/guttersite/docking)
 "mJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -5436,8 +5211,7 @@
 /area/tether_away/guttersite/bridge)
 "mO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 6;
-	icon_state = "intact"
+	dir = 6
 	},
 /obj/structure/table/darkglass,
 /obj/item/weapon/paper_bin,
@@ -5481,12 +5255,10 @@
 /area/tether_away/guttersite/unexplored)
 "mT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10;
-	icon_state = "intact-supply"
+	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9;
-	icon_state = "intact-scrubbers"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/vault)
@@ -5538,8 +5310,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -5554,12 +5325,10 @@
 /area/tether_away/guttersite/unexplored)
 "ne" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	icon_state = "intact-supply"
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9;
-	icon_state = "intact-scrubbers"
+	dir = 9
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/office)
@@ -5646,8 +5415,7 @@
 /area/tether_away/guttersite/security)
 "nx" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4;
-	icon_state = "map_vent_out"
+	dir = 4
 	},
 /obj/machinery/light{
 	dir = 8
@@ -5656,15 +5424,13 @@
 /area/tether_away/guttersite/security)
 "ny" = (
 /obj/structure/bed/chair/office/dark{
-	dir = 8;
-	icon_state = "officechair_dark"
+	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/structure/cable/cyan{
 	d1 = 4;
@@ -5686,15 +5452,13 @@
 /area/tether_away/guttersite/docking)
 "nB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 5;
-	icon_state = "intact"
+	dir = 5
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -5718,15 +5482,13 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /obj/machinery/light{
-	dir = 4;
-	icon_state = "tube1"
+	dir = 4
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
 "nE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -5741,22 +5503,19 @@
 	frequency = 1990;
 	id_tag = "guttersite_mshuttle";
 	name = "Airlock controller";
-	pixel_x = -25;
-	pixel_y = 0
+	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
 "nG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 10;
-	icon_state = "intact"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -5780,7 +5539,6 @@
 /obj/machinery/airlock_sensor{
 	frequency = 1990;
 	id_tag = "guttersite_mshuttle_sensor";
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /obj/effect/map_helper/airlock/sensor/chamber_sensor,
@@ -5798,8 +5556,7 @@
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
-	dir = 8;
-	icon_state = "rwindow"
+	dir = 8
 	},
 /obj/structure/window/reinforced{
 	dir = 4
@@ -5834,8 +5591,7 @@
 	icon_state = "4-8"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4;
-	icon_state = "intact-supply"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
@@ -5850,8 +5606,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1;
-	icon_state = "map-supply"
+	dir = 1
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -5873,9 +5628,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/walkway)
@@ -5886,8 +5639,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 8;
-	pixel_x = 25;
-	pixel_y = 0
+	pixel_x = 25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -5899,12 +5651,10 @@
 /area/tether_away/guttersite/security)
 "nT" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9;
-	icon_state = "intact-scrubbers"
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	icon_state = "intact-supply"
+	dir = 9
 	},
 /obj/structure/cable/cyan{
 	icon_state = "1-8"
@@ -5915,7 +5665,6 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -5923,7 +5672,6 @@
 "nV" = (
 /obj/machinery/alarm/alarms_hidden{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -5931,13 +5679,11 @@
 "nW" = (
 /obj/machinery/alarm/alarms_hidden{
 	dir = 4;
-	icon_state = "alarm0";
 	pixel_x = -25
 	},
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -5946,8 +5692,7 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 8;
-	pixel_x = -24;
-	pixel_y = 0
+	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -5956,8 +5701,7 @@
 	dir = 10
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10;
-	icon_state = "intact-scrubbers"
+	dir = 10
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -5966,8 +5710,7 @@
 	dir = 4
 	},
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/machinery/alarm{
 	alarms_hidden = 1;
@@ -5977,12 +5720,10 @@
 /area/tether_away/guttersite/docking)
 "oa" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
-	dir = 8;
-	icon_state = "intact"
+	dir = 8
 	},
 /obj/machinery/light{
-	dir = 1;
-	icon_state = "tube1"
+	dir = 1
 	},
 /obj/machinery/alarm{
 	alarms_hidden = 1;
@@ -5992,8 +5733,7 @@
 /area/tether_away/guttersite/docking)
 "ob" = (
 /obj/structure/bed/chair/office/dark{
-	dir = 4;
-	icon_state = "officechair_dark"
+	dir = 4
 	},
 /mob/living/simple_mob/humanoid/merc/ranged/laser{
 	faction = "wolfgirl"
@@ -6004,9 +5744,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/security)
@@ -6056,8 +5794,7 @@
 /area/tether_away/guttersite/security)
 "oi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9;
-	pixel_y = 0
+	dir = 9
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -6077,9 +5814,7 @@
 /obj/machinery/alarm{
 	alarms_hidden = 1;
 	dir = 4;
-	icon_state = "alarm0";
-	pixel_x = -22;
-	pixel_y = 0
+	pixel_x = -22
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
 /area/tether_away/guttersite/docking)
@@ -6101,8 +5836,7 @@
 /area/tether_away/guttersite/docking)
 "on" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -6114,8 +5848,7 @@
 /area/tether_away/guttersite/docking)
 "oo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4;
-	icon_state = "intact-scrubbers"
+	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 8
@@ -6127,7 +5860,6 @@
 /obj/machinery/firealarm{
 	alarms_hidden = 1;
 	dir = 1;
-	pixel_x = 0;
 	pixel_y = -25
 	},
 /turf/simulated/floor/tiled/eris/dark/gray_perforated,
@@ -6177,13 +5909,32 @@
 	name = "exterior access button";
 	pixel_x = -5;
 	pixel_y = -26;
-	req_one_access = list();
-	step_x = 0
+	req_one_access = list()
 	},
 /turf/simulated/floor/plating/eris/under/airless,
 /area/tether_away/guttersite/docking)
 
 (1,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -6466,8 +6217,48 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 "}
 (3,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -6750,8 +6541,48 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 "}
 (5,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -6901,6 +6732,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -7036,6 +6887,26 @@ aa
 aa
 "}
 (7,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -7184,6 +7055,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ad
 cq
@@ -7320,6 +7211,26 @@ aa
 aa
 "}
 (9,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -7469,6 +7380,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -7604,6 +7535,26 @@ aa
 aa
 "}
 (11,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -7763,6 +7714,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ag
 ad
@@ -7888,6 +7859,26 @@ aa
 aa
 "}
 (13,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -8042,6 +8033,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 lM
 ag
@@ -8172,6 +8183,26 @@ aa
 aa
 "}
 (15,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -8355,6 +8386,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 ad
@@ -8456,6 +8507,26 @@ aa
 aa
 "}
 (17,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -8624,6 +8695,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -8740,6 +8831,26 @@ aa
 aa
 "}
 (19,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -8882,6 +8993,26 @@ aa
 aa
 "}
 (20,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9033,6 +9164,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -9166,6 +9317,26 @@ aa
 aa
 "}
 (22,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9320,6 +9491,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 ad
@@ -9450,6 +9641,26 @@ aa
 aa
 "}
 (24,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9621,6 +9832,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 aa
@@ -9734,6 +9965,26 @@ aa
 aa
 "}
 (26,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -9882,6 +10133,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 ad
@@ -10024,6 +10295,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 lM
@@ -10160,6 +10451,26 @@ aa
 aa
 "}
 (29,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10321,6 +10632,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 ag
@@ -10444,6 +10775,26 @@ aa
 aa
 "}
 (31,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10619,6 +10970,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aB
 aE
 aG
@@ -10728,6 +11099,26 @@ aa
 aa
 "}
 (33,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -10883,6 +11274,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ag
 ad
@@ -11012,6 +11423,26 @@ aa
 aa
 "}
 (35,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -11184,6 +11615,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ac
 ac
 ac
@@ -11296,6 +11747,26 @@ aa
 aa
 "}
 (37,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -11468,6 +11939,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ac
 ac
 ac
@@ -11580,6 +12071,26 @@ aa
 aa
 "}
 (39,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -11744,6 +12255,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 aa
@@ -11885,6 +12416,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ad
 ad
@@ -11970,7 +12521,7 @@ fw
 gz
 fw
 fu
-fx
+nw
 if
 fw
 jp
@@ -12006,6 +12557,26 @@ aa
 aa
 "}
 (42,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -12170,6 +12741,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 aa
@@ -12245,7 +12836,7 @@ ad
 fu
 ly
 fw
-lH
+gY
 fw
 fw
 jX
@@ -12290,6 +12881,26 @@ aa
 aa
 "}
 (44,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -12385,7 +12996,7 @@ ad
 ad
 ad
 fu
-fx
+nw
 fw
 fw
 gd
@@ -12432,6 +13043,26 @@ aa
 aa
 "}
 (45,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -12601,6 +13232,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ab
 ac
 ac
@@ -12716,6 +13367,26 @@ aa
 aa
 "}
 (47,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -12885,6 +13556,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ac
 ac
 ac
@@ -13000,6 +13691,26 @@ aa
 aa
 "}
 (49,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -13168,6 +13879,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ac
 ac
 ac
@@ -13284,6 +14015,26 @@ aa
 aa
 "}
 (51,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -13452,6 +14203,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ac
 ac
 ac
@@ -13527,7 +14298,7 @@ fw
 fu
 fw
 fw
-lH
+gY
 fw
 fw
 fw
@@ -13568,6 +14339,26 @@ aa
 aa
 "}
 (53,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -13667,7 +14458,7 @@ aa
 fu
 fu
 fu
-fx
+nw
 fw
 fw
 fw
@@ -13710,6 +14501,26 @@ aa
 aa
 "}
 (54,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -13878,6 +14689,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ac
 ac
 ab
@@ -13994,6 +14825,26 @@ aa
 aa
 "}
 (56,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -14162,6 +15013,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ac
 ac
 ab
@@ -14278,6 +15149,26 @@ aa
 aa
 "}
 (58,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -14445,6 +15336,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ac
 ac
@@ -14562,6 +15473,26 @@ aa
 aa
 "}
 (60,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -14729,6 +15660,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 ac
@@ -14871,6 +15822,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 ab
@@ -14988,6 +15959,26 @@ aa
 aa
 "}
 (63,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -15156,6 +16147,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 ac
@@ -15272,6 +16283,26 @@ aa
 aa
 "}
 (65,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -15440,6 +16471,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ac
@@ -15556,6 +16607,26 @@ aa
 aa
 "}
 (67,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -15724,6 +16795,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ag
 ag
@@ -15840,6 +16931,26 @@ aa
 aa
 "}
 (69,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -16008,6 +17119,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ag
 ag
@@ -16124,6 +17255,26 @@ aa
 aa
 "}
 (71,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -16292,6 +17443,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ag
 ag
@@ -16408,6 +17579,26 @@ aa
 aa
 "}
 (73,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -16577,6 +17768,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -16692,6 +17903,26 @@ aa
 aa
 "}
 (75,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -16862,6 +18093,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -16976,6 +18227,26 @@ aa
 aa
 "}
 (77,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -17146,6 +18417,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ag
 ag
@@ -17260,6 +18551,26 @@ aa
 aa
 "}
 (79,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -17431,6 +18742,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -17544,6 +18875,26 @@ aa
 aa
 "}
 (81,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -17717,6 +19068,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ac
@@ -17828,6 +19199,26 @@ eE
 eE
 "}
 (83,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -18005,6 +19396,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -18112,6 +19523,26 @@ eE
 eE
 "}
 (85,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -18323,6 +19754,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ab
 ab
 ab
@@ -18396,6 +19847,26 @@ eE
 eE
 "}
 (87,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -18607,6 +20078,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ab
 ab
 ab
@@ -18680,6 +20171,26 @@ eE
 eE
 "}
 (89,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -18853,6 +20364,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -18964,6 +20495,26 @@ eE
 eE
 "}
 (91,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -19106,6 +20657,26 @@ eE
 eE
 "}
 (92,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -19298,6 +20869,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ag
 ag
@@ -19390,6 +20981,26 @@ eE
 eE
 "}
 (94,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -19598,6 +21209,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ab
 ab
 ab
@@ -19674,6 +21305,26 @@ eE
 eE
 "}
 (96,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -19859,6 +21510,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 aa
@@ -19958,6 +21629,26 @@ eE
 eE
 "}
 (98,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20142,6 +21833,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -20242,6 +21953,26 @@ eE
 eE
 "}
 (100,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20412,6 +22143,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 af
 ae
 aa
@@ -20526,6 +22277,26 @@ eE
 eE
 "}
 (102,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20694,6 +22465,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ae
 ai
 ah
@@ -20810,6 +22601,26 @@ eE
 eE
 "}
 (104,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -20977,6 +22788,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ah
 ap
 ap
@@ -21094,6 +22925,26 @@ eE
 eE
 "}
 (106,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -21261,6 +23112,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ah
 ap
 am
@@ -21378,6 +23249,26 @@ eE
 eE
 "}
 (108,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -21545,6 +23436,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ah
 ap
 ap
@@ -21662,6 +23573,26 @@ eE
 eE
 "}
 (110,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -21830,6 +23761,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aj
 aj
 ah
@@ -21972,6 +23923,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aj
 aj
 aj
@@ -22088,6 +24059,26 @@ eE
 eE
 "}
 (113,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -22290,6 +24281,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ad
 ad
 ad
@@ -22372,6 +24383,26 @@ eE
 eE
 "}
 (115,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -22574,6 +24605,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -22656,6 +24707,26 @@ eE
 eE
 "}
 (117,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -22858,6 +24929,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -23000,6 +25091,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -23082,6 +25193,26 @@ eE
 eE
 "}
 (120,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -23285,6 +25416,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -23366,6 +25517,26 @@ eE
 eE
 "}
 (122,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -23570,6 +25741,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -23712,6 +25903,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -23792,6 +26003,26 @@ eE
 eE
 "}
 (125,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -23997,6 +26228,26 @@ aa
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -24076,6 +26327,26 @@ eE
 eE
 "}
 (127,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa
@@ -24220,6 +26491,26 @@ eE
 (128,1,1) = {"
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ad
@@ -24360,6 +26651,26 @@ eE
 eE
 "}
 (129,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 ag
 ag
@@ -24503,6 +26814,26 @@ eE
 "}
 (130,1,1) = {"
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ad
 ad
@@ -24644,6 +26975,26 @@ eE
 eE
 "}
 (131,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 ag
 ad
@@ -24787,6 +27138,26 @@ eE
 "}
 (132,1,1) = {"
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ad
 mU
@@ -24928,6 +27299,26 @@ eE
 eE
 "}
 (133,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 ag
 ad
@@ -25071,6 +27462,26 @@ eE
 "}
 (134,1,1) = {"
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ad
 mU
@@ -25212,6 +27623,26 @@ eE
 eE
 "}
 (135,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 ag
 ad
@@ -25355,6 +27786,26 @@ eE
 "}
 (136,1,1) = {"
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ad
 ad
@@ -25497,6 +27948,26 @@ eE
 "}
 (137,1,1) = {"
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 mS
@@ -25638,6 +28109,26 @@ eE
 eE
 "}
 (138,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 ag
@@ -25783,6 +28274,26 @@ eE
 aa
 aa
 aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 ag
 ag
 ag
@@ -25922,6 +28433,3266 @@ eE
 eE
 "}
 (140,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(141,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(142,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(143,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(144,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(145,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(146,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(147,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(148,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(149,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(150,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(151,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(152,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(153,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(154,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(155,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(156,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(157,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(158,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(159,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+eE
+"}
+(160,1,1) = {"
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
+aa
 aa
 aa
 aa

@@ -14,7 +14,7 @@
 		"Wolpin", "Saru", "Sparra")
 
 	spawn_flags = SPECIES_CAN_JOIN
-	wikilink="https://wiki.vore-station.net/Promethean"
+	wikilink="https://yawn.izac.live/Promethean" //YW EDIT
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	color_mult = 1

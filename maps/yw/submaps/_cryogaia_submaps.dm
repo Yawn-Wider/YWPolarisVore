@@ -115,7 +115,7 @@
 /datum/map_template/cryogaia_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
 	desc = "The Virgo 3 Debris Field away mission."
-	mappath = 'maps/yw/submaps/space/debrisfield.dmm'
+	mappath = 'space/debrisfield.dmm'
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_debrisfield
 
 /datum/map_template/cryogaia_lateload/away_debrisfield/on_map_loaded(z)

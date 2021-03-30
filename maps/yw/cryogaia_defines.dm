@@ -184,7 +184,7 @@
 	unit_test_z_levels = list(2,4,5,6)
 
 	lateload_z_levels = list(
-		list("Alien Ship - Z1 Ship"),
+		//list("Alien Ship - Z1 Ship"),
 		list("Asteroid Belt 1","Asteroid Belt 2"),
 		list("Offmap Ship - Talon Z1","Offmap Ship - Talon Z2"),
 		list("Snow plains"),

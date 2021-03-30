@@ -278,7 +278,6 @@
 /area/tether_away/alienship)
 "bP" = (
 /obj/structure/prop/alien/computer{
-	icon_state = "console-c";
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/alien,
@@ -291,7 +290,6 @@
 /area/tether_away/alienship)
 "bR" = (
 /obj/structure/prop/alien/computer{
-	icon_state = "console-c";
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/alien,
@@ -385,21 +383,18 @@
 /area/tether_away/alienship)
 "cl" = (
 /obj/structure/prop/alien/computer/camera{
-	icon_state = "camera";
 	dir = 1
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/tether_away/alienship)
 "cm" = (
 /obj/structure/prop/alien/computer/camera{
-	icon_state = "camera";
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/alien,
 /area/tether_away/alienship)
 "cn" = (
 /obj/structure/prop/alien/computer/camera{
-	icon_state = "camera";
 	dir = 8
 	},
 /turf/simulated/shuttle/floor/alien,
@@ -556,6 +551,10 @@
 /obj/item/weapon/storage/firstaid,
 /turf/simulated/shuttle/floor/alien,
 /area/tether_away/alienship)
+"ss" = (
+/obj/effect/shuttle_landmark/premade/excursion/alienship,
+/turf/simulated/shuttle/floor/alienplating,
+/area/shuttle/excursion/away_alienship)
 "us" = (
 /obj/away_mission_init/alienship/door_w2e,
 /obj/away_mission_init/alienship/door_e2w,
@@ -10441,7 +10440,7 @@ ah
 ah
 ah
 ah
-ah
+ss
 ah
 ah
 ah

@@ -101,7 +101,7 @@ export class NanoMap extends Component {
     
     const mapUrl = config.map + "_nanomap_z" + config.mapZLevel + ".png";
     // (x * zoom), x Needs to be double the turf- map size. (for virgo, 140x140)
-    const mapSize = (320 * zoom) + 'px'; //YW EDIT
+    const mapSize = (320 * zoom) + 'px'; // YW EDIT
     const newStyle = {
       width: mapSize,
       height: mapSize,

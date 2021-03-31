@@ -4038,6 +4038,16 @@
 	icon_state = "dark"
 	},
 /area/tdome)
+"sK" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/passive/mimepet,
+/turf/unsimulated/floor{
+	icon_state = "steel"
+	},
+/area/centcom/command)
 "sL" = (
 /obj/structure/table/rack,
 /obj/item/weapon/reagent_containers/spray/cleaner{
@@ -10257,6 +10267,16 @@
 	icon_state = "steel"
 	},
 /area/centcom/specops)
+"Uw" = (
+/obj/effect/floor_decal/corner/yellow/diagonal,
+/obj/effect/floor_decal/corner/blue/diagonal{
+	dir = 4
+	},
+/mob/living/simple_mob/animal/passive/honkpet,
+/turf/unsimulated/floor{
+	icon_state = "steel"
+	},
+/area/centcom/command)
 "Ux" = (
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
@@ -25180,7 +25200,7 @@ ON
 ON
 kJ
 ON
-ON
+Uw
 RM
 Dn
 IO
@@ -25342,7 +25362,7 @@ ON
 ON
 iL
 ON
-ON
+sK
 RM
 ww
 IO

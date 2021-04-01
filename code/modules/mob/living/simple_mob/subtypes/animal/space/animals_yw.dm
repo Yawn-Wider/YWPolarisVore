@@ -221,6 +221,7 @@
 	attack_sharp = 1
 	melee_damage_lower = 15
 	melee_damage_upper = 20
+	butchery_loot = list(/obj/item/stack/animalhide = 6)
 
 	ai_holder_type = /datum/ai_holder/simple_mob/snowbull
 

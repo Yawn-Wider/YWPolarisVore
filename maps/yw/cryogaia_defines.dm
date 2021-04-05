@@ -11,18 +11,18 @@
 #define Z_LEVEL_CRYOGAIA_RESIDENTIAL	10
 #define Z_LEVEL_ROGUEMINE_1				11
 #define Z_LEVEL_ROGUEMINE_2				12
-#define Z_LEVEL_PLAINS					13
-#define Z_LEVEL_BEACH					14
-#define Z_LEVEL_BEACH_CAVE				15
+#define Z_LEVEL_OFFMAP1					13
+#define Z_LEVEL_OFFMAP2					14
+#define Z_LEVEL_PLAINS					15
 #define Z_LEVEL_UNDERDARK				16
-#define Z_LEVEL_AEROSTAT_SURFACE		17
-#define Z_LEVEL_AEROSTAT				18
-#define Z_LEVEL_DEBRISFIELD				19
-#define Z_LEVEL_GUTTERSITE				20
-#define Z_LEVEL_FUELDEPOT				21
-#define Z_LEVEL_GATEWAY					22
-#define Z_LEVEL_OFFMAP1					23
-#define Z_LEVEL_OFFMAP2					24
+#define Z_LEVEL_BEACH					17
+#define Z_LEVEL_BEACH_CAVE				18
+#define Z_LEVEL_AEROSTAT				19
+#define Z_LEVEL_AEROSTAT_SURFACE		20
+#define Z_LEVEL_DEBRISFIELD				21
+#define Z_LEVEL_GUTTERSITE				22
+#define Z_LEVEL_FUELDEPOT				23
+#define Z_LEVEL_GATEWAY					24
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"

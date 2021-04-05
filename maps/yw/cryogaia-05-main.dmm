@@ -15344,6 +15344,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery)
+"fXz" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "fXZ" = (
 /obj/item/weapon/stool/padded{
 	pixel_y = 5
@@ -38283,6 +38292,15 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
+"oXi" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "oXx" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -49086,6 +49104,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/server)
+"toC" = (
+/turf/simulated/wall/r_wall,
+/area/borealis2/outdoors/grounds)
 "toE" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/storage)
@@ -55298,6 +55319,13 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
+"vXy" = (
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
+	},
+/obj/effect/floor_decal/snow/floor/edges,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "vXC" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -74077,8 +74105,8 @@ uDf
 uDf
 lta
 tul
-cpw
-cpw
+fXz
+eku
 aiR
 aiR
 vCO
@@ -74088,7 +74116,7 @@ cvG
 aiR
 aiR
 aiR
-cpw
+jpH
 dCU
 wjO
 tCv
@@ -74239,7 +74267,7 @@ uDf
 uDf
 lta
 tul
-cpw
+rRL
 aiR
 aiR
 jKj
@@ -74250,7 +74278,7 @@ hih
 wza
 kKa
 dfQ
-cpw
+jpH
 dCU
 qgC
 iJj
@@ -74401,7 +74429,7 @@ uDf
 uDf
 lta
 tul
-cpw
+rRL
 gUP
 rkM
 lbS
@@ -74412,7 +74440,7 @@ hih
 lbS
 kKa
 dfQ
-cpw
+jpH
 dCU
 uDf
 qhg
@@ -74563,7 +74591,7 @@ uDf
 uDf
 lta
 tul
-cpw
+rRL
 gUP
 bxg
 hih
@@ -74574,7 +74602,7 @@ hih
 lbS
 kKa
 dfQ
-cpw
+jpH
 dCU
 uDf
 msE
@@ -74725,7 +74753,7 @@ uDf
 uDf
 lta
 tul
-cpw
+rRL
 aiR
 aiR
 lDI
@@ -74736,7 +74764,7 @@ hih
 oDP
 kKa
 dfQ
-cpw
+jpH
 dCU
 uDf
 msE
@@ -74887,7 +74915,7 @@ uDf
 mKU
 lta
 tul
-cpw
+rRL
 cpw
 aiR
 aiR
@@ -74898,7 +74926,7 @@ irm
 aiR
 aiR
 aiR
-cpw
+jpH
 dCU
 uDf
 msE
@@ -74906,21 +74934,21 @@ uDf
 uDf
 nKj
 toU
-cpw
-cpw
+fXz
+eku
 uri
 shk
 kFX
-cpw
-cpw
-cpw
-cpw
-cpw
+eku
+eku
+eku
+eku
+eku
 kFX
 dGD
 fFE
-cpw
-cpw
+eku
+vXy
 uDf
 hEM
 dWu
@@ -75049,23 +75077,25 @@ uDf
 uDf
 lta
 tul
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
+oXi
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+fnq
 dCU
 tNQ
 vMb
 uDf
 toU
+fXz
+eku
 cpw
 cpw
 cpw
@@ -75081,9 +75111,7 @@ cpw
 cpw
 cpw
 cpw
-cpw
-cpw
-cpw
+vXy
 hEM
 iZl
 dsc
@@ -75227,7 +75255,7 @@ tNQ
 aHM
 tyD
 tul
-cpw
+fXz
 cpw
 cpw
 cpw
@@ -75245,7 +75273,7 @@ cpw
 cpw
 cpw
 cpw
-cpw
+jpH
 hEM
 hEM
 hEM
@@ -75389,6 +75417,7 @@ lMG
 tyD
 uDf
 tul
+rRL
 cpw
 cpw
 cpw
@@ -75407,8 +75436,7 @@ cpw
 cpw
 cpw
 cpw
-cpw
-cpw
+hvC
 dCU
 ibW
 ibW
@@ -75551,6 +75579,7 @@ msE
 uDf
 uDf
 tul
+rRL
 cpw
 cpw
 cpw
@@ -75569,8 +75598,7 @@ cpw
 cpw
 cpw
 cpw
-cpw
-cpw
+jpH
 dCU
 ibW
 nfR
@@ -75713,6 +75741,7 @@ lGm
 uDf
 uDf
 tul
+rRL
 cpw
 cpw
 cpw
@@ -75731,8 +75760,7 @@ cpw
 cpw
 cpw
 cpw
-cpw
-cpw
+jpH
 dCU
 ibW
 bUF
@@ -75875,6 +75903,7 @@ lGm
 uDf
 uDf
 tul
+rRL
 cpw
 cpw
 cpw
@@ -75893,8 +75922,7 @@ cpw
 cpw
 cpw
 cpw
-cpw
-cpw
+jpH
 dCU
 ibW
 eic
@@ -76037,6 +76065,7 @@ vld
 etu
 pPH
 tul
+rRL
 cpw
 cpw
 cpw
@@ -76055,8 +76084,7 @@ cpw
 cpw
 cpw
 cpw
-cpw
-cpw
+fnq
 dCU
 ibW
 vQE
@@ -76199,6 +76227,7 @@ qsQ
 kFd
 pPH
 tul
+gRi
 cpw
 cpw
 cpw
@@ -76216,8 +76245,7 @@ cpw
 cpw
 cpw
 cpw
-cpw
-cpw
+jpH
 baO
 uDf
 ibW
@@ -76362,6 +76390,8 @@ aZS
 pPH
 uDf
 xxL
+gRi
+jIh
 cpw
 cpw
 cpw
@@ -76377,9 +76407,7 @@ cpw
 cpw
 cpw
 cpw
-cpw
-cpw
-cpw
+fnq
 dCU
 uDf
 ibW
@@ -76526,21 +76554,21 @@ etu
 pPH
 pPH
 nxl
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
-cpw
+gRi
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
+jIh
 vTM
 uDf
 uDf
@@ -81423,7 +81451,7 @@ doR
 doR
 doR
 doR
-doR
+toC
 doR
 doR
 doR

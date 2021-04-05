@@ -63,7 +63,7 @@
 
 	ambiguous_genders = TRUE
 
-	spawn_flags = SPECIES_CAN_JOIN
+	spawn_flags = SPECIES_CAN_JOIN | SPECIES_NO_POSIBRAIN //YW EDIT
 	appearance_flags = HAS_HAIR_COLOR | HAS_SKIN_COLOR | HAS_EYE_COLOR
 	bump_flag = MONKEY
 	swap_flags = MONKEY|SLIME|SIMPLE_ANIMAL
@@ -167,7 +167,7 @@
 	// without parachute, or falling bird without free wings goes splat.
 
 	// Are we landing from orbit, or handcuffed/unconscious/tied to something? 
-	if(planetary || !istype(H) || H.incapacitated())
+	if(planetary || !istype(H) || H.incapacitated(INCAPACITATION_DEFAULT|INCAPACITATION_DISABLED))
 		return ..()
 
 	// Are we landing on a turf? Not sure how this could not be the case, but let's be safe.
@@ -206,8 +206,8 @@
 	// Handled!
 	if(!silent)
 		to_chat(H, SPAN_NOTICE("You catch the air in your wings and greatly slow your fall."))
-		H.visible_message(SPAN_NOTICE("\The [H] glides down from above, landing safely."))
-		H.Stun(2)
+		landing.visible_message(SPAN_NOTICE("\The [H] glides down from above, landing safely."))
+		H.Stun(1)
 		playsound(H, "rustle", 25, 1)
 	return TRUE
 

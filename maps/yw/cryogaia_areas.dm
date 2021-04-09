@@ -172,21 +172,25 @@
 	name = "\improper Dorm 1 Holodeck"
 	icon_state = "dk_yellow"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 
 /area/crew_quarters/sleep/Dorm_3/holo
 	name = "\improper Dorm 3 Holodeck"
 	icon_state = "dk_yellow"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 
 /area/crew_quarters/sleep/Dorm_5/holo
 	name = "\improper Dorm 5 Holodeck"
 	icon_state = "dk_yellow"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 
 /area/crew_quarters/sleep/Dorm_7/holo
 	name = "\improper Dorm 7 Holodeck"
 	icon_state = "dk_yellow"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 
 //
 /area/chapel/monastery
@@ -215,30 +219,39 @@
 /area/holodeck/holodorm/source_basic
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 /area/holodeck/holodorm/source_desert
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 /area/holodeck/holodorm/source_seating
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 /area/holodeck/holodorm/source_beach
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 /area/holodeck/holodorm/source_garden
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 /area/holodeck/holodorm/source_boxing
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 /area/holodeck/holodorm/source_snow
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 /area/holodeck/holodorm/source_space
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 /area/holodeck/holodorm/source_off
 	name = "\improper Holodeck Source"
 	flags = RAD_SHIELDED | BLUE_SHIELDED
+	limit_mob_size = FALSE
 
 // Mining Underdark < does this name really apply anymoore?
 

@@ -22,7 +22,7 @@
 /datum/event/rogue_drone/announce()
 	var/msg
 	var/rng = rand(1,5)
-	//VOREStation Edit Start TFF 16/12/19 - Sif -> Virgo 3b
+	//VOREStation Edit Start
 	//YW EDIT 1/13/2020 - Virgo3b -> Cryogaia
 	switch(rng)
 		if(1)

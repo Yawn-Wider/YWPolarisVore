@@ -208,7 +208,7 @@
 /datum/trait/positive/hardfeet
 	name = "Hard Feet"
 	desc = "Makes your nice clawed, scaled, hooved, armored, or otherwise just awfully calloused feet immune to glass shards."
-	cost = 0
+	cost = 1
 	var_changes = list("flags" = NO_MINOR_CUT) //Checked the flag is only used by shard stepping.
 
 /datum/trait/positive/antiseptic_saliva

@@ -198,7 +198,7 @@
 /datum/trait/positive/winged_flight
 	name = "Winged Flight"
 	desc = "Allows you to fly by using your wings. Don't forget to bring them!"
-	cost = 0
+	cost = 1 //YW EDIT
 
 /datum/trait/positive/winged_flight/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)

@@ -22,13 +22,6 @@
 	var_changes = list("metabolic_rate" = 1.4, "hunger_factor" = 0.4, "metabolism" = 0.012) // +40% rate and 8x hunger (Double Teshari)
 	excludes = list(/datum/trait/neutral/metabolism_up, /datum/trait/neutral/metabolism_down)
 
-/datum/trait/neutral/hot_blood
-	name = "Hot-Blooded"
-	desc = "You are too hot at the standard 20C. 18C is more suitable. Rolling down your jumpsuit or being unclothed helps."
-	cost = 0
-	var_changes = list("heat_discomfort_level" = T0C+19)
-	excludes = list(/datum/trait/neutral/cold_blood, /datum/trait/neutral/extreme_cold_blood)
-
 //YW ADDITIONS: START
 /datum/trait/neutral/alcohol_intolerance_basic
 	name = "Liver of Lilies"
@@ -50,7 +43,13 @@
 	var_changes = list("heat_discomfort_level" = T0C)
 	excludes = list(/datum/trait/hot_blood,/datum/trait/cold_blood,/datum/trait/extreme_cold_blood)
 */
-// YW Addition End
+
+/datum/trait/neutral/hot_blood
+	name = "Hot-Blooded"
+	desc = "You are too hot at the standard 20C. 18C is more suitable. Rolling down your jumpsuit or being unclothed helps."
+	cost = 0
+	var_changes = list("heat_discomfort_level" = T0C+19)
+	excludes = list(/datum/trait/neutral/cold_blood, /datum/trait/neutral/extreme_cold_blood)
 
 /datum/trait/neutral/cold_blood
 	name = "Cold-Blooded"

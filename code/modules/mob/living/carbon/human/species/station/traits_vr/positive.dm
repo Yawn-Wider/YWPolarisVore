@@ -7,8 +7,9 @@
 /datum/trait/positive/speed_fast
 	name = "Haste"
 	desc = "Allows you to move faster on average than baseline."
-	cost = 3
+	cost = 3 //YW EDIT
 	var_changes = list("slowdown" = -0.5)
+
 //YW ADDITION: START
 /datum/trait/positive/speed_fast_plus
 	name = "Major Haste"
@@ -16,6 +17,7 @@
 	cost = 5
 	var_changes = list("slowdown" = -1.0)
 //YW ADDITION: END
+
 /datum/trait/positive/hardy
 	name = "Hardy"
 	desc = "Allows you to carry heavy equipment with less slowdown."
@@ -37,6 +39,7 @@
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
 		..(S,H)
 		H.setMaxHealth(S.total_health)
+
 //YW ADDITION: START
 /datum/trait/positive/endurance_very_high
 	name = "Very High Endurance"
@@ -53,10 +56,10 @@
 	desc = "Increases your maximum total hitpoints to 175"
 	cost = 4
 	var_changes = list("total_health" = 175)
-//YW ADDITION: END
 	apply(var/datum/species/S,var/mob/living/carbon/human/H)
 		..(S,H)
 		H.setMaxHealth(S.total_health)
+//YW ADDITION: END
 
 /datum/trait/positive/nonconductive
 	name = "Non-Conductive"
@@ -69,6 +72,7 @@
 	desc = "Decreases your susceptibility to electric shocks by 50%." //YW EDIT
 	cost = 3 //Let us not forget this effects tasers! :YW EDIT
 	var_changes = list("siemens_coefficient" = 0.5) //YW EDIT
+
 //YW ADDITION: START
 /datum/trait/positive/nonconductive_robust
 	name = "Robustly Non-Conductive"
@@ -76,6 +80,7 @@
 	cost = 4 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.25)
 //YW ADDITION: END
+
 /datum/trait/positive/darksight
 	name = "Darksight"
 	desc = "Allows you to see a short distance in the dark."
@@ -117,6 +122,7 @@
 	desc = "Adds 20% resistance to brute damage sources." //YW EDIT
 	cost = 2 //YW EDIT
 	var_changes = list("brute_mod" = 0.8)
+
 //YW ADDITION: START
 /datum/trait/positive/brute_resist_plus
 	name = "Major Brute Resist"
@@ -124,6 +130,7 @@
 	cost = 3
 	var_changes = list("brute_mod" = 0.6) //YW EDIT
 // YW ADDITION: END
+
 /datum/trait/positive/minor_burn_resist
 	name = "Minor Burn Resist"
 	desc = "Adds 10% resistance to burn damage sources." //YW EDIT
@@ -135,6 +142,7 @@
 	desc = "Adds 20% resistance to burn damage sources." //YW EDIT
 	cost = 2 //YW EDIT
 	var_changes = list("burn_mod" = 0.8) //YW EDIT
+
 //YW ADDITIONS: START
 /datum/trait/positive/burn_resist_plus
 	name = "Major Burn Resist"
@@ -172,11 +180,13 @@
 	cost = 2
 	var_changes = list("pain_mod" = 0.8)
 //YW ADDITIONS: END
+
 /datum/trait/positive/photoresistant
-	name = "Photoresistance"
-	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%"
+	name = "Photoresistance" //YW EDIT
+	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 25%" //YW EDIT
 	cost = 1
-	var_changes = list("flash_mod" = 0.75)
+	var_changes = list("flash_mod" = 0.75) //YW EDIT
+
 //YW ADDITION: START
 /datum/trait/positive/photoresistant_plus
 	name = "Major Photoresistance"
@@ -184,6 +194,7 @@
 	cost = 2
 	var_changes = list("flash_mod" = 0.5) //YW EDIT
 //YW ADDITION: END
+
 /datum/trait/positive/winged_flight
 	name = "Winged Flight"
 	desc = "Allows you to fly by using your wings. Don't forget to bring them!"

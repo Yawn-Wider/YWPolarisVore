@@ -95,6 +95,7 @@
 	desc = "Increases damage from burn damage sources by 40%" //YW EDIT
 	cost = -3
 	var_changes = list("burn_mod" = 1.4) //YW EDIT
+
 //YW ADDITIONS: START
 /datum/trait/negative/reduced_biocompat
 	name = "Reduced Biocompatibility"
@@ -126,6 +127,7 @@
 	cost = -2
 	var_changes = list("pain_mod" = 1.5) //this makes you extremely vulnerable to most sources of pain, a stunbaton bop or shotgun beanbag will do around 90 agony, almost enough to drop you in one hit
 //YW ADDITIONS: END
+
 /datum/trait/negative/conductive
 	name = "Conductive"
 	desc = "Increases your susceptibility to electric shocks by 25%" //YW EDIT
@@ -137,6 +139,7 @@
 	desc = "Increases your susceptibility to electric shocks by 50%" //YW EDIT
 	cost = -3 //YW EDIT
 	var_changes = list("siemens_coefficient" = 1.5) //This makes you significantly weaker to tasers. //YW EDIT
+
 //YW ADDITIONS: START
 /datum/trait/negative/conductive_extreme
 	name = "Extremely Conductive"
@@ -144,6 +147,7 @@
 	cost = -4
 	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
 //YW ADDITIONS: END
+
 /datum/trait/negative/haemophilia
 	name = "Haemophilia - Organics only"
 	desc = "When you bleed, you bleed a LOT."
@@ -167,6 +171,7 @@
 	desc = "Your light weight and poor balance make you very susceptible to unhelpful bumping. Think of it like a bowling ball versus a pin."
 	cost = -2
 	var_changes = list("lightweight" = 1)
+
 //YW ADDITIONS: START
 /datum/trait/negative/light_sensitivity
 	name = "Photosensitivity"
@@ -180,6 +185,7 @@
 	cost = -2
 	var_changes = list("flash_mod" = 2.0)
 //YW ADDITIONS: END
+
 /datum/trait/negative/neural_hypersensitivity
 	name = "Neural Hypersensitivity"
 	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Doubles traumatic shock."

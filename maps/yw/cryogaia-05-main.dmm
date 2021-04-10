@@ -4906,6 +4906,11 @@
 /obj/structure/largecrate,
 /turf/simulated/floor,
 /area/storage/auxillary)
+"bWq" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/machinery/shield_gen/external,
+/turf/simulated/floor,
+/area/engineering/storage)
 "bWv" = (
 /obj/effect/floor_decal/snow/floor/edges3{
 	dir = 8
@@ -14107,7 +14112,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/power/shield_generator,
+/obj/machinery/shield_gen,
 /turf/simulated/floor,
 /area/engineering/storage)
 "fxq" = (
@@ -66749,7 +66754,7 @@ rRL
 jpH
 uDf
 toE
-hIL
+bWq
 oaJ
 kQr
 vaV

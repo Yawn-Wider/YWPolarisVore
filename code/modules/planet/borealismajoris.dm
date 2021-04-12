@@ -419,7 +419,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 			if(!T.outdoors)
 				continue // They're indoors, so no need to pelt them with ice.
 
-			// If they have an open umbrella, it'll guard from rain
+			// If they have an open umbrella, it'll guard from hail
 			var/obj/item/weapon/melee/umbrella/U = H.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = H.get_inactive_hand()

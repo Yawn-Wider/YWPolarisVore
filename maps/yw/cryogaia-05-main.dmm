@@ -328,6 +328,7 @@
 	dir = 1;
 	health = 1e+006
 	},
+/obj/machinery/door_timer/cell_1,
 /turf/simulated/floor/plating,
 /area/security/brig)
 "afX" = (
@@ -5681,15 +5682,14 @@
 /turf/simulated/floor/plating,
 /area/security/security_lockerroom)
 "cko" = (
-/obj/machinery/light/small,
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 10
+	dir = 8
 	},
-/obj/structure/cable/green,
-/obj/machinery/power/thermoregulator/cryogaia{
-	dir = 1;
-	pixel_y = -30
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway)
@@ -8031,8 +8031,15 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "ddB" = (
-/turf/simulated/floor/plating/snow/plating,
-/area/security/armoury)
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/floor_decal/snow/floor/edges2,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "deb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -9897,16 +9904,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_c)
 "dRL" = (
-/obj/structure/grille,
-/obj/structure/cable/green{
-	icon_state = "0-4"
+/obj/structure/railing{
+	dir = 1
 	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
-/turf/simulated/floor/plating/snow/plating,
-/area/security/armoury)
+/obj/effect/floor_decal/snow/floor/edges2,
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds)
 "dRY" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/pill_bottle/tramadol,
@@ -10505,7 +10508,7 @@
 	c_tag = "Armory Exterior (Motion)";
 	dir = 8
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/security/armoury)
 "ebZ" = (
 /obj/structure/window/reinforced{
@@ -13876,10 +13879,8 @@
 /turf/simulated/floor/tiled/white,
 /area/security/forensics)
 "ftk" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/turf/simulated/floor/plating/snow/plating,
+/obj/machinery/trailblazer/red,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
 /area/borealis2/outdoors/grounds)
 "ftu" = (
 /obj/machinery/conveyor{
@@ -14463,6 +14464,18 @@
 	},
 /turf/simulated/wall,
 /area/hallway/secondary/entry/docking_lounge)
+"fFJ" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 10
+	},
+/obj/machinery/power/thermoregulator/cryogaia{
+	dir = 1;
+	pixel_y = -30
+	},
+/obj/structure/cable/green,
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/hallway)
 "fFX" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -21208,6 +21221,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/brig)
+"inN" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 6
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/techmaint,
+/area/engineering/hallway)
 "inP" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -36235,7 +36256,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/hallway)
@@ -58135,9 +58156,9 @@
 /turf/simulated/floor,
 /area/storage/tech)
 "xae" = (
-/obj/machinery/porta_turret/stationary,
-/turf/simulated/floor/plating/snow/plating,
-/area/security/armoury)
+/obj/effect/floor_decal/snow/floor/surround,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "xaf" = (
 /obj/machinery/computer/security/telescreen{
 	layer = 4;
@@ -64664,7 +64685,7 @@ uDf
 uDf
 uDf
 uDf
-uDf
+vwb
 uDf
 uDf
 uDf
@@ -66914,7 +66935,7 @@ uDf
 mHJ
 lez
 maK
-vYN
+xae
 toE
 hIL
 oaJ
@@ -67057,17 +67078,17 @@ sbs
 fUY
 dlU
 bmi
-ddB
-ddB
-ddB
+pbz
+pbz
+pbz
 ebT
-ddB
-ddB
-ddB
-xae
-ddB
-dRL
-ftk
+pbz
+pbz
+pbz
+nIt
+pbz
+dSt
+gnM
 xIC
 wOQ
 uDf
@@ -67238,7 +67259,7 @@ rcn
 kUx
 lJS
 cko
-vYN
+fFJ
 toE
 kyO
 kyO
@@ -67400,7 +67421,7 @@ sAx
 nDS
 rOn
 oga
-vYN
+inN
 toE
 bDN
 hRd
@@ -68625,8 +68646,8 @@ cpw
 cpw
 cpw
 jpH
-aHP
-uDf
+ddB
+kwz
 ePy
 vup
 eYw
@@ -68787,8 +68808,8 @@ cpw
 cpw
 cpw
 jpH
-aHP
-uDf
+ddB
+kwz
 ePy
 qkl
 vxP
@@ -68949,8 +68970,8 @@ cpw
 cpw
 cpw
 vdG
-nAF
-uDf
+dRL
+kwz
 ePy
 jio
 ehd
@@ -69111,8 +69132,8 @@ cpw
 cpw
 cpw
 vdG
-nAF
-mKU
+dRL
+ftk
 ePy
 ePy
 ePy
@@ -69273,9 +69294,9 @@ cpw
 cpw
 cpw
 vdG
-nAF
-uDf
-lLS
+dRL
+kwz
+kwz
 sLL
 ePy
 kWT
@@ -77219,14 +77240,14 @@ cFH
 xCe
 uDf
 uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
 xbv
 aOp
 wkW
@@ -77381,14 +77402,14 @@ rSh
 xCe
 xCe
 uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
 xbv
 aOp
 wkW
@@ -77543,14 +77564,14 @@ nUR
 bQo
 xCe
 uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
 xbv
 aOp
 wkW
@@ -77705,14 +77726,14 @@ nUR
 dch
 xCe
 xCe
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
 xbv
 aOp
 wkW
@@ -78030,13 +78051,13 @@ clM
 vOc
 kEb
 uHV
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
 xbv
 xbv
 xbv
@@ -78192,13 +78213,13 @@ clM
 vOc
 kEb
 uHV
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
 uDf
 uDf
 xbv
@@ -78354,13 +78375,13 @@ clM
 vOc
 kEb
 uHV
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
 uDf
 uDf
 uDf
@@ -78516,13 +78537,13 @@ jvI
 vOc
 kEb
 uHV
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
-uDf
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
+uHV
 uDf
 uDf
 uDf
@@ -80297,7 +80318,7 @@ jUO
 vYu
 qLY
 cxZ
-uHV
+uDf
 uDf
 uDf
 uDf

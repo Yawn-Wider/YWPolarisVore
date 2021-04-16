@@ -1236,17 +1236,25 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "aRI" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.9
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/obj/item/weapon/tank/oxygen,
-/obj/item/weapon/storage/belt/utility,
-/obj/item/clothing/mask/breath,
-/obj/random/maintenance/security,
-/obj/random/maintenance/security,
-/obj/random/maintenance/security,
-/obj/random/maintenance/clean,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	name = "south bump";
+	pixel_y = -32
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/security_lower)
 "aRM" = (
@@ -6093,8 +6101,14 @@
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "ebN" = (
-/turf/simulated/mineral/ignore_mapgen/cave,
-/area/security/range)
+/obj/structure/closet/wardrobe/grey,
+/obj/item/weapon/storage/backpack,
+/obj/item/weapon/storage/backpack,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/obj/random/maintenance/clean,
+/turf/simulated/floor/plating,
+/area/maintenance/security_lower)
 "ebY" = (
 /obj/structure/sink{
 	dir = 8;
@@ -12481,25 +12495,17 @@
 /turf/simulated/floor/plating,
 /area/constructionsite/medical)
 "idy" = (
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/structure/cable{
-	d2 = 4;
-	icon_state = "0-4"
-	},
-/obj/machinery/power/apc{
-	name = "south bump";
-	pixel_y = -32
-	},
+/obj/item/weapon/tank/oxygen,
+/obj/item/weapon/storage/belt/utility,
+/obj/item/clothing/mask/breath,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/obj/random/maintenance/clean,
 /turf/simulated/floor/plating,
 /area/maintenance/security_lower)
 "idC" = (
@@ -22217,8 +22223,11 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/library_conference_room)
 "nGG" = (
-/turf/simulated/floor/plating,
-/area/mine/unexplored/lower_rock)
+/obj/machinery/door/blast/regular{
+	id = "clock"
+	},
+/turf/simulated/floor/carpet,
+/area/chapel/office)
 "nGK" = (
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
@@ -31426,10 +31435,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/computer)
-"trw" = (
-/obj/item/device/instrument/harmonica,
-/turf/simulated/floor/plating,
-/area/maintenance/security_lower)
 "trR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
 /turf/simulated/floor/tiled/dark{
@@ -32396,12 +32401,7 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/aft)
 "tSp" = (
-/obj/structure/closet/wardrobe/grey,
-/obj/item/weapon/storage/backpack,
-/obj/item/weapon/storage/backpack,
-/obj/random/maintenance/security,
-/obj/random/maintenance/security,
-/obj/random/maintenance/clean,
+/obj/item/device/instrument/harmonica,
 /turf/simulated/floor/plating,
 /area/maintenance/security_lower)
 "tSx" = (
@@ -32908,7 +32908,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
-/area/tcomfoyer)
+/area/tcommsat/entrance)
 "ugt" = (
 /obj/effect/floor_decal/corner/blue,
 /obj/machinery/alarm{
@@ -36956,12 +36956,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
-"wJk" = (
-/obj/machinery/door/blast/regular{
-	id = "clock"
-	},
-/turf/simulated/floor/carpet,
-/area/chapel/office)
 "wJx" = (
 /obj/random/obstruction,
 /obj/effect/decal/cleanable/dirt,
@@ -43143,7 +43137,7 @@ yfs
 aMq
 wmq
 dAs
-dAs
+mwy
 mwy
 mwy
 mwy
@@ -43305,7 +43299,7 @@ oLx
 oLx
 oLx
 dAs
-dAs
+mwy
 mwy
 mwy
 mwy
@@ -43467,7 +43461,6 @@ dAs
 dAs
 fuq
 jVK
-jVK
 mwn
 mwn
 mwn
@@ -43476,7 +43469,8 @@ mwn
 mwn
 mwn
 mwn
-ebN
+mwn
+mwy
 mwy
 mwy
 mwy
@@ -43629,7 +43623,7 @@ dAs
 kXz
 aEc
 jVK
-jVK
+mwn
 dHv
 azr
 rIk
@@ -43791,7 +43785,7 @@ dAs
 xHB
 dAs
 jVK
-jVK
+mwn
 azr
 azr
 fmr
@@ -43953,7 +43947,7 @@ kPG
 aEc
 dAs
 jVK
-jVK
+mwn
 dHv
 azr
 lFI
@@ -44115,7 +44109,7 @@ myX
 lJI
 aEc
 jVK
-jVK
+mwn
 azr
 azr
 eoD
@@ -44277,7 +44271,7 @@ aEc
 tQz
 cBP
 jVK
-jVK
+mwn
 dHv
 aNJ
 lsB
@@ -44609,7 +44603,7 @@ gEt
 xps
 deP
 gEt
-mwn
+mwy
 mwy
 mwy
 mwy
@@ -45413,7 +45407,7 @@ wEC
 lJI
 vgO
 awE
-jVK
+awE
 gEt
 gEt
 foM
@@ -46220,7 +46214,7 @@ nmL
 xVh
 awE
 awE
-tQz
+aRI
 jVK
 gEt
 gEt
@@ -46383,7 +46377,7 @@ xVh
 awE
 awE
 tQz
-jVK
+ebN
 gEt
 hwg
 faH
@@ -46544,8 +46538,8 @@ fES
 xVh
 xoJ
 xoJ
+tQz
 idy
-jVK
 gEt
 dcW
 faH
@@ -46869,7 +46863,7 @@ kBU
 aEc
 oLx
 tQz
-aRI
+aEc
 gEt
 aMt
 xPo
@@ -47031,7 +47025,7 @@ xVh
 xoJ
 xoJ
 tQz
-trw
+aEc
 gEt
 gEt
 gEt
@@ -49552,9 +49546,9 @@ qDW
 qDW
 pbe
 asH
-asH
-asH
-asH
+mwy
+mwy
+mwy
 mwy
 mwy
 kBN
@@ -49713,10 +49707,10 @@ qDW
 qDW
 qDW
 pbe
-asH
-asH
-nGG
-nGG
+mwy
+mwy
+wwE
+wwE
 wwE
 mwy
 kBN
@@ -49827,7 +49821,7 @@ cZU
 bfg
 pkP
 cZU
-caj
+cZU
 caj
 rUR
 xrq
@@ -49875,10 +49869,10 @@ qDW
 qDW
 qDW
 pbe
-asH
-nGG
-nGG
-nGG
+mwy
+wwE
+wwE
+wwE
 wwE
 wwE
 kBN
@@ -49988,8 +49982,8 @@ iwj
 dex
 uJS
 keZ
-pnK
-xPk
+mxM
+mwy
 mwy
 mwy
 mwy
@@ -50037,10 +50031,10 @@ qDW
 qDW
 qDW
 pbe
-asH
-nGG
-nGG
-nGG
+mwy
+wwE
+wwE
+wwE
 wwE
 mwy
 kBN
@@ -50199,10 +50193,10 @@ qDW
 qDW
 qDW
 pbe
-asH
-nGG
-nGG
-nGG
+mwy
+wwE
+wwE
+wwE
 mwy
 mwy
 kBN
@@ -50361,9 +50355,9 @@ qDW
 qDW
 qDW
 pbe
-asH
-nGG
-nGG
+mwy
+wwE
+wwE
 mwy
 mwy
 mwy
@@ -50523,9 +50517,9 @@ qDW
 qDW
 qDW
 pbe
-asH
-pbe
-nGG
+mwy
+hYh
+wwE
 mwy
 mwy
 mwy
@@ -50686,8 +50680,8 @@ qDW
 qDW
 pbe
 asH
-asH
-asH
+mwy
+mwy
 mwy
 mwy
 mwy
@@ -52251,8 +52245,8 @@ wFo
 vBg
 ugl
 fCK
-ieE
-ieE
+lxA
+lxA
 ieE
 vjW
 gcV
@@ -52411,7 +52405,7 @@ ieE
 ccF
 ieE
 hgm
-lUK
+ieE
 ccF
 ieE
 ieE
@@ -53280,7 +53274,7 @@ pbe
 asH
 asH
 asH
-asH
+mwy
 wBG
 wBG
 wBG
@@ -53442,7 +53436,7 @@ pbe
 asH
 asH
 asH
-asH
+mwy
 mwy
 mwy
 mwy
@@ -56224,7 +56218,7 @@ mwy
 mwy
 mwy
 mwy
-wJk
+kOT
 hYh
 hYh
 mwy
@@ -56386,7 +56380,7 @@ mHL
 mHL
 mHL
 mHL
-ggK
+nGG
 mHL
 mHL
 mwy

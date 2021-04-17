@@ -216,6 +216,13 @@
 						PM.setAttachLayer(queued_piping_layer)
 						if(mode & WRENCH_MODE)
 							do_wrench(PM, user)
+				else if(istype(recipe, /datum/pipe_recipe/air_sensor)) //YW EDIT: aac
+					to_chat(user, "<span class='notice'>You start building a sensor...</span>")
+					if(do_after(user, 2, target = A))
+						activate()
+						var/obj/item/pipe_gsensor/PM = new /obj/item/pipe_gsensor(get_turf(A))
+						if(WRENCH_MODE)
+							do_wrench(PM, user)
 				else if(istype(recipe, /datum/pipe_recipe/pipe))
 					var/datum/pipe_recipe/pipe/R = recipe
 					to_chat(user, "<span class='notice'>You start building a pipe...</span>")

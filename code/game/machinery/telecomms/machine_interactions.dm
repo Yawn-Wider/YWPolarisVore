@@ -46,6 +46,7 @@
 	data["on"] = on
 
 	data["id"] = null
+	data["tag"] = null //YW EDIT: aac
 	data["network"] = null
 	data["autolinkers"] = FALSE
 	data["shadowlink"] = FALSE
@@ -57,6 +58,7 @@
 
 	if(on || interact_offline)
 		data["id"] = id
+		data["tag"] = tag //YW EDIT: aac
 		data["network"] = network
 		data["autolinkers"] = !!LAZYLEN(autolinkers)
 		data["shadowlink"] = !!hide
@@ -68,7 +70,7 @@
 		data["multitool_buffer"] = null
 		if(P && P.buffer)
 			P.update_icon()
-			data["multitool_buffer"] = list("name" = "[P.buffer]", "id" = "[P.buffer.id]")
+			data["multitool_buffer"] = list("name" = "[P.buffer]", "id" = "[P.buffer.id]", "tag" = "[P.buffer.id_tag]") //YW EDIT: aac
 
 		var/i = 0
 		data["linked"] = list()
@@ -341,11 +343,11 @@
 		if("link")
 			if(P)
 				if(P.buffer && P.buffer != src)
-					if(!(src in P.buffer.links))
+					/*if(!(src in P.buffer.links)) //YW EDIT: aac
 						P.buffer.links.Add(src)
 
 					if(!(P.buffer in src.links))
-						src.links.Add(P.buffer)
+						src.links.Add(P.buffer)*/
 
 					set_temp("-% Successfully linked with \ref[P.buffer] [P.buffer.name] %-", "average")
 

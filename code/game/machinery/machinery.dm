@@ -111,6 +111,7 @@ Class Procs:
 	var/clickvol = 40		// volume
 	var/interact_offline = 0 // Can the machine be interacted with while de-powered.
 	var/obj/item/weapon/circuitboard/circuit = null
+	var/list/settagwhitelist = list()//WHITELIST OF VARIABLES THAT THE set_tag HREF CAN MODIFY, DON'T PUT SHIT YOU DON'T NEED ON HERE, AND IF YOU'RE GONNA USE set_tag (format_tag() proc), ADD TO THIS LIST.
 
 	var/speed_process = FALSE			//If false, SSmachines. If true, SSfastprocess.
 
@@ -480,3 +481,118 @@ Class Procs:
 
 /datum/proc/remove_visual(mob/M)
 	return
+
+//YW EDIT: aac start
+/obj/machinery/Topic(href, href_list)
+	if(!interact_offline && (stat & (NOPOWER | BROKEN)))
+		return STATUS_CLOSE
+
+	handle_multitool_topic(href,href_list,usr)
+	add_fingerprint(usr)
+	return 0
+
+/obj/machinery/proc/handle_multitool_topic(var/href, var/list/href_list, var/mob/user)
+	if(!allowed(user))//no, not even HREF exploits
+		return FALSE
+	var/obj/item/device/multitool/P = get_multitool(user)
+	to_chat(world, "[P]")
+	if(P && istype(P,/obj/item/device/multitool))
+		to_chat(world, "LABAXURIAS LABALÁ")
+		var/update_mt_menu = FALSE
+		if(href_list["set_tag"])
+			if(!(href_list["set_tag"] in settagwhitelist))//I see you're trying Href exploits, I see you're failing, I SEE ADMIN WARNING. (seriously though, this is a powerfull HREF, I originally found this loophole, I'm not leaving it in on my PR)
+				message_admins("set_tag HREF (var attempted to edit: [href_list["set_tag"]]) exploit attempted by [key_name_admin(user)] on [src] (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[x];Y=[y];Z=[z]'>JMP</a>)")
+				return FALSE
+			if(!(href_list["set_tag"] in vars))
+				to_chat(usr, "<span class='warning'>Something went wrong: Unable to find [href_list["set_tag"]] in vars!</span>")
+				return FALSE
+			var/current_tag = vars[href_list["set_tag"]]
+			var/newid = copytext(reject_bad_text(input(usr, "Specify the new value", src, current_tag) as null|text),1,MAX_MESSAGE_LEN)
+			if(newid)
+				vars[href_list["set_tag"]] = newid
+				update_mt_menu = TRUE
+
+		if(href_list["unlink"])
+			var/idx = text2num(href_list["unlink"])
+			if(!idx)
+				return FALSE
+
+			var/obj/O = getLink(idx)
+			if(!O)
+				return FALSE
+			if(!canLink(O))
+				to_chat(usr, "<span class='warning'>You can't link with that device.</span>")
+				return FALSE
+
+			if(unlinkFrom(usr, O))
+				to_chat(usr, "<span class='notice'>A green light flashes on \the [P], confirming the link was removed.</span>")
+			else
+				to_chat(usr, "<span class='warning'>A red light flashes on \the [P].  It appears something went wrong when unlinking the two devices.</span>")
+			update_mt_menu = TRUE
+
+		if(href_list["link"])
+			var/obj/O = P.buffer
+			if(!O)
+				return FALSE
+			if(!canLink(O,href_list))
+				to_chat(usr, "<span class='warning'>You can't link with that device.</span>")
+				return FALSE
+			if(isLinkedWith(O))
+				to_chat(usr, "<span class='warning'>A red light flashes on \the [P]. The two devices are already linked.</span>")
+				return FALSE
+
+			if(linkWith(usr, O, href_list))
+				to_chat(usr, "<span class='notice'>A green light flashes on \the [P], confirming the link was added.</span>")
+			else
+				to_chat(usr, "<span class='warning'>A red light flashes on \the [P].  It appears something went wrong when linking the two devices.</span>")
+			update_mt_menu = TRUE
+
+		if(href_list["buffer"])
+			P.buffer = src
+			to_chat(usr, "<span class='notice'>A green light flashes, and the device appears in the multitool buffer.</span>")
+			update_mt_menu = TRUE
+
+		if(href_list["flush"])
+			to_chat(usr, "<span class='notice'>A green light flashes, and the device disappears from the multitool buffer.</span>")
+			P.buffer = null
+			update_mt_menu = TRUE
+
+		var/ret = multitool_topic(usr,href_list,P.buffer)
+		if(ret)
+			update_mt_menu = TRUE
+
+		if(update_mt_menu)
+			update_multitool_menu(usr)
+			return TRUE
+
+/obj/machinery/proc/multitool_topic(var/mob/user,var/list/href_list,var/obj/O)
+	if(href_list["set_id"])
+		if(!("id_tag" in vars) && !("id" in vars))
+			warning("set_id: [type] has no id_tag or id var.")
+		var/newid
+		if("id_tag" in vars)
+			newid = copytext(reject_bad_text(input(usr, "Specify the new ID tag for this machine", src, src:id_tag) as null|text),1,MAX_MESSAGE_LEN)
+			if(newid)
+				src:id_tag = newid
+				return TRUE
+		else if("id" in vars)
+			newid = copytext(reject_bad_text(input(usr, "Specify the new ID tag for this machine", src, src:id) as null|text),1,MAX_MESSAGE_LEN)
+			if(newid)
+				src:id = newid
+				return TRUE
+	if(href_list["set_freq"])
+		if(!("frequency" in vars))
+			warning("set_freq: [type] has no frequency var.")
+			return FALSE
+		var/newfreq=src:frequency
+		if(href_list["set_freq"]!="-1")
+			newfreq=text2num(href_list["set_freq"])
+		else
+			newfreq = input(usr, "Specify a new frequency (GHz). Decimals assigned automatically.", src, src:frequency) as null|num
+		if(newfreq)
+			if(findtext(num2text(newfreq), "."))
+				newfreq *= 10 // shift the decimal one place
+			src:frequency = sanitize_frequency(newfreq, RADIO_LOW_FREQ, RADIO_HIGH_FREQ)
+			return TRUE
+	return FALSE 
+//YW EDIT: aac end

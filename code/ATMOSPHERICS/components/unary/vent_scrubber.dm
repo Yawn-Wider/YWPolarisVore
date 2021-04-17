@@ -17,6 +17,7 @@
 	var/id_tag = null
 	var/frequency = 1439
 	var/datum/radio_frequency/radio_connection
+	var/advcontrol = 0 //YW EDIT: aac
 
 	var/hibernate = 0 //Do we even process?
 	var/scrubbing = 1 //0 = siphoning, 1 = scrubbing
@@ -264,6 +265,9 @@
 		update_icon()
 
 /obj/machinery/atmospherics/unary/vent_scrubber/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+	if(istype(W, /obj/item/device/multitool)) //YW EDIT: aac
+		update_multitool_menu(user)
+		return 1
 	if (!W.is_wrench())
 		return ..()
 	if (!(stat & NOPOWER) && use_power)
@@ -292,3 +296,14 @@
 		. += "A small gauge in the corner reads [round(last_flow_rate, 0.1)] L/s; [round(last_power_draw)] W"
 	else
 		. += "You are too far away to read the gauge."
+
+//YW EDIT: aac start
+/obj/machinery/atmospherics/unary/vent_scrubber/multitool_menu(var/mob/user,var/obj/item/multitool/P)
+	return {"
+	<ul>
+		<li><b>Frequency:</b> <a href="?src=\ref[src];set_freq=-1">[format_frequency(frequency)] GHz</a> (<a href="?src=\ref[src];set_freq=[1439]">Reset</a>)</li>
+		<li>[format_tag("ID Tag","id_tag", "set_id")]</li>
+		<li><b>AAC Acces:</b> <a href="?src=\ref[src];toggleadvcontrol=1">[advcontrol ? "Allowed" : "Blocked"]</a>
+	</ul>
+	"} 
+//YW EDIT: aac end

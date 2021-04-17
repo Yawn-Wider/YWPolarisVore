@@ -18,6 +18,7 @@
 	var/preserve_item = 0 //whether this object is preserved when its owner goes into cryo-storage, gateway, etc
 	var/can_speak = 0 //For MMIs and admin trickery. If an object has a brainmob in its contents, set this to 1 to allow it to speak.
 
+	var/Mtoollink = 0 //YW EDIT: aac
 	var/show_examine = TRUE	// Does this pop up on a mob when the mob is examined?
 
 /obj/Destroy()
@@ -193,3 +194,86 @@
 			if(src)
 				step(src, pick(NORTH,SOUTH,EAST,WEST))
 				sleep(rand(2,4))
+
+//YW EDIT: aac start
+/obj/machinery/proc/multitool_menu(var/mob/user,var/obj/item/multitool/P)
+	return "<b>NO MULTITOOL_MENU!</b>"
+
+/obj/machinery/proc/linkWith(var/mob/user, var/obj/buffer, var/link/context)
+	return 0
+
+/obj/machinery/proc/unlinkFrom(var/mob/user, var/obj/buffer)
+	return 0
+
+/obj/machinery/proc/canLink(var/obj/O, var/link/context)
+	return 0
+
+/obj/machinery/proc/isLinkedWith(var/obj/O)
+	return 0
+
+/obj/machinery/proc/getLink(var/idx)
+	return null
+
+/obj/machinery/proc/linkMenu(var/obj/O)
+	var/dat=""
+	if(canLink(O, list()))
+		dat += " <a href='?src=\ref[src];link=1'>\[Link\]</a> "
+	return dat
+
+/obj/machinery/proc/format_tag(var/label,var/varname, var/act="set_tag")
+	var/value = vars[varname]
+	if(!value || value=="")
+		value="-----"
+	return "<b>[label]:</b> <a href=\"?src=\ref[src];[act]=[varname]\">[value]</a>"
+
+
+/obj/machinery/proc/update_multitool_menu(mob/user as mob)
+	var/obj/item/device/multitool/P = get_multitool(user)
+
+	if(!istype(P))
+		return 0
+	var/dat = {"<html>
+	<head>
+		<title>[name] Configuration</title>
+		<style type="text/css">
+html,body {
+	font-family:courier;
+	background:#999999;
+	color:#333333;
+}
+a {
+	color:#000000;
+	text-decoration:none;
+	border-bottom:1px solid black;
+}
+		</style>
+	</head>
+	<body>
+		<h3>[name]</h3>
+"}
+	if(allowed(user))//no, assistants, you're not ruining all vents on the station with just a multitool
+		dat += multitool_menu(user,P)
+		if(Mtoollink)
+			if(P)
+				if(P.buffer)
+					var/id = null
+					if("id_tag" in P.buffer.vars)
+						id = P.buffer:id_tag
+					else if("id" in P.buffer.vars)
+						id = P.buffer:id
+					dat += "<p><b>MULTITOOL BUFFER:</b> [P.buffer] [id ? "([id])" : ""]"
+
+					dat += linkMenu(P.buffer)
+
+					if(P.buffer)
+						dat += "<a href='?src=\ref[src];flush=1'>\[Flush\]</a>"
+					dat += "</p>"
+				else
+					dat += "<p><b>MULTITOOL BUFFER:</b> <a href='?src=\ref[src];buffer=1'>\[Add Machine\]</a></p>"
+	else
+		dat += "ACCESS DENIED</a>"
+	dat += "</body></html>"
+	user << browse(dat, "window=mtcomputer")
+	user.set_machine(src)
+	onclose(user, "mtcomputer")
+//YW EDIT: aac end

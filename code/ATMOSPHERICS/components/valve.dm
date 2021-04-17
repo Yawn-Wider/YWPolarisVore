@@ -226,6 +226,7 @@
 	var/frequency = 0
 	var/id = null
 	var/datum/radio_frequency/radio_connection
+	settagwhitelist = list("id") //YW EDIT: aac
 
 /obj/machinery/atmospherics/valve/digital/Destroy()
 	unregister_radio(src, frequency)
@@ -288,6 +289,9 @@
 				open()
 
 /obj/machinery/atmospherics/valve/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+	if(istype(W, /obj/item/device/multitool)) //YW EDIT: aac
+		update_multitool_menu(user)
+		return 1
 	if (!W.is_wrench())
 		return ..()
 	if (istype(src, /obj/machinery/atmospherics/valve/digital) && !src.allowed(user))
@@ -309,3 +313,13 @@
 /obj/machinery/atmospherics/valve/examine(mob/user)
 	. = ..()
 	. += "It is [open ? "open" : "closed"]."
+
+//YW EDIT: aac start
+/obj/machinery/atmospherics/valve/digital/multitool_menu(var/mob/user,var/obj/item/multitool/P)
+	return {"
+		<ul>
+			<li><b>Frequency:</b> <a href="?src=\ref[src];set_freq=-1">[format_frequency(frequency)] GHz</a> (<a href="?src=\ref[src];set_freq=1439">Reset</a>)</li>
+			<li>[format_tag("ID Tag","id","set_id")]</a></li>
+		</ul>
+		"}
+//YW EDIT: aac end

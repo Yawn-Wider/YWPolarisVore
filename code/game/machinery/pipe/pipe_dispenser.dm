@@ -99,6 +99,8 @@
 					created_object = C
 				else if(istype(recipe, /datum/pipe_recipe/meter))
 					created_object = new recipe.pipe_type(loc)
+				else if(istype(recipe, /datum/pipe_recipe/air_sensor)) //YW EDIT: aac
+					created_object = new recipe.pipe_type(loc)
 				else
 					log_runtime(EXCEPTION("Warning: [usr] attempted to spawn pipe recipe type by params [json_encode(params)] ([recipe] [recipe?.type]), but it was not allowed by this machine ([src] [type])"))
 					return

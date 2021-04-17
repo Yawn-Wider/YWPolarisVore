@@ -35,6 +35,7 @@ GLOBAL_LIST_INIT(atmos_pipe_recipes, list(
 		new /datum/pipe_recipe/pipe("Gas Mixer 'T'",		/obj/machinery/atmospherics/trinary/mixer/t_mixer),
 		new /datum/pipe_recipe/pipe("Omni Gas Mixer",		/obj/machinery/atmospherics/omni/mixer),
 		new /datum/pipe_recipe/pipe("Omni Gas Filter",		/obj/machinery/atmospherics/omni/atmos_filter),
+		new /datum/pipe_recipe/air_sensor("Gas Sensor",		/obj/item/pipe_gsensor), //YW EDIT: aac
 	),
 	"Heat Exchange" = list(
 		new /datum/pipe_recipe/pipe("Pipe",					/obj/machinery/atmospherics/pipe/simple/heat_exchanging),
@@ -138,6 +139,19 @@ GLOBAL_LIST_INIT(disposal_pipe_recipes, list(
 	// YW Edit: Add HE pipes to non-paintable objects list.
 	paintable = ispath(path, /obj/machinery/atmospherics/pipe) && !(ispath(path, /obj/machinery/atmospherics/pipe/vent)) && !(ispath(path, /obj/machinery/atmospherics/pipe/simple/heat_exchanging))	// VOREStation Add
 
+//YW EDIT: aac start
+/datum/pipe_recipe/air_sensor
+	dirtype = PIPE_ONEDIR
+	icon_state = "gsensor"
+	pipe_type = /obj/item/pipe_gsensor
+
+/datum/pipe_recipe/air_sensor/New(label)
+	name = label
+/*
+/datum/pipe_recipe/air_sensor/Params()
+	return "makesensor=1"
+*/
+//YW EDIT: aac stop
 
 //
 // Subtype for meters

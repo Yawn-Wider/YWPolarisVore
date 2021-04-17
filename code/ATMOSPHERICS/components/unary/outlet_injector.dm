@@ -164,6 +164,9 @@
 	update_icon()
 
 /obj/machinery/atmospherics/unary/outlet_injector/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+	if(istype(W, /obj/item/device/multitool)) //YW EDIT: aac
+		update_multitool_menu(user)
+		return 1
 	if (!W.is_wrench())
 		return ..()
 
@@ -175,3 +178,12 @@
 			"<span class='notice'>You have unfastened \the [src].</span>", \
 			"You hear a ratchet.")
 		deconstruct()
+//YW EDIT: aac start
+/obj/machinery/atmospherics/unary/outlet_injector/multitool_menu(var/mob/user,var/obj/item/multitool/P)
+	return {"
+	<ul>
+		<li><b>Frequency:</b> <a href="?src=\ref[src];set_freq=-1">[format_frequency(frequency)] GHz</a> (<a href="?src=\ref[src];set_freq=[1439]">Reset</a>)</li>
+		<li>[format_tag("ID Tag","id","set_id")]</a></li>
+	</ul>
+"}
+//YW EDIT: aac end

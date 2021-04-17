@@ -36,6 +36,10 @@
 	var/frequency = 0
 	var/id = null
 	var/datum/radio_frequency/radio_connection
+//YW EDIT: aac start
+	var/advcontrol = 0//does this device listen to the AAC
+	settagwhitelist = list("id")
+//YW EDIT: aac end
 
 	var/pressure_checks = PRESSURE_CHECK_EXTERNAL
 	//1: Do not pass external_pressure_bound
@@ -263,6 +267,24 @@
 	spawn(2)
 		broadcast_status()
 	update_icon()
+
+//YW EDIT: aac start
+/obj/machinery/atmospherics/binary/dp_vent_pump/multitool_menu(var/mob/user,var/obj/item/device/multitool/P)
+	return {"
+	<ul>
+		<li><b>Frequency:</b> <a href="?src=\ref[src];set_freq=-1">[format_frequency(frequency)] GHz</a> (<a href="?src=\ref[src];set_freq=[1439]">Reset</a>)</li>
+		<li><b>ID Tag:</b> <a href="?src=\ref[src];set_id=1">[id]</a></li>
+		<li><b>AAC Access:</b> <a href="?src=\ref[src];toggleadvcontrol=1">[advcontrol ? "Allowed" : "Blocked"]</a></li>
+	</ul>
+	"}
+/obj/machinery/atmospherics/binary/dp_vent_pump/multitool_topic(var/mob/user, var/list/href_list, var/obj/O)
+	. = ..()
+	if(.)
+		return .
+	if("toggleadvcontrol" in href_list)
+		advcontrol = !advcontrol
+		return TRUE
+//YW EDIT: aac end
 
 #undef DEFAULT_PRESSURE_DELTA
 

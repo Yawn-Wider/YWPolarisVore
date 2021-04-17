@@ -221,6 +221,8 @@
 	target_types += /obj/effect/decal/cleanable/mucus
 	target_types += /obj/effect/decal/cleanable/dirt
 	target_types += /obj/effect/decal/cleanable/filth
+	target_types += /obj/effect/decal/cleanable/cobweb
+	target_types += /obj/effect/decal/cleanable/cobweb2
 
 	if(blood)
 		target_types += /obj/effect/decal/cleanable/blood

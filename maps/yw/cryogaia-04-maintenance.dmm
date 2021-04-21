@@ -1213,6 +1213,7 @@
 /area/medical/virology)
 "aQM" = (
 /obj/machinery/door/airlock{
+	id_tag = "04lowerpublictoilet2";
 	name = "Unit 2"
 	},
 /turf/simulated/floor/tiled/white,
@@ -2283,10 +2284,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_2)
 "bGj" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
-	},
-/obj/structure/flora/pottedplant/subterranean,
+/obj/structure/closet/firecloset,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
 "bGn" = (
@@ -2421,6 +2419,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
+"bKf" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 6
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbaylower)
 "bKr" = (
 /obj/structure/closet,
 /turf/simulated/floor/tiled/dark,
@@ -2663,7 +2667,8 @@
 /area/medical/biostorage3)
 "bSL" = (
 /obj/machinery/door/airlock{
-	name = "Medical Restroom"
+	id_tag = "04lowermedicaltoliet1";
+	name = "Medical Restroom 1"
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/medical/toilet)
@@ -3644,6 +3649,17 @@
 	},
 /turf/simulated/wall,
 /area/medical/pyschwarde)
+"cvu" = (
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/obj/structure/bed/roller,
+/obj/effect/floor_decal/corner/lime{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbaylower)
 "cvC" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -3652,7 +3668,8 @@
 /area/ai_upload)
 "cwg" = (
 /obj/machinery/door/airlock{
-	name = "Restroom"
+	id_tag = "04atmostoilet2";
+	name = "Restroom 2"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
@@ -3873,9 +3890,6 @@
 /turf/simulated/floor/carpet,
 /area/library)
 "cFM" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 6
-	},
 /obj/machinery/light{
 	dir = 8
 	},
@@ -3980,16 +3994,8 @@
 /turf/simulated/floor,
 /area/maintenance/lowfloor3)
 "cIv" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
-	},
-/obj/structure/bed/roller,
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/medbaylower)
+/turf/simulated/floor,
+/area/medical/virology)
 "cIA" = (
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
@@ -4040,6 +4046,13 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo)
+"cKG" = (
+/obj/effect/floor_decal/corner/lime{
+	dir = 10
+	},
+/obj/structure/flora/pottedplant/subterranean,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbaylower)
 "cKX" = (
 /obj/item/device/geiger/wall{
 	dir = 4;
@@ -4307,6 +4320,7 @@
 /area/maintenance/aft)
 "cRJ" = (
 /obj/machinery/door/airlock{
+	id_tag = "04lowerpublictoilet3";
 	name = "Unit 3"
 	},
 /turf/simulated/floor/tiled/white,
@@ -7231,6 +7245,13 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/machinery/button/remote/airlock{
+	id = "04lowermedicaltoliet1";
+	name = "Bathroom Lock";
+	pixel_x = -21;
+	pixel_y = -9;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/toilet)
 "eLc" = (
@@ -9531,6 +9552,13 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
+"gpk" = (
+/obj/machinery/door/airlock{
+	id_tag = "04lowermedicaltoliet2";
+	name = "Medical Restroom 2"
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/medical/toilet)
 "gqg" = (
 /obj/structure/table/steel,
 /obj/random/medical/pillbottle,
@@ -10871,6 +10899,13 @@
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled,
 /area/vacant/vacant_site/locker)
+"heK" = (
+/obj/structure/medical_stand,
+/obj/effect/floor_decal/corner/lime{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbaylower)
 "heL" = (
 /obj/structure/cable/green{
 	d2 = 8;
@@ -13827,14 +13862,6 @@
 /obj/structure/sign/poster,
 /turf/simulated/wall/titanium,
 /area/borealis2/outdoors/grounds/tower/northwest)
-"iNH" = (
-/obj/structure/closet/l3closet/virology,
-/obj/effect/floor_decal/industrial/warning,
-/obj/machinery/light{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virologyaccess)
 "iNZ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -14093,10 +14120,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "iVX" = (
-/obj/effect/floor_decal/corner/lime/full{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/white,
+/obj/machinery/newscaster,
+/turf/simulated/wall,
 /area/medical/medbaylower)
 "iWc" = (
 /obj/structure/sink/puddle,
@@ -14362,14 +14387,14 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "jeq" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 6
-	},
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
 /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/medical,
 /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/medical,
+/obj/effect/floor_decal/corner/lime/full{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
 "jew" = (
@@ -15062,7 +15087,6 @@
 /turf/simulated/floor/plating,
 /area/vacant/vacant_shop)
 "jza" = (
-/obj/structure/closet/l3closet/virology,
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/white,
 /area/medical/virologyaccess)
@@ -18270,6 +18294,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/grass,
 /area/civilian/atrium/lower)
+"lhx" = (
+/turf/simulated/floor,
+/area/maintenance/medical_lower)
 "lhz" = (
 /obj/item/weapon/storage/box/syringes,
 /obj/structure/table/standard{
@@ -18359,7 +18386,6 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "lkA" = (
-/obj/structure/closet/wardrobe/virology_white,
 /obj/machinery/access_button{
 	command = "cycle_interior";
 	frequency = 1379;
@@ -18372,7 +18398,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/medical/virologyaccess)
 "lkT" = (
@@ -19433,12 +19459,13 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "lPW" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
+/obj/structure/closet/wardrobe/virology_white,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
 	},
-/obj/structure/medical_stand,
 /turf/simulated/floor/tiled/white,
-/area/medical/medbaylower)
+/area/medical/virologyaccess)
 "lQf" = (
 /obj/structure/table/standard,
 /obj/item/weapon/stock_parts/micro_laser,
@@ -19516,6 +19543,22 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen/fish_farm)
 "lSK" = (
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/recreation_area_restroom)
+"lSV" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "04lowerpublictoilet2";
+	name = "Bathroom Lock";
+	pixel_x = -12;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/recreation_area_restroom)
 "lTt" = (
@@ -22282,12 +22325,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
 "nJQ" = (
-/obj/effect/floor_decal/corner/lime{
-	dir = 10
+/obj/machinery/light{
+	dir = 1
 	},
-/obj/structure/closet/firecloset,
+/obj/structure/closet/l3closet/virology,
 /turf/simulated/floor/tiled/white,
-/area/medical/medbaylower)
+/area/medical/virologyaccess)
 "nJV" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/spline/plain{
@@ -24338,9 +24381,9 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
 "oWO" = (
-/obj/machinery/newscaster,
-/turf/simulated/wall,
-/area/medical/medbaylower)
+/obj/structure/closet/l3closet/virology,
+/turf/simulated/floor/tiled/white,
+/area/medical/virologyaccess)
 "oWZ" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable{
@@ -24764,6 +24807,13 @@
 	},
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/machinery/button/remote/airlock{
+	id = "04atmostoilet1";
+	name = "Bathroom Lock";
+	pixel_x = 10;
+	pixel_y = 22;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/engi_wash)
@@ -29141,6 +29191,13 @@
 /obj/random/maintenance/security,
 /turf/simulated/floor/plating,
 /area/maintenance/atmos_control)
+"rVN" = (
+/obj/structure/closet/crate,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/maintenance/medical_lower)
 "rWc" = (
 /obj/machinery/ai_status_display,
 /turf/simulated/wall/r_wall,
@@ -29500,6 +29557,22 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/medbay_emt_storage)
+"sjL" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "04lowerpublictoliet3";
+	name = "Bathroom Lock";
+	pixel_x = -11;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/recreation_area_restroom)
 "sjW" = (
 /obj/machinery/door/airlock{
 	name = "Restroom"
@@ -31917,6 +31990,20 @@
 "tHb" = (
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen/lower)
+"tHc" = (
+/obj/structure/toilet,
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "04lowermedicaltoliet2";
+	name = "Bathroom Lock";
+	pixel_x = -21;
+	pixel_y = -9;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/toilet)
 "tHB" = (
 /turf/simulated/wall,
 /area/crew_quarters/sleep/Dorm_5)
@@ -33367,6 +33454,13 @@
 	},
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/machinery/button/remote/airlock{
+	id = "04lowerpublictoliet1";
+	name = "Bathroom Lock";
+	pixel_x = -11;
+	pixel_y = 22;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/recreation_area_restroom)
@@ -35681,6 +35775,13 @@
 	name = "xeno_spawn";
 	pixel_x = -1
 	},
+/obj/machinery/button/remote/airlock{
+	id = "04atmostoilet2";
+	name = "Bathroom Lock";
+	pixel_x = 10;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/engi_wash)
 "vOy" = (
@@ -37297,6 +37398,14 @@
 "wUI" = (
 /turf/simulated/floor/wood/sif,
 /area/maintenance/blueserg/dorms)
+"wUQ" = (
+/obj/machinery/door/airlock{
+	id_tag = "04atmostoilet1";
+	name = "Restroom 1"
+	},
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/sleep/engi_wash)
 "wUX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -37638,6 +37747,7 @@
 /area/civilian/atrium/lower)
 "xfk" = (
 /obj/machinery/door/airlock{
+	id_tag = "04lowerpublictoilet1";
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/white,
@@ -42965,8 +43075,8 @@ ooM
 dnl
 hbx
 ttU
-ttU
-cOZ
+rVN
+lhx
 aLl
 mbx
 dAs
@@ -43593,7 +43703,7 @@ kyh
 vCq
 kyh
 dEN
-dzL
+lPW
 lkA
 fii
 uRF
@@ -43609,7 +43719,7 @@ hPz
 hPz
 hPz
 hPz
-ttU
+ixT
 ttU
 oKI
 ixT
@@ -43755,8 +43865,8 @@ msO
 kTK
 viB
 dEN
-dzL
-iNH
+nJQ
+jza
 pHJ
 iVv
 dzL
@@ -43917,7 +44027,7 @@ kdY
 xrt
 gZF
 dEN
-dzL
+oWO
 jza
 fgQ
 cOB
@@ -44240,7 +44350,7 @@ dEN
 dEN
 dEN
 dEN
-vpn
+cIv
 dzL
 hdr
 uxB
@@ -44889,7 +44999,7 @@ gBn
 rLg
 fYZ
 twQ
-twQ
+bKf
 cFM
 ycl
 fBi
@@ -45051,8 +45161,8 @@ gBn
 gBn
 fYZ
 twQ
-twQ
-lPW
+heK
+dQv
 bDm
 uAY
 tzT
@@ -45061,7 +45171,7 @@ tzT
 tFK
 tzT
 tzT
-ttU
+ixT
 ixT
 ixT
 ttU
@@ -45213,8 +45323,8 @@ gBn
 gBn
 fYZ
 twQ
-twQ
-cIv
+cvu
+dQv
 ooo
 sIQ
 tzT
@@ -45374,9 +45484,9 @@ gBn
 gBn
 gBn
 fYZ
-twQ
-oWO
+iVX
 tCH
+dQv
 ooo
 cnM
 tzT
@@ -45537,13 +45647,13 @@ nSW
 fYZ
 aFj
 sTB
-twQ
-bGj
+cKG
+dQv
 kch
 qwl
 tzT
-eKQ
-bSL
+tHc
+gpk
 tFK
 tzT
 ixT
@@ -45700,7 +45810,7 @@ iXu
 rmC
 lFh
 jeq
-iVX
+dQv
 ojJ
 nRN
 tzT
@@ -46016,8 +46126,8 @@ vMv
 bLj
 oBX
 wXa
-twQ
-nJQ
+bGj
+tCH
 lRy
 fqJ
 lEB
@@ -49152,7 +49262,7 @@ wQb
 wQb
 cwg
 wQb
-cwg
+wUQ
 wQb
 wQb
 lYu
@@ -56405,9 +56515,9 @@ wSt
 buW
 utG
 buW
-utG
+lSV
 buW
-utG
+sjL
 buW
 kVE
 buW

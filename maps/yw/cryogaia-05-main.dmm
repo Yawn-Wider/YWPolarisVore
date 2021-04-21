@@ -8608,6 +8608,13 @@
 /obj/structure/toilet{
 	dir = 8
 	},
+/obj/machinery/button/remote/airlock{
+	id = "05publictoliet2-1";
+	name = "Bathroom Lock";
+	pixel_x = -12;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/locker/locker_toilet)
 "doR" = (
@@ -10136,6 +10143,13 @@
 	},
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	id = "05securitytoliet2";
+	name = "Bathroom Lock";
+	pixel_x = -12;
+	pixel_y = 22;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/showers)
@@ -17931,6 +17945,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
+"gVP" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	id = "05securitytoliet1";
+	name = "Bathroom Lock";
+	pixel_x = -12;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "gWg" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -20770,6 +20800,13 @@
 /obj/effect/landmark{
 	name = "blobstart"
 	},
+/obj/machinery/button/remote/airlock{
+	id = "05publictoliet2-2";
+	name = "Bathroom Lock";
+	pixel_x = -12;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/locker/locker_toilet)
 "ieo" = (
@@ -21349,6 +21386,7 @@
 /area/crew_quarters/heads/hop)
 "iqZ" = (
 /obj/machinery/door/airlock{
+	id_tag = "05bartoliet2";
 	name = "Unit 2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -22789,11 +22827,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/mob/living/simple_mob/animal/giant_spider{
-	desc = "The HoS's pet spider Lorenzo. He seems to have a piece of grey fabric in his mouth.";
-	faction = "neutral";
-	name = "Lorenzo"
-	},
+/mob/living/simple_mob/animal/giant_spider/lorenzo,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "iWh" = (
@@ -24040,6 +24074,7 @@
 /area/engineering/engine_room)
 "jwW" = (
 /obj/machinery/door/airlock{
+	id_tag = "05securitytoliet1";
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -28326,6 +28361,13 @@
 	dir = 8
 	},
 /obj/structure/toilet,
+/obj/machinery/button/remote/airlock{
+	id = "05bartoliet2";
+	name = "Bathroom Lock";
+	pixel_x = 19;
+	pixel_y = -10;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/barrestroom)
 "lig" = (
@@ -29664,6 +29706,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway)
+"lKr" = (
+/obj/machinery/door/airlock{
+	id_tag = "05publictoliet2";
+	name = "Restroom 2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/hallway/secondary/entry/docking_lounge)
 "lKL" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
@@ -36671,6 +36722,7 @@
 /area/borealis2/outdoors/grounds/checkpoint)
 "opH" = (
 /obj/machinery/door/airlock{
+	id_tag = "05bartoliet1";
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -37779,6 +37831,22 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"oMH" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/machinery/button/remote/airlock{
+	id = "05publictoliet2";
+	name = "Bathroom Lock";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/hallway/secondary/entry/docking_lounge)
 "oMW" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -37793,6 +37861,13 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/machinery/button/remote/airlock{
+	id = "05researchtoliet1";
+	name = "Bathroom Lock";
+	pixel_x = -21;
+	pixel_y = 22;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/research)
@@ -39038,6 +39113,12 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/machinery/button/remote/airlock{
+	id = "05publictoliet1";
+	name = "Bathroom Lock";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/entry/docking_lounge)
 "pkk" = (
@@ -40173,6 +40254,7 @@
 /area/borealis2/outdoors/grounds)
 "pGA" = (
 /obj/machinery/door/airlock{
+	id_tag = "05researchtoliet1";
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -41749,7 +41831,8 @@
 /area/crew_quarters/heads/cmo)
 "qoK" = (
 /obj/machinery/door/airlock{
-	name = "Restroom"
+	id_tag = "05publictoliet1";
+	name = "Restroom 1"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -46471,6 +46554,7 @@
 /area/quartermaster/miningwing)
 "sjv" = (
 /obj/machinery/door/airlock{
+	id_tag = "05publictoliet2-1";
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -54023,6 +54107,7 @@
 /area/engineering/engine_room)
 "vuK" = (
 /obj/machinery/door/airlock{
+	id_tag = "05publictoliet2-2";
 	name = "Unit 2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -60037,6 +60122,7 @@
 /area/rnd/phoronics)
 "xNt" = (
 /obj/machinery/door/airlock{
+	id_tag = "05securitytoliet2";
 	name = "Unit 2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -61290,6 +61376,13 @@
 	},
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/machinery/button/remote/airlock{
+	id = "05bartoliet1";
+	name = "Bathroom Lock";
+	pixel_x = 19;
+	pixel_y = 11;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/barrestroom)
@@ -69826,7 +69919,7 @@ avs
 aDL
 dWB
 jGD
-dWB
+gVP
 jGD
 eUc
 oyJ
@@ -73988,7 +74081,7 @@ pCA
 frS
 xol
 hcK
-pkc
+oMH
 xol
 rux
 oRb
@@ -74151,7 +74244,7 @@ eTE
 xol
 ycC
 kis
-qoK
+lKr
 evl
 gUQ
 iab

@@ -26051,8 +26051,10 @@
 /turf/simulated/wall,
 /area/medical/exam_room)
 "kln" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 5
+/obj/structure/lattice,
+/obj/structure/grille,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
@@ -43211,9 +43213,12 @@
 /turf/simulated/floor/tiled,
 /area/security/airlock)
 "qQv" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 9
+/obj/structure/lattice,
+/obj/structure/grille,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
 	},
+/obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "qQz" = (
@@ -62403,7 +62408,7 @@ cpw
 cpw
 cpw
 cpw
-mes
+cpw
 doR
 lbT
 lbT
@@ -62567,7 +62572,7 @@ cpw
 cpw
 cpw
 doR
-lbT
+doR
 lbT
 lbT
 lbT
@@ -62892,8 +62897,8 @@ cpw
 cpw
 doR
 doR
-lbT
-lbT
+doR
+doR
 lbT
 lbT
 lbT
@@ -63052,7 +63057,7 @@ cpw
 cpw
 cpw
 cpw
-mes
+cpw
 doR
 doR
 doR
@@ -64178,7 +64183,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 cpw
 cpw
 cpw
@@ -64340,7 +64345,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 cpw
 cpw
 cpw
@@ -64502,7 +64507,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 cpw
 cpw
 hjS
@@ -64664,7 +64669,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 igv
 igv
 ejw
@@ -64826,7 +64831,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 iLK
 pVg
 dpk
@@ -64988,7 +64993,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 iLK
 dOS
 smJ
@@ -65150,7 +65155,7 @@ kCt
 doR
 doR
 doR
-kCt
+doR
 iLK
 fps
 nOo
@@ -65312,7 +65317,7 @@ kCt
 doR
 doR
 doR
-kCt
+doR
 iLK
 wMy
 wMy
@@ -65636,7 +65641,7 @@ kCt
 doR
 doR
 doR
-kCt
+doR
 iLK
 mqk
 wMy
@@ -65798,7 +65803,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 iLK
 iLK
 ykY
@@ -65960,7 +65965,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 cpw
 cpw
 cpw
@@ -66284,7 +66289,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 pET
 pET
 pET
@@ -66446,7 +66451,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 uDf
 uDf
 uDf
@@ -68510,9 +68515,9 @@ iVR
 iVR
 bQA
 bQA
-cpw
-fHH
-fHH
+eku
+kln
+qQv
 wDm
 lKL
 wDm
@@ -68674,7 +68679,7 @@ iVR
 bQA
 nEq
 jxG
-cpw
+jpH
 uih
 uDf
 wDm
@@ -68836,7 +68841,7 @@ xOC
 iuY
 oYv
 eAV
-kln
+jss
 uDf
 uDf
 uDf
@@ -68998,7 +69003,7 @@ iVR
 bQA
 xKH
 qNg
-qQv
+hqg
 uDf
 uDf
 uDf
@@ -69160,7 +69165,7 @@ hdu
 hPf
 oIW
 qNg
-kln
+jss
 uDf
 uDf
 uDf
@@ -69320,9 +69325,9 @@ qzU
 rxi
 xOC
 iuY
-qNg
-qNg
-qQv
+rnQ
+rnQ
+bgO
 uDf
 uDf
 uDf

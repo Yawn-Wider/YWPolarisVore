@@ -1169,6 +1169,16 @@
 "fX" = (
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom2)
+"ga" = (
+/obj/structure/table/leadreinforcedwood,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/fork,
+/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/weapon/material/knife,
+/obj/item/weapon/material/knife,
+/turf/simulated/floor/wood,
+/area/residential/room7)
 "gb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -1290,6 +1300,22 @@
 /obj/item/weapon/storage/box/beakers,
 /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
 /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
+/obj/item/pizzabox/meat,
+/obj/item/pizzabox/meat,
+/obj/item/pizzabox/margherita,
+/obj/item/pizzabox/mushroom,
+/obj/item/weapon/reagent_containers/food/drinks/cans/cola,
+/obj/item/weapon/reagent_containers/food/drinks/cans/gingerale,
+/obj/item/weapon/reagent_containers/food/drinks/cans/space_up,
+/obj/item/weapon/reagent_containers/food/drinks/cans/lemon_lime,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/grenadine,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/orangejuice,
+/obj/item/weapon/reagent_containers/food/drinks/ice,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/limejuice,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/rum,
 /turf/simulated/floor/tiled/dark,
 /area/residential/room7)
 "gz" = (
@@ -1368,6 +1394,11 @@
 /area/residential/mroom3)
 "gL" = (
 /obj/structure/table/leadreinforcedwood,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/pint,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/pint,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/pitcher,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/rocks,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/rocks,
 /turf/simulated/floor/tiled/dark,
 /area/residential/room7)
 "gM" = (
@@ -7214,14 +7245,16 @@
 /turf/simulated/floor/carpet/blue,
 /area/residential/room11)
 "KE" = (
-/obj/structure/window/basic{
+/obj/structure/window/reinforced{
 	dir = 8
 	},
-/obj/structure/window/basic{
-	dir = 1
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
 	},
-/obj/structure/window/basic{
-	dir = 4
+/obj/structure/window/reinforced{
+	dir = 4;
+	health = 1e+006
 	},
 /obj/structure/curtain/black,
 /turf/simulated/floor/plating,
@@ -20097,7 +20130,7 @@ ZT
 oM
 ir
 EN
-oZ
+ga
 bG
 QF
 aZ

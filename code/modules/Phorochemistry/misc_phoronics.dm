@@ -22,21 +22,21 @@ proc/gaseous_reagent_check(var/mob/living/carbon/human/H) //protective clothing 
 	reagent_state = LIQUID
 	color = "#E1CFE3"
 
-/datum/chemical_reaction/nitrate
+/decl/chemical_reaction/instant/nitrate
 	name = "Nitrate"
 	id = "nitrate"
 	result = "nitrate"
 	required_reagents = list("nitrogen" = 1, "oxygen" = 3)
 	result_amount = 4
 
-/datum/chemical_reaction/aluminum_nitrate
+/decl/chemical_reaction/instant/aluminum_nitrate
 	name = "Aluminum Nitrate"
 	id = "aluminum_nitrate"
 	result = "aluminum_nitrate"
 	required_reagents = list("aluminum" = 1, "nitrate" = 3)
 	result_amount = 4
 
-/datum/chemical_reaction/brownies
+/decl/chemical_reaction/instant/brownies
 	name = "Brownies"
 	id = "brownies"
 	result = null

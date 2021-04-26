@@ -31,14 +31,14 @@ datum
 				//..()
 				return
 
-/datum/chemical_reaction/benzilate
+/decl/chemical_reaction/instant/benzilate
 	name = "Benzilate"
 	id = "benzilate"
 	result = "benzilate"
 	required_reagents = list("paracetamol" = 1, "mindbreaker" = 1)
 	result_amount = 2
 
-/datum/chemical_reaction/phenethylamine
+/decl/chemical_reaction/instant/phenethylamine
 	name = "Phenethylamine"
 	id = "phenethylamine"
 	result = "phenethylamine"

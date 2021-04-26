@@ -8608,6 +8608,13 @@
 /obj/structure/toilet{
 	dir = 8
 	},
+/obj/machinery/button/remote/airlock{
+	id = "05publictoliet2-1";
+	name = "Bathroom Lock";
+	pixel_x = -12;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/locker/locker_toilet)
 "doR" = (
@@ -10136,6 +10143,13 @@
 	},
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	id = "05securitytoliet2";
+	name = "Bathroom Lock";
+	pixel_x = -12;
+	pixel_y = 22;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/showers)
@@ -17931,6 +17945,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
+"gVP" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 4
+	},
+/obj/machinery/button/remote/airlock{
+	id = "05securitytoliet1";
+	name = "Bathroom Lock";
+	pixel_x = -12;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/crew_quarters/showers)
 "gWg" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -20770,6 +20800,13 @@
 /obj/effect/landmark{
 	name = "blobstart"
 	},
+/obj/machinery/button/remote/airlock{
+	id = "05publictoliet2-2";
+	name = "Bathroom Lock";
+	pixel_x = -12;
+	pixel_y = 22;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/locker/locker_toilet)
 "ieo" = (
@@ -21349,6 +21386,7 @@
 /area/crew_quarters/heads/hop)
 "iqZ" = (
 /obj/machinery/door/airlock{
+	id_tag = "05bartoliet2";
 	name = "Unit 2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -22789,11 +22827,7 @@
 	dir = 4;
 	icon_state = "pipe-c"
 	},
-/mob/living/simple_mob/animal/giant_spider{
-	desc = "The HoS's pet spider Lorenzo. He seems to have a piece of grey fabric in his mouth.";
-	faction = "neutral";
-	name = "Lorenzo"
-	},
+/mob/living/simple_mob/animal/giant_spider/lorenzo,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "iWh" = (
@@ -24040,6 +24074,7 @@
 /area/engineering/engine_room)
 "jwW" = (
 /obj/machinery/door/airlock{
+	id_tag = "05securitytoliet1";
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -26016,8 +26051,10 @@
 /turf/simulated/wall,
 /area/medical/exam_room)
 "kln" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 5
+/obj/structure/lattice,
+/obj/structure/grille,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
@@ -28326,6 +28363,13 @@
 	dir = 8
 	},
 /obj/structure/toilet,
+/obj/machinery/button/remote/airlock{
+	id = "05bartoliet2";
+	name = "Bathroom Lock";
+	pixel_x = 19;
+	pixel_y = -10;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/barrestroom)
 "lig" = (
@@ -29664,6 +29708,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/engineering/hallway)
+"lKr" = (
+/obj/machinery/door/airlock{
+	id_tag = "05publictoliet2";
+	name = "Restroom 2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/white,
+/area/hallway/secondary/entry/docking_lounge)
 "lKL" = (
 /obj/structure/lattice,
 /obj/structure/grille/broken,
@@ -36671,6 +36724,7 @@
 /area/borealis2/outdoors/grounds/checkpoint)
 "opH" = (
 /obj/machinery/door/airlock{
+	id_tag = "05bartoliet1";
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -37779,6 +37833,22 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds/power)
+"oMH" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -22
+	},
+/obj/machinery/button/remote/airlock{
+	id = "05publictoliet2";
+	name = "Bathroom Lock";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/hallway/secondary/entry/docking_lounge)
 "oMW" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -37793,6 +37863,13 @@
 /obj/machinery/alarm{
 	dir = 1;
 	pixel_y = -22
+	},
+/obj/machinery/button/remote/airlock{
+	id = "05researchtoliet1";
+	name = "Bathroom Lock";
+	pixel_x = -21;
+	pixel_y = 22;
+	specialfunctions = 4
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/research)
@@ -39038,6 +39115,12 @@
 	dir = 4;
 	pixel_x = -22
 	},
+/obj/machinery/button/remote/airlock{
+	id = "05publictoliet1";
+	name = "Bathroom Lock";
+	pixel_y = -22;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/entry/docking_lounge)
 "pkk" = (
@@ -40173,6 +40256,7 @@
 /area/borealis2/outdoors/grounds)
 "pGA" = (
 /obj/machinery/door/airlock{
+	id_tag = "05researchtoliet1";
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -41749,7 +41833,8 @@
 /area/crew_quarters/heads/cmo)
 "qoK" = (
 /obj/machinery/door/airlock{
-	name = "Restroom"
+	id_tag = "05publictoliet1";
+	name = "Restroom 1"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -43128,9 +43213,12 @@
 /turf/simulated/floor/tiled,
 /area/security/airlock)
 "qQv" = (
-/obj/machinery/atmospherics/pipe/simple/heat_exchanging{
-	dir = 9
+/obj/structure/lattice,
+/obj/structure/grille,
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 8
 	},
+/obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "qQz" = (
@@ -46471,6 +46559,7 @@
 /area/quartermaster/miningwing)
 "sjv" = (
 /obj/machinery/door/airlock{
+	id_tag = "05publictoliet2-1";
 	name = "Unit 1"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -54023,6 +54112,7 @@
 /area/engineering/engine_room)
 "vuK" = (
 /obj/machinery/door/airlock{
+	id_tag = "05publictoliet2-2";
 	name = "Unit 2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -60037,6 +60127,7 @@
 /area/rnd/phoronics)
 "xNt" = (
 /obj/machinery/door/airlock{
+	id_tag = "05securitytoliet2";
 	name = "Unit 2"
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -61291,6 +61382,13 @@
 /obj/machinery/light/small{
 	dir = 8
 	},
+/obj/machinery/button/remote/airlock{
+	id = "05bartoliet1";
+	name = "Bathroom Lock";
+	pixel_x = 19;
+	pixel_y = 11;
+	specialfunctions = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/barrestroom)
 "ykX" = (
@@ -62310,7 +62408,7 @@ cpw
 cpw
 cpw
 cpw
-mes
+cpw
 doR
 lbT
 lbT
@@ -62474,7 +62572,7 @@ cpw
 cpw
 cpw
 doR
-lbT
+doR
 lbT
 lbT
 lbT
@@ -62799,8 +62897,8 @@ cpw
 cpw
 doR
 doR
-lbT
-lbT
+doR
+doR
 lbT
 lbT
 lbT
@@ -62959,7 +63057,7 @@ cpw
 cpw
 cpw
 cpw
-mes
+cpw
 doR
 doR
 doR
@@ -64085,7 +64183,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 cpw
 cpw
 cpw
@@ -64247,7 +64345,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 cpw
 cpw
 cpw
@@ -64409,7 +64507,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 cpw
 cpw
 hjS
@@ -64571,7 +64669,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 igv
 igv
 ejw
@@ -64733,7 +64831,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 iLK
 pVg
 dpk
@@ -64895,7 +64993,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 iLK
 dOS
 smJ
@@ -65057,7 +65155,7 @@ kCt
 doR
 doR
 doR
-kCt
+doR
 iLK
 fps
 nOo
@@ -65219,7 +65317,7 @@ kCt
 doR
 doR
 doR
-kCt
+doR
 iLK
 wMy
 wMy
@@ -65543,7 +65641,7 @@ kCt
 doR
 doR
 doR
-kCt
+doR
 iLK
 mqk
 wMy
@@ -65705,7 +65803,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 iLK
 iLK
 ykY
@@ -65867,7 +65965,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 cpw
 cpw
 cpw
@@ -66191,7 +66289,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 pET
 pET
 pET
@@ -66353,7 +66451,7 @@ kCt
 doR
 doR
 doR
-lbT
+doR
 uDf
 uDf
 uDf
@@ -68417,9 +68515,9 @@ iVR
 iVR
 bQA
 bQA
-cpw
-fHH
-fHH
+eku
+kln
+qQv
 wDm
 lKL
 wDm
@@ -68581,7 +68679,7 @@ iVR
 bQA
 nEq
 jxG
-cpw
+jpH
 uih
 uDf
 wDm
@@ -68743,7 +68841,7 @@ xOC
 iuY
 oYv
 eAV
-kln
+jss
 uDf
 uDf
 uDf
@@ -68905,7 +69003,7 @@ iVR
 bQA
 xKH
 qNg
-qQv
+hqg
 uDf
 uDf
 uDf
@@ -69067,7 +69165,7 @@ hdu
 hPf
 oIW
 qNg
-kln
+jss
 uDf
 uDf
 uDf
@@ -69227,9 +69325,9 @@ qzU
 rxi
 xOC
 iuY
-qNg
-qNg
-qQv
+rnQ
+rnQ
+bgO
 uDf
 uDf
 uDf
@@ -69826,7 +69924,7 @@ avs
 aDL
 dWB
 jGD
-dWB
+gVP
 jGD
 eUc
 oyJ
@@ -73988,7 +74086,7 @@ pCA
 frS
 xol
 hcK
-pkc
+oMH
 xol
 rux
 oRb
@@ -74151,7 +74249,7 @@ eTE
 xol
 ycC
 kis
-qoK
+lKr
 evl
 gUQ
 iab

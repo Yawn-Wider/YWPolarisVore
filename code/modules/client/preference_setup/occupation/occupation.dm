@@ -361,7 +361,7 @@
 					pref.job_engsec_med |= job.flag
 				if(3)
 					pref.job_engsec_low |= job.flag
-		/*/VOREStation Add //YW COMMENT OUT
+		//VOREStation Add
 		if(TALON)
 			pref.job_talon_low &= ~job.flag
 			pref.job_talon_med &= ~job.flag
@@ -374,7 +374,7 @@
 					pref.job_talon_med |= job.flag
 				if(3)
 					pref.job_talon_low |= job.flag
-		VOREStation Add End*/
+		//VOREStation Add End
 
 	return 1
 
@@ -429,4 +429,14 @@
 					return job_engsec_med
 				if(3)
 					return job_engsec_low
+		//VOREStation Add
+		if(TALON)
+			switch(level)
+				if(1)
+					return job_talon_high
+				if(2)
+					return job_talon_med
+				if(3)
+					return job_talon_low
+		//VOREStation Add End
 	return 0

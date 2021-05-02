@@ -140,13 +140,13 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		WEATHER_CLEAR = 50,
 		WEATHER_OVERCAST = 50
 		)
+	observed_message = "The sky is clear."
 	transition_messages = list(
 		"The sky clears up.",
 		"The sky is visible.",
 		"The weather is calm."
 		)
 	sky_visible = TRUE
-	observed_message = "The sky is clear."
 
 /datum/weather/borealis2/overcast
 	name = "overcast"

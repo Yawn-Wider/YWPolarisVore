@@ -515,8 +515,7 @@
 		"cryogaia_nanomap_z4.png"				= 'icons/_nanomaps/cryogaia_nanomap_z4.png',
 		"cryogaia_nanomap_z5.png"				= 'icons/_nanomaps/cryogaia_nanomap_z5.png',
 		"cryogaia_nanomap_z6.png"				= 'icons/_nanomaps/cryogaia_nanomap_z6.png',
-		"cryogaia_nanomap_z23.png"				= 'icons/_nanomaps/cryogaia_nanomap_z13.png',
-		"cryogaia_nanomap_z24.png"				= 'icons/_nanomaps/cryogaia_nanomap_z14.png',
+		"cryogaia_nanomap_z13.png"				= 'icons/_nanomaps/cryogaia_nanomap_z13.png',
 		// YawnWider Edit End
 
 	)

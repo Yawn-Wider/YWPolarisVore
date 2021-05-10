@@ -236,6 +236,10 @@
 /datum/reagent/proc/reaction_mob(var/mob/target)
 	touch_mob(target)
 
+/// Called by [/datum/reagents/proc/conditional_update]
+/datum/reagent/proc/on_update(atom/A)
+	return
+
 //--YW--//
 // Called when reagents are removed from a container, most likely after metabolizing in a mob
 /datum/reagent/proc/on_remove(var/atom/A)

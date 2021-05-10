@@ -61,10 +61,12 @@
 			var/turf/mob_turf = get_turf(L)
 			if(!mob_turf || !(mob_turf.z in impacted.expected_z_levels))
 				continue
+			//YW ADDITION: start
 			if(!L.buckled && !issilicon(L))
 				if(!L.Check_Shoegrip())
 					L.throw_at(get_step_rand(L),1,5)
 				L.Weaken(5)
+			//YW ADDITION: end
 			if(L.client)
 				to_chat(L, "<span class='danger'>The ground lurches beneath you!</span>")
 				shake_camera(L, 6, 1)

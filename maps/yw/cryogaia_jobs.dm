@@ -291,6 +291,7 @@
 
 /decl/hierarchy/outfit/job/talon_pilot
 	name = OUTFIT_JOB_NAME("Talon Pilot")
+	id_pda_assignment = "Pilot"
 
 	id_type = /obj/item/weapon/card/id/talon/pilot
 	id_slot = slot_wear_id

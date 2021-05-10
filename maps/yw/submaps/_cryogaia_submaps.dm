@@ -441,12 +441,11 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //Offmap Spawn Locations
-#include "../../offmap_vr/talon/talon.dm"
-#include "../../offmap_vr/talon/talon_areas.dm"
+#include "../../offmap_vr/talon/talon_v2.dm"
+#include "../../offmap_vr/talon/talon_v2_areas.dm"
 
 #if MAP_TEST
-#include "../../offmap_vr/talon/talon1.dmm"
-#include "../../offmap_vr/talon/talon2.dmm"
+#include "../../offmap_vr/talon/talon_v2.dmm"
 #endif
 
 //////////////////////////////////////////////////////////////////////////////
@@ -475,26 +474,14 @@
 #include "../../offmap_vr/om_ships/shelter_6.dm"
 
 // Talon offmap spawn
-/datum/map_template/cryogaia_lateload/offmap/talon1
-	name = "Offmap Ship - Talon Z1"
+/datum/map_template/cryogaia_lateload/offmap/talon_v2
+	name = "Offmap Ship - Talon V2"
 	desc = "Offmap spawn ship, the Talon."
-	mappath = 'maps/offmap_vr/talon/talon1.dmm'
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/talon1
+	mappath = 'maps/offmap_vr/talon/talon_v2.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/talon_v2
 
-/datum/map_template/cryogaia_lateload/offmap/talon2
-	name = "Offmap Ship - Talon Z2"
-	desc = "Offmap spawn ship, the Talon."
-	mappath = 'maps/offmap_vr/talon/talon2.dmm'
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/talon2
-
-/datum/map_z_level/cryogaia_lateload/talon1
-	name = "Talon Deck One"
+/datum/map_z_level/cryogaia_lateload/talon_v2
+	name = "Talon"
 	flags = MAP_LEVEL_PLAYER
 	base_turf = /turf/space
-	z = Z_LEVEL_OFFMAP1
-
-/datum/map_z_level/cryogaia_lateload/talon2
-	name = "Talon Deck Two"
-	flags = MAP_LEVEL_PLAYER
-	base_turf = /turf/simulated/open
-	z = Z_LEVEL_OFFMAP2
+	z = Z_LEVEL_OFFMAP1 

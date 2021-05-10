@@ -12,17 +12,16 @@
 #define Z_LEVEL_ROGUEMINE_1				11
 #define Z_LEVEL_ROGUEMINE_2				12
 #define Z_LEVEL_OFFMAP1					13
-#define Z_LEVEL_OFFMAP2					14
-#define Z_LEVEL_PLAINS					15
-#define Z_LEVEL_UNDERDARK				16
-#define Z_LEVEL_BEACH					17
-#define Z_LEVEL_BEACH_CAVE				18
-#define Z_LEVEL_AEROSTAT				19
-#define Z_LEVEL_AEROSTAT_SURFACE		20
-#define Z_LEVEL_DEBRISFIELD				21
-#define Z_LEVEL_GUTTERSITE				22
-#define Z_LEVEL_FUELDEPOT				23
-#define Z_LEVEL_GATEWAY					24
+#define Z_LEVEL_PLAINS					14
+#define Z_LEVEL_UNDERDARK				15
+#define Z_LEVEL_BEACH					16
+#define Z_LEVEL_BEACH_CAVE				17
+#define Z_LEVEL_AEROSTAT				18
+#define Z_LEVEL_AEROSTAT_SURFACE		19
+#define Z_LEVEL_DEBRISFIELD				20
+#define Z_LEVEL_GUTTERSITE				20
+#define Z_LEVEL_FUELDEPOT				22
+#define Z_LEVEL_GATEWAY					23
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -186,7 +185,7 @@
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
 		list("Asteroid Belt 1","Asteroid Belt 2"),
-		list("Offmap Ship - Talon Z1","Offmap Ship - Talon Z2"),
+		list("Offmap Ship - Talon V2"),
 		list("Snow plains"),
 		list("Cryogaia - Underdark"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),

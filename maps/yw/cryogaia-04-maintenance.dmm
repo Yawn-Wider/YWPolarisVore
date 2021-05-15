@@ -9955,6 +9955,7 @@
 /area/maintenance/blueserg)
 "gzR" = (
 /obj/machinery/light,
+/obj/machinery/icecream_vat,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen/lower)
 "gAc" = (
@@ -31059,7 +31060,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
 "teZ" = (
-/obj/machinery/icecream_vat,
+/obj/machinery/smartfridge/produce/persistent_lossy{
+	name = "\improper long term Smart Produce Storage"
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen/lower)
 "tft" = (

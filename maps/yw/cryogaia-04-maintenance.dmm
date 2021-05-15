@@ -31061,6 +31061,7 @@
 /area/maintenance/medical_lower)
 "teZ" = (
 /obj/machinery/smartfridge/produce/persistent_lossy{
+	description_info = "Produce stored in here will remain for serveral rounds with a slight loss for each round depending on the amounts of produce inside.";
 	name = "\improper long term Smart Produce Storage"
 	},
 /turf/simulated/floor/tiled/freezer,

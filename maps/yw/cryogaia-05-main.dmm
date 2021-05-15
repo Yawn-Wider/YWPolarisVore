@@ -9020,6 +9020,9 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
+/obj/effect/landmark{
+	name = "blobstart"
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
 "dyc" = (
@@ -19362,6 +19365,10 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "hzk" = (
@@ -23896,12 +23903,10 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "jus" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/washing_machine,
-/obj/effect/floor_decal/corner_oldtile/purple{
-	dir = 4
+/obj/machinery/smartfridge/sheets{
+	description_info = "Materials stored in here will not last in-between rounds";
+	name = "\improper temporary Smart Sheet Storage"
 	},
-/obj/effect/floor_decal/corner_oldtile/purple,
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "juF" = (
@@ -26356,6 +26361,13 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/rnd/research)
+"kqY" = (
+/obj/machinery/smartfridge/sheets{
+	description_info = "Materials stored in here will not last in-between rounds";
+	name = "\improper temporary Smart Sheet Storage"
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/engineering/workshop)
 "krb" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/blood/OMinus,
@@ -29014,6 +29026,27 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
+"lvC" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research_port)
 "lvD" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -38884,11 +38917,11 @@
 /turf/simulated/open,
 /area/bridge_hallway)
 "pgd" = (
-/obj/structure/table/rack{
-	dir = 8;
-	layer = 2.9
-	},
 /obj/effect/decal/cleanable/cobweb,
+/obj/machinery/smartfridge/sheets/persistent_lossy{
+	description_info = "Materials stored in here will remain for serveral rounds with a slight loss for each round depending on the amounts of materials inside.";
+	name = "\improper long term Smart Sheet Storage"
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/warehouse)
 "pgg" = (
@@ -50835,6 +50868,9 @@
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner_oldtile/purple,
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "tUn" = (
@@ -51483,6 +51519,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
+"umk" = (
+/obj/effect/landmark{
+	name = "blobstart"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research_port)
 "umU" = (
 /obj/structure/stairs/spawner/west,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -52244,9 +52286,6 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "uFT" = (
-/obj/effect/landmark{
-	name = "blobstart"
-	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel,
 /area/quartermaster/warehouse)
@@ -69622,7 +69661,7 @@ hmj
 gUR
 qVi
 azS
-drl
+kqY
 knK
 vky
 yjZ
@@ -74178,7 +74217,7 @@ eVR
 niB
 goy
 hyB
-pnQ
+lvC
 vTf
 uDf
 uDf
@@ -74984,7 +75023,7 @@ kru
 kru
 evI
 iNn
-iNn
+umk
 iNn
 cYx
 bzU

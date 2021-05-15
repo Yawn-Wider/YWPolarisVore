@@ -48,8 +48,8 @@
 	robot_modules["Pupdozer"] = /obj/item/weapon/robot_module/robot/engiedog
 	robot_modules["Servicehound"] = /obj/item/weapon/robot_module/robot/servicehound //YW changes
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
+	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
-	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //YW Addition booze
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -891,28 +891,12 @@
 	R.verbs -= /mob/living/silicon/robot/proc/rest_style
 	..()
 
-//YW Changes - BoozeBorg Begin
 
 /obj/item/weapon/robot_module/robot/booze
 	name = "BoozeHound robot module"
 	channels = list("Service" = 1)
-	languages = list(
-					LANGUAGE_SOL_COMMON	= 1,
-					LANGUAGE_UNATHI		= 1,
-					LANGUAGE_SIIK		= 1,
-					LANGUAGE_AKHANI		= 1,
-					LANGUAGE_SKRELLIAN	= 1,
-					LANGUAGE_SKRELLIANFAR = 0,
-					LANGUAGE_ROOTLOCAL	= 0,
-					LANGUAGE_TRADEBAND	= 1,
-					LANGUAGE_GUTTER		= 0,
-					LANGUAGE_SCHECHI	= 1,
-					LANGUAGE_EAL		= 1,
-					LANGUAGE_TERMINUS	= 1,
-					LANGUAGE_SIGN		= 0
-					)
-
-/obj/item/weapon/robot_module/robot/booze
+	pto_type = PTO_CIVILIAN
+	can_be_pushed = 0
 	sprites = list(
 				"Beer Buddy" = "boozeborg",
 				"Brilliant Blue" = "boozeborg(blue)",
@@ -921,10 +905,11 @@
 				"Liqour Licker" = "boozeborg(orange)",
 				"The Grapist" = "boozeborg(purple)",
 				"Vampire's Aid" = "boozeborg(red)",
-				"Vodka Komrade" = "boozeborg(vodka)"
+				"Vodka Komrade" = "boozeborg(vodka)" /*yw edit*/
 				)
 
 /obj/item/weapon/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
+	..()
 	src.modules += new /obj/item/weapon/gripper/service(src)
 	//src.modules += new /obj/item/weapon/reagent_containers/glass/bucket(src)
 	//src.modules += new /obj/item/weapon/material/minihoe(src)
@@ -960,8 +945,8 @@
 	N.my_atom = src.emag
 	N.add_reagent("beer2", 50)
 	src.emag.name = "Mickey Finn's Special Brew"
-
-	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_colors_yw.dmi' //YW edit
+	R.wideborg_dept = 'icons/mob/widerobot_colors_yw.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16
@@ -978,5 +963,3 @@
 	if(src.emag)
 		var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/B = src.emag
 		B.reagents.add_reagent("beer2", 2 * amount)
-
-// YW Changes - Boozeborg end

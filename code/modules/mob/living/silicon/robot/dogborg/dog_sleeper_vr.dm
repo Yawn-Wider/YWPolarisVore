@@ -707,13 +707,6 @@
 	delivery = TRUE
 	recycles = FALSE
 
-/obj/item/device/dogborg/sleeper/compactor/brewer //Boozehound gut. //YW Changes
-	name = "Brew Belly"
-	desc = "A mounted drunk tank unit with fuel processor."
-	icon_state = "brewer"
-	injection_chems = null
-	max_item_count = 1
-	
 /obj/item/device/dogborg/sleeper/compactor/supply //Miner borg belly
 	name = "Supply Satchel"
 	desc = "A mounted survival unit with fuel processor."
@@ -723,3 +716,11 @@
 	recycles = FALSE
 
 #undef SLEEPER_INJECT_COST
+
+
+/obj/item/device/dogborg/sleeper/compactor/brewer
+	name = "Brew Belly"
+	desc = "A mounted drunk tank unit with fuel processor."
+	icon_state = "brewer"
+	injection_chems = null
+	max_item_count = 1 //YW EDIT

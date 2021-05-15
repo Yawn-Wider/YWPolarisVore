@@ -50,7 +50,6 @@
 	robot_modules["Service-Hound"] = /obj/item/weapon/robot_module/robot/clerical/brodog
 	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze
 	robot_modules["KMine"] = /obj/item/weapon/robot_module/robot/kmine
-	robot_modules["BoozeHound"] = /obj/item/weapon/robot_module/robot/booze //YW Addition booze
 	return 1
 
 //Just add a new proc with the robot_module type if you wish to run some other vore code
@@ -905,7 +904,8 @@
 				"Gamer Juice Maker" = "boozeborg(green)",
 				"Liqour Licker" = "boozeborg(orange)",
 				"The Grapist" = "boozeborg(purple)",
-				"Vampire's Aid" = "boozeborg(red)"
+				"Vampire's Aid" = "boozeborg(red)",
+				"Vodka Komrade" = "boozeborg(vodka)" /*yw edit*/
 				)
 
 /obj/item/weapon/robot_module/robot/booze/New(var/mob/living/silicon/robot/R)
@@ -945,8 +945,8 @@
 	N.my_atom = src.emag
 	N.add_reagent("beer2", 50)
 	src.emag.name = "Mickey Finn's Special Brew"
-	R.icon 		 = 'icons/mob/widerobot_colors_vr.dmi'
-	R.wideborg_dept = 'icons/mob/widerobot_colors_vr.dmi'
+	R.icon 		 = 'icons/mob/widerobot_colors_yw.dmi' //YW edit
+	R.wideborg_dept = 'icons/mob/widerobot_colors_yw.dmi'
 	R.hands.icon = 'icons/mob/screen1_robot_vr.dmi'
 	R.ui_style_vr = TRUE
 	R.pixel_x 	 = -16

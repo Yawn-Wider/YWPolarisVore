@@ -333,7 +333,7 @@
 /datum/map_z_level/cryogaia/mining
 	z = Z_LEVEL_CRYOGAIA_MINE
 	name = "Subterranian depths"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
 	base_turf = /turf/simulated/floor/indoorrocks
 	holomap_legend_x = 220
 	holomap_legend_y = 160
@@ -349,7 +349,7 @@
 /datum/map_z_level/cryogaia/lower
 	name = "Subfloor"
 	z = Z_LEVEL_CRYOGAIA_LOWER
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
 	base_turf = /turf/simulated/open // /turf/simulated/floor/outdoors/rocks/cryogaia
 	holomap_legend_x = 220
 	holomap_legend_y = 160
@@ -359,7 +359,7 @@
 /datum/map_z_level/cryogaia/main
 	z = Z_LEVEL_CRYOGAIA_MAIN
 	name = "Surface level"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
 	base_turf = /turf/simulated/open
 	holomap_legend_x = 220
 	holomap_legend_y = 160
@@ -369,7 +369,7 @@
 /datum/map_z_level/cryogaia/upper
 	z = Z_LEVEL_CRYOGAIA_UPPER
 	name = "Upper level"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
 	base_turf = /turf/simulated/open
 	holomap_legend_x = 220
 	holomap_legend_y = 160

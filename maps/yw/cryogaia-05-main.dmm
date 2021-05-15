@@ -21518,6 +21518,18 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/carpet,
 /area/engineering/workshop)
+"itn" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/item/weapon/paper/psmartfridge{
+	pixel_y = 9
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/engineering/workshop)
 "itN" = (
 /turf/simulated/wall,
 /area/crew_quarters/barrestroom)
@@ -25124,6 +25136,10 @@
 	},
 /obj/effect/decal/cleanable/cobweb2{
 	icon_state = "cobweb1"
+	},
+/obj/item/weapon/paper/psmartfridge{
+	pixel_x = 7;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
@@ -69662,7 +69678,7 @@ gUR
 qVi
 azS
 kqY
-knK
+itn
 vky
 yjZ
 mzQ

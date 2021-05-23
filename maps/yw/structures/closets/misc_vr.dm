@@ -90,9 +90,12 @@
 		/obj/item/clothing/under/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer,
 		/obj/item/clothing/mask/gas/explorer,
+		/obj/item/weapon/storage/belt/explorer/pathfinder,
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
-		/obj/item/device/radio/headset/explorer,
+		/obj/item/device/radio/headset/pathfinder,
+		/obj/item/device/radio/headset/pathfinder/alt,
+		/obj/item/weapon/cartridge/explorer,
 		/obj/item/device/flashlight,
 		/obj/item/device/gps/explorer,
 		/obj/item/weapon/storage/box/flare,
@@ -106,9 +109,11 @@
 		/obj/item/weapon/material/knife/machete/deluxe,
 		/obj/item/weapon/gun/energy/locked/frontier/carbine,
 		/obj/item/clothing/accessory/holster/machete,
+		/obj/random/explorer_shield,
 		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
 		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-		/obj/item/device/cataloguer/compact/pathfinder)
+		/obj/item/device/cataloguer/compact/pathfinder,
+		/obj/item/device/mapping_unit)
 
 /obj/structure/closet/secure_closet/pathfinder/Initialize()
 	if(prob(50))

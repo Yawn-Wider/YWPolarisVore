@@ -10,7 +10,7 @@ const pauseEvent = e => {
   return false;
 };
 
-const zoomScale = 320; //YW EDIT: map size 160x2
+const zoomScale = 320; // YW EDIT: map size 160x2
 
 export class NanoMap extends Component {
   constructor(props) {

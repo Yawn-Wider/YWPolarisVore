@@ -1269,15 +1269,13 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "aSi" = (
-/obj/structure/table/woodentable,
-/obj/item/weapon/coin/silver,
 /obj/machinery/ai_status_display{
 	pixel_y = 32
 	},
 /obj/machinery/camera/network/civilian{
 	c_tag = "CIV - Recreation Area Fore"
 	},
-/obj/item/clothing/glasses/threedglasses,
+/obj/machinery/vending/giftvendor,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "aSJ" = (
@@ -2850,7 +2848,8 @@
 	d2 = 2;
 	icon_state = "0-2"
 	},
-/obj/item/device/paicard,
+/obj/item/weapon/coin/silver,
+/obj/item/clothing/glasses/threedglasses,
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "bXY" = (
@@ -11869,6 +11868,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
+"hIa" = (
+/obj/machinery/vending/bepis{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/starboard)
 "hIH" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -59736,7 +59741,7 @@ vko
 eNq
 whU
 whU
-whU
+hIa
 ymn
 kpQ
 eNq

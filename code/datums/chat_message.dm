@@ -73,9 +73,9 @@ var/list/runechat_image_cache = list()
 
 /datum/chatmessage/Destroy()
 	if(owned_by)
+		UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
 		LAZYREMOVEASSOC(owned_by.seen_messages, message_loc, src)
 		owned_by.images.Remove(message)
-		UnregisterSignal(owned_by, COMSIG_PARENT_QDELETING)
 	if(message_loc)
 		UnregisterSignal(message_loc, COMSIG_PARENT_QDELETING)
 	owned_by = null
@@ -96,6 +96,10 @@ var/list/runechat_image_cache = list()
 /datum/chatmessage/proc/generate_image(text, atom/target, mob/owner, list/extra_classes, lifespan)
 	set waitfor = FALSE
 
+	if(!target || !owner)
+		qdel(src)
+		return
+	
 	// Register client who owns this message
 	owned_by = owner.client
 	RegisterSignal(owned_by, COMSIG_PARENT_QDELETING, .proc/qdel_self)
@@ -151,6 +155,8 @@ var/list/runechat_image_cache = list()
 		text = "*&nbsp;[text]&nbsp;*"
 
 	text = "[prefixes?.Join("&nbsp;")][text]"
+
+	text = encode_html_emphasis(text)
 
 	// We dim italicized text to make it more distinguishable from regular text
 	var/tgt_color = extra_classes.Find("italics") ? target.chat_color_darkened : target.chat_color

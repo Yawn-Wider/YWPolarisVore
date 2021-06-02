@@ -23,7 +23,7 @@
 /area/borealis2/outdoors
 	name = "Outside - Surface"
 	icon_state = "outside1"
-	sound_env = MOUNTAINS
+	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 
 /area/crew_quarters/meeting
 	name = "\improper Public Conference"

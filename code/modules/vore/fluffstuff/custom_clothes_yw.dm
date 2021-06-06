@@ -530,6 +530,15 @@
 	icon_state = "coatmech"
 	icon_override = 'icons/vore/custom_clothes_yw.dmi'
 	icon_state = "coatmech_mob"
+	hoodtype = /obj/item/clothing/head/hood/winter/fluff/raja_coat
+
+/obj/item/clothing/head/hood/winter/fluff/raja_coat
+	name = "Mech Engineer winter hood"
+	desc = "A hood attached to a Mech Engineer Coat."
+	icon = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "coat_hood_mech"
+	icon_override = 'icons/vore/custom_clothes_yw.dmi'
+	icon_state = "coatmech_hood_mob"
 
 //Shel Nargol
 

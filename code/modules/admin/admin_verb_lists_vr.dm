@@ -121,7 +121,9 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/set_uplink, //VOREStation Add,
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/client/proc/setckey, //YW add - readds SetCkey proc
+	/client/proc/dbcon_fix //YW add - adds Fix Database Connection proc
 	)
 
 var/list/admin_verbs_ban = list(

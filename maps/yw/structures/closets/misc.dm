@@ -72,6 +72,11 @@
 	return ..()
 
 //SAR Lockers
+/obj/structure/closet/secure_closet/sar
+	name = "search and rescue locker"
+	desc = "Supplies for a wilderness first responder."
+	closet_appearance = /decl/closet_appearance/secure_closet/medical
+	req_access = list(access_fieldmedic)
 
 	starts_with = list(
 		/obj/item/weapon/storage/backpack/dufflebag/emt,

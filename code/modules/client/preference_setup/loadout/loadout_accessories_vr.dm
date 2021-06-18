@@ -112,3 +112,11 @@
 /datum/gear/accessory/flops/New()
 	..()
 	gear_tweaks += gear_tweak_free_color_choice
+
+/*
+Talon pin
+*/
+/datum/gear/accessory/talonpin
+	display_name = "ITV pin"
+	description = "A small enamel pin of the ITV logo."
+	path = /obj/item/clothing/accessory/talon

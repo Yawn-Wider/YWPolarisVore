@@ -289,6 +289,7 @@
 		. += "<span class='notice'>The status display reads: Storing up to <b>[materials.max_amount]</b> material units.<br>Material consumption at <b>[mat_efficiency*100]%</b>.</span>"
 
 //YWAdd start.
+/* commented out until i can be assed to actually fix the code
 /obj/machinery/autolathe/verb/eatmaterialsnearby()
 	set name = "Recycle nearby materials"
 	set category = "Object"
@@ -367,4 +368,5 @@
 		if("West")
 			input_dir = WEST
 	to_chat(src, "You set the material input to [input_dir_name]")
+*/
 //YWAdd END.

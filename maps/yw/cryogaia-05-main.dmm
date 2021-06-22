@@ -7878,9 +7878,6 @@
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/outpost)
-"daC" = (
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds)
 "daJ" = (
 /obj/structure/closet/wardrobe/tactical,
 /turf/simulated/floor/tiled/dark,
@@ -8745,7 +8742,7 @@
 /area/medical/surgeryprep)
 "dqS" = (
 /obj/structure/showcase/sign,
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia/covered,
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior)
 "dqZ" = (
 /obj/machinery/door/airlock/maintenance/medical,
@@ -12922,7 +12919,7 @@
 /obj/machinery/camera/network/outside{
 	c_tag = "Wilderness Checkpoint - Exterior"
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior)
 "faF" = (
 /obj/machinery/computer/security{
@@ -21623,7 +21620,7 @@
 	c_tag = "Wilderness Checkpoint - Interior";
 	dir = 1
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "ixr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -33895,15 +33892,6 @@
 /obj/item/weapon/gun/energy/gun/protector,
 /turf/simulated/floor/tiled/dark,
 /area/maintenance/bridge)
-"nhY" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 4
-	},
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds)
 "nif" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 5
@@ -35808,7 +35796,7 @@
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 8
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior)
 "nUR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -45586,7 +45574,7 @@
 /area/quartermaster/warehouse)
 "rOE" = (
 /obj/structure/showcase/sign,
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia/covered,
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
 "rOK" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
@@ -49117,12 +49105,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/locker/locker_toilet)
-"tjL" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia/covered,
-/area/borealis2/outdoors/grounds)
 "tjQ" = (
 /obj/machinery/door/window/brigdoor/northright{
 	dir = 4;
@@ -49393,16 +49375,6 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
-"tqr" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 8
-	},
-/obj/effect/overlay/snow/floor,
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 4
-	},
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds)
 "tqv" = (
 /obj/structure/closet/emcloset,
 /obj/effect/floor_decal/industrial/warning{
@@ -50581,13 +50553,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
-"tOe" = (
-/obj/effect/floor_decal/snow/floor/edges,
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia/covered,
-/area/borealis2/outdoors/grounds)
 "tOH" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/tiled/steel,
@@ -52276,13 +52241,6 @@
 	},
 /turf/simulated/shuttle/plating,
 /area/rnd/phoronics)
-"uEv" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 1
-	},
-/obj/effect/floor_decal/snow/floor/edges,
-/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia/covered,
-/area/borealis2/outdoors/grounds)
 "uEw" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -52393,9 +52351,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
-"uHV" = (
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia/covered,
-/area/borealis2/outdoors/grounds)
 "uIu" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 1
@@ -57917,9 +57872,6 @@
 	},
 /turf/simulated/floor/greengrid,
 /area/server)
-"wPr" = (
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia/covered,
-/area/borealis2/outdoors/exterior)
 "wPt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -60269,13 +60221,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
-"xPz" = (
-/obj/effect/floor_decal/snow/floor/edges{
-	dir = 8
-	},
-/obj/effect/floor_decal/snow/floor/edges,
-/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia/covered,
-/area/borealis2/outdoors/grounds)
 "xPE" = (
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
@@ -60557,7 +60502,7 @@
 /area/crew_quarters/heads/chief)
 "xUi" = (
 /obj/effect/floor_decal/snow/floor/edges3,
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/exterior)
 "xUo" = (
 /obj/machinery/status_display,
@@ -77389,14 +77334,14 @@ cFH
 xCe
 uDf
 uDf
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
 xbv
 aOp
 wkW
@@ -77551,14 +77496,14 @@ rSh
 xCe
 xCe
 uDf
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
 xbv
 aOp
 wkW
@@ -77713,14 +77658,14 @@ nUR
 bQo
 xCe
 uDf
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
 xbv
 aOp
 wkW
@@ -77875,14 +77820,14 @@ nUR
 dch
 xCe
 xCe
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
 xbv
 aOp
 wkW
@@ -78037,14 +77982,14 @@ ogB
 bkk
 qMG
 kEb
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
 xbv
 vqw
 dst
@@ -78199,14 +78144,14 @@ clM
 clM
 vOc
 kEb
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
 xbv
 xbv
 xbv
@@ -78361,14 +78306,14 @@ clM
 clM
 vOc
 kEb
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
 uDf
 uDf
 xbv
@@ -78523,14 +78468,14 @@ clM
 clM
 vOc
 kEb
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
 uDf
 uDf
 uDf
@@ -78685,14 +78630,14 @@ hGq
 jvI
 vOc
 kEb
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
+uDf
 uDf
 uDf
 uDf
@@ -81861,13 +81806,13 @@ lta
 uDf
 uDf
 uDf
-uHV
-uHV
+uDf
+uDf
 owQ
 dAA
-wPr
-wPr
-wPr
+iSE
+iSE
+iSE
 iSE
 iSE
 iSE
@@ -82023,13 +81968,13 @@ lta
 uDf
 uDf
 uDf
-uHV
+uDf
 iPs
 opk
 iPs
 iPs
 iPs
-wPr
+iSE
 iSE
 iSE
 iSE
@@ -82184,15 +82129,15 @@ uDf
 lta
 uDf
 uDf
-uHV
-uHV
+uDf
+uDf
 iPs
 uCF
 cls
 cls
 iPs
-wPr
-wPr
+iSE
+iSE
 jNT
 iSE
 liC
@@ -82646,9 +82591,9 @@ igv
 cQp
 cQp
 cQp
-tqr
-tqr
-tqr
+cQp
+cQp
+cQp
 cQp
 cQp
 cQp
@@ -82670,7 +82615,7 @@ cQp
 ghP
 cQp
 cQp
-daC
+cpw
 sDE
 pgP
 vtF
@@ -82808,11 +82753,11 @@ uDf
 uDf
 uDf
 uDf
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
 uDf
 uDf
 uDf
@@ -82832,7 +82777,7 @@ fIS
 qtV
 uDf
 uDf
-nhY
+eQf
 iPs
 vRw
 jcM
@@ -82970,11 +82915,11 @@ fIS
 uDf
 uDf
 uDf
-uHV
-uHV
-uHV
-uHV
-uHV
+uDf
+uDf
+uDf
+uDf
+uDf
 uDf
 uDf
 uDf
@@ -83156,15 +83101,15 @@ uDf
 qtV
 uDf
 uDf
-uHV
-uHV
+uDf
+uDf
 iPs
 nYY
 iPs
 pgP
 iPs
-wPr
-wPr
+iSE
+iSE
 iSE
 iSE
 iSE
@@ -83319,13 +83264,13 @@ qtV
 uDf
 uDf
 uDf
-uHV
+uDf
 iPs
 vtF
 iPs
 pgP
 iPs
-wPr
+iSE
 iSE
 iSE
 iSE
@@ -83481,13 +83426,13 @@ uQb
 eXD
 eXD
 gFB
-uHV
+uDf
 iPs
 opk
 iPs
 iPs
 iPs
-wPr
+iSE
 iSE
 iSE
 iSE
@@ -83643,13 +83588,13 @@ uDf
 uDf
 sLU
 uQb
-xPz
-uHV
+gFB
+uDf
 owQ
 dAA
-wPr
-wPr
-wPr
+iSE
+iSE
+iSE
 iSE
 iSE
 iSE
@@ -84818,9 +84763,9 @@ iSE
 iSE
 dAA
 dAA
-tOe
-uHV
-uHV
+lta
+uDf
+uDf
 uDf
 uDf
 uDf
@@ -84982,7 +84927,7 @@ rNL
 rNL
 xyy
 rNL
-uHV
+uDf
 uDf
 uDf
 uDf
@@ -85065,7 +85010,7 @@ uDf
 uDf
 uDf
 uDf
-uEv
+qtV
 pze
 gGb
 pze
@@ -85144,7 +85089,6 @@ tCW
 dzE
 gKK
 rNL
-uHV
 uDf
 uDf
 uDf
@@ -85227,7 +85171,8 @@ uDf
 uDf
 uDf
 uDf
-tjL
+uDf
+rQa
 ibh
 acu
 acu

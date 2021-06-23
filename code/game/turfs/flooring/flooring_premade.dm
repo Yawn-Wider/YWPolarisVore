@@ -437,7 +437,7 @@
 	movement_cost = 0
 
 // TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud
-/turf/simulated/floor/snow/Entered(atom/A)
+/turf/simulated/floor/outdoors/snow/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
 		if(L.hovering) // Flying things shouldn't make footprints.
@@ -447,8 +447,7 @@
 		update_icon()
 	. = ..()
 
-/turf/simulated/floor/snow/update_icon()
+/turf/simulated/floor/outdoors/snow/update_icon()
 	..()
 	for(var/d in crossed_dirs)
 		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
-

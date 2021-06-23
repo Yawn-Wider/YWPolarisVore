@@ -3,7 +3,7 @@
 #include "core\datum.dm"
 #include "core\tgs_version.dm"
 
-#define TGS_V3_API //YW edit makes sure it gets loaded
+// Commented out for now #define TGS_V3_API //YW edit makes sure it gets loaded
 
 #ifdef TGS_V3_API
 #include "v3210\api.dm"

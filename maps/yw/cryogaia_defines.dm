@@ -25,9 +25,9 @@
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
-#define NETWORK_TCOMMS "Telecommunications" //Using different from Polaris one for better name
-#define NETWORK_OUTSIDE "Outside"
-#define NETWORK_EXPLORATION "Exploration"
+// Defined in another file #define NETWORK_TCOMMS "Telecommunications" //Using different from Polaris one for better name
+// defined in another file #define NETWORK_OUTSIDE "Outside"
+// defined in another file #define NETWORK_EXPLORATION "Exploration"
 #define NETWORK_XENOBIO "Xenobiology"
 
 /datum/map/cryogaia

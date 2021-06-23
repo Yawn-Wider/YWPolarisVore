@@ -30,7 +30,6 @@
 
         for(var/i in 1 to amt)
             add_overlay(image(icon, "footprint[i]", text2num(d)))
-*/
 /turf/snow/snow2
 	name = "snow"
 	icon = 'icons/turf/snow.dmi'

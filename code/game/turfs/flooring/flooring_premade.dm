@@ -447,6 +447,8 @@
 		update_icon()
 	. = ..()
 
-        for(var/i in 1 to amt)
-            add_overlay(image(icon, "footprint[i]", text2num(d)))
+/turf/simulated/floor/snow/update_icon()
+	..()
+	for(var/d in crossed_dirs)
+		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
 

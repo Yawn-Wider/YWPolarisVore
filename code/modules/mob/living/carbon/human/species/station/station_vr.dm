@@ -337,7 +337,7 @@
 		)
 	wikilink="https://yawn.izac.live/Vox"
 
-datum/species/harpy
+/datum/species/harpy
 	name = SPECIES_RAPALA
 	name_plural = "Rapalans"
 	icobase = 'icons/mob/human_races/r_harpy_vr.dmi'

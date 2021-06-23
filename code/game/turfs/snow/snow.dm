@@ -10,8 +10,6 @@
 
     temperature = TN60C
     var/list/crossed_dirs = list()
-/* Disabled by RF. Currently broke for the new map, and I'd rather it not be used for new map launch. Something to fix later.
-#define FOOTSTEP_SPRITE_AMT 2
 
 /turf/snow/Entered(atom/A)
     if(ismob(A))

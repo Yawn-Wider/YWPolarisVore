@@ -7,26 +7,17 @@
 	icon_state = "bodybag_folded"
 	w_class = ITEMSIZE_SMALL
 
-	attack_self(mob/user)
-		var/obj/structure/closet/body_bag/R = new /obj/structure/closet/body_bag(user.loc)
-		R.add_fingerprint(user)
-		qdel(src)
+/obj/item/bodybag/attack_self(mob/user)
+	var/obj/structure/closet/body_bag/R = new /obj/structure/closet/body_bag(user.loc)
+	R.add_fingerprint(user)
+	qdel(src)
 
 
 /obj/item/weapon/storage/box/bodybags
 	name = "body bags"
 	desc = "This box contains body bags."
 	icon_state = "bodybags"
-	New()
-		..()
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-		new /obj/item/bodybag(src)
-
+	starts_with = list(/obj/item/bodybag = 7)
 
 /obj/structure/closet/body_bag
 	name = "body bag"
@@ -47,10 +38,10 @@
 	icon = 'icons/obj/closets/bodybag_large.dmi'
 	w_class = ITEMSIZE_LARGE
 
-	attack_self(mob/user)
-		var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
-		R.add_fingerprint(user)
-		qdel(src)
+/obj/item/bodybag/large/attack_self(mob/user)
+	var/obj/structure/closet/body_bag/large/R = new /obj/structure/closet/body_bag/large(user.loc)
+	R.add_fingerprint(user)
+	qdel(src)
 
 /obj/structure/closet/body_bag/large
 	name = "mass grave body bag"

@@ -1,14 +1,15 @@
-/obj/structure/reagent_dispensers/beerkeg/Initialize()
-	. = ..()
-	reagents.add_reagent("beer",1000)
-
-obj/structure/reagent_dispensers/beerkeg/vat
+/obj/structure/reagent_dispensers/beerkeg/vat
 	name = "Beer vat"
 	desc = "A vat of beer."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "vat"
 	amount_per_transfer_from_this = 15
 	anchored = 1
+
+/obj/structure/reagent_dispensers/beerkeg/vat/Initialize()
+	. = ..()
+	reagents.add_reagent("beer",1000)
+
 /obj/structure/reagent_dispensers/winevat
 	name = "Wine vat"
 	desc = "A vat of wine."

@@ -676,7 +676,7 @@
 			for(var/rid in gene_value)
 
 				var/list/gene_chem = gene_value[rid]
-
+				var/list/ctemp = chems[rid] //YW Edit: allows plants whose reagents have not been defined uniformly to splice properly
 				if(!chems[rid])
 					chems[rid] = gene_chem.Copy()
 					continue
@@ -685,7 +685,7 @@
 
 					if(isnull(gene_chem[i])) gene_chem[i] = 0
 
-					if(chems[rid].len < i) //YW Edit: allows plants whose reagents have not been defined uniformly to splice properly
+					if(ctemp.len < i) //YW Edit: allows plants whose reagents have not been defined uniformly to splice properly
 						continue
 
 					if(chems[rid][i])

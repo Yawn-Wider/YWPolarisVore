@@ -371,7 +371,7 @@
 /datum/ai_holder/simple_mob/snowbull/proc/checkthreatened(var/possible_target, var/target_threatlevel = 0)
 	if(check_attacker(possible_target))
 		return TRUE
-	if(untrusting == 1 && target_threatlevel > 130 && possible_target in range(5))
+	if(untrusting == 1 && target_threatlevel > 130 && (possible_target in range(5)))
 		return TRUE
 	if(untrusting > 1 && target_threatlevel > 100)
 		return TRUE

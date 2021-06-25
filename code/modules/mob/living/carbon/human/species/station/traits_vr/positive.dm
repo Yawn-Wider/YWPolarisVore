@@ -1,6 +1,3 @@
-#define ORGANICS	1
-#define SYNTHETICS	2
-
 /datum/trait/positive
 	category = 1
 
@@ -36,9 +33,9 @@
 	cost = 2 //YW EDIT
 	var_changes = list("total_health" = 125)
 
-	apply(var/datum/species/S,var/mob/living/carbon/human/H)
-		..(S,H)
-		H.setMaxHealth(S.total_health)
+/datum/trait/positive/endurance_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
 
 //YW ADDITION: START
 /datum/trait/positive/endurance_very_high
@@ -47,18 +44,18 @@
 	cost = 3
 	var_changes = list("total_health" = 150)
 
-	apply(var/datum/species/S,var/mob/living/carbon/human/H)
-		..(S,H)
-		H.setMaxHealth(S.total_health)
+/datum/trait/positive/endurance_very_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
 
 /datum/trait/positive/endurance_extremely_high
 	name = "Extremely High Endurance"
 	desc = "Increases your maximum total hitpoints to 175"
 	cost = 4
 	var_changes = list("total_health" = 175)
-	apply(var/datum/species/S,var/mob/living/carbon/human/H)
-		..(S,H)
-		H.setMaxHealth(S.total_health)
+/datum/trait/positive/endurance_extremely_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
 //YW ADDITION: END
 
 /datum/trait/positive/nonconductive
@@ -281,3 +278,8 @@
 	H.verbs |= /mob/living/carbon/human/proc/weave_structure
 	H.verbs |= /mob/living/carbon/human/proc/weave_item
 	H.verbs |= /mob/living/carbon/human/proc/set_silk_color
+
+/datum/trait/positive/water_breather
+	name = "Water Breather"
+	desc = "You can breathe under water."
+	cost = 1

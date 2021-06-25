@@ -44,18 +44,18 @@
 	cost = 3
 	var_changes = list("total_health" = 150)
 
-	apply(var/datum/species/S,var/mob/living/carbon/human/H)
-		..(S,H)
-		H.setMaxHealth(S.total_health)
+/datum/trait/positive/endurance_very_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
 
 /datum/trait/positive/endurance_extremely_high
 	name = "Extremely High Endurance"
 	desc = "Increases your maximum total hitpoints to 175"
 	cost = 4
 	var_changes = list("total_health" = 175)
-	apply(var/datum/species/S,var/mob/living/carbon/human/H)
-		..(S,H)
-		H.setMaxHealth(S.total_health)
+/datum/trait/positive/endurance_extremely_high/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
 //YW ADDITION: END
 
 /datum/trait/positive/nonconductive

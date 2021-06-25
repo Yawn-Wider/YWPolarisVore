@@ -12,7 +12,7 @@
 	var/active_force = 55
 	var/inactive_force = 10
 
-obj/item/weapon/chainsaw/Initialize() //YW edit - replaced New with Initialize so chainsaws can be mapped in
+/obj/item/weapon/chainsaw/Initialize() //YW edit - replaced New with Initialize so chainsaws can be mapped in
 	. = ..()
 	var/datum/reagents/R = new/datum/reagents(max_fuel)
 	reagents = R

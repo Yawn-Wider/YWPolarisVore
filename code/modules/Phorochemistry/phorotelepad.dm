@@ -48,11 +48,11 @@
 	icon = 'icons/phoronics.dmi'
 	icon_state = "pad-folded"
 
-	attack_self(mob/user as mob)
-		user << "You unfold the pad."
-		var/obj/machinery/telepad_phoronics/T = new /obj/machinery/telepad_phoronics(user.loc)
-		T.anchored = 0
-		del(src)
+/obj/item/weapon/phoronics_telepad/attack_self(mob/user as mob)
+	user << "You unfold the pad."
+	var/obj/machinery/telepad_phoronics/T = new /obj/machinery/telepad_phoronics(user.loc)
+	T.anchored = 0
+	del(src)
 
 /*/datum/design/item/phoronics_telepad
 	name = "phoronics telepad"

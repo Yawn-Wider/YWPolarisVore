@@ -1,6 +1,3 @@
-#define SOLID 1
-#define LIQUID 2
-#define GAS 3
 var/induromol_frequency = rand(700, 750) * 2 + 1 //signallers only increase by .2 increments
 var/induromol_code = rand(1, 50)
 
@@ -12,10 +9,10 @@ var/induromol_code = rand(1, 50)
 
 	//called by phorochemputer.dm, returns special message upon creating reagent
 	//mostly dangerous initial reactions, to ensure protective gear is worn
-	proc/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
-		if(reagent_state == GAS)
-			return "WARNING: Gaseous reaction detected! Repeating reaction inadvisable."
-		return message
+/datum/reagent/phororeagent/proc/initial_reaction(var/obj/item/weapon/reagent_containers/container, var/turf/T, var/volume, var/message)
+	if(reagent_state == GAS)
+		return "WARNING: Gaseous reaction detected! Repeating reaction inadvisable."
+	return message
 
 /*		Genetics is removed now.
 /datum/reagent/phororeagent/extreme_mutagen //this one should work fine, but genetics may still be a little messed up

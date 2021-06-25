@@ -581,7 +581,7 @@ var/global/list/latejoin_tram   = list()
 	anchored = TRUE
 	catalogue_data = list(/datum/category_item/catalogue/material/trail_blazer)
 
-obj/machinery/trailblazer/Initialize()
+/obj/machinery/trailblazer/Initialize()
 	randomize_color()
 	return ..()
 

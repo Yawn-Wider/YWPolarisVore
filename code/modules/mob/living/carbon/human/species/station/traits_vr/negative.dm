@@ -52,9 +52,9 @@
 	cost = -4
 	var_changes = list("total_health" = 25)
 
-	apply(var/datum/species/S,var/mob/living/carbon/human/H)
-		..(S,H)
-		H.setMaxHealth(S.total_health)
+/datum/trait/negative/endurance_glass/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.setMaxHealth(S.total_health)
 //YW ADDITIONS: END
 
 /datum/trait/negative/minor_brute_weak

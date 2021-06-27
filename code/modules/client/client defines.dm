@@ -39,7 +39,7 @@
 		//SECURITY//
 		////////////
 	// comment out the line below when debugging locally to enable the options & messages menu
-	control_freak = CONTROL_FREAK_ALL
+	/* control_freak = CONTROL_FREAK_ALL YW Enable macros again*/
 
 	var/received_irc_pm = -99999
 	var/irc_admin			//IRC admin that spoke with them last.

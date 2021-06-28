@@ -423,7 +423,9 @@
 	icon_state = "gravsnow"
 	initial_flooring = /decl/flooring/snow/gravsnow
 	movement_cost = 0
-	crossed_dirs = null
+
+/turf/simulated/floor/outdoors/snow/gravsnow/Entered() //Prevents runtimes
+	return
 
 /turf/simulated/floor/outdoors/snow/plating
 	name = "snowy plating"

@@ -627,7 +627,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "bx" = (
-/obj/item/stolenpackage,
+/obj/item/integrated_circuit/transfer/demultiplexer/huge,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/vacant/vacant_site/east)
 "by" = (
@@ -2547,7 +2547,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/xenobiology/hallway)
 "gm" = (
-/obj/item/integrated_circuit/transfer/demultiplexer/huge,
+/obj/item/stolenpackage,
 /turf/simulated/floor/reinforced,
 /area/vacant/vacant_site/east)
 "gn" = (
@@ -4839,10 +4839,8 @@
 /area/mine/explored)
 "lX" = (
 /obj/machinery/door/airlock/science{
-	locked = 1;
 	name = "Toxins Mixing"
 	},
-/obj/structure/barricade,
 /obj/structure/cable/blue{
 	d1 = 4;
 	d2 = 8;

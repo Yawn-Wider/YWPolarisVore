@@ -416,6 +416,7 @@ var/global/list/latejoin_tram   = list()
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/unFreeze()
 	frozen = 0
+	cut_overlays(priority = TRUE)
 	update_icon()
 	return
 

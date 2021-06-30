@@ -392,9 +392,9 @@ var/induromol_code = rand(1, 50)
 			M.emote("scream")
 		else
 			if(prob(50))
-				M.emote("me", 1, "grits their teeth")
+				M.custom_emote(VISIBLE_MESSAGE, "grits their teeth")
 			else
-				M.emote("me", 1, "writhes in pain")
+				M.custom_emote(VISIBLE_MESSAGE, "writhes in pain")
 	..()
 
 /datum/reagent/phororeagent/fulguracin

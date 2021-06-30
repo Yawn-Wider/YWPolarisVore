@@ -19,10 +19,10 @@
 	if(data)
 		switch(data["count"])
 			if(1 to 30)
-				if(prob(9)) M.emote("me",1,"blushes")
+				if(prob(9)) M.custom_emote(VISIBLE_MESSAGE,"blushes")
 				if(prob(9)) to_chat(M, "<span class='warning'>You feel so needy..</span>")
 			if (30 to INFINITY)
-				if(prob(3)) M.emote("me",1,"blushes")
+				if(prob(3)) M.custom_emote(VISIBLE_MESSAGE,"blushes")
 				if(prob(5)) M.say("!moans out lewdly!")
 				if(prob(9)) to_chat(M, "<span class='warning'>You can't help but want to touch yourself then and now!</span>")
 		data["count"]++

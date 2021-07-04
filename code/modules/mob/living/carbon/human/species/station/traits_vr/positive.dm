@@ -9,7 +9,7 @@
 
 //YW ADDITION: START
 /datum/trait/positive/speed_fast_plus
-	name = "Major Haste"
+	name = "Haste, Major "
 	desc = "Allows you to move MUCH faster on average than baseline."
 	cost = 5
 	var_changes = list("slowdown" = -1.0)
@@ -22,7 +22,7 @@
 	var_changes = list("item_slowdown_mod" = 0.5)
 
 /datum/trait/positive/hardy_plus
-	name = "Major Hardy"
+	name = "Hardy, Major"
 	desc = "Allows you to carry heavy equipment with almost no slowdown."
 	cost = 2
 	var_changes = list("item_slowdown_mod" = 0.25)
@@ -39,7 +39,7 @@
 
 //YW ADDITION: START
 /datum/trait/positive/endurance_very_high
-	name = "Very High Endurance"
+	name = "Endurance, Very High "
 	desc = "Increases your maximum total hitpoints to 150"
 	cost = 3
 	var_changes = list("total_health" = 150)
@@ -49,7 +49,7 @@
 	H.setMaxHealth(S.total_health)
 
 /datum/trait/positive/endurance_extremely_high
-	name = "Extremely High Endurance"
+	name = "High Endurance, Extremely"
 	desc = "Increases your maximum total hitpoints to 175"
 	cost = 4
 	var_changes = list("total_health" = 175)
@@ -65,14 +65,14 @@
 	var_changes = list("siemens_coefficient" = 0.75) //YW EDIT
 
 /datum/trait/positive/nonconductive_plus
-	name = "Major Non-Conductive"
+	name = "Non-Conductive, Major"
 	desc = "Decreases your susceptibility to electric shocks by 50%." //YW EDIT
 	cost = 3 //Let us not forget this effects tasers! :YW EDIT
 	var_changes = list("siemens_coefficient" = 0.5) //YW EDIT
 
 //YW ADDITION: START
 /datum/trait/positive/nonconductive_robust
-	name = "Robustly Non-Conductive"
+	name = "Non-Conductive, Robustly"
 	desc = "Decreases your susceptibility to electric shocks by 75%."
 	cost = 4 //Let us not forget this effects tasers!
 	var_changes = list("siemens_coefficient" = 0.25)
@@ -85,7 +85,7 @@
 	var_changes = list("darksight" = 5, "flash_mod" = 1.1)
 
 /datum/trait/positive/darksight_plus
-	name = "Darksight (Major)"
+	name = "Darksight, Major"
 	desc = "Allows you to see in the dark for the whole screen."
 	cost = 2
 	var_changes = list("darksight" = 8, "flash_mod" = 1.2)
@@ -109,7 +109,7 @@
 	var_changes = list("unarmed_types" = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/punch, /datum/unarmed_attack/bite/sharp/numbing))
 
 /datum/trait/positive/minor_brute_resist
-	name = "Minor Brute Resist"
+	name = "Brute Resist, Minor"
 	desc = "Adds 10% resistance to brute damage sources." //YW EDIT
 	cost = 1 //YW EDIT
 	var_changes = list("brute_mod" = 0.9) //YW EDIT
@@ -122,14 +122,14 @@
 
 //YW ADDITION: START
 /datum/trait/positive/brute_resist_plus
-	name = "Major Brute Resist"
+	name = "Brute Resist, Major"
 	desc = "Adds 40% resistance to brute damage sources."
 	cost = 3
 	var_changes = list("brute_mod" = 0.6) //YW EDIT
 // YW ADDITION: END
 
 /datum/trait/positive/minor_burn_resist
-	name = "Minor Burn Resist"
+	name = "Burn Resist, Minor"
 	desc = "Adds 10% resistance to burn damage sources." //YW EDIT
 	cost = 1 //YW EDIT
 	var_changes = list("burn_mod" = 0.9) //YW EDIT
@@ -142,7 +142,7 @@
 
 //YW ADDITIONS: START
 /datum/trait/positive/burn_resist_plus
-	name = "Major Burn Resist"
+	name = "Burn Resist, Major"
 	desc = "Adds 40% resistance to burn damage sources."
 	cost = 3
 	var_changes = list("burn_mod" = 0.6)
@@ -172,7 +172,7 @@
 	var_changes = list("pain_mod" = 0.9)
 	
 /datum/trait/positive/pain_tolerance_advanced
-	name = "High Pain Tolerance"
+	name = "Pain Tolerance, High "
 	desc = "You are noticeably more resistant to pain than most, and experience 20% less pain from all sources."
 	cost = 2
 	var_changes = list("pain_mod" = 0.8)
@@ -186,7 +186,7 @@
 
 //YW ADDITION: START
 /datum/trait/positive/photoresistant_plus
-	name = "Major Photoresistance"
+	name = "Photoresistance, Major"
 	desc = "Decreases stun duration from flashes and other light-based stuns and disabilities by 50%" //YW EDIT
 	cost = 2
 	var_changes = list("flash_mod" = 0.5) //YW EDIT

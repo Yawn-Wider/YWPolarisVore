@@ -17277,11 +17277,9 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "gGb" = (
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/east)
+/obj/structure/sign/painting/public,
+/turf/simulated/wall,
+/area/chapel/monastery)
 "gGp" = (
 /obj/effect/floor_decal/corner_oldtile/purple,
 /obj/effect/floor_decal/corner_oldtile/purple{
@@ -40764,7 +40762,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/substation/medical)
 "pSd" = (
-/obj/machinery/computer/arcade,
+/obj/machinery/computer/arcade{
+	dir = 8
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/captain)
 "pSf" = (
@@ -49224,6 +49224,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
+"tmP" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/borealis2/outdoors/grounds/tower/east)
 "tnK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -79405,7 +79411,7 @@ iSE
 dAA
 dAA
 lta
-pPH
+gGb
 kXk
 kXk
 kXk
@@ -79729,7 +79735,7 @@ iSE
 dAA
 dAA
 lta
-pPH
+gGb
 kXk
 kXk
 kXk
@@ -84999,7 +85005,7 @@ uDf
 uDf
 qtV
 pze
-gGb
+pze
 pze
 eAJ
 pze
@@ -85161,7 +85167,7 @@ uDf
 uDf
 rQa
 ibh
-acu
+tmP
 acu
 kAy
 pze

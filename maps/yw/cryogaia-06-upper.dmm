@@ -1606,14 +1606,10 @@
 /turf/simulated/floor/plating/snow/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
 "dJ" = (
-/obj/structure/railing/grey{
-	dir = 1
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 8
 	},
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/tiled/cryogaia/cryogaia,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "dK" = (
 /obj/structure/cable/green{
@@ -4772,12 +4768,9 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "kl" = (
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/tiled/cryogaia/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
+/obj/structure/sign/painting/public,
+/turf/simulated/wall,
+/area/civilian/atrium/upper)
 "km" = (
 /obj/item/device/geiger/wall{
 	dir = 8;
@@ -10137,9 +10130,8 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "Hs" = (
-/obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/industrial/warning/dust/corner,
-/turf/simulated/floor/tiled/cryogaia/cryogaia,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "Hu" = (
 /obj/machinery/light,
@@ -25500,11 +25492,11 @@ sa
 nH
 lP
 Nj
+kl
 Nj
+kl
 Nj
-Nj
-Nj
-Nj
+kl
 Nj
 Nj
 DF
@@ -26960,8 +26952,8 @@ sa
 iU
 sa
 sa
-vx
 sa
+vx
 sa
 iU
 sa
@@ -27120,11 +27112,11 @@ sa
 kp
 lP
 Nj
+kl
 Nj
+kl
 Nj
-Nj
-Nj
-Nj
+kl
 Nj
 Nj
 di
@@ -28886,7 +28878,7 @@ nQ
 nQ
 kW
 AN
-aH
+AN
 Nj
 wp
 PG
@@ -29047,8 +29039,8 @@ nQ
 nQ
 nQ
 kW
-aH
-aH
+AN
+AN
 Nj
 Nj
 Kr
@@ -29208,9 +29200,9 @@ nQ
 nQ
 nQ
 nQ
-SN
-aH
-aH
+kW
+AN
+AN
 Pi
 pa
 IS
@@ -29370,8 +29362,8 @@ nQ
 nQ
 nQ
 nQ
-SN
-aH
+kW
+AN
 Hs
 Pi
 BW
@@ -29532,9 +29524,9 @@ nQ
 nQ
 nQ
 nQ
-SN
-aH
-aH
+kW
+AN
+AN
 sj
 yN
 wJ
@@ -29694,9 +29686,9 @@ nQ
 nQ
 nQ
 nQ
-SN
-aH
-cr
+kW
+AN
+dJ
 Nj
 Pi
 Pi
@@ -29857,12 +29849,12 @@ nQ
 nQ
 nQ
 ab
-aH
-aH
-aH
-aH
-aH
-aH
+AN
+AN
+AN
+AN
+AN
+AN
 AN
 AN
 AN
@@ -30018,13 +30010,13 @@ WV
 WV
 WV
 WV
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+AN
+AN
+AN
+AN
+AN
+AN
+AN
 AN
 AN
 AN
@@ -30181,11 +30173,11 @@ nQ
 nQ
 nQ
 ie
-kl
-aH
-aH
-aH
-aH
+Sq
+AN
+AN
+AN
+AN
 AN
 AN
 AN
@@ -30344,9 +30336,9 @@ nQ
 nQ
 nQ
 nQ
-dJ
-aH
-aH
+cN
+AN
+AN
 AN
 AN
 AN

@@ -3888,6 +3888,10 @@
 	},
 /turf/simulated/floor/carpet,
 /area/library)
+"cFq" = (
+/obj/structure/sign/painting/chapel_secure,
+/turf/simulated/wall,
+/area/chapel/main)
 "cFM" = (
 /obj/machinery/light{
 	dir = 8
@@ -6464,6 +6468,10 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/security/perma)
+"ekN" = (
+/obj/structure/sign/painting/library_secure,
+/turf/simulated/wall,
+/area/library)
 "elo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -10891,6 +10899,10 @@
 	},
 /turf/simulated/open,
 /area/borealis2/elevator/dorms)
+"hes" = (
+/obj/structure/sign/painting/library_private,
+/turf/simulated/wall,
+/area/library)
 "hex" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/plating,
@@ -16267,10 +16279,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "keb" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
@@ -49587,7 +49595,7 @@ pqI
 pqI
 obA
 pqI
-pqI
+ekN
 pqI
 pqI
 pqI
@@ -50077,7 +50085,7 @@ wbx
 xuy
 nux
 oFC
-pqI
+ekN
 rIJ
 wQb
 cZL
@@ -51200,7 +51208,7 @@ ceH
 qWZ
 rij
 pqI
-pqI
+hes
 epH
 jTx
 pqI
@@ -53909,7 +53917,7 @@ ldt
 ldt
 qxD
 noc
-vku
+cFq
 rLL
 rLL
 rLL
@@ -54233,7 +54241,7 @@ nwk
 nwk
 qdE
 noc
-vku
+cFq
 rLL
 rLL
 rLL

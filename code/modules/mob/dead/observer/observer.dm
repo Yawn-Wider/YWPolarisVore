@@ -334,14 +334,15 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	to_chat(src, "<font color='blue'><B>AntagHUD [antagHUD ? "Enabled" : "Disabled"]</B></font>")
 
 /mob/observer/dead/proc/jumpable_areas()
-	var/list/areas = return_areas()
+	var/list/areas = return_sorted_areas()
 	if(client?.holder)
 		return areas
 	
-	for(var/area/A as anything in areas)
+	for(var/key in areas)
+		var/area/A = areas[key]
 		if(A.z in using_map?.secret_levels)
-			areas -= A
-	return areas				
+			areas -= key
+	return areas
 
 /mob/observer/dead/proc/jumpable_mobs()
 	var/list/mobs = getmobs()
@@ -363,11 +364,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 		to_chat(usr, "Not when you're not dead!")
 		return
 
-	
-	var/area/A = tgui_input_list(usr, "Select an area:", "Ghost Teleport", jumpable_areas())
-	if(!A)
+	var/list/areas = jumpable_areas()
+	var/input = tgui_input_list(usr, "Select an area:", "Ghost Teleport", areas)
+	if(!input)
 		return
 	
+	var/area/A = areas[input]
+	if(!A) return
 	usr.forceMove(pick(get_area_turfs(A)))
 	usr.on_mob_jump()
 
@@ -934,7 +937,7 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	
 	if(usr.client.prefs?.be_special & BE_PAI)
 		var/count = 0
-		for(var/obj/item/device/paicard/p in GLOB.all_pai_cards)
+		for(var/obj/item/device/paicard/p in all_pai_cards)
 			var/obj/item/device/paicard/PP = p
 			if(PP.pai == null)
 				count++

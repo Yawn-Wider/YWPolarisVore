@@ -36,7 +36,7 @@
 	desc = "A tool that converts battery charge to materials."
 	id = "RMS"
 	req_tech = list(TECH_ENGINEERING = 4, TECH_MATERIAL = 3, TECH_BLUESPACE = 3)
-	materials = list(MAT_STEEL = 500, MAT_GLASS 500, MAT_GOLD = 300, MAT_PHORON = 300, MAT_DIAMOND = 500) //Probably change the price in the future just put something for now
+	materials = list(MAT_STEEL = 500, MAT_GLASS = 500, MAT_GOLD = 300, MAT_PHORON = 300, MAT_DIAMOND = 500) //Probably change the price in the future just put something for now
 	build_path = /obj/item/weapon/rms
 	sort_string = "NAAAB"
 // YW addition end

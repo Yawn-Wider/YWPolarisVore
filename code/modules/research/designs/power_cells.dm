@@ -76,7 +76,7 @@
 	name = "device, super"
 	id = "super_device"
 	req_tech = list(TECH_POWER = 3, TECH_MATERIAL = 2)
-	materials = list(MAT_STEEL = 700, MAT_GLASS 70, MAT_GOLD = 50, MAT_GOLD = 20,)
+	materials = list(MAT_STEEL = 700, MAT_GLASS = 70, MAT_GOLD = 50, MAT_GOLD = 20,)
 	build_path = /obj/item/weapon/cell/device/super
 	category = list("Misc")
 	sort_string = "BAABC"
@@ -85,7 +85,7 @@
 	name = "device, hyper"
 	id = "hyper_device"
 	req_tech = list(TECH_POWER = 5, TECH_MATERIAL = 4)
-	materials = list(MAT_STEEL = 1400, MAT_GLASS 1400, MAT_GOLD = 150, MAT_GOLD = 150)
+	materials = list(MAT_STEEL = 1400, MAT_GLASS = 1400, MAT_GOLD = 150, MAT_GOLD = 150)
 	build_path = /obj/item/weapon/cell/device/hyper
 	category = list("Misc")
 	sort_string = "BAABD"
@@ -95,7 +95,7 @@
 	req_tech = list(TECH_POWER = 8, TECH_MATERIAL = 7, TECH_ARCANE = 2, TECH_PHORON = 4, TECH_PRECURSOR = 2)
 	build_type = PROTOLATHE
 	id = "omni-device"
-	materials = list(MAT_STEEL = 1700, MAT_GLASS 550, MAT_DURASTEEL = 230, MAT_MORPHIUM = 320, MAT_METALHYDROGEN = 600, MAT_URANIUM = 60, MAT_VERDANTIUM = 150, MAT_PHORON = 900)
+	materials = list(MAT_STEEL = 1700, MAT_GLASS = 550, MAT_DURASTEEL = 230, MAT_MORPHIUM = 320, MAT_METALHYDROGEN = 600, MAT_URANIUM = 60, MAT_VERDANTIUM = 150, MAT_PHORON = 900)
 	build_path = /obj/item/weapon/cell/device/weapon/recharge/alien/omni
 	category = list("Misc")
 	sort_string = "BAABE"

@@ -18,7 +18,7 @@
 
 /obj/item/device/dogborg/pounce_module/afterattack(atom/target, mob/user as mob, proximity)
 	if(proximity && ishuman(target))
-		user.visible_message("<span class='notice'>\the [user] pounces at \the [target]'s face!</span>", "<span class='notice'>You pounce at \the [target]!</span>")
+		user.visible_message("<b>\the [user] pounces at \the [target]'s face!</b>", "<b>You pounce at \the [target]!</b>")
 		var/mob/living/L = target
 		L.Weaken(10)
 		user.loc = target.loc

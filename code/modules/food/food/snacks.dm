@@ -39,22 +39,25 @@
 	if(nutriment_amt)
 		reagents.add_reagent("nutriment",(nutriment_amt*2),nutriment_desc)		//VOREStation Edit: Undoes global nutrition nerf
 
-	//Placeholder for effect that trigger on eating that aren't tied to reagents.
-/obj/item/weapon/reagent_containers/food/snacks/proc/On_Consume(var/mob/M)
-	if(!usr)
+//Placeholder for effect that trigger on eating that aren't tied to reagents.
+/obj/item/weapon/reagent_containers/food/snacks/proc/On_Consume(var/mob/living/M)
+	if(!usr) // what
 		usr = M
 	if(!reagents.total_volume)
 		M.visible_message("<span class='notice'>[M] finishes eating \the [src].</span>","<span class='notice'>You finish eating \the [src].</span>")
-		usr.drop_from_inventory(src)	//so icons update :[
+		// Embedded-in-food smol vore
+		for(var/obj/item/weapon/holder/holder in src)
+			if(holder.held_mob?.devourable)
+				holder.held_mob.forceMove(M.vore_selected)
+				holder.held_mob = null
+				qdel(holder)
+		
+		usr.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 
 		if(trash)
-			if(ispath(trash,/obj/item))
-				var/obj/item/TrashItem = new trash(usr)
-				usr.put_in_hands(TrashItem)
-			else if(istype(trash,/obj/item))
-				usr.put_in_hands(trash)
+			var/obj/item/TrashItem = new trash(usr)
+			usr.put_in_hands(TrashItem)
 		qdel(src)
-	return
 
 /obj/item/weapon/reagent_containers/food/snacks/attack_self(mob/user as mob)
 	if(package && !user.incapacitated())
@@ -190,24 +193,7 @@
 	// Eating with forks
 	if(istype(W,/obj/item/weapon/material/kitchen/utensil))
 		var/obj/item/weapon/material/kitchen/utensil/U = W
-		if(!U.reagents)
-			U.create_reagents(5)
-
-		if (U.reagents.total_volume > 0)
-			to_chat(user, "<font color='red'>You already have something on your [U].</font>")
-			return
-
-		user.visible_message( \
-			"[user] scoops up some [src] with \the [U]!", \
-			"<font color='blue'>You scoop up some [src] with \the [U]!</font>" \
-		)
-
-		bitecount++
-
-		reagents.trans_to_obj(U, min(reagents.total_volume,5))
-
-		if (reagents.total_volume <= 0)
-			qdel(src)
+		U.load_food(user, src)
 		return
 
 	if (is_sliceable())
@@ -1011,7 +997,9 @@
 
 /obj/item/weapon/reagent_containers/food/snacks/donkpocket/proc/cooltime()
 	if (src.warm)
-		spawn(4200)
+		spawn(420 SECONDS)
+			if(!src?.reagents)
+				return
 			src.warm = 0
 			for(var/reagent in heated_reagents)
 				src.reagents.del_reagent(reagent)
@@ -4258,7 +4246,7 @@
 		if (!feeder)
 			feeder = eater
 
-		feeder.drop_from_inventory(src)	//so icons update :[ //what the fuck is this????
+		feeder.drop_from_inventory(src) // Drop food from inventory so it doesn't end up staying on the hud after qdel, and so inhands go away
 
 		if(trash)
 			if(ispath(trash,/obj/item))
@@ -7108,7 +7096,7 @@
 	desc = "A burger stored in a plastic wrapping for vending machine distribution. Surely it tastes fine!"
 	package = TRUE
 	package_trash = /obj/item/trash/vendor_burger
-	package_open_state = "smolburger"
+	package_open_state = "smolcheeseburger"
 	nutriment_amt = 3
 	nutriment_desc = list("stale burger" = 3)
 	starts_with = list("sodiumchloride" = 1)

@@ -15056,7 +15056,7 @@
 	},
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
-/turf/simulated/floor/tiled/monofloor{
+/turf/simulated/floor/tiled/monotile{
 	dir = 1
 	},
 /area/crew_quarters/sleep/cryo)
@@ -18879,7 +18879,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled/monofloor{
+/turf/simulated/floor/tiled/monotile{
 	dir = 4
 	},
 /area/library)
@@ -21197,7 +21197,7 @@
 	req_access = list()
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central1,
-/turf/simulated/floor/tiled/monofloor,
+/turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/sleep/cryo)
 "mWo" = (
 /obj/structure/table/rack{
@@ -34234,7 +34234,7 @@
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/tiled/monofloor{
+/turf/simulated/floor/tiled/monotile{
 	dir = 8
 	},
 /area/library)

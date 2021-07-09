@@ -28,14 +28,14 @@ obj/item/weapon/shield/riot/stun
 		throw_speed = 2
 		w_class = ITEMSIZE_LARGE
 		slot_flags = SLOT_BACK
-		user << "<span class='notice'>You extend \the [src].</span>"
+		user << "<b>You extend \the [src].</b>"
 	else
 		force = 3
 		throwforce = 3
 		throw_speed = 3
 		w_class = ITEMSIZE_NORMAL
 		slot_flags = null
-		user << "<span class='notice'>[src] can now be concealed.</span>"
+		user << "<b>[src] can now be concealed.</b>"
 
 	if(istype(user,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = user

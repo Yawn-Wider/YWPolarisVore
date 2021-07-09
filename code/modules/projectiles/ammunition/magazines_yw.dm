@@ -31,7 +31,7 @@
 	icon_state = "12gclipscatter"
 	desc = "A color-coded metal clip for holding and quickly loading shotgun shells. This one is loaded with scattershot."
 	ammo_type = /obj/item/ammo_casing/a12g/scatter
-	matter = list(DEFAULT_WALL_MATERIAL = 1337)
+	matter = list(MAT_STEEL = 1337)
 
 
 ///////// .45 /////////
@@ -44,7 +44,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	mag_type = MAGAZINE
 	ammo_type = /obj/item/ammo_casing/a45
-	matter = list(DEFAULT_WALL_MATERIAL = 525) //metal costs are very roughly based around 1 .45 casing = 75 metal
+	matter = list(MAT_STEEL = 525) //metal costs are very roughly based around 1 .45 casing = 75 metal
 	caliber = ".45"
 	max_ammo = 7
 	multiple_sprites = 1
@@ -77,7 +77,7 @@
 	icon = 'icons/obj/gun_yw.dmi'
 	origin_tech = list(TECH_COMBAT = 2)
 	mag_type = MAGAZINE
-	matter = list(DEFAULT_WALL_MATERIAL = 480)
+	matter = list(MAT_STEEL = 480)
 	caliber = "9mm"
 	ammo_type = /obj/item/ammo_casing/a9mm
 	max_ammo = 17
@@ -109,7 +109,7 @@
 	w_class = ITEMSIZE_NORMAL
 	mag_type = MAGAZINE
 	origin_tech = list(TECH_COMBAT = 2)
-	matter = list(DEFAULT_WALL_MATERIAL = 10000)
+	matter = list(MAT_STEEL = 10000)
 
 /obj/item/ammo_magazine/mg42/empty
 	initial_ammo = 0

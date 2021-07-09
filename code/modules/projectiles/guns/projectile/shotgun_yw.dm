@@ -31,7 +31,7 @@
 	icon_state = "c12g"
 	mag_type = MAGAZINE
 	caliber = "12g"
-	matter = list(DEFAULT_WALL_MATERIAL = 1300) //did the math. now fixed the exploityness of this thing. Have fun!
+	matter = list(MAT_STEEL = 1300) //did the math. now fixed the exploityness of this thing. Have fun!
 	ammo_type = /obj/item/ammo_casing/a12g
 	max_ammo = 4
 	multiple_sprites = 1
@@ -51,7 +51,7 @@
 /obj/item/ammo_magazine/m12gdrumjack/empty
 	name = "drum magazine (12 gauge)"
 	initial_ammo = 0
-	matter = list(DEFAULT_WALL_MATERIAL = 1625) //Why these cost so much ? the normal ones have 13000 matter so i just multiplied by 1.25(default) don't know why it costs so much
+	matter = list(MAT_STEEL = 1625) //Why these cost so much ? the normal ones have 13000 matter so i just multiplied by 1.25(default) don't know why it costs so much
 
 //scattering shots, old buckshot
 /obj/item/ammo_casing/a12g/scatter
@@ -60,7 +60,7 @@
 	icon = 'icons/obj/ammo_yw.dmi'
 	icon_state = "scattershell"
 	projectile_type = /obj/item/projectile/scatter/shotgun
-	matter = list(DEFAULT_WALL_MATERIAL = 450)
+	matter = list(MAT_STEEL = 450)
 
 /obj/item/projectile/scatter/shotgun
 	name = "shotgun scatter projectile"

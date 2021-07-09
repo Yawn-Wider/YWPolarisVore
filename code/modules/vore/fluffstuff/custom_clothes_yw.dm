@@ -1277,11 +1277,11 @@
 	if(ring_on)
 		icon_state = "[base_icon]"
 		ring_on = 0
-		usr << "<span class='notice'>You remove the right earring.</span>"
+		usr << "<b>You remove the right earring.</b>"
 	else
 		icon_state = "[base_icon]_on"
 		ring_on = 1
-		usr << "<span class='notice'>You put on the right earring.</span>"
+		usr << "<b>You put on the right earring.</b>"
 
 	update_clothing_icon()
 

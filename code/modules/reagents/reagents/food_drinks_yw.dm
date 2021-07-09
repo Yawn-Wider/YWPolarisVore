@@ -48,4 +48,4 @@
 	else
 		if(world.time > data + YW_ANTIDEPRESSANT_MESSAGE_DELAY)
 			data = world.time
-			to_chat(M, "<span class='notice'>You feel soothed...</span>")
+			to_chat(M, "<b>You feel soothed...</b>")

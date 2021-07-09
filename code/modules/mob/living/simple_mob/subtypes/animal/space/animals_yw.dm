@@ -145,7 +145,7 @@
 						   "rubs against [friend].",
 						   "purrs."))
 	else
-		usr << "<span class='notice'>[src] ignores you.</span>"
+		usr << "<b>[src] ignores you.</b>"
 	return */
 
 /mob/living/simple_mob/clockwork/fluff/Ignis

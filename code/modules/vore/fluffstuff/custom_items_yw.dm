@@ -158,7 +158,7 @@
 	on = !on
 	if(on)
 		user.visible_message("<b>\The [user] extends the white cane.</b>",\
-		"<span class='warning'>You extend the white cane.</b>",\
+		"<span class='warning'>You extend the white cane.</span>",\
 		"You hear an ominous click.")
 		icon_state = "goz_whitecane_1"
 		item_state_slots = list(slot_r_hand_str = "goz_whitecane", slot_l_hand_str = "goz_whitecane")

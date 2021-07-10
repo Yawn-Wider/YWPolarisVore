@@ -444,8 +444,6 @@
 	desc = "Hard as a rock and cold as ice."
 	icon = 'icons/turf/outdoors_yw.dmi'
 	icon_state = "rocks_snow"
-
-/turf/simulated/floor/outdoors/dirt/yw/snowy
 //YW ADDITIONS: end
 //YW CHANGES: end
 // TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud

@@ -388,12 +388,17 @@
 /turf/simulated/floor/tiled/external
 
 //**** Here lives snow ****
+// YW CHANGES: start
 
 /turf/simulated/floor/outdoors/snow
 	name = "snow"
 	icon = 'icons/turf/snow_new.dmi'
 	icon_state = "snow"
 	initial_flooring = /decl/flooring/snow
+	movement_cost = 2
+	turf_layers = list(
+		/turf/simulated/floor/outdoors/rocks/yw/snowy
+		)
 	var/list/crossed_dirs = list()
 	footstep_sounds = list("human" = list( //YW edit: Should provide proper snow stepping!
 		'sound/effects/footstep/snow1.ogg',
@@ -433,6 +438,14 @@
 	initial_flooring = /decl/flooring/snow/plating/drift
 	movement_cost = 0
 
+//YW ADDITIONS: start
+/turf/simulated/floor/outdoors/rocks/yw/snowy
+	name = "snowy rocks"
+	desc = "Hard as a rock and cold as ice."
+	icon = 'icons/turf/outdoors_yw.dmi'
+	icon_state = "rocks_snow"
+//YW ADDITIONS: end
+//YW CHANGES: end
 // TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud
 /turf/simulated/floor/outdoors/snow/Entered(atom/A)
 	if(isliving(A))

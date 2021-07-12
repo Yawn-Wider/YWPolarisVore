@@ -480,7 +480,7 @@ var/induromol_code = rand(1, 50)
 	if(!saved_icon)
 		saved_icon = M.icon //kind of hacky, shouldn't really cause too many problems
 
-	M.icon = 'icons/mob/belt.dmi' //belts because I can
+	M.icon = 'icons/inventory/belt/mob.dmi' //belts because I can
 
 	if(istype(M, /mob/living/carbon/human)) //hair still shows even though you're invisible...
 		var/mob/living/carbon/human/H = M

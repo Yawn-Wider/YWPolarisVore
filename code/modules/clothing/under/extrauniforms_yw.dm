@@ -24,7 +24,7 @@
 	desc = "Sturdy mess of black synthcotton belts and buckles."
 	icon_state = "pilot_webbing2"
 	sprite_sheets = list(
-			"Teshari" = 'icons/mob/species/teshari/ties.dmi'
+			"Teshari" = 'icons/inventory/accessory/mob_teshari.dmi'
 			)
 
 /obj/item/clothing/under/rank/khi/sec/pilot //yes, we're inheriting from the khi version; that one has full rolldown sprites
@@ -263,7 +263,7 @@
 /obj/item/clothing/under/yw/victsuit/get_worn_icon_file(var/body_type,var/slot_name,var/default_icon,var/inhands)
 	if(body_type == SPECIES_GREY_YW)
 		if(!inhands)
-			return 'icons/mob/species/grey/uniform.dmi'
+			return 'icons/inventory/uniform/mob_grey.dmi'
 
 	else
 		return ..()

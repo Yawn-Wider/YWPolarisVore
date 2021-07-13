@@ -24,7 +24,7 @@
 	icon_state = "shadekin"
 	do_colouration = 1
 	color_blend_mode = ICON_MULTIPLY
-	species_allowed = list() // SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW
+	species_allowed = null //YW EDIT
 
 /datum/sprite_accessory/ears/taj_ears
 	name = "Tajaran Ears"

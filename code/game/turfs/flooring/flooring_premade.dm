@@ -392,7 +392,7 @@
 
 /turf/simulated/floor/outdoors/snow
 	name = "snow"
-	icon = 'icons/turf/outdoors.dmi'
+	icon = 'icons/turf/snow_yw.dmi' //YWEdit
 	icon_state = "snow"
 	initial_flooring = /decl/flooring/snow
 	movement_cost = 2
@@ -410,11 +410,12 @@
 /turf/simulated/floor/outdoors/snow/snow
 	name = "snow"
 	icon_state = "snow"
+	movement_cost = 4
 
 /turf/simulated/floor/outdoors/snow/snow/snow2
 	name = "snow"
-	icon_state = "snownew"
-	movement_cost = 4
+	icon_state = "snow2" //YWEdit
+	movement_cost = 2	
 	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
 
 /turf/simulated/floor/outdoors/snow/gravsnow

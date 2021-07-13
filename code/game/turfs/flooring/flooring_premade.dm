@@ -392,7 +392,7 @@
 
 /turf/simulated/floor/outdoors/snow
 	name = "snow"
-	icon = 'icons/turf/snow_new.dmi'
+	icon = 'icons/turf/outdoors.dmi'
 	icon_state = "snow"
 	initial_flooring = /decl/flooring/snow
 	movement_cost = 2

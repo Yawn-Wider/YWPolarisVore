@@ -5567,12 +5567,6 @@
 /obj/structure/ladder,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/cryogaia/station/ert_arrival)
-"lV" = (
-/obj/machinery/door/airlock/glass_external/freezable{
-	req_one_access = list()
-	},
-/turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/southeast)
 "lW" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -13132,13 +13126,13 @@
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
 "Yc" = (
-/obj/structure/catwalk,
 /obj/structure/railing/grey{
 	dir = 8
 	},
 /obj/structure/railing/grey{
 	flags = null
 	},
+/obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/exterior/upper)
 "Yf" = (
@@ -37390,7 +37384,7 @@ Op
 Op
 Op
 kI
-lV
+aY
 SZ
 MB
 SZ

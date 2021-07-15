@@ -335,7 +335,7 @@
 
 /datum/species/vox
 	gluttonous = 0
-	spawn_flags = SPECIES_CAN_JOIN | /*SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE YW Comment out*/
+	spawn_flags = SPECIES_CAN_JOIN /*| SPECIES_IS_WHITELISTED | SPECIES_WHITELIST_SELECTABLE YW Comment out*/
 	min_age = 18	
 	inherent_verbs = list(/mob/living/carbon/human/proc/tie_hair) //Get ya quills done did
 	icobase = 'icons/mob/human_races/r_vox_old.dmi'

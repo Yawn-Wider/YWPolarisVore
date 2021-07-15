@@ -529,7 +529,7 @@
 		F.update_icon(1)
 
 	for(var/mob/M in is_seeing)
-		M.client?.screen -= W //YW EDIT: to fix bags
+		M?.client.screen -= W
 
 	if(new_location)
 		if(ismob(loc))

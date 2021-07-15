@@ -124,11 +124,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/borealis2/outdoors/grounds/traderpad)
-"jv" = (
-/obj/effect/overlay/snow/floor,
-/obj/effect/floor_decal/snow/floor/edges2,
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/traderpad)
 "jG" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full{
@@ -649,7 +644,7 @@
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 8
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/traderpad)
 "Hg" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -708,13 +703,6 @@
 	id_tag = "trade_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
-"IL" = (
-/obj/effect/overlay/snow/floor,
-/obj/effect/floor_decal/snow/floor/edges2{
-	dir = 8
-	},
-/turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/traderpad)
 "IR" = (
 /obj/structure/symbol/sa,
@@ -16245,8 +16233,8 @@ jQ
 jQ
 jQ
 jQ
-IL
-IL
+jQ
+jQ
 Ha
 AI
 IF
@@ -16409,7 +16397,7 @@ yX
 yX
 yX
 yX
-jv
+EN
 AI
 IF
 Iz
@@ -16571,7 +16559,7 @@ yX
 yX
 yX
 yX
-jv
+EN
 AI
 IF
 Iz

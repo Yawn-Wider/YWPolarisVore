@@ -127,6 +127,6 @@
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/inventory/eyes/mob_teshari.dmi',
 		SPECIES_VOX = 'icons/inventory/eyes/mob_vox.dmi',
-		SPECIES_WEREBEAST = 'icons/inventory/eyes/mob_werebeast.dmi',
+		SPECIES_WEREBEAST = 'icons/inventory/eyes/mob_vr_werebeast.dmi',
 		SPECIES_GREY_YW = 'icons/mob/species/grey/eyes.dmi'/*ywedit*/
 		)

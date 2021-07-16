@@ -292,7 +292,7 @@ MRE Stuff
 // TGMC MREs - Smaller, less trash
 /obj/item/weapon/storage/box/tgmc_mre
 	name = "\improper CRS MRE"
-	desc = "Meal Ready-to-Eat, meant to be consumed in the field, prepared by the Commonwealth Ration Service. It says it's government property..."
+	desc = "Meal Ready-to-Eat, meant to be consumed in the field, prepared by the SolGov Ration Service. It says it's government property..."
 	icon = 'icons/obj/food.dmi'
 	icon_state = "tgmc_mre"
 	w_class = ITEMSIZE_SMALL

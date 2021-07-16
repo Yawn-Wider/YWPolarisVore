@@ -22,7 +22,8 @@ SPECIES_SERGAL = 'icons/inventory/head/mob_vr_sergal.dmi',\
 SPECIES_NEVREAN = 'icons/inventory/head/mob_vr_sergal.dmi',\
 SPECIES_VULPKANIN = 'icons/inventory/head/mob_vr_vulpkanin.dmi',\
 SPECIES_ZORREN_HIGH = 'icons/inventory/head/mob_vr_vulpkanin.dmi',\
-SPECIES_FENNEC = 'icons/inventory/head/mob_vr_vulpkanin.dmi')
+SPECIES_FENNEC = 'icons/inventory/head/mob_vr_vulpkanin.dmi',\
+SPECIES_GREY_YW	 = 'icons/inventory/head/mob_grey.dmi' /*ywedit*/)
 #define VR_SPECIES_SPRITE_SHEETS_HANDS_MOB list(\
 SPECIES_TAJ = 'icons/inventory/hands/mob_tajaran.dmi',\
 SPECIES_SKRELL = 'icons/inventory/hands/mob_skrell.dmi',\
@@ -121,7 +122,8 @@ SPECIES_SERGAL = 'icons/inventory/head/mob_vr_sergal.dmi',\
 SPECIES_NEVREAN = 'icons/inventory/head/mob_vr_sergal.dmi',\
 SPECIES_VULPKANIN = 'icons/inventory/head/mob_vr_vulpkanin.dmi',\
 SPECIES_ZORREN_HIGH = 'icons/inventory/head/mob_vr_vulpkanin.dmi',\
-SPECIES_FENNEC = 'icons/inventory/head/mob_vr_vulpkanin.dmi')
+SPECIES_FENNEC = 'icons/inventory/head/mob_vr_vulpkanin.dmi',\
+SPECIES_GREY_YW	 = 'icons/inventory/head/mob_grey.dmi' /*ywedit*/)
 #define ALL_VR_SPRITE_SHEETS_HANDS_MOB list(\
 SPECIES_TAJ = 'icons/inventory/hands/mob_vr_tajaran.dmi',\
 SPECIES_SKRELL = 'icons/inventory/hands/mob_vr_skrell.dmi',\

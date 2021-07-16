@@ -50,7 +50,7 @@
 
 // Alt mining voidsuit
 /obj/item/clothing/suit/space/void/mining/alt2
-	desc = "A surplus Commonwealth mining voidsuit! Slightly more comfortable and easier to move in than your average voidsuit."
+	desc = "A surplus SolGov mining voidsuit! Slightly more comfortable and easier to move in than your average voidsuit." //YW EDIT
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
@@ -61,7 +61,7 @@
 	slowdown = 0
 	
 /obj/item/clothing/head/helmet/space/void/mining/alt2
-	desc = "A surplus Commonwealth voidsuit helmet. Seems more fancy than what's usually found on the frontier."
+	desc = "A surplus SolGov voidsuit helmet. Seems more fancy than what's usually found on the frontier." //YW EDIT
 	
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
@@ -72,7 +72,7 @@
 
 // Alt anomaly/excavation suit
 /obj/item/clothing/suit/space/anomaly/alt
-	desc = "A surplus Commonwealth anomaly suit! Slightly more comfortable and easier to move in than your average anomaly suit."
+	desc = "A surplus SolGov anomaly suit! Slightly more comfortable and easier to move in than your average anomaly suit." //YW EDIT
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
@@ -83,7 +83,7 @@
 	slowdown = 0.5
 	
 /obj/item/clothing/head/helmet/space/anomaly/alt
-	desc = "A surplus Commonwealth helmet. Seems more fancy than what's usually found on the frontier."
+	desc = "A surplus SolGov helmet. Seems more fancy than what's usually found on the frontier." //YW EDIT
 	
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
@@ -94,7 +94,7 @@
 
 // Alt riot suit
 /obj/item/clothing/suit/space/void/security/riot/alt
-	desc = "A surplus Commonwealth riot control voidsuit! Slightly more comfortable and easier to move in than your average voidsuit."
+	desc = "A surplus SolGov riot control voidsuit! Slightly more comfortable and easier to move in than your average voidsuit." //YW EDIT
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
@@ -105,7 +105,7 @@
 	slowdown = 0.5
 	
 /obj/item/clothing/head/helmet/space/void/security/riot/alt
-	desc = "A surplus Commonwealth voidsuit helmet. Seems more fancy than what's usually found on the frontier."
+	desc = "A surplus SolGov voidsuit helmet. Seems more fancy than what's usually found on the frontier." //YW EDIT
 	
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
@@ -116,7 +116,7 @@
 
 // Alt pilot suit
 /obj/item/clothing/suit/space/void/pilot/alt2
-	desc = "A surplus Commonwealth pilot voidsuit! Slightly more comfortable and easier to move in than your average voidsuit."
+	desc = "A surplus SolGov pilot voidsuit! Slightly more comfortable and easier to move in than your average voidsuit." //YW EDIT
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
@@ -127,7 +127,7 @@
 	slowdown = 0
 	
 /obj/item/clothing/head/helmet/space/void/pilot/alt2
-	desc = "A surplus Commonwealth voidsuit helmet. Seems more fancy than what's usually found on the frontier."
+	desc = "A surplus SolGov voidsuit helmet. Seems more fancy than what's usually found on the frontier." //YW EDIT
 	
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
@@ -138,7 +138,7 @@
 
 // Alt medical/emt suit
 /obj/item/clothing/suit/space/void/medical/alt2
-	desc = "A surplus Commonwealth medical voidsuit! Slightly more comfortable and easier to move in than your average voidsuit."
+	desc = "A surplus SolGov medical voidsuit! Slightly more comfortable and easier to move in than your average voidsuit." //YW EDIT
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
@@ -149,7 +149,7 @@
 	slowdown = 0
 	
 /obj/item/clothing/head/helmet/space/void/medical/alt2
-	desc = "A surplus Commonwealth voidsuit helmet. Seems more fancy than what's usually found on the frontier."
+	desc = "A surplus SolGov voidsuit helmet. Seems more fancy than what's usually found on the frontier." //YW EDIT
 	
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
@@ -160,7 +160,7 @@
 
 // Alt explorer suit
 /obj/item/clothing/suit/space/void/exploration/alt2
-	desc = "A surplus Commonwealth exploration voidsuit! Slightly more comfortable and easier to move in than your average voidsuit."
+	desc = "A surplus SolGov exploration voidsuit! Slightly more comfortable and easier to move in than your average voidsuit." //YW EDIT
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
@@ -171,7 +171,7 @@
 	slowdown = 0
 	
 /obj/item/clothing/head/helmet/space/void/exploration/alt2
-	desc = "A surplus Commonwealth voidsuit helmet. Seems more fancy than what's usually found on the frontier."
+	desc = "A surplus SolGov voidsuit helmet. Seems more fancy than what's usually found on the frontier." //YW EDIT
 	
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
@@ -182,7 +182,7 @@
 
 // Alt engineering voidsuit
 /obj/item/clothing/suit/space/void/engineering/alt2
-	desc = "A surplus Commonwealth engineering voidsuit! Slightly more comfortable and easier to move in than your average voidsuit."
+	desc = "A surplus SolGov engineering voidsuit! Slightly more comfortable and easier to move in than your average voidsuit." //YW EDIT
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
@@ -193,7 +193,7 @@
 	slowdown = 0.5
 	
 /obj/item/clothing/head/helmet/space/void/engineering/alt2
-	desc = "A surplus Commonwealth voidsuit helmet. Seems more fancy than what's usually found on the frontier."
+	desc = "A surplus SolGov voidsuit helmet. Seems more fancy than what's usually found on the frontier." //YW EDIT
 	
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
@@ -204,7 +204,7 @@
 
 // Alt atmos voidsuit
 /obj/item/clothing/suit/space/void/atmos/alt2
-	desc = "A surplus Commonwealth atmospherics voidsuit! Slightly more comfortable and easier to move in than your average voidsuit."
+	desc = "A surplus SolGov atmospherics voidsuit! Slightly more comfortable and easier to move in than your average voidsuit." //YW EDIT
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
@@ -215,7 +215,7 @@
 	slowdown = 0.5
 	
 /obj/item/clothing/head/helmet/space/void/atmos/alt2
-	desc = "A surplus Commonwealth voidsuit helmet. Seems more fancy than what's usually found on the frontier."
+	desc = "A surplus SolGov voidsuit helmet. Seems more fancy than what's usually found on the frontier." //YW EDIT
 	
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'
@@ -226,7 +226,7 @@
 
 // Alt command voidsuit
 /obj/item/clothing/suit/space/void/captain/alt
-	desc = "A surplus Commonwealth Navy captain voidsuit! Slightly more comfortable and easier to move in than your average voidsuit."
+	desc = "A surplus SolGov Navy captain voidsuit! Slightly more comfortable and easier to move in than your average voidsuit." //YW EDIT
 	
 	icon = 'icons/inventory/suit/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/suit/mob_vr.dmi'
@@ -237,7 +237,7 @@
 	slowdown = 1.0
 	
 /obj/item/clothing/head/helmet/space/void/captain/alt
-	desc = "A surplus Commonwealth voidsuit helmet. Seems more fancy than what's usually found on the frontier."
+	desc = "A surplus SolGov voidsuit helmet. Seems more fancy than what's usually found on the frontier." //YW EDIT
 	
 	icon = 'icons/inventory/head/item_vr.dmi'
 	default_worn_icon = 'icons/inventory/head/mob_vr.dmi'

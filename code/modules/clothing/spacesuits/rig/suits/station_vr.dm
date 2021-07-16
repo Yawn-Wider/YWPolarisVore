@@ -225,8 +225,8 @@
 
 // Medical rig from bay
 /obj/item/weapon/rig/baymed
-	name = "\improper Commonwealth medical hardsuit control module"
-	desc = "A lightweight first responder hardsuit from the Commonwealth. Not suitable for combat use, but advanced myomer fibers can push the user to incredible speeds."
+	name = "\improper SolGov medical hardsuit control module" //YW EDIT
+	desc = "A lightweight first responder hardsuit from the SolGov. Not suitable for combat use, but advanced myomer fibers can push the user to incredible speeds." //YW EDIT
 	
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
@@ -288,8 +288,8 @@
 
 // Engineering/'Industrial' rig from bay
 /obj/item/weapon/rig/bayeng
-	name = "\improper Commonwealth engineering hardsuit control module"
-	desc = "An advanced construction hardsuit from the Commonwealth. Built like a tank. Don't expect to be taking any tight corners while running."
+	name = "\improper SolGov engineering hardsuit control module" //YW EDIT
+	desc = "An advanced construction hardsuit from the SolGov. Built like a tank. Don't expect to be taking any tight corners while running." //YW EDIT
 	
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob
@@ -351,8 +351,8 @@
 
 // Pathfinder rig from bay - event/reward stuff here
 /obj/item/weapon/rig/pathfinder
-	name = "\improper Commonwealth pathfinder hardsuit control module"
-	desc = "A Commonwealth pathfinder hardsuit is hard to come by... how'd this end up on the frontier?"
+	name = "\improper SolGov pathfinder hardsuit control module" //YW EDIT
+	desc = "A SolGov pathfinder hardsuit is hard to come by... how'd this end up on the frontier?" //YW EDIT
 	
 	icon = 'icons/obj/rig_modules_vr.dmi' // the item
 	default_mob_icon = 'icons/mob/rig_back_vr.dmi' // the onmob

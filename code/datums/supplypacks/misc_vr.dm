@@ -83,23 +83,23 @@
 	access = access_ce
 
 /datum/supply_pack/misc/com_medical_rig
-	name = "commonwealth medical hardsuit (loaded)"
+	name = "solgov medical hardsuit (loaded)" //YW EDIT
 	contains = list(
 			/obj/item/weapon/rig/baymed = 1
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Commonwealth medical hardsuit crate"
+	containername = "solgov medical hardsuit crate" //YW EDIT
 	access = access_medical
 
 /datum/supply_pack/misc/com_engineering_rig
-	name = "commonwealth engineering hardsuit (loaded)"
+	name = "solgov engineering hardsuit (loaded)" //YW EDIT
 	contains = list(
 			/obj/item/weapon/rig/bayeng = 1
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Commonwealth medical hardsuit crate"
+	containername = "solgov medical hardsuit crate" //YW EDIT
 	access = access_medical
 
 /datum/supply_pack/misc/zero_rig

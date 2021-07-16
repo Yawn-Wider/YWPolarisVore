@@ -64,7 +64,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_emagged)
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/engineering/alt
 	suit_becomes = /obj/item/clothing/suit/space/void/engineering/alt
 /datum/suit_cycler_choice/department/eng/commonwealth_standard
-	name = "Commonwealth Engineering"
+	name = "SolGov Engineering" //YW EDIT
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/engineering/alt2
 	suit_becomes = /obj/item/clothing/suit/space/void/engineering/alt2
 /datum/suit_cycler_choice/department/eng/atmospherics
@@ -76,7 +76,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_emagged)
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/atmos/alt
 	suit_becomes = /obj/item/clothing/suit/space/void/atmos/alt
 /datum/suit_cycler_choice/department/eng/commonwealth_atmos
-	name = "Commonwealth Atmos"
+	name = "SolGov Atmos" //YW EDIT
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/atmos/alt2
 	suit_becomes = /obj/item/clothing/suit/space/void/atmos/alt2
 /datum/suit_cycler_choice/department/eng/hazmat
@@ -101,7 +101,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_emagged)
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/mining/alt
 	suit_becomes = /obj/item/clothing/suit/space/void/mining/alt
 /datum/suit_cycler_choice/department/crg/commonwealth
-	name = "Commonwealth Mining"
+	name = "SolGov Mining" //YW EDIT
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/mining/alt2
 	suit_becomes = /obj/item/clothing/suit/space/void/mining/alt2
 
@@ -115,7 +115,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_emagged)
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/medical/alt
 	suit_becomes = /obj/item/clothing/suit/space/void/medical/alt
 /datum/suit_cycler_choice/department/med/commonwealth
-	name = "Commonwealth Medical"
+	name = "SolGov Medical" //YW EDIT
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/medical/alt2
 	suit_becomes = /obj/item/clothing/suit/space/void/medical/alt2
 /datum/suit_cycler_choice/department/med/biohazard
@@ -137,7 +137,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_emagged)
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/security/riot
 	suit_becomes = /obj/item/clothing/suit/space/void/security/riot
 /datum/suit_cycler_choice/department/sec/commonwealth
-	name = "Commonwealth Crowd Control"
+	name = "SolGov Crowd Control" //YW EDIT
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/security/riot/alt
 	suit_becomes = /obj/item/clothing/suit/space/void/security/riot/alt
 /datum/suit_cycler_choice/department/sec/eva
@@ -159,7 +159,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_emagged)
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/exploration/alt
 	suit_becomes = /obj/item/clothing/suit/space/void/exploration/alt
 /datum/suit_cycler_choice/department/exp/commonwealth
-	name = "Commonwealth Exploration"
+	name = "SolGov Exploration" //YW EDIT
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/exploration/alt2
 	suit_becomes = /obj/item/clothing/suit/space/void/exploration/alt2
 
@@ -173,7 +173,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_emagged)
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/pilot/alt
 	suit_becomes = /obj/item/clothing/suit/space/void/pilot/alt
 /datum/suit_cycler_choice/department/pil/commonwealth
-	name = "Commonwealth Pilot"
+	name = "SolGov Pilot" //YW EDIT
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/pilot/alt2
 	suit_becomes = /obj/item/clothing/suit/space/void/pilot/alt2
 
@@ -183,7 +183,7 @@ GLOBAL_LIST_EMPTY(suit_cycler_emagged)
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/captain
 	suit_becomes = /obj/item/clothing/suit/space/void/captain
 /datum/suit_cycler_choice/department/captain/commonwealth
-	name = "Commonwealth Captain"
+	name = "SolGov Captain" //YW EDIT
 	helmet_becomes = /obj/item/clothing/head/helmet/space/void/captain/alt
 	suit_becomes = /obj/item/clothing/suit/space/void/captain/alt
 

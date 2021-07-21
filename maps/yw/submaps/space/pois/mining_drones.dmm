@@ -166,7 +166,7 @@
 /turf/simulated/floor/tiled/airless,
 /area/submap/debrisfield/mining_outpost)
 "E" = (
-/obj/machinery/door/airlock/external/glass{
+/obj/machinery/door/airlock/glass_external{
 	density = 0;
 	health = 0;
 	icon_state = "door_open";
@@ -175,7 +175,9 @@
 /turf/simulated/floor/airless,
 /area/submap/debrisfield/mining_outpost)
 "F" = (
-/obj/machinery/door/airlock/external/glass/bolted,
+/obj/machinery/door/airlock/glass_external{
+	locked = 1
+	},
 /turf/simulated/floor/airless,
 /area/submap/debrisfield/mining_outpost)
 "G" = (
@@ -188,7 +190,6 @@
 /obj/random/unidentified_medicine/old_medicine,
 /obj/random/unidentified_medicine/old_medicine,
 /obj/structure/closet/medical_wall{
-	dir = 2;
 	pixel_y = -24
 	},
 /obj/item/stack/medical/bruise_pack,

@@ -10,17 +10,29 @@
 	. = ..()
 	reagents.add_reagent("beer",1000)
 
-/obj/structure/reagent_dispensers/winevat
-	name = "Wine vat"
-	desc = "A vat of wine."
+/obj/structure/reagent_dispensers/redwinevat
+	name = "Red Wine vat"
+	desc = "A vat of Red wine."
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "vat"
 	amount_per_transfer_from_this = 10
 	anchored = 1
 
-/obj/structure/reagent_dispensers/winevat/Initialize()
+/obj/structure/reagent_dispensers/redwinevat/Initialize()
 	..()
-	reagents.add_reagent("wine",1000)
+	reagents.add_reagent("redwine",1000)
+
+/obj/structure/reagent_dispensers/whitewinevat
+	name = "Red White vat"
+	desc = "A vat of White wine."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "vat"
+	amount_per_transfer_from_this = 10
+	anchored = 1
+
+/obj/structure/reagent_dispensers/whitewinevat/Initialize()
+	..()
+	reagents.add_reagent("white",1000)
 
 
 /obj/structure/reagent_dispensers/beerkeg/fakenuke

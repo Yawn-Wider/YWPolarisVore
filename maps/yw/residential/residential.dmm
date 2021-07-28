@@ -2238,7 +2238,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
 "kQ" = (
-/obj/structure/reagent_dispensers/winevat,
+/obj/structure/reagent_dispensers/redwinevat,
 /turf/simulated/floor/tiled,
 /area/residential/mroom1)
 "kS" = (
@@ -4908,9 +4908,7 @@
 /area/residential/room3)
 "zS" = (
 /obj/machinery/light_switch{
-	pixel_x = 0;
-	pixel_y = 28;
-	step_y = 0
+	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/residential/room12)
@@ -7205,17 +7203,16 @@
 "Kz" = (
 /obj/machinery/recharger{
 	pixel_x = -1;
-	pixel_y = 7;
-	step_y = 0
+	pixel_y = 7
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room12)
 "KA" = (
-/obj/structure/reagent_dispensers/winevat,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/reagent_dispensers/redwinevat,
 /turf/simulated/floor/tiled,
 /area/residential/mroom1)
 "KC" = (

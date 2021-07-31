@@ -11,7 +11,7 @@ const MATERIAL_KEYS = {
   "steel": "sheet-metal_3",
   "glass": "sheet-glass_3",
   "silver": "sheet-silver_3",
-  "graphite": "sheet-silver_3",
+  "graphite": "sheet-graphite_3", /* YW EDIT */
   "plasteel": "sheet-plasteel_3",
   "durasteel": "sheet-durasteel_3",
   "verdantium": "sheet-wavy_3",
@@ -20,7 +20,7 @@ const MATERIAL_KEYS = {
   "gold": "sheet-gold_3",
   "diamond": "sheet-diamond",
   "supermatter": "sheet-super_3",
-  "osmium": "sheet-silver_3",
+  "osmium": "sheet-osmium_3", /* YW EDIT */
   "phoron": "sheet-phoron_3",
   "uranium": "sheet-uranium_3",
   "titanium": "sheet-titanium_3",

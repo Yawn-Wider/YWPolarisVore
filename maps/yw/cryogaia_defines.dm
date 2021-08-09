@@ -19,9 +19,8 @@
 #define Z_LEVEL_AEROSTAT				18
 #define Z_LEVEL_AEROSTAT_SURFACE		19
 #define Z_LEVEL_DEBRISFIELD				20
-#define Z_LEVEL_GUTTERSITE				20
-#define Z_LEVEL_FUELDEPOT				22
-#define Z_LEVEL_GATEWAY					23
+#define Z_LEVEL_FUELDEPOT				21
+#define Z_LEVEL_GATEWAY					22
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -191,7 +190,6 @@
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space"),
-		list("Gutter Site - Z1 Space"),
 		list("Fuel Depot - Z1 Space")
 		)
 

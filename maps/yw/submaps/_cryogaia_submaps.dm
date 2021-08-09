@@ -32,7 +32,6 @@
 #include "aerostat/surface.dmm"
 #include "space/debrisfield.dmm"
 #include "space/fueldepot.dmm"
-#include "space/guttersite.dmm"
 #endif
 
 #include "beach/_beach.dm"
@@ -110,7 +109,6 @@
 #include "space/_fueldepot.dm"
 #include "space/pois/_templates.dm"
 #include "space/pois/debrisfield_things.dm"
-#include "space/_guttersite.dm"
 
 /datum/map_template/cryogaia_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
@@ -136,16 +134,6 @@
 /datum/map_z_level/cryogaia_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
 	z = Z_LEVEL_FUELDEPOT
-
-/datum/map_template/cryogaia_lateload/away_guttersite
-	name = "Gutter Site - Z1 Space"
-	desc = "The Virgo Erigone Space Away Site."
-	mappath = 'space/guttersite.dmm'
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_guttersite
-
-/datum/map_z_level/cryogaia_lateload/away_guttersite
-	name = "Away Mission - Gutter Site"
-	z = Z_LEVEL_GUTTERSITE
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like

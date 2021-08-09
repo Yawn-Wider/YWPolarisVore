@@ -166,7 +166,7 @@
 	)
 	gear_tweaks += new/datum/gear_tweak/path(labcoats)
 
-/datum/gear/suit/labcoat/emt
+/datum/gear/suit/labcoat_emt
 	display_name = "labcoat, EMT"
 	path = /obj/item/clothing/suit/storage/toggle/labcoat/emt
 	allowed_roles = list("Medical Doctor","Chief Medical Officer","Chemist","Paramedic","Geneticist", "Psychiatrist")
@@ -548,6 +548,18 @@
 		"Cargo department jacket" = /obj/item/clothing/suit/storage/toggle/supply_dep_jacket,
 		"Science department jacket" = /obj/item/clothing/suit/storage/toggle/sci_dep_jacket,
 		"Medical department jacket" = /obj/item/clothing/suit/storage/toggle/med_dep_jacket
+	)
+	gear_tweaks += new/datum/gear_tweak/path(jacket)
+
+/datum/gear/suit/miscellaneous/light_jacket
+	display_name = "light jacket selection"
+	path = /obj/item/clothing/suit/storage/toggle/light_jacket
+
+/datum/gear/suit/miscellaneous/light_jacket/New()
+	..()
+	var/list/jacket = list(
+		"grey light jacket" = /obj/item/clothing/suit/storage/toggle/light_jacket,
+		"dark blue light jacket" = /obj/item/clothing/suit/storage/toggle/light_jacket/blue
 	)
 	gear_tweaks += new/datum/gear_tweak/path(jacket)
 

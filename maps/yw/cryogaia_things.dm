@@ -497,15 +497,6 @@ var/global/list/latejoin_tram   = list()
 /obj/machinery/cryopod/robot/door/dorms
 	spawnpoint_type = /datum/spawnpoint/tram
 
-//Dance pole
-/obj/structure/dancepole
-	name = "dance pole"
-	desc = "Engineered for your entertainment"
-	icon = 'icons/obj/objects_vr.dmi'
-	icon_state = "dancepole"
-	density = 0
-	anchored = 1
-
 /obj/structure/dancepole/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(O.is_wrench())
 		anchored = !anchored

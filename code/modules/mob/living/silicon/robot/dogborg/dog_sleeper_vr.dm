@@ -714,12 +714,16 @@
 	max_item_count = 10
 	recycles = FALSE
 
-#undef SLEEPER_INJECT_COST
-
-
 /obj/item/device/dogborg/sleeper/compactor/brewer
 	name = "Brew Belly"
 	desc = "A mounted drunk tank unit with fuel processor."
 	icon_state = "brewer"
 	injection_chems = null
-	max_item_count = 1 //YW EDIT
+
+/obj/item/device/dogborg/sleeper/K9/ert
+	name = "ERT Belly"
+	desc = "A mounted 'emergency containment cell'."
+	icon_state = "sleeperert"
+	injection_chems = list("inaprovaline", "paracetamol") // short list
+
+#undef SLEEPER_INJECT_COST

@@ -7,7 +7,7 @@
 	desc = "Gold trim on blue cloth, this uniform displays the rank of \"Lieutenant\" and bears \"Nanotrasen Blueshield officer\" on the left shoulder"
 	icon = 'icons/mob/uniform_yw.dmi'
 	icon_state = "blueshield"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	item_state = "blueshield"
 
 /obj/item/clothing/under/yw/blueshield2 //fancy blueshield suit,
@@ -15,7 +15,7 @@
 	desc = "A snazzy combat uniform with the a blueshield insignia on the back."
 	icon = 'icons/mob/uniform_yw.dmi'
 	icon_state = "blueshield2"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	item_state = "blueshield2"
 	armor = list(melee = 15, bullet = 10, laser = 10,energy = 5, bomb = 15, bio = 0, rad = 0)
 
@@ -40,7 +40,7 @@
 	desc = "A formal security suit for officers complete with nanotrasen belt buckle."
 	icon = 'icons/mob/uniform_yw.dmi'
 	icon_state = "securityformal"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	item_state = "securityformal"
 	armor = list(melee = 10, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 0, rad = 0)
 
@@ -49,7 +49,7 @@
 	desc = "A formal security suit for the warden with blue desginations and '/Warden/' stiched into the shoulders."
 	icon = 'icons/mob/uniform_yw.dmi'
 	icon_state = "wardenformal"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	item_state = "wardenformal"
 	armor = list(melee = 10, bullet = 5, laser = 5,energy = 0, bomb = 0, bio = 0, rad = 0)
 
@@ -58,7 +58,7 @@
 	desc = "A security suit decorated for those few with the dedication to achieve the position of Head of Security."
 	icon = 'icons/mob/uniform_yw.dmi'
 	icon_state = "hosformal"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	item_state = "hosformal"
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 5, bomb = 0, bio = 0, rad = 0)
 
@@ -68,7 +68,7 @@
 	name = "brig physician's jumpsuit"
 	icon = 'icons/mob/uniform_yw.dmi'
 	icon_state = "brigphysician"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	item_state = "brigphysician"
 	permeability_coefficient = 0.50
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
@@ -78,7 +78,7 @@
 	name = "brig physician's jumpskirt"
 	icon = 'icons/mob/uniform_yw.dmi'
 	icon_state = "brigphysicianf_s"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	item_state = "brigphysicianf"
 	permeability_coefficient = 0.50
 	armor = list(melee = 10, bullet = 0, laser = 0, energy = 0, bomb = 0, bio = 10, rad = 0)
@@ -89,7 +89,7 @@
 	desc = "A roboticist uniform with glowing trim, and some sort of machine port on the back."
 	icon = 'icons/mob/uniform_yw.dmi'
 	icon_state = "robotics2"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	item_state = "Robotics2"
 
 //Explorers uniforms Start
@@ -98,7 +98,7 @@
 	desc = "The utility uniform of the Explorer's association, made from biohazard resistant material. This one has silver trim."
 	icon = 'icons/obj/clothing/uniforms_yw.dmi'
 	icon_state = "blackutility_crew"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	armor = list(melee = 0, bullet = 0, laser = 0,energy = 0, bomb = 0, bio = 10, rad = 10)
 
 /obj/item/clothing/under/explorer/utility/supply
@@ -148,7 +148,7 @@
 	desc = "The Fleet uniform of the Nanotrasen Space Patrol, made from resistant material."
 	icon = 'icons/obj/clothing/uniforms_yw.dmi'
 	icon_state = "navyutility"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 5, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/away/patrol/medical
@@ -174,14 +174,14 @@
 	desc = "The Fleet uniform of the Nanotrasen Space Patrol, made from resistant material. This one has gold blazes."
 	icon_state = "navyutility_com"
 	worn_state = "navyutility_com"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 
 /obj/item/clothing/under/away/patrol/supply
 	name = "\improper nanotrasen fleet supply uniform"
 	desc = "The Fleet uniform of the Nanotrasen Space Patrol, made from resistant material. This one has brown blazes"
 	icon_state = "navyutility_sup"
 	worn_state = "navyutility_sup"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 
 
 /obj/item/clothing/under/away/daedalus
@@ -190,7 +190,7 @@
 	icon = 'icons/obj/clothing/uniforms_yw.dmi'
 	icon_state = "greyutility"
 	worn_state = "greyutility"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	armor = list(melee = 10, bullet = 10, laser = 10,energy = 5, bomb = 0, bio = 0, rad = 0)
 
 /obj/item/clothing/under/away/daedalus/engineering
@@ -198,35 +198,35 @@
 	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
 	icon_state = "greyutility_eng"
 	worn_state = "greyutility_eng"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 
 /obj/item/clothing/under/away/daedalus/security
 	name = "\improper daedalus security uniform"
 	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
 	icon_state = "greyutility_sec"
 	worn_state = "greyutility_sec"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 
 /obj/item/clothing/under/away/daedalus/command
 	name = "\improper daedalus security uniform"
 	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
 	icon_state = "greyutility_com"
 	worn_state = "greyutility_com"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 
 /obj/item/clothing/under/away/daedalus/medical
 	name = "\improper daedalus medical uniform"
 	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
 	icon_state = "greyutility_med"
 	worn_state = "greyutility_med"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 
 /obj/item/clothing/under/away/daedalus/supply
 	name = "\improper daedalus supply uniform"
 	desc = "An old and worn down unifom of a missing exploration expedition. It has the words SGV DAEDALUS written on the back."
 	icon_state = "greyutility_sup"
 	worn_state = "greyutility_sup"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 
 
 /obj/item/clothing/under/yw/victsuit/victdress
@@ -247,7 +247,7 @@
 	icon = 'icons/mob/uniform_yw.dmi'
 	icon_state = "victorianvest"
 	item_state = "victorianvest"
-	icon_override = 'icons/mob/uniform_yw.dmi'
+	icon_override = 'icons/inventory/uniform/mob_yw.dmi'
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
 
 /obj/item/clothing/under/yw/victsuit/redblk

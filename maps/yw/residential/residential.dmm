@@ -4864,7 +4864,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/room11)
 "zy" = (
-/obj/structure/bed/chair/sofa/left{
+/obj/structure/bed/chair/sofa/right{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -5121,7 +5121,7 @@
 /turf/simulated/floor/plating,
 /area/residential/mroom2)
 "AU" = (
-/obj/structure/bed/chair/sofa/right{
+/obj/structure/bed/chair/sofa/left{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -7608,8 +7608,11 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
 "MJ" = (
-/obj/structure/sink/kitchen,
-/turf/simulated/wall,
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/curtain/black,
+/obj/machinery/door/firedoor/glass,
+/turf/simulated/floor/plating,
 /area/residential/room1)
 "MM" = (
 /obj/machinery/door/blast/regular,
@@ -9688,7 +9691,8 @@
 	},
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/structure/sink/kitchen{
-	pixel_x = -30
+	dir = 8;
+	pixel_x = -12
 	},
 /turf/simulated/floor/lino,
 /area/residential/room1)

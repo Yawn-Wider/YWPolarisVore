@@ -83,3 +83,15 @@
 	icon_state = "tesh_coat"
 	color_blend_mode = ICON_MULTIPLY
 	body_parts = list(BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_TORSO,BP_HEAD)
+
+/datum/sprite_accessory/marking/yw/vox_alt_head_yw
+	name = "Vox Alternate Head"
+	icon_state = "yw_bay_vox"
+	body_parts = list(BP_HEAD)
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/marking/yw/vox_alt_eyes_yw
+	name = "Angular Vox Eyes"
+	icon_state = "yw_bay_vox_eyes"
+	body_parts = list(BP_HEAD)
+	species_allowed = list(SPECIES_VOX)

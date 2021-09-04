@@ -64,3 +64,23 @@
 		snow=snow;\
 		robocop=robocop;\
 		rainbowcop=rainbowcop"
+
+/datum/robolimb/vox/improvised
+	company = "Vox - Improvised"
+	species_cannot_use = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_PROMETHEAN, SPECIES_DIONA, SPECIES_GREY_YW, SPECIES_ZADDAT, SPECIES_CUSTOM)
+	suggested_species = SPECIES_VOX
+	desc = "A crude amalgamation of scrap that somehow just works."
+	icon = 'icons/mob/human_races/cyberlimbs/vox/improvised_yw.dmi'
+	unavailable_to_build = 1
+	includes_tail = 1
+	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC
+
+/datum/robolimb/vox/arkmade
+	company = "Vox - Arkmade"
+	species_cannot_use = list(SPECIES_HUMAN, SPECIES_HUMAN_VATBORN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_SHADEKIN_YW, SPECIES_PROMETHEAN, SPECIES_DIONA, SPECIES_GREY_YW, SPECIES_ZADDAT, SPECIES_CUSTOM)
+	suggested_species = SPECIES_VOX
+	desc = "A bizzare limb made from a strange green metal that seemingly squirms on touch."
+	icon = 'icons/mob/human_races/cyberlimbs/vox/primalis_yw.dmi'
+	includes_tail = 1
+	unavailable_to_build = 1
+	modular_bodyparts = MODULAR_BODYPART_PROSTHETIC

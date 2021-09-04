@@ -95,3 +95,52 @@
 	icon_state = "yw_bay_vox_eyes"
 	body_parts = list(BP_HEAD)
 	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/marking/yw/azure_vox
+	name = "Vox (Azure)"
+	icon_state = "vox_azure"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/marking/yw/brown_vox
+	name = "Vox (Brown)"
+	icon_state = "vox_brown"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/marking/yw/emerald_vox
+	name = "Vox (Emerald)"
+	icon_state = "vox_emerald"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/marking/yw/grey_vox
+	name = "Vox (Grey)"
+	icon_state = "vox_grey"
+	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
+	species_allowed = list(SPECIES_VOX)
+
+
+/datum/sprite_accessory/hair/yw
+	icon = 'icons/mob/human_face_yw.dmi'
+	icon_add = 'icons/mob/human_face_yw.dmi'
+
+/datum/sprite_accessory/hair/yw/vox_short_quills_colorable
+	name = "Short vox Quills (colorable)"
+	icon_state = "vox_color_shortquills"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/yw/vox_long_quills_colorable
+	name = "Long Vox Quills (colorable)"
+	icon_state = "vox_color_longquills"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/yw/vox_mohawk_colorable
+	name = "Vox Mohawk (colorable)"
+	icon_state = "vox_color_mohawk"
+	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/yw/vox_stubble_colorable
+	name = "Vox Stubble (colorable)"
+	icon_state = "vox_color_stubble"
+	species_allowed = list(SPECIES_VOX)

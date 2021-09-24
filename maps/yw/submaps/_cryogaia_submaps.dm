@@ -21,6 +21,10 @@
 	. = ..()
 	seed_submaps(list(Z_LEVEL_PLAINS), 240, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)
 
+#include "../../submaps/surface_submaps/plains_yw/plains.dm"
+#include "../../submaps/surface_submaps/plains_yw/plains_areas.dm"
+#include "../../submaps/surface_submaps/plains_yw/plains_turfs.dm"
+
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 #if AWAY_MISSION_TEST

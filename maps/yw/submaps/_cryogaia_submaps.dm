@@ -3,7 +3,6 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-#include "cryogaia_plains/cryogaia_plains.dm"
 /datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."

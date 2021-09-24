@@ -279,3 +279,11 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 /turf/simulated/sky/snowscroll/Initialize()
 	SSplanets.addTurf(src)
 	set_light(2, 2, "#E0FFFF")
+
+
+// Misc
+/area/mine/explored/cryogaia_wilds
+	name = "\improper cryogaia Wilderness Outer Perimeter"
+
+/area/mine/unexplored/cryogaia_wilds
+	name = "\improper cryogaia Wilderness Inner Perimeter"

@@ -31,7 +31,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
 		)
 
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/dirt)
-/turf/simulated/floor/outdoors/dirt/plains/cryogaia
+/turf/simulated/floor/outdoors/dirt
 	icon = 'icons/turf/flooring/asteroid.dmi'
 	icon_state = "asteroid"
 
@@ -39,7 +39,7 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
 /turf/simulated/floor/outdoors/grass/sif
 	turf_layers = list(
 		/turf/simulated/floor/outdoors/rocks/cryogaia,
-		/turf/simulated/floor/outdoors/dirt/plains/cryogaia
+		/turf/simulated/floor/outdoors/dirt
 		)
 
 //a set of 'covered' outdoor tiles. can be used as shelter from storms and the inside of the caves.

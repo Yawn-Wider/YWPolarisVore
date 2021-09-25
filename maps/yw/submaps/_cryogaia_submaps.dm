@@ -3,7 +3,6 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-#include "cryogaia_plains/cryogaia_plains.dm"
 /datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
@@ -20,6 +19,10 @@
 /datum/map_template/cryogaia_lateload/cryogaia_plains/on_map_loaded(z)
 	. = ..()
 	seed_submaps(list(Z_LEVEL_PLAINS), 240, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)
+
+#include "../../submaps/surface_submaps/plains_yw/plains.dm"
+#include "../../submaps/surface_submaps/plains_yw/plains_areas.dm"
+#include "../../submaps/surface_submaps/plains_yw/plains_turfs.dm"
 
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions

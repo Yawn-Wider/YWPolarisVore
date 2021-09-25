@@ -30,6 +30,18 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/tiled/old_tile/gray)
 		/turf/simulated/floor/tiled/cryogaia,
 		)
 
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/dirt)
+/turf/simulated/floor/outdoors/dirt
+	icon = 'icons/turf/flooring/asteroid.dmi'
+	icon_state = "asteroid"
+
+CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
+/turf/simulated/floor/outdoors/grass/sif
+	turf_layers = list(
+		/turf/simulated/floor/outdoors/rocks/cryogaia,
+		/turf/simulated/floor/outdoors/dirt
+		)
+
 //a set of 'covered' outdoor tiles. can be used as shelter from storms and the inside of the caves.
 /turf/simulated/floor/outdoors/snow/snow/cryogaia/covered
 	outdoors = 0
@@ -279,3 +291,11 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 /turf/simulated/sky/snowscroll/Initialize()
 	SSplanets.addTurf(src)
 	set_light(2, 2, "#E0FFFF")
+
+
+// Misc
+/area/mine/explored/cryogaia_wilds
+	name = "\improper cryogaia Wilderness Outer Perimeter"
+
+/area/mine/unexplored/cryogaia_wilds
+	name = "\improper cryogaia Wilderness Inner Perimeter"

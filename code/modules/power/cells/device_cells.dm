@@ -56,6 +56,9 @@
 	update_icon()
 //End of Yawn changes
 
+/obj/item/weapon/cell/device/weapon/empproof
+	emp_proof = TRUE
+
 /obj/item/weapon/cell/device/weapon/recharge
 	name = "self-charging weapon power cell"
 	desc = "A small power cell designed to power handheld weaponry. This one recharges itself."

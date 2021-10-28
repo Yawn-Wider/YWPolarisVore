@@ -99,7 +99,7 @@
 		/obj/item/clothing/gloves/black,
 		/obj/item/clothing/shoes/black,
 		/obj/item/weapon/material/knife/machete/hatchet,
-		/obj/item/weapon/gun/energy/kinetic_accelerator,
+		///obj/item/weapon/gun/energy/kinetic_accelerator, temp comment out
 		/obj/item/device/flashlight/lantern,
 		/obj/item/weapon/shovel,
 		/obj/item/clothing/glasses/material,

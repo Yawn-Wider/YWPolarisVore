@@ -115,7 +115,7 @@
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram/powered()
 	return TRUE // Always be powered
 
-//Chemistry 'chemavator'
+/* copy of code in another file /Chemistry 'chemavator'
 /obj/machinery/smartfridge/chemistry/chemvator
 	name = "\improper Smart Chemavator - Upper"
 	desc = "A refrigerated storage unit for medicine and chemical storage. Now sporting a fancy system of pulleys to lift bottles up and down."
@@ -137,6 +137,7 @@
 		item_records = attached.item_records
 	else
 		to_chat(world,"<span class='danger'>[src] at [x],[y],[z] cannot find the unit above it!</span>")
+	*/
 
 
 /obj/machinery/smartfridge/plantvator
@@ -204,7 +205,7 @@
 		despawn_occupant(user)
 
 // Tram arrival point landmarks and datum
-var/global/list/latejoin_tram   = list()
+// defined in another file var/global/list/latejoin_tram   = list()
 
 /obj/effect/landmark/tram
 	name = "JoinLateTram"

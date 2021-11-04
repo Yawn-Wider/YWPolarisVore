@@ -135,15 +135,16 @@ var/list/_human_default_emotes = list(
 
 	/decl/emote/helper/vwag,
 	/decl/emote/helper/vflap,
-	//YW ADDITION: start
+	/decl/emote/audible/prbt,
+	//VOREStation Add End
+	//YW ADDITION: Add Start
 	/decl/emote/audible/chirp,
 	/decl/emote/audible/hooh,
 	/decl/emote/audible/ack,
 	/decl/emote/audible/ough,
 	/decl/emote/audible/howl,
-
 	/decl/emote/visible/cross
-	//YW ADDITION: stop
+	//YW ADDITION: Add End
 )
 
 	//VOREStation Add Start
@@ -269,7 +270,8 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/spiderpurr,
 	/decl/emote/audible/squeaky,
 	/decl/emote/visible/mlem,
-	/decl/emote/visible/blep
+	/decl/emote/visible/blep,
+	/decl/emote/audible/prbt
 	)
 	//VOREStation Add End
 

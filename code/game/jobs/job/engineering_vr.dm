@@ -27,7 +27,7 @@
 /datum/job/engineer
 	pto_type = PTO_ENGINEERING
 	alt_titles = list("Maintenance Technician" = /datum/alt_title/maint_tech, "Engine Technician" = /datum/alt_title/engine_tech,
-						"Electrician" = /datum/alt_title/electrician, "Construction Engineer" = /datum/alt_title/construction_engi)
+						"Electrician" = /datum/alt_title/electrician, "Construction Engineer" = /datum/alt_title/construction_engi, "Station Engineer" = /datum/alt_title/station_engineer ) //YW: added "Station Engineer" Alt Title
 
 /datum/alt_title/construction_engi
 	title = "Construction Engineer"

@@ -50,3 +50,8 @@
 /datum/alt_title/disposals_tech
 	title = "Disposals Technician"
 	title_blurb = "A Disposals Technician is an Atmospheric Technician still and can fulfill all the same duties, although specializes more in disposals delivery system's operations and configurations."
+
+// YW Alt Titles
+/datum/alt_title/station_engineer
+	title = "Station Engineer"
+	title_blurb = "A Station Engineer is a maintenance engineer who is responsible for the maintenance of the station's airlock systems, and the maintenance of the station's airlock systems."

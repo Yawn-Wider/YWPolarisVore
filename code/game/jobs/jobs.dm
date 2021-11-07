@@ -149,7 +149,7 @@ var/list/nonhuman_positions = list(
 	"Cyborg",
 	"pAI"
 )
-
+*/
 
 /proc/guest_jobbans(var/job)
 	return ( (job in SSjob.get_job_titles_in_department(DEPARTMENT_COMMAND)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SYNTHETIC)) || (job in SSjob.get_job_titles_in_department(DEPARTMENT_SECURITY)) )

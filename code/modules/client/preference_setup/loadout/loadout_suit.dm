@@ -598,7 +598,7 @@
 
 /datum/gear/suit/snowsuit/engineering
 	display_name = "snowsuit, engineering"
-	path = /obj/item/clothing/suit/storage/snowsuit/engineering
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/engineering
 	allowed_roles = list("Chief Engineer","Atmospheric Technician", "Engineer")
 
 /datum/gear/suit/snowsuit/cargo

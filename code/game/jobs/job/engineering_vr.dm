@@ -27,7 +27,7 @@
 /datum/job/engineer
 	pto_type = PTO_ENGINEERING
 	alt_titles = list("Maintenance Technician" = /datum/alt_title/maint_tech, "Engine Technician" = /datum/alt_title/engine_tech,
-						"Electrician" = /datum/alt_title/electrician, "Construction Engineer" = /datum/alt_title/construction_engi)
+						"Electrician" = /datum/alt_title/electrician, "Construction Engineer" = /datum/alt_title/construction_engi, "Station Engineer" = /datum/alt_title/station_engineer ) //YW: added "Station Engineer" Alt Title
 
 /datum/alt_title/construction_engi
 	title = "Construction Engineer"
@@ -50,3 +50,8 @@
 /datum/alt_title/disposals_tech
 	title = "Disposals Technician"
 	title_blurb = "A Disposals Technician is an Atmospheric Technician still and can fulfill all the same duties, although specializes more in disposals delivery system's operations and configurations."
+
+// YW Alt Titles
+/datum/alt_title/station_engineer
+	title = "Station Engineer"
+	title_blurb = "A Station Engineer is a maintenance engineer who is responsible for the maintenance of the station's airlock systems, and the maintenance of the station's airlock systems."

@@ -16,7 +16,7 @@
 	path = /obj/item/clothing/suit/space/void/zaddat/engineer
 	sort_category = "Xenowear"
 	whitelisted = SPECIES_ZADDAT
-	allowed_roles = list("Chief Engineer", "Atmospheric Technician", "Station Engineer")
+	allowed_roles = list("Chief Engineer", "Atmospheric Technician", "Engineer")
 
 
 /* Commented out as a lot of these were added upstream if anything is missing add it to this file

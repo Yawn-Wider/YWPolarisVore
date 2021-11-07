@@ -4,7 +4,7 @@
 	display_name = "Airhorn - Example Item" //Don't use the same as another item
 	description = "An example item that you probably shouldn't see!"
 	ckeywhitelist = list("broman2000")
-	allowed_roles = list("Station Engineer")	//Don't include this if the item is not role restricted
+	allowed_roles = list("Engineer")	//Don't include this if the item is not role restricted
 	character_name = list("shitfacemcgee")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 */
 
@@ -583,7 +583,7 @@
 	description = "A black-golden toolbelt with many slots to hold tools in. Also comes with a blue buckle."
 	ckeywhitelist = list("izac112")
 	character_name = list("Raja Bastet")
-	allowed_roles = list("Station Engineer", "Chief Engineer")
+	allowed_roles = list("Engineer", "Chief Engineer")
 
 /datum/gear/fluff/raja_coat
 	path = /obj/item/clothing/suit/storage/hooded/wintercoat/fluff/raja_coat

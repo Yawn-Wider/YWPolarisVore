@@ -4884,6 +4884,19 @@
 /area/medical/surgery)
 "bVt" = (
 /obj/effect/floor_decal/rust,
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/smes/buildable/hybrid{
+	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit, modified with bluespace technology to recevie power from the Serenity, this thing is expensive to run.";
+	input_level = 0;
+	input_level_max = 0;
+	name = "bluespace power storage unit";
+	output_level = 1000000;
+	output_level_max = 1000000;
+	recharge_rate = 1000000
+	},
 /turf/simulated/floor/plating,
 /area/engineering/workshop)
 "bVE" = (
@@ -7009,6 +7022,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
+"cHG" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/power/terminal{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/engineering/workshop)
 "cHX" = (
 /obj/structure/flora/ausbushes/sunnybush,
 /turf/simulated/floor/grass2,
@@ -47493,6 +47518,7 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/heavyduty,
+/obj/structure/cable,
 /turf/simulated/floor/plating,
 /area/engineering/workshop)
 "sAy" = (
@@ -59202,7 +59228,6 @@
 /area/civilian/atrium/central)
 "xtC" = (
 /obj/structure/reagent_dispensers/acid{
-	density = 0;
 	pixel_x = 32
 	},
 /turf/simulated/floor/tiled/white,
@@ -60595,6 +60620,11 @@
 "xWc" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
+	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/workshop)
@@ -67344,7 +67374,7 @@ bQp
 tiw
 sKZ
 vgT
-rcn
+cHG
 lnx
 rcn
 kUx

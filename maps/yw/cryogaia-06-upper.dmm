@@ -10457,6 +10457,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "Js" = (
@@ -11644,6 +11647,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"PZ" = (
+/obj/structure/flora/pottedplant/large,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "Qa" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
@@ -27098,7 +27108,7 @@ kl
 Nj
 kl
 Nj
-lP
+PZ
 kp
 sa
 pu

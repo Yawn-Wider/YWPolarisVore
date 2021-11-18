@@ -861,6 +861,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/central)
+"aHO" = (
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/starboard)
 "aHR" = (
 /obj/structure/table/steel,
 /obj/machinery/vending/wallmed1{
@@ -10381,6 +10387,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/crew_quarters/kitchen/fish_farm)
+"gQm" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor,
+/area/vacant/vacant_site/locker)
 "gQw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -10704,6 +10721,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
+"gYr" = (
+/obj/structure/catwalk,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/plating,
+/area/hallway/lower/fore)
 "gYH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -13251,6 +13275,9 @@
 /obj/machinery/alarm{
 	frequency = 1441;
 	pixel_y = 22
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/lower/central)
@@ -16253,6 +16280,9 @@
 	dir = 8;
 	health = 1e+006
 	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/grass,
 /area/civilian/atrium/lower)
 "kdn" = (
@@ -18224,6 +18254,9 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
@@ -22209,6 +22242,9 @@
 	d2 = 8;
 	icon_state = "2-8"
 	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
 "nEM" = (
@@ -23698,6 +23734,13 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
+"oCD" = (
+/obj/structure/flora/pottedplant,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/aft)
 "oCH" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -32232,6 +32275,9 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/effect/landmark{
+	name = "vinestart"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "tMK" = (
@@ -33999,6 +34045,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
@@ -36629,6 +36678,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen/fish_farm)
+"wqB" = (
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/central)
 "wrf" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -52794,7 +52849,7 @@ jvB
 ouo
 idT
 kLI
-jKl
+gYr
 jKl
 jKl
 jKl
@@ -53314,7 +53369,7 @@ wuo
 mqB
 wuo
 prB
-wuo
+wqB
 fZD
 sDm
 mJt
@@ -53980,7 +54035,7 @@ tYw
 ckQ
 mrX
 aLr
-jBa
+oCD
 fmI
 jBa
 lQp
@@ -57203,7 +57258,7 @@ wmt
 wmt
 wmt
 uPy
-jeS
+aHO
 bZC
 tQZ
 kVb
@@ -60316,7 +60371,7 @@ kju
 hWP
 uQD
 rEb
-rEb
+gQm
 jGr
 wGL
 wGL

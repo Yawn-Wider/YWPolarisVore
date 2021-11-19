@@ -4892,6 +4892,7 @@
 	icon_state = "0-2"
 	},
 /obj/machinery/power/smes/buildable/hybrid{
+	RCon = 0;
 	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit, modified with bluespace technology to recevie power from the Serenity, this thing is expensive to run.";
 	input_level = 0;
 	input_level_max = 0;
@@ -4899,6 +4900,10 @@
 	output_level = 1000000;
 	output_level_max = 1000000;
 	recharge_rate = 1000000
+	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
 	},
 /turf/simulated/floor/plating,
 /area/engineering/workshop)
@@ -7034,6 +7039,10 @@
 	},
 /obj/machinery/power/terminal{
 	dir = 4
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)
@@ -47533,7 +47542,9 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/heavyduty,
-/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/workshop)
 "sAy" = (
@@ -60643,8 +60654,6 @@
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,

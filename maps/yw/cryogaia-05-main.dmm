@@ -47533,7 +47533,9 @@
 	icon_state = "0-2"
 	},
 /obj/structure/cable/heavyduty,
-/obj/structure/cable,
+/obj/structure/cable{
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/workshop)
 "sAy" = (
@@ -60643,8 +60645,6 @@
 	icon_state = "2-8"
 	},
 /obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,

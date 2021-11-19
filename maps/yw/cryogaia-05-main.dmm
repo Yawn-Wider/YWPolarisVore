@@ -4901,6 +4901,10 @@
 	output_level_max = 1000000;
 	recharge_rate = 1000000
 	},
+/obj/structure/cable{
+	d2 = 8;
+	icon_state = "0-8"
+	},
 /turf/simulated/floor/plating,
 /area/engineering/workshop)
 "bVE" = (
@@ -7035,6 +7039,10 @@
 	},
 /obj/machinery/power/terminal{
 	dir = 4
+	},
+/obj/structure/cable{
+	d2 = 4;
+	icon_state = "0-4"
 	},
 /turf/simulated/floor,
 /area/engineering/workshop)

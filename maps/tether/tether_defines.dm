@@ -68,6 +68,7 @@
 
 	station_name  = "Yawn Wider Station"
 	station_short = "Tether"
+	facility_type = "station"
 	dock_name     = "Virgo-3B Colony"
 	dock_type     = "surface"
 	boss_name     = "Central Command"

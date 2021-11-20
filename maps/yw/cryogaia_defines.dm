@@ -52,7 +52,8 @@
 		Z_LEVEL_CRYOGAIA_MAIN,
 		Z_LEVEL_CRYOGAIA_UPPER))
 
-	station_name  = "Cryogaia Outpost"
+	facility_type = "Outpost"
+	station_name  = "Cryogaia"
 	station_short = "Yawn Wider"
 	dock_name     = "NCS Serenity"
 	boss_name     = "Central Command"

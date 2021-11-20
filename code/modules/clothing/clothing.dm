@@ -819,7 +819,9 @@
 		*/
 	var/displays_id = 1
 	var/rolled_down = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
+	var/rolled_down_icon_override = TRUE
 	var/rolled_sleeves = -1 //0 = unrolled, 1 = rolled, -1 = cannot be toggled
+	var/rolled_sleeves_icon_override = TRUE
 	sprite_sheets = list(
 		SPECIES_TESHARI = 'icons/inventory/uniform/mob_teshari.dmi',
 		SPECIES_VOX = 'icons/inventory/uniform/mob_vox.dmi',
@@ -882,7 +884,7 @@
 		H = src.loc
 
 	var/icon/under_icon
-	if(icon_override)
+	if(icon_override && rolled_down_icon_override)
 		under_icon = icon_override
 	else if(H && LAZYACCESS(sprite_sheets, H.species.get_bodytype(H)))
 		under_icon = sprite_sheets[H.species.get_bodytype(H)]
@@ -905,7 +907,7 @@
 		H = src.loc
 
 	var/icon/under_icon
-	if(icon_override)
+	if(icon_override && rolled_sleeves_icon_override)
 		under_icon = icon_override
 	else if(H && LAZYACCESS(sprite_sheets, H.species.get_bodytype(H)))
 		under_icon = sprite_sheets[H.species.get_bodytype(H)]

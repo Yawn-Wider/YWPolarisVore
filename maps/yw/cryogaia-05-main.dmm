@@ -167,6 +167,11 @@
 /obj/machinery/camera/network/security{
 	c_tag = "Armory North"
 	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006;
+	pixel_x = -4
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "aef" = (
@@ -2370,11 +2375,6 @@
 /obj/machinery/camera/network/security{
 	c_tag = "Armory West"
 	},
-/obj/structure/window/reinforced{
-	dir = 8;
-	health = 1e+006
-	},
-/obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/door/window/brigdoor/northright{
 	dir = 2;
@@ -2382,6 +2382,12 @@
 	},
 /obj/item/weapon/gun/projectile/automatic/wt550,
 /obj/item/weapon/gun/projectile/automatic/wt550,
+/obj/structure/table/rack/gun_rack,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006;
+	pixel_x = -4
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "aUO" = (
@@ -3763,7 +3769,11 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/cmo)
 "bAu" = (
-/obj/structure/grille,
+/obj/structure/grille{
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25;
+	name = "Reinforced Grille"
+	},
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
@@ -4791,7 +4801,12 @@
 /obj/item/ammo_magazine/m45/rubber,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/door/window/brigdoor/southright{
-	dir = 4
+	dir = 4;
+	name = "Non-lethal Handgun Ammunition"
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/security_equiptment_storage)
@@ -4896,6 +4911,7 @@
 	desc = "A high-capacity superconducting magnetic energy storage (SMES) unit, modified with bluespace technology to receive power from the Serenity, this thing is expensive to run.";
 	input_level = 0;
 	input_level_max = 0;
+	max_coils = 1;
 	name = "bluespace power storage unit";
 	output_level = 1000000;
 	output_level_max = 1000000;
@@ -6421,6 +6437,10 @@
 /obj/item/clothing/head/helmet/combat,
 /obj/machinery/light{
 	dir = 4
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
@@ -8781,7 +8801,7 @@
 "dqZ" = (
 /obj/machinery/door/airlock/maintenance/medical,
 /turf/simulated/floor/plating,
-/area/maintenance/medbay_aft)
+/area/medical/ward)
 "drl" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/engineering/workshop)
@@ -9251,7 +9271,9 @@
 /obj/item/clothing/suit/armor/bulletproof/alt,
 /obj/item/clothing/head/helmet/bulletproof,
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/door/window/brigdoor/eastleft,
+/obj/machinery/door/window/brigdoor/eastleft{
+	name = "Ballistic Armor"
+	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -9992,13 +10014,17 @@
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
 "dSt" = (
-/obj/structure/grille,
 /obj/structure/cable/green{
 	icon_state = "0-4"
 	},
 /obj/structure/cable/green{
 	d2 = 8;
 	icon_state = "0-8"
+	},
+/obj/structure/grille{
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25;
+	name = "Reinforced Grille"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/security/armoury)
@@ -11518,8 +11544,14 @@
 /obj/item/clothing/shoes/leg_guard/laserproof,
 /obj/item/clothing/suit/armor/laserproof,
 /obj/item/clothing/head/helmet/laserproof,
-/obj/machinery/door/window/brigdoor/eastleft,
+/obj/machinery/door/window/brigdoor/eastleft{
+	name = "Energy Armor"
+	},
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 4
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "evM" = (
@@ -12264,10 +12296,6 @@
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/west)
-"eMl" = (
-/obj/structure/sign/securearea,
-/turf/simulated/wall/r_wall,
-/area/borealis2/outdoors/grounds)
 "eMs" = (
 /obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
@@ -14001,6 +14029,11 @@
 	req_one_access = list(1)
 	},
 /obj/item/device/gps/security,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006;
+	pixel_x = -4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
 "fuo" = (
@@ -15709,10 +15742,14 @@
 /turf/simulated/floor/tiled/yellow,
 /area/chapel/monastery/kitchen)
 "gcl" = (
-/obj/structure/grille,
 /obj/structure/cable/green,
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/structure/grille{
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25;
+	name = "Reinforced Grille"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/security/armoury)
@@ -16254,7 +16291,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/teleporter)
 "glX" = (
-/obj/structure/table/rack,
 /obj/item/ammo_magazine/m45,
 /obj/item/ammo_magazine/m45,
 /obj/item/ammo_magazine/m45,
@@ -16269,6 +16305,7 @@
 	dir = 2;
 	name = "LETHALS"
 	},
+/obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "glY" = (
@@ -16454,6 +16491,7 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
+/obj/item/weapon/storage/lockbox/loyalty,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "gqF" = (
@@ -16829,7 +16867,6 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "gwj" = (
-/obj/structure/table/rack,
 /obj/item/ammo_magazine/m9mmt/rubber,
 /obj/item/ammo_magazine/m9mmt/rubber,
 /obj/item/ammo_magazine/m9mmt/rubber,
@@ -16839,10 +16876,10 @@
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/ammo_magazine/m9mmt/rubber,
+/obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "gwS" = (
-/obj/structure/table/rack,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -16857,6 +16894,12 @@
 	},
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/table/rack/gun_rack,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
@@ -24210,13 +24253,13 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
 "jyF" = (
-/obj/structure/table/rack/shelf/steel,
 /obj/item/gunbox{
 	pixel_y = 6
 	},
 /obj/item/gunbox{
 	pixel_y = -3
 	},
+/obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "jze" = (
@@ -27314,11 +27357,11 @@
 /turf/simulated/shuttle/plating,
 /area/rnd/phoronics)
 "kJY" = (
-/obj/structure/table/rack,
 /obj/machinery/door/window/brigdoor/westright{
-	name = "Energy"
+	name = "Ion Firearms"
 	},
 /obj/item/weapon/gun/energy/ionrifle,
+/obj/structure/table/rack/gun_rack,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "kKa" = (
@@ -29210,7 +29253,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/server)
 "lxJ" = (
-/obj/structure/table/rack,
 /obj/machinery/door/window/brigdoor/eastright{
 	dir = 1;
 	name = "Energy Firearms"
@@ -29230,6 +29272,12 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/table/rack/gun_rack,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
@@ -31460,14 +31508,16 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "mrM" = (
-/obj/structure/table/rack,
 /obj/machinery/door/window/brigdoor/southleft{
-	dir = 4
+	dir = 4;
+	name = "Ion Handguns"
 	},
 /obj/structure/window/reinforced{
 	dir = 1
 	},
 /obj/item/weapon/gun/energy/ionrifle/pistol,
+/obj/structure/table/rack,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /turf/simulated/floor/tiled/red,
 /area/security/security_equiptment_storage)
 "mrP" = (
@@ -35570,6 +35620,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/unsimulated/floor{
 	icon_state = "steel"
 	},
@@ -36149,6 +36200,11 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
@@ -37468,7 +37524,8 @@
 /obj/structure/table/rack,
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/door/window/brigdoor/southleft{
-	dir = 4
+	dir = 4;
+	name = "Ballistic Handguns"
 	},
 /obj/random/handgun/sec,
 /obj/random/handgun/sec,
@@ -42100,19 +42157,21 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/hallway/secondary/entry/docking_lounge)
 "qrZ" = (
-/obj/structure/table/rack,
 /obj/item/weapon/storage/box/shotgunshells,
 /obj/item/weapon/storage/box/shotgunshells,
 /obj/machinery/door/window/brigdoor/northright{
 	dir = 2;
 	name = "LETHALS"
 	},
-/obj/structure/window/reinforced{
-	dir = 4
-	},
 /obj/item/weapon/storage/box/shotgunammo,
 /obj/item/weapon/storage/box/scattershot,
 /obj/item/weapon/storage/box/scattershot,
+/obj/structure/table/rack/shelf,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006;
+	pixel_x = -4
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "qsu" = (
@@ -44267,7 +44326,6 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/foyer)
 "rmd" = (
-/obj/structure/table/rack,
 /obj/machinery/door/window/brigdoor/eastleft{
 	dir = 1;
 	name = "Energy Firearms"
@@ -44283,6 +44341,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/table/rack/gun_rack,
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "rmq" = (
@@ -45195,6 +45254,11 @@
 /obj/item/clothing/suit/space/void/security,
 /obj/item/clothing/head/helmet/space/void/security,
 /obj/item/device/gps/security,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006;
+	pixel_x = -4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
 "rEI" = (
@@ -48805,10 +48869,14 @@
 /obj/item/clothing/suit/storage/vest/heavy/officer,
 /obj/machinery/door/window/brigdoor/southright{
 	dir = 4;
-	name = "Combat Armor"
+	name = "Heavy Armor Vests"
 	},
 /obj/machinery/light{
 	dir = 8
+	},
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 4
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/security_equiptment_storage)
@@ -49157,13 +49225,17 @@
 	dir = 4;
 	name = "Non-lethals"
 	},
-/obj/structure/table/rack,
 /obj/item/weapon/storage/box/flashshells,
 /obj/item/weapon/storage/box/beanbags,
 /obj/item/weapon/storage/box/beanbags,
 /obj/item/weapon/storage/box/stunshells,
 /obj/item/weapon/storage/box/stunshells,
 /obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack/shelf,
+/obj/structure/window/reinforced{
+	dir = 1;
+	pixel_y = 4
+	},
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "tkf" = (
@@ -51342,11 +51414,15 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/checkpoint)
 "ufv" = (
-/obj/structure/grille,
 /obj/structure/cable/green,
 /obj/structure/cable/green{
 	d2 = 2;
 	icon_state = "0-2"
+	},
+/obj/structure/grille{
+	desc = "A flimsy lattice of metal rods, with screws to secure it to the floor. This grille seems slightly more sturdy than others probably reinforced to withstand the wildlife.";
+	health = 25;
+	name = "Reinforced Grille"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/security/armoury)
@@ -51533,6 +51609,11 @@
 /obj/item/clothing/suit/space/void/security/alt,
 /obj/item/clothing/head/helmet/space/void/security/alt,
 /obj/item/device/gps/security,
+/obj/structure/window/reinforced{
+	dir = 8;
+	health = 1e+006;
+	pixel_x = -4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/pilotroom)
 "ukT" = (
@@ -66717,8 +66798,8 @@ nnc
 gkA
 qww
 gHx
-eMl
-aZy
+beh
+coh
 coh
 coh
 yjE

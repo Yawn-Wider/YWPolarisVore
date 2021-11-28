@@ -10061,14 +10061,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
 /turf/simulated/floor/plating,
 /area/outpost/research/atmosia)
-"yW" = (
-/obj/machinery/conveyor{
-	dir = 9;
-	id = "mining_internal"
-	},
-/obj/machinery/mineral/output,
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
 "yX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -19486,7 +19478,7 @@
 /area/outpost/mining_main/break_room)
 "Vw" = (
 /obj/machinery/conveyor{
-	dir = 5;
+	dir = 8;
 	id = "mining_internal"
 	},
 /obj/machinery/mineral/input,
@@ -39328,7 +39320,7 @@ Zl
 Zl
 Zl
 If
-yW
+sK
 zB
 zB
 Gd

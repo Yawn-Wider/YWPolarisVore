@@ -182,7 +182,14 @@ var/global/datum/controller/subsystem/ticker/ticker
 			if (S.name != "AI")
 				qdel(S)
 		to_world("<span class='boldannounce notice'><em>Enjoy the game!</em></span>")
-		world << sound('sound/AI/yawn/welcome.ogg') //YW EDIT: Custom message thanks to VerySoft
+		//YW Change start: Custom message thanks to VerySoft and a 5% chance to play a secret message
+		var/rssound = 1
+		if(rssound == 1)
+			if(prob(95))
+				world << sound('sound/AI/yawn/welcome.ogg') 
+			else
+				world << sound('sound/AI/yawn/welcome_secret.ogg')
+		//YW Change end:
 		//Holiday Round-start stuff	~Carn
 		Holiday_Game_Start()
 

@@ -57,4 +57,21 @@
 		name = "space piano"
 		desc = "This is a space piano, like a regular piano, but always in tune! Even if the musician isn't."
 		icon_state = "piano"
+
+// YW Addition: makes it so you can move the piano using the wrench
 /obj/structure/musician/piano/attackby(obj/item/weapon/W as obj, mob/user as mob)
+	if(!W.is_wrench())
+		return FALSE
+	playsound(src, W.usesound, 50, 1)
+	var/actual_time = W.toolspeed * 40
+	if(actual_time != 0)
+		user.visible_message( \
+			"<span class='warning'>\The [user] begins [anchored ? "un" : ""]securing \the [src].</span>", \
+			"<span class='notice'>You start [anchored ? "un" : ""]securing \the [src].</span>")
+	if(actual_time == 0 || do_after(user, actual_time, target = src))
+		user.visible_message( \
+			"<span class='warning'>\The [user] has [anchored ? "un" : ""]secured \the [src].</span>", \
+			"<span class='notice'>You [anchored ? "un" : ""]secure \the [src].</span>")
+		anchored = !anchored
+		update_icon()
+	return TRUE

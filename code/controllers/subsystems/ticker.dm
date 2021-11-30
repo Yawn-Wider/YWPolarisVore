@@ -183,7 +183,8 @@ var/global/datum/controller/subsystem/ticker/ticker
 				qdel(S)
 		to_world("<span class='boldannounce notice'><em>Enjoy the game!</em></span>")
 		//YW Change start: Custom message thanks to VerySoft and a 5% chance to play a secret message
-		if(TRUE)
+		var/rssound = 1
+		if(rssound == 1)
 			if(prob(95))
 				world << sound('sound/AI/yawn/welcome.ogg') 
 			else

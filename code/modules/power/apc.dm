@@ -143,9 +143,9 @@ GLOBAL_LIST_EMPTY(apcs)
 	var/updating_icon = 0
 	var/global/list/status_overlays_environ
 	var/alarms_hidden = FALSE //If power alarms from this APC are visible on consoles
-
+	
 	var/nightshift_lights = FALSE
-	var/nightshift_setting = NIGHTSHIFT_NEVER
+	var/nightshift_setting = NIGHTSHIFT_AUTO
 	var/last_nightshift_switch = 0
 
 /obj/machinery/power/apc/updateDialog()
@@ -198,7 +198,7 @@ GLOBAL_LIST_EMPTY(apcs)
 
 	if(!pixel_x && !pixel_y)
 		offset_apc()
-
+	
 	if(building)
 		area = get_area(src)
 		area.apc = src

@@ -281,6 +281,7 @@ var/list/gamemode_cache = list()
 
 	var/static/defib_timer = 10 // How long until someone can't be defibbed anymore, in minutes.
 	var/static/defib_braindamage_timer = 2 // How long until someone will get brain damage when defibbed, in minutes. The closer to the end of the above timer, the more brain damage they get.
+	var/static/alcoholic_effect_multiplier = 4 // How much to multiply base alcohol effect timers by
 
 	// disables the annoying "You have already logged in this round, disconnect or be banned" popup for multikeying, because it annoys the shit out of me when testing.
 	var/static/disable_cid_warn_popup = FALSE
@@ -953,6 +954,9 @@ var/list/gamemode_cache = list()
 
 				if("enable_night_shifts")
 					config.enable_night_shifts = TRUE
+
+				if("alcoholic_effect_multiplier")
+					config.alcoholic_effect_multiplier = text2num(value)
 
 				if("jukebox_track_files")
 					config.jukebox_track_files = splittext(value, ";")

@@ -49,9 +49,9 @@
 	..()
 
 	if(dose * strength >= strength) // Early warning
-		M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
+		M.make_dizzy(24 * ALCOEFFECT_INTENSITY_MULTIPLIER) // Intentionally higher than normal to compensate for it's previous effects.
 	if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
-		M.slurring = max(M.slurring, 30)
+		M.slurring = max(M.slurring, 30 * ALCOEFFECT_INTENSITY_MULTIPLIER)
 
 /datum/reagent/ethanol/monstertamer
 	name = "Monster Tamer"
@@ -183,9 +183,9 @@
 	..()
 
 	if(dose * strength >= strength) // Early warning
-		M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
+		M.make_dizzy(24 * ALCOEFFECT_INTENSITY_MULTIPLIER) // Intentionally higher than normal to compensate for it's previous effects.
 	if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
-		M.slurring = max(M.slurring, 30)
+		M.slurring = max(M.slurring, 30 * ALCOEFFECT_INTENSITY_MULTIPLIER)
 
 /datum/reagent/ethanol/bulldog
 	name = "Space Bulldog"

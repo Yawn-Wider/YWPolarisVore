@@ -1,1 +1,1 @@
-#define ALCOEFFECT_INTENSITY_MULTIPLIER = 4 // multiplies the duration of all alcoholic drink effects
+#define ALCOEFFECT_INTENSITY_MULTIPLIER 4 // multiplies the duration of all alcoholic drink effects

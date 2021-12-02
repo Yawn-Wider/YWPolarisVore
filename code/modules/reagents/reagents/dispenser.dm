@@ -127,20 +127,20 @@
 	var/effective_dose = dose * strength_mod * (1 + volume/60) //drinking a LOT will make you go down faster
 
 	if(effective_dose >= strength) // Early warning
-		M.make_dizzy(18) // It is decreased at the speed of 3 per tick
+		M.make_dizzy(18 * config.alcoholic_effect_multiplier) // It is decreased at the speed of 3 per tick
 	if(effective_dose >= strength * 2) // Slurring
-		M.slurring = max(M.slurring, 90)
+		M.slurring = max(M.slurring, 90 * config.alcoholic_effect_multiplier)
 	if(effective_dose >= strength * 3) // Confusion - walking in random directions
-		M.Confuse(60)
+		M.Confuse(60 * config.alcoholic_effect_multiplier)
 	if(effective_dose >= strength * 4) // Blurry vision
-		M.eye_blurry = max(M.eye_blurry, 30)
+		M.eye_blurry = max(M.eye_blurry, 30 * config.alcoholic_effect_multiplier)
 	if(effective_dose >= strength * 5) // Drowsyness - periodically falling asleep
-		M.drowsyness = max(M.drowsyness, 60)
+		M.drowsyness = max(M.drowsyness, 60 * config.alcoholic_effect_multiplier)
 	if(effective_dose >= strength * 6) // Toxic dose
 		M.add_chemical_effect(CE_ALCOHOL_TOXIC, toxicity*3)
 	if(effective_dose >= strength * 7) // Pass out
-		M.Paralyse(60)
-		M.Sleeping(90)
+		M.Paralyse(60 * config.alcoholic_effect_multiplier)
+		M.Sleeping(90 * config.alcoholic_effect_multiplier)
 
 	if(druggy != 0)
 		M.druggy = max(M.druggy, druggy*3)
@@ -172,20 +172,20 @@
 	M.add_chemical_effect(CE_ALCOHOL, 1)
 
 	if(dose * strength_mod >= strength) // Early warning
-		M.make_dizzy(6) // It is decreased at the speed of 3 per tick
+		M.make_dizzy(6 * config.alcoholic_effect_multiplier) // It is decreased at the speed of 3 per tick
 	if(dose * strength_mod >= strength * 2) // Slurring
-		M.slurring = max(M.slurring, 30)
+		M.slurring = max(M.slurring, 30 * config.alcoholic_effect_multiplier)
 	if(dose * strength_mod >= strength * 3) // Confusion - walking in random directions
-		M.Confuse(20)
+		M.Confuse(20 * config.alcoholic_effect_multiplier)
 	if(dose * strength_mod >= strength * 4) // Blurry vision
-		M.eye_blurry = max(M.eye_blurry, 10)
+		M.eye_blurry = max(M.eye_blurry, 10 * config.alcoholic_effect_multiplier)
 	if(dose * strength_mod >= strength * 5) // Drowsyness - periodically falling asleep
-		M.drowsyness = max(M.drowsyness, 20)
+		M.drowsyness = max(M.drowsyness, 20 * config.alcoholic_effect_multiplier)
 	if(dose * strength_mod >= strength * 6) // Toxic dose
 		M.add_chemical_effect(CE_ALCOHOL_TOXIC, toxicity)
 	if(dose * strength_mod >= strength * 7) // Pass out
-		M.Paralyse(20)
-		M.Sleeping(30)
+		M.Paralyse(20 * config.alcoholic_effect_multiplier)
+		M.Sleeping(30 * config.alcoholic_effect_multiplier)
 
 	if(druggy != 0)
 		M.druggy = max(M.druggy, druggy)

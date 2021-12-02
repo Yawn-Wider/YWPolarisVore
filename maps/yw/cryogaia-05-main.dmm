@@ -42640,6 +42640,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
+"qEp" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/wood,
+/area/crew_quarters/bar)
 "qEs" = (
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 6
@@ -71672,7 +71687,7 @@ dkX
 pku
 mEi
 poy
-kWX
+qEp
 pOt
 cLj
 hqj

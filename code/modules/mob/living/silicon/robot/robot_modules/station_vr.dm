@@ -75,7 +75,8 @@
 	vr_sprites = list(
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
-						"ZOOM-BA" = "zoomba-medical"
+						"ZOOM-BA" = "zoomba-medical",
+						"Feminine Humanoid" = "uptall-medical"
 					 )
 
 /obj/item/weapon/robot_module/robot/medical/crisis
@@ -84,7 +85,8 @@
 						"Handy" = "handy-med",
 						"Acheron" = "mechoid-Medical",
 						"Shellguard Noble" = "Noble-MED",
-						"ZOOM-BA" = "zoomba-crisis"
+						"ZOOM-BA" = "zoomba-crisis",
+						"Feminine Humanoid" = "uptall-crisis"
 					 )
 
 /obj/item/weapon/robot_module/robot/clerical/butler
@@ -94,7 +96,8 @@
 						"Handy - Hydro" = "handy-hydro",
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
-						"ZOOM-BA" = "zoomba-service"
+						"ZOOM-BA" = "zoomba-service",
+						"Feminine Humanoid" = "uptall-service"
 					 )
 
 /obj/item/weapon/robot_module/robot/clerical/general
@@ -103,7 +106,8 @@
 						"Handy" = "handy-clerk",
 						"Acheron" = "mechoid-Service",
 						"Shellguard Noble" = "Noble-SRV",
-						"ZOOM-BA" = "zoomba-clerical"
+						"ZOOM-BA" = "zoomba-clerical",
+						"Feminine Humanoid" = "uptall-service"
 					 )
 
 /obj/item/weapon/robot_module/robot/janitor
@@ -112,7 +116,8 @@
 						"Handy" = "handy-janitor",
 						"Acheron" = "mechoid-Janitor",
 						"Shellguard Noble" = "Noble-CLN",
-						"ZOOM-BA" = "zoomba-janitor"
+						"ZOOM-BA" = "zoomba-janitor",
+						"Feminine Humanoid" = "uptall-janitor"
 					 )
 
 /obj/item/weapon/robot_module/robot/security/general
@@ -121,7 +126,8 @@
 						"Handy" = "handy-sec",
 						"Acheron" = "mechoid-Security",
 						"Shellguard Noble" = "Noble-SEC",
-						"ZOOM-BA" = "zoomba-security"
+						"ZOOM-BA" = "zoomba-security",
+						"Feminine Humanoid" = "uptall-security"
 					 )
 
 /obj/item/weapon/robot_module/robot/miner
@@ -130,7 +136,8 @@
 						"Handy" = "handy-miner",
 						"Acheron" = "mechoid-Miner",
 						"Shellguard Noble" = "Noble-DIG",
-						"ZOOM-BA" = "zoomba-miner"
+						"ZOOM-BA" = "zoomba-miner",
+						"Feminine Humanoid" = "uptall-miner"
 					 )
 
 /obj/item/weapon/robot_module/robot/standard
@@ -139,14 +146,17 @@
 						"Handy" = "handy-standard",
 						"Acheron" = "mechoid-Standard",
 						"Shellguard Noble" = "Noble-STD",
-						"ZOOM-BA" = "zoomba-standard"
+						"ZOOM-BA" = "zoomba-standard",
+						"Feminine Humanoid" = "uptall-standard",
+						"Feminine Humanoid, Variant 2" = "uptall-standard2"
 					 )
 /obj/item/weapon/robot_module/robot/engineering/general
 	pto_type = PTO_ENGINEERING
 	vr_sprites = list(
 						"Acheron" = "mechoid-Engineering",
 						"Shellguard Noble" = "Noble-ENG",
-						"ZOOM-BA" = "zoomba-engineering"
+						"ZOOM-BA" = "zoomba-engineering",
+						"Feminine Humanoid" = "uptall-engineering"
 					 )
 
 /obj/item/weapon/robot_module/robot/research
@@ -154,14 +164,16 @@
 	vr_sprites = list(
 						"Acheron" = "mechoid-Science",
 						"ZOOM-BA" = "zoomba-research",
-						"XI-GUS" = "spiderscience"
+						"XI-GUS" = "spiderscience",
+						"Feminine Humanoid" = "uptall-science"
 					 )
 
 /obj/item/weapon/robot_module/robot/security/combat
 	pto_type = PTO_SECURITY
 	vr_sprites = list(
 						"Acheron" = "mechoid-Combat",
-						"ZOOM-BA" = "zoomba-combat"
+						"ZOOM-BA" = "zoomba-combat",
+						"Feminine Humanoid" = "uptall-security"
 					 )
 
 /obj/item/weapon/robot_module/robot/knine

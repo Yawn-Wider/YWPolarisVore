@@ -100,7 +100,7 @@
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "solgov medical hardsuit crate" //YW EDIT
-	access = access_medical
+	access = access_engine
 
 /datum/supply_pack/misc/zero_rig
 	name = "null hardsuit (jets)"

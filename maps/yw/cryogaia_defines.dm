@@ -208,12 +208,14 @@
 	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1, Z_LEVEL_ROGUEMINE_2)
 
-	lateload_single_pick = list( //Gateway missions
+	lateload_gateway = list( //Gateway missions
 		list("Snow Outpost"),
 		list("Carp Farm"),
 		list("Snow Field"),
 		list("Listening Post")
 		)
+
+	lateload_gateway = null //Nothing right now.
 
 	planet_datums_to_make = list(/datum/planet/borealis2)
 

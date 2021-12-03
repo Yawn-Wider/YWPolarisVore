@@ -283,7 +283,7 @@
 
 		// No company? Suffer :(
 		if(H.loneliness_stage < warning_cap)
-			H.loneliness_stage += 0.10 // outpost 21 change, teshari lonliness raises much more slowly to help low population play, needs to actually hit the ints!!
+			H.loneliness_stage += 1
 		handle_loneliness(H)
 		if(H.loneliness_stage >= warning_cap && H.hallucination < hallucination_cap)
 			H.hallucination += 2.5

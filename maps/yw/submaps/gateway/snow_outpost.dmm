@@ -250,8 +250,8 @@
 /area/awaymission/snow_outpost/powered)
 "aT" = (
 /mob/living/simple_mob/mechanical/viscerator/mercenary,
-/turf/simulated/floor/outdoors/snow,
-/area/awaymission/snow_outpost/outside/nospawn)
+/turf/simulated/floor/tiled/white,
+/area/awaymission/snow_outpost/powered)
 "aU" = (
 /obj/machinery/dna_scannernew,
 /turf/simulated/floor/tiled/white,
@@ -2644,6 +2644,13 @@
 /obj/machinery/light/flicker,
 /turf/simulated/floor/tiled/white,
 /area/awaymission/snow_outpost/powered)
+"rL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 5
+	},
+/mob/living/simple_mob/mechanical/viscerator/mercenary,
+/turf/simulated/floor/tiled/white,
+/area/awaymission/snow_outpost/powered)
 "uq" = (
 /turf/simulated/floor/outdoors/snow,
 /area/awaymission/snow_outpost/powered)
@@ -2777,6 +2784,13 @@
 /obj/structure/flora/tree/winter1,
 /turf/simulated/floor/outdoors/snow,
 /area/awaymission/snow_outpost/outside/nospawn)
+"Ss" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/cyan{
+	dir = 6
+	},
+/mob/living/simple_mob/mechanical/viscerator/mercenary,
+/turf/simulated/floor/tiled/white,
+/area/awaymission/snow_outpost/powered)
 "SO" = (
 /obj/machinery/light{
 	dir = 8
@@ -6916,7 +6930,7 @@ uy
 uy
 uy
 uy
-aT
+uy
 uy
 uy
 uy
@@ -7248,7 +7262,7 @@ uy
 uy
 NH
 uy
-aT
+uy
 uy
 uy
 bj
@@ -7561,7 +7575,7 @@ uy
 as
 bk
 ek
-bG
+Ss
 Wj
 bw
 ay
@@ -7574,7 +7588,7 @@ ay
 bx
 aw
 MR
-aA
+rL
 au
 uy
 uy
@@ -7722,7 +7736,7 @@ uy
 uy
 as
 bl
-ek
+aT
 aG
 bm
 yM
@@ -7731,7 +7745,7 @@ ek
 bH
 ek
 ek
-ek
+aT
 ek
 av
 ax
@@ -7898,7 +7912,7 @@ ek
 bq
 ek
 ri
-ek
+aT
 au
 uy
 uy
@@ -8203,7 +8217,7 @@ ab
 ab
 ab
 uy
-aT
+uy
 uy
 uy
 as
@@ -8380,7 +8394,7 @@ bK
 ay
 ay
 ay
-aA
+rL
 as
 uy
 uy
@@ -9823,7 +9837,7 @@ ab
 ab
 ab
 uy
-aT
+uy
 uy
 uy
 as
@@ -10963,7 +10977,7 @@ uy
 uy
 uy
 uy
-aT
+uy
 uy
 uy
 uy
@@ -11298,7 +11312,7 @@ zF
 uy
 uy
 bj
-aT
+uy
 uy
 uy
 uy

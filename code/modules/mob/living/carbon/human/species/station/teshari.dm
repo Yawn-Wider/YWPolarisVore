@@ -21,6 +21,7 @@
 	health_hud_intensity = 3
 	//YW Edit: Readding loneliness
 	var/warning_cap = 300
+	var/alone_calming = 8 // outpost21 change, makes teshari more bearable in lowpop
 	var/hallucination_cap = 25
 	//YW Edit End
 
@@ -231,11 +232,11 @@
 		// Vored? Not gonna get frightened.
 		if(isbelly(H.loc))
 			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
+				H.loneliness_stage -= alone_calming
 			return
 		if(istype(H.loc, /obj/item/weapon/holder))
 			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
+				H.loneliness_stage -= alone_calming
 			return
 		// Check for company.
 		for(var/mob/living/M in viewers(H))
@@ -245,7 +246,7 @@
 				continue
 			if(M.faction == "neutral" || M.faction == H.faction)
 				if(H.loneliness_stage > 0)
-					H.loneliness_stage -= 4
+					H.loneliness_stage -= alone_calming
 					if(H.loneliness_stage < 0)
 						H.loneliness_stage = 0
 					if(world.time >= H.next_loneliness_time)
@@ -255,7 +256,7 @@
 
 		for(var/obj/item/weapon/holder/micro/M in range(1, H))
 			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
+				H.loneliness_stage -= alone_calming
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
 				if(world.time >= H.next_loneliness_time)
@@ -264,7 +265,7 @@
 
 		for(var/obj/effect/overlay/aiholo/A in range(5, H))
 			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
+				H.loneliness_stage -= alone_calming
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
 				if(world.time >= H.next_loneliness_time)
@@ -274,7 +275,7 @@
 		//re-enabled for YawnWider
 		for(var/obj/item/toy/plushie/teshari/P in range(5, H))
 			if(H.loneliness_stage > 0)
-				H.loneliness_stage -= 4
+				H.loneliness_stage -= alone_calming
 				if(H.loneliness_stage < 0)
 					H.loneliness_stage = 0
 				if(world.time >= H.next_loneliness_time)
@@ -292,15 +293,15 @@
 	var/ms = ""
 
 	if(H.loneliness_stage == 1)
-		ms = "Well.. No one is around you anymore..."
-	if(H.loneliness_stage >= 50)
-		ms = "You begin to feel alone..."
-	if(H.loneliness_stage >= 250)
-		ms = "[pick("You don't think you can last much longer without some visible company!", "You should go find someone!")]"
+		ms = "[pick("Well.. No one is around you anymore...","Well.. You're alone now...","You suddenly feel alone...")]"
+	if(H.loneliness_stage >= 150) // outpost21 change, makes teshari more bearable in lowpop
+		ms = "[pick("You feel alone...","You feel isolated...","You need company...","Where is everyone?...","You need to find someone to be with...")]"
+	if(H.loneliness_stage >= 250) // outpost21 change, makes teshari more bearable in lowpop
+		ms = "[pick("You don't think you can last much longer without some visible company!", "You should go find someone!","You need to find company.","Find someone to be with!")]"
 		if(H.stuttering < hallucination_cap)
 			H.stuttering += 5
 	if(H.loneliness_stage >= warning_cap)
-		ms = "<span class='danger'><b>[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!")]</b></span>"
+		ms = "<span class='danger'><b>[pick("Where are the others?", "Please, there has to be someone nearby!", "I don't want to be alone!","Please, anyone! I don't want to be alone!")]</b></span>"
 	if(world.time < H.next_loneliness_time)
 		return
 

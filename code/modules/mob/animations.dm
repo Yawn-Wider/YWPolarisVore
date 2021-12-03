@@ -4,7 +4,7 @@ use this rather than directly changing var/dizziness
 since this ensures that the dizzy_process proc is started
 currently only humans get dizzy
 
-value of dizziness ranges from 0 to 1000
+value of dizziness ranges from 0 to 1000, outpost21 change to 10000
 below 100 is not dizzy
 */
 
@@ -15,8 +15,8 @@ below 100 is not dizzy
 	if(!istype(src, /mob/living/carbon/human)) // for the moment, only humans get dizzy
 		return
 
-	dizziness = min(1000, dizziness + amount)	// store what will be new value
-													// clamped to max 1000
+	dizziness = min(10000, dizziness + amount)	// store what will be new value
+													// clamped to max 1000, outpost21 change to 10000
 	if(dizziness > 100 && !is_dizzy)
 		spawn(0)
 			dizzy_process()
@@ -32,8 +32,8 @@ note dizziness decrements automatically in the mob's Life() proc.
 	while(dizziness > 100)
 		if(client)
 			var/amplitude = dizziness*(sin(dizziness * 0.044 * world.time) + 1) / 70
-			client.pixel_x = amplitude * sin(0.008 * dizziness * world.time)
-			client.pixel_y = amplitude * cos(0.008 * dizziness * world.time)
+			client.pixel_x = amplitude * sin(0.008 * min(dizziness,1000) * world.time) //outpost21 change clamp to 1000 in anim
+			client.pixel_y = amplitude * cos(0.008 * min(dizziness,1000) * world.time) //outpost21 change clamp to 1000 in anim
 
 		sleep(1)
 	//endwhile - reset the pixel offsets to zero

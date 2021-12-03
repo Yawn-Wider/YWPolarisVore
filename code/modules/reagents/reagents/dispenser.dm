@@ -143,7 +143,7 @@
 		M.Sleeping(90 * config.alcoholic_effect_multiplier)
 
 	if(druggy != 0)
-		M.druggy = max(M.druggy, druggy*3)
+		M.druggy = max(M.druggy, druggy*3 * config.alcoholic_effect_multiplier)
 
 	if(adj_temp > 0 && M.bodytemperature < targ_temp) // 310 is the normal bodytemp. 310.055
 		M.bodytemperature = min(targ_temp, M.bodytemperature + (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
@@ -151,7 +151,7 @@
 		M.bodytemperature = min(targ_temp, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 
 	if(halluci)
-		M.hallucination = max(M.hallucination, halluci*3)
+		M.hallucination = max(M.hallucination, halluci*3 * config.alcoholic_effect_multiplier)
 
 /datum/reagent/ethanol/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	if(issmall(M)) removed *= 2
@@ -188,7 +188,7 @@
 		M.Sleeping(30 * config.alcoholic_effect_multiplier)
 
 	if(druggy != 0)
-		M.druggy = max(M.druggy, druggy)
+		M.druggy = max(M.druggy, druggy * config.alcoholic_effect_multiplier)
 
 	if(adj_temp > 0 && M.bodytemperature < targ_temp) // 310 is the normal bodytemp. 310.055
 		M.bodytemperature = min(targ_temp, M.bodytemperature + (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
@@ -196,7 +196,7 @@
 		M.bodytemperature = min(targ_temp, M.bodytemperature - (adj_temp * TEMPERATURE_DAMAGE_COEFFICIENT))
 
 	if(halluci)
-		M.hallucination = max(M.hallucination, halluci)
+		M.hallucination = max(M.hallucination, halluci * config.alcoholic_effect_multiplier)
 
 /datum/reagent/ethanol/touch_obj(var/obj/O)
 	if(istype(O, /obj/item/weapon/paper))

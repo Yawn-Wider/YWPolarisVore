@@ -28,7 +28,8 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 
 	var/durability = 100					// Durability remaining
 	var/bioadap = FALSE						// If it'll work in fancy species
-	var/savetofile = TRUE					/*Start True so that Transcore saves any NIF that's newly installed with the correct scans or implant.
+	var/gib_nodrop = FALSE					// NIF self-destructs when owner is gibbed
+	var/savetofile = TRUE					/*YW EDIT: Start True so that Transcore saves any NIF that's newly installed with the correct scans or implant.
 											DO NOT CHANGE durability WITHOUT SETTING THIS TO TRUE. */
 
 	var/tmp/power_usage = 0						// Nifsoft adds to this
@@ -100,7 +101,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	//If given wear (like when spawned) then done
 	if(wear)
 		durability = wear
-		savetofile = TRUE
+		savetofile = TRUE // YW EDIT
 		wear(0) //Just make it update.
 
 	//Draw me yo.
@@ -199,7 +200,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 /obj/item/device/nif/proc/wear(var/wear = 0)
 	wear *= (rand(85,115) / 100) //Apparently rand() only takes integers.
 	durability -= wear
-	savetofile = TRUE
+	savetofile = TRUE // YW EDIT
 
 	if(durability <= 0)
 		stat = NIF_TEMPFAIL
@@ -238,7 +239,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 			playsound(src, 'sound/items/Screwdriver.ogg', 50, 1)
 			open = FALSE
 			durability = initial(durability)
-			savetofile = TRUE
+			savetofile = TRUE // YW EDIT
 			stat = NIF_PREINSTALL
 			update_icon()
 
@@ -623,6 +624,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	desc = "A NIF that is part of a protean's body structure. Where did you get that anyway?"
 	durability = 25
 	bioadap = TRUE
+	gib_nodrop = TRUE
 
 ////////////////////////////////
 // Special Promethean """surgery"""

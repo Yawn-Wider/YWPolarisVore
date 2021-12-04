@@ -586,6 +586,9 @@ ALLOW_URL_LINKS
 # Possible values: 0 (Off), 1 (Lax, user must be whitelisted for the species), 2 (Strict, user must be the species)
 LOADOUT_WHITELIST 1
 
+# Removing comment will disable all forms of vore interactions
+# DISABLE_VORE
+
 # Allowed time from death to defib in minutes
 DEFIB_TIMER 60
 

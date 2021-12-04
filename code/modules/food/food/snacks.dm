@@ -52,7 +52,7 @@
 		M.visible_message("<span class='notice'>[M] finishes eating \the [src].</span>","<span class='notice'>You finish eating \the [src].</span>")
 		// Embedded-in-food smol vore
 		for(var/obj/item/weapon/holder/holder in src)
-			if(holder.held_mob?.devourable)
+			if(holder.held_mob?.devourable && !config.disable_vore) // outpost 21 change
 				holder.held_mob.forceMove(M.vore_selected)
 				holder.held_mob = null
 				qdel(holder)

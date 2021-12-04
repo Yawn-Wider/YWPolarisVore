@@ -15,14 +15,15 @@
 	AddComponent(/datum/component/character_setup)
 	
 	// Vore stuff
-	verbs |= /mob/living/proc/escapeOOC
-	verbs |= /mob/living/proc/lick
-	verbs |= /mob/living/proc/smell
-	verbs |= /mob/living/proc/switch_scaling
+	if(!config.disable_vore) // outpost21 change
+		verbs |= /mob/living/proc/escapeOOC
+		verbs |= /mob/living/proc/lick 
+		verbs |= /mob/living/proc/smell
+		verbs |= /mob/living/proc/switch_scaling
 	
-	if(!no_vore)
-		verbs |= /mob/living/proc/vorebelly_printout
-		if(!vorePanel)
-			AddComponent(/datum/component/vore_panel)
+		if(!no_vore)
+			verbs |= /mob/living/proc/vorebelly_printout
+			if(!vorePanel)
+				AddComponent(/datum/component/vore_panel)
 
 	return .

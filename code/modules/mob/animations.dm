@@ -15,9 +15,9 @@ below 100 is not dizzy
 	if(!istype(src, /mob/living/carbon/human)) // for the moment, only humans get dizzy
 		return
 
-	dizziness = min(10000, dizziness + amount)	// store what will be new value
-													// clamped to max 1000, outpost21 change to 10000
-	if(dizziness > 100 && !is_dizzy)
+	dizziness = min( 1000 * config.dizzy_timer_multiplier, dizziness + amount)	// store what will be new value
+
+	if((dizziness / config.dizzy_timer_multiplier) > 100 && !is_dizzy)
 		spawn(0)
 			dizzy_process()
 
@@ -29,11 +29,11 @@ note dizziness decrements automatically in the mob's Life() proc.
 */
 /mob/proc/dizzy_process()
 	is_dizzy = 1
-	while(dizziness > 100)
+	while((dizziness / config.dizzy_timer_multiplier) > 100)
 		if(client)
-			var/amplitude = dizziness*(sin(dizziness * 0.044 * world.time) + 1) / 70
-			client.pixel_x = amplitude * sin(0.008 * min(dizziness,1000) * world.time) //outpost21 change clamp to 1000 in anim
-			client.pixel_y = amplitude * cos(0.008 * min(dizziness,1000) * world.time) //outpost21 change clamp to 1000 in anim
+			var/amplitude = min(dizziness / config.dizzy_timer_multiplier,1000) * (sin((dizziness / config.dizzy_timer_multiplier) * 0.044 * world.time) + 1) / 70
+			client.pixel_x = amplitude * sin(0.008 * min(dizziness / config.dizzy_timer_multiplier,1000) * world.time) //outpost21 change clamp to 1000 in anim
+			client.pixel_y = amplitude * cos(0.008 * min(dizziness / config.dizzy_timer_multiplier,1000) * world.time) //outpost21 change clamp to 1000 in anim
 
 		sleep(1)
 	//endwhile - reset the pixel offsets to zero

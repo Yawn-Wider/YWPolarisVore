@@ -570,6 +570,9 @@ ENABLE_NIGHT_SHIFTS
 ## Alcohol effect intensity, is separate from drink strength, controls duration of alcoholic effects
 ALCOHOLIC_EFFECT_MULTIPLIER 1
 
+## Multiplies the base dizzy timer's maximum limit to allow for longer dizzy times
+DIZZY_EFFECT_MULTIPLIER 1
+
 ## Comment this out to enable playtime restrictions for jobs in their respective departments (mostly for heads)
 #USE_PLAYTIME_RESTRICTION_FOR_JOBS
 

@@ -20,8 +20,8 @@
 
 	health_hud_intensity = 3
 	//YW Edit: Readding loneliness
-	var/warning_cap = 300
-	var/alone_calming = 8 // outpost21 change, makes teshari more bearable in lowpop
+	var/warning_cap = 600 // outpost21 change, makes teshari more bearable in lowpop
+	var/alone_calming = 16 // outpost21 change, makes teshari more bearable in lowpop
 	var/hallucination_cap = 25
 	//YW Edit End
 
@@ -294,9 +294,9 @@
 
 	if(H.loneliness_stage == 1)
 		ms = "[pick("Well.. No one is around you anymore...","Well.. You're alone now...","You suddenly feel alone...")]"
-	if(H.loneliness_stage >= 150) // outpost21 change, makes teshari more bearable in lowpop
+	if(H.loneliness_stage >= warning_cap-150) // outpost21 change, ~4min before panic
 		ms = "[pick("You feel alone...","You feel isolated...","You need company...","Where is everyone?...","You need to find someone to be with...")]"
-	if(H.loneliness_stage >= 250) // outpost21 change, makes teshari more bearable in lowpop
+	if(H.loneliness_stage >= warning_cap-50) // outpost21 change, ~1min before panic
 		ms = "[pick("You don't think you can last much longer without some visible company!", "You should go find someone!","You need to find company.","Find someone to be with!")]"
 		if(H.stuttering < hallucination_cap)
 			H.stuttering += 5

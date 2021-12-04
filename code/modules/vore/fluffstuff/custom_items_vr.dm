@@ -1198,6 +1198,7 @@
       else
          return 1
 
+/* outpost 21 removal
 //Ryumi - Nikki Yumeno
 /obj/item/weapon/rig/nikki
 	name = "weird necklace"
@@ -1243,6 +1244,7 @@
 		else if (M.get_active_hand() == src)
 			to_chat(M, "<span class='warning'>For some reason, the necklace seems to never quite get past your head when you try to put it on... Weird, it looked like it would fit.</span>")
 			return 0
+*/
 
 //Nickcrazy - Damon Bones Xrim
 /obj/item/clothing/suit/storage/toggle/bomber/bombersec

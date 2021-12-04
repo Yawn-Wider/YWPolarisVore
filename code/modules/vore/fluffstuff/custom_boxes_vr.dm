@@ -222,7 +222,7 @@
 	name = "Nikki's Outfit Box"
 	desc = "Warning: Contains dangerous amounts of dork."
 	has_items = list(
-		/obj/item/weapon/rig/nikki,
+		/* outpost 21 removal/obj/item/weapon/rig/nikki, */
 		/obj/item/clothing/head/fluff/nikki,
 		/obj/item/clothing/under/skirt/outfit/fluff/nikki,
 		/obj/item/clothing/shoes/fluff/nikki)

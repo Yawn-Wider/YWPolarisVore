@@ -14,6 +14,7 @@
 	build_path = /obj/item/clothing/under/hyperfiber/bluespace
 	sort_string = "TAVAA"
 
+/* outpost 21 removal
 /datum/design/item/general/sizegun
 	name = "Size gun"
 	id = "sizegun"
@@ -21,6 +22,7 @@
 	materials = list(MAT_STEEL = 3000, MAT_GLASS = 2000)
 	build_path = /obj/item/weapon/gun/energy/sizegun
 	sort_string = "TAVBA"
+*/
 
 /datum/design/item/general/bodysnatcher
 	name = "Body Snatcher"
@@ -51,7 +53,7 @@
 	req_tech = list(TECH_MAGNET = 3, TECH_ENGINEERING = 4, TECH_BLUESPACE = 1)
 	materials = list(MAT_STEEL = 1000,MAT_GLASS = 500)
 	build_path = /obj/item/weapon/mining_scanner/advanced
-	sort_string = "FBAAB" 
+	sort_string = "FBAAB"
 
 /datum/design/item/general/walkpod
 	name = "PodZu Music Player"

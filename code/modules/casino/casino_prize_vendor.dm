@@ -64,7 +64,7 @@
 	item_list["Weapons"] = list(
 		CASINO_PRIZE("Scepter", /obj/item/weapon/scepter, 1, 500, "weapons"),
 		CASINO_PRIZE("Chain of Command", /obj/item/weapon/melee/chainofcommand, 1, 250, "weapons"),
-		CASINO_PRIZE("Size Gun", /obj/item/weapon/gun/energy/sizegun, 1, 100, "weapons"),
+		// CASINO_PRIZE("Size Gun", /obj/item/weapon/gun/energy/sizegun, 1, 100, "weapons"), // outpost 21 removal
 		CASINO_PRIZE("Advanced Particle Rifle", /obj/item/weapon/gun/energy/particle/advanced, 1, 500, "weapons"),
 		CASINO_PRIZE("Temperature Gun", /obj/item/weapon/gun/energy/temperature, 1, 250, "weapons"),
 		CASINO_PRIZE("Alien Pistol", /obj/item/weapon/gun/energy/alien, 1, 1000, "weapons"),

@@ -105,7 +105,7 @@
 	if(vore_ignores_undigestable && !M.digestable) //Don't eat people with nogurgle prefs
 		//ai_log("vr/wont eat [M] because I am picky", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
-	if(!M.allowmobvore || !M.devourable ||  config.disable_vore) // Don't eat people who don't want to be ate by mobs
+	if(!M.allowmobvore || !M.devourable || config.disable_vore) // Don't eat people who don't want to be ate by mobs, outpost 21 change
 		//ai_log("vr/wont eat [M] because they don't allow mob vore", 3) //VORESTATION AI TEMPORARY REMOVAL
 		return 0
 	if(M in prey_excludes) // They're excluded

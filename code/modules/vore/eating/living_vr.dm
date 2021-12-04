@@ -85,6 +85,9 @@
 // Handle being clicked, perhaps with something to devour
 //
 /mob/living/proc/vore_attackby(obj/item/I, mob/user)
+	if(config.disable_vore) // outpost21 change
+		return FALSE
+
 	//Handle case: /obj/item/weapon/grab
 	if(istype(I, /obj/item/weapon/grab))
 		var/obj/item/weapon/grab/G = I

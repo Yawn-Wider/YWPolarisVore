@@ -11,6 +11,7 @@
 	var/static/require_flavor = FALSE
 	var/static/ipqualityscore_apikey //API key for ipqualityscore.com
 	var/static/use_playtime_restriction_for_jobs = FALSE
+	var/static/disable_vore = FALSE; // this is spagetti trash, but it at least allows for vore disabling...
 
 /hook/startup/proc/read_vs_config()
 	var/list/Lines = file2list("config/config.txt")
@@ -61,4 +62,6 @@
 				config.ipqualityscore_apikey = value
 			if ("use_playtime_restriction_for_jobs")
 				config.use_playtime_restriction_for_jobs = TRUE
+			if ("disable_vore") // outpost 21 change, defaults false so vore is on
+				config.disable_vore = TRUE
 	return 1

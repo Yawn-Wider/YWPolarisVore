@@ -55,7 +55,7 @@
 			var/list/potentials = living_mobs(0)
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+				if(istype(target) && target.devourable && !config.disable_vore && target.can_be_drop_prey && vore_selected) // outpost21 change
 					target.forceMove(vore_selected)
 					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 
@@ -199,7 +199,7 @@
 			var/list/potentials = living_mobs(0)
 			if(potentials.len)
 				var/mob/living/target = pick(potentials)
-				if(istype(target) && target.devourable && target.can_be_drop_prey && vore_selected)
+				if(istype(target) && target.devourable && !config.disable_vore && target.can_be_drop_prey && vore_selected) // outpost 21 change
 					target.forceMove(vore_selected)
 					to_chat(target,"<span class='warning'>\The [src] phases in around you, [vore_selected.vore_verb]ing you into their [vore_selected.name]!</span>")
 

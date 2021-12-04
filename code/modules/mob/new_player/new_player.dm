@@ -139,7 +139,14 @@
 		panel.close()
 		new_player_panel_proc()
 
+
+	// outpost 21 removal
 	if(href_list["observe"])
+		// outpost 21 change, to encourage new players
+		if(!check_rights(R_ADMIN, 0) && !check_rights(R_MOD, 0))
+			to_chat(src, "<span class='danger'>Only admins and moderation may observe, try joining as an assistant or janitor if you are new!</span>")
+			return 1
+
 		if(tgui_alert(src,"Are you sure you wish to observe? If you do, make sure to not use any knowledge gained from observing if you decide to join later.","Player Setup",list("Yes","No")) == "Yes")
 			if(!client)	return 1
 
@@ -177,12 +184,13 @@
 
 			return 1
 
+
 	if(href_list["late_join"])
 
 		if(!ticker || ticker.current_state != GAME_STATE_PLAYING)
 			to_chat(usr, "<font color='red'>The round is either not ready, or has already finished...</font>")
 			return
-		
+
 		var/time_till_respawn = time_till_respawn()
 		if(time_till_respawn == -1) // Special case, never allowed to respawn
 			to_chat(usr, "<span class='warning'>Respawning is not allowed!</span>")
@@ -224,7 +232,7 @@
 			return 0
 
 		var/datum/species/S = GLOB.all_species[client.prefs.species]
-		
+
 		if(!(S.spawn_flags & SPECIES_CAN_JOIN))
 			tgui_alert_async(src,"Your current species, [client.prefs.species], is not available for play on the station.")
 			return 0

@@ -22,7 +22,7 @@
 /obj/item/blueprints
 	SPACE_OUTSIDE_TYPES = list(
 		/area/borealis2/outdoors/exterior,
-        /area/borealis2/outdoors/grounds 
+        /area/borealis2/outdoors/grounds
 	)
 
 
@@ -78,7 +78,7 @@
 //
 // TRAM STATION
 //
-//Not in use but...Might be useful in an away mission at some point. -RadiantFlash
+//Not in use but...Might be useful in an away mission at some point. -RadiantFlash //Oh I'll give it use~ - Ignus
 // The tram's electrified maglev tracks
 /turf/simulated/floor/maglev
 	name = "maglev track"

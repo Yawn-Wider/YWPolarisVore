@@ -6,7 +6,7 @@
 //The backup implant itself
 /obj/item/weapon/implant/backup
 	name = "backup implant"
-	desc = "A mindstate backup implant that occasionally stores a copy of one's mind on a central server for backup purposes."
+	desc = "A very advanced implant that takes backups of the user's mind every 15 minutes, and uploads it to the local station's database."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
 						/datum/category_item/catalogue/technology/resleeving)
 	icon = 'icons/vore/custom_items_vr.dmi'
@@ -53,7 +53,7 @@
 //New, modern implanter instead of old style implanter.
 /obj/item/weapon/backup_implanter
 	name = "backup implanter"
-	desc = "After discovering that Nanotrasen was just re-using the same implanters over and over again on organics, leading to cross-contamination, Vey-Medical designed this self-cleaning model. Holds four backup implants at a time."
+	desc = "A small implanter, designed to hold up to 4 doses of backup implants. Apply to the base of the neck."
 	catalogue_data = list(/datum/category_item/catalogue/information/organization/vey_med,
 						/datum/category_item/catalogue/technology/resleeving)
 	icon = 'icons/obj/device_alt.dmi'
@@ -62,7 +62,7 @@
 	throw_speed = 1
 	throw_range = 5
 	w_class = ITEMSIZE_SMALL
-	matter = list(MAT_STEEL = 2000, MAT_GLASS = 2000)
+	matter = list(MAT_PLASTEEL = 2000, MAT_GLASS = 2000)
 	var/list/obj/item/weapon/implant/backup/imps = list()
 	var/max_implants = 4 //Iconstates need to exist due to the update proc!
 

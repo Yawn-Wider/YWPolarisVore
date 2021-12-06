@@ -1,10 +1,9 @@
 #if !defined(USING_MAP_DATUM)
 
-	#include "sl340-1.dmm"
-	#include "sl340-2.dmm"
-//	#include "polaris-3.dmm"
-//	#include "polaris-4.dmm"
-//	#include "polaris-5.dmm"
+	#include "outpost-01-sub.dmm"
+	#include "outpost-02-surface.dmm"
+	#include "outpost-03-upper.dmm"
+	#include "outpost-04-orbital.dmm"
 
 	#include "outpost_defines.dm"
 	#include "outpost_areas.dm"

@@ -86,7 +86,7 @@
 	containertype = /obj/structure/closet/crate
 	containername = "Shiny clothes crate"
 	cost = 30
-
+/*
 //3/19/21
 /datum/supply_pack/recreation/smoleworld
 	name = "Smole Bulding Bricks"
@@ -106,3 +106,4 @@
 	cost = 25
 	containertype = /obj/structure/closet/crate
 	containername = "Snack planets crate"
+*/ //OP21 removed - Ignus

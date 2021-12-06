@@ -9,8 +9,8 @@
 /datum/design/item/general/bluespace_jumpsuit
 	name = "Bluespace jumpsuit"
 	id = "bsjumpsuit"
-	req_tech = list(TECH_BLUESPACE = 2, TECH_MATERIAL = 3, TECH_POWER = 2)
-	materials = list(MAT_STEEL = 4000, MAT_GLASS = 4000)
+	req_tech = list(TECH_BLUESPACE = 4, TECH_MATERIAL = 3, TECH_POWER = 6)
+	materials = list(MAT_PLASTEEL = 4000, MAT_GLASS = 4000)
 	build_path = /obj/item/clothing/under/hyperfiber/bluespace
 	sort_string = "TAVAA"
 

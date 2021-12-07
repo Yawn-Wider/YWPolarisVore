@@ -116,6 +116,10 @@
 	name = "light switch ";
 	pixel_y = 36
 	},
+/obj/machinery/camera/network/research{
+	c_tag = "Abandoned Test Chamber";
+	network = list("Research","Miscellaneous Reseach")
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "agN" = (
@@ -213,6 +217,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "aiH" = (
@@ -320,6 +325,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
 "alO" = (
@@ -389,6 +397,18 @@
 /obj/random/cutout,
 /turf/simulated/floor/plating,
 /area/maintenance/lowfloor3)
+"apT" = (
+/obj/machinery/door/firedoor/glass/hidden/steel{
+	dir = 2
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/fore)
 "aqi" = (
 /obj/machinery/air_sensor{
 	frequency = 1441;
@@ -2885,6 +2905,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "bZj" = (
@@ -3054,15 +3075,14 @@
 /turf/simulated/floor/plating,
 /area/vacant/vacant_shop)
 "cdN" = (
-/obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/glass_external/public{
-	name = "Emergency Departures Access"
+/obj/machinery/door/airlock/glass{
+	name = "Emergency Cold Apparel"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_monitored/storage/emergency/eva)
@@ -3280,6 +3300,14 @@
 /obj/structure/sign/biohazard,
 /turf/simulated/wall/r_wall,
 /area/medical/medbaylower)
+"ckM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/crew_quarters/sleep/cryo)
 "ckQ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -3676,6 +3704,16 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/engi_wash)
+"cwj" = (
+/obj/structure/closet/crate/freezer,
+/obj/item/weapon/virusdish/random,
+/obj/item/weapon/virusdish/random,
+/obj/item/weapon/virusdish/random,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "cwo" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -4050,6 +4088,9 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo)
 "cKG" = (
@@ -4116,6 +4157,12 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
 /area/constructionsite/medical)
+"cMK" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "Cryo Bay Lockers"
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/crew_quarters/sleep/cryo)
 "cNc" = (
 /obj/machinery/door/firedoor/glass/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5525,6 +5572,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "dIn" = (
@@ -5880,6 +5930,9 @@
 	level = 3;
 	name = "Distribution and Waste Monitor";
 	sensors = list("mair_in_meter" = "Mixed Air In", "air_sensor" = "Mixed Air Supply Tank", "mair_out_meter" = "Mixed Air Out", "dloop_atm_meter" = "Distribution Loop", "wloop_atm_meter" = "Waste Loop", "wloop_engine_meter" = "Engine Waste")
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -6283,6 +6336,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_foyer)
 "efA" = (
@@ -6574,6 +6630,9 @@
 /obj/effect/floor_decal/corner/green/full{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "eoa" = (
@@ -6628,6 +6687,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 1;
 	icon_state = "pipe-c"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/sleep/cryo)
@@ -6895,6 +6957,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
+"evz" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Virology Cleaning"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "evD" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -7490,6 +7561,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
+"eSx" = (
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
 "eTn" = (
 /obj/structure/extinguisher_cabinet{
 	pixel_x = 5;
@@ -7630,11 +7707,11 @@
 /turf/simulated/wall/r_wall,
 /area/rnd/lab)
 "eYV" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
-/turf/simulated/floor/carpet/tealcarpet,
-/area/medical/pyschwarde)
+/turf/simulated/floor/tiled,
+/area/hallway/lower/fore)
 "eYY" = (
 /obj/structure/bookcase,
 /turf/simulated/floor/carpet/tealcarpet,
@@ -8088,12 +8165,11 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "foB" = (
-/obj/machinery/camera/network/medbay{
-	c_tag = "Morgue";
+/obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/turf/simulated/floor/holofloor/tiled/dark,
-/area/medical/morgue)
+/turf/simulated/floor/carpet/tealcarpet,
+/area/medical/pyschwarde)
 "foM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -8110,6 +8186,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/prison)
+"foR" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
 "foT" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -8446,6 +8531,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/pool)
@@ -8868,11 +8956,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/pyschwarde)
 "fTc" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "CIV - VR Sleepers"
+/obj/machinery/camera/network/medbay{
+	c_tag = "Morgue";
+	dir = 4
 	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/recreation_area)
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/medical/morgue)
 "fTq" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -8989,6 +9078,9 @@
 	icon_state = "0-4"
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
 "fYe" = (
@@ -9703,6 +9795,9 @@
 /area/crew_quarters/pool)
 "gtG" = (
 /obj/structure/disposalpipe/segment,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "gtO" = (
@@ -10253,6 +10348,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo)
 "gLh" = (
@@ -10299,6 +10397,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "gMu" = (
@@ -10729,6 +10828,9 @@
 /obj/effect/landmark{
 	name = "vinestart"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/hallway/lower/fore)
 "gYH" = (
@@ -10833,8 +10935,17 @@
 "hbD" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
+"hbI" = (
+/obj/structure/catwalk,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/crew_quarters/kitchen/fish_farm)
 "hbX" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 1
@@ -11100,6 +11211,9 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "hhO" = (
@@ -11256,6 +11370,9 @@
 /obj/structure/disposalpipe/segment{
 	dir = 8;
 	icon_state = "pipe-c"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -12046,6 +12163,17 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/rnd/lab)
+"hOC" = (
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/bluegrid{
+	name = "Mainframe Base";
+	nitrogen = 100;
+	oxygen = 0;
+	temperature = 80
+	},
+/area/tcommsat/chamber)
 "hOH" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 1
@@ -12340,6 +12468,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
 "hWj" = (
@@ -12465,6 +12596,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
+"hZP" = (
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/primary/starboard)
 "iaB" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -12898,6 +13035,9 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
 "ilO" = (
@@ -13086,6 +13226,9 @@
 /area/maintenance/lowfloor1)
 "irb" = (
 /obj/machinery/computer/atmoscontrol,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "ird" = (
@@ -13108,15 +13251,12 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area)
 "irB" = (
-/obj/structure/closet/crate/freezer,
-/obj/item/weapon/virusdish/random,
-/obj/item/weapon/virusdish/random,
-/obj/item/weapon/virusdish/random,
-/obj/machinery/light{
+/obj/structure/catwalk,
+/obj/structure/sign/christmas/lights{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
+/turf/simulated/floor/plating,
+/area/hallway/lower/fore)
 "isd" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -13671,6 +13811,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
 "iGe" = (
@@ -13888,6 +14031,12 @@
 	},
 /turf/simulated/floor,
 /area/engineering/atmos)
+"iLV" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - VR Sleepers"
+	},
+/turf/simulated/floor/carpet,
+/area/crew_quarters/recreation_area)
 "iMh" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -14669,6 +14818,9 @@
 /area/ai_monitored/storage/emergency/eva)
 "jjD" = (
 /obj/structure/table/glass,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
 "jjN" = (
@@ -15432,6 +15584,9 @@
 	dir = 8
 	},
 /obj/item/weapon/stool/padded,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
 "jGr" = (
@@ -15660,6 +15815,9 @@
 /obj/machinery/camera/network/northern_star{
 	c_tag = "Hall - Recreation Mid";
 	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
@@ -16119,6 +16277,7 @@
 	c_tag = "Security Lower Hall Starboard";
 	dir = 1
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "jYo" = (
@@ -16200,12 +16359,17 @@
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
 "kbm" = (
-/obj/machinery/door/firedoor/glass,
-/obj/machinery/door/airlock/glass_external/public{
-	name = "Emergency Departures Access"
+/obj/machinery/door/airlock/glass{
+	name = "Emergency Cold Apparel"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_monitored/storage/emergency/eva)
+"kbu" = (
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
 "kbI" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -16993,6 +17157,11 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/vacant/vacant_shop)
+"ktV" = (
+/obj/structure/catwalk,
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/crew_quarters/kitchen/fish_farm)
 "kue" = (
 /turf/simulated/wall/r_wall,
 /area/engineering/atmos/monitoring)
@@ -17369,6 +17538,9 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/sleep/cryo)
 "kCx" = (
@@ -17712,6 +17884,9 @@
 	dir = 2
 	},
 /obj/effect/floor_decal/industrial/warning,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
 "kMd" = (
@@ -17862,6 +18037,9 @@
 	},
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/sleep/cryo)
 "kRh" = (
@@ -18397,6 +18575,9 @@
 	icon_state = "1-2"
 	},
 /obj/item/device/radio/beacon,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_foyer)
 "lix" = (
@@ -19229,6 +19410,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/pool)
 "lIH" = (
@@ -19792,6 +19976,9 @@
 /area/maintenance/lowfloor1)
 "lYO" = (
 /obj/item/weapon/stool/padded,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
 "lYS" = (
@@ -20839,6 +21026,16 @@
 "mHL" = (
 /turf/unsimulated/wall/bronze,
 /area/chapel/office)
+"mHY" = (
+/obj/structure/bookcase{
+	name = "bookcase (Fiction)"
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Library Port";
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/library)
 "mIh" = (
 /obj/item/device/radio/intercom{
 	dir = 8;
@@ -21056,6 +21253,9 @@
 /obj/structure/sign/atmos/n2{
 	pixel_x = -28
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/bluegrid{
 	name = "Mainframe Base";
 	nitrogen = 100;
@@ -21250,6 +21450,9 @@
 	req_access = list()
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central1,
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/crew_quarters/sleep/cryo)
 "mWo" = (
@@ -21286,6 +21489,9 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/bluegrid{
 	name = "Mainframe Base";
 	nitrogen = 100;
@@ -23002,6 +23208,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/structure/sign/christmas/wreath{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/sleep/cryo)
 "odm" = (
@@ -23143,17 +23352,18 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
 "oir" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
+/obj/structure/catwalk,
+/obj/structure/sign/christmas/lights{
 	dir = 4
 	},
-/obj/machinery/camera/network/medbay{
-	c_tag = "Virology Cleaning"
-	},
-/turf/simulated/floor/tiled/white,
-/area/medical/virology)
+/turf/simulated/floor/plating,
+/area/hallway/lower/fore)
 "ois" = (
 /obj/machinery/light{
 	dir = 8
@@ -24343,18 +24553,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/maintenance/maintroom6)
-"oUy" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/camera/autoname{
-	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/civilian/atrium/lower)
 "oUT" = (
 /obj/machinery/vending/cola,
 /obj/item/trash/candy,
@@ -25754,6 +25952,9 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/sleep/cryo)
 "pJp" = (
@@ -25827,6 +26028,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "pLh" = (
@@ -27419,6 +27621,9 @@
 	dir = 8;
 	pixel_x = 30
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "qJa" = (
@@ -27696,13 +27901,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/vacant/vacant_shop)
-"qVn" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "Vacant Office";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
-/area/vacant/vacant_office)
 "qVM" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -27711,6 +27909,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/recreation_area_restroom)
+"qWr" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
 "qWx" = (
 /obj/machinery/shower{
 	dir = 1
@@ -28012,6 +28225,12 @@
 /obj/structure/table/woodentable,
 /turf/simulated/floor/wood,
 /area/maintenance/maintroom6)
+"rfk" = (
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/lower/central)
 "rfu" = (
 /obj/machinery/computer/aifixer,
 /turf/simulated/floor/bluegrid,
@@ -28355,6 +28574,12 @@
 	},
 /turf/simulated/floor/grass,
 /area/civilian/atrium/lower)
+"rqF" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/crew_quarters/sleep/cryo)
 "rqX" = (
 /obj/machinery/light_switch{
 	dir = 4;
@@ -28533,6 +28758,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/security/prison)
+"rvV" = (
+/obj/structure/catwalk,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/crew_quarters/kitchen/fish_farm)
 "rwC" = (
 /obj/structure/disposalpipe/segment{
 	dir = 2;
@@ -29411,11 +29643,11 @@
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "rYl" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "Cryo Bay Lockers"
+/obj/machinery/light{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/crew_quarters/sleep/cryo)
+/turf/simulated/floor/water/hotspring,
+/area/chapel/chapel_morgue)
 "rYt" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -29803,6 +30035,12 @@
 /obj/structure/particle_accelerator/particle_emitter/right,
 /turf/simulated/floor/reinforced,
 /area/rnd/lab)
+"soh" = (
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/fitness)
 "sol" = (
 /turf/simulated/floor/tiled,
 /area/maintenance/lowfloor1)
@@ -30649,6 +30887,9 @@
 	name = "Distribution Loop"
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/supply,
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "sOB" = (
@@ -30681,6 +30922,9 @@
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/effect/floor_decal/corner/green/full{
 	dir = 8
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
@@ -30880,6 +31124,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
+"sVq" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "Vacant Office";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/vacant/vacant_office)
 "sVL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/dark,
@@ -30957,6 +31208,9 @@
 /obj/machinery/biogenerator,
 /obj/effect/floor_decal/corner/green{
 	dir = 5
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
@@ -32800,6 +33054,9 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
 "tZb" = (
@@ -33416,6 +33673,13 @@
 /obj/machinery/disposal,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"uqr" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/sign/christmas/lights{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
 "uqG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -33548,6 +33812,9 @@
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 28
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai_foyer)
@@ -34012,11 +34279,18 @@
 	},
 /area/maintenance/lowfloor3)
 "uHZ" = (
-/obj/machinery/light{
-	dir = 8
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/simulated/floor/tiled,
-/area/civilian/atrium/lower)
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor/plating,
+/area/hallway/lower/fore)
 "uIw" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -35235,6 +35509,14 @@
 "vte" = (
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds/tower/northeast)
+"vtw" = (
+/obj/structure/catwalk,
+/obj/structure/sign/christmas/lights{
+	dir = 1
+	},
+/obj/structure/sign/christmas/lights,
+/turf/simulated/floor,
+/area/crew_quarters/kitchen/fish_farm)
 "vtX" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -35277,6 +35559,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/structure/sign/christmas/lights,
 /turf/simulated/floor/tiled,
 /area/security/prison)
 "vvp" = (
@@ -35854,6 +36137,9 @@
 /obj/structure/cable/green{
 	icon_state = "0-8"
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/central)
 "vNi" = (
@@ -36261,16 +36547,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
-"vZb" = (
-/obj/structure/bookcase{
-	name = "bookcase (Fiction)"
-	},
-/obj/machinery/camera/network/civilian{
-	c_tag = "Library Port";
-	dir = 4
-	},
-/turf/simulated/floor/wood,
-/area/library)
 "vZg" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/brown,
@@ -36534,6 +36810,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/sign/christmas/lights{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
 "wiL" = (
@@ -36589,7 +36868,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/red,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
-"wkT" = (
+"wkV" = (
 /obj/machinery/portable_atmospherics/canister/empty/phoron,
 /obj/machinery/camera/network/engineering{
 	c_tag = "Atmospherics Phoron Storage"
@@ -37209,6 +37488,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/maintenance/medical_lower)
+"wJN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
 "wKj" = (
 /obj/effect/floor_decal/techfloor,
 /obj/effect/floor_decal/techfloor{
@@ -38166,6 +38457,9 @@
 	d1 = 1;
 	d2 = 4;
 	icon_state = "1-4"
+	},
+/obj/structure/sign/christmas/lights{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
@@ -39441,10 +39735,10 @@
 /area/security/perma)
 "xYA" = (
 /obj/machinery/light{
-	dir = 8
+	dir = 4
 	},
-/turf/simulated/floor/tiled/techfloor,
-/area/crew_quarters/sleep/cryo)
+/turf/simulated/floor/water/hotspring,
+/area/hallway/lower/fore)
 "xYT" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/effect/floor_decal/industrial/warning{
@@ -42070,7 +42364,7 @@ nGK
 dLH
 vKz
 iIe
-irB
+cwj
 dEN
 dEN
 rOf
@@ -43207,7 +43501,7 @@ jEu
 fAU
 lGw
 vpn
-oir
+evz
 pzY
 jwb
 bQF
@@ -46594,7 +46888,7 @@ wXa
 aTH
 aTH
 vMv
-foB
+fTc
 hLs
 iZx
 oUU
@@ -48049,7 +48343,7 @@ wFh
 ixT
 ixT
 aCC
-eYV
+foB
 bXa
 mGd
 bMa
@@ -48733,7 +49027,7 @@ mLC
 jQe
 ibO
 bSO
-abX
+vtw
 fDs
 ibO
 ibO
@@ -48895,7 +49189,7 @@ rrR
 myp
 ibO
 bSO
-abX
+vtw
 fDs
 ibO
 ibO
@@ -49057,7 +49351,7 @@ rrR
 cHk
 ibO
 bSO
-abX
+vtw
 sAh
 lsp
 lsp
@@ -49219,7 +49513,7 @@ xjr
 cHk
 ibO
 mNl
-uCs
+hbI
 sAh
 wjn
 wjn
@@ -49381,7 +49675,7 @@ bjf
 bjf
 bjf
 dUB
-uCs
+hbI
 rAf
 lxg
 wjn
@@ -49543,7 +49837,7 @@ nzF
 hyi
 bjf
 jmi
-uCs
+hbI
 snc
 wjn
 wjn
@@ -49868,7 +50162,7 @@ gzR
 bjf
 kjl
 syy
-uCs
+rvV
 uCs
 uCs
 uCs
@@ -49888,7 +50182,7 @@ ufB
 gcf
 xuy
 aNq
-vZb
+mHY
 mIq
 oFC
 pqI
@@ -50030,8 +50324,8 @@ lDh
 bjf
 wjn
 dUB
-uCs
-uCs
+rvV
+ktV
 lKA
 kjl
 kjl
@@ -50181,7 +50475,7 @@ pOl
 qdX
 mwd
 pJi
-xYA
+rqF
 qaJ
 nZj
 yhS
@@ -50192,8 +50486,8 @@ ico
 bjf
 rcI
 dUB
-uCs
-uCs
+rvV
+ktV
 rAf
 wjn
 wjn
@@ -50244,7 +50538,7 @@ mwy
 mwy
 mwy
 cZU
-wkT
+wkV
 qQS
 cZU
 mwy
@@ -50354,8 +50648,8 @@ bjf
 bjf
 sWk
 hqs
-uCs
-uCs
+rvV
+ktV
 esR
 wjn
 lxg
@@ -51309,7 +51603,7 @@ trc
 uhC
 rFV
 cLR
-rYl
+cMK
 szL
 qaJ
 qaJ
@@ -51477,7 +51771,7 @@ sse
 kRa
 kCo
 eoP
-utE
+ckM
 jGX
 gYH
 sUB
@@ -51798,15 +52092,15 @@ cKX
 vBY
 fRW
 yeB
-uHZ
-uuf
-izh
-eDV
+foR
+uqr
+qWr
+eSx
 ooq
 eDV
 eDV
 eDV
-oUy
+wJN
 hMe
 gZl
 mrH
@@ -51946,7 +52240,7 @@ wpv
 tpF
 uXN
 tmX
-kfQ
+uHZ
 yeC
 iiv
 ttU
@@ -52108,7 +52402,7 @@ wpv
 ouW
 sFt
 jBJ
-kfQ
+uHZ
 syX
 tRh
 oba
@@ -52270,7 +52564,7 @@ wpv
 oba
 ivA
 kGl
-kfQ
+uHZ
 syX
 pqF
 oba
@@ -52432,7 +52726,7 @@ wpv
 lVi
 fyh
 kGl
-kfQ
+uHZ
 jPJ
 lVi
 oba
@@ -52578,7 +52872,7 @@ fJz
 ilH
 xot
 lYO
-ouo
+eYV
 feh
 ouo
 jMc
@@ -52591,12 +52885,12 @@ hpt
 fqg
 vWo
 fXW
-jKl
-jKl
+irB
+irB
 kGl
 kfQ
-jKl
-jKl
+irB
+irB
 hVZ
 eDV
 aDT
@@ -52916,12 +53210,12 @@ ouo
 idT
 kLI
 gYr
-jKl
-jKl
-jKl
-jKl
-jKl
-hVZ
+oir
+oir
+oir
+oir
+oir
+apT
 fMI
 izh
 mZI
@@ -53240,10 +53534,10 @@ vku
 umJ
 ufX
 pmX
-pwS
+rYl
 pwS
 arx
-tRh
+xYA
 tRh
 oba
 kSU
@@ -53578,15 +53872,15 @@ xyQ
 uuf
 iFY
 alt
-eDV
-eDV
+kbu
+kbu
 jDJ
 ieb
 hGb
 jRk
-eDV
-eDV
-eDV
+kbu
+kbu
+kbu
 wiH
 ylv
 xAM
@@ -53754,9 +54048,9 @@ gxb
 gxb
 lFY
 vNh
-wuo
+rfk
 xBc
-wuo
+rfk
 vQF
 prB
 wuo
@@ -54077,10 +54371,10 @@ qMS
 mcc
 esp
 lEm
-lEm
-lEm
+soh
+soh
 qzR
-lEm
+soh
 vFd
 vso
 jeS
@@ -54608,7 +54902,7 @@ kJr
 eDD
 iEM
 van
-dSD
+hOC
 plH
 jhw
 jhw
@@ -54932,7 +55226,7 @@ kJr
 bav
 nwv
 yfj
-dSD
+hOC
 dSD
 jhw
 vyo
@@ -55094,7 +55388,7 @@ xNr
 uaG
 iSR
 etG
-dSD
+hOC
 dSD
 dSD
 dSD
@@ -55189,7 +55483,7 @@ ufX
 mwy
 mwy
 xyQ
-fTc
+iLV
 mhE
 tjs
 mhE
@@ -55217,7 +55511,7 @@ sJh
 sJh
 sJh
 cEg
-jeS
+hZP
 txp
 dNi
 fMi
@@ -55872,7 +56166,7 @@ fMi
 dSW
 nCX
 dSW
-qVn
+sVq
 hKf
 wtC
 wtC

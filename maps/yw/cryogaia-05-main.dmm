@@ -11940,7 +11940,7 @@
 	pixel_y = 21
 	},
 /obj/item/weapon/gun/projectile/automatic/z8,
-/obj/item/weapon/gun/projectile/SVD,
+/obj/item/weapon/gun/projectile/shotgun/pump/USDF,
 /turf/simulated/floor/tiled/red,
 /area/security/tactical)
 "eAJ" = (
@@ -17680,7 +17680,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/mob/living/simple_mob/animal/passive/opossum/poppy,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/chief)
 "gIp" = (
@@ -19740,6 +19739,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/item/weapon/storage/box/snakesnackbox,
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
 "hzs" = (
@@ -34000,6 +34000,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/random/ce_pet,
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
 "nba" = (
@@ -41280,7 +41281,7 @@
 	req_access = list(1)
 	},
 /obj/item/weapon/gun/energy/sniperrifle,
-/obj/item/weapon/gun/projectile/shotgun/pump/USDF,
+/obj/item/weapon/gun/projectile/SVD,
 /turf/simulated/floor/tiled/red,
 /area/security/tactical)
 "pMt" = (

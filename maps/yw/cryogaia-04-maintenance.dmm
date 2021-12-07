@@ -5213,9 +5213,6 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
 "duh" = (
@@ -8164,12 +8161,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
-"foB" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/tealcarpet,
-/area/medical/pyschwarde)
 "foM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -10875,13 +10866,6 @@
 "gZI" = (
 /turf/simulated/wall,
 /area/mine/explored/lower_rock)
-"hac" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
-	dir = 4
-	},
-/turf/simulated/floor/carpet/tealcarpet,
-/area/medical/pyschwarde)
 "hag" = (
 /obj/machinery/shower{
 	pixel_y = 25
@@ -17551,6 +17535,8 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "kCN" = (
+/obj/structure/dogbed,
+/mob/living/simple_mob/animal/passive/opossum/poppy,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "kCU" = (
@@ -26431,7 +26417,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/structure/disposalpipe/junction,
+/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
 "pVj" = (
@@ -27066,9 +27052,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
-"qmO" = (
-/turf/simulated/wall,
-/area/crew_quarters/medbreak)
 "qnl" = (
 /obj/structure/table,
 /obj/machinery/light_construct{
@@ -31506,9 +31489,6 @@
 /area/crew_quarters/sleep/Dorm_6)
 "thU" = (
 /obj/structure/dogbed,
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
 "tiv" = (
@@ -48029,12 +48009,12 @@ wXa
 dWg
 oCH
 kBZ
-qmO
-qmO
-qmO
-qmO
-qmO
-qmO
+kfs
+kfs
+kfs
+kfs
+kfs
+kfs
 vRU
 vRU
 ixT
@@ -48181,7 +48161,7 @@ wFh
 ixT
 ixT
 aCC
-hac
+kie
 fYC
 wYf
 kie
@@ -48343,7 +48323,7 @@ wFh
 ixT
 ixT
 aCC
-foB
+bMa
 bXa
 mGd
 bMa

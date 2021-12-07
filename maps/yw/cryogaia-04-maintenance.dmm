@@ -3645,12 +3645,12 @@
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
 "cvo" = (
-/obj/structure/disposalpipe/segment{
-	dir = 2;
-	icon_state = "pipe-c"
+/obj/machinery/camera/network/civilian{
+	c_tag = "Chapel Hall";
+	dir = 5
 	},
-/turf/simulated/wall,
-/area/medical/pyschwarde)
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "cvu" = (
 /obj/machinery/alarm{
 	frequency = 1441;
@@ -4759,6 +4759,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Cryo Bay"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/sleep/cryo)
 "dga" = (
@@ -4796,14 +4799,11 @@
 /turf/simulated/floor,
 /area/maintenance/starboard)
 "dix" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = list()
-	},
-/obj/machinery/door/firedoor/border_only,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/turf/simulated/floor/tiled,
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor,
 /area/maintenance/aft)
 "diV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5165,6 +5165,9 @@
 "dtY" = (
 /obj/machinery/light/small{
 	dir = 1
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
@@ -7627,11 +7630,10 @@
 /turf/simulated/wall/r_wall,
 /area/rnd/lab)
 "eYV" = (
-/obj/structure/grille,
-/obj/structure/window/reinforced/full,
-/obj/machinery/door/firedoor,
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
 "eYY" = (
 /obj/structure/bookcase,
@@ -8086,13 +8088,12 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "foB" = (
-/obj/structure/plasticflaps,
-/obj/machinery/conveyor{
-	dir = 1;
-	id = "Psycheiso"
+/obj/machinery/camera/network/medbay{
+	c_tag = "Morgue";
+	dir = 4
 	},
-/turf/simulated/floor,
-/area/medical/pyschwarde)
+/turf/simulated/floor/holofloor/tiled/dark,
+/area/medical/morgue)
 "foM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -8517,6 +8518,9 @@
 	dir = 9
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "fDs" = (
@@ -8864,11 +8868,11 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/pyschwarde)
 "fTc" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - VR Sleepers"
 	},
-/turf/simulated/wall,
-/area/medical/pyschwarde)
+/turf/simulated/floor/carpet,
+/area/crew_quarters/recreation_area)
 "fTq" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9031,7 +9035,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/structure/disposalpipe/segment,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
 "fYZ" = (
@@ -9070,6 +9073,9 @@
 "gaN" = (
 /obj/machinery/computer/cryopod{
 	pixel_y = 32
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Cryo Bay Chamber"
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/sleep/cryo)
@@ -10768,7 +10774,10 @@
 /turf/simulated/wall,
 /area/mine/explored/lower_rock)
 "hac" = (
-/obj/structure/disposalpipe/segment,
+/obj/machinery/disposal,
+/obj/structure/disposalpipe/trunk{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
 "hag" = (
@@ -10894,6 +10903,9 @@
 	id = "virologyquar";
 	name = "Virology Emergency Quarantine Blast Doors";
 	opacity = 0
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Virology Entry Secure"
 	},
 /turf/simulated/floor/tiled/dark,
 /area/medical/virologyaccess)
@@ -13096,15 +13108,15 @@
 /turf/simulated/floor/plating,
 /area/crew_quarters/recreation_area)
 "irB" = (
-/obj/machinery/disposal/deliveryChute,
-/obj/structure/disposalpipe/trunk{
-	dir = 1
+/obj/structure/closet/crate/freezer,
+/obj/item/weapon/virusdish/random,
+/obj/item/weapon/virusdish/random,
+/obj/item/weapon/virusdish/random,
+/obj/machinery/light{
+	dir = 8
 	},
-/obj/machinery/conveyor{
-	id = "Psycheiso"
-	},
-/turf/simulated/floor/plating,
-/area/medical/pyschwarde)
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "isd" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -13167,6 +13179,9 @@
 /obj/structure/table/reinforced,
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
@@ -15478,6 +15493,9 @@
 	d2 = 4;
 	icon_state = "0-4"
 	},
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/bluegrid,
 /area/ai)
 "jJg" = (
@@ -16377,6 +16395,9 @@
 	dir = 4;
 	pixel_x = -23
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Hydroponics Storage"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics)
 "kfs" = (
@@ -16521,7 +16542,6 @@
 /turf/simulated/floor,
 /area/engineering/atmos)
 "kie" = (
-/obj/structure/disposalpipe/segment,
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
@@ -16708,13 +16728,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/ai_cyborg_station)
 "kmB" = (
-/obj/machinery/door/airlock/maintenance{
-	req_access = list()
-	},
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/disposalpipe/segment,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
 "kmN" = (
@@ -17715,6 +17733,9 @@
 	},
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
+	},
+/obj/structure/disposalpipe/trunk{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
@@ -21022,8 +21043,6 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/structure/dogbed,
-/mob/living/simple_mob/animal/passive/opossum/poppy,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "mOQ" = (
@@ -22397,6 +22416,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Library Office";
+	dir = 8
+	},
 /turf/simulated/floor/carpet,
 /area/library)
 "nKr" = (
@@ -22634,9 +22657,6 @@
 	},
 /obj/effect/floor_decal/corner/lime{
 	dir = 5
-	},
-/obj/machinery/conveyor_switch/oneway{
-	id = "Psycheiso"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
@@ -22905,10 +22925,6 @@
 /turf/simulated/wall,
 /area/hallway/lower/fore)
 "obA" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Library Maintenance";
-	req_one_access = list()
-	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -22921,6 +22937,9 @@
 	},
 /obj/structure/disposalpipe/segment{
 	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/common{
+	name = "Library Maintenance Access"
 	},
 /turf/simulated/floor/plating,
 /area/library)
@@ -22957,9 +22976,6 @@
 "ocG" = (
 /obj/machinery/librarypubliccomp,
 /obj/structure/table/woodentable,
-/obj/machinery/camera/network/civilian{
-	c_tag = "Bar Backroom"
-	},
 /turf/simulated/floor/wood,
 /area/library)
 "ocH" = (
@@ -23130,9 +23146,14 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
 "oir" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
-/area/medical/pyschwarde)
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Virology Cleaning"
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/virology)
 "ois" = (
 /obj/machinery/light{
 	dir = 8
@@ -24322,6 +24343,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/maintenance/maintroom6)
+"oUy" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
 "oUT" = (
 /obj/machinery/vending/cola,
 /obj/item/trash/candy,
@@ -26189,7 +26222,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "pUA" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable/green{
@@ -26197,6 +26229,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
 "pVj" = (
@@ -26378,6 +26411,9 @@
 "qca" = (
 /obj/structure/table/bench/padded,
 /obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 8
+	},
+/obj/machinery/camera/network/civilian{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -27660,6 +27696,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/vacant/vacant_shop)
+"qVn" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "Vacant Office";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/vacant/vacant_office)
 "qVM" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -29368,12 +29411,11 @@
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "rYl" = (
-/obj/machinery/alarm{
-	frequency = 1441;
-	pixel_y = 22
+/obj/machinery/camera/network/civilian{
+	c_tag = "Cryo Bay Lockers"
 	},
-/turf/simulated/floor/holofloor/tiled/dark,
-/area/medical/morgue)
+/turf/simulated/floor/tiled/techfloor,
+/area/crew_quarters/sleep/cryo)
 "rYt" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -31210,6 +31252,9 @@
 /area/crew_quarters/sleep/Dorm_6)
 "thU" = (
 /obj/structure/dogbed,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/tealcarpet,
 /area/medical/pyschwarde)
 "tiv" = (
@@ -31223,7 +31268,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/disposalpipe/segment,
+/obj/structure/disposalpipe/junction,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
 "tiI" = (
@@ -32971,6 +33016,9 @@
 	dir = 6
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "ueC" = (
@@ -33397,6 +33445,7 @@
 "uqU" = (
 /obj/machinery/computer/area_atmos/tag{
 	dir = 8;
+	pixel_x = 5;
 	scrub_id = "prison"
 	},
 /turf/simulated/floor/tiled,
@@ -33963,12 +34012,11 @@
 	},
 /area/maintenance/lowfloor3)
 "uHZ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+/obj/machinery/light{
+	dir = 8
 	},
-/turf/simulated/wall,
-/area/medical/pyschwarde)
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/lower)
 "uIw" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -34753,6 +34801,10 @@
 	pixel_x = 28
 	},
 /obj/structure/disposalpipe/segment,
+/obj/machinery/camera/network/civilian{
+	c_tag = "CIV - Chapel Starboard";
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "vgp" = (
@@ -35112,13 +35164,12 @@
 /turf/simulated/floor/plating,
 /area/maintenance/fish)
 "vrN" = (
-/obj/machinery/door/airlock/maintenance{
-	name = "Library Maintenance";
-	req_one_access = list()
-	},
 /obj/machinery/door/firedoor,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
+	},
+/obj/machinery/door/airlock/maintenance/common{
+	name = "Library Maintenance Access"
 	},
 /turf/simulated/floor/plating,
 /area/library_conference_room)
@@ -36210,6 +36261,16 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
+"vZb" = (
+/obj/structure/bookcase{
+	name = "bookcase (Fiction)"
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Library Port";
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/library)
 "vZg" = (
 /obj/structure/bed/padded,
 /obj/item/weapon/bedsheet/brown,
@@ -36527,6 +36588,13 @@
 "wkS" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/red,
 /turf/simulated/floor/tiled,
+/area/engineering/atmos)
+"wkT" = (
+/obj/machinery/portable_atmospherics/canister/empty/phoron,
+/obj/machinery/camera/network/engineering{
+	c_tag = "Atmospherics Phoron Storage"
+	},
+/turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos)
 "wla" = (
 /obj/structure/catwalk,
@@ -37586,7 +37654,6 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lowfloor3)
 "wYf" = (
-/obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
@@ -39373,9 +39440,11 @@
 /turf/simulated/floor/tiled,
 /area/security/perma)
 "xYA" = (
-/obj/structure/disposalpipe/segment,
-/turf/simulated/floor/plating,
-/area/medical/pyschwarde)
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/crew_quarters/sleep/cryo)
 "xYT" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/effect/floor_decal/industrial/warning{
@@ -42001,7 +42070,7 @@ nGK
 dLH
 vKz
 iIe
-iIe
+irB
 dEN
 dEN
 rOf
@@ -43138,7 +43207,7 @@ jEu
 fAU
 lGw
 vpn
-bTa
+oir
 pzY
 jwb
 bQF
@@ -46037,7 +46106,7 @@ ttU
 ttU
 kZX
 wXa
-rYl
+aTH
 vMv
 qfN
 wXa
@@ -46525,7 +46594,7 @@ wXa
 aTH
 aTH
 vMv
-aTH
+foB
 hLs
 iZx
 oUU
@@ -47815,14 +47884,14 @@ qEB
 qEB
 ttU
 wFh
-uHZ
-xYA
-oir
+ixT
+ixT
+aCC
 hac
 fYC
 wYf
 kie
-eYV
+bek
 kMD
 ifT
 aEC
@@ -47977,15 +48046,15 @@ rWM
 kBN
 ttU
 wFh
-fTc
-bek
+ixT
+ixT
 aCC
-bMa
+eYV
 bXa
 mGd
 bMa
 bek
-nRN
+aUi
 rXL
 flQ
 vJB
@@ -48139,15 +48208,15 @@ rWM
 kBN
 ylc
 wFh
-cvo
-irB
-foB
+ixT
+ixT
+aCC
 thU
 uqG
 bMa
 bMa
 bek
-nRN
+aUi
 rXL
 dQv
 vca
@@ -48301,8 +48370,8 @@ rWM
 gOL
 ylc
 wFh
-aCC
-aCC
+ixT
+ixT
 aCC
 dtY
 bXa
@@ -49819,7 +49888,7 @@ ufB
 gcf
 xuy
 aNq
-xuy
+vZb
 mIq
 oFC
 pqI
@@ -50112,7 +50181,7 @@ pOl
 qdX
 mwd
 pJi
-qaJ
+xYA
 qaJ
 nZj
 yhS
@@ -50175,7 +50244,7 @@ mwy
 mwy
 mwy
 cZU
-qQS
+wkT
 qQS
 cZU
 mwy
@@ -51240,7 +51309,7 @@ trc
 uhC
 rFV
 cLR
-qaJ
+rYl
 szL
 qaJ
 qaJ
@@ -51682,7 +51751,7 @@ asH
 mwy
 wBG
 wBG
-auk
+wBG
 rKA
 qPf
 wBG
@@ -51729,7 +51798,7 @@ cKX
 vBY
 fRW
 yeB
-eDV
+uHZ
 uuf
 izh
 eDV
@@ -51737,7 +51806,7 @@ ooq
 eDV
 eDV
 eDV
-nUt
+oUy
 hMe
 gZl
 mrH
@@ -53798,7 +53867,7 @@ wdi
 nHo
 nHo
 vku
-nwk
+cvo
 nwk
 nwk
 nwk
@@ -55120,7 +55189,7 @@ ufX
 mwy
 mwy
 xyQ
-tjs
+fTc
 mhE
 tjs
 mhE
@@ -55803,7 +55872,7 @@ fMi
 dSW
 nCX
 dSW
-fCU
+qVn
 hKf
 wtC
 wtC
@@ -56275,7 +56344,7 @@ iJO
 lSK
 amR
 buW
-sJh
+erv
 sJh
 aSJ
 dSy

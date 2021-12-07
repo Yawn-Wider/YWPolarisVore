@@ -52,6 +52,9 @@
 	dir = 8;
 	name = "Secure Door"
 	},
+/obj/machinery/camera/network/security{
+	c_tag = "Security Lobby"
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
 "aaX" = (
@@ -253,7 +256,8 @@
 /area/chapel/monastery/atmos)
 "afg" = (
 /obj/machinery/vending/snack{
-	dir = 4
+	dir = 4;
+	pixel_x = -7
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
@@ -1381,6 +1385,7 @@
 /area/teleporter)
 "aAM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/mob/living/carbon/human/monkey/punpun,
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "aBw" = (
@@ -2685,15 +2690,18 @@
 /area/shuttle/security)
 "baI" = (
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
-	id_tag = "Monastary_Exit";
-	name = "Monastary Exit Controller";
+	id_tag = "monastery_exit";
+	name = "Monastery Exit Controller";
 	pixel_x = 26;
-	tag_exterior_door = "Monastary_Exit_Exterior";
-	tag_interior_door = "Monastary_Exit_Interior"
+	tag_exterior_door = "monastery_exit_exterior";
+	tag_interior_door = "monastery_exit_interior"
 	},
 /obj/effect/floor_decal/rust,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/chapel/monastery)
@@ -2893,6 +2901,10 @@
 /obj/effect/floor_decal/corner/pink{
 	dir = 9
 	},
+/turf/simulated/floor/tiled/white,
+/area/medical/exam_room)
+"beK" = (
+/obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "bfc" = (
@@ -3904,6 +3916,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway)
+"bDy" = (
+/obj/effect/floor_decal/corner/brown{
+	dir = 4
+	},
+/obj/machinery/camera/network/cargo{
+	c_tag = "Staircase Lower"
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningwing)
 "bDN" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled{
@@ -4843,7 +4864,7 @@
 /area/storage/art)
 "bUj" = (
 /obj/machinery/door/airlock/maintenance/command{
-	req_one_access = list(19)
+	req_access = list(19)
 	},
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -5493,6 +5514,12 @@
 /obj/structure/cable,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_smes)
+"cgu" = (
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/hallway/secondary/exit)
 "cgv" = (
 /obj/structure/bed,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -6159,6 +6186,7 @@
 	name = "Common Channel";
 	pixel_y = 21
 	},
+/obj/machinery/disposal,
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "cst" = (
@@ -8168,7 +8196,8 @@
 /area/shuttle/security)
 "dfc" = (
 /obj/machinery/vending/cola{
-	dir = 4
+	dir = 4;
+	pixel_x = -7
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
@@ -8182,7 +8211,7 @@
 /area/hallway/primary/aft)
 "dfw" = (
 /obj/machinery/door/airlock/maintenance/command{
-	req_one_access = list(19)
+	req_access = list(19)
 	},
 /obj/machinery/door/firedoor/glass,
 /obj/structure/cable{
@@ -11446,7 +11475,7 @@
 "etq" = (
 /obj/machinery/door/airlock/glass_external/public{
 	frequency = 1379;
-	id_tag = "Monastary_Exit_Interior"
+	id_tag = "monastery_exit_interior"
 	},
 /obj/structure/cable/green{
 	d1 = 1;
@@ -11454,7 +11483,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/access_button/airlock_interior{
-	master_tag = "Monastary_Exit";
+	master_tag = "monastery_exit";
 	pixel_x = 26;
 	pixel_y = -6
 	},
@@ -11706,6 +11735,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
+"eyH" = (
+/obj/machinery/camera/network/security{
+	c_tag = "Security Staircase"
+	},
+/turf/simulated/open,
+/area/security/hallway)
 "eyN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled,
@@ -11767,6 +11802,7 @@
 	pixel_y = 21
 	},
 /obj/item/weapon/gun/projectile/automatic/z8,
+/obj/item/weapon/gun/projectile/SVD,
 /turf/simulated/floor/tiled/red,
 /area/security/tactical)
 "eAJ" = (
@@ -12268,7 +12304,8 @@
 /area/medical/surgery_hallway)
 "eLD" = (
 /obj/machinery/vending/cigarette{
-	dir = 8
+	dir = 8;
+	pixel_x = 7
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
@@ -13761,6 +13798,9 @@
 	dir = 1;
 	name = "Common Channel";
 	pixel_y = 21
+	},
+/obj/machinery/camera/network/civilian{
+	c_tag = "Monastary Laundry"
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/recreation)
@@ -15690,10 +15730,10 @@
 "gbj" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	frequency = "1379";
-	id_tag = "Monastary_Exit_Exterior"
+	id_tag = "monastery_exit_exterior"
 	},
 /obj/machinery/access_button/airlock_exterior{
-	master_tag = "Monastary_Exit";
+	master_tag = "monastery_exit";
 	pixel_x = 26;
 	pixel_y = -6
 	},
@@ -17414,6 +17454,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/mob/living/simple_mob/animal/passive/opossum/poppy,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/chief)
 "gIp" = (
@@ -19457,8 +19498,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/item/weapon/storage/box/snakesnackbox,
-/obj/random/ce_pet,
 /turf/simulated/floor/carpet/oracarpet,
 /area/crew_quarters/heads/chief)
 "hzs" = (
@@ -20317,6 +20356,21 @@
 	icon_state = "techmaint"
 	},
 /area/engineering/storage)
+"hRt" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/central)
 "hRN" = (
 /obj/effect/floor_decal/snow/floor/surround{
 	dir = 1
@@ -22563,6 +22617,11 @@
 /obj/machinery/light_switch{
 	pixel_y = 21
 	},
+/obj/machinery/button/windowtint{
+	id = "qm_office";
+	pixel_x = -8;
+	pixel_y = 22
+	},
 /turf/simulated/floor/wood,
 /area/quartermaster)
 "iNA" = (
@@ -22654,6 +22713,24 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery)
+"iPO" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 10
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Medbay Primary Hall - Port";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbay3)
 "iPQ" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 6
@@ -22788,7 +22865,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/reinforced/polarized/full{
-	id = "QM"
+	id = "qm_office"
 	},
 /turf/simulated/floor/plating,
 /area/quartermaster)
@@ -24721,6 +24798,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled/white,
 /area/medical/surgeryprep)
 "jHN" = (
@@ -26663,6 +26741,10 @@
 /obj/effect/floor_decal/corner/pink{
 	dir = 10
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Exam room";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "kuG" = (
@@ -27395,7 +27477,8 @@
 	dir = 8
 	},
 /obj/machinery/vending/cigarette{
-	dir = 4
+	dir = 4;
+	pixel_x = -6
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -27539,12 +27622,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/evidence_storage)
 "kNN" = (
-/obj/item/weapon/stamp/denied{
-	pixel_x = 4;
-	pixel_y = -2
-	},
-/obj/structure/table/standard,
-/obj/item/weapon/stamp/cargo,
 /obj/machinery/alarm{
 	frequency = 1441;
 	pixel_y = 22
@@ -29339,6 +29416,10 @@
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
+	},
+/obj/machinery/camera/autoname{
+	c_tag = "Cargo Hall Tool Shed";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/emergency_storage/emergency)
@@ -31428,6 +31509,9 @@
 /obj/machinery/atmospherics/pipe/zpipe/up/supply{
 	dir = 8
 	},
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/chapel/monastery)
 "mqk" = (
@@ -33368,6 +33452,7 @@
 	pixel_x = -12;
 	pixel_y = 2
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "mWq" = (
@@ -33467,7 +33552,8 @@
 	dir = 8
 	},
 /obj/machinery/vending/cola{
-	dir = 4
+	dir = 4;
+	pixel_x = -6
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -33531,7 +33617,7 @@
 /area/medical/medbay)
 "naO" = (
 /obj/machinery/door/airlock/maintenance/command{
-	req_one_access = list(19)
+	req_access = list(19)
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
@@ -33931,6 +34017,9 @@
 /obj/machinery/holoposter{
 	dir = 8;
 	pixel_x = 30
+	},
+/obj/machinery/camera/autoname{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/aft)
@@ -34603,7 +34692,8 @@
 /area/borealis2/outdoors/grounds)
 "nuh" = (
 /obj/machinery/computer/card{
-	dir = 8
+	dir = 8;
+	pixel_x = 3
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
@@ -35886,6 +35976,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/recreation)
+"nUV" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "nVh" = (
 /obj/effect/floor_decal/corner/lime{
 	dir = 9
@@ -37910,7 +38006,8 @@
 	dir = 8
 	},
 /obj/machinery/vending/snack{
-	dir = 4
+	dir = 4;
+	pixel_x = -7
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -40637,6 +40734,7 @@
 	req_access = list(1)
 	},
 /obj/item/weapon/gun/energy/sniperrifle,
+/obj/item/weapon/gun/projectile/shotgun/pump/USDF,
 /turf/simulated/floor/tiled/red,
 /area/security/tactical)
 "pMt" = (
@@ -41655,7 +41753,8 @@
 	pixel_x = -30
 	},
 /obj/machinery/vending/coffee{
-	dir = 4
+	dir = 4;
+	pixel_x = -6
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
@@ -42182,7 +42281,7 @@
 /area/medical/cryo)
 "qsQ" = (
 /obj/structure/transit_tube,
-/obj/machinery/light/small{
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/dark,
@@ -43615,7 +43714,8 @@
 /area/storage/art)
 "qVG" = (
 /obj/machinery/computer/secure_data{
-	dir = 8
+	dir = 8;
+	pixel_x = 3
 	},
 /obj/machinery/button/remote/blast_door{
 	id = "residential_transfer";
@@ -43666,6 +43766,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "qXn" = (
@@ -45066,6 +45167,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/carpet/blue,
 /area/bridge_hallway)
+"rBV" = (
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/security/armoury)
 "rCa" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -51171,14 +51276,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge_hallway)
 "tZI" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
+/obj/machinery/camera/network/outside{
+	c_tag = "Wilderness Checkpoint - Interior";
+	dir = 4
 	},
-/mob/living/carbon/human/monkey/punpun,
-/turf/simulated/floor/wood,
-/area/crew_quarters/bar)
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "tZL" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
@@ -51691,6 +51794,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
+/obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
 /area/security/checkpoint)
 "uoM" = (
@@ -52200,6 +52304,12 @@
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /turf/simulated/floor/tiled/steel,
 /area/security/security_cell_hallway)
+"uBO" = (
+/obj/machinery/light/small{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "uBQ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -54193,6 +54303,11 @@
 /obj/machinery/computer/med_data/laptop,
 /turf/simulated/floor/wood,
 /area/medical/psych)
+"vsZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/hologram/holopad,
+/turf/simulated/floor/tiled/dark,
+/area/security/security_equiptment_storage)
 "vtb" = (
 /obj/machinery/power/thermoregulator/cryogaia{
 	dir = 8;
@@ -54969,7 +55084,8 @@
 /area/civilian/atrium/central)
 "vJR" = (
 /obj/machinery/computer/security{
-	dir = 4
+	dir = 4;
+	pixel_x = -5
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
@@ -56136,6 +56252,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "wiE" = (
@@ -58239,7 +58356,8 @@
 /area/borealis2/outdoors/grounds/tower/southwest)
 "wWK" = (
 /obj/machinery/computer/shuttle_control/residential_shuttle{
-	dir = 4
+	dir = 4;
+	pixel_x = -4
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
@@ -59212,6 +59330,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
+"xpV" = (
+/obj/structure/table/standard,
+/obj/item/weapon/stamp/cargo,
+/obj/item/weapon/stamp/denied{
+	pixel_x = 4;
+	pixel_y = -2
+	},
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
 "xqq" = (
 /obj/item/device/radio/intercom/department/security{
 	dir = 8;
@@ -61407,6 +61534,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
+"yiQ" = (
+/obj/machinery/camera/network/security{
+	c_tag = "Arrivals Checkpoint"
+	},
+/turf/simulated/floor/tiled,
+/area/security/checkpoint)
 "yiT" = (
 /obj/machinery/door/airlock/maintenance{
 	req_access = list(12)
@@ -66112,7 +66245,7 @@ cpw
 cpw
 cpw
 nGC
-cpw
+tZI
 cpw
 cpw
 doR
@@ -68616,7 +68749,7 @@ cEr
 bmi
 adS
 jWH
-jWH
+rBV
 iEW
 qQz
 qQz
@@ -68731,7 +68864,7 @@ saa
 saa
 saa
 uBd
-jyx
+iPO
 gYq
 gYq
 gYq
@@ -68772,7 +68905,7 @@ huC
 xYe
 tBi
 aUp
-twJ
+eyH
 twJ
 cEr
 bmi
@@ -69755,7 +69888,7 @@ cVj
 iVo
 oMy
 msn
-jDJ
+vsZ
 jDJ
 dFS
 gES
@@ -72447,7 +72580,7 @@ ndb
 odu
 rwY
 lRL
-nTx
+cgu
 cVz
 fMx
 oaI
@@ -72495,7 +72628,7 @@ pqd
 rkX
 yeB
 pOt
-tZI
+dmV
 ioh
 lGl
 fnW
@@ -72781,7 +72914,7 @@ rUZ
 rkN
 mdw
 dKp
-hAz
+beK
 kuz
 kkT
 fWf
@@ -73891,7 +74024,7 @@ lta
 gNR
 feI
 jjV
-pmc
+yiQ
 pmc
 nkb
 pmc
@@ -75737,7 +75870,7 @@ gbr
 eyk
 nof
 fVu
-qMh
+hRt
 gZh
 qUa
 dVb
@@ -76166,7 +76299,7 @@ uDf
 uDf
 uDf
 lGm
-uDf
+nUV
 uDf
 tul
 rRL
@@ -77143,7 +77276,7 @@ pPH
 baI
 vtb
 etu
-uDf
+uBO
 uDf
 uDf
 uDf
@@ -79798,7 +79931,7 @@ xCD
 aPl
 qKD
 nQm
-jBS
+xpV
 fVw
 jBF
 taX
@@ -81106,7 +81239,7 @@ ejt
 gRN
 gOS
 oqx
-hWq
+bDy
 pXn
 fzz
 sCB

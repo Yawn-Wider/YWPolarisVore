@@ -119,7 +119,7 @@
 				sendfailchance += 15
 
 	var/mob/living/living_user = user
-	var/can_dropnom = TRUE
+	var/can_dropnom = FALSE // YW EDIT: Disables televore
 	if(!istype(living_user))
 		can_dropnom = FALSE
 

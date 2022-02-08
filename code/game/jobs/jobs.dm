@@ -61,6 +61,7 @@ var/const/TALPIL			=(1<<1)
 var/const/TALDOC			=(1<<2)
 var/const/TALSEC			=(1<<3)
 var/const/TALENG			=(1<<4)
+var/const/TALMIN			=(1<<5)
 //YAWN Add END
 
 /proc/guest_jobbans(var/job)

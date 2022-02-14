@@ -1235,6 +1235,10 @@
 	name = "CHAPEL"
 	icon_state = "chapel"
 
+/obj/structure/sign/department/janitor
+	name = "JANITOR"
+	icon_state = "janitor"
+
 /obj/structure/sign/department/bridge
 	name = "BRIDGE"
 	icon_state = "bridge"

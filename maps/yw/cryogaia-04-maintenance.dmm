@@ -602,7 +602,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
+/area/maintenance/lowfloor1)
 "axC" = (
 /obj/structure/reagent_dispensers/watertank,
 /turf/simulated/floor/wood/sif,
@@ -4196,7 +4196,7 @@
 	icon_state = "2-4"
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
+/area/maintenance/lowfloor1)
 "cPE" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/green,
 /turf/simulated/floor/tiled,
@@ -4762,7 +4762,8 @@
 	dir = 1
 	},
 /obj/machinery/camera/network/civilian{
-	c_tag = "Cryo Bay"
+	c_tag = "Cryo Bay";
+	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/crew_quarters/sleep/cryo)
@@ -7770,8 +7771,9 @@
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
 "ffD" = (
-/turf/simulated/mineral/cave,
-/area/crew_quarters/kitchen/fish_farm)
+/obj/structure/sign/department/janitor,
+/turf/simulated/wall,
+/area/civilian/atrium/lower)
 "ffV" = (
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/atmos{
@@ -9997,6 +9999,9 @@
 	dir = 4
 	},
 /obj/structure/catwalk,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/hallway/lower/central)
 "gAS" = (
@@ -12821,7 +12826,7 @@
 /area/hydroponics)
 "ijL" = (
 /obj/structure/catwalk,
-/obj/machinery/light/small{
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -14816,7 +14821,7 @@
 /turf/simulated/wall/r_wall,
 /area/maintenance/lowfloor1)
 "jpv" = (
-/obj/machinery/floodlight,
+/obj/machinery/light,
 /turf/simulated/floor/beach/sand/desert,
 /area/crew_quarters/kitchen/fish_farm)
 "jpF" = (
@@ -19595,7 +19600,7 @@
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
 "lSr" = (
-/obj/machinery/light/small{
+/obj/machinery/light{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -19806,6 +19811,13 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
+"lZN" = (
+/obj/structure/catwalk,
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/hallway/lower/central)
 "mar" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -22896,12 +22908,12 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/entrance)
 "nZJ" = (
-/obj/machinery/light{
+/obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/structure/catwalk,
+/obj/machinery/floodlight,
 /turf/simulated/floor/plating,
-/area/hallway/lower/central)
+/area/crew_quarters/kitchen/fish_farm)
 "oaK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/industrial/warning{
@@ -32976,7 +32988,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/maintenance/medical_lower)
+/area/maintenance/lowfloor1)
 "ueB" = (
 /obj/structure/table/glass,
 /obj/item/weapon/storage/fancy/vials,
@@ -36338,8 +36350,12 @@
 /turf/simulated/floor,
 /area/maintenance/lowfloor3)
 "wdL" = (
-/turf/simulated/floor/tiled,
-/area/maintenance/fish)
+/obj/structure/catwalk,
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/hallway/lower/central)
 "wek" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -39484,10 +39500,10 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/kitchen/lower)
 "yda" = (
-/obj/machinery/light/small,
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/machinery/light,
 /turf/simulated/floor/water/deep/indoors,
 /area/crew_quarters/kitchen/fish_farm)
 "ydw" = (
@@ -48018,7 +48034,7 @@ cHk
 cHk
 uNS
 cHk
-xVh
+cHk
 xjr
 xjr
 xjr
@@ -48180,7 +48196,7 @@ lVE
 hZI
 wpT
 wyK
-wdL
+azQ
 xjr
 xjr
 xjr
@@ -48342,7 +48358,7 @@ lSr
 azQ
 cUz
 azQ
-wdL
+azQ
 xjr
 xjr
 xjr
@@ -48500,7 +48516,7 @@ rrR
 sjv
 alO
 jQe
-voJ
+nZJ
 voJ
 voJ
 voJ
@@ -48668,7 +48684,7 @@ abX
 fDs
 ibO
 ibO
-ffD
+xjr
 xjr
 muC
 jVK
@@ -49911,10 +49927,10 @@ gOL
 kBN
 qEB
 qEB
-ixT
+qEB
 uel
-ixT
-ixT
+qEB
+qEB
 fzl
 ePn
 ePn
@@ -50073,11 +50089,11 @@ kBN
 kBN
 qEB
 qEB
-ixT
-lHO
-hPz
-hPz
-hPz
+qEB
+gOL
+rWM
+rWM
+rWM
 pdF
 pdF
 pdF
@@ -50235,11 +50251,11 @@ qEB
 qEB
 qEB
 qEB
-ixT
-lHO
-hPz
-hPz
-hPz
+qEB
+gOL
+rWM
+rWM
+rWM
 pdF
 eWC
 wGj
@@ -50454,11 +50470,11 @@ rAf
 wjn
 cHk
 xWH
-nZJ
+wla
 pgh
 wla
 wla
-wla
+lZN
 pqv
 wuo
 pqI
@@ -51425,7 +51441,7 @@ eHi
 nNH
 oen
 hMe
-wla
+wdL
 wla
 wla
 qWZ
@@ -52044,7 +52060,7 @@ syX
 tRh
 oba
 aky
-aky
+ffD
 cpc
 aky
 aky

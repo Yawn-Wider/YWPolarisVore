@@ -345,10 +345,6 @@
 	name = "\improper Upper Southern Level Hallways"
 	icon_state = "hallC1"
 
-/area/cryogaia/station/hallway/primary/upper/southeast
-	name = "\improper South Central Storage Hallway"
-	icon_state = "hallC1"
-
 /area/cryogaia/station/medical/upper
 	name = "\improper Medical Loft"
 	icon_state = "medbay_primary_storage"

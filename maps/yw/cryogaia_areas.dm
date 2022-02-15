@@ -223,6 +223,11 @@
 /area/chapel/monastery/music
 	name = "Monastery Music Room"
 
+//hallways
+/area/cryogaia/station/hallway/primary/southeast
+	name = "\improper South Central Storage Hallway"
+	icon_state = "hallC1"
+
 //holodorms
 /area/holodeck/holodorm/source_basic
 	name = "\improper Holodeck Source"
@@ -343,10 +348,6 @@
 
 /area/cryogaia/station/hallway/primary/upper/south
 	name = "\improper Upper Southern Level Hallways"
-	icon_state = "hallC1"
-
-/area/cryogaia/station/hallway/primary/upper/southeast
-	name = "\improper South Central Storage Hallway"
 	icon_state = "hallC1"
 
 /area/cryogaia/station/medical/upper

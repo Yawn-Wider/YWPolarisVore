@@ -127,7 +127,10 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/acid_overcast
 	name = "acidic fog"
-	light_modifier = 0.8
+	wind_high = 1
+	wind_low = 0
+	light_modifier = 0.7
+	effect_message = "<span class='warning'>Acidic mist surrounds you.</span>"
 	transition_chances = list(
 		WEATHER_OVERCAST = 80,
 		WEATHER_RAIN = 15,
@@ -136,7 +139,7 @@ var/datum/planet/muriki/planet_muriki = null
 	observed_message = "It is misting, all you can see are corrosive clouds."
 	transition_messages = list(
 		"All you can see is fog.",
-		"Fog cut off your view.",
+		"Fog cuts off your view.",
 		"It's very foggy."
 		)
 
@@ -151,11 +154,14 @@ var/datum/planet/muriki/planet_muriki = null
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to rain on them.
 
-			// TODO - needs contact acid damage
+			// digest living things
+			var/mob/living/carbon/human/H = L
+			if(istype(H))
+				process_acid_burning(H,1)
+			else
+				if(show_message)
+					to_chat(L, effect_message)
 
-			L.water_act(1)
-			if(show_message)
-				to_chat(L, effect_message)
 
 /datum/weather/muriki/acid_rain
 	name = "acidic rain"
@@ -183,23 +189,28 @@ var/datum/planet/muriki/planet_muriki = null
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
+			if(L.stat >= DEAD || !T.is_outdoors())
+				continue // They're indoors or dead, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
-			// TODO - add acid melting
 			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = L.get_inactive_hand()
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(L, "<span class='notice'>Acidic rain burns your umbrella.</span>")
+					to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
 				continue
 
-			L.water_act(1)
+			// show transition messages
 			if(show_message)
 				to_chat(L, effect_message)
+
+			// digest living things
+			var/mob/living/carbon/human/H = L
+			if(istype(H))
+				process_acid_burning(H,0)
+
 
 /datum/weather/muriki/acid_storm
 	name = "storm"
@@ -237,11 +248,10 @@ var/datum/planet/muriki/planet_muriki = null
 	for(var/mob/living/L as anything in living_mob_list)
 		if(L.z in holder.our_planet.expected_z_levels)
 			var/turf/T = get_turf(L)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to rain on them.
+			if(L.stat >= DEAD || !T.is_outdoors())
+				continue // They're indoors or dead, so no need to rain on them.
 
 			// If they have an open umbrella, it'll guard from rain
-			// TODO - add acid melting
 			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
 			if(!istype(U) || !U.open)
 				U = L.get_inactive_hand()
@@ -251,12 +261,16 @@ var/datum/planet/muriki/planet_muriki = null
 					to_chat(L, "<span class='notice'>Rain showers loudly onto your umbrella!</span>")
 				continue
 
-
-			L.water_act(2)
+			// show transition messages
 			if(show_message)
 				to_chat(L, effect_message)
 
+			// digest living things
+			var/mob/living/carbon/human/H = L
+			if(istype(H))
+				process_acid_burning(H,0)
 	handle_lightning()
+
 
 // This gets called to do lightning periodically.
 // There is a seperate function to do the actual lightning strike, so that badmins can play with it.
@@ -293,26 +307,25 @@ var/datum/planet/muriki/planet_muriki = null
 
 /datum/weather/muriki/acid_hail/process_effects()
 	..()
-	for(var/mob/living/carbon/H as anything in human_mob_list)
-		if(H.z in holder.our_planet.expected_z_levels)
-			var/turf/T = get_turf(H)
-			if(!T.is_outdoors())
-				continue // They're indoors, so no need to pelt them with ice.
+	for(var/mob/living/carbon/L as anything in human_mob_list)
+		if(L.z in holder.our_planet.expected_z_levels)
+			var/turf/T = get_turf(L)
+			if(L.stat >= DEAD || !T.is_outdoors())
+				continue // They're indoors or dead, so no need to pelt them with ice.
 
 			// If they have an open umbrella, it'll guard from hail
-			// TODO - add acid melting
-			var/obj/item/weapon/melee/umbrella/U = H.get_active_hand()
+			var/obj/item/weapon/melee/umbrella/U = L.get_active_hand()
 			if(!istype(U) || !U.open)
-				U = H.get_inactive_hand()
+				U = L.get_inactive_hand()
 
 			if(istype(U) && U.open)
 				if(show_message)
-					to_chat(H, "<span class='notice'>Hail patters onto your umbrella.</span>")
+					to_chat(L, "<span class='notice'>Hail patters onto your umbrella.</span>")
 				continue
 
 			var/target_zone = pick(BP_ALL)
-			var/amount_blocked = H.run_armor_check(target_zone, "melee")
-			var/amount_soaked = H.get_armor_soak(target_zone, "melee")
+			var/amount_blocked = L.run_armor_check(target_zone, "melee")
+			var/amount_soaked = L.get_armor_soak(target_zone, "melee")
 
 			var/damage = rand(1,3)
 
@@ -322,7 +335,62 @@ var/datum/planet/muriki/planet_muriki = null
 
 			if(amount_soaked >= damage)
 				continue // No need to apply damage.
+			L.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
 
-			H.apply_damage(damage, BRUTE, target_zone, amount_blocked, amount_soaked, used_weapon = "hail")
+			// show transition messages
 			if(show_message)
-				to_chat(H, effect_message)
+				to_chat(L, effect_message)
+
+
+/proc/process_acid_burning( var/mob/living/carbon/human/H, var/mist)
+	//Burn eyes, lungs and skin if exposed.
+	var/burn_skin = 1
+	var/burn_eyes = mist
+	var/burn_lungs = mist
+
+	// wearing a bodysuit
+	if(H.pl_head_protected() && H.pl_suit_protected())
+		burn_skin = 0;
+
+	//Check for protective glasses
+	if(H.glasses && (H.glasses.body_parts_covered & EYES) && (H.glasses.item_flags & AIRTIGHT))
+		burn_eyes = 0
+	if(H.glasses && H.glasses.item_flags & AIRTIGHT)
+		burn_lungs = 0
+
+	//Check for protective maskwear
+	if(burn_eyes && H.wear_mask && (H.wear_mask.body_parts_covered & EYES) && (H.wear_mask.item_flags & AIRTIGHT))
+		burn_eyes = 0
+	if(burn_lungs && H.wear_mask.item_flags & AIRTIGHT)
+		burn_lungs = 0
+
+	//Check for protective helmets
+	if(burn_eyes && H.head && (H.head.body_parts_covered & EYES) && (H.head.item_flags & AIRTIGHT))
+		burn_eyes = 0
+	if(burn_lungs && H.head.item_flags & AIRTIGHT)
+		burn_lungs = 0
+
+	//VOREStation Edit - NIF Support
+	if(H.nif && H.nif.flag_check(NIF_V_UVFILTER,NIF_FLAGS_VISION))
+		burn_eyes = 0
+
+
+	//Burn thier skin!
+	if(burn_skin)
+		H.burn_skin(0.25)
+		if(prob(20)) 
+			to_chat(H, "<span class='danger'>Your skin burns!</span>")
+
+	//burn their eyes!
+	if(burn_eyes)
+		var/obj/item/organ/internal/eyes/O = H.internal_organs_by_name[O_EYES]
+		if(O && prob(20)) 
+			O.damage += 1.5
+			to_chat(H,  "<span class='danger'>Your eyes burn!</span>")
+	
+	//burn their lungs!
+	if(burn_lungs)
+		var/obj/item/organ/internal/lungs/O = H.internal_organs_by_name[O_LUNGS]
+		if(O && prob(20)) 
+			O.damage += 1.5
+			to_chat(H,  "<span class='danger'>Your lungs burn!</span>")

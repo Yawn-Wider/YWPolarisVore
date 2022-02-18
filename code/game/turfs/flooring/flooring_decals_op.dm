@@ -1,5 +1,5 @@
 /obj/effect/floor_decal/eshui
-	name = 'eshui corperate logo'
+	name = "Eshui Corperate Logo"
 	icon = 'icons/turf/flooring/decals_op.dmi'
 
 /obj/effect/floor_decal/eshui/emblem/eshui_l

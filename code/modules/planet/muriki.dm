@@ -1,14 +1,18 @@
 var/datum/planet/muriki/planet_muriki = null
+//Dev note: This entire file handles weather and planetary effects. File name subject to change pending planet name finalization.
+/datum/time/muriki
+	seconds_in_day = 3 HOURS
 
 /datum/planet/muriki
 	name = "muriki"
 	desc = "muriki is a TODO MAKE LORE HERE" // Ripped straight from the wiki.
 	current_time = new /datum/time/muriki() // 42 hour
-//	expected_z_levels = list(1) // To be changed when real map is finished.
+	// Outptostt21 - See the Defines for this, so that it can be edited there if needed.
+	// expected_z_levels = list()
 	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis2 // TODO - replace with muriki turf
 
 	sun_name = "SL-340"
-	moon_name = "Muriki"
+	moon_name = ""
 
 /datum/planet/muriki/New()
 	..()
@@ -19,8 +23,8 @@ var/datum/planet/muriki/planet_muriki = null
 /datum/planet/muriki/update_sun()
 	..()
 	var/datum/time/time = current_time
-	var/length_of_day = time.seconds_in_day / 10 / 60 / 60 // 42
-	var/noon = length_of_day / 3.2
+	var/length_of_day = time.seconds_in_day / 10 / 60 / 60
+	var/noon = length_of_day / 2
 	var/distance_from_noon = abs(text2num(time.show_time("hh")) - noon)
 	sun_position = distance_from_noon / noon
 	sun_position = abs(sun_position - 1)
@@ -95,10 +99,6 @@ var/datum/planet/muriki/planet_muriki = null
 	spawn(1)
 		update_sun_deferred(new_brightness, new_color)
 
-// Extra long extended days with long nights, 42 hours
-/datum/time/muriki
-	seconds_in_day = 60 * 60 * 42 * 10 // 115,200 seconds.  If we did 32.64 hours/day it would be around 117,504 seconds instead.
-
 // Returns the time datum of muriki.
 /proc/get_muriki_time()
 	if(planet_muriki)
@@ -106,7 +106,7 @@ var/datum/planet/muriki/planet_muriki = null
 
 //Weather definitions
 /datum/weather_holder/muriki
-	temperature = T0C
+	temperature = 293.15 // 20c
 	allowed_weather_types = list(
 		WEATHER_OVERCAST	= new /datum/weather/muriki/acid_overcast(),
 		WEATHER_RAIN        = new /datum/weather/muriki/acid_rain(),
@@ -114,23 +114,23 @@ var/datum/planet/muriki/planet_muriki = null
 		WEATHER_HAIL		= new /datum/weather/muriki/acid_hail()
 		)
 	roundstart_weather_chances = list(
-		WEATHER_OVERCAST = 10,
-		WEATHER_RAIN = 40,
+		WEATHER_OVERCAST = 20,
+		WEATHER_RAIN = 45,
 		WEATHER_STORM = 30,
-		WEATHER_HAIL = 20
+		WEATHER_HAIL = 5
 		)
 
 /datum/weather/muriki
 	name = "muriki base"
-	temp_high = 283.15	// 10c
-	temp_low = 263.15	// -10c
+	temp_high = 313.15	// 40c
+	temp_low = 288.15	// 15c
 
 /datum/weather/muriki/acid_overcast
-	name = "acidic fog"
+	name = "fog"
 	wind_high = 1
 	wind_low = 0
 	light_modifier = 0.7
-	effect_message = "<span class='warning'>Acidic mist surrounds you.</span>"
+	effect_message = "<span class='notice'>Acidic mist surrounds you.</span>"
 	transition_chances = list(
 		WEATHER_OVERCAST = 80,
 		WEATHER_RAIN = 15,
@@ -154,28 +154,33 @@ var/datum/planet/muriki/planet_muriki = null
 			if(!T.is_outdoors())
 				continue // They're indoors, so no need to rain on them.
 
+			// show transition messages
+			if(show_message)
+				to_chat(L, effect_message)
+
 			// digest living things
 			var/mob/living/carbon/human/H = L
 			if(istype(H))
-				process_acid_burning(H,1)
+				process_complex_mob_burns(H,1)
 			else
-				if(show_message)
-					to_chat(L, effect_message)
+				process_acid_burning(L,1,TRUE)
 
 
 /datum/weather/muriki/acid_rain
-	name = "acidic rain"
-	icon_state = "acidic rain"
+	name = "rain"
+	icon_state = "rain"
+	temp_high = 293.15 // 20c
+	temp_low = T0C
 	wind_high = 2
 	wind_low = 1
 	light_modifier = 0.5
-	effect_message = "<span class='warning'>Acidic rain falls on you.</span>"
+	effect_message = "<span class='notice'>Acidic rain falls on you.</span>"
 
 	transition_chances = list(
 		WEATHER_OVERCAST = 25,
 		WEATHER_RAIN = 50,
 		WEATHER_STORM = 10,
-		WEATHER_HAIL = 5
+		WEATHER_HAIL = 15
 		)
 	observed_message = "It is raining."
 	transition_messages = list(
@@ -209,19 +214,21 @@ var/datum/planet/muriki/planet_muriki = null
 			// digest living things
 			var/mob/living/carbon/human/H = L
 			if(istype(H))
-				process_acid_burning(H,0)
+				process_complex_mob_burns(H,0)
+			else
+				process_acid_burning(L,1,TRUE)
 
 
 /datum/weather/muriki/acid_storm
 	name = "storm"
 	icon_state = "storm"
-	temp_high = 243.15 // -30c
-	temp_low = 233.15  // -40c
+	temp_high = T0C
+	temp_low =  268.15 // -5c
 	wind_high = 4
 	wind_low = 2
 	light_modifier = 0.3
 	flight_failure_modifier = 10
-	effect_message = "<span class='warning'>Acidic rain falls on you, drenching you in burning acid.</span>"
+	effect_message = "<span class='notice'>Acidic rain falls on you.</span>"
 
 	var/next_lightning_strike = 0 // world.time when lightning will strike.
 	var/min_lightning_cooldown = 5 SECONDS
@@ -268,7 +275,9 @@ var/datum/planet/muriki/planet_muriki = null
 			// digest living things
 			var/mob/living/carbon/human/H = L
 			if(istype(H))
-				process_acid_burning(H,0)
+				process_complex_mob_burns(H,0)
+			else
+				process_acid_burning(L,1,TRUE)
 	handle_lightning()
 
 
@@ -284,8 +293,8 @@ var/datum/planet/muriki/planet_muriki = null
 /datum/weather/muriki/acid_hail
 	name = "hail"
 	icon_state = "hail"
-	temp_high = T0C		// 0c
-	temp_low = 243.15	// -30c
+	temp_high = 263.15  // -10c
+	temp_low = 253.15	// -20c
 	light_modifier = 0.3
 	flight_failure_modifier = 15
 	timer_low_bound = 2
@@ -342,15 +351,26 @@ var/datum/planet/muriki/planet_muriki = null
 				to_chat(L, effect_message)
 
 
-/proc/process_acid_burning( var/mob/living/carbon/human/H, var/mist)
+/proc/process_acid_burning( var/mob/living/L, var/multiplier, var/wildlife)
+	// drop out early if no damage anyway
+	if(multiplier <= 0)
+		return
+	
+	// TODO
+	// check for excluded creatures, if being called as wildlife damage
+	//if(wildlife == TRUE)
+		// stuff like jils here
+		// return
+		
+	// burn!
+	L.burn_skin(0.25 * multiplier)
+
+
+/proc/process_complex_mob_burns( var/mob/living/carbon/human/H, var/mist)
 	//Burn eyes, lungs and skin if exposed.
-	var/burn_skin = 1
 	var/burn_eyes = mist
 	var/burn_lungs = mist
 
-	// wearing a bodysuit
-	if(H.pl_head_protected() && H.pl_suit_protected())
-		burn_skin = 0;
 
 	//Check for protective glasses
 	if(H.glasses && (H.glasses.body_parts_covered & EYES) && (H.glasses.item_flags & AIRTIGHT))
@@ -375,12 +395,6 @@ var/datum/planet/muriki/planet_muriki = null
 		burn_eyes = 0
 
 
-	//Burn thier skin!
-	if(burn_skin)
-		H.burn_skin(0.25)
-		if(prob(20)) 
-			to_chat(H, "<span class='danger'>Your skin burns!</span>")
-
 	//burn their eyes!
 	if(burn_eyes)
 		var/obj/item/organ/internal/eyes/O = H.internal_organs_by_name[O_EYES]
@@ -394,3 +408,33 @@ var/datum/planet/muriki/planet_muriki = null
 		if(O && prob(20)) 
 			O.damage += 1.5
 			to_chat(H,  "<span class='danger'>Your lungs burn!</span>")
+
+	// randomly burn their skin in exposed areas!
+	var/min_permeability = 0.10;
+	if(prob(25) && H.reagent_permeability() > min_permeability)
+		// control damage done
+		var/acid_multiplier = 1
+		
+		// unfortunately, the area burning code someone else was working on is a lie, and the thermal damage done is simply based on the collective insulation of your clothing....
+		// so effectively, all the damage is random, unless I make some homebrew damage function for each limb instead of using the burn_skin() proc... 
+		// Which I'd rather not complicate this code base any more than it is... So lets just take permeability into account instead and scale it.
+		// damage to the part is modified by what protection it has, full if none
+		// also no check for gloves because they seem to almost always be highly permeable...
+		var/obj/item/protection = pickweight( list(H.wear_suit, H.shoes, H.head))
+		if(protection == null)
+			// full damage, what are you doing!?
+			acid_multiplier = 1
+			to_chat(H, "<span class='danger'>The acidic environment burns your exposed skin!</span>")
+		else if(protection.permeability_coefficient > min_permeability)
+			// only show the message if the permeability selection actually did any damage at all
+			acid_multiplier = protection.permeability_coefficient 
+			to_chat(H, "<span class='danger'>The acidic environment leaks through your clothing and burns your skin!</span>")
+		else
+			// nothing shows up, no damage!
+			acid_multiplier = 0
+		
+		// apply acid damage
+		process_acid_burning(H, acid_multiplier,FALSE)
+
+		
+		

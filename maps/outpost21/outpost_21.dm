@@ -1,9 +1,13 @@
 #if !defined(USING_MAP_DATUM)
 
-	#include "outpost-01-sub.dmm"
-	#include "outpost-02-surface.dmm"
-	#include "outpost-03-upper.dmm"
-	#include "outpost-04-orbital.dmm"
+	#include "outpost-01-subeng.dmm"
+	#include "outpost-02-subciv.dmm"
+	#include "outpost-03-surfeng.dmm"
+	#include "outpost-04-surfciv.dmm"
+	#include "outpost-05-upper.dmm"
+	#include "outpost-06-orbital.dmm"
+	#include "outpost-10-admin.dmm"
+	#include "outpost-11-centcom.dmm"
 
 	#include "outpost_defines.dm"
 	#include "outpost_areas.dm"

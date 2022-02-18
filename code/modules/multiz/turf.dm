@@ -154,7 +154,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	icon = 'icons/turf/flooring/glass.dmi'
 	icon_state = "glass-0"
 	base_icon_state = "glass"
-	/*
+/*
 	baseturfs = /turf/simulated/openspace
 	intact = FALSE //this means wires go on top
 	smoothing_flags = SMOOTH_BITMASK
@@ -164,7 +164,7 @@ GLOBAL_DATUM_INIT(openspace_backdrop_one_for_all, /atom/movable/openspace_backdr
 	barefootstep = FOOTSTEP_HARD_BAREFOOT
 	clawfootstep = FOOTSTEP_HARD_CLAW
 	heavyfootstep = FOOTSTEP_GENERIC_HEAVY
-	*/
+*/
 
 // /turf/simulated/floor/glass/setup_broken_states()
 //	return list("glass-damaged1", "glass-damaged2", "glass-damaged3")

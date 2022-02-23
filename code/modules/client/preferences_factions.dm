@@ -44,7 +44,7 @@ var/global/list/home_system_choices = list(
 
 
 var/global/list/faction_choices = list(
-	"Commonwealth of Sol-Procyon",
+	/*YW EDIT: "Commonwealth of Sol-Procyon",*/
 	"United Fyrds",
 	"Elysian Colonies",
 	"Ares Confederation",

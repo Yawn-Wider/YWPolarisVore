@@ -12,24 +12,22 @@
 #define Z_LEVEL_ROGUEMINE_1				11
 #define Z_LEVEL_ROGUEMINE_2				12
 #define Z_LEVEL_OFFMAP1					13
-#define Z_LEVEL_OFFMAP2					14
-#define Z_LEVEL_PLAINS					15
-#define Z_LEVEL_UNDERDARK				16
-#define Z_LEVEL_BEACH					17
-#define Z_LEVEL_BEACH_CAVE				18
-#define Z_LEVEL_AEROSTAT				19
-#define Z_LEVEL_AEROSTAT_SURFACE		20
-#define Z_LEVEL_DEBRISFIELD				21
-#define Z_LEVEL_GUTTERSITE				22
-#define Z_LEVEL_FUELDEPOT				23
-#define Z_LEVEL_GATEWAY					24
+#define Z_LEVEL_PLAINS					14
+#define Z_LEVEL_UNDERDARK				15
+#define Z_LEVEL_BEACH					16
+#define Z_LEVEL_BEACH_CAVE				17
+#define Z_LEVEL_AEROSTAT				18
+#define Z_LEVEL_AEROSTAT_SURFACE		19
+#define Z_LEVEL_DEBRISFIELD				20
+#define Z_LEVEL_FUELDEPOT				21
+#define Z_LEVEL_GATEWAY					22
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
-#define NETWORK_TCOMMS "Telecommunications" //Using different from Polaris one for better name
-#define NETWORK_OUTSIDE "Outside"
-#define NETWORK_EXPLORATION "Exploration"
-#define NETWORK_XENOBIO "Xenobiology"
+// Defined in another file #define NETWORK_TCOMMS "Telecommunications" //Using different from Polaris one for better name
+// defined in another file #define NETWORK_OUTSIDE "Outside"
+// defined in another file #define NETWORK_EXPLORATION "Exploration"
+// defined in another file #define NETWORK_XENOBIO "Xenobiology"
 
 /datum/map/cryogaia
 	name = "Cryogaia"
@@ -54,7 +52,8 @@
 		Z_LEVEL_CRYOGAIA_MAIN,
 		Z_LEVEL_CRYOGAIA_UPPER))
 
-	station_name  = "Cryogaia Outpost"
+	facility_type = "Outpost"
+	station_name  = "Cryogaia"
 	station_short = "Yawn Wider"
 	dock_name     = "NCS Serenity"
 	boss_name     = "Central Command"
@@ -186,13 +185,12 @@
 	lateload_z_levels = list(
 		//list("Alien Ship - Z1 Ship"),
 		list("Asteroid Belt 1","Asteroid Belt 2"),
-		list("Offmap Ship - Talon Z1","Offmap Ship - Talon Z2"),
+		list("Offmap Ship - Talon V2"),
 		list("Snow plains"),
 		list("Cryogaia - Underdark"),
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space"),
-		list("Gutter Site - Z1 Space"),
 		list("Fuel Depot - Z1 Space")
 		)
 
@@ -210,12 +208,14 @@
 	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1, Z_LEVEL_ROGUEMINE_2)
 
-	lateload_single_pick = list( //Gateway missions
+	lateload_gateway = list( //Gateway missions
 		list("Snow Outpost"),
 		list("Carp Farm"),
 		list("Snow Field"),
 		list("Listening Post")
 		)
+
+	lateload_gateway = null //Nothing right now.
 
 	planet_datums_to_make = list(/datum/planet/borealis2)
 
@@ -334,7 +334,7 @@
 /datum/map_z_level/cryogaia/mining
 	z = Z_LEVEL_CRYOGAIA_MINE
 	name = "Subterranian depths"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
 	base_turf = /turf/simulated/floor/indoorrocks
 	holomap_legend_x = 220
 	holomap_legend_y = 160
@@ -350,7 +350,7 @@
 /datum/map_z_level/cryogaia/lower
 	name = "Subfloor"
 	z = Z_LEVEL_CRYOGAIA_LOWER
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
 	base_turf = /turf/simulated/open // /turf/simulated/floor/outdoors/rocks/cryogaia
 	holomap_legend_x = 220
 	holomap_legend_y = 160
@@ -360,7 +360,7 @@
 /datum/map_z_level/cryogaia/main
 	z = Z_LEVEL_CRYOGAIA_MAIN
 	name = "Surface level"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
 	base_turf = /turf/simulated/open
 	holomap_legend_x = 220
 	holomap_legend_y = 160
@@ -370,7 +370,7 @@
 /datum/map_z_level/cryogaia/upper
 	z = Z_LEVEL_CRYOGAIA_UPPER
 	name = "Upper level"
-	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_STATION|MAP_LEVEL_CONTACT|MAP_LEVEL_PLAYER|MAP_LEVEL_CONSOLES|MAP_LEVEL_SEALED|MAP_LEVEL_PERSIST
 	base_turf = /turf/simulated/open
 	holomap_legend_x = 220
 	holomap_legend_y = 160

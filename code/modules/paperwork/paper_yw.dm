@@ -11,3 +11,7 @@
 	name = "Hermit's notes"
 	icon_state = "scrap"
 	info = "I told them over and over! Stop digging. But no, of course not. They kept digging, and digging and digging on down, and now their dead. now we're all dead."
+
+/obj/item/weapon/paper/psmartfridge
+	name = "Hastily scribbled smartfridge note"
+	info = "For the last time, the only smartfridges that we do not empty when doing clean up is the ones in cargo and in the kitchen freezer stop leaving materials in the temporary ones do we look like cargo personel to you? Love from a concerned member of the cleanup crew"

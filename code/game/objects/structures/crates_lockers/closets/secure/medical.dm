@@ -33,6 +33,7 @@
 		/obj/item/clothing/under/rank/nurse,
 		/obj/item/clothing/under/rank/orderly,
 		/obj/item/clothing/suit/storage/toggle/labcoat,
+		/obj/item/clothing/suit/storage/toggle/labcoat/modern,
 		/obj/item/clothing/suit/storage/toggle/fr_jacket,
 		/obj/item/clothing/shoes/white,
 		/obj/item/weapon/cartridge/medical,
@@ -42,7 +43,8 @@
 		/obj/item/clothing/shoes/boots/winter/medical,
 		/obj/item/clothing/under/rank/nursesuit,
 		/obj/item/clothing/head/nursehat,
-		/obj/item/weapon/storage/box/freezer = 3)
+		/obj/item/weapon/storage/box/freezer = 3,
+		/obj/item/weapon/storage/belt/medical) //VOREStation Add
 
 /obj/structure/closet/secure_closet/medical3/Initialize()
 	if(prob(50))
@@ -102,6 +104,7 @@
 		/obj/item/clothing/mask/gas,
 		/obj/item/clothing/suit/storage/toggle/fr_jacket,
 		/obj/item/clothing/suit/storage/toggle/labcoat/emt,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/para,
 		/obj/item/device/radio/headset/headset_med/alt,
 		/obj/item/weapon/cartridge/medical,
 		/obj/item/weapon/storage/briefcase/inflatable,
@@ -127,6 +130,7 @@
 		/obj/item/clothing/under/rank/chief_medical_officer/skirt,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmo,
 		/obj/item/clothing/suit/storage/toggle/labcoat/cmoalt,
+		/obj/item/clothing/suit/storage/toggle/labcoat/modern/cmo,
 		/obj/item/weapon/cartridge/cmo,
 		/obj/item/clothing/gloves/sterile/latex,
 		/obj/item/clothing/shoes/brown,
@@ -135,14 +139,18 @@
 		/obj/item/device/flash,
 		/obj/item/weapon/reagent_containers/hypospray/vial,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical,
+		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/cmo,
 		/obj/item/clothing/shoes/boots/winter/medical,
+		/obj/item/clothing/head/beret/medical/cmo,
+		/obj/item/clothing/head/beret/medical/cmo/blue,
 		/obj/item/weapon/storage/box/freezer,
 		/obj/item/clothing/mask/gas,
 		/obj/item/taperoll/medical,
 		/obj/item/clothing/suit/bio_suit/cmo,
 		/obj/item/clothing/head/bio_hood/cmo,
 		/obj/item/clothing/shoes/white,
-		/obj/item/weapon/reagent_containers/glass/beaker/vial) //VOREStation Add
+		/obj/item/weapon/reagent_containers/glass/beaker/vial, //VOREStation Add
+		/obj/item/weapon/storage/belt/medical) //VOREStation Add
 
 /obj/structure/closet/secure_closet/CMO/Initialize()
 	if(prob(50))
@@ -223,8 +231,8 @@
 	desc = "It's a secure wall-mounted storage unit for first aid supplies."
 	plane = TURF_PLANE
 	layer = ABOVE_TURF_LAYER
-	anchored = 1
-	density = 0
+	anchored = TRUE
+	density = FALSE
 	wall_mounted = 1
 	store_mobs = 0
 	req_access = list(access_medical_equip)

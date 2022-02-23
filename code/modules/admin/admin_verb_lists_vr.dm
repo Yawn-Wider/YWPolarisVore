@@ -121,7 +121,9 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/set_uplink, //VOREStation Add,
 	/datum/admins/proc/sendFax,
 	/client/proc/despawn_player,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/client/proc/setckey, //YW add - readds SetCkey proc
+	/client/proc/dbcon_fix //YW add - adds Fix Database Connection proc
 	)
 
 var/list/admin_verbs_ban = list(
@@ -132,7 +134,8 @@ var/list/admin_verbs_ban = list(
 var/list/admin_verbs_sounds = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
-	/client/proc/play_server_sound
+	/client/proc/play_server_sound,
+	/client/proc/play_z_sound
 	)
 
 var/list/admin_verbs_fun = list(
@@ -155,7 +158,8 @@ var/list/admin_verbs_fun = list(
 	/client/proc/smite,
 	/client/proc/smite_vr, //VOREStation Add,
 	/client/proc/admin_lightning_strike,
-	/client/proc/resize //VOREStation Add,
+	/client/proc/resize, //VOREStation Add,
+	/client/proc/cmd_admin_droppod_deploy
 	)
 
 var/list/admin_verbs_spawn = list(
@@ -164,6 +168,7 @@ var/list/admin_verbs_spawn = list(
 	/datum/admins/proc/check_custom_items,
 	/datum/admins/proc/spawn_plant,
 	/datum/admins/proc/spawn_atom,		//allows us to spawn instances,
+	/client/proc/cmd_admin_droppod_spawn,
 	/client/proc/respawn_character,
 	/client/proc/spawn_character_mob,  //VOREStation Add,
 	/client/proc/virus2_editor,

@@ -1,6 +1,6 @@
 /obj/effect/overmap/visitable/sector/cryogaia_gateway/listeningpost
 	initial_generic_waypoints = list("cryogaia_excursion_listeningpost")
-	scanner_name = "Strange Asteroid"
+	name = "Strange Asteroid"
 	scanner_desc = @{"[i]Registration[/i]: UNKNOWN
 [i]Class[/i]: Installation
 [i]Transponder[/i]: None Detected

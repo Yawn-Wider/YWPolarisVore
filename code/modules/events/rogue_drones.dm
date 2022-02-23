@@ -36,8 +36,8 @@
 		if(4)
 			msg = "A passing derelict ship's drone defense systems have just activated. If any have survived re-entry into the atmosphere, use caution."
 		if(5)
-			msg = "We're detecting a swarm of small objects approaching your outpost.  Most likely a bunch of drones.  Please exercise caution if you see any."
-	//VOREStation Edit End - YW EDIT END
+			msg = "We're detecting a swarm of small objects approaching your [using_map.facility_type].  Most likely a bunch of drones.  Please exercise caution if you see any."
+	//VOREStation Edit End
 	command_announcement.Announce(msg, "Rogue drone alert")
 
 /datum/event/rogue_drone/end()

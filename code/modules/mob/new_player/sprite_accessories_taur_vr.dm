@@ -57,7 +57,7 @@
 	suit_sprites = 'icons/mob/taursuits_wolf_vr.dmi'
 	icon_sprite_tag = "wolf"
 
-/datum/sprite_accessory/tail/taur/fatwolf
+/datum/sprite_accessory/tail/taur/wolf/fatwolf
 	name = "Fat Wolf (Taur)"
 	icon_state = "fatwolf_s"
 	icon_sprite_tag = "wolf"	//This could be modified later.
@@ -82,6 +82,12 @@
 	extra_overlay = "synthwolf_markings"
 	extra_overlay2 = "synthwolf_glow"
 	//icon_sprite_tag = "synthwolf"
+
+/datum/sprite_accessory/tail/taur/wolf/fatsynthwolf
+	name = "Fat SynthWolf dual-color (Taur)"
+	icon_state = "fatsynthwolf_s"
+	extra_overlay = "fatsynthwolf_markings"
+	extra_overlay2 = "fatsynthwolf_glow"
 
 /datum/sprite_accessory/tail/taur/skunk
 	name = "Skunk (Taur)"
@@ -213,12 +219,27 @@
 	extra_overlay = "lizard_markings"
 	//icon_sprite_tag = "lizard2c"
 
+/datum/sprite_accessory/tail/taur/lizard/fatlizard
+	name = "Fat Lizard (Taur)"
+	icon_state = "fatlizard_s"
+
+/datum/sprite_accessory/tail/taur/lizard/fatlizard_2c
+	name = "Fat Lizard (Taur, dual-color)"
+	icon_state = "fatlizard_s"
+	extra_overlay= "fatlizard_markings"
+
 /datum/sprite_accessory/tail/taur/lizard/synthlizard
 	name = "SynthLizard dual-color (Taur)"
 	icon_state = "synthlizard_s"
 	extra_overlay = "synthlizard_markings"
 	extra_overlay2 = "synthlizard_glow"
 	//icon_sprite_tag = "synthlizard"
+
+/datum/sprite_accessory/tail/taur/lizard/fatsynthlizard
+	name = "Fat SynthLizard dual-color (Taur)"
+	icon_state = "fatsynthlizard_s"
+	extra_overlay = "fatsynthlizard_markings"
+	extra_overlay2 = "fatsynthlizard_glow"
 
 /datum/sprite_accessory/tail/taur/spider
 	name = "Spider (Taur)"
@@ -304,6 +325,12 @@
 	extra_overlay = "synthfeline_markings"
 	extra_overlay2 = "synthfeline_glow"
 	//icon_sprite_tag = "synthfeline"
+
+/datum/sprite_accessory/tail/taur/feline/fatsynthfeline
+	name = "Fat SynthFeline dual-color (Taur)"
+	icon_state = "fatsynthfeline_s"
+	extra_overlay = "fatsynthfeline_markings"
+	extra_overlay2 = "fatsynthfeline_glow"
 
 /datum/sprite_accessory/tail/taur/slug
 	name = "Slug (Taur)"
@@ -451,24 +478,6 @@
 	msg_prey_stepunder = "You jump over %prey's thick tail."
 	msg_owner_stepunder = "%owner bounds over your tail."
 
-/datum/sprite_accessory/tail/taur/shadekin_tail
-	name = "Shadekin Tail"
-	icon_state = "shadekin_s"
-	can_ride = 0
-	hide_body_parts = null
-	clip_mask_icon = null
-	clip_mask_state = null
-	//apply_restrictions = TRUE
-	//species_allowed = list(SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW)
-
-/datum/sprite_accessory/tail/taur/shadekin_tail/shadekin_tail_2c
-	name = "Shadekin Tail (dual color)"
-	extra_overlay = "shadekin_markings"
-
-/datum/sprite_accessory/tail/taur/shadekin_tail/shadekin_tail_long
-	name = "Shadekin Long Tail"
-	icon_state = "shadekin_long_s"
-
 /datum/sprite_accessory/tail/taur/pawcow // this grabs suit sprites from the normal cow, the outline is the same
 	name = "Cow w/ paws (Taur)"
 	icon_state = "pawcow_s"
@@ -568,3 +577,10 @@
 
 	msg_owner_grab_fail = "You step down onto %prey with one of your vines, forcing them onto the ground!"
 	msg_prey_grab_fail = "%owner steps down onto you with one of their vines, squishing you and forcing you onto the ground!"
+
+/datum/sprite_accessory/tail/taur/rat
+	name = "Rat (dual color)"
+	icon_state = "rat_s"
+	extra_overlay = "rat_markings"
+	clip_mask_state = "taur_clip_mask_rat"
+	icon_sprite_tag = "rat"

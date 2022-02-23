@@ -3,7 +3,6 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Static Load
-#include "cryogaia_plains/cryogaia_plains.dm"
 /datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
@@ -21,6 +20,10 @@
 	. = ..()
 	seed_submaps(list(Z_LEVEL_PLAINS), 240, /area/cryogaia/outpost/exploration_plains, /datum/map_template/surface/plains)
 
+#include "../../submaps/surface_submaps/plains_yw/plains.dm"
+#include "../../submaps/surface_submaps/plains_yw/plains_areas.dm"
+#include "../../submaps/surface_submaps/plains_yw/plains_turfs.dm"
+
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
 #if AWAY_MISSION_TEST
@@ -32,7 +35,6 @@
 #include "aerostat/surface.dmm"
 #include "space/debrisfield.dmm"
 #include "space/fueldepot.dmm"
-#include "space/guttersite.dmm"
 #endif
 
 #include "beach/_beach.dm"
@@ -110,7 +112,6 @@
 #include "space/_fueldepot.dm"
 #include "space/pois/_templates.dm"
 #include "space/pois/debrisfield_things.dm"
-#include "space/_guttersite.dm"
 
 /datum/map_template/cryogaia_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
@@ -136,16 +137,6 @@
 /datum/map_z_level/cryogaia_lateload/away_fueldepot
 	name = "Away Mission - Fuel Depot"
 	z = Z_LEVEL_FUELDEPOT
-
-/datum/map_template/cryogaia_lateload/away_guttersite
-	name = "Gutter Site - Z1 Space"
-	desc = "The Virgo Erigone Space Away Site."
-	mappath = 'space/guttersite.dmm'
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_guttersite
-
-/datum/map_z_level/cryogaia_lateload/away_guttersite
-	name = "Away Mission - Gutter Site"
-	z = Z_LEVEL_GUTTERSITE
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
@@ -441,12 +432,11 @@
 
 //////////////////////////////////////////////////////////////////////////////
 //Offmap Spawn Locations
-#include "../../offmap_vr/talon/talon.dm"
-#include "../../offmap_vr/talon/talon_areas.dm"
+#include "../../offmap_vr/talon/talon_v2.dm"
+#include "../../offmap_vr/talon/talon_v2_areas.dm"
 
 #if MAP_TEST
-#include "../../offmap_vr/talon/talon1.dmm"
-#include "../../offmap_vr/talon/talon2.dmm"
+#include "../../offmap_vr/talon/talon_v2.dmm"
 #endif
 
 //////////////////////////////////////////////////////////////////////////////
@@ -475,26 +465,14 @@
 #include "../../offmap_vr/om_ships/shelter_6.dm"
 
 // Talon offmap spawn
-/datum/map_template/cryogaia_lateload/offmap/talon1
-	name = "Offmap Ship - Talon Z1"
+/datum/map_template/cryogaia_lateload/offmap/talon_v2
+	name = "Offmap Ship - Talon V2"
 	desc = "Offmap spawn ship, the Talon."
-	mappath = 'maps/offmap_vr/talon/talon1.dmm'
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/talon1
+	mappath = 'maps/offmap_vr/talon/talon_v2.dmm'
+	associated_map_datum = /datum/map_z_level/cryogaia_lateload/talon_v2
 
-/datum/map_template/cryogaia_lateload/offmap/talon2
-	name = "Offmap Ship - Talon Z2"
-	desc = "Offmap spawn ship, the Talon."
-	mappath = 'maps/offmap_vr/talon/talon2.dmm'
-	associated_map_datum = /datum/map_z_level/cryogaia_lateload/talon2
-
-/datum/map_z_level/cryogaia_lateload/talon1
-	name = "Talon Deck One"
-	flags = MAP_LEVEL_PLAYER
+/datum/map_z_level/cryogaia_lateload/talon_v2
+	name = "Talon"
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE
 	base_turf = /turf/space
-	z = Z_LEVEL_OFFMAP1
-
-/datum/map_z_level/cryogaia_lateload/talon2
-	name = "Talon Deck Two"
-	flags = MAP_LEVEL_PLAYER
-	base_turf = /turf/simulated/open
-	z = Z_LEVEL_OFFMAP2
+	z = Z_LEVEL_OFFMAP1 

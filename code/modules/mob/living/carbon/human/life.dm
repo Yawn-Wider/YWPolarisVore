@@ -21,6 +21,16 @@
 #define COLD_GAS_DAMAGE_LEVEL_2 1.5 //Amount of damage applied when the current breath's temperature passes the 200K point
 #define COLD_GAS_DAMAGE_LEVEL_3 3 //Amount of damage applied when the current breath's temperature passes the 120K point
 
+#define COLD_ALERT_SEVERITY_LOW         1 // Constants passed to the cold and heat alerts.
+#define COLD_ALERT_SEVERITY_MODERATE    2
+#define COLD_ALERT_SEVERITY_MAX         3
+#define ENVIRONMENT_COMFORT_MARKER_COLD 1
+
+#define HOT_ALERT_SEVERITY_LOW          1
+#define HOT_ALERT_SEVERITY_MODERATE     2
+#define HOT_ALERT_SEVERITY_MAX          3
+#define ENVIRONMENT_COMFORT_MARKER_HOT  2
+
 #define RADIATION_SPEED_COEFFICIENT 0.1
 #define HUMAN_COMBUSTION_TEMP 524 //524k is the sustained combustion temperature of human fat
 
@@ -564,7 +574,7 @@
 
 
 	// Hot air hurts :(
-	if((breath.temperature < species.breath_cold_level_1 || breath.temperature > species.breath_heat_level_1) && !(COLD_RESISTANCE in mutations))
+	if((breath.temperature <= species.cold_discomfort_level || breath.temperature >= species.heat_discomfort_level) && !(COLD_RESISTANCE in mutations))
 
 		if(breath.temperature <= species.breath_cold_level_1)
 			if(prob(20))
@@ -573,27 +583,37 @@
 			if(prob(20))
 				to_chat(src, "<span class='danger'>You feel your face burning and a searing heat in your lungs!</span>")
 
-		if(breath.temperature >= species.breath_heat_level_1)
-			if(breath.temperature < species.breath_heat_level_2)
-				apply_damage(HEAT_GAS_DAMAGE_LEVEL_1, BURN, BP_HEAD, used_weapon = "Excessive Heat")
-				throw_alert("temp", /obj/screen/alert/hot, 1)
-			else if(breath.temperature < species.breath_heat_level_3)
-				apply_damage(HEAT_GAS_DAMAGE_LEVEL_2, BURN, BP_HEAD, used_weapon = "Excessive Heat")
-				throw_alert("temp", /obj/screen/alert/hot, 2)
-			else
+		if(breath.temperature >= species.heat_discomfort_level)
+		
+			if(breath.temperature >= species.breath_heat_level_3)
 				apply_damage(HEAT_GAS_DAMAGE_LEVEL_3, BURN, BP_HEAD, used_weapon = "Excessive Heat")
-				throw_alert("temp", /obj/screen/alert/hot, 3)
-
-		else if(breath.temperature <= species.breath_cold_level_1)
-			if(breath.temperature > species.breath_cold_level_2)
-				apply_damage(COLD_GAS_DAMAGE_LEVEL_1, BURN, BP_HEAD, used_weapon = "Excessive Cold")
-				throw_alert("temp", /obj/screen/alert/cold, 1)
-			else if(breath.temperature > species.breath_cold_level_3)
-				apply_damage(COLD_GAS_DAMAGE_LEVEL_2, BURN, BP_HEAD, used_weapon = "Excessive Cold")
-				throw_alert("temp", /obj/screen/alert/cold, 2)
+				throw_alert("temp", /obj/screen/alert/hot, HOT_ALERT_SEVERITY_MAX)
+			else if(breath.temperature >= species.breath_heat_level_2)
+				apply_damage(HEAT_GAS_DAMAGE_LEVEL_2, BURN, BP_HEAD, used_weapon = "Excessive Heat")
+				throw_alert("temp", /obj/screen/alert/hot, HOT_ALERT_SEVERITY_MODERATE)
+			else if(breath.temperature >= species.breath_heat_level_1)
+				apply_damage(HEAT_GAS_DAMAGE_LEVEL_1, BURN, BP_HEAD, used_weapon = "Excessive Heat")
+				throw_alert("temp", /obj/screen/alert/hot, HOT_ALERT_SEVERITY_LOW)
+			else if(species.get_environment_discomfort(src, ENVIRONMENT_COMFORT_MARKER_HOT))
+				throw_alert("temp", /obj/screen/alert/warm, HOT_ALERT_SEVERITY_LOW)
 			else
+				clear_alert("temp")
+
+		else if(breath.temperature <= species.cold_discomfort_level)
+
+			if(breath.temperature <= species.breath_cold_level_3)
 				apply_damage(COLD_GAS_DAMAGE_LEVEL_3, BURN, BP_HEAD, used_weapon = "Excessive Cold")
-				throw_alert("temp", /obj/screen/alert/cold, 3)
+				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_MAX)
+			else if(breath.temperature <= species.breath_cold_level_2)
+				apply_damage(COLD_GAS_DAMAGE_LEVEL_1, BURN, BP_HEAD, used_weapon = "Excessive Cold")
+				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_LOW)
+			else if(breath.temperature <= species.breath_cold_level_1)
+				apply_damage(COLD_GAS_DAMAGE_LEVEL_2, BURN, BP_HEAD, used_weapon = "Excessive Cold")
+				throw_alert("temp", /obj/screen/alert/cold, COLD_ALERT_SEVERITY_MODERATE)
+			else if(species.get_environment_discomfort(src, ENVIRONMENT_COMFORT_MARKER_COLD))
+				throw_alert("temp", /obj/screen/alert/chilly, COLD_ALERT_SEVERITY_LOW)
+			else
+				clear_alert("temp")
 
 		//breathing in hot/cold air also heats/cools you a bit
 		var/temp_adj = breath.temperature - bodytemperature
@@ -605,15 +625,12 @@
 		var/relative_density = breath.total_moles / (MOLES_CELLSTANDARD * BREATH_PERCENTAGE)
 		temp_adj *= relative_density
 
-		if (temp_adj > BODYTEMP_HEATING_MAX) temp_adj = BODYTEMP_HEATING_MAX
-		if (temp_adj < BODYTEMP_COOLING_MAX) temp_adj = BODYTEMP_COOLING_MAX
-		//to_world("Breath: [breath.temperature], [src]: [bodytemperature], Adjusting: [temp_adj]")
-		bodytemperature += temp_adj
+		if(temp_adj > BODYTEMP_HEATING_MAX)
+			temp_adj = BODYTEMP_HEATING_MAX
+		if(temp_adj < BODYTEMP_COOLING_MAX)
+			temp_adj = BODYTEMP_COOLING_MAX
 
-	else if(breath.temperature >= species.heat_discomfort_level)
-		species.get_environment_discomfort(src,"heat")
-	else if(breath.temperature <= species.cold_discomfort_level)
-		species.get_environment_discomfort(src,"cold")
+		bodytemperature += temp_adj
 
 	else
 		clear_alert("temp")
@@ -653,7 +670,8 @@
 			var/obj/mecha/M = loc
 			loc_temp =  M.return_temperature()
 		else if(istype(loc, /obj/machinery/atmospherics/unary/cryo_cell))
-			loc_temp = loc:air_contents.temperature
+			var/obj/machinery/atmospherics/unary/cryo_cell/cc = loc
+			loc_temp = cc.air_contents.temperature
 		else
 			loc_temp = environment.temperature
 
@@ -689,13 +707,13 @@
 			if(bodytemperature >= species.heat_level_2)
 				if(bodytemperature >= species.heat_level_3)
 					burn_dam = HEAT_DAMAGE_LEVEL_3
-					throw_alert("temp", /obj/screen/alert/hot, 3)
+					throw_alert("temp", /obj/screen/alert/hot, HOT_ALERT_SEVERITY_MAX)
 				else
 					burn_dam = HEAT_DAMAGE_LEVEL_2
-					throw_alert("temp", /obj/screen/alert/hot, 2)
+					throw_alert("temp", /obj/screen/alert/hot, HOT_ALERT_SEVERITY_MODERATE)
 			else
 				burn_dam = HEAT_DAMAGE_LEVEL_1
-				throw_alert("temp", /obj/screen/alert/hot, 1)
+				throw_alert("temp", /obj/screen/alert/hot, HOT_ALERT_SEVERITY_LOW)
 
 		take_overall_damage(burn=burn_dam, used_weapon = "High Body Temperature")
 
@@ -845,8 +863,7 @@
 	. = 1 - . // Invert from 1 = immunity to 0 = immunity.
 
 	// Doing it this way makes multiplicative stacking not get out of hand, so two modifiers that give 0.5 protection will be combined to 0.75 in the end.
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		if(!isnull(M.heat_protection))
 			. *= 1 - M.heat_protection
 
@@ -865,8 +882,7 @@
 	. = 1 - . // Invert from 1 = immunity to 0 = immunity.
 
 	// Doing it this way makes multiplicative stacking not get out of hand, so two modifiers that give 0.5 protection will be combined to 0.75 in the end.
-	for(var/thing in modifiers)
-		var/datum/modifier/M = thing
+	for(var/datum/modifier/M as anything in modifiers)
 		if(!isnull(M.cold_protection))
 			// Invert the modifier values so they align with the current working value.
 			. *= 1 - M.cold_protection
@@ -1044,7 +1060,7 @@
 					if(client || sleeping > 3)
 						AdjustSleeping(-1)
 						throw_alert("asleep", /obj/screen/alert/asleep)
-				if( prob(2) && health && !hal_crit )
+				if( prob(2) && health && !hal_crit && client )
 					spawn(0)
 						emote("snore")
 		//CONSCIOUS
@@ -1251,7 +1267,7 @@
 				else if(no_damage)
 					health_images += image('icons/mob/screen1_health.dmi',"fullhealth")
 
-				healths_ma.overlays += health_images
+				healths_ma.add_overlay(health_images)
 				healths.appearance = healths_ma
 
 
@@ -1387,7 +1403,7 @@
 			see_in_dark = species.darksight
 			see_invisible = see_in_dark>2 ? SEE_INVISIBLE_LEVEL_ONE : see_invisible_default
 
-		var/tmp/glasses_processed = 0
+		var/glasses_processed = 0
 		var/obj/item/weapon/rig/rig = get_rig()
 		if(istype(rig) && rig.visor && !looking_elsewhere)
 			if(!rig.helmet || (head && rig.helmet == head))
@@ -1556,7 +1572,7 @@
 
 	if(shock_stage >= 30)
 		if(shock_stage == 30 && !isbelly(loc)) //VOREStation Edit
-			emote("me",1,"is having trouble keeping their eyes open.")
+			custom_emote(VISIBLE_MESSAGE, "is having trouble keeping their eyes open.")
 		eye_blurry = max(2, eye_blurry)
 		stuttering = max(stuttering, 5)
 
@@ -1565,7 +1581,7 @@
 
 	if (shock_stage >= 60)
 		if(shock_stage == 60 && !isbelly(loc)) //VOREStation Edit
-			emote("me",1,"'s body becomes limp.")
+			custom_emote(VISIBLE_MESSAGE, "'s body becomes limp.")
 		if (prob(2))
 			to_chat(src, "<span class='danger'>[pick("The pain is excruciating", "Please&#44; just end the pain", "Your whole body is going numb")]!</span>")
 			Weaken(20)
@@ -1582,7 +1598,7 @@
 
 	if(shock_stage == 150)
 		if(!isbelly(loc)) //VOREStation Edit
-			emote("me",1,"can no longer stand, collapsing!")
+			custom_emote(VISIBLE_MESSAGE, "can no longer stand, collapsing!")
 		Weaken(20)
 
 	if(shock_stage >= 150)

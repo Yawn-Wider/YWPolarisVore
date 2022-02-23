@@ -627,7 +627,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_main/refinery)
 "bx" = (
-/obj/item/stolenpackage,
+/obj/item/integrated_circuit/transfer/demultiplexer/huge,
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/vacant/vacant_site/east)
 "by" = (
@@ -2499,7 +2499,6 @@
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/storage)
 "ge" = (
-/obj/effect/floor_decal/corner_oldtile/gray,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -2547,7 +2546,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/rnd/xenobiology/hallway)
 "gm" = (
-/obj/item/integrated_circuit/transfer/demultiplexer/huge,
+/obj/item/stolenpackage,
 /turf/simulated/floor/reinforced,
 /area/vacant/vacant_site/east)
 "gn" = (
@@ -3423,6 +3422,10 @@
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
 	},
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "Telesci - Hall";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/mid)
 "ip" = (
@@ -3494,6 +3497,9 @@
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "OPR - Gas Storage"
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/anomaly)
@@ -3694,6 +3700,10 @@
 	},
 /obj/effect/floor_decal/corner/purple{
 	dir = 5
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "Lower Sci Break Room";
+	network = list("Research","Toxins Test Area")
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/mid)
@@ -4839,10 +4849,8 @@
 /area/mine/explored)
 "lX" = (
 /obj/machinery/door/airlock/science{
-	locked = 1;
 	name = "Toxins Mixing"
 	},
-/obj/structure/barricade,
 /obj/structure/cable/blue{
 	d1 = 4;
 	d2 = 8;
@@ -5057,6 +5065,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/test_area)
+"mx" = (
+/obj/machinery/camera/network/mining{
+	c_tag = "Mining Outpost"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/outpost/mining_north)
 "my" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/dark,
@@ -5875,6 +5889,8 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
+/obj/machinery/recharger,
+/obj/structure/table/steel,
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/airlock)
 "oC" = (
@@ -5997,6 +6013,10 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/camera/network/research{
+	c_tag = "Xenoflora-Archaeology Canister";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/xenoflora_storage)
 "oO" = (
@@ -6097,7 +6117,6 @@
 /turf/simulated/floor/plating,
 /area/outpost/research/atmosia)
 "pc" = (
-/obj/effect/floor_decal/corner_oldtile/gray,
 /turf/simulated/floor/tiled/dark,
 /area/outpost/research/longtermstorage)
 "pd" = (
@@ -6883,7 +6902,8 @@
 /area/mine/explored)
 "qN" = (
 /obj/machinery/vending/assist{
-	dir = 8
+	dir = 8;
+	pixel_x = 7
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
@@ -7245,6 +7265,13 @@
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_north)
+"rI" = (
+/obj/machinery/camera/network/research{
+	c_tag = "Secure Xenobiology Chamber";
+	network = list("Research","Miscellaneous Reseach")
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/secure)
 "rJ" = (
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
 /area/mine/unexplored)
@@ -7313,6 +7340,11 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "Secure Xenobiology Hall";
+	dir = 4;
+	network = list("Research","Miscellaneous Reseach")
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
@@ -7508,6 +7540,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/maintenance/shelter3)
+"sw" = (
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/tiled/steel,
+/area/rnd/hallway)
 "sx" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/item/device/radio/intercom{
@@ -9276,7 +9314,6 @@
 /turf/simulated/wall,
 /area/maintenance/substation/mining)
 "xc" = (
-/obj/effect/floor_decal/corner_oldtile/gray,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
@@ -10055,16 +10092,12 @@
 /area/rnd/outpost/hallway)
 "yV" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "Toxins Gas Mix";
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/outpost/research/atmosia)
-"yW" = (
-/obj/machinery/conveyor{
-	dir = 9;
-	id = "mining_internal"
-	},
-/obj/machinery/mineral/output,
-/turf/simulated/floor/tiled/dark,
-/area/outpost/mining_main/refinery)
 "yX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -10547,6 +10580,18 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
 /area/outpost/research/anomaly)
+"Ae" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/camera/network/mining{
+	c_tag = "Mining Outpost"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/outpost/mining_north)
 "Af" = (
 /obj/structure/cable/blue{
 	d1 = 2;
@@ -11742,6 +11787,10 @@
 	dir = 4;
 	pixel_x = -25
 	},
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "Telesci";
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/research/exotic)
 "CO" = (
@@ -12451,6 +12500,14 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/north_hall)
+"EC" = (
+/obj/machinery/camera/network/research{
+	c_tag = "Secure Xenobiology Chamber";
+	dir = 8;
+	network = list("Research","Miscellaneous Reseach")
+	},
+/turf/simulated/floor/reinforced,
+/area/rnd/xenobiology/secure)
 "ED" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -13332,6 +13389,10 @@
 "GI" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 9
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "Lower Sci Entrance";
+	network = list("Research","Toxins Test Area")
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/research/hallway/entry)
@@ -16172,10 +16233,10 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/hallway)
 "Np" = (
-/obj/machinery/door/airlock/glass_external{
-	req_one_access = list(48)
-	},
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock/glass_external{
+	req_one_access = list(7,29)
+	},
 /turf/simulated/floor/tiled,
 /area/maintenance/shelter2)
 "Nq" = (
@@ -16197,6 +16258,22 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/airlock)
+"Nu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner/purple{
+	dir = 10
+	},
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "Telesci - Hall";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/outpost/research/hallway/mid)
 "Nv" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 9
@@ -18361,7 +18438,6 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/anomaly_analysis)
 "SN" = (
-/obj/effect/floor_decal/corner_oldtile/gray,
 /obj/machinery/alarm{
 	dir = 4;
 	pixel_x = -25
@@ -18423,12 +18499,15 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/exp_prep)
 "SU" = (
-/obj/effect/floor_decal/corner_oldtile/gray,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/blue{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/research_outpost{
+	c_tag = "Telesci - Storage";
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/research/longtermstorage)
@@ -19352,8 +19431,8 @@
 "Vg" = (
 /obj/item/weapon/pickaxe,
 /obj/structure/table/steel,
-/obj/item/device/binoculars,
 /obj/machinery/atmospherics/unary/vent_pump/on,
+/obj/item/weapon/storage/belt/utility,
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/storage)
 "Vh" = (
@@ -19482,7 +19561,7 @@
 /area/outpost/mining_main/break_room)
 "Vw" = (
 /obj/machinery/conveyor{
-	dir = 5;
+	dir = 8;
 	id = "mining_internal"
 	},
 /obj/machinery/mineral/input,
@@ -20501,6 +20580,13 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/outpost/research/eva)
+"XW" = (
+/obj/machinery/camera/network/research{
+	c_tag = "Secure Xenobiology Hallway";
+	network = list("Research","Toxins Test Area")
+	},
+/turf/simulated/floor/tiled/old_tile/gray,
+/area/rnd/xenobiology/hallway)
 "XY" = (
 /obj/machinery/artifact_analyser,
 /obj/machinery/light{
@@ -20785,6 +20871,13 @@
 /obj/machinery/portable_atmospherics/canister/air,
 /turf/simulated/floor/plating,
 /area/rnd/outpost/hallway)
+"YE" = (
+/obj/machinery/camera/network/research{
+	c_tag = "Xenosci Processing";
+	network = list("Research","Toxins Test Area")
+	},
+/turf/simulated/floor/tiled/steel,
+/area/outpost/research/eva)
 "YF" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/firstaid/regular,
@@ -38286,7 +38379,7 @@ KS
 KS
 SA
 Nb
-cb
+rI
 cb
 cb
 Xn
@@ -38934,7 +39027,7 @@ KS
 KS
 SA
 Nb
-cb
+rI
 cb
 cb
 tV
@@ -38975,7 +39068,7 @@ Rz
 sl
 sl
 XI
-lo
+sw
 lo
 yF
 UC
@@ -39324,7 +39417,7 @@ Zl
 Zl
 Zl
 If
-yW
+sK
 zB
 zB
 Gd
@@ -39445,7 +39538,7 @@ OL
 KS
 KS
 iS
-HX
+XW
 jw
 fE
 fE
@@ -39582,7 +39675,7 @@ KS
 KS
 SA
 Nb
-cb
+rI
 cb
 cb
 MA
@@ -40398,11 +40491,11 @@ KS
 SA
 Nb
 cb
-cb
+EC
 Jc
 LM
 tz
-cb
+EC
 Vd
 Nb
 SA
@@ -41911,7 +42004,7 @@ fi
 eT
 dM
 Ls
-Pn
+YE
 nU
 Zj
 OS
@@ -43653,7 +43746,7 @@ vh
 op
 op
 vh
-vJ
+mx
 vJ
 yR
 Kd
@@ -44336,7 +44429,7 @@ Da
 qE
 pA
 kj
-Bw
+Nu
 Rd
 Yj
 rc
@@ -44950,7 +45043,7 @@ zt
 vJ
 tW
 VX
-Wa
+Ae
 vJ
 VX
 ih

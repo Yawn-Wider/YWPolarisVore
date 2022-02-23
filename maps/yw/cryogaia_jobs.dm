@@ -273,11 +273,36 @@
 /datum/alt_title/talon_security
 	title = "Talon Security"
 
+/datum/job/talon_miner
+	title = "Talon Miner"
+	flag = TALMIN
+	department_flag = TALON
+	job_description = "The miner's job is to excavate ores and refine them for the Talon's use, as well as for trading."
+	supervisors = "the ITV Talon's captain"
+	outfit_type = /decl/hierarchy/outfit/job/talon_miner
+
+	offmap_spawn = TRUE
+	faction = "Station" //Required for SSjob to allow people to join as it
+	departments = list(DEPARTMENT_TALON)
+	total_positions = 1
+	spawn_positions = 1
+	selection_color = "#aaaaaa"
+	economic_modifier = 5
+	minimal_player_age = 14
+	pto_type = null
+	access = list(access_talon)
+	minimal_access = list(access_talon)
+	alt_titles = list("Talon Excavator" = /datum/alt_title/talon_excavator)
+
+/datum/alt_title/talon_excavator
+	title = "Talon Excavator"
+
+//////////////////////TALON OUTFITS//////////////////////
 
 /decl/hierarchy/outfit/job/talon_captain
 	name = OUTFIT_JOB_NAME("Talon Captain")
 
-	id_type = /obj/item/weapon/card/id/gold
+	id_type = /obj/item/weapon/card/id/talon/captain
 	id_slot = slot_wear_id
 	pda_type = null
 
@@ -293,22 +318,24 @@
 	name = OUTFIT_JOB_NAME("Talon Pilot")
 	id_pda_assignment = "Pilot"
 
+	id_type = /obj/item/weapon/card/id/talon/pilot
 	id_slot = slot_wear_id
 	pda_type = null
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_COMPREHENSIVE_SURVIVAL
 
 	l_ear = /obj/item/device/radio/headset/talon
 	shoes = /obj/item/clothing/shoes/black
-	uniform = /obj/item/clothing/under/rank/pilot1
+	uniform = /obj/item/clothing/under/rank/pilot1/no_webbing
 	suit = /obj/item/clothing/suit/storage/toggle/bomber/pilot
 	gloves = /obj/item/clothing/gloves/fingerless
 	glasses = /obj/item/clothing/glasses/fakesunglasses/aviator
+	uniform_accessories = list(/obj/item/clothing/accessory/storage/webbing/pilot1 = 1)
 
 /decl/hierarchy/outfit/job/talon_doctor
 	name = OUTFIT_JOB_NAME("Talon Doctor")
 	hierarchy_type = /decl/hierarchy/outfit/job
 
-	id_type = /obj/item/weapon/card/id/medical
+	id_type = /obj/item/weapon/card/id/talon/doctor
 	id_slot = slot_wear_id
 	pda_type = null
 
@@ -326,7 +353,7 @@
 	name = OUTFIT_JOB_NAME("Talon Security")
 	hierarchy_type = /decl/hierarchy/outfit/job
 
-	id_type = /obj/item/weapon/card/id/security
+	id_type = /obj/item/weapon/card/id/talon/officer
 	id_slot = slot_wear_id
 	pda_type = null
 	backpack_contents = list(/obj/item/weapon/handcuffs = 1)
@@ -344,7 +371,7 @@
 	name = OUTFIT_JOB_NAME("Talon Engineer")
 	hierarchy_type = /decl/hierarchy/outfit/job
 
-	id_type = /obj/item/weapon/card/id/engineering
+	id_type = /obj/item/weapon/card/id/talon/engineer
 	id_slot = slot_wear_id
 	pda_type = null
 	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
@@ -358,3 +385,21 @@
 	messenger_bag = /obj/item/weapon/storage/backpack/messenger/engi
 	uniform = /obj/item/clothing/under/rank/atmospheric_technician
 	belt = /obj/item/weapon/storage/belt/utility/atmostech
+
+/decl/hierarchy/outfit/job/talon_miner
+	name = OUTFIT_JOB_NAME("Talon Miner")
+	hierarchy_type = /decl/hierarchy/outfit/job
+
+	id_type = /obj/item/weapon/card/id/talon/miner
+	id_slot = slot_wear_id
+	pda_type = null
+	flags = OUTFIT_HAS_BACKPACK|OUTFIT_EXTENDED_SURVIVAL
+
+	l_ear = /obj/item/device/radio/headset/talon
+	shoes = /obj/item/clothing/shoes/boots/workboots
+	r_pocket = /obj/item/weapon/storage/bag/ore
+	l_pocket = /obj/item/weapon/tool/crowbar
+	uniform = /obj/item/clothing/under/rank/talon/basic
+	backpack = /obj/item/weapon/storage/backpack/talon
+	satchel_one = /obj/item/weapon/storage/backpack/satchel/talon
+	messenger_bag = /obj/item/weapon/storage/backpack/messenger/talon

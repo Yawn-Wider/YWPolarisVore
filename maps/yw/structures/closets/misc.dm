@@ -42,9 +42,12 @@
 		/obj/item/clothing/under/explorer,
 		/obj/item/clothing/suit/storage/hooded/explorer,
 		/obj/item/clothing/mask/gas/explorer,
+		/obj/item/weapon/storage/belt/explorer,
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
 		/obj/item/device/radio/headset/explorer,
+		/obj/item/device/radio/headset/explorer/alt,
+		/obj/item/weapon/cartridge/explorer,
 		/obj/item/device/flashlight,
 		/obj/item/device/gps/explorer,
 		/obj/item/weapon/storage/box/flare,
@@ -52,29 +55,29 @@
 		/obj/item/weapon/cell/device,
 		/obj/item/device/radio,
 		/obj/item/stack/marker_beacon/thirty,
-		/obj/item/device/cataloguer
-		)
+		/obj/item/weapon/material/knife/tacknife/survival,
+		/obj/item/weapon/material/knife/machete,
+		/obj/item/clothing/accessory/holster/machete,
+		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
+		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
+		/obj/item/device/cataloguer)
 
 /obj/structure/closet/secure_closet/explorer/Initialize()
 	if(prob(50))
-		starts_with += /obj/item/weapon/storage/backpack
+		starts_with += /obj/item/weapon/storage/backpack/explorer
 	else
-		starts_with += /obj/item/weapon/storage/backpack/satchel/norm
-	/* VOREStation Removal - Always give both
-	if(prob(75))
-		starts_with += /obj/item/weapon/material/knife/tacknife/survival
-	else
-		starts_with += /obj/item/weapon/material/knife/machete
-	*/ //VOREStation Removal End
+		starts_with += /obj/item/weapon/storage/backpack/satchel/explorer
+	if(prob(50))
+		starts_with += /obj/item/weapon/storage/backpack/dufflebag/explorer
 	return ..()
 
 //SAR Lockers
-
 /obj/structure/closet/secure_closet/sar
 	name = "search and rescue locker"
 	desc = "Supplies for a wilderness first responder."
 	closet_appearance = /decl/closet_appearance/secure_closet/medical
 	req_access = list(access_fieldmedic)
+
 	starts_with = list(
 		/obj/item/weapon/storage/backpack/dufflebag/emt,
 		/obj/item/weapon/storage/box/autoinjectors,
@@ -82,25 +85,39 @@
 		/obj/item/weapon/reagent_containers/glass/bottle/inaprovaline,
 		/obj/item/weapon/reagent_containers/glass/bottle/antitoxin,
 		/obj/item/weapon/storage/belt/medical/emt,
-		/obj/item/clothing/mask/gas,
+		/obj/item/clothing/mask/gas/explorer,
+		/obj/item/clothing/suit/storage/hooded/explorer/medic,
 		/obj/item/clothing/suit/storage/hooded/wintercoat/medical/sar,
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/device/radio/headset/sar,
-		/obj/item/weapon/cartridge/medical,
+		/obj/item/device/radio/headset/sar/alt,
+		/obj/item/weapon/cartridge/sar,
 		/obj/item/device/flashlight,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/clothing/glasses/hud/health,
 		/obj/item/device/healthanalyzer,
 		/obj/item/device/radio/off,
 		/obj/random/medical,
+		/obj/item/weapon/reagent_containers/food/snacks/liquidfood = 2,
+		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 2,
 		/obj/item/weapon/tool/crowbar,
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/weapon/storage/box/freezer,
 		/obj/item/clothing/accessory/storage/white_vest,
 		/obj/item/taperoll/medical,
-		/obj/item/device/gps,
+		/obj/item/device/gps/medical,
 		/obj/item/device/geiger,
-		/obj/item/bodybag/cryobag)
+		/obj/item/bodybag/cryobag,
+		/obj/item/device/cataloguer/compact)
+
+/obj/structure/closet/secure_closet/sar/Initialize()
+	if(prob(50))
+		starts_with += /obj/item/weapon/storage/backpack/medic
+	else
+		starts_with += /obj/item/weapon/storage/backpack/satchel/med
+	if(prob(50))
+		starts_with += /obj/item/weapon/storage/backpack/dufflebag/med
+	return ..()
 
 //Pilot Locker
 
@@ -114,16 +131,20 @@
 		/obj/item/clothing/head/pilot,
 		/obj/item/clothing/under/rank/pilot1,
 		/obj/item/clothing/suit/storage/toggle/bomber/pilot,
+		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/shoes/black,
 		/obj/item/clothing/gloves/fingerless,
+		/obj/item/device/radio/headset/pilot,
 		/obj/item/device/radio/headset/pilot/alt,
 		/obj/item/device/flashlight,
 		/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
+		/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
 		/obj/item/weapon/reagent_containers/food/drinks/cans/waterbottle,
 		/obj/item/weapon/storage/box/flare,
 		/obj/item/weapon/cell/device,
-		/obj/item/device/radio)
+		/obj/item/device/radio,
+		/obj/item/device/gps/explorer)
 
 /obj/structure/closet/secure_closet/pilot/Initialize()
 	if(prob(50))

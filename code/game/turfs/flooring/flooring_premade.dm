@@ -19,6 +19,16 @@
 	icon_state = "tealcarpet"
 	initial_flooring = /decl/flooring/carpet/tealcarpet
 
+/turf/simulated/floor/carpet/deco
+	name = "deco carpet"
+	icon_state = "decocarpet"
+	initial_flooring = /decl/flooring/carpet/deco
+	
+/turf/simulated/floor/carpet/retro
+	name = "retro carpet"
+	icon_state = "retrocarpet"
+	initial_flooring = /decl/flooring/carpet/retro
+
 // Legacy support for existing paths for blue carpet
 /turf/simulated/floor/carpet/blue
 	name = "blue carpet"
@@ -92,6 +102,7 @@
 	name = "grass patch"
 	icon = 'icons/turf/flooring/grass.dmi'
 	icon_state = "grass0"
+	can_dirty = FALSE //VOREStation Edit
 	initial_flooring = /decl/flooring/grass
 
 /turf/simulated/floor/tiled
@@ -105,12 +116,6 @@
 	icon = 'icons/turf/flooring/tiles_vr.dmi'
 	icon_state = "techmaint"
 	initial_flooring = /decl/flooring/tiling/new_tile/techmaint
-
-/turf/simulated/floor/tiled/monofloor
-	name = "floor"
-	icon = 'icons/turf/flooring/tiles_vr.dmi'
-	icon_state = "monofloor"
-	initial_flooring = /decl/flooring/tiling/new_tile/monofloor
 
 /turf/simulated/floor/tiled/techfloor
 	name = "floor"
@@ -394,12 +399,17 @@
 /turf/simulated/floor/tiled/external
 
 //**** Here lives snow ****
+// YW CHANGES: start
 
 /turf/simulated/floor/outdoors/snow
 	name = "snow"
-	icon = 'icons/turf/snow_new.dmi'
+	icon = 'icons/turf/snow_yw.dmi' //YWEdit
 	icon_state = "snow"
 	initial_flooring = /decl/flooring/snow
+	movement_cost = 2
+	turf_layers = list(
+		/turf/simulated/floor/outdoors/rocks/yw/snowy
+		)
 	var/list/crossed_dirs = list()
 	footstep_sounds = list("human" = list( //YW edit: Should provide proper snow stepping!
 		'sound/effects/footstep/snow1.ogg',
@@ -411,11 +421,12 @@
 /turf/simulated/floor/outdoors/snow/snow
 	name = "snow"
 	icon_state = "snow"
+	movement_cost = 4
 
 /turf/simulated/floor/outdoors/snow/snow/snow2
 	name = "snow"
-	icon_state = "snownew"
-	movement_cost = 4
+	icon_state = "snow2" //YWEdit
+	movement_cost = 2	
 	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
 
 /turf/simulated/floor/outdoors/snow/gravsnow
@@ -423,6 +434,9 @@
 	icon_state = "gravsnow"
 	initial_flooring = /decl/flooring/snow/gravsnow
 	movement_cost = 0
+
+/turf/simulated/floor/outdoors/snow/gravsnow/Entered() //Prevents runtimes
+	return
 
 /turf/simulated/floor/outdoors/snow/plating
 	name = "snowy plating"
@@ -436,25 +450,26 @@
 	initial_flooring = /decl/flooring/snow/plating/drift
 	movement_cost = 0
 
-#define FOOTSTEP_SPRITE_AMT 2
+//YW ADDITIONS: start
+/turf/simulated/floor/outdoors/rocks/yw/snowy
+	name = "snowy rocks"
+	desc = "Hard as a rock and cold as ice."
+	icon = 'icons/turf/outdoors_yw.dmi'
+	icon_state = "rocks_snow"
+//YW ADDITIONS: end
+//YW CHANGES: end
+// TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud
+/turf/simulated/floor/outdoors/snow/Entered(atom/A)
+	if(isliving(A))
+		var/mob/living/L = A
+		if(L.hovering) // Flying things shouldn't make footprints.
+			return ..()
+		var/mdir = "[A.dir]"
+		crossed_dirs[mdir] = 1
+		update_icon()
+	. = ..()
 
-/turf/snow/Entered(atom/A)
-    if(isliving(A) && !istype(A, /mob/living/simple_mob))
-        var/mdir = "[A.dir]"
-        if(crossed_dirs[mdir])
-            crossed_dirs[mdir] = min(crossed_dirs[mdir] + 1, FOOTSTEP_SPRITE_AMT)
-        else
-            crossed_dirs[mdir] = 1
-
-        update_icon()
-
-    . = ..()
-
-/turf/snow/update_icon()
-    cut_overlays()
-    for(var/d in crossed_dirs)
-        var/amt = crossed_dirs[d]
-
-        for(var/i in 1 to amt)
-            add_overlay(image(icon, "footprint[i]", text2num(d)))
-
+/turf/simulated/floor/outdoors/snow/update_icon()
+	..()
+	for(var/d in crossed_dirs)
+		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))

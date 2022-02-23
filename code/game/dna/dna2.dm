@@ -89,10 +89,6 @@ var/global/list/datum/dna/gene/dna_genes[0]
 // Used for genes that check for value rather than a binary on/off.
 #define GENE_ALWAYS_ACTIVATE 1
 
-// Skip checking if it's already active.
-// Used for genes that check for value rather than a binary on/off.
-#define GENE_ALWAYS_ACTIVATE 1
-
 /datum/dna
 	// READ-ONLY, GETS OVERWRITTEN
 	// DO NOT FUCK WITH THESE OR BYOND WILL EAT YOUR FACE
@@ -127,6 +123,7 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	// New stuff
 	var/species = SPECIES_HUMAN
 	var/list/body_markings = list()
+	var/list/body_markings_genetic = list()
 	var/list/body_descriptors = null
 	var/list/genetic_modifiers = list() // Modifiers with the MODIFIER_GENETIC flag are saved.  Note that only the type is saved, not an instance.
 
@@ -147,6 +144,8 @@ var/global/list/datum/dna/gene/dna_genes[0]
 	new_dna.custom_ask=custom_ask //VOREStaton Edit
 	new_dna.custom_whisper=custom_whisper //VOREStaton Edit
 	new_dna.custom_exclaim=custom_exclaim //VOREStaton Edit
+	var/list/body_markings_genetic = (body_markings - body_marking_nopersist_list)
+	new_dna.body_markings=body_markings_genetic.Copy()
 	for(var/b=1;b<=DNA_SE_LENGTH;b++)
 		new_dna.SE[b]=SE[b]
 		if(b<=DNA_UI_LENGTH)

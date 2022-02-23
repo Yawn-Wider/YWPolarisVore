@@ -10,6 +10,7 @@
 
 	language = LANGUAGE_SHADEKIN
 	assisted_langs = list()
+	num_alternate_languages = 3  //Otherwise they can't use/select other languages than Common and Shadekin
 	unarmed_types = list(/datum/unarmed_attack/stomp, /datum/unarmed_attack/kick, /datum/unarmed_attack/claws/shadekin, /datum/unarmed_attack/bite/sharp/shadekin)
 	rarity_value = 10	//INTERDIMENSIONAL FLUFFERS
 

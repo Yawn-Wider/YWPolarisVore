@@ -37,7 +37,7 @@
 	glass_name = "Antidepresant"
 	glass_desc = "A Bright red coktail, warm as a roaring chimney, and bright as a smile."
 
-#define ANTIDEPRESSANT_MESSAGE_DELAY 5*60*10
+#define YW_ANTIDEPRESSANT_MESSAGE_DELAY 5*60*10
 
 /datum/reagent/drink/antidepresant_yw/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -46,6 +46,6 @@
 		data = -1
 		to_chat(M, "<span class='warning'>You feel nothing...</span>")
 	else
-		if(world.time > data + ANTIDEPRESSANT_MESSAGE_DELAY)
+		if(world.time > data + YW_ANTIDEPRESSANT_MESSAGE_DELAY)
 			data = world.time
-			to_chat(M, "<span class='notice'>You feel soothed...</span>")
+			to_chat(M, "<b>You feel soothed...</b>")

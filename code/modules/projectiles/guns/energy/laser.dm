@@ -11,7 +11,7 @@
 	w_class = ITEMSIZE_LARGE
 	force = 10
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	matter = list(MAT_STEEL = 2000)
 	projectile_type = /obj/item/projectile/beam/midlaser
 	one_handed_penalty = 30
 
@@ -77,7 +77,7 @@
 	w_class = ITEMSIZE_LARGE
 	force = 15
 	origin_tech = list(TECH_COMBAT = 3, TECH_MAGNET = 2)
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
+	matter = list(MAT_STEEL = 2000)
 	projectile_type = /obj/item/projectile/beam/mininglaser
 	one_handed_penalty = 30
 
@@ -159,6 +159,7 @@
 	force = 5
 	slot_flags = SLOT_BELT
 	w_class = ITEMSIZE_NORMAL
+	unacidable = TRUE
 	projectile_type = /obj/item/projectile/beam
 	origin_tech = null
 	fire_delay = 10		//Old pistol
@@ -276,41 +277,6 @@
 	force = 12
 	accuracy = 0
 	scoped_accuracy = 20
-
-////////Laser Tag////////////////////
-
-/obj/item/weapon/gun/energy/lasertag
-	name = "laser tag gun"
-	item_state = "laser"
-	desc = "Standard issue weapon of the Imperial Guard"
-	origin_tech = list(TECH_COMBAT = 1, TECH_MAGNET = 2)
-	matter = list(DEFAULT_WALL_MATERIAL = 2000)
-	projectile_type = /obj/item/projectile/beam/lasertag/blue
-	cell_type = /obj/item/weapon/cell/device/weapon/recharge
-	battery_lock = 1
-	var/required_vest
-
-/obj/item/weapon/gun/energy/lasertag/special_check(var/mob/living/carbon/human/M)
-	if(ishuman(M))
-		if(!istype(M.wear_suit, required_vest))
-			to_chat(M, "<span class='warning'>You need to be wearing your laser tag vest!</span>")
-			return 0
-	return ..()
-
-/obj/item/weapon/gun/energy/lasertag/blue
-	icon_state = "bluetag"
-	item_state = "bluetag"
-	projectile_type = /obj/item/projectile/beam/lasertag/blue
-	required_vest = /obj/item/clothing/suit/bluetag
-
-/obj/item/weapon/gun/energy/lasertag/red
-	icon_state = "redtag"
-	item_state = "redtag"
-	projectile_type = /obj/item/projectile/beam/lasertag/red
-	required_vest = /obj/item/clothing/suit/redtag
-
-/obj/item/weapon/gun/energy/lasertag/omni
-	projectile_type = /obj/item/projectile/beam/lasertag/omni
 
 // Laser scattergun, proof of concept.
 

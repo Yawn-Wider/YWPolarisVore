@@ -124,11 +124,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/borealis2/outdoors/grounds/traderpad)
-"jv" = (
-/obj/effect/overlay/snow/floor,
-/obj/effect/floor_decal/snow/floor/edges2,
-/turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/traderpad)
 "jG" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full{
@@ -220,12 +215,10 @@
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/grounds/traderpad)
 "ni" = (
-/obj/structure/fans/tiny{
-	name = "Thermal Regulator Vent"
-	},
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_access = newlist()
 	},
+/obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/traderpad)
 "nw" = (
@@ -649,7 +642,7 @@
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 8
 	},
-/turf/simulated/floor/plating/snow/plating,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/traderpad)
 "Hg" = (
 /obj/effect/decal/cleanable/blood/drip,
@@ -708,13 +701,6 @@
 	id_tag = "trade_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
-"IL" = (
-/obj/effect/overlay/snow/floor,
-/obj/effect/floor_decal/snow/floor/edges2{
-	dir = 8
-	},
-/turf/simulated/floor/plating/snow/plating,
 /area/borealis2/outdoors/grounds/traderpad)
 "IR" = (
 /obj/structure/symbol/sa,
@@ -859,6 +845,10 @@
 	},
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
+"Py" = (
+/obj/effect/shuttle_landmark/automatic,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "PJ" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 4
@@ -16241,8 +16231,8 @@ jQ
 jQ
 jQ
 jQ
-IL
-IL
+jQ
+jQ
 Ha
 AI
 IF
@@ -16405,7 +16395,7 @@ yX
 yX
 yX
 yX
-jv
+EN
 AI
 IF
 Iz
@@ -16567,7 +16557,7 @@ yX
 yX
 yX
 yX
-jv
+EN
 AI
 IF
 Iz
@@ -23502,7 +23492,7 @@ IF
 IF
 IF
 IF
-IF
+Py
 IF
 IF
 IF

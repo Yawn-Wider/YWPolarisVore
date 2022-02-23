@@ -6,7 +6,7 @@
 	icon = 'icons/turf/walls.dmi'
 	icon_state = "riveted"
 	opacity = 1
-	density = 1
+	density = TRUE
 	alpha = 0
 	blocks_air = 0
 
@@ -24,7 +24,7 @@
 
 /turf/unsimulated/wall/planetary/Destroy()
 	SSplanets.removeTurf(src)
-	..()
+	return ..()
 
 /turf/unsimulated/wall/planetary/proc/set_temperature(var/new_temperature)
 	if(new_temperature == temperature)

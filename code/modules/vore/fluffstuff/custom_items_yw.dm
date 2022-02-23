@@ -87,7 +87,7 @@
 
 /obj/item/toy/bosunwhistle/fluff/strix/attack_self(mob/user as mob)
 	if(cooldown < world.time - 15)
-		user << "<span class='notice'>You blow on [src], creating an ear-splitting noise!</span>"
+		user << "<b>You blow on [src], creating an ear-splitting noise!</b>"
 		playsound(user, 'sound/misc/boatswain.ogg', 25, 1)
 		cooldown = world.time
 
@@ -157,7 +157,7 @@
 /obj/item/weapon/melee/goz_whitecane/attack_self(mob/user as mob)
 	on = !on
 	if(on)
-		user.visible_message("<span class='notice'>\The [user] extends the white cane.</span>",\
+		user.visible_message("<b>\The [user] extends the white cane.</b>",\
 		"<span class='warning'>You extend the white cane.</span>",\
 		"You hear an ominous click.")
 		icon_state = "goz_whitecane_1"
@@ -166,8 +166,8 @@
 		force = 5
 		attack_verb = list("smacked", "struck", "craked", "beaten")
 	else
-		user.visible_message("<span class='notice'>\The [user] collapses the white cane.</span>",\
-		"<span class='notice'>You collapse the white cane.</span>",\
+		user.visible_message("<b>\The [user] collapses the white cane.</b>",\
+		"<b>You collapse the white cane.</b>",\
 		"You hear a click.")
 		icon_state = "goz_whitecane_0"
 		item_state_slots = list(slot_r_hand_str = null, slot_l_hand_str = null)
@@ -187,7 +187,7 @@
 
 /obj/item/weapon/melee/goz_whitecane/attack(mob/M as mob, mob/user as mob)
 	if(user.a_intent == I_HELP)
-		user.visible_message("<span class='notice'>\The [user] has lightly tapped [M] on the ankle with their white cane!</span>")
+		user.visible_message("<b>\The [user] has lightly tapped [M] on the ankle with their white cane!</b>")
 		return
 	else
 		..()
@@ -606,13 +606,13 @@
 	icon_state = "implanter1_1"
 
 /obj/item/weapon/implanter/fluff/coda/remove_implant() //No way to remove this implant.
-	to_chat(usr, "<span class='notice'>It seems \the [imp] can't be removed from \the [src].</span>")
+	to_chat(usr, "<b>It seems \the [imp] can't be removed from \the [src].</b>")
 	return
 
 /obj/item/weapon/implanter/fluff/coda/attack()
 	..()
 	if(!imp) //After injection, the implanter poofs.
-		to_chat(usr, "<span class='notice'>\The [src] disentegrates after you use it!</span>")
+		to_chat(usr, "<b>\The [src] disentegrates after you use it!</b>")
 		qdel(src)
 
 /obj/item/weapon/implant/fluff/coda
@@ -630,7 +630,7 @@
 /obj/item/weapon/implant/fluff/coda/process()
 	if(implanted_in && (src.imp_in != implanted_in)) //If the implant is removed.
 		implanted_in.setBrainLoss(200)
-		visible_message("<span class='notice'>\The [src] shorts and sparks during removal, frying itself!</span>")
+		visible_message("<b>\The [src] shorts and sparks during removal, frying itself!</b>")
 		playsound(src.loc, "sparks", 50, 1)
 		STOP_PROCESSING(SSobj, src)
 		name = "melted implant"

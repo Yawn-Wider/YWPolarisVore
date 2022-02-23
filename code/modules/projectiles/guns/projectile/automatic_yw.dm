@@ -40,7 +40,7 @@
 
 /obj/item/weapon/gun/projectile/automatic/mg42/proc/toggle_cover(mob/user)
 	cover_open = !cover_open
-	user << "<span class='notice'>You [cover_open ? "open" : "close"] [src]'s cover.</span>"
+	user << "<b>You [cover_open ? "open" : "close"] [src]'s cover.</b>"
 	update_icon()
 	update_held_icon()
 

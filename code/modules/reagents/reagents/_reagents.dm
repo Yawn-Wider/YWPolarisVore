@@ -26,7 +26,7 @@
 	var/affects_dead = 0	// Does this chem process inside a corpse?
 	var/affects_robots = 0	// Does this chem process inside a Synth?
 	
-	var/allergen_type = GENERIC	// What potential allergens does this contain?
+	var/allergen_type		// What potential allergens does this contain?
 	var/allergen_factor = 1	// If the potential allergens are mixed and low-volume, they're a bit less dangerous. Needed for drinks because they're a single reagent compared to food which contains multiple seperate reagents.
 
 	var/cup_icon_state = null
@@ -48,12 +48,15 @@
 
 // This doesn't apply to skin contact - this is for, e.g. extinguishers and sprays. The difference is that reagent is not directly on the mob's skin - it might just be on their clothing.
 /datum/reagent/proc/touch_mob(var/mob/M, var/amount)
+	SEND_SIGNAL(M, COMSIG_REAGENTS_TOUCH, src, amount)
 	return
 
 /datum/reagent/proc/touch_obj(var/obj/O, var/amount) // Acid melting, cleaner cleaning, etc
+	SEND_SIGNAL(O, COMSIG_REAGENTS_TOUCH, src, amount)
 	return
 
 /datum/reagent/proc/touch_turf(var/turf/T, var/amount) // Cleaner cleaning, lube lubbing, etc, all go here
+	SEND_SIGNAL(T, COMSIG_REAGENTS_TOUCH, src, amount)
 	return
 
 /datum/reagent/proc/on_mob_life(var/mob/living/carbon/M, var/alien, var/datum/reagents/metabolism/location) // Currently, on_mob_life is called on carbons. Any interaction with non-carbon mobs (lube) will need to be done in touch_mob.
@@ -168,20 +171,22 @@
 		if(M.species.allergen_reaction & AG_TOX_DMG)
 			M.adjustToxLoss(damage_severity)
 		if(M.species.allergen_reaction & AG_OXY_DMG)
-			M.adjustOxyLoss(damage_severity)
+			M.adjustOxyLoss(damage_severity*1.5) //VOREStation Edit
 			if(prob(2.5*disable_severity))
 				M.emote(pick("cough","gasp","choke"))
 		if(M.species.allergen_reaction & AG_EMOTE)
 			if(prob(2.5*disable_severity))	//this has a higher base chance, but not *too* high
 				M.emote(pick("pale","shiver","twitch"))
 		if(M.species.allergen_reaction & AG_PAIN)
-			M.adjustHalLoss(disable_severity)
+			M.adjustHalLoss(disable_severity*2) //VOREStation Edit
 		if(M.species.allergen_reaction & AG_WEAKEN)
 			M.Weaken(disable_severity)
 		if(M.species.allergen_reaction & AG_BLURRY)
 			M.eye_blurry = max(M.eye_blurry, disable_severity)
 		if(M.species.allergen_reaction & AG_SLEEPY)
 			M.drowsyness = max(M.drowsyness, disable_severity)
+		if(M.species.allergen_reaction & AG_CONFUSE) //VOREStation Addition
+			M.Confuse(disable_severity/4) //VOREStation Addition
 	remove_self(removed)
 	return
 
@@ -235,6 +240,10 @@
 
 /datum/reagent/proc/reaction_mob(var/mob/target)
 	touch_mob(target)
+
+/// Called by [/datum/reagents/proc/conditional_update]
+/datum/reagent/proc/on_update(atom/A)
+	return
 
 //--YW--//
 // Called when reagents are removed from a container, most likely after metabolizing in a mob

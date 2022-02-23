@@ -53,8 +53,11 @@
 /datum/gear/plushie/New()
 	..()
 	var/list/plushies = list()
-	for(var/plushie in subtypesof(/obj/item/toy/plushie/) - /obj/item/toy/plushie/therapy)
-		var/obj/item/toy/plushie/plushie_type = plushie
+	var/list/blacklisted_types = list()
+	// look if theres a better way to do this im all ears
+	blacklisted_types += subtypesof(/obj/item/toy/plushie/therapy)
+	blacklisted_types += subtypesof(/obj/item/toy/plushie/fluff)
+	for(var/obj/item/toy/plushie/plushie_type as anything in subtypesof(/obj/item/toy/plushie) - blacklisted_types)
 		plushies[initial(plushie_type.name)] = plushie_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(plushies))
 
@@ -66,8 +69,7 @@
 /datum/gear/figure/New()
 	..()
 	var/list/figures = list()
-	for(var/figure in typesof(/obj/item/toy/figure/) - /obj/item/toy/figure)
-		var/obj/item/toy/figure/figure_type = figure
+	for(var/obj/item/toy/figure/figure_type as anything in subtypesof(/obj/item/toy/figure))
 		figures[initial(figure_type.name)] = figure_type
 	gear_tweaks += new/datum/gear_tweak/path(sortAssoc(figures))
 
@@ -76,6 +78,7 @@
 	description = "Choose from a number of toys."
 	path = /obj/item/toy/
 
+/* VOREStation removal
 /datum/gear/toy/New()
 	..()
 	var/toytype = list()
@@ -86,7 +89,7 @@
 	toytype["Magic 8 Ball"] = /obj/item/toy/eight_ball
 	toytype["Magic Conch shell"] = /obj/item/toy/eight_ball/conch
 	gear_tweaks += new/datum/gear_tweak/path(toytype)
-
+*/
 
 /datum/gear/flask
 	display_name = "flask"

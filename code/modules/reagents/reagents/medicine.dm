@@ -8,7 +8,7 @@
 	reagent_state = LIQUID
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE * 2
-	metabolism = REM * 0.5
+	metabolism = REM * 0.2
 	scannable = 1
 
 /datum/reagent/inaprovaline/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -24,9 +24,9 @@
 	reagent_state = LIQUID
 	color = "#00BFFF"
 	overdose = REAGENTS_OVERDOSE * 2
-	metabolism = REM * 0.5
+	metabolism = REM * 0.2
 	scannable = 1
-	touch_met = REM * 0.75
+	touch_met = REM * 0.3
 	can_overdose_touch = TRUE
 
 /datum/reagent/inaprovaline/topical/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
@@ -60,7 +60,7 @@
 
 /datum/reagent/bicaridine/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
-	var/wound_heal = 1.5 * removed
+	var/wound_heal = 2.5 * removed
 	M.eye_blurry = min(M.eye_blurry + wound_heal, 250)
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
@@ -240,7 +240,8 @@
 /datum/reagent/carthatoline/overdose(var/mob/living/carbon/M, var/alien, var/removed)
 	M.adjustHalLoss(2)
 	var/mob/living/carbon/human/H = M
-	H.internal_organs_by_name[O_STOMACH].take_damage(removed * 2) // Causes stomach contractions, makes sense for an overdose to make it much worse.
+	var/obj/item/organ/internal/stomach/st = H.internal_organs_by_name[O_STOMACH]
+	st?.take_damage(removed * 2) // Causes stomach contractions, makes sense for an overdose to make it much worse.
 
 /datum/reagent/dexalin
 	name = "Dexalin"
@@ -345,15 +346,16 @@
 		M.adjustToxLoss(3 * removed)
 
 /datum/reagent/tricorlidaze/touch_obj(var/obj/O)
+	..()
 	if(istype(O, /obj/item/stack/medical/bruise_pack) && round(volume) >= 5)
 		var/obj/item/stack/medical/bruise_pack/C = O
 		var/packname = C.name
-		var/to_produce = min(C.amount, round(volume / 5))
+		var/to_produce = min(C.get_amount(), round(volume / 5))
 
 		var/obj/item/stack/medical/M = C.upgrade_stack(to_produce)
 
-		if(M && M.amount)
-			holder.my_atom.visible_message("<span class='notice'>\The [packname] bubbles.</span>")
+		if(M && M.get_amount())
+			holder.my_atom.visible_message("<b>\The [packname]</b> bubbles.")
 			remove_self(to_produce * 5)
 
 /datum/reagent/cryoxadone
@@ -619,7 +621,8 @@
 	..()
 	if(prob(5)) // 1 in 20
 		var/mob/living/carbon/human/H = M
-		H.internal_organs_by_name[O_HEART].take_damage(1)
+		var/obj/item/organ/internal/heart/ht = H.internal_organs_by_name[O_HEART]
+		ht?.take_damage(1)
 		to_chat(M, "<span class='warning'>Huh... Is this what a heart attack feels like?</span>")
 
 /datum/reagent/alkysine
@@ -736,7 +739,7 @@
 	overdose = REAGENTS_OVERDOSE * 0.5
 	overdose_mod = 1.5
 	scannable = 1
-	var/repair_strength = 3
+	var/repair_strength = 5
 
 /datum/reagent/myelamine/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	if(alien == IS_DIONA)
@@ -1270,15 +1273,16 @@
 	M.add_chemical_effect(CE_PAINKILLER, 20 * M.species.chem_strength_pain) // 5 less than paracetamol.
 
 /datum/reagent/spacomycaze/touch_obj(var/obj/O)
+	..()
 	if(istype(O, /obj/item/stack/medical/crude_pack) && round(volume) >= 1)
 		var/obj/item/stack/medical/crude_pack/C = O
 		var/packname = C.name
-		var/to_produce = min(C.amount, round(volume))
+		var/to_produce = min(C.get_amount(), round(volume))
 
 		var/obj/item/stack/medical/M = C.upgrade_stack(to_produce)
 
-		if(M && M.amount)
-			holder.my_atom.visible_message("<span class='notice'>\The [packname] bubbles.</span>")
+		if(M && M.get_amount())
+			holder.my_atom.visible_message("<b>\The [packname]</b> bubbles.")
 			remove_self(to_produce)
 
 /datum/reagent/sterilizine
@@ -1306,10 +1310,12 @@
 		M.adjustToxLoss(2 * removed)
 
 /datum/reagent/sterilizine/touch_obj(var/obj/O)
+	..()
 	O.germ_level -= min(volume*20, O.germ_level)
 	O.was_bloodied = null
 
 /datum/reagent/sterilizine/touch_turf(var/turf/T)
+	..()
 	T.germ_level -= min(volume*20, T.germ_level)
 	for(var/obj/item/I in T.contents)
 		I.was_bloodied = null
@@ -1323,6 +1329,7 @@
 	//VOREstation edit end	
 
 /datum/reagent/sterilizine/touch_mob(var/mob/living/L, var/amount)
+	..()
 	if(istype(L))
 		if(istype(L, /mob/living/simple_mob/slime))
 			var/mob/living/simple_mob/slime/S = L
@@ -1523,3 +1530,22 @@
 	metabolism = REM * 0.002
 	overdose = REAGENTS_OVERDOSE * 0.25
 	scannable = 1
+
+/datum/reagent/earthsblood
+	name = "Earthsblood"
+	id = "earthsblood"
+	description = "A rare plant extract with immense, almost magical healing capabilities. Induces a potent psychoactive state, damaging neurons with prolonged use."
+	taste_description = "honey and sunlight"
+	reagent_state = LIQUID
+	color = "#ffb500"
+	overdose = REAGENTS_OVERDOSE * 0.50
+	
+
+/datum/reagent/earthsblood/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
+	M.heal_organ_damage (4 * removed, 4 * removed)
+	M.adjustOxyLoss(-10 * removed)
+	M.adjustToxLoss(-4 * removed)
+	M.adjustCloneLoss(-2 * removed)
+	M.druggy = max(M.druggy, 20)
+	M.hallucination = max(M.hallucination, 3)
+	M.adjustBrainLoss(1 * removed) //your life for your mind. The Earthmother's Tithe.

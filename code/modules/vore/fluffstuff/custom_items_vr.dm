@@ -173,8 +173,8 @@
 	item_state = "joanariamob"
 	origin_tech = "materials=7"
 	force = 15
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	hitsound = 'sound/weapons/bladeslice.ogg'
 
 
@@ -554,7 +554,7 @@
 	//He's dead, jim
 	if((state == 1) && owner && (owner.stat == DEAD))
 		update_state(2)
-		audible_message("<span class='warning'>The [name] begins flashing red.</span>")
+		visible_message("<span class='warning'>The [name] begins flashing red.</span>")
 		sleep(30)
 		visible_message("<span class='warning'>The [name] shatters into dust!</span>")
 		if(owner_c)
@@ -626,7 +626,7 @@
 	force = 5.0
 	throwforce = 7.0
 	w_class = ITEMSIZE_SMALL
-	matter = list(DEFAULT_WALL_MATERIAL = 50)
+	matter = list(MAT_STEEL = 50)
 	attack_verb = list("bludgeoned", "whacked", "disciplined", "thrashed")
 
 /obj/item/weapon/cane/fluff/tasald
@@ -645,7 +645,7 @@
     force = 1.0
     throwforce = 2.0
     w_class = ITEMSIZE_SMALL
-    matter = list(DEFAULT_WALL_MATERIAL = 50)
+    matter = list(MAT_STEEL = 50)
     attack_verb = list("sparkled", "whacked", "twinkled", "radiated", "dazzled", "zapped")
     hitsound = 'sound/weapons/sparkle.ogg'
     var/last_use = 0
@@ -769,11 +769,12 @@
 	icon_state = "dragor_dot"
 	w_class = ITEMSIZE_SMALL
 
-	attack_self(mob/user as mob)
-		if(user.ckey == "pontifexminimus")
-			user.verbs |= /mob/living/carbon/human/proc/shapeshifter_select_gender
-		else
-			return
+/obj/item/weapon/fluff/dragor_dot/attack_self(mob/user as mob)
+	if(user.ckey == "pontifexminimus")
+		user.verbs |= /mob/living/carbon/human/proc/shapeshifter_select_gender
+	else
+		return
+
 //LuminescentRing: Briana Moore
 /obj/item/weapon/storage/backpack/messenger/black/fluff/briana
 	name = "2561 graduation bag"
@@ -932,8 +933,8 @@
 	icon_state = "stunstaff00"
 	var/base_icon = "stunstaff"
 	force = 5
-	sharp = 0
-	edge = 0
+	sharp = FALSE
+	edge = FALSE
 	throwforce = 7
 	w_class = ITEMSIZE_HUGE
 	origin_tech = list(TECH_COMBAT = 2)
@@ -1028,8 +1029,8 @@
 	var/active_throwforce
 	var/active_w_class
 	var/active_embed_chance = 0
-	sharp = 0
-	edge = 0
+	sharp = FALSE
+	edge = FALSE
 
 /obj/item/weapon/melee/fluffstuff/proc/activate(mob/living/user)
 	if(active)
@@ -1038,8 +1039,8 @@
 	embed_chance = active_embed_chance
 	force = active_force
 	throwforce = active_throwforce
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	w_class = active_w_class
 	playsound(src, 'sound/weapons/sparkle.ogg', 50, 1)
 
@@ -1073,13 +1074,6 @@
 	add_fingerprint(user)
 	return
 
-/obj/item/weapon/melee/fluffstuff/suicide_act(mob/user)
-	var/tempgender = "[user.gender == MALE ? "he's" : user.gender == FEMALE ? "she's" : "they are"]"
-	if(active)
-		user.visible_message(pick("<span class='danger'>\The [user] is slitting \his stomach open with \the [src]! It looks like [tempgender] trying to commit seppuku.</span>",\
-			"<span class='danger'>\The [user] is falling on \the [src]! It looks like [tempgender] trying to commit suicide.</span>"))
-		return (BRUTELOSS|FIRELOSS)
-
 /obj/item/weapon/melee/fluffstuff/wolfgirlsword
 	name = "Wolfgirl Sword Replica"
 	desc = "A replica of a large, scimitar-like sword with a dull edge. Ceremonial... until it isn't."
@@ -1111,8 +1105,8 @@
 
 	..()
 	attack_verb = list("attacked", "slashed", "stabbed", "sliced", "torn", "ripped", "diced", "cut")
-	sharp = 1
-	edge = 1
+	sharp = TRUE
+	edge = TRUE
 	icon_state = "[active_state]_sharp"
 	damtype = BRUTE
 
@@ -1369,3 +1363,96 @@
 	//brand = "\improper Professional 120"
 	w_class = ITEMSIZE_TINY
 	starts_with = list(/obj/item/clothing/mask/smokable/cigarette = 7)
+
+//Ashling - Antoinette deKaultieste
+/obj/item/weapon/material/knife/machete/hatchet/unathiknife/fluff/antoinette
+	name = "sawtooth ritual knife"
+	desc = "A mostly decorative knife made from thin ceramic and toothed with large black fangs. Printed on the flat is an eight-armed cross, like an asterisk with an extra stroke, ringed by a calligraphy-style crescent."
+	attack_verb = list("mauled", "bit", "sawed", "butchered")
+	dulled = 1
+	default_material = "glass"
+
+
+//Ashling - Antoinette deKaultieste
+/obj/item/clothing/accessory/storage/ritualharness/fluff/antoinette
+	name = "silk knife loops"
+	desc = "A clip-on pair of pouched loops made from surprisingly sturdy silk. Made for holding knives and small vials in a pinch."
+	icon_state = "unathiharness1"
+	slots = 2
+
+/obj/item/weapon/reagent_containers/glass/bottle/poppy
+	name = "poppy flour bottle"
+	desc = "A small bottle of finely ground poppyseed and mixed dried berries."
+	icon = 'icons/obj/chemical.dmi'
+	icon_state = "bottle3"
+	prefill = list("bicaridine" = 30, "nutriment" = 30)
+
+/obj/item/clothing/accessory/storage/ritualharness/fluff/antoinette/Initialize()
+	. = ..()
+	hold.max_storage_space = ITEMSIZE_COST_SMALL * 2
+	hold.can_hold = list(/obj/item/weapon/material/knife, /obj/item/weapon/reagent_containers/glass/bottle)
+
+	new /obj/item/weapon/material/knife/machete/hatchet/unathiknife/fluff/antoinette(hold)
+	new /obj/item/weapon/reagent_containers/glass/bottle/poppy(hold)
+
+
+//Hunterbirk - Amaryll
+//This is a 'technical item' which basically is meant to represent rippiing things up with bare claws.
+/obj/item/weapon/surgical/scalpel/amaryll_claws
+	name = "Amaryll's Claws"
+	desc = "This doesn't quite look like what it really is."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "claws"
+	drop_sound = null
+	pickup_sound = null
+	origin_tech = null
+	matter = null
+
+//Coolcrow420 - Jade Davis
+/obj/item/weapon/stamp/fluff/jade_horror
+	name = "Council of Mid Horror rubber stamp"
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "stamp-midhorror"
+	stamptext = "This paper has been certified by The Council of Mid Horror"
+
+//thedavestdave Lucky
+///I know this is pretty bodgey but if it stupid and it works it isn't stupid
+/obj/item/clothing/suit/storage/hooded/explorer/lucky
+	icon = 'icons/vore/custom_clothes_vr.dmi'
+	icon_state = "luck"
+	icon_override = 'icons/vore/custom_clothes_vr.dmi'
+	item_state = "luck"
+	name = "Lucky's armor"
+	desc = "A chain mail suit with a badly drawn one eared cat on the front."
+
+
+/obj/item/device/modkit_conversion/crusader_luck
+    skip_content_check = TRUE
+    name = "Lucky's armor"
+    desc = "A chain mail suit with a badly drawn one eared cat on the front."
+    icon = 'icons/vore/custom_items_vr.dmi'
+    icon_state = "modkit"
+    from_suit = /obj/item/clothing/suit/storage/hooded/explorer
+    to_suit = /obj/item/clothing/suit/storage/hooded/explorer/lucky
+
+//RevolverEloise - Revolver Eloise
+/obj/item/weapon/sword/fluff/revolver
+	name = "Catnip"
+	desc = "A steel claymore with what appears to be a teppi engraved into the hilt and a finely forged metal cuboid for a pommel. The blade is honed and balanced to an unusually high degree and has clearly been meticulously cared for."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "revclaymore"
+	icon_override = 'icons/vore/custom_items_vr.dmi'
+	item_state = "revclaymoremob"
+	force = 1
+	sharp = TRUE
+	edge = TRUE
+
+//PastelPrinceDan - Kiyoshi/Masumi Maki
+/obj/item/toy/plushie/fluff/slimeowshi
+	name = "Slime-Cat Research Director plushie"
+	desc = "An adorable stuffed toy that resembles a slime. It's pink, and has little cat ears, as well as a tail! Atop its head is a small beret with a Research Director's insignia."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "kimeowshi"
+	attack_verb = list("blorbled", "slimed", "absorbed", "glomped")
+	gender = PLURAL // this seems like a good idea but probably prone to changing. todo: ask dan
+	// the only reason this thought is relevant because the base slimeplush has its gender set to female

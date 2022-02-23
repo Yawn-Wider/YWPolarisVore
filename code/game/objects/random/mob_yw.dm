@@ -6,4 +6,4 @@
 
 /obj/random/ce_pet/item_to_spawn()
 	return pick(prob(50);/mob/living/simple_mob/animal/passive/bird/parrot/poly,
-				prob(50);/mob/living/simple_mob/animal/passive/snake/noodle)
+				prob(50);/mob/living/simple_mob/animal/passive/snake/python/noodle)

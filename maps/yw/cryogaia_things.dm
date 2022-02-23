@@ -58,15 +58,21 @@
 /obj/effect/ceiling
 	invisibility = 101 // nope cant see this
 	anchored = 1
+	can_atmos_pass = ATMOS_PASS_PROC
 
-/obj/effect/ceiling/CheckExit(atom/movable/O as mob|obj, turf/target as turf)
-	if(target && target.z > src.z)
-		return FALSE // Block exit from our turf to above
+/obj/effect/ceiling/CanZASPass(turf/T, is_zone)
+	if(T == GetAbove(src))
+		return FALSE // Keep your air up there, buddy
 	return TRUE
 
-/obj/effect/ceiling/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
-	if(mover && mover.z > src.z)
-		return FALSE // Block entry from above to our turf
+/obj/effect/ceiling/CanPass(atom/movable/mover, turf/target)
+	if(target == GetAbove(src))
+		return FALSE
+	return TRUE
+
+/obj/effect/ceiling/Uncross(atom/movable/mover, turf/target)
+	if(target == GetAbove(src))
+		return FALSE
 	return TRUE
 
 //
@@ -109,7 +115,7 @@
 /obj/machinery/portable_atmospherics/powered/scrubber/huge/stationary/tram/powered()
 	return TRUE // Always be powered
 
-//Chemistry 'chemavator'
+/* copy of code in another file /Chemistry 'chemavator'
 /obj/machinery/smartfridge/chemistry/chemvator
 	name = "\improper Smart Chemavator - Upper"
 	desc = "A refrigerated storage unit for medicine and chemical storage. Now sporting a fancy system of pulleys to lift bottles up and down."
@@ -131,23 +137,24 @@
 		item_records = attached.item_records
 	else
 		to_chat(world,"<span class='danger'>[src] at [x],[y],[z] cannot find the unit above it!</span>")
+	*/
 
 
-/obj/machinery/smartfridge/plantvator
+/obj/machinery/smartfridge/produce/plantvator
 	name = "\improper Smart plantavator - Upper"
 	desc = "A refrigerated storage unit for Food and plant storage. Now sporting a fancy system of pulleys to lift bottles up and down."
-	var/obj/machinery/smartfridge/plantvator/attached
+	var/obj/machinery/smartfridge/produce/plantvator/attached
 
-/obj/machinery/smartfridge/plantvator/down/Destroy()
+/obj/machinery/smartfridge/produce/plantvator/down/Destroy()
 	attached = null
 	return ..()
 
-/obj/machinery/smartfridge/plantvator/down
+/obj/machinery/smartfridge/produce/plantvator/down
 	name = "\improper Smart Plantavator - Lower"
 
-/obj/machinery/smartfridge/plantvator/down/Initialize()
+/obj/machinery/smartfridge/produce/plantvator/down/Initialize()
 	. = ..()
-	var/obj/machinery/smartfridge/plantvator/above = locate(/obj/machinery/smartfridge/plantvator,get_zstep(src,UP))
+	var/obj/machinery/smartfridge/produce/plantvator/above = locate(/obj/machinery/smartfridge/produce/plantvator,get_zstep(src,UP))
 	if(istype(above))
 		above.attached = src
 		attached = above
@@ -198,7 +205,7 @@
 		despawn_occupant(user)
 
 // Tram arrival point landmarks and datum
-var/global/list/latejoin_tram   = list()
+// defined in another file var/global/list/latejoin_tram   = list()
 
 /obj/effect/landmark/tram
 	name = "JoinLateTram"
@@ -351,7 +358,7 @@ var/global/list/latejoin_tram   = list()
 //Freezable Airlock Door
 /obj/machinery/door/airlock/glass_external/freezable
 	maxhealth = 600
-	var/frozen = 0
+	var/frozen = FALSE
 	var/freezing = 0 //see process().
 	var/deiceTools[0]
 	var/nextWeatherCheck
@@ -415,20 +422,21 @@ var/global/list/latejoin_tram   = list()
 		to_chat(user, "<span class='notice'>You finish chipping the ice off \the [src]</span>")
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/unFreeze()
-	frozen = 0
+	frozen = FALSE
 	update_icon()
 	return
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/freeze()
-	frozen = 1
+	frozen = TRUE
 	update_icon()
 	return
 
 /obj/machinery/door/airlock/glass_external/freezable/update_icon()
 	..()
 	if(frozen)
-		overlays += image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock")
-	return
+		add_overlay(image(icon = 'icons/turf/overlays.dmi', icon_state = "snowairlock"), priority = TRUE,)
+	if(!frozen)
+		cut_overlays(priority = TRUE)
 
 /obj/machinery/door/airlock/glass_external/freezable/proc/handleFreezeUnfreeze()
 
@@ -489,15 +497,6 @@ var/global/list/latejoin_tram   = list()
 // Used at centcomm for the elevator
 /obj/machinery/cryopod/robot/door/dorms
 	spawnpoint_type = /datum/spawnpoint/tram
-
-//Dance pole
-/obj/structure/dancepole
-	name = "dance pole"
-	desc = "Engineered for your entertainment"
-	icon = 'icons/obj/objects_vr.dmi'
-	icon_state = "dancepole"
-	density = 0
-	anchored = 1
 
 /obj/structure/dancepole/attackby(var/obj/item/O as obj, var/mob/user as mob)
 	if(O.is_wrench())
@@ -581,7 +580,7 @@ var/global/list/latejoin_tram   = list()
 	anchored = TRUE
 	catalogue_data = list(/datum/category_item/catalogue/material/trail_blazer)
 
-obj/machinery/trailblazer/Initialize()
+/obj/machinery/trailblazer/Initialize()
 	randomize_color()
 	return ..()
 

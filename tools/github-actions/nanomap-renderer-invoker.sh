@@ -6,8 +6,7 @@ map_files=(
     "./maps/yw/cryogaia-04-maintenance.dmm"
     "./maps/yw/cryogaia-05-main.dmm"
     "./maps/yw/cryogaia-06-upper.dmm"
-    "./maps/offmap_vr/talon/talon1.dmm"
-    "./maps/offmap_vr/talon/talon2.dmm"
+    "./maps/offmap_vr/talon/talon_v2.dmm"
 )
 
 tools/github-actions/nanomap-renderer minimap -w 2240 -h 2240 "${map_files[@]}"
@@ -15,8 +14,7 @@ tools/github-actions/nanomap-renderer minimap -w 2240 -h 2240 "${map_files[@]}"
 # Move and rename files so the game understands them
 cd "data/nanomaps"
 
-mv "talon1_nanomap_z1.png" "cryogaia_nanomap_z13.png"
-mv "talon2_nanomap_z1.png" "cryogaia_nanomap_z14.png"
+mv "talon_v2_nanomap_z1.png" "cryogaia_nanomap_z13.png"
 mv "cryogaia-02-mining_nanomap_z1.png" "cryogaia_nanomap_z2.png"
 mv "cryogaia-03-transit_nanomap_z1.png" "cryogaia_nanomap_z3.png"
 mv "cryogaia-04-maintenance_nanomap_z1.png" "cryogaia_nanomap_z4.png"

@@ -204,6 +204,9 @@
 /area/borealis2/outdoors/grounds/checkpoint)
 "aB" = (
 /obj/machinery/computer/ship/helm,
+/obj/structure/panic_button{
+	pixel_x = -30
+	},
 /turf/simulated/floor/tiled,
 /area/shuttle/excursion)
 "aC" = (
@@ -1603,14 +1606,10 @@
 /turf/simulated/floor/plating/snow/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
 "dJ" = (
-/obj/structure/railing/grey{
-	dir = 1
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 8
 	},
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/tiled/cryogaia/cryogaia,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "dK" = (
 /obj/structure/cable/green{
@@ -3961,6 +3960,10 @@
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/excursion)
+"iG" = (
+/obj/machinery/camera/network/civilian,
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
 "iH" = (
 /obj/machinery/door/airlock/glass_mining{
 	name = "Offplanet Mining Operations"
@@ -4705,7 +4708,7 @@
 "kd" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/device/instrument/harmonica,
+/obj/item/instrument/harmonica,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "ke" = (
@@ -4769,12 +4772,9 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "kl" = (
-/obj/structure/railing/grey{
-	dir = 4
-	},
-/obj/effect/overlay/snow/floor,
-/turf/simulated/floor/tiled/cryogaia/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
+/obj/structure/sign/painting/public,
+/turf/simulated/wall,
+/area/civilian/atrium/upper)
 "km" = (
 /obj/item/device/geiger/wall{
 	dir = 8;
@@ -4799,6 +4799,10 @@
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/exploration,
 /obj/item/clothing/head/helmet/space/void/exploration,
+/obj/machinery/camera/network/exploration{
+	c_tag = "Exploration Equipment North";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "ko" = (
@@ -5399,6 +5403,9 @@
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 4
 	},
+/obj/machinery/camera/network/exploration{
+	c_tag = "Exploration Lobby"
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "lB" = (
@@ -5571,12 +5578,6 @@
 /obj/structure/ladder,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/cryogaia/station/ert_arrival)
-"lV" = (
-/obj/machinery/door/airlock/glass_external/freezable{
-	req_one_access = list()
-	},
-/turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/southeast)
 "lW" = (
 /obj/structure/table/woodentable,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -6600,6 +6601,7 @@
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 4
 	},
+/obj/machinery/camera/network/mining,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "ov" = (
@@ -7034,7 +7036,7 @@
 /area/constructionsite/medical/upper)
 "pV" = (
 /obj/structure/table/woodentable,
-/obj/item/device/instrument/trombone,
+/obj/item/instrument/trombone,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "pW" = (
@@ -7288,6 +7290,27 @@
 /obj/machinery/light,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
+"rB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/effect/floor_decal/corner_oldtile/gray{
+	dir = 8
+	},
+/obj/effect/floor_decal/corner_oldtile/gray{
+	dir = 1
+	},
+/obj/machinery/camera/network/exploration{
+	c_tag = "Exploration Hall";
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "rC" = (
 /obj/structure/window/reinforced{
 	dir = 1
@@ -7410,6 +7433,7 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 4
 	},
+/obj/machinery/camera/network/civilian,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "sr" = (
@@ -8004,6 +8028,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
+"vH" = (
+/obj/structure/panic_button{
+	pixel_y = -31
+	},
+/turf/simulated/shuttle/floor/yellow,
+/area/shuttle/belter)
 "vJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -8090,7 +8120,7 @@
 /area/constructionsite/cryogaia/upper)
 "wb" = (
 /obj/structure/table/woodentable,
-/obj/item/device/instrument/eguitar,
+/obj/item/instrument/eguitar,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "wd" = (
@@ -8187,6 +8217,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northwest)
+"wI" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "Monastery Top Rec Room";
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/chapel/monastery/upper)
 "wJ" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
@@ -8234,6 +8271,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/borealis2/elevator/medupper)
+"wV" = (
+/obj/machinery/camera/autoname{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
 "wW" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -8701,6 +8744,7 @@
 /obj/machinery/camera/network/civilian{
 	dir = 1
 	},
+/obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "zx" = (
@@ -8846,7 +8890,7 @@
 /area/medical/medbayupper)
 "Aj" = (
 /obj/structure/table/woodentable,
-/obj/item/device/instrument/accordion,
+/obj/item/instrument/accordion,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "Al" = (
@@ -9991,6 +10035,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"Gt" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "Gv" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 6
@@ -10127,6 +10177,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"Hk" = (
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/machinery/camera/network/mining,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/hallway/primary/upper/south)
 "Hm" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -10134,9 +10191,8 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "Hs" = (
-/obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/industrial/warning/dust/corner,
-/turf/simulated/floor/tiled/cryogaia/cryogaia,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "Hu" = (
 /obj/machinery/light,
@@ -10331,7 +10387,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
 	},
-/obj/item/device/instrument/violin,
+/obj/item/instrument/violin,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "IH" = (
@@ -10467,6 +10523,9 @@
 "Jr" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/effect/landmark{
+	name = "vinestart"
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
@@ -11056,6 +11115,10 @@
 	dir = 6
 	},
 /obj/structure/table/steel,
+/obj/machinery/camera/network/security{
+	c_tag = "Watchtower";
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "My" = (
@@ -11119,7 +11182,7 @@
 /area/civilian/atrium/upper)
 "Nl" = (
 /obj/structure/table/woodentable,
-/obj/item/device/instrument/saxophone,
+/obj/item/instrument/saxophone,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "Nn" = (
@@ -11281,11 +11344,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/medical/medbayupper)
+"Oa" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "Od" = (
 /turf/simulated/floor/reinforced/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "Oh" = (
-/obj/structure/device/piano,
+/obj/structure/musician/piano,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "Ok" = (
@@ -11655,6 +11727,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"PZ" = (
+/obj/structure/flora/pottedplant/large,
+/obj/effect/landmark{
+	name = "vinestart"
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "Qa" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
@@ -11691,7 +11770,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
-/obj/item/device/instrument/guitar,
+/obj/item/instrument/guitar,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "Qo" = (
@@ -12125,6 +12204,10 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Medbay break hall";
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "Sk" = (
@@ -12206,7 +12289,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "SP" = (
 /obj/structure/table/woodentable,
-/obj/item/device/instrument/recorder,
+/obj/item/instrument/recorder,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "SZ" = (
@@ -12675,6 +12758,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"Vu" = (
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
 "VB" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -12756,7 +12845,7 @@
 	dir = 1
 	},
 /obj/structure/table/woodentable,
-/obj/item/device/instrument/keytar,
+/obj/item/instrument/piano_synth,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "Wa" = (
@@ -12822,6 +12911,21 @@
 	},
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbayupper)
+"Wx" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Medbay break hall";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
@@ -13062,6 +13166,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
+"XL" = (
+/obj/structure/railing/grey,
+/obj/effect/overlay/snow/floor,
+/obj/machinery/camera/autoname,
+/turf/simulated/floor/tiled/cryogaia/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "XM" = (
 /obj/machinery/camera/network/engineering{
 	c_tag = "Solar Array Shed - Interior";
@@ -13137,13 +13247,13 @@
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
 "Yc" = (
-/obj/structure/catwalk,
 /obj/structure/railing/grey{
 	dir = 8
 	},
 /obj/structure/railing/grey{
 	flags = null
 	},
+/obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/borealis2/outdoors/exterior/upper)
 "Yf" = (
@@ -13165,6 +13275,17 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
 /area/constructionsite/medical/upper)
+"Ym" = (
+/obj/effect/floor_decal/corner/paleblue/full{
+	dir = 4
+	},
+/obj/structure/flora/pottedplant/large,
+/obj/machinery/camera/network/medbay{
+	c_tag = "Medbay break hall";
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbayupper)
 "Yn" = (
 /turf/simulated/wall/r_wall,
 /area/security/watchtower)
@@ -13205,6 +13326,13 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
+"YB" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "Monastery Music room";
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/chapel/monastery/music)
 "YC" = (
 /obj/structure/table/steel,
 /obj/item/device/suit_cooling_unit,
@@ -19647,7 +19775,7 @@ gq
 Pr
 bm
 cd
-wm
+Wx
 wm
 ck
 wm
@@ -19658,7 +19786,7 @@ py
 XH
 XH
 XH
-mL
+Ym
 wa
 ET
 wa
@@ -23369,7 +23497,7 @@ CQ
 Iw
 NG
 XH
-XH
+py
 mL
 tq
 AN
@@ -25327,13 +25455,13 @@ AN
 AN
 AN
 Nj
-Nj
+kl
 Nj
 Nj
 Rr
 Nj
 Nj
-Nj
+kl
 Nj
 AN
 AN
@@ -25482,33 +25610,33 @@ AN
 AN
 AN
 Nj
+kl
 Nj
 Nj
+kl
 Nj
-Nj
-Nj
-Nj
+kl
 Nj
 lP
 yz
 Ex
 tG
-sa
+ZB
 nH
 lP
 Nj
+kl
 Nj
+kl
 Nj
+kl
 Nj
-Nj
-Nj
-Nj
-Nj
+kl
 DF
 of
 Nj
 Nj
-Nj
+kl
 Nj
 AN
 AN
@@ -25804,7 +25932,7 @@ AN
 AN
 AN
 AN
-Nj
+kl
 ZE
 sa
 qb
@@ -25834,7 +25962,7 @@ cB
 Tn
 sa
 sa
-Nj
+kl
 AN
 AN
 AN
@@ -26158,7 +26286,7 @@ LY
 eZ
 sa
 sa
-Nj
+kl
 AN
 AN
 AN
@@ -26291,7 +26419,7 @@ AN
 AN
 AN
 DL
-GL
+Oa
 sa
 sa
 TQ
@@ -26311,7 +26439,7 @@ sa
 EC
 EC
 TQ
-sa
+Gt
 sa
 rC
 EC
@@ -26482,7 +26610,7 @@ LY
 vc
 sa
 sa
-Nj
+kl
 AN
 AN
 AN
@@ -26776,7 +26904,7 @@ AN
 AN
 AN
 AN
-Nj
+kl
 dU
 sa
 qb
@@ -26806,7 +26934,7 @@ cB
 Tn
 sa
 sa
-Nj
+kl
 AN
 AN
 AN
@@ -26957,8 +27085,8 @@ sa
 iU
 sa
 sa
-vx
 sa
+vx
 sa
 iU
 sa
@@ -27102,14 +27230,14 @@ AN
 AN
 AN
 Nj
-Nj
+kl
 DL
 Xd
+kl
 Nj
+kl
 Nj
-Nj
-Nj
-lP
+PZ
 kp
 sa
 pu
@@ -27117,18 +27245,18 @@ sa
 kp
 lP
 Nj
+kl
 Nj
+kl
 Nj
+kl
 Nj
-Nj
-Nj
-Nj
-Nj
+kl
 di
 SH
 Nj
 Nj
-Nj
+kl
 Nj
 AN
 AN
@@ -27271,13 +27399,13 @@ Nj
 AN
 AN
 Nj
+kl
 Nj
 Nj
 Nj
 Nj
 Nj
-Nj
-Nj
+kl
 Nj
 AN
 AN
@@ -28859,7 +28987,7 @@ kD
 kD
 kD
 kD
-fX
+XL
 nQ
 nQ
 nQ
@@ -28883,7 +29011,7 @@ nQ
 nQ
 kW
 AN
-aH
+AN
 Nj
 wp
 PG
@@ -29044,8 +29172,8 @@ nQ
 nQ
 nQ
 kW
-aH
-aH
+AN
+AN
 Nj
 Nj
 Kr
@@ -29205,9 +29333,9 @@ nQ
 nQ
 nQ
 nQ
-SN
-aH
-aH
+kW
+AN
+AN
 Pi
 pa
 IS
@@ -29367,8 +29495,8 @@ nQ
 nQ
 nQ
 nQ
-SN
-aH
+kW
+AN
 Hs
 Pi
 BW
@@ -29529,9 +29657,9 @@ nQ
 nQ
 nQ
 nQ
-SN
-aH
-aH
+kW
+AN
+AN
 sj
 yN
 wJ
@@ -29691,9 +29819,9 @@ nQ
 nQ
 nQ
 nQ
-SN
-aH
-cr
+kW
+AN
+dJ
 Nj
 Pi
 Pi
@@ -29831,7 +29959,7 @@ Xj
 BN
 kD
 Av
-RE
+wI
 Rl
 ay
 RE
@@ -29854,12 +29982,12 @@ nQ
 nQ
 nQ
 ab
-aH
-aH
-aH
-aH
-aH
-aH
+AN
+AN
+AN
+AN
+AN
+AN
 AN
 AN
 AN
@@ -30015,13 +30143,13 @@ WV
 WV
 WV
 WV
-aH
-aH
-aH
-aH
-aH
-aH
-aH
+AN
+AN
+AN
+AN
+AN
+AN
+AN
 AN
 AN
 AN
@@ -30178,11 +30306,11 @@ nQ
 nQ
 nQ
 ie
-kl
-aH
-aH
-aH
-aH
+Sq
+AN
+AN
+AN
+AN
 AN
 AN
 AN
@@ -30324,7 +30452,7 @@ eR
 Hm
 kD
 Aj
-Ud
+YB
 Pe
 CS
 CS
@@ -30341,9 +30469,9 @@ nQ
 nQ
 nQ
 nQ
-dJ
-aH
-aH
+cN
+AN
+AN
 AN
 AN
 AN
@@ -30383,7 +30511,7 @@ hM
 hY
 iA
 ja
-ja
+rB
 ja
 kt
 ja
@@ -30475,7 +30603,7 @@ nQ
 nQ
 nQ
 dN
-WZ
+iG
 BN
 kD
 kD
@@ -30653,7 +30781,7 @@ BN
 hH
 WZ
 dV
-WZ
+Vu
 kD
 kP
 nQ
@@ -31862,7 +31990,7 @@ BH
 BH
 BH
 KB
-Ru
+Hk
 bR
 mD
 va
@@ -32421,7 +32549,7 @@ AN
 dN
 WZ
 UE
-WZ
+wV
 WZ
 WZ
 Fq
@@ -32815,7 +32943,7 @@ xn
 aJ
 Jk
 GO
-GO
+vH
 aJ
 KP
 VB
@@ -37395,7 +37523,7 @@ Op
 Op
 Op
 kI
-lV
+aY
 SZ
 MB
 SZ

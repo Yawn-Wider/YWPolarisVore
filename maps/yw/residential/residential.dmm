@@ -523,7 +523,7 @@
 /turf/simulated/floor/plating,
 /area/space)
 "cz" = (
-/obj/structure/bed/chair/sofa/blue/left,
+/obj/structure/bed/chair/sofa/left/blue,
 /turf/simulated/floor/carpet/blucarpet,
 /area/residential/room10)
 "cB" = (
@@ -729,7 +729,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/room6)
 "dD" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/sblucarpet,
@@ -1281,7 +1281,7 @@
 /turf/simulated/floor/wood,
 /area/residential/mansion)
 "gu" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blue,
@@ -1538,7 +1538,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "hx" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -2238,7 +2238,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/ship_bay)
 "kQ" = (
-/obj/structure/reagent_dispensers/winevat,
+/obj/structure/reagent_dispensers/redwinevat,
 /turf/simulated/floor/tiled,
 /area/residential/mroom1)
 "kS" = (
@@ -2593,7 +2593,7 @@
 /turf/simulated/shuttle/wall/hard_corner,
 /area/residential/ship_bay)
 "mX" = (
-/obj/structure/bed/chair/sofa/black/right,
+/obj/structure/bed/chair/sofa/right/black,
 /turf/simulated/floor/wood,
 /area/residential/room8)
 "mY" = (
@@ -2850,7 +2850,7 @@
 /turf/simulated/floor/lino,
 /area/residential/mroom2)
 "oh" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 4
 	},
 /turf/simulated/floor/carpet,
@@ -2897,7 +2897,7 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
 "ou" = (
-/obj/structure/device/piano{
+/obj/structure/musician/piano{
 	dir = 4
 	},
 /turf/simulated/floor/carpet,
@@ -3175,7 +3175,7 @@
 /turf/simulated/floor/lino,
 /area/residential/room5)
 "pP" = (
-/obj/structure/bed/chair/sofa/black/left,
+/obj/structure/bed/chair/sofa/left/black,
 /turf/simulated/floor/wood,
 /area/residential/room8)
 "pQ" = (
@@ -3557,7 +3557,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
 "sc" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 8
 	},
 /turf/simulated/floor/wood,
@@ -3805,7 +3805,7 @@
 /obj/structure/window/reinforced/tinted{
 	dir = 8
 	},
-/obj/structure/device/piano{
+/obj/structure/musician/piano{
 	dir = 4
 	},
 /turf/simulated/shuttle/floor/black,
@@ -4864,7 +4864,7 @@
 /turf/simulated/floor/tiled/kafel_full,
 /area/residential/room11)
 "zy" = (
-/obj/structure/bed/chair/sofa/left{
+/obj/structure/bed/chair/sofa/right{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -4908,9 +4908,7 @@
 /area/residential/room3)
 "zS" = (
 /obj/machinery/light_switch{
-	pixel_x = 0;
-	pixel_y = 28;
-	step_y = 0
+	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/old_cargo,
 /area/residential/room12)
@@ -5123,7 +5121,7 @@
 /turf/simulated/floor/plating,
 /area/residential/mroom2)
 "AU" = (
-/obj/structure/bed/chair/sofa/right{
+/obj/structure/bed/chair/sofa/left{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -5413,7 +5411,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/room6)
 "Cz" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -5549,7 +5547,7 @@
 /turf/simulated/floor/lino,
 /area/residential/ship_bay)
 "CW" = (
-/obj/structure/bed/chair/sofa/blue/right,
+/obj/structure/bed/chair/sofa/right/blue,
 /turf/simulated/floor/carpet/blucarpet,
 /area/residential/room10)
 "CX" = (
@@ -5616,7 +5614,7 @@
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 8
 	},
 /turf/simulated/floor/carpet/blue,
@@ -5669,7 +5667,7 @@
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
 "Dt" = (
-/obj/structure/bed/chair/sofa/black/corner{
+/obj/structure/bed/chair/sofa/corner/black{
 	dir = 8
 	},
 /obj/machinery/light,
@@ -6791,7 +6789,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/room4)
 "Iq" = (
-/obj/structure/device/piano,
+/obj/structure/musician/piano,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "Ir" = (
@@ -6847,7 +6845,7 @@
 /turf/simulated/floor/plating,
 /area/residential/powerroom)
 "IF" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 1
 	},
 /turf/simulated/floor/wood,
@@ -7205,17 +7203,16 @@
 "Kz" = (
 /obj/machinery/recharger{
 	pixel_x = -1;
-	pixel_y = 7;
-	step_y = 0
+	pixel_y = 7
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/carpet/oracarpet,
 /area/residential/room12)
 "KA" = (
-/obj/structure/reagent_dispensers/winevat,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/structure/reagent_dispensers/redwinevat,
 /turf/simulated/floor/tiled,
 /area/residential/mroom1)
 "KC" = (
@@ -7611,8 +7608,11 @@
 /turf/simulated/floor/tiled/white,
 /area/residential/mroom1)
 "MJ" = (
-/obj/structure/sink/kitchen,
-/turf/simulated/wall,
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/curtain/bed,
+/turf/simulated/floor/plating,
 /area/residential/room1)
 "MM" = (
 /obj/machinery/door/blast/regular,
@@ -7636,7 +7636,7 @@
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
 "MX" = (
-/obj/structure/bed/chair/sofa/black/right{
+/obj/structure/bed/chair/sofa/right/black{
 	dir = 4
 	},
 /turf/simulated/floor/carpet,
@@ -8434,7 +8434,7 @@
 /area/residential/room6)
 "QA" = (
 /obj/structure/closet/cabinet,
-/obj/item/device/instrument/guitar,
+/obj/item/instrument/guitar,
 /turf/simulated/floor/carpet,
 /area/residential/mroom2)
 "QB" = (
@@ -9691,7 +9691,8 @@
 	},
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
 /obj/structure/sink/kitchen{
-	pixel_x = -30
+	dir = 8;
+	pixel_x = -12
 	},
 /turf/simulated/floor/lino,
 /area/residential/room1)
@@ -10001,7 +10002,7 @@
 /turf/simulated/floor/carpet/blue,
 /area/residential/room11)
 "YQ" = (
-/obj/structure/bed/chair/sofa/black/left{
+/obj/structure/bed/chair/sofa/left/black{
 	dir = 1
 	},
 /turf/simulated/floor/carpet/sblucarpet,

@@ -116,6 +116,10 @@
 	name = "\improper Lower Fore Primary Hallway"
 	icon_state = "hallF"
 
+/area/hallway/primary/southeast
+	name = "\improper South Central Storage Hallway"
+	icon_state = "hallC1"
+
 /area/vacant/vacant_office
 	name = "\improper Abandoned Office"
 	icon_state = "vacant_site"

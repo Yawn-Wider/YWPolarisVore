@@ -9,7 +9,12 @@ var/global/list/robot_modules = list(
 	"Security" 		= /obj/item/weapon/robot_module/robot/security/general,
 	"Combat" 		= /obj/item/weapon/robot_module/robot/security/combat,
 	"Engineering"	= /obj/item/weapon/robot_module/robot/engineering/general,
-	"Janitor" 		= /obj/item/weapon/robot_module/robot/janitor
+	"Janitor" 		= /obj/item/weapon/robot_module/robot/janitor,
+	"Gravekeeper"	= /obj/item/weapon/robot_module/robot/gravekeeper,
+	"Lost"			= /obj/item/weapon/robot_module/robot/lost,
+	"Protector" 	= /obj/item/weapon/robot_module/robot/syndicate/protector,
+	"Mechanist" 	= /obj/item/weapon/robot_module/robot/syndicate/mechanist,
+	"Combat Medic"	= /obj/item/weapon/robot_module/robot/syndicate/combat_medic
 	)
 
 /obj/item/weapon/robot_module
@@ -61,7 +66,7 @@ var/global/list/robot_modules = list(
 	R.choose_icon(R.module_sprites.len + 1, R.module_sprites)
 
 	for(var/obj/item/I in modules)
-		I.canremove = 0
+		I.canremove = FALSE
 
 /obj/item/weapon/robot_module/proc/Reset(var/mob/living/silicon/robot/R)
 	remove_camera_networks(R)
@@ -197,6 +202,8 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2standard",
 					"Pyralis" = "Glitterfly-Standard",
 					"Decapod" = "decapod-Standard",
+					"Pneuma" = "pneuma-Standard",
+					"Tower" = "drider-Standard",
 					"Miss M" = "miss-standard" // YW change, Added Miss M
 					)
 
@@ -235,6 +242,8 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Surgeon",
 					"Decapod" = "decapod-Surgeon",
+					"Pneuma" = "pneuma-Surgeon",
+					"Tower" = "drider-Surgeon",
 					"Miss M" = "miss-medical" // YW change, Added Miss M
 					)
 
@@ -312,6 +321,8 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2medical",
 					"Pyralis" = "Glitterfly-Crisis",
 					"Decapod" = "decapod-Crisis",
+					"Pneuma" = "pneuma-Crisis",
+					"Tower" = "drider-Crisis",
 					"Miss M" = "miss-medical" // YW change, Added Miss M
 					)
 
@@ -391,6 +402,8 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2engineer",
 					"Pyralis" = "Glitterfly-Engineering",
 					"Decapod" = "decapod-Engineering",
+					"Pneuma" = "pneuma-Engineering",
+					"Tower" = "drider-Engineering",
 					"Servitor" = "servitor", //YW Addition to add new Servitor Sprite
 					"Miss M" = "miss-engineer" // YW change, Added Miss M
 					)
@@ -508,6 +521,8 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2security",
 					"Pyralis" = "Glitterfly-Security",
 					"Decapod" = "decapod-Security",
+					"Pneuma" = "pneuma-Security",
+					"Tower" = "drider-Security",
 					"Miss M" = "miss-security" // YW change, Added Miss M
 					)
 
@@ -555,6 +570,8 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2janitor",
 					"Pyralis" = "Glitterfly-Janitor",
 					"Decapod" = "decapod-Janitor",
+					"Pneuma" = "pneuma-Janitor",
+					"Tower" = "drider-Janitor",
 					"Miss M" = "miss-janitor" // YW change, Added Miss M
 					)
 
@@ -619,6 +636,8 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2service",
 					"Pyralis" = "Glitterfly-Service",
 					"Decapod" = "decapod-Service",
+					"Pneuma" = "pneuma-Service",
+					"Tower" = "drider-Service",
 					"Miss M" = "miss-service" // YW change, Added Miss M
 				  	)
 
@@ -674,7 +693,9 @@ var/global/list/robot_modules = list(
 					"Drone" = "drone-blu",
 					"Usagi-II" = "tall2service",
 					"Pyralis" = "Glitterfly-Clerical",
-					"Decapod" = "decapod-Clerical"
+					"Decapod" = "decapod-Clerical",
+					"Pneuma" = "pneuma-Clerical",
+					"Tower" = "drider-Clerical"
 					)
 
 /obj/item/weapon/robot_module/robot/clerical/general/New()
@@ -714,6 +735,8 @@ var/global/list/robot_modules = list(
 					"Usagi-II" = "tall2miner",
 					"Pyralis" = "Glitterfly-Miner",
 					"Decapod" = "decapod-Miner",
+					"Pneuma" = "pneuma-Miner",
+					"Tower" = "drider-Miner",
 					"Miss M" = "miss-miner" // YW change, Added Miss M
 				)
 
@@ -745,7 +768,9 @@ var/global/list/robot_modules = list(
 					"Insekt" = "insekt-Sci",
 					"Usagi-II" = "tall2peace",
 					"Pyralis" = "Glitterfly-Research",
-					"Decapod" = "decapod-Research"
+					"Decapod" = "decapod-Research",
+					"Pneuma" = "pneuma-Research",
+					"Tower" = "drider-Research"
 					)
 
 /obj/item/weapon/robot_module/robot/research/New()

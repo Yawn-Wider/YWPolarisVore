@@ -64,7 +64,7 @@
 		to_chat(M, "<span class='notice'>You don't feel cool enough to name this gun, chump.</span>")
 		return 0
 
-	var/input = sanitizeSafe(input("What do you want to name the gun?", ,""), MAX_NAME_LEN)
+	var/input = sanitizeSafe(input(usr, "What do you want to name the gun?", ,""), MAX_NAME_LEN)
 
 	if(src && input && !M.stat && in_range(M,src))
 		name = input
@@ -81,7 +81,7 @@
 	max_shells = 7
 
 
-obj/item/weapon/gun/projectile/revolver/detective45/verb/rename_gun()
+/obj/item/weapon/gun/projectile/revolver/detective45/verb/rename_gun()
 	set name = "Name Gun"
 	set category = "Object"
 	set desc = "Rename your gun. If you're the Detective."
@@ -93,7 +93,7 @@ obj/item/weapon/gun/projectile/revolver/detective45/verb/rename_gun()
 		to_chat(M, "<span class='notice'>You don't feel cool enough to name this gun, chump.</span>")
 		return 0
 
-	var/input = sanitizeSafe(input("What do you want to name the gun?", ,""), MAX_NAME_LEN)
+	var/input = sanitizeSafe(input(usr, "What do you want to name the gun?", ,""), MAX_NAME_LEN)
 
 	if(src && input && !M.stat && in_range(M,src))
 		name = input
@@ -116,7 +116,7 @@ obj/item/weapon/gun/projectile/revolver/detective45/verb/rename_gun()
 	options["H-H Sindri"] = "webley"
 	options["Lombardi Buzzard"] = "detective_buzzard"
 	options["Lombardi Constable Deluxe 2502"] = "detective_constable"
-	var/choice = input(M,"Choose your sprite!","Resprite Gun") in options
+	var/choice = tgui_input_list(M,"Choose your sprite!","Resprite Gun", options)
 	if(src && choice && !M.stat && in_range(M,src))
 		icon_state = options[choice]
 		to_chat(M, "Your gun is now sprited as [choice]. Say hello to your new friend.")
@@ -147,18 +147,6 @@ obj/item/weapon/gun/projectile/revolver/detective45/verb/rename_gun()
 	if(istype(A, /obj/item/ammo_magazine))
 		flick("deckard-reload",src)
 	..()
-
-/obj/item/weapon/gun/projectile/revolver/capgun
-	name = "cap gun"
-	desc = "Looks almost like the real thing! Ages 8 and up."
-	icon_state = "revolver"
-	item_state = "revolver"
-	caliber = "caps"
-	origin_tech = list(TECH_COMBAT = 1, TECH_MATERIAL = 1)
-	handle_casings = CYCLE_CASINGS
-	max_shells = 7
-	ammo_type = /obj/item/ammo_casing/cap
-	projectile_type = /obj/item/projectile/bullet/pistol/strong
 
 /obj/item/weapon/gun/projectile/revolver/judge
 	name = "\"The Judge\""

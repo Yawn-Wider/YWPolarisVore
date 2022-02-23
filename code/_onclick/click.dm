@@ -18,6 +18,7 @@
 
 /atom/Click(var/location, var/control, var/params) // This is their reaction to being clicked on (standard proc)
 	if(src)
+		SEND_SIGNAL(src, COMSIG_CLICK, location, control, params, usr)
 		usr.ClickOn(src, params)
 
 /atom/DblClick(var/location, var/control, var/params)
@@ -83,12 +84,10 @@
 		RestrainedClickOn(A)
 		return 1
 
-	if(in_throw_mode)
-		if(isturf(A) || isturf(A.loc))
-			throw_item(A)
-			trigger_aiming(TARGET_CAN_CLICK)
-			return 1
+	if(in_throw_mode && (isturf(A) || isturf(A.loc)) && throw_item(A))
+		trigger_aiming(TARGET_CAN_CLICK)
 		throw_mode_off()
+		return TRUE
 
 	var/obj/item/W = get_active_hand()
 
@@ -285,7 +284,7 @@
 	if(T && user.TurfAdjacent(T))
 		user.ToggleTurfTab(T)
 	return 1
-	
+
 /mob/proc/ToggleTurfTab(var/turf/T)
 	if(listed_turf == T)
 		listed_turf = null
@@ -354,7 +353,7 @@
 		facedir(direction)
 
 /obj/screen/click_catcher
-	name = "Darkness"
+	name = "" // Empty string names don't show up in context menu clicks
 	icon = 'icons/mob/screen_gen.dmi'
 	icon_state = "click_catcher"
 	plane = CLICKCATCHER_PLANE

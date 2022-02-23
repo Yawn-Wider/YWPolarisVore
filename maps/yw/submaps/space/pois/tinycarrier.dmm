@@ -46,7 +46,7 @@
 	},
 /obj/machinery/door/airlock/external,
 /obj/effect/map_helper/airlock/door/ext_door,
-/turf/simulated/floor/tiled/monofloor,
+/turf/simulated/floor/tiled/monotile,
 /area/submap/debrisfield/tinyshuttle/crew)
 "ag" = (
 /obj/structure/lattice,
@@ -90,7 +90,7 @@
 	},
 /obj/machinery/door/airlock/glass_external/public,
 /obj/effect/map_helper/airlock/door/int_door,
-/turf/simulated/floor/tiled/monofloor{
+/turf/simulated/floor/tiled/monotile{
 	dir = 4
 	},
 /area/submap/debrisfield/tinyshuttle/crew)
@@ -1109,7 +1109,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/submap/debrisfield/tinyshuttle/hangar)
 "bW" = (
-/obj/mecha/combat/fighter/baron/loaded/busted{
+/obj/mecha/combat/fighter/baron/busted{
 	dir = 8;
 	dir_in = 8
 	},

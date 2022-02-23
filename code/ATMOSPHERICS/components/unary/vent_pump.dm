@@ -19,6 +19,7 @@
 	power_rating = 30000			//7500 W ~ 10 HP //VOREStation Edit - 30000 W
 
 	connect_types = CONNECT_TYPE_REGULAR|CONNECT_TYPE_SUPPLY //connects to regular and supply pipes
+	blocks_emissive = FALSE
 
 	var/area/initial_loc
 	level = 1
@@ -52,7 +53,10 @@
 	var/radio_filter_out
 	var/radio_filter_in
 
-	var/datum/looping_sound/air_pump/soundloop
+	//var/datum/looping_sound/air_pump/soundloop
+	var/static/start_sound = 'sound/machines/air_pump/airpumpstart.ogg'
+	var/static/stop_sound = 'sound/machines/air_pump/airpumpshutdown.ogg'
+
 
 /obj/machinery/atmospherics/unary/vent_pump/on
 	use_power = USE_POWER_IDLE
@@ -82,7 +86,7 @@
 
 /obj/machinery/atmospherics/unary/vent_pump/Initialize()
 	. = ..()
-	soundloop = new(list(src), FALSE)
+	//soundloop = new(list(src), FALSE)
 
 /obj/machinery/atmospherics/unary/vent_pump/New()
 	..()
@@ -100,7 +104,7 @@
 	if(initial_loc)
 		initial_loc.air_vent_info -= id_tag
 		initial_loc.air_vent_names -= id_tag
-	QDEL_NULL(soundloop)
+	//QDEL_NULL(soundloop)
 	return ..()
 
 /obj/machinery/atmospherics/unary/vent_pump/high_volume
@@ -146,7 +150,7 @@
 	if(!check_icon_cache())
 		return
 
-	overlays.Cut()
+	cut_overlays()
 
 	var/vent_icon = "vent"
 
@@ -159,12 +163,17 @@
 
 	if(welded)
 		vent_icon += "weld"
+		playsound(src, stop_sound, 25, ignore_walls = FALSE, preference = /datum/client_preference/air_pump_noise)
+
 	else if(!use_power || !node || (stat & (NOPOWER|BROKEN)))
 		vent_icon += "off"
+		playsound(src, stop_sound, 25, ignore_walls = FALSE, preference = /datum/client_preference/air_pump_noise)
 	else
 		vent_icon += "[pump_direction ? "out" : "in"]"
+		playsound(src, start_sound, 25, ignore_walls = FALSE, preference = /datum/client_preference/air_pump_noise)
 
-	overlays += icon_manager.get_atmos_icon("device", , , vent_icon)
+
+	add_overlay(icon_manager.get_atmos_icon("device", , , vent_icon))
 
 /obj/machinery/atmospherics/unary/vent_pump/update_underlays()
 	if(..())
@@ -186,15 +195,11 @@
 
 /obj/machinery/atmospherics/unary/vent_pump/proc/can_pump()
 	if(stat & (NOPOWER|BROKEN))
-		soundloop.stop()
 		return 0
 	if(!use_power)
-		soundloop.stop() 
 		return 0
 	if(welded)
-		soundloop.stop()
 		return 0
-	soundloop.start()
 	return 1
 
 /obj/machinery/atmospherics/unary/vent_pump/process()
@@ -347,37 +352,19 @@
 		if (signal.data["set_internal_pressure"] == "default")
 			internal_pressure_bound = internal_pressure_bound_default
 		else
-			internal_pressure_bound = between(
-				0,
-				text2num(signal.data["set_internal_pressure"]),
-				ONE_ATMOSPHERE*50
-			)
+			internal_pressure_bound = between(0,text2num(signal.data["set_internal_pressure"]),ONE_ATMOSPHERE*50)
 
 	if(signal.data["set_external_pressure"] != null)
 		if (signal.data["set_external_pressure"] == "default")
 			external_pressure_bound = external_pressure_bound_default
 		else
-			external_pressure_bound = between(
-				0,
-				text2num(signal.data["set_external_pressure"]),
-				ONE_ATMOSPHERE*50
-			)
+			external_pressure_bound = between(0,text2num(signal.data["set_external_pressure"]),ONE_ATMOSPHERE*50)
 
 	if(signal.data["adjust_internal_pressure"] != null)
-		internal_pressure_bound = between(
-			0,
-			internal_pressure_bound + text2num(signal.data["adjust_internal_pressure"]),
-			ONE_ATMOSPHERE*50
-		)
+		internal_pressure_bound = between(0,internal_pressure_bound + text2num(signal.data["adjust_internal_pressure"]),ONE_ATMOSPHERE*50)
 
 	if(signal.data["adjust_external_pressure"] != null)
-
-
-		external_pressure_bound = between(
-			0,
-			external_pressure_bound + text2num(signal.data["adjust_external_pressure"]),
-			ONE_ATMOSPHERE*50
-		)
+		external_pressure_bound = between(0,external_pressure_bound + text2num(signal.data["adjust_external_pressure"]),ONE_ATMOSPHERE*50)
 
 	if("reset_external_pressure" in signal.data)
 		external_pressure_bound = ONE_ATMOSPHERE
@@ -409,7 +396,7 @@
 				if(!src || !WT.isOn()) return
 				playsound(src, WT.usesound, 50, 1)
 				if(!welded)
-					user.visible_message("<span class='notice'>\The [user] welds the vent shut.</span>", "<span class='notice'>You weld the vent shut.</span>", "You hear welding.")
+					user.visible_message("<b>\The [user]</b> welds the vent shut.", "<span class='notice'>You weld the vent shut.</span>", "You hear welding.")
 					welded = 1
 					update_icon()
 				else
@@ -460,7 +447,7 @@
 	to_chat(user, "<span class='notice'>You begin to unfasten \the [src]...</span>")
 	if (do_after(user, 40 * W.toolspeed))
 		user.visible_message( \
-			"<span class='notice'>\The [user] unfastens \the [src].</span>", \
+			"<b>\The [user]</b> unfastens \the [src].", \
 			"<span class='notice'>You have unfastened \the [src].</span>", \
 			"You hear a ratchet.")
 		deconstruct()

@@ -77,18 +77,20 @@
   var/list/data = list()
   data["screenstate"] = screen_state
   if(loaded_beaker)
-    data["beakerchems"] = list()
+    var/list/btemp = data["beakerchems"]
+
     for(var/datum/reagent/current in loaded_beaker.reagents.reagent_list)
-      data["beakerchems"].Add(list(list("name" = "[current.id]", "displayname" = SSchemistry.chemical_reagents[current.id])))
+      btemp.Add(list(list("name" = "[current.id]", "displayname" = SSchemistry.chemical_reagents[current.id])))
   if(seed)
     data["seedname"] = seed.seed.display_name
     data["health"] = seed.modified
     data["plantcolor"] = seed.seed.traits["[TRAIT_PLANT_COLOUR]"]
     data["fruitcolor"] = seed.seed.traits["[TRAIT_PRODUCT_COLOUR]"]
     data["chems"] = list()
+    var/list/ctemp = data["chems"]
 
     for(var/chem_name in seed.seed.chems)
-      data["chems"].Add(list(list("name" = "[chem_name]", "displayname" = SSchemistry.chemical_reagents[chem_name])))
+      ctemp.Add(list(list("name" = "[chem_name]", "displayname" = SSchemistry.chemical_reagents[chem_name])))
 
   return data
 

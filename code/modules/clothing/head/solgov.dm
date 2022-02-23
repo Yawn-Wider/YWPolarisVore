@@ -1,6 +1,20 @@
-//SolGov uniform hats
+/*
+ * SolGov Uniform Hats
+ * Contents:
+ *		Utility
+ *		Service
+ *		Dress
+ *		Government Departments (Berets)
+ *		SifGuard (Berets)
+ *		Fleet (Berets)
+ *		Ushanka
+ *		Almachi
+ *		Unused Baylore Stuff
+ */
 
-//Utility
+/*
+ * Utility
+ */
 /obj/item/clothing/head/soft/solgov
 	name = "\improper SolGov cap"
 	desc = "It's a blue ballcap in Solar Confederate Government colors."
@@ -72,8 +86,9 @@
 	desc = "A grey utility cover bearing the crest of the SCG Marines."
 	icon_state = "greyutility"
 
-//Service
-
+/*
+ * Service
+ */
 /obj/item/clothing/head/service
 	name = "service cover"
 	desc = "A service uniform cover."
@@ -130,8 +145,9 @@
 	desc = "A green campaign cover with an SCG Marine crest. Typically found on the heads of Drill Sergeants."
 	icon_state = "greendrill"
 
-//Dress
-
+/*
+ * Dress
+ */
 /obj/item/clothing/head/dress
 	name = "dress cover"
 	desc = "A dress uniform cover."
@@ -168,10 +184,9 @@
 	desc = "A white dress uniform cover with an SCG Marine crest and gold stripe."
 	icon_state = "whitewheelcap_com"
 
-//Berets
-
-//Government Departments
-
+/*
+ * Government Departments (Berets)
+ */
 /obj/item/clothing/head/beret/solgov
 	name = "\improper SCG beret"
 	desc = "A beret in basic Solar Confederate Government colors. For peacekeepers that are more inclined towards style than safety."
@@ -251,8 +266,9 @@
 	icon_state = "beret_greensilver"
 //YW END
 
-//SifGuard
-
+/*
+ * SifGuard (Berets)
+ */
 /obj/item/clothing/head/beret/solgov/sifguard
 	name = "\improper SifGuard beret"
 	desc = "A black beret belonging to the Sif Defense Force. For personnel that are more inclined towards style than safety."
@@ -300,7 +316,9 @@
 	icon_state = "beret_black_fieldOps"
 //YW END
 
-//Fleet
+/*
+ * Fleet (Berets)
+ */
 
 /obj/item/clothing/head/beret/solgov/fleet
 	name = "fleet beret"
@@ -352,7 +370,7 @@
 	desc = "A white SCG Fleet beret with a golden crest. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_whiterim_com"
 
-//YW UNDO COMMENT OUT
+//YW START
 
 /obj/item/clothing/head/beret/solgov/fleet/branch
 	name = "first fleet beret"
@@ -379,10 +397,11 @@
 	desc = "An SCG Fleet beret carrying insignia of Fifth Fleet, the Quick Reaction Force, recently formed and outfited with last tech. For personnel that are more inclined towards style than safety."
 	icon_state = "beret_navy_fifth"
 
-//YW UNDO COMMENT OUT
+//YW END
 
-//ushanka
-
+/*
+ * Ushanka
+ */
 /obj/item/clothing/head/ushanka/solgov
 	name = "\improper SifGuard fur hat"
 	desc = "An Sif Defense Force synthfur-lined hat for operating in cold environments."
@@ -396,15 +415,16 @@
 /obj/item/clothing/head/ushanka/solgov/marine
 	name = "marine fur hat"
 	desc = "An SCG Marine synthfur-lined hat for operating in cold environments."
-	icon_state = "barushankadown"
+	icon_state = "mar1ushankadown"
 
 /obj/item/clothing/head/ushanka/solgov/marine/green
-	name = "\improper Hedberg-Hammarstrom fur hat"
-	desc = "An Hedberg-Hammarstrom private security synthfur-lined hat for operating in cold environments."
-	icon_state = "arushankadown"
+	name = "green marine fur hat"
+	desc = "An SCG Marine synthfur-lined hat for operating in cold environments."
+	icon_state = "mar2ushankadown"
 
-//Almachi
-
+/*
+ * Almachi
+ */
 /obj/item/clothing/head/almach
 	name = "\improper Almach Militia service cover"
 	desc = "A service uniform cover, occasionally worn by crew within the defunct Almach Militia."
@@ -420,3 +440,33 @@
 	desc = "A service uniform cover, occasionally worn by command crew within the defunct Almach Militia."
 	icon_state = "almachhat_comm"
 	item_state = "almachhat_comm"
+
+/*
+ * Unused Baylore Stuff
+ *
+/obj/item/clothing/head/beret/solgov/fleet/branch
+	name = "first fleet beret"
+	desc = "An SCG Fleet beret carrying insignia of First Fleet, the Sol Guard, stationed in Sol. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_navy_first"
+
+/obj/item/clothing/head/beret/solgov/fleet/branch/second
+	name = "second fleet beret"
+	desc = "An SCG Fleet beret carrying insignia of Second Fleet, the Home Guard, tasked with defense of Sol territories. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_navy_second"
+
+/obj/item/clothing/head/beret/solgov/fleet/branch/third
+	name = "third fleet beret"
+	desc = "An SCG Fleet beret carrying insignia of Third Fleet, the Border Guard, guarding borders of Sol territory against Vox and pirates. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_navy_third"
+
+/obj/item/clothing/head/beret/solgov/fleet/branch/fourth
+	name = "fourth fleet beret"
+	desc = "An SCG Fleet beret carrying insignia of Fourth Fleet, stationed on Skrell border. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_navy_fourth"
+
+/obj/item/clothing/head/beret/solgov/fleet/branch/fifth
+	name = "fifth fleet beret"
+	desc = "An SCG Fleet beret carrying insignia of Fifth Fleet, the Quick Reaction Force, recently formed and outfited with last tech. For personnel that are more inclined towards style than safety."
+	icon_state = "beret_navy_fifth"
+ *
+ */

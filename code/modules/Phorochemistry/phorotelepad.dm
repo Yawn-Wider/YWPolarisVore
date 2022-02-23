@@ -48,15 +48,15 @@
 	icon = 'icons/phoronics.dmi'
 	icon_state = "pad-folded"
 
-	attack_self(mob/user as mob)
-		user << "You unfold the pad."
-		var/obj/machinery/telepad_phoronics/T = new /obj/machinery/telepad_phoronics(user.loc)
-		T.anchored = 0
-		del(src)
+/obj/item/weapon/phoronics_telepad/attack_self(mob/user as mob)
+	user << "You unfold the pad."
+	var/obj/machinery/telepad_phoronics/T = new /obj/machinery/telepad_phoronics(user.loc)
+	T.anchored = 0
+	del(src)
 
 /*/datum/design/item/phoronics_telepad
 	name = "phoronics telepad"
 	id = "phoronics_telepad"
 	req_tech = list("bluespace" = 2, "materials" = 3)
-	materials = list(DEFAULT_WALL_MATERIAL = 1000)
+	materials = list(MAT_STEEL = 1000)
 	build_path = /obj/item/weapon/phoronics_telepad */

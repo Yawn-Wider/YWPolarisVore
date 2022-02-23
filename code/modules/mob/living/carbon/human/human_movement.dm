@@ -7,11 +7,17 @@
 	if (istype(loc, /turf/space))
 		return ..() - 1
 
-	if(species.slowdown)
-		. += species.slowdown
-
 	if(force_max_speed)
 		return ..() + HUMAN_LOWEST_SLOWDOWN
+
+	if(species.slowdown)
+		switch(m_intent)
+			if("run")
+				// standard delay is applied from species
+				. += species.slowdown
+			if("walk")
+				// attempt to normalize the speeds, while still allowing some minor varience if walking
+				. += species.slowdown * 0.05 // 5% of species slowdown delay, 0 is default human delay!
 
 	for(var/datum/modifier/M in modifiers)
 		if(!isnull(M.haste) && M.haste == TRUE)

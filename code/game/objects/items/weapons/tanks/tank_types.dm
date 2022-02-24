@@ -88,6 +88,7 @@
 		if ((!F.status)||(F.ptank))	return
 		src.master = F
 		F.ptank = src
+		F.update_icon() // do this here or flamethrower icon doesn't update when the tank is dragged into it
 		user.remove_from_mob(src)
 		src.loc = F
 	return

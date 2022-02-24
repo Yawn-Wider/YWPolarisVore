@@ -13,8 +13,3 @@
 	icon_state = "eshui_small_l"
 /obj/effect/floor_decal/eshui/emblem/eshui_small_r
 	icon_state = "eshui_small_r"
-
-	/obj/effect/floor_decal/eshui/emblem/eshui_tile_l
-	icon_state = "eshui_tile_l"
-/obj/effect/floor_decal/eshui/emblem/eshui_tile_r
-	icon_state = "eshui_tile_r"

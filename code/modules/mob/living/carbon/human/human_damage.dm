@@ -517,6 +517,20 @@ This function restores all organs.
 			if(organ.take_damage(0, damage, sharp, edge, used_weapon))
 				UpdateDamageIcon()
 
+	// outpost 21 addition, screaming from most damage types! halucinations are handled earlier! Do not scream if we are knocked out
+	if(damage > 0 && !incapacitated() && ((damagetype != TOX) && (damagetype != OXY) && (damagetype != CLONE) && (damagetype != HALLOSS)))
+		// Sharp weapons increase probability of scream, low health also leads to screams
+		var/weaponBonusProb = 0
+		if(edge) 
+			weaponBonusProb += 10
+		if(health < 30)
+			weaponBonusProb += 20
+		
+		// based on damage, roll probability to scream
+		if(((damage > 10 || health < 50) && prob(5 + weaponBonusProb)) || (damage > 20 && prob(15 + weaponBonusProb)) || (damage > 30 && prob(40 + weaponBonusProb)) || (damage > 50 && prob(50 + weaponBonusProb)))
+			if(organ && organ.organ_can_feel_pain() && !isbelly(loc) && !istype(loc, /obj/item/device/dogborg/sleeper)) //VOREStation Add
+				emote("scream")
+
 	// Will set our damageoverlay icon to the next level, which will then be set back to the normal level the next mob.Life().
 	updatehealth()
 	BITSET(hud_updateflag, HEALTH_HUD)

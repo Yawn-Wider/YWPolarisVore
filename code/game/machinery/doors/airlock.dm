@@ -1119,7 +1119,7 @@ About the new airlock wires panel:
 			to_chat(user, "<span class='warning'>You must close \the [src] before installing \the [A]!</span>")
 			return
 
-		playsound(user, 'sound/machines/door/airlock_creaking.ogg', 50, 1) // pulling doorjack down!
+		playsound(user, 'sound/machines/lockreset.ogg', 50, 1) // pulling doorjack down!
 		if(do_after(user, 6 SECONDS, src) && density && A && user.unEquip(A, src))
 			to_chat(user, "<span class='notice'>You successfully install \the [A].</span>")
 			A.lock_brace(src)

@@ -44,6 +44,7 @@
 	var/hasShocked = 0 //Prevents multiple shocks from happening
 	var/secured_wires = 0
 	var/datum/wires/airlock/wires = null
+	var/obj/item/airlock_brace/brace = null
 
 	var/open_sound_powered = 'sound/machines/door/covert1o.ogg'
 	var/open_sound_unpowered = 'sound/machines/door/airlockforced.ogg'
@@ -1091,6 +1092,8 @@ About the new airlock wires panel:
 /obj/machinery/door/airlock/proc/user_toggle_open(mob/user)
 	if(!user_allowed(user))
 		return
+	if(brace)
+		to_chat(user, text("<span class='warning'>The airlock's brace holds it firmly in place.</span>"))
 	if(welded)
 		to_chat(user, text("<span class='warning'>The airlock has been welded shut!</span>"))
 	else if(locked)
@@ -1105,6 +1108,23 @@ About the new airlock wires panel:
 
 /obj/machinery/door/airlock/attackby(obj/item/C, mob/user as mob)
 	//to_world("airlock attackby src [src] obj [C] mob [user]")
+	
+	// Brace is considered installed on the airlock, so interacting with it is protected from electrification.
+	if(brace && C && istype(C, /obj/item/weapon/crowbar/brace_jack))
+		return brace.attackby(C, user)
+
+	if(!brace && istype(C, /obj/item/airlock_brace))
+		var/obj/item/airlock_brace/A = C
+		if(!density)
+			to_chat(user, "<span class='warning'>You must close \the [src] before installing \the [A]!</span>")
+			return
+
+		playsound(user, 'sound/machines/door/airlock_creaking.ogg', 50, 1) // pulling doorjack down!
+		if(do_after(user, 6 SECONDS, src) && density && A && user.unEquip(A, src))
+			to_chat(user, "<span class='notice'>You successfully install \the [A].</span>")
+			A.lock_brace(src)
+		return
+
 	if(!istype(usr, /mob/living/silicon))
 		if(src.isElectrified())
 			if(src.shock(user, 75))
@@ -1150,11 +1170,13 @@ About the new airlock wires panel:
 		var/obj/item/weapon/pai_cable/cable = C
 		cable.plugin(src, user)
 	else if(!repairing && C.is_crowbar())
-		if(can_remove_electronics())
+		if(brace)
+			to_chat(user, text("<span class='notice'>The airlock's brace holds it firmly in place.</span>"))
+		else if(can_remove_electronics())
 			playsound(src, C.usesound, 75, 1)
 			user.visible_message("[user] removes the electronics from the airlock assembly.", "You start to remove electronics from the airlock assembly.")
 			if(do_after(user,40 * C.toolspeed))
-				to_chat(user, "<span class='notice'>You removed the airlock electronics!</span>")
+				to_chat(user, text("<span class='notice'>You removed the airlock electronics!</span>"))
 
 				var/obj/structure/door_assembly/da = new assembly_type(src.loc)
 				if (istype(da, /obj/structure/door_assembly/multi_tile))
@@ -1283,6 +1305,9 @@ About the new airlock wires panel:
 	return ..()
 
 /obj/machinery/door/airlock/can_open(var/forced=0)
+	if(brace)
+		return 0
+
 	if(!forced)
 		if(!arePowerSystemsOn() || wires.is_cut(WIRE_OPEN_DOOR))
 			return 0
@@ -1486,12 +1511,18 @@ About the new airlock wires panel:
 			if(A.closeOtherId == src.closeOtherId && A != src)
 				src.closeOther = A
 				break
+	var/turf/T = loc
+	var/obj/item/airlock_brace/A = locate(/obj/item/airlock_brace) in T
+	if(!brace && A)
+		A.lock_brace(src)
 	name = "\improper [name]"
 	. = ..()
 
 /obj/machinery/door/airlock/Destroy()
 	qdel(wires)
 	wires = null
+	if(brace)
+		qdel(brace)
 	return ..()
 
 // Most doors will never be deconstructed over the course of a round,
@@ -1553,3 +1584,23 @@ About the new airlock wires panel:
 			qdel(src)
 			return TRUE
 	return FALSE
+
+/obj/machinery/door/airlock/take_damage(var/damage)
+	// outpost21 - override needed for braces!
+	if(brace)
+		brace.cur_health = clamp(brace.cur_health - damage, 0, brace.max_health)
+		if(brace.cur_health <= 0)
+			visible_message(text("<span class='danger'>\The [brace] is smashed off of the airlock!</span>"))
+			brace.unlock_brace(null)
+			qdel(brace)
+	else
+		..(damage)
+
+/obj/machinery/door/airlock/examine(mob/user)
+	// outpost21 - override needed for braces!
+	if(brace)
+		. = ..()
+		. += text("<span class='danger'>\The [brace] is installed on the airlock, preventing it from opening. </span>")
+		. += brace.examine_health()
+	else
+		. += ..()

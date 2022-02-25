@@ -1590,9 +1590,10 @@ About the new airlock wires panel:
 	if(brace)
 		brace.cur_health = clamp(brace.cur_health - damage, 0, brace.max_health)
 		if(brace.cur_health <= 0)
-			visible_message(text("<span class='danger'>\The [brace] is smashed off of the airlock!</span>"))
-			brace.unlock_brace(null)
-			qdel(brace)
+			var/obj/item/airlock_brace/braceTemp = brace // store the brace reference so it can be deleted after
+			visible_message(text("<span class='danger'>\The [braceTemp] is smashed off of the airlock!</span>"))
+			braceTemp.unlock_brace(null)
+			qdel(braceTemp)
 	else
 		..(damage)
 

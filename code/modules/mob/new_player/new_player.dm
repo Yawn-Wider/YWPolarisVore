@@ -179,7 +179,8 @@
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
 			
 			// outpost 21 change, find a wild animal, and if one exists, possess it!
-			observer.inhabit_mouse() // skip menus from the verb, and go right to the possession!
+			if(!check_rights(R_ADMIN, 0) && !check_rights(R_MOD, 0))
+				observer.inhabit_mouse() // skip menus from the verb, and go right to the possession!
 
 			qdel(src)
 			

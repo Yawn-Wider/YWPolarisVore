@@ -143,11 +143,8 @@
 	// outpost 21 removal
 	if(href_list["observe"])
 		// outpost 21 change, to encourage new players
-		if(!check_rights(R_ADMIN, 0) && !check_rights(R_MOD, 0))
-			to_chat(src, "<span class='danger'>Only admins and moderation may observe, try joining as an assistant or janitor if you are new!</span>")
-			return 1
-
-		if(tgui_alert(src,"Are you sure you wish to observe? If you do, make sure to not use any knowledge gained from observing if you decide to join later.","Player Setup",list("Yes","No")) == "Yes")
+		if(tgui_alert(src,"Are you sure you wish to observe? You will join the round as a wild animal, and be incapable of most actions. If you do, be sure to have a little fun with the players online! If you decide to join the shift, make sure to not use any knowledge gained from observing."))
+		//if(tgui_alert(src,"Are you sure you wish to observe? If you do, make sure to not use any knowledge gained from observing if you decide to join later.","Player Setup",list("Yes","No")) == "Yes")
 			if(!client)	return 1
 
 			//Make a new mannequin quickly, and allow the observer to take the appearance
@@ -180,8 +177,12 @@
 				observer.verbs -= /mob/observer/dead/verb/toggle_antagHUD        // Poor guys, don't know what they are missing!
 			observer.key = key
 			observer.set_respawn_timer(time_till_respawn()) // Will keep their existing time if any, or return 0 and pass 0 into set_respawn_timer which will use the defaults
-			qdel(src)
+			
+			// outpost 21 change, find a wild animal, and if one exists, possess it!
+			observer.inhabit_mouse() // skip menus from the verb, and go right to the possession!
 
+			qdel(src)
+			
 			return 1
 
 

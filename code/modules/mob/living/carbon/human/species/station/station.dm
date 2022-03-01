@@ -461,6 +461,8 @@
 	if(isturf(H.loc)) //else, there's considered to be no light
 		var/turf/T = H.loc
 		light_amount = T.get_lumcount() * 5
+	else if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		light_amount = 0 // it's dark in here!
 
 
 	for(var/K in damageable)
@@ -617,6 +619,10 @@
 		if(isturf(H.loc)) //else, there's considered to be no light
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10
+		else if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+			light_amount = 0 // it's dark in here!
+
+
 		// Don't overfeed, just make them full without going over.
 		if((H.nutrition + light_amount) < initial(H.nutrition))
 			H.adjust_nutrition(light_amount)

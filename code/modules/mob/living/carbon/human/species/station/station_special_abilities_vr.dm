@@ -154,7 +154,10 @@
 	if(isturf(src.loc)) //else, there's considered to be no light
 		var/turf/T = src.loc
 		return T.get_lumcount() * 5
-	else return 0
+	else if(istype(src.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		return 0 // it's dark in here!
+	else 
+		return 0
 
 /mob/living/carbon/human/proc/handle_feral()
 	if(handling_hal) return

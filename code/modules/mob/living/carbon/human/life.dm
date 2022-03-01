@@ -946,6 +946,9 @@
 		if(isturf(loc))
 			var/turf/T = loc
 			light_amount = T.get_lumcount() * 10
+		else if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+			light_amount = 0 // it's dark in here!
+
 		if(light_amount > species.light_dam) //if there's enough light, start dying
 			take_overall_damage(1,1)
 		else //heal in the dark
@@ -1077,7 +1080,10 @@
 		if(species.vision_organ)
 			vision = internal_organs_by_name[species.vision_organ]
 
-		if(!species.vision_organ) // Presumably if a species has no vision organs, they see via some other means.
+		if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+			SetBlinded(1)
+			blinded =    1
+		else if(!species.vision_organ) // Presumably if a species has no vision organs, they see via some other means.
 			SetBlinded(0)
 			blinded =    0
 			eye_blurry = 0
@@ -1137,7 +1143,6 @@
 		// If you're dirty, your gloves will become dirty, too.
 		if(gloves && germ_level > gloves.germ_level && prob(10))
 			gloves.germ_level += 1
-
 	return 1
 
 /mob/living/carbon/human/set_stat(var/new_stat)
@@ -1464,9 +1469,15 @@
 
 
 	//0.1% chance of playing a scary sound to someone who's in complete darkness
-	if(isturf(loc) && rand(1,1000) == 1)
+	if(rand(1,1000) == 1)
 		var/turf/T = loc
-		if(T.get_lumcount() <= LIGHTING_SOFT_THRESHOLD)
+		var/brightness = 0
+		if(isturf(loc))
+			brightness = T.get_lumcount() 
+		else if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+			brightness = 0 // it's dark in here!
+
+		if(brightness <= LIGHTING_SOFT_THRESHOLD)
 			playsound_local(src,pick(scarySounds),50, 1, -1)
 
 /mob/living/carbon/human/handle_stomach()

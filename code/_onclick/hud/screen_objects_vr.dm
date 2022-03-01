@@ -5,7 +5,11 @@
 		//Shadekin
 		if("darkness")
 			var/turf/T = get_turf(usr)
-			var/darkness = round(1 - T.get_lumcount(),0.1)
+			var/darkness = 0
+			if(T)
+				darkness = round(1 - T.get_lumcount(),0.1)
+			else if(istype(usr.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+				darkness = 1 // it's dark in here!
 			to_chat(usr,"<span class='notice'><b>Darkness:</b> [darkness]</span>")
 		if("energy")
 			var/mob/living/simple_mob/shadekin/SK = usr
@@ -13,9 +17,12 @@
 				to_chat(usr,"<span class='notice'><b>Energy:</b> [SK.energy] ([SK.dark_gains])</span>")
 		if("shadekin status")
 			var/turf/T = get_turf(usr)
+			var/darkness = 0
 			if(T)
-				var/darkness = round(1 - T.get_lumcount(),0.1)
-				to_chat(usr,"<span class='notice'><b>Darkness:</b> [darkness]</span>")
+				darkness = round(1 - T.get_lumcount(),0.1)
+			else if(istype(usr.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+				darkness = 1 // it's dark in here!
+			to_chat(usr,"<span class='notice'><b>Darkness:</b> [darkness]</span>")
 			var/mob/living/carbon/human/H = usr
 			if(istype(H) && istype(H.species, /datum/species/shadekin))
 				to_chat(usr,"<span class='notice'><b>Energy:</b> [H.shadekin_get_energy(H)]</span>")
@@ -43,7 +50,12 @@
 						feral_passing = FALSE
 					if(feral_passing)
 						var/turf/T = get_turf(H)
-						if(T.get_lumcount() <= 0.1)
+						var/darkness = 0
+						if(T)
+							darkness = round(1 - T.get_lumcount(),0.1)
+						else if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+							darkness = 1 // it's dark in here!
+						if(darkness <= 0.1)
 							to_chat(usr, "<span class='notice'>You are slowly calming down in darkness' safety...</span>")
 						else
 							to_chat(usr, "<span class='notice'>You are slowly calming down... But safety of darkness is much preferred.</span>")

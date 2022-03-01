@@ -130,6 +130,9 @@
 		if(M.client)
 			M.client.eye = M.client.mob
 			M.client.perspective = MOB_PERSPECTIVE
+		if(istype(M,/mob/living)) // outpost 21 addition - lockers are dark and spooky!
+			var/mob/living/L = M
+			L.Life() // update hud and blindness state
 
 /obj/structure/closet/proc/open()
 	if(opened)
@@ -204,6 +207,9 @@
 			M.client.perspective = EYE_PERSPECTIVE
 			M.client.eye = src
 		M.forceMove(src)
+		if(istype(M,/mob/living)) // outpost 21 addition - lockers are dark and spooky!
+			var/mob/living/L = M
+			L.Life() // update hud and blindness state
 		added_units += M.mob_size
 	return added_units
 

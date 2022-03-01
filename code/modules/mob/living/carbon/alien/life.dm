@@ -82,6 +82,10 @@
 		else if(eye_blurry)
 			eye_blurry = max(eye_blurry-1, 0)
 
+		// outpost 21 addition - lockers are dark and spooky!
+		if(istype(loc,/obj/structure/closet))
+			blinded = 1
+
 		update_icons()
 
 	return 1

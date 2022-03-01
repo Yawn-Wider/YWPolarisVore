@@ -298,8 +298,14 @@
 			if(0.4 to 0.5)
 				fear_amount += 1
 
-	var/turf/T = get_turf(holder)
-	if(T.get_lumcount() <= LIGHTING_SOFT_THRESHOLD) // Standing in complete darkness.
+	var/brightness = 1
+	if(istype(holder.loc,/turf))
+		var/turf/T = get_turf(holder)
+		brightness = T.get_lumcount()
+	else if(istype(holder.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		brightness = 0 // it's dark in here!
+
+	if(brightness <= LIGHTING_SOFT_THRESHOLD) // Standing in complete darkness.
 		fear_amount += 5
 
 	return fear_amount

@@ -136,7 +136,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/helper/vflap,
 	/decl/emote/audible/prbt,
 	/decl/emote/audible/gyoh,
-	/decl/emote/audible/rumble
+	/decl/emote/audible/rumble,
 	//VOREStation Add End
 	//YW ADDITION: Add Start
 	/decl/emote/audible/chirp,

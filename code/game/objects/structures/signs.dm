@@ -160,6 +160,10 @@
 	name = "\improper DISPOSAL LEADS TO SPACE"
 	icon_state = "deathsposal"
 
+/obj/structure/sign/warning/incinerator
+	name = "\improper DISPOSAL LEADS TO INCINERATOR"
+	icon_state = "incinerator"
+
 /obj/structure/sign/warning/docking_area
 	name = "\improper KEEP CLEAR: DOCKING AREA"
 

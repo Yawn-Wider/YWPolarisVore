@@ -29,6 +29,8 @@
 	if(!name)
 		name = "light switch ([area.name])"
 
+	// outpost21 change, areas start off if a lightswitch is present
+	area.lightswitch = FALSE
 	on = area.lightswitch
 	updateicon()
 

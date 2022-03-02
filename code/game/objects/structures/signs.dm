@@ -124,7 +124,7 @@
 	desc = "A warning sign which reads 'NO SMOKING'."
 	icon_state = "nosmoking2"
 
-/obj/structure/sign/nosmoking_2
+/obj/structure/sign/yessmoking_1
 	name = "\improper SMOKING ROOM"
 	desc = "A warning sign which reads 'SMOKING ROOM'."
 	icon_state = "yessmoking"

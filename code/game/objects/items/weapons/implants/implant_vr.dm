@@ -45,6 +45,8 @@
 //////////////////////////////
 //	Size Control Implant
 //////////////////////////////
+// outpost21 edit, removed size control implant
+/*
 /obj/item/weapon/implant/sizecontrol
 	name = "size control implant"
 	desc = "Implant which allows to control host size via voice commands."
@@ -137,3 +139,4 @@
 	..()
 	update()
 	return
+*/

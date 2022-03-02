@@ -125,7 +125,7 @@
 		CASINO_PRIZE("Implant: Toolkit", /obj/item/weapon/implantcase/toolkit, 1, 500, "implants"),
 		CASINO_PRIZE("Implant: Language", /obj/item/weapon/implantcase/vrlanguage, 1, 1000, "implants"),
 		CASINO_PRIZE("Implant: Analyzer", /obj/item/weapon/implantcase/analyzer, 1, 500, "implants"),
-		CASINO_PRIZE("Implant: Size control", /obj/item/weapon/implant/sizecontrol , 1, 500, "implants"),
+		// CASINO_PRIZE("Implant: Size control", /obj/item/weapon/implant/sizecontrol , 1, 500, "implants"), // outpost21 edit - removed size control implant
 	)
 
 	item_list["Event"] = list(

@@ -158,14 +158,13 @@
 
 	var/turf/T = get_turf(H)
 	var/brightness = 1
-	if(T)
+	if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		brightness = 0 // it's dark in here!
+	else if(T)
 		brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	else
-		if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
-			brightness = 0 // it's dark in here!
-		else
-			dark_gains = 0
-			return
+		dark_gains = 0
+		return
 
 	 
 	darkness = 1-brightness //Invert
@@ -232,10 +231,10 @@
 
 		H.shadekin_display.invisibility = 0
 		var/brightness = 1
-		if(T)
-			brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
-		else if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
 			brightness = 0 // it's dark in here!
+		else if(T)
+			brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 
 		var/darkness = 1-brightness //Invert
 		switch(darkness)

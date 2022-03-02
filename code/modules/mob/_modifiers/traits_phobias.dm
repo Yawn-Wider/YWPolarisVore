@@ -278,6 +278,10 @@
 	var/total_tiles = 0
 	var/average_lum = null
 
+	if(istype(holder.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		fear_amount += 10
+		return fear_amount
+
 	for(var/turf/simulated/T in view(5, get_turf(holder))) // See haemophobia for why this is 5.  This uses get_turf() since darkness makes tiles not visible to holder.
 		total_lum += T.get_lumcount()
 		total_tiles++
@@ -302,8 +306,6 @@
 	if(istype(holder.loc,/turf))
 		var/turf/T = get_turf(holder)
 		brightness = T.get_lumcount()
-	else if(istype(holder.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
-		brightness = 0 // it's dark in here!
 
 	if(brightness <= LIGHTING_SOFT_THRESHOLD) // Standing in complete darkness.
 		fear_amount += 5

@@ -2,11 +2,11 @@
 /mob/living/carbon/alien/diona/handle_environment(datum/gas_mixture/environment)
 
 	var/light_amount = 0 //how much light there is in the place, affects receiving nutrition and healing
-	if(isturf(loc)) //else, there's considered to be no light
+	if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		light_amount = 0 // it's dark in here!
+	else if(isturf(loc)) //else, there's considered to be no light
 		var/turf/T = loc
 		light_amount = T.get_lumcount() * 5
-	else if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
-		light_amount = 0 // it's dark in here!
 
 	adjust_nutrition(light_amount)
 

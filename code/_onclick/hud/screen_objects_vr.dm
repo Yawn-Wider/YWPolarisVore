@@ -8,7 +8,7 @@
 			var/darkness = 0
 			if(T)
 				darkness = round(1 - T.get_lumcount(),0.1)
-			else if(istype(usr.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+			if(istype(usr.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
 				darkness = 1 // it's dark in here!
 			to_chat(usr,"<span class='notice'><b>Darkness:</b> [darkness]</span>")
 		if("energy")
@@ -20,7 +20,7 @@
 			var/darkness = 0
 			if(T)
 				darkness = round(1 - T.get_lumcount(),0.1)
-			else if(istype(usr.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+			if(istype(usr.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
 				darkness = 1 // it's dark in here!
 			to_chat(usr,"<span class='notice'><b>Darkness:</b> [darkness]</span>")
 			var/mob/living/carbon/human/H = usr
@@ -53,8 +53,9 @@
 						var/darkness = 0
 						if(T)
 							darkness = round(1 - T.get_lumcount(),0.1)
-						else if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+						if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
 							darkness = 1 // it's dark in here!
+
 						if(darkness <= 0.1)
 							to_chat(usr, "<span class='notice'>You are slowly calming down in darkness' safety...</span>")
 						else

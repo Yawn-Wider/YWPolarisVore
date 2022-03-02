@@ -260,16 +260,17 @@
 	var/darkness = 1
 
 
-	var/turf/T = get_turf(src)
+	var/turf/T = get_turf(src.loc)
 	var/brightness = 1
-	if(T)
+	if(istype(src.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		brightness = 0 // it's dark in here!
+	else if(T)
 		brightness = T.get_lumcount() //Brightness in 0.0 to 1.0
 	else
-		if(istype(src.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
-			brightness = 0 // it's dark in here!
-		else
-			dark_gains = 0
-			return
+		dark_gains = 0
+		return
+
+	
 		
 	darkness = 1-brightness //Invert
 

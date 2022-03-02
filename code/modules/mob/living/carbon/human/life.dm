@@ -943,11 +943,11 @@
 
 	if(species.light_dam)
 		var/light_amount = 0
-		if(isturf(loc))
+		if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+			light_amount = 0 // it's dark in here!
+		else if(isturf(loc))
 			var/turf/T = loc
 			light_amount = T.get_lumcount() * 10
-		else if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
-			light_amount = 0 // it's dark in here!
 
 		if(light_amount > species.light_dam) //if there's enough light, start dying
 			take_overall_damage(1,1)
@@ -1472,10 +1472,10 @@
 	if(rand(1,1000) == 1)
 		var/turf/T = loc
 		var/brightness = 0
-		if(isturf(loc))
-			brightness = T.get_lumcount() 
-		else if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
 			brightness = 0 // it's dark in here!
+		else if(isturf(loc))
+			brightness = T.get_lumcount() 
 
 		if(brightness <= LIGHTING_SOFT_THRESHOLD)
 			playsound_local(src,pick(scarySounds),50, 1, -1)

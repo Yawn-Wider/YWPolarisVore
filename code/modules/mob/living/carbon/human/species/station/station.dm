@@ -458,13 +458,12 @@
 	var/covered = H.get_coverage()
 
 	var/light_amount = 0 //how much light there is in the place, affects damage
-	if(isturf(H.loc)) //else, there's considered to be no light
+	if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+		light_amount = 0 // it's dark in here!
+	else if(isturf(H.loc)) //else, there's considered to be no light
 		var/turf/T = H.loc
 		light_amount = T.get_lumcount() * 5
-	else if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
-		light_amount = 0 // it's dark in here!
-
-
+	
 	for(var/K in damageable)
 		if(!(K in covered))
 			H.apply_damage(light_amount/4, BURN, K, 0, 0, "Abnormal growths")
@@ -616,12 +615,11 @@
 
 	if(light_organ && !light_organ.is_broken())
 		var/light_amount = 0 //how much light there is in the place, affects receiving nutrition and healing
-		if(isturf(H.loc)) //else, there's considered to be no light
+		if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
+			light_amount = 0 // it's dark in here!
+		else if(isturf(H.loc)) //else, there's considered to be no light
 			var/turf/T = H.loc
 			light_amount = T.get_lumcount() * 10
-		else if(istype(H.loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
-			light_amount = 0 // it's dark in here!
-
 
 		// Don't overfeed, just make them full without going over.
 		if((H.nutrition + light_amount) < initial(H.nutrition))

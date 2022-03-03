@@ -100,11 +100,31 @@
 	suspend()
 
 /obj/machinery/medical_kiosk/proc/tell_health_info(mob/living/user)
+	// outpost 21 edit - changes to make more like a save station, and some halucinations
 	if(!istype(user))
 		return "<br><span class='warning'>Unable to perform diagnosis on this type of life form.</span>"
 	if(user.isSynthetic())
 		return "<br><span class='warning'>Unable to perform diagnosis on synthetic life forms.</span>"
 	
+	// halucination replies
+	if(user.hallucination > 20 && prob(30))
+		if(prob(2))
+			return "<br><span class='notice'>Your body is wrong.</span>"
+		if(prob(2))
+			return "<br><span class='notice'>You're not who you say you are.</span>"
+		if(prob(2))
+			return "<br><span class='notice'>I know you are lying about what you are.</span>"
+		if(prob(2))
+			return "<br><span class='notice'>Your insides are whispering.</span>"
+		if(prob(2))
+			return "<br><span class='notice'>Cut the bad things inside of you out.</span>"
+		if(prob(2))
+			return "<br><span class='notice'>Stop lying to everyone, they know what is inside you.</span>"
+		if(prob(2))
+			return "<br><span class='notice'>Everyone wants to cut you open, and take the things inside you for themselves.</span>"
+		if(prob(2))
+			return "<br><span class='notice'>You are not really a [user.get_species()] are you?</span>"
+
 	var/problems = 0
 	for(var/obj/item/organ/external/E in user)
 		if(E.status & ORGAN_BROKEN)
@@ -143,9 +163,9 @@
 	
 	var/problem_text = ""
 	if(problems & BROKEN_BONES)
-		problem_text += "<br><span class='warning'>Broken bones detected - see a medical professional and move as little as possible.</span>"
+		problem_text += "<br><span class='warning'>Broken bones detected - alert a medical professional to your location, and move as little as possible until they arrive.</span>"
 	if(problems & INTERNAL_BLEEDING)
-		problem_text += "<br><span class='danger'>Internal bleeding detected - seek medical attention, ASAP!</span>"
+		problem_text += "<br><span class='danger'>Internal bleeding detected - alert a medical professional to your location, and seek medical attention as soon as possible.</span>"
 	if(problems & EXTERNAL_BLEEDING)
 		problem_text += "<br><span class='warning'>External bleeding detected - advising pressure with cloth and bandaging.</span>"
 	if(problems & SERIOUS_EXTERNAL_DAMAGE)
@@ -155,7 +175,7 @@
 	if(problems & RADIATION_DAMAGE)
 		problem_text += "<br><span class='danger'>Exposure to ionizing radiation detected - seek medical attention.</span>"
 	if(problems & TOXIN_DAMAGE)
-		problem_text += "<br><span class='warning'>Exposure to toxic materials detected - induce vomiting if you have consumed anything recently.</span>"
+		problem_text += "<br><span class='warning'>Exposure to toxic materials detected - induce vomiting if you have consumed anything recently, and seek medical attention.</span>"
 	if(problems & OXY_DAMAGE)
 		problem_text += "<br><span class='warning'>Blood/air perfusion level is below acceptable norms - use concentrated oxygen if necessary.</span>"
 
@@ -175,7 +195,11 @@
 	var/datum/transhuman/body_record/BR = new()
 	BR.init_from_mob(user, TRUE, TRUE, database_key = db_key)
 
-	return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> A backup implant is required for automated notifications to the appropriate department in case of incident."
+	// what a mean halucination
+	if(user.hallucination > 20 && prob(5))
+		return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> Backup scan erased. Body scan erased. You deserve to die forever."
+
+	return "<br><span class='notice'>Backup scan completed!</span><br><b>Note:</b> Please ensure your suit's sensors are properly configured to alert medical and security personal to your current status."
 
 #undef BROKEN_BONES
 #undef INTERNAL_BLEEDING

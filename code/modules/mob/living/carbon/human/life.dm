@@ -1457,28 +1457,53 @@
 	if(inStasisNow())
 		return
 
-	// Puke if toxloss is too high
-	if(!stat)
-		if (getToxLoss() >= 30 && isSynthetic())
+	// outpost 21 edit - lots more random effects happen, such as hallucinations from oxygen loss, and darkness causing hallucinations on it's own from spooky sounds.
+	// do random body effects if alive and not synthetic
+	if(!stat && !isSynthetic())
+		// Puke if toxloss is too high
+		if (getToxLoss() >= 30)
 			if(!confused)
 				if(prob(5))
 					to_chat(src, "<span class='danger'>You lose directional control!</span>")
 					Confuse(10)
-		if (getToxLoss() >= 45 && !isSynthetic())
+		if (getToxLoss() >= 45)
 			spawn vomit()
 
+		// no spooky scary sounds for species immune to hallucinating them!
+		if(!(species.flags & NO_HALLUCINATION))
 
-	//0.1% chance of playing a scary sound to someone who's in complete darkness
-	if(rand(1,1000) == 1)
-		var/turf/T = loc
-		var/brightness = 0
-		if(istype(loc,/obj/structure/closet)) // outpost 21 addition - lockers are dark and spooky!
-			brightness = 0 // it's dark in here!
-		else if(isturf(loc))
-			brightness = T.get_lumcount() 
+			// oxygen loss can result in seeing some crazy stuff
+			if(getOxyLoss() >= 50 && rand(1,15) <= 1)	
+				hallucination += 10
 
-		if(brightness <= LIGHTING_SOFT_THRESHOLD)
-			playsound_local(src,pick(scarySounds),50, 1, -1)
+			// hallucinate more often if already doing so in the darkness
+			var/checkthreshold = 1
+			if(hallucination > 5)
+				checkthreshold = 3; 
+
+			// lockers have it more intense than just standing in darkness, this is to prevent camping in lockers forever
+			var/brightness = 0
+			if(istype(loc,/obj/structure/closet))
+				brightness = 0 // it's dark in here!
+				// spooky in closet...
+				if(brightness <= LIGHTING_SOFT_THRESHOLD)
+					if(rand(1,20) <= checkthreshold)	
+						hallucination += 10
+					if(rand(1,380) <= checkthreshold)
+						playsound_local(src,pick(scarySounds),50, 1, -1)
+						hallucination += 30
+					
+			else if(isturf(loc))
+				var/turf/T = loc
+				brightness = T.get_lumcount() 
+				// spooky walking around
+				if(brightness <= LIGHTING_SOFT_THRESHOLD)
+					if(rand(1,25) <= checkthreshold)	
+						hallucination += 10
+					if(rand(1,400) <= checkthreshold)
+						playsound_local(src,pick(scarySounds),50, 1, -1)
+						hallucination += 25
+
 
 /mob/living/carbon/human/handle_stomach()
 	spawn(0)

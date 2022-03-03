@@ -1082,7 +1082,8 @@
 	return TRUE
 
 /mob/living/get_sound_env(var/pressure_factor)
-	if (hallucination)
+	// outpost 21 edit - make halucinations not so overwhelming at first
+	if (hallucination > 40)
 		return SOUND_ENVIRONMENT_PSYCHOTIC
 	else if (druggy)
 		return SOUND_ENVIRONMENT_DRUGGED

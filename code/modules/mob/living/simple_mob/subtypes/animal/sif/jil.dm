@@ -100,6 +100,7 @@
 	base_wander_delay = 1
 	max_home_distance = 850
 	var/unreachable_locs = list()   //cleared when reaching nest/dropoff item, prevents window breaking spam
+	var/forbidden_objs = list(/obj/item/weapon/deck)
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/New()
 	..()
@@ -111,16 +112,19 @@
 		// attempt grab
 		var/obj/item/I = A
 		I.attack_hand(holder)
-		lose_target()
+
 	if(!istype(A.loc,/turf))
 		// oops, target is held by something else...
 		greed = 0
+		if(target)
+			unreachable_locs += target.loc // prevent regrab attempts
 		lose_target()
 
 	// anything else loses target
-	unreachable_locs += target.loc
-	greed = 0
-	lose_target()
+	if(target)
+		unreachable_locs += target.loc
+		greed = 0
+		lose_target()
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/list_targets()
 	. = hearers(vision_range, holder) - holder
@@ -136,9 +140,10 @@
 
 	if(world.time <= last_search + search_delay)	// Don't spam searching for item targets, since they can be in areas with a -lot- of items.
 		return .
+	last_search = world.time
 
 	for(var/obj/item/I in view(holder, vision_range))
-		last_search = world.time
+		
 		if(!hoard_items || get_dist(I, home_turf) <= 1)
 			continue
 		if(!I.anchored && I.w_class <= ITEMSIZE_SMALL)
@@ -149,6 +154,9 @@
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
 	. = list()
+	if(holder.is_ventcrawling)
+		return
+
 	if(!has_targets_list)
 		possible_targets = list_targets()
 
@@ -156,12 +164,18 @@
 		var/atom/A = possible_target
 		var/forbid = FALSE
 		
-		for(var/forbid_loc in unreachable_locs) // forbidden item list
+		for(var/forbid_loc in unreachable_locs) // forbidden turf list
 			if(A.loc == forbid_loc)
 				forbid = TRUE
 				break
+
+		for(var/forbid_obj in forbidden_objs) // forbidden object list
+			if(istype(A,forbid_obj))
+				forbid = TRUE
+				break
+			
 		
-		if(!istype(A, /mob/living) && can_attack(A) && (!forbid || A.loc == holder.loc))
+		if(!istype(A, /mob/living) && can_attack(A) && !forbid)
 			. += A
 		
 	for(var/obj/item/I in .)
@@ -202,6 +216,9 @@
 	return FALSE
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/handle_special_tactic()
+	if(holder.is_ventcrawling)
+		return
+
 	var/mob/living/simple_mob/animal/sif/sakimm/jil/S = holder
 	if(S.hat)
 		hoard_items = FALSE
@@ -209,11 +226,10 @@
 		hoard_items = TRUE
 
 	use_astar = FALSE // disable Astar most of the time, gives jils a dopey side for efficiency, but sometimes they just GOFORIT
-	if(prob(50) || holder.get_active_hand())
+	if(prob(30) || holder.get_active_hand())
 		use_astar = TRUE // oh no no no
-		if(prob(1)) 
+		if(prob(3)) 
 			unreachable_locs = list() // clear list of ignore turfs when put in Astar mode (sometimes)
-
 	
 
 
@@ -232,8 +248,15 @@
 		carrying_item = TRUE
 
 	if(!carrying_item)	// Not carrying or wearing anything? We want to carry something more.
-		if(prob(10)) greed++
+		if(prob(10)) 
+			greed++
 		greed = min(95, greed)
+
+		if(prob(5) && target)
+			// sometimes just... give up, especially if a jil gets stuck somewhere weird where the pathfinder isn't caring
+			greed = 0
+			unreachable_locs += target.loc
+			lose_target()
 	else
 		greed = 0
 	if(!target && prob(5 + greed) && !holder.get_active_hand())
@@ -270,4 +293,5 @@
 	
 	// truely lost, reset nest to here
 	if(holder.get_active_hand() && holder.loc && home_turf && istype(holder.loc,/turf) && holder.loc.z != home_turf.z)
-		home_turf = holder.loc
+		home_turf = holder.loc // new nest, clear unreachables
+		unreachable_locs = list() // clear list of ignore turfs when put in Astar mode (sometimes)

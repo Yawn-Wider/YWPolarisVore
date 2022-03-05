@@ -76,3 +76,15 @@
 	machine_understands = 0
 	space_chance = 100
 	syllables = list("chirp", "squawk", "tweet")
+
+/datum/language/jil
+	name = "Jil"
+	desc = "Merp merp, meep!"
+	speech_verb = "merps"
+	ask_verb = "mips"
+	exclaim_verb = "meeps"
+	key = "j"
+	flags = RESTRICTED
+	machine_understands = 0
+	space_chance = 100
+	syllables = list("merp","mip","meep","mep")

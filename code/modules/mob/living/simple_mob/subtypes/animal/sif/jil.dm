@@ -118,7 +118,7 @@
 		greed = 0
 		if(target)
 			unreachable_locs += target.loc // prevent regrab attempts
-		lose_target()
+			lose_target()
 
 	// anything else loses target
 	if(target)
@@ -195,7 +195,7 @@
 		greed = 0
 		if(target)
 			unreachable_locs += target.loc
-		lose_target()
+			lose_target()
 	else if(istype(A, /obj/item)) 
 		var/obj/item/I = A
 		if(istype(I, /obj/item/weapon/reagent_containers/food/snacks))	// If we can't pick it up, or it's edible, go to harm.
@@ -261,7 +261,6 @@
 	if(!target && prob(5 + greed) && !holder.get_active_hand())
 		find_target()
 	if(holder.get_active_hand() && hoard_items)
-		lose_target()
 		max_home_distance = 1
 	if(get_dist(holder, home_turf) <= max_home_distance)
 		holder.drop_from_inventory(holder.get_active_hand(), get_turf(holder))

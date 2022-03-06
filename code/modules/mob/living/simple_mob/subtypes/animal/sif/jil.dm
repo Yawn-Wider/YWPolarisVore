@@ -202,7 +202,6 @@
 			holder.a_intent = I_HURT
 		else
 			holder.a_intent = I_HELP
-			playsound(src, 'sound/voice/merp.ogg', 35, 1)
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/should_go_home()
 	if((!returns_home && !holder.get_active_hand()) || !home_turf)	// If we have an item, we want to go home.

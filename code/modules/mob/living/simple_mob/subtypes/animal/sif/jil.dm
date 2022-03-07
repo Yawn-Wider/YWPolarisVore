@@ -110,11 +110,14 @@
 	last_search = 0
 
 	intelligence_level = AI_DUMB // giveup easy
+	var/home_turf_previous = null // if old hometurf exists and we're in range of it, reset home to it! 
+	var/home_turf_original = null // 
 
 	base_wander_delay = 1
 	max_home_distance = 850
 	var/unreachable_locs = list()   //cleared when reaching nest/dropoff item, prevents window breaking spam
 	var/forbidden_objs = list(/obj/item/weapon/deck,/obj/item/weapon/paper_bin,/obj/item/stack) // things that don't play well with jils
+	var/last_pickup_turf = null // when a jil return an item to the nest, this turf is removed from the forbid, so lockers work better
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/New()
 	..()
@@ -122,6 +125,17 @@
 	original_home_distance = max_home_distance
 	search_delay = rand(5,9) SECONDS	// How often can we look for item targets?
 	last_search = world.time + rand( 0, search_delay) // randomize
+
+	// set first home
+	home_turf_original = home_turf
+
+
+/datum/ai_holder/simple_mob/intentional/sakimm/jil/proc/set_new_home(atom/A)
+	if(holder.loc && istype(A,/turf))
+		// if first home away from home... then our origin_home can be set!
+		home_turf_previous = home_turf
+		home_turf = A // new nest!
+		last_pickup_turf = null // clear
 
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/pre_melee_attack(atom/A)
@@ -147,10 +161,12 @@
 			unreachable_locs += target.loc // if not inside something!
 
 	// check if we should make a new nest due to being trapped!
-	if(prob(30) && max_home_distance == 1 && holder.loc && istype(holder.loc,/turf) )
-		home_turf = holder.loc // new nest!
+	if(prob(30) && max_home_distance == 1)
+		set_new_home(holder.loc)
 
 	// end path to target
+	if(target && istype(target.loc, /turf)) 
+		last_pickup_turf = target.loc // for closet fix
 	give_up_movement()
 	lose_target()
 	
@@ -287,8 +303,21 @@
 	if(holder.is_ventcrawling)
 		return
 
+	// rejuvinate nest!
+	if(home_turf_previous) 
+		// reset to last home
+		if(get_dist(holder.loc, home_turf_previous) < 2)
+			home_turf = home_turf_previous
+			home_turf_previous = null
+	if(home_turf_original) 
+		// reset to origin home, all other homes give up
+		if(home_turf_original && get_dist(holder.loc, home_turf_original) < 2) 
+			home_turf = home_turf_original
+			home_turf_previous = null
+
 	// too far from old nest? Find an item and make it the new nest
 	if(holder.get_active_hand() && holder.loc && home_turf && istype(holder.loc,/turf) && (get_dist(holder.loc, home_turf) > 20 || holder.loc.z != home_turf.z))
+		home_turf_previous = home_turf
 		home_turf = holder.loc // new nest!
 
 	// disable Astar most of the time, gives jils a dopey side for efficiency, but sometimes they just GOFORIT
@@ -315,6 +344,7 @@
 				unreachable_locs += target.loc // if not inside something!
 			give_up_movement()
 			lose_target()
+			last_pickup_turf = null
 			greed = 100 // REALLY WANT A NEW TARGET
 
 		// wander from nest
@@ -325,6 +355,7 @@
 			greed++
 		greed = min(95, greed)
 		if(!target && prob(5 + greed))
+			last_pickup_turf = null // new target, new cleanup turf
 			find_target()
 	else
 		// clean target
@@ -339,6 +370,9 @@
 				last_search = world.time
 				greed = 0
 				holder.drop_from_inventory(holder.get_active_hand(), get_turf(holder))
+				if(last_pickup_turf)
+					unreachable_locs -= last_pickup_turf // remove from list, far enough to forget
+					last_pickup_turf = null // clear last pickup, we freaked out
 			
 
 
@@ -361,6 +395,9 @@
 			// lose target... 
 			if(target && istype(target.loc, /turf)) 
 				unreachable_locs += target.loc // if not inside something!
+			if(holder.get_active_hand())
+				holder.drop_from_inventory(holder.get_active_hand(), get_turf(holder))
+			last_pickup_turf = null // clear last pickup, we freaked out
 			give_up_movement()
 			lose_target()
 		return FALSE

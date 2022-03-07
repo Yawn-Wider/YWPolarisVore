@@ -859,12 +859,12 @@
 /area/centcom/security)
 "dL" = (
 /obj/structure/table/reinforced,
-/obj/item/weapon/storage/box/flashshells,
-/obj/item/weapon/storage/box/flashshells,
-/obj/item/weapon/storage/box/stunshells,
-/obj/item/weapon/storage/box/stunshells,
-/obj/item/weapon/storage/box/beanbags,
-/obj/item/weapon/storage/box/beanbags,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/flash,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/stunshell,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
+/obj/item/ammo_magazine/ammo_box/b12g/beanbag,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
@@ -9945,10 +9945,10 @@
 	dir = 8
 	},
 /obj/structure/window/reinforced,
-/obj/item/weapon/storage/box/shotgunshells,
-/obj/item/weapon/storage/box/shotgunshells,
-/obj/item/weapon/storage/box/shotgunammo,
-/obj/item/weapon/storage/box/shotgunammo,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+/obj/item/ammo_magazine/ammo_box/b12g/pellet,
+//obj/item/ammo_magazine/ammo_box/b12g/pellet,
+//obj/item/ammo_magazine/ammo_box/b12g/pellet,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},

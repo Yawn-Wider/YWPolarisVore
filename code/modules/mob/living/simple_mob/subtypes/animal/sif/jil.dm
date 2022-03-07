@@ -64,9 +64,7 @@
 		return
 	if( ishuman(AM) )
 		if(!stat)
-			var/mob/M = AM
-			M.visible_message("<font color='blue'>[bicon(src)] Merp!</font>")
-			playsound(src, 'sound/voice/merp.ogg', 35, 1)
+			bonk(AM)
 	..()
 
 /mob/living/simple_mob/animal/sif/sakimm/jil/proc/splat()
@@ -78,11 +76,17 @@
 	if(client)
 		client.time_died_as_mouse = world.time
 
+/mob/living/simple_mob/animal/sif/sakimm/jil/proc/bonk(var/mob/M)
+	// bonk noise
+	M.visible_message("<font color='blue'>[bicon(src)] Merp!</font>")
+	playsound(src, 'sound/voice/merp.ogg', 35, 1)
+
 // Jil noises
 /datum/say_list/jil
 	speak = list("Merp!","MERP!","Merp?")
 	emote_hear = list("merps","mips","meeps")
 	emote_see = list("runs in a circle", "shakes")
+
 
 
 
@@ -105,17 +109,18 @@
 	search_delay = 8 SECONDS	// How often can we look for item targets?
 	last_search = 0
 
+	intelligence_level = AI_DUMB // giveup easy
+
 	base_wander_delay = 1
 	max_home_distance = 850
 	var/unreachable_locs = list()   //cleared when reaching nest/dropoff item, prevents window breaking spam
 	var/forbidden_objs = list(/obj/item/weapon/deck,/obj/item/weapon/paper_bin,/obj/item/stack) // things that don't play well with jils
 
-
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/New()
 	..()
-	hoard_items = !istype(holder,/mob/living/simple_mob/animal/sif/sakimm/jil/jillilah) // jillilah disables hoarding
-
+	// search setup
 	original_home_distance = max_home_distance
+	search_delay = rand(5,9) SECONDS	// How often can we look for item targets?
 	last_search = world.time + rand( 0, search_delay) // randomize
 
 
@@ -129,17 +134,26 @@
 	else
 		// bonk for all others
 		holder.a_intent = I_HELP
+		var/mob/living/simple_mob/animal/sif/sakimm/jil/J = holder
+		J.bonk(holder)
 
-		// this is stupid, always set to 5 so it fails at first window bump
-		failed_breakthroughs = 5
+	// this is stupid, always set to 5 so it fails at first window bump
+	failed_breakthroughs = 4
 
-		// forbid target if not item
-		forget_target_and_avoid()
+	// if not a closet...
+	if(!istype(A, /obj/structure/closet)) 
+		// forbid turf, we picked it up or couldn't reach it
+		if(target && istype(target.loc, /turf)) 
+			unreachable_locs += target.loc // if not inside something!
 
-		// the SOUND
-		holder.visible_message("<font color='blue'>[bicon(src)] Merp!</font>")
-		playsound(src, 'sound/voice/merp.ogg', 35, 1)
+	// check if we should make a new nest due to being trapped!
+	if(prob(30) && max_home_distance == 1 && holder.loc && istype(holder.loc,/turf) )
+		home_turf = holder.loc // new nest!
 
+	// end path to target
+	give_up_movement()
+	lose_target()
+	
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/post_melee_attack(atom/A)
 	if(istype(A, /obj/item) && !holder.get_active_hand() && holder.Adjacent(A))
@@ -205,14 +219,6 @@
 		*/
 	. -= holder.contents
 
-
-/datum/ai_holder/simple_mob/intentional/sakimm/jil/proc/forget_target_and_avoid()
-	// lose target and add it to excluded
-	if(target && istype(target.loc, /turf)) 
-		unreachable_locs += target.loc // if not inside something!
-	lose_target()
-
-
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
 	if(!hoard_items)
 		return
@@ -272,7 +278,6 @@
 			return TRUE
 	return FALSE
 
-
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/handle_special_strategical()
 	// nothing special if not a hoarder
 	if(!hoard_items)
@@ -283,58 +288,62 @@
 		return
 
 	// too far from old nest? Find an item and make it the new nest
-	if(holder.get_active_hand() && prob(10))
-		if(holder.loc && home_turf && istype(holder.loc,/turf) && (get_dist(holder.loc, home_turf) > 30 || holder.loc.z != home_turf.z))
-			home_turf = holder.loc
+	if(holder.get_active_hand() && holder.loc && home_turf && istype(holder.loc,/turf) && (get_dist(holder.loc, home_turf) > 20 || holder.loc.z != home_turf.z))
+		home_turf = holder.loc // new nest!
+
+	// disable Astar most of the time, gives jils a dopey side for efficiency, but sometimes they just GOFORIT
+	use_astar = FALSE 
+	if(prob(30) || holder.get_active_hand())
+		use_astar = TRUE // oh no no no
 
 	// clear old forbid turf
-	if(prob(2))
+	if(prob(10))
 		for(var/turf/forbid_loc in unreachable_locs) // forbidden turf list
 			if(get_dist(holder.loc, forbid_loc) < 2)
 				unreachable_locs -= forbid_loc // remove from list, enough to step to
 			else if(get_dist(holder.loc, forbid_loc) > 30)
 				unreachable_locs -= forbid_loc // remove from list, far enough to forget
-			else if(prob(5))
+			else if(prob(2))
 				unreachable_locs -= forbid_loc // random retry
 
 	// not holding something, get greedier, find way to target
 	if(!holder.get_active_hand() && holder.health == holder.maxHealth)
 		// oops, target is held by something else...
 		if(target && !istype(target.loc,/turf))
-			forget_target_and_avoid()
+			// lose target... 
+			if(target && istype(target.loc, /turf)) 
+				unreachable_locs += target.loc // if not inside something!
+			give_up_movement()
+			lose_target()
 			greed = 100 // REALLY WANT A NEW TARGET
+
+		// wander from nest
+		max_home_distance = original_home_distance
 
 		// find targets
 		if(prob(10)) 
 			greed++
 		greed = min(95, greed)
-		if(!target && prob(5 + greed) && !holder.get_active_hand())
+		if(!target && prob(5 + greed))
 			find_target()
 	else
-		// return to nest! Lose all targets
+		// clean target
 		if(target)
-			holder.visible_message("<font color='blue'>[bicon(src)] Merp!</font>")
-			playsound(src, 'sound/voice/merp.ogg', 35, 1)
-			forget_target_and_avoid()
+			lose_target()
 
 		// return home
-		if(holder.health < holder.maxHealth || (holder.get_active_hand() && hoard_items))
-			max_home_distance = 1
-
+		max_home_distance = 1
 		if(get_dist(holder, home_turf) <= max_home_distance)
 			// drop item off at nest
 			if(holder.get_active_hand())
 				last_search = world.time
 				greed = 0
 				holder.drop_from_inventory(holder.get_active_hand(), get_turf(holder))
-
-		if(holder.health == holder.maxHealth && !holder.get_active_hand())
-			max_home_distance = original_home_distance
+			
 
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/special_flee_check()
 	return holder.get_active_hand()
-	
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/react_to_attack(atom/movable/attacker, ignore_timers = FALSE)
 	if(holder.is_ventcrawling)
@@ -346,7 +355,14 @@
 		return FALSE
 	else
 		ai_log("react_to_attack() : Was attacked by [attacker], but we are not allowed to attack back.", AI_LOG_TRACE)
-		holder.visible_message("<font color='blue'>[bicon(src)] Merp!</font>")
-		playsound(src, 'sound/voice/merp.ogg', 35, 1)
-		forget_target_and_avoid() // give up on items
+		var/mob/living/simple_mob/animal/sif/sakimm/jil/J = holder
+		J.bonk(attacker)
+		if(target)
+			// lose target... 
+			if(target && istype(target.loc, /turf)) 
+				unreachable_locs += target.loc // if not inside something!
+			give_up_movement()
+			lose_target()
 		return FALSE
+
+	

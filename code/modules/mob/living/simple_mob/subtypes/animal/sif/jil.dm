@@ -3,18 +3,26 @@
 	desc = ""
 	value = CATALOGUER_REWARD_EASY
 
+/mob/living/simple_mob/animal/sif/sakimm/jil/jillilah
+	..()
+	name = "jillilah"
+	real_name = "jillilah"
+	desc = "When you stare deep in her beady little eyes, you can feel an intense desire to declare independence..."
+
+	faction = "cargonia"
+	randomize_size = FALSE
+
 /mob/living/simple_mob/animal/sif/sakimm/jil
 	name = "jil"
 	real_name = "jil"
 	desc = "It's a small rodent."
 	tt_desc = "E Mus musculus"
-	icon_state = "mouse_gray"
-	item_state = "mouse_gray"
-	icon_living = "mouse_gray"
-	icon_dead = "mouse_gray_dead"
+	icon = 'icons/mob/animal_op.dmi'
+	icon_state = "jil"
+	item_state = "jil"
+	icon_living = "jil"
+	icon_dead = "jil_dead"
 	kitchen_tag = "rodent"
-
-	icon_state = "mouse_gray"
 
 	faction = "jil"
 
@@ -47,9 +55,8 @@
 
 	say_list_type = /datum/say_list/jil
 	ai_holder_type = /datum/ai_holder/simple_mob/intentional/sakimm/jil
-	randomize_size = FALSE	// Most likely to have a hat.
+	randomize_size = TRUE // unit jil sizes
 	melee_attack_delay = 0	// For some reason, having a delay makes item pick-up not work.
-
 	friend_loot_list = list()	// What will make this animal non-hostile if held?
 
 /mob/living/simple_mob/animal/sif/sakimm/jil/Crossed(atom/movable/AM as mob|obj)
@@ -65,8 +72,8 @@
 /mob/living/simple_mob/animal/sif/sakimm/jil/proc/splat()
 	src.health = 0
 	src.set_stat(DEAD)
-	src.icon_dead = "mouse_gray_splat"
-	src.icon_state = "mouse_gray_splat"
+	src.icon_dead = "jil_splat"
+	src.icon_state = "jil_splat"
 	layer = MOB_LAYER
 	if(client)
 		client.time_died_as_mouse = world.time
@@ -89,8 +96,9 @@
 	vision_range = 10
 	can_flee = TRUE
 	flee_when_dying = TRUE
+	use_astar = TRUE // oh no no no
 
-	greed = 5	// The probability we will try to steal something. Increases over time if we are not holding something, or wearing a hat.
+	greed = 5	// The probability we will try to steal something. Increases over time if we are not holding something
 	hoard_items = TRUE
 	hoard_distance = 3	// How far an item can be from the Sakimm's home turf to be counted inside its 'hoard'.
 	original_home_distance = null
@@ -100,37 +108,62 @@
 	base_wander_delay = 1
 	max_home_distance = 850
 	var/unreachable_locs = list()   //cleared when reaching nest/dropoff item, prevents window breaking spam
-	var/forbidden_objs = list(/obj/item/weapon/deck)
+	var/forbidden_objs = list(/obj/item/weapon/deck,/obj/item/weapon/paper_bin,/obj/item/stack) // things that don't play well with jils
+
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/New()
 	..()
+	hoard_items = !istype(holder,/mob/living/simple_mob/animal/sif/sakimm/jil/jillilah) // jillilah disables hoarding
+
 	original_home_distance = max_home_distance
 	last_search = world.time + rand( 0, search_delay) // randomize
 
+
+/datum/ai_holder/simple_mob/intentional/sakimm/jil/pre_melee_attack(atom/A)
+	if(istype(A, /obj/item)) 
+		var/obj/item/I = A
+		if(istype(I, /obj/item/weapon/reagent_containers/food/snacks))	// If we can't pick it up, or it's edible, go to harm.
+			holder.a_intent = I_HURT
+		else
+			holder.a_intent = I_HELP
+	else
+		// bonk for all others
+		holder.a_intent = I_HELP
+
+		// this is stupid, always set to 5 so it fails at first window bump
+		failed_breakthroughs = 5
+
+		// forbid target if not item
+		forget_target_and_avoid()
+
+		// the SOUND
+		holder.visible_message("<font color='blue'>[bicon(src)] Merp!</font>")
+		playsound(src, 'sound/voice/merp.ogg', 35, 1)
+
+
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/post_melee_attack(atom/A)
 	if(istype(A, /obj/item) && !holder.get_active_hand() && holder.Adjacent(A))
-		// attempt grab
+		// attempt grab of target!
 		var/obj/item/I = A
 		I.attack_hand(holder)
+	else if(istype(A, /obj/structure/closet))
+		// attempt to open!
+		var/obj/structure/closet/C = A
+		if(!C.opened && C.can_open())
+			C.attack_hand(holder)
+	/*
+	else if(istype(A,/obj/machinery/atmospherics/unary/vent_pump) || istype(A,/obj/machinery/atmospherics/unary/vent_scrubber))
+		// vent crawl
+		holder.ventcrawl()
+	*/
 
-	if(!istype(A.loc,/turf))
-		// oops, target is held by something else...
-		greed = 0
-		if(target)
-			unreachable_locs += target.loc // prevent regrab attempts
-			lose_target()
-
-	// anything else loses target
-	if(target)
-		unreachable_locs += target.loc
-		greed = 0
-		lose_target()
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/list_targets()
 	. = hearers(vision_range, holder) - holder
+	if(!hoard_items)
+		return
 
 	var/static/hostile_machines = typecacheof(list(/obj/machinery/porta_turret, /obj/mecha))
-
 	for(var/HM in typecache_filter_list(range(vision_range, holder), hostile_machines))
 		if(can_see(holder, HM, vision_range))
 			. += HM
@@ -142,21 +175,52 @@
 		return .
 	last_search = world.time
 
-	for(var/obj/item/I in view(holder, vision_range))
-		
-		if(!hoard_items || get_dist(I, home_turf) <= 1)
+	for(var/atom/A in view(holder, vision_range))
+		if(get_dist(A, home_turf) < hoard_distance)
 			continue
-		if(!I.anchored && I.w_class <= ITEMSIZE_SMALL)
-			. += I
-			break
 
+		// collect items!
+		if(istype(A,/obj/item))
+			var/obj/item/I = A
+			if(!I.anchored && I.w_class <= ITEMSIZE_NORMAL) // jils are large enough to...
+				. += I
+				break
+		// bonus interactions!
+		else if(istype(A,/obj/structure/closet)) // opening closets
+			var/obj/structure/closet/C = A
+			if(!C.opened && C.can_open())
+				. += C
+			else
+				// update targets!
+				find_target()
+		/*
+		else if(istype(A,/obj/machinery/atmospherics/unary/vent_pump)) // entering vents
+			var/obj/machinery/atmospherics/unary/vent_pump/P = A
+			if(prob(5)) // only sometimes
+				. += P
+		else if(istype(A,/obj/machinery/atmospherics/unary/vent_scrubber)) // entering vents
+			var/obj/machinery/atmospherics/unary/vent_scrubber/S = A
+			if(prob(5)) // only sometimes
+				. += S
+		*/
 	. -= holder.contents
 
+
+/datum/ai_holder/simple_mob/intentional/sakimm/jil/proc/forget_target_and_avoid()
+	// lose target and add it to excluded
+	if(target && istype(target.loc, /turf)) 
+		unreachable_locs += target.loc // if not inside something!
+	lose_target()
+
+
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
-	. = list()
+	if(!hoard_items)
+		return
+	
 	if(holder.is_ventcrawling)
 		return
 
+	. = list()
 	if(!has_targets_list)
 		possible_targets = list_targets()
 
@@ -180,116 +244,109 @@
 		
 	for(var/obj/item/I in .)
 		last_search = world.time
-		if(!hoard_items || get_dist(I, home_turf) <= 1)
+		if(!hoard_items || get_dist(I, home_turf) < hoard_distance)
 			. -= I
 
 	var/new_target = pick_target(.)
 	give_target(new_target)
 	return new_target
-
-/datum/ai_holder/simple_mob/intentional/sakimm/jil/pre_melee_attack(atom/A)
-	if(istype(A, /obj/structure))
-		// bonk
-		holder.IMove(get_step(holder, pick(alldirs)))
-		holder.a_intent = I_HELP
-		greed = 0
-		if(target)
-			unreachable_locs += target.loc
-			lose_target()
-	else if(istype(A, /obj/item)) 
-		var/obj/item/I = A
-		if(istype(I, /obj/item/weapon/reagent_containers/food/snacks))	// If we can't pick it up, or it's edible, go to harm.
-			holder.a_intent = I_HURT
-		else
-			holder.a_intent = I_HELP
+		
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/should_go_home()
+	if(!hoard_items)
+		return TRUE
+
+	if(holder.is_ventcrawling)
+		return FALSE
+
+	if(holder.health < holder.maxHealth) // HP FEAR
+		return TRUE
+
 	if((!returns_home && !holder.get_active_hand()) || !home_turf)	// If we have an item, we want to go home.
 		return FALSE
 
-	if(greed < 30 || get_dist(holder, home_turf) > max_home_distance)
+	if(get_dist(holder, home_turf) > max_home_distance)
 		if(!home_low_priority)
 			return TRUE
 		else if(!leader && !target)
 			return TRUE
 	return FALSE
 
-/datum/ai_holder/simple_mob/intentional/sakimm/jil/handle_special_tactic()
+
+/datum/ai_holder/simple_mob/intentional/sakimm/jil/handle_special_strategical()
+	// nothing special if not a hoarder
+	if(!hoard_items)
+		return
+
+	// vent crawler handling
 	if(holder.is_ventcrawling)
 		return
 
-	var/mob/living/simple_mob/animal/sif/sakimm/jil/S = holder
-	if(S.hat)
-		hoard_items = FALSE
-	else
-		hoard_items = TRUE
+	// too far from old nest? Find an item and make it the new nest
+	if(holder.get_active_hand() && prob(10))
+		if(holder.loc && home_turf && istype(holder.loc,/turf) && (get_dist(holder.loc, home_turf) > 30 || holder.loc.z != home_turf.z))
+			home_turf = holder.loc
 
-	use_astar = FALSE // disable Astar most of the time, gives jils a dopey side for efficiency, but sometimes they just GOFORIT
-	if(prob(30) || holder.get_active_hand())
-		use_astar = TRUE // oh no no no
-		if(prob(3)) 
-			unreachable_locs = list() // clear list of ignore turfs when put in Astar mode (sometimes)
-	
+	// clear old forbid turf
+	if(prob(2))
+		for(var/turf/forbid_loc in unreachable_locs) // forbidden turf list
+			if(get_dist(holder.loc, forbid_loc) < 2)
+				unreachable_locs -= forbid_loc // remove from list, enough to step to
+			else if(get_dist(holder.loc, forbid_loc) > 30)
+				unreachable_locs -= forbid_loc // remove from list, far enough to forget
+			else if(prob(5))
+				unreachable_locs -= forbid_loc // random retry
 
+	// not holding something, get greedier, find way to target
+	if(!holder.get_active_hand() && holder.health == holder.maxHealth)
+		// oops, target is held by something else...
+		if(target && !istype(target.loc,/turf))
+			forget_target_and_avoid()
+			greed = 100 // REALLY WANT A NEW TARGET
 
-/datum/ai_holder/simple_mob/intentional/sakimm/jil/handle_special_strategical()
-	var/mob/living/simple_mob/animal/sif/sakimm/jil/S = holder
-	var/carrying_item = FALSE
-
-	if(holder.get_active_hand())	// Do we have loot?
-		if(istype(holder) && istype(holder.get_active_hand(), /obj/item/clothing/head) && !S.hat)
-			var/obj/item/I = holder.get_active_hand()
-			S.take_hat(S)
-			holder.visible_message("<b>\The [holder]</b> wears \the [I]")
-		carrying_item = TRUE
-
-	if(istype(holder) && S.hat)		// Do we have a hat? Hats are loot.
-		carrying_item = TRUE
-
-	if(!carrying_item)	// Not carrying or wearing anything? We want to carry something more.
+		// find targets
 		if(prob(10)) 
 			greed++
 		greed = min(95, greed)
-
-		if(prob(5) && target)
-			// sometimes just... give up, especially if a jil gets stuck somewhere weird where the pathfinder isn't caring
-			greed = 0
-			unreachable_locs += target.loc
-			lose_target()
+		if(!target && prob(5 + greed) && !holder.get_active_hand())
+			find_target()
 	else
-		greed = 0
-	if(!target && prob(5 + greed) && !holder.get_active_hand())
-		find_target()
-	if(holder.get_active_hand() && hoard_items)
-		max_home_distance = 1
-	if(get_dist(holder, home_turf) <= max_home_distance)
-		holder.drop_from_inventory(holder.get_active_hand(), get_turf(holder))
-		if(carrying_item)
-			last_search = world.time
-			unreachable_locs = list() // clear list of ignore turfs when item is return
-	if(!holder.get_active_hand())
-		max_home_distance = original_home_distance
+		// return to nest! Lose all targets
+		if(target)
+			holder.visible_message("<font color='blue'>[bicon(src)] Merp!</font>")
+			playsound(src, 'sound/voice/merp.ogg', 35, 1)
+			forget_target_and_avoid()
+
+		// return home
+		if(holder.health < holder.maxHealth || (holder.get_active_hand() && hoard_items))
+			max_home_distance = 1
+
+		if(get_dist(holder, home_turf) <= max_home_distance)
+			// drop item off at nest
+			if(holder.get_active_hand())
+				last_search = world.time
+				greed = 0
+				holder.drop_from_inventory(holder.get_active_hand(), get_turf(holder))
+
+		if(holder.health == holder.maxHealth && !holder.get_active_hand())
+			max_home_distance = original_home_distance
+
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/special_flee_check()
 	return holder.get_active_hand()
+	
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/react_to_attack(atom/movable/attacker, ignore_timers = FALSE)
+	if(holder.is_ventcrawling)
+		return FALSE
+
 	// not allowed to retaliate!
 	if(holder.stat) // We're dead.
 		ai_log("react_to_attack() : Was attacked by [attacker], but we are dead/unconscious.", AI_LOG_TRACE)
 		return FALSE
 	else
 		ai_log("react_to_attack() : Was attacked by [attacker], but we are not allowed to attack back.", AI_LOG_TRACE)
+		holder.visible_message("<font color='blue'>[bicon(src)] Merp!</font>")
+		playsound(src, 'sound/voice/merp.ogg', 35, 1)
+		forget_target_and_avoid() // give up on items
 		return FALSE
-
-/datum/ai_holder/simple_mob/intentional/sakimm/jil/give_up_movement()
-	..()
-	if(target)
-		greed = 0
-		unreachable_locs += target.loc
-		lose_target()
-	
-	// truely lost, reset nest to here
-	if(holder.get_active_hand() && holder.loc && home_turf && istype(holder.loc,/turf) && holder.loc.z != home_turf.z)
-		home_turf = holder.loc // new nest, clear unreachables
-		unreachable_locs = list() // clear list of ignore turfs when put in Astar mode (sometimes)

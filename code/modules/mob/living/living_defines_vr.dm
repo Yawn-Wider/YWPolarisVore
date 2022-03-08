@@ -15,3 +15,7 @@
 /mob
 	var/wingdings = 0
 //Yw Add End
+
+//OP Add Start
+	var/parasitic = FALSE //Digestion immunity and nutrition leeching variable
+//OP Add End

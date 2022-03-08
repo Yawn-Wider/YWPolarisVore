@@ -222,6 +222,9 @@
 		// bonk for all others
 		holder.a_intent = I_HELP
 
+	// update forbiddens
+	update_forbidden_list()
+
 	// jil vs jillioth bonk behavior	
 	if(!istype( holder, /mob/living/simple_mob/animal/sif/sakimm/jil/jillioth) || prob(5))
 		// this is stupid, always set to 5 so it fails at first window bump, except the jillioth does random hits against it
@@ -380,6 +383,17 @@
 			return TRUE
 	return FALSE
 
+/datum/ai_holder/simple_mob/intentional/sakimm/jil/proc/update_forbidden_list()
+	for(var/turf/forbid_loc in unreachable_locs) // forbidden turf list
+		if(get_dist(holder.loc, forbid_loc) < 2)
+			unreachable_locs -= forbid_loc // remove from list, enough to step to
+		else if(get_dist(holder.loc, forbid_loc) > 30)
+			unreachable_locs -= forbid_loc // remove from list, far enough to forget
+		else if(istype( holder, /mob/living/simple_mob/animal/sif/sakimm/jil/jillioth) && prob(50))
+			unreachable_locs -= forbid_loc // random retry, jillioth
+		else if(prob(2))
+			unreachable_locs -= forbid_loc // random retry
+
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/handle_special_strategical()
 	if(holder.stat == DEAD)
 		return
@@ -430,15 +444,7 @@
 
 		// clear old forbid turf
 		if(prob(10))
-			for(var/turf/forbid_loc in unreachable_locs) // forbidden turf list
-				if(get_dist(holder.loc, forbid_loc) < 2)
-					unreachable_locs -= forbid_loc // remove from list, enough to step to
-				else if(get_dist(holder.loc, forbid_loc) > 30)
-					unreachable_locs -= forbid_loc // remove from list, far enough to forget
-				else if(istype( holder, /mob/living/simple_mob/animal/sif/sakimm/jil/jillioth) && prob(50))
-					unreachable_locs -= forbid_loc // random retry, jillioth
-				else if(prob(2))
-					unreachable_locs -= forbid_loc // random retry
+			update_forbidden_list()
 
 		// not holding something, get greedier, find way to target
 		if(!holder.get_active_hand() && holder.health >= 5 && holder.sleeping <= 0)

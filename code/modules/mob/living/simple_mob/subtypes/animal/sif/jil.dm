@@ -8,54 +8,6 @@
 	desc = "TODO - giant jil description"
 	value = CATALOGUER_REWARD_MEDIUM
 
-
-/mob/living/simple_mob/animal/sif/sakimm/jil/jillilah
-	..()
-	name = "jillilah"
-	real_name = "jillilah"
-	desc = "When you stare deep in her beady little eyes, you can feel an intense desire to declare independence..."
-
-	faction = "cargonia"
-	randomize_size = FALSE
-	
-	// tiny suit!
-	icon_state = "jil_cargo"
-	item_state = "jil_cargo"
-	icon_living = "jil_cargo"
-	icon_dead = "jil_cargo_dead"
-	icon_splat = "jil_cargo_splat"
-	icon_sleep = "jil_cargo_sleep"
-	
-/mob/living/simple_mob/animal/sif/sakimm/jil/jillioth
-	..()
-	name = "jillioth"
-	real_name = "jillioth"
-	desc = "Here to collect."
-
-	randomize_size = FALSE
-	maxHealth = 250
-	health = 250
-	density = TRUE
-
-	icon_state = "jil"
-	item_state = "jil"
-	icon_living = "jil"
-	icon_dead = "jil_dead"
-	
-	catalogue_data = list(/datum/category_item/catalogue/fauna/sakimm/jil/jillioth)
-
-	melee_damage_lower = 20
-	melee_damage_upper = 40
-
-	// enlorgen
-	icon_state = "jil_big"
-	item_state = "jil_big"
-	icon_living = "jil_big"
-	icon_dead = "jil_big_dead"
-	icon_splat = "jil_big_splat"
-	icon_sleep = "jil_big_sleep"
-
-
 /mob/living/simple_mob/animal/sif/sakimm/jil
 	name = "jil"
 	real_name = "jil"
@@ -63,7 +15,6 @@
 	tt_desc = "Crinitus Latrunculus"
 	icon = 'icons/mob/animal_op.dmi'
 	icon_state = "jil"
-	item_state = "jil"
 	icon_living = "jil"
 	icon_dead = "jil_dead"
 	var/icon_splat = "jil_splat"
@@ -78,7 +29,7 @@
 	humanoid_hands = TRUE
 	minbodytemp = 175
 	pass_flags = PASSTABLE
-	
+
 	universal_understand = 1
 
 	melee_damage_lower = 1
@@ -106,6 +57,45 @@
 	randomize_size = TRUE // unit jil sizes
 	melee_attack_delay = 0	// For some reason, having a delay makes item pick-up not work.
 	friend_loot_list = list()	// What will make this animal non-hostile if held?
+
+/mob/living/simple_mob/animal/sif/sakimm/jil/jillilah
+	..()
+	name = "jillilah"
+	real_name = "jillilah"
+	desc = "When you stare deep in her beady little eyes, you can feel an intense desire to declare independence..."
+
+	faction = "cargonia"
+	randomize_size = FALSE
+
+	// tiny suit!
+	icon_state = "jil_cargo"
+	icon_living = "jil_cargo"
+	icon_dead = "jil_cargo_dead"
+	icon_splat = "jil_cargo_splat"
+	icon_sleep = "jil_cargo_sleep"
+
+/mob/living/simple_mob/animal/sif/sakimm/jil/jillioth
+	..()
+	name = "jillioth"
+	real_name = "jillioth"
+	desc = "Here to collect."
+
+	randomize_size = FALSE
+	maxHealth = 250
+	health = 250
+	density = TRUE
+
+	catalogue_data = list(/datum/category_item/catalogue/fauna/sakimm/jil/jillioth)
+
+	melee_damage_lower = 20
+	melee_damage_upper = 40
+
+	// enlorgen
+	icon_state = "jil_big"
+	icon_living = "jil_big"
+	icon_dead = "jil_big_dead"
+	icon_splat = "jil_big_splat"
+	icon_sleep = "jil_big_sleep"
 
 /mob/living/simple_mob/animal/sif/sakimm/jil/Crossed(atom/movable/AM as mob|obj)
 	if(AM.is_incorporeal())
@@ -143,10 +133,8 @@
 		// sleep animate
 		if(stat == UNCONSCIOUS || sleeping > 0)
 			icon_state = icon_sleep
-			item_state = icon_sleep
 		else
 			icon_state = icon_living
-			item_state = icon_living
 
 // Jil noises
 /datum/say_list/jil
@@ -158,8 +146,6 @@
 	speak = list("MERP.","MERP!","MERP?")
 	emote_hear = list("MERPS","MIPS","MEEPS")
 	emote_see = list("jostles menacingly", "shakes threateningly", "wiggles ominously")
-
-
 
 /*
 	jil AI, just intentional sakimm AI, but without retaliation, and can pick up any small or tiny object
@@ -181,8 +167,8 @@
 	last_search = 0
 
 	intelligence_level = AI_DUMB // giveup easy
-	var/home_turf_previous = null // if old hometurf exists and we're in range of it, reset home to it! 
-	var/home_turf_original = null // 
+	var/home_turf_previous = null // if old hometurf exists and we're in range of it, reset home to it!
+	var/home_turf_original = null //
 	var/fear_run = 0
 
 	base_wander_delay = 1
@@ -212,7 +198,7 @@
 
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/pre_melee_attack(atom/A)
-	if(istype(A, /obj/item)) 
+	if(istype(A, /obj/item))
 		var/obj/item/I = A
 		if(istype(I, /obj/item/weapon/reagent_containers/food/snacks))	// If we can't pick it up, or it's edible, go to harm.
 			holder.a_intent = I_HURT
@@ -225,15 +211,15 @@
 	// update forbiddens
 	update_forbidden_list()
 
-	// jil vs jillioth bonk behavior	
+	// jil vs jillioth bonk behavior
 	if(!istype( holder, /mob/living/simple_mob/animal/sif/sakimm/jil/jillioth) || prob(5))
 		// this is stupid, always set to 5 so it fails at first window bump, except the jillioth does random hits against it
 		failed_breakthroughs = 4
 
 		// if not a closet...
-		if(!istype(A, /obj/structure/closet)) 
+		if(!istype(A, /obj/structure/closet))
 			// forbid turf, we picked it up or couldn't reach it
-			if(target && istype(target.loc, /turf)) 
+			if(target && istype(target.loc, /turf))
 				unreachable_locs += target.loc // if not inside something!
 
 		// check if we should make a new nest due to being trapped!
@@ -241,13 +227,13 @@
 			set_new_home(holder.loc)
 
 		// end path to target
-		if(target && istype(target.loc, /turf)) 
+		if(target && istype(target.loc, /turf))
 			last_pickup_turf = target.loc // for closet fix
 		give_up_movement()
 		lose_target()
 	else
 		// if a closet that a jillioth has seen...
-		if(istype(A, /obj/structure/closet)) 
+		if(istype(A, /obj/structure/closet))
 			// stop slamming
 			failed_breakthroughs = 4
 
@@ -257,7 +243,7 @@
 		else
 			// keep trying!
 			failed_breakthroughs = 0
-	
+
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/post_melee_attack(atom/A)
 	if(istype(A, /obj/item) && !holder.get_active_hand() && holder.Adjacent(A))
@@ -327,7 +313,7 @@
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/find_target(var/list/possible_targets, var/has_targets_list = FALSE)
 	if(!hoard_items)
 		return
-	
+
 	if(holder.is_ventcrawling)
 		return
 
@@ -338,7 +324,7 @@
 	for(var/possible_target in possible_targets)
 		var/atom/A = possible_target
 		var/forbid = FALSE
-		
+
 		for(var/forbid_loc in unreachable_locs) // forbidden turf list
 			if(A.loc == forbid_loc)
 				forbid = TRUE
@@ -348,11 +334,11 @@
 			if(istype(A,forbid_obj))
 				forbid = TRUE
 				break
-			
+
 		if(can_attack(A) && !forbid && !istype(A, /mob/living))
 			// for item pickup targeting
 			. += A
-		
+
 	for(var/obj/item/I in .)
 		last_search = world.time
 		if(!hoard_items || get_dist(I, home_turf) < hoard_distance)
@@ -361,7 +347,7 @@
 	var/new_target = pick_target(.)
 	give_target(new_target)
 	return new_target
-		
+
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/should_go_home()
 	if(!hoard_items)
@@ -419,16 +405,16 @@
 		if(prob(10))
 			holder.visible_message("<font color='red'>[bicon(src)] Squee!</font>")
 			playsound(holder, 'sound/effects/mouse_squeak_loud.ogg', 35, 1)
-	else 
+	else
 		// rejuvinate nest!
-		if(home_turf_previous) 
+		if(home_turf_previous)
 			// reset to last home
 			if(get_dist(holder.loc, home_turf_previous) < 2)
 				home_turf = home_turf_previous
 				home_turf_previous = null
-		if(home_turf_original) 
+		if(home_turf_original)
 			// reset to origin home, all other homes give up
-			if(home_turf_original && get_dist(holder.loc, home_turf_original) < 2) 
+			if(home_turf_original && get_dist(holder.loc, home_turf_original) < 2)
 				home_turf = home_turf_original
 				home_turf_previous = null
 
@@ -438,7 +424,7 @@
 			home_turf = holder.loc // new nest!
 
 		// disable Astar most of the time, gives jils a dopey side for efficiency, but sometimes they just GOFORIT
-		use_astar = FALSE 
+		use_astar = FALSE
 		if(prob(30) || holder.get_active_hand())
 			use_astar = TRUE // oh no no no
 
@@ -450,8 +436,8 @@
 		if(!holder.get_active_hand() && holder.health >= 5 && holder.sleeping <= 0)
 			// oops, target is held by something else...
 			if(target && !istype(target.loc,/turf))
-				// lose target... 
-				if(target && istype(target.loc, /turf)) 
+				// lose target...
+				if(target && istype(target.loc, /turf))
 					unreachable_locs += target.loc // if not inside something!
 				give_up_movement()
 				lose_target()
@@ -462,7 +448,7 @@
 			max_home_distance = original_home_distance
 
 			// find targets
-			if(prob(10)) 
+			if(prob(10))
 				greed++
 			greed = min(95, greed)
 			if(!target && prob(5 + greed))
@@ -494,8 +480,7 @@
 							J.health = J.maxHealth
 					// quick update...
 					J.icon_state = J.icon_sleep
-					J.item_state = J.icon_sleep
-			
+
 
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/special_flee_check()
@@ -535,8 +520,8 @@
 		playsound(holder, 'sound/effects/mouse_squeak_loud.ogg', 35, 1)
 		fear_run = 10 + rand(30)
 		if(target)
-			// lose target... 
-			if(target && istype(target.loc, /turf)) 
+			// lose target...
+			if(target && istype(target.loc, /turf))
 				unreachable_locs += target.loc // if not inside something!
 			if(holder.get_active_hand())
 				holder.drop_from_inventory(holder.get_active_hand(), get_turf(holder))
@@ -546,9 +531,9 @@
 		holder.IMove(get_step(holder, pick(alldirs)))
 		return FALSE
 
-	
-	
 
-	
 
-	
+
+
+
+

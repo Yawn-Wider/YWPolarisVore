@@ -41,8 +41,14 @@
 			H.updatehealth()
 	else if(ismouse(target))
 		var/mob/living/simple_mob/animal/passive/mouse/M = target
-		visible_message("<font color='red'><b>SPLAT!</b></font>")
-		M.splat()
+		if(M.getMaxHealth() < 20) // In case a badmin makes giant mice or something.
+			visible_message("<font color='red'><b>SPLAT!</b></font>")
+			M.splat()
+	else if(istype(target,/mob/living/simple_mob/animal/sif/sakimm/jil))
+		var/mob/living/simple_mob/animal/sif/sakimm/jil/J = target
+		if(J.getMaxHealth() <= 5) // incase of jillioth
+			visible_message("<font color='red'><b>SPLAT!</b></font>")
+			J.splat()
 	playsound(target, 'sound/effects/snap.ogg', 50, 1)
 	layer = MOB_LAYER - 0.2
 	armed = 0

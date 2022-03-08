@@ -59,7 +59,6 @@
 	friend_loot_list = list()	// What will make this animal non-hostile if held?
 
 /mob/living/simple_mob/animal/sif/sakimm/jil/jillilah
-	..()
 	name = "jillilah"
 	real_name = "jillilah"
 	desc = "When you stare deep in her beady little eyes, you can feel an intense desire to declare independence..."
@@ -75,7 +74,6 @@
 	icon_sleep = "jil_cargo_sleep"
 
 /mob/living/simple_mob/animal/sif/sakimm/jil/jillioth
-	..()
 	name = "jillioth"
 	real_name = "jillioth"
 	desc = "Here to collect."

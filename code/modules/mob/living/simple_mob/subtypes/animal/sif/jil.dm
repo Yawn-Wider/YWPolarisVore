@@ -22,6 +22,7 @@
 	item_state = "jil"
 	icon_living = "jil"
 	icon_dead = "jil_dead"
+	var/icon_sleep = "jil_sleep"
 	kitchen_tag = "rodent"
 
 	faction = "jil"
@@ -80,6 +81,22 @@
 	// bonk noise
 	M.visible_message("<font color='blue'>[bicon(src)] Merp!</font>")
 	playsound(src, 'sound/voice/merp.ogg', 35, 1)
+
+/mob/living/simple_mob/animal/sif/sakimm/jil/Life()
+	..()
+	if(stat != DEAD)
+		// adjust sleep here, needs mind to sleep otherwise...
+		// adding the check so this doesn't conflict with life/handle_regular_status_updates()
+		if(sleeping > 0 && (!mind || !mind.active || client == null))
+			AdjustSleeping(-1)
+
+		// sleep animate
+		if(stat == UNCONSCIOUS || sleeping > 0)
+			icon_state = icon_sleep
+			item_state = icon_sleep
+		else
+			icon_state = icon_living
+			item_state = icon_living
 
 // Jil noises
 /datum/say_list/jil
@@ -206,7 +223,8 @@
 	last_search = world.time
 
 	for(var/atom/A in view(holder, vision_range))
-		if(get_dist(A, home_turf) < hoard_distance)
+		if(!istype(A, /obj/item/weapon/reagent_containers/food/snacks) && get_dist(A, home_turf) < hoard_distance)
+			// disable for things already in hoard, food needs to be eaten though
 			continue
 
 		// collect items!
@@ -295,6 +313,9 @@
 	return FALSE
 
 /datum/ai_holder/simple_mob/intentional/sakimm/jil/handle_special_strategical()
+	if(holder.stat == DEAD)
+		return
+
 	// nothing special if not a hoarder
 	if(!hoard_items)
 		return
@@ -336,7 +357,7 @@
 				unreachable_locs -= forbid_loc // random retry
 
 	// not holding something, get greedier, find way to target
-	if(!holder.get_active_hand() && holder.health == holder.maxHealth)
+	if(!holder.get_active_hand() && holder.health == holder.maxHealth && holder.sleeping <= 0)
 		// oops, target is held by something else...
 		if(target && !istype(target.loc,/turf))
 			// lose target... 
@@ -363,8 +384,8 @@
 			lose_target()
 
 		// return home
-		max_home_distance = 1
-		if(get_dist(holder, home_turf) <= max_home_distance)
+		max_home_distance = hoard_distance-1
+		if(get_dist(holder, home_turf) <= max_home_distance || holder.sleeping > 0)
 			// drop item off at nest
 			if(holder.get_active_hand())
 				last_search = world.time
@@ -373,6 +394,17 @@
 				if(last_pickup_turf)
 					unreachable_locs -= last_pickup_turf // remove from list, far enough to forget
 					last_pickup_turf = null // clear last pickup, we freaked out
+
+			if(holder.sleeping > 0 || holder.health < holder.maxHealth || prob(15))
+				var/mob/living/simple_mob/animal/sif/sakimm/jil/J = holder
+				if(J.sleeping <= 0)
+					J.Sleeping(50 + rand(100)) // why is this proc capitalized...
+					J.health += 1 // heal!
+					if(J.health > J.maxHealth)
+						J.health = J.maxHealth
+				// quick update...
+				J.icon_state = J.icon_sleep
+				J.item_state = J.icon_sleep
 			
 
 

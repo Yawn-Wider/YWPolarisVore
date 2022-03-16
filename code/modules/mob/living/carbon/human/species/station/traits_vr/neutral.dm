@@ -418,6 +418,7 @@ YW CHANGE STOP*/
 	name = "Colorblindness (Monochromancy)"
 	desc = "You simply can't see colors at all, period. You are 100% colorblind."
 	cost = 0
+	custom_only = FALSE // YW EDIT
 
 /datum/trait/neutral/colorblind/mono/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -427,6 +428,7 @@ YW CHANGE STOP*/
 	name = "Colorblindness (Para Vulp)"
 	desc = "You have a severe issue with green colors and have difficulty recognizing them from red colors."
 	cost = 0
+	custom_only = FALSE // YW EDIT
 
 /datum/trait/neutral/colorblind/para_vulp/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -436,6 +438,7 @@ YW CHANGE STOP*/
 	name = "Colorblindness (Para Taj)"
 	desc = "You have a minor issue with blue colors and have difficulty recognizing them from red colors."
 	cost = 0
+	custom_only = FALSE // YW EDIT
 
 /datum/trait/neutral/colorblind/para_taj/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)

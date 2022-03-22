@@ -562,6 +562,16 @@ YW CHANGE STOP*/
 	cost = 0
 	custom_only = FALSE
 
-/datum/trait/neutral/dominate_predator/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/dominate_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
 	H.verbs |= /mob/living/proc/dominate_prey
+
+/datum/trait/neutral/submit_to_prey
+	name = "Submit To Prey"
+	desc = "Allow prey's mind to control your own body."
+	cost = 0
+	custom_only = FALSE
+
+/datum/trait/neutral/submit_to_prey/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+	..(S,H)
+	H.verbs |= /mob/living/proc/lend_prey_control

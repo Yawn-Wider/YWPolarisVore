@@ -126,7 +126,7 @@
 		message = input(usr, "Type a message to say.","Psay") as text|null
 	message = sanitize_or_reflect(message,src)
 	if (!message)
-		return	
+		return
 	message = capitalize(message)
 	if (stat == DEAD)
 		return say_dead(message)
@@ -150,7 +150,7 @@
 		pb = M.loc.loc
 		to_chat(pb, "<span class='changeling'>\The [M] thinks, \"[message]\"</span>")	//To our pred if absorbed
 		f = TRUE
-	
+
 	if(pb)	//We are prey, let's do the prey thing.
 
 		for(var/I in pb.contents)
@@ -184,8 +184,9 @@
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
-			else if(G.stat == DEAD && G.is_preference_enabled(/datum/client_preference/ghost_ears))
-				to_chat(G, "<span class='changeling'>\The [M] thinks, \"[message]\"</span>")
+			else if(isobserver(G) && G.is_preference_enabled(/datum/client_preference/ghost_ears))
+				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
+					to_chat(G, "<span class='changeling'>\The [M] thinks, \"[message]\"</span>")
 		log_say(message,M)
 	else		//There wasn't anyone to send the message to, pred or prey, so let's just say it instead and correct our psay just in case.
 		M.forced_psay = FALSE
@@ -206,7 +207,7 @@
 		message = input(usr, "Type a message to emote.","Pme") as text|null
 	message = sanitize_or_reflect(message,src)
 	if (!message)
-		return	
+		return
 	if (stat == DEAD)
 		return say_dead(message)
 	if(!isliving(src))
@@ -230,7 +231,7 @@
 		pb = M.loc.loc
 		to_chat(pb, "<span class='changeling'>\The [M] [message]</span>")	//To our pred if absorbed
 		f = TRUE
-	
+
 	if(pb)	//We are prey, let's do the prey thing.
 
 		for(var/I in pb.contents)
@@ -264,8 +265,9 @@
 		for (var/mob/G in player_list)
 			if (istype(G, /mob/new_player))
 				continue
-			else if(G.stat == DEAD && G.is_preference_enabled(/datum/client_preference/ghost_ears))
-				to_chat(G, "<span class='changeling'>\The [M] [message]</span>")
+			else if(isobserver(G) && G.is_preference_enabled(/datum/client_preference/ghost_ears))
+				if(is_preference_enabled(/datum/client_preference/whisubtle_vis) || G.client.holder)
+					to_chat(G, "<span class='changeling'>\The [M] [message]</span>")
 		log_say(message,M)
 	else	//There wasn't anyone to send the message to, pred or prey, so let's just emote it instead and correct our psay just in case.
 		M.forced_psay = FALSE

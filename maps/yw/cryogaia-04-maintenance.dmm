@@ -477,9 +477,6 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/hallway/primary/starboard)
-"auk" = (
-/turf/simulated/mineral/cave,
-/area/ai)
 "avb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -3392,12 +3389,6 @@
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/pool)
-"cqe" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/turf/simulated/floor/water/hotspring,
-/area/chapel/chapel_morgue)
 "cqt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -19120,9 +19111,6 @@
 "lHO" = (
 /turf/simulated/mineral/ignore_mapgen/cave,
 /area/maintenance/medical_lower)
-"lHV" = (
-/turf/simulated/mineral/ignore_mapgen/cave,
-/area/maintenance/maintroom4)
 "lIA" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -24965,10 +24953,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/dormitory)
-"pmX" = (
-/obj/effect/mist,
-/turf/simulated/floor/water/hotspring,
-/area/chapel/chapel_morgue)
 "pns" = (
 /obj/structure/table/bench/padded,
 /turf/simulated/floor/wood/sif,
@@ -25277,9 +25261,6 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/security/perma/bathroom)
-"pwS" = (
-/turf/simulated/floor/water/hotspring,
-/area/chapel/chapel_morgue)
 "pwU" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -28865,9 +28846,6 @@
 /obj/turbolift_map_holder/lumber/medevator,
 /turf/simulated/floor/plating,
 /area/borealis2/elevator/medbasement)
-"rLL" = (
-/turf/simulated/mineral/cave,
-/area/chapel/chapel_morgue)
 "rLW" = (
 /obj/effect/floor_decal/corner/beige/full,
 /turf/simulated/floor/tiled/white,
@@ -29280,12 +29258,6 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
-"rYl" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/water/hotspring,
-/area/chapel/chapel_morgue)
 "rYt" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -32850,6 +32822,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ai)
+"udq" = (
+/turf/simulated/floor,
+/area/medical/medbaylower)
 "uea" = (
 /obj/structure/kitchenspike,
 /obj/machinery/alarm{
@@ -45494,7 +45469,7 @@ haL
 ifW
 pZd
 wXa
-twQ
+udq
 fYZ
 gBn
 gBn
@@ -45656,7 +45631,7 @@ aTH
 amp
 vld
 wXa
-twQ
+udq
 aFj
 fYZ
 nSW
@@ -51781,7 +51756,7 @@ asH
 asH
 asH
 mwy
-auk
+hYh
 wBG
 wBG
 rKA
@@ -51943,7 +51918,7 @@ asH
 asH
 asH
 mwy
-auk
+hYh
 wBG
 wBG
 rKA
@@ -52105,7 +52080,7 @@ asH
 asH
 asH
 mwy
-auk
+wBG
 wBG
 izE
 rKA
@@ -52948,7 +52923,7 @@ ouo
 dmB
 oba
 eeY
-cqe
+eeY
 eeY
 eeY
 eeY
@@ -53108,10 +53083,10 @@ vku
 vku
 vku
 umJ
-ufX
-pmX
-rYl
-pwS
+oba
+arx
+xYA
+tRh
 arx
 xYA
 tRh
@@ -53270,10 +53245,10 @@ nwk
 qln
 mTo
 vku
-ufX
-ufX
-ufX
-ufX
+oba
+oba
+oba
+oba
 xyQ
 xyQ
 xyQ
@@ -53432,10 +53407,10 @@ cWo
 nwk
 nwk
 vku
-rLL
-rLL
-rLL
-rLL
+hYh
+hYh
+hYh
+hYh
 oms
 dAN
 dmq
@@ -53594,10 +53569,10 @@ uPg
 nwk
 bwu
 vku
-rLL
-rLL
-rLL
-rLL
+hYh
+hYh
+hYh
+hYh
 xyQ
 sAd
 tjs
@@ -53728,11 +53703,11 @@ asH
 asH
 mwy
 mwy
-lHV
-lHV
-lHV
-lHV
-lHV
+mwy
+mwy
+mwy
+mwy
+mwy
 wdi
 nHo
 nHo
@@ -53756,10 +53731,10 @@ sPM
 nwk
 sUd
 vku
-rLL
-rLL
-rLL
-rLL
+hYh
+hYh
+hYh
+hYh
 xyQ
 fMM
 dxV
@@ -53918,10 +53893,10 @@ ldt
 qxD
 noc
 cFq
-rLL
-rLL
-rLL
-rLL
+hYh
+hYh
+hYh
+hYh
 xyQ
 xWk
 tjs
@@ -54080,10 +54055,10 @@ xHi
 hNi
 sBM
 vku
-rLL
-rLL
-rLL
-rLL
+hYh
+hYh
+hYh
+hYh
 xyQ
 bXT
 lWx
@@ -54242,10 +54217,10 @@ nwk
 qdE
 noc
 cFq
-rLL
-rLL
-rLL
-rLL
+hYh
+hYh
+hYh
+hYh
 xyQ
 aSi
 tjs
@@ -54404,10 +54379,10 @@ qML
 vRm
 bwu
 vku
-rLL
-rLL
-rLL
-rLL
+hYh
+hYh
+hYh
+hYh
 xyQ
 twJ
 dxV
@@ -54566,7 +54541,7 @@ sPM
 eFp
 prh
 vku
-rLL
+hYh
 ufX
 ufX
 ufX
@@ -56353,7 +56328,7 @@ mwy
 mwy
 mwy
 mwy
-mwy
+xPk
 pAD
 pAD
 pAD
@@ -56361,7 +56336,7 @@ dCf
 pAD
 pAD
 pAD
-mwy
+pAD
 mwy
 buW
 rQt
@@ -57137,7 +57112,7 @@ mwy
 mwy
 mwy
 mwy
-gZI
+nHo
 nHo
 mwy
 nHo
@@ -57334,7 +57309,7 @@ fub
 lAv
 htV
 htV
-tDC
+hYh
 whU
 hCC
 oFc
@@ -57496,7 +57471,7 @@ sDQ
 oLk
 htV
 htV
-tDC
+hYh
 whU
 eoa
 lqh
@@ -58143,7 +58118,7 @@ hYh
 hYh
 hYh
 hYh
-tDC
+hYh
 eNq
 whU
 hCC
@@ -58305,7 +58280,7 @@ hYh
 hYh
 hYh
 hYh
-tDC
+hYh
 whU
 whU
 mwy
@@ -58462,9 +58437,9 @@ hYh
 eNq
 eNq
 eNq
-tDC
+hYh
 eNq
-tDC
+hYh
 eNq
 eNq
 eNq
@@ -58944,8 +58919,8 @@ tFq
 rtU
 ulC
 eNq
-tDC
-tDC
+hYh
+hYh
 eNq
 jQd
 whU

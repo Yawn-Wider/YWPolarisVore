@@ -514,10 +514,14 @@
 	icon_state = "medbay_triage"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 /area/medical/scanning
-	name = "Medical Diagnostics Center"
+	name = "\improper Medical Diagnostics Center"
 	icon_state = "medbay"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
+/area/medical/autoresleeving
+	name = "\improper Medical Auto Resleeving"
+	icon_state = "medbay"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 //Science outpost
 /area/rnd/xenobiology/xenoflora/lab_atmos

@@ -2006,6 +2006,12 @@
 	name = "Common Channel";
 	pixel_x = 21
 	},
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
+	external_pressure_bound = 101.3;
+	external_pressure_bound_default = 101.3;
+	pressure_checks = 1;
+	pressure_checks_default = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/autoresleeving)
 "aOG" = (
@@ -6500,12 +6506,15 @@
 	dir = 4;
 	pixel_x = -23
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/disposals)
@@ -12966,12 +12975,6 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/corner/paleblue/full,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/machinery/button/remote/airlock{
 	dir = 4;
 	id = "autor";
@@ -12979,6 +12982,10 @@
 	pixel_x = -26;
 	pixel_y = -5
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/medical/autoresleeving)
 "fbU" = (
@@ -13802,6 +13809,9 @@
 	d1 = 2;
 	d2 = 4;
 	icon_state = "2-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/autoresleeving)
@@ -19422,9 +19432,6 @@
 /area/maintenance/research_port)
 "hyL" = (
 /obj/structure/disposalpipe/segment,
-/obj/effect/floor_decal/corner/paleblue{
-	dir = 6
-	},
 /obj/machinery/power/apc{
 	dir = 4;
 	name = "east bump";
@@ -19432,6 +19439,12 @@
 	},
 /obj/structure/cable{
 	icon_state = "0-8"
+	},
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/autoresleeving)
@@ -29760,6 +29773,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/autoresleeving)
 "lJK" = (
@@ -31641,7 +31657,7 @@
 	},
 /obj/random/maintenance/medical,
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
+	dir = 1
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/autoresleeving)
@@ -42672,6 +42688,13 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
+	dir = 8;
+	external_pressure_bound = 101.3;
+	external_pressure_bound_default = 101.3;
+	pressure_checks = 1;
+	pressure_checks_default = 1
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/disposals)
 "qDD" = (
@@ -47822,9 +47845,6 @@
 	name = "plastic table frame"
 	},
 /obj/random/maintenance/medical,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
@@ -55036,9 +55056,6 @@
 /turf/simulated/floor/plating,
 /area/shuttle/security)
 "vKo" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -55047,6 +55064,9 @@
 	c_tag = "Trash Chute";
 	dir = 4;
 	name = "security camera"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/disposals)
@@ -59530,7 +59550,7 @@
 	pixel_x = 1;
 	pixel_y = -1
 	},
-/obj/item/weapon/circuitboard/skills{
+/obj/item/weapon/circuitboard/skills/pcu{
 	pixel_x = 4;
 	pixel_y = -3
 	},

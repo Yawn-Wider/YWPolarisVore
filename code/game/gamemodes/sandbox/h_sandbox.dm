@@ -136,8 +136,8 @@ mob
 							continue
 						if(istype(O, /obj/item/device/camera))
 							continue
-						if(istype(O, /obj/item/weapon/dummy))
-							continue
+						//if(istype(O, /obj/item/weapon/dummy))
+						//	continue
 						if(istype(O, /obj/item/weapon/melee/energy/sword))
 							continue
 						if(istype(O, /obj/structure))

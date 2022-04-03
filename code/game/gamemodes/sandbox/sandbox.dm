@@ -2,7 +2,7 @@
 	name = "Sandbox"
 	config_tag = "sandbox"
 	required_players = 0
-	votable = 1
+	votable = 0
 	round_description = "Build your own station!"
 	extended_round_description = "You can use the sandbox-panel command to access build options."
 

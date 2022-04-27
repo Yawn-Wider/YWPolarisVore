@@ -513,7 +513,7 @@
 	// It REALLY doesnt matter too much if these arent up to date
 	// They are relatively big
 	assets = list(
-		// YawnWider Edit: We don't need Southern Cross or tether
+		// YW Edit: We don't need Southern Cross or tether
 		// "southern_cross_nanomap_z1.png"		= 'icons/_nanomaps/southern_cross_nanomap_z1.png',
 		// "southern_cross_nanomap_z10.png"	= 'icons/_nanomaps/southern_cross_nanomap_z10.png',
 		// "southern_cross_nanomap_z2.png"		= 'icons/_nanomaps/southern_cross_nanomap_z2.png',
@@ -539,6 +539,6 @@
 		"cryogaia_nanomap_z5.png"				= 'icons/_nanomaps/cryogaia_nanomap_z5.png',
 		"cryogaia_nanomap_z6.png"				= 'icons/_nanomaps/cryogaia_nanomap_z6.png',
 		"cryogaia_nanomap_z13.png"				= 'icons/_nanomaps/cryogaia_nanomap_z13.png',
-		// YawnWider Edit End
+		// YW Edit End
 
 	)

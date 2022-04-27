@@ -40,9 +40,9 @@ Any code submissions that do not meet our coding standards are likely to be reje
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
 * Never edit stock Polaris or Vore .DMI files. If you are confused about which .DMI files we have added and which were there originally, refer to their repository and and see if they exist (https://github.com/PolarisSS13/Polaris) (https://github.com/VOREStation/VOREStation). All PRs with edits to stock .DMI files might be rejected.
 * When changing any code in any stock Polaris .DM file, you must mark your changes:
-    * For single-line changes: //Yawn-Wider Edit - "Explanation" (Edit can also be Add for new lines or Removal if you are commenting the line out)
-    * For multi-line additions: //Yawn-Wider Edit - "Explanation" and then at the bottom of your changes, //Yawn-Wider Edit End
-    * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* Yawn-Wider Removal - "Reason"
+    * For single-line changes: // YW Edit - "Explanation" (Edit can also be Add for new lines or Removal if you are commenting the line out)
+    * For multi-line additions: // YW Edit - "Explanation" and then at the bottom of your changes, // YW Edit End
+    * For multi-line removals: Use a block comment (/\* xxx \*/) to comment out the existing code block (do not modify whitespace more than necessary) and at the start, it should contain /\* YW Removal - "Reason"
 * Change whitespace as little as possible. Do not randomly add/remove whitespace.
 * Any new files should have "_yw" at the end. For example, "life_yw.dm". Just make them in the same location as the file they are related to.
 * Map changes must be in tgm format. See the [Mapmerge2 Readme] for details, or use [StrongDMM] which can automatically save maps as tgm.

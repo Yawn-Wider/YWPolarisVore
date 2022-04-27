@@ -94,8 +94,8 @@ YW change end */
 	autohiss_extra_map = list(
 			"x" = list("ks", "kss", "ksss")
 		),
-	autohiss_exempt = list("Sinta'unathi"))
-	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_vassilian)
+	autohiss_exempt = list(LANGUAGE_UNATHI))
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_zaddat)
 
 /datum/trait/neutral/autohiss_tajaran
 	name = "Autohiss (Tajaran)"
@@ -105,8 +105,26 @@ YW change end */
 	autohiss_basic_map = list(
 			"r" = list("rr", "rrr", "rrrr")
 		),
-	autohiss_exempt = list("Siik"))
-	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_vassilian)
+	autohiss_exempt = list(LANGUAGE_SIIK,LANGUAGE_AKHANI,LANGUAGE_ALAI))
+	excludes = list(/datum/trait/neutral/autohiss_unathi, /datum/trait/neutral/autohiss_zaddat)
+
+/datum/trait/neutral/autohiss_zaddat
+	name = "Autohiss (Zaddat)"
+	desc = "You buzz your S's and F's."
+	cost = 0
+	var_changes = list(
+	autohiss_basic_map = list(
+			"f" = list("v","vh"),
+			"ph" = list("v", "vh")
+		),
+	autohiss_extra_map = list(
+			"s" = list("z", "zz", "zzz"),
+			"ce" = list("z", "zz"),
+			"ci" = list("z", "zz"),
+			"v" = list("vv", "vvv")
+		),
+	autohiss_exempt = list(LANGUAGE_ZADDAT,LANGUAGE_VESPINAE))
+	excludes = list(/datum/trait/neutral/autohiss_tajaran, /datum/trait/neutral/autohiss_unathi)
 
 ///YW ADDITION: START
 /datum/trait/neutral/autohiss_vassilian

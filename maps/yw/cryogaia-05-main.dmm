@@ -2781,6 +2781,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 1
 	},
+/obj/structure/bed/chair/office/dark{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "bcy" = (
@@ -27553,7 +27556,9 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 5
 	},
-/obj/structure/flora/pottedplant/smallcactus,
+/obj/machinery/computer/stockexchange{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "kNS" = (
@@ -31010,6 +31015,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
+"mhX" = (
+/obj/structure/table/standard,
+/obj/item/weapon/clipboard,
+/obj/item/weapon/folder,
+/obj/item/weapon/pen,
+/turf/simulated/floor/tiled,
+/area/quartermaster/office)
 "mii" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk,
@@ -32410,6 +32422,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
 	},
+/obj/structure/flora/pottedplant/smallcactus,
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "mFV" = (
@@ -34330,7 +34343,7 @@
 /obj/structure/disposalpipe/trunk{
 	dir = 1
 	},
-/obj/machinery/disposal/wall,
+/obj/machinery/disposal/wall/cleaner,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "nnw" = (
@@ -80044,7 +80057,7 @@ aRL
 bpd
 qKD
 kNN
-jBS
+mhX
 joK
 ffS
 xfx

@@ -1,3 +1,16 @@
+// Note for newly added fluff items: Ckeys should not contain any spaces, underscores or capitalizations,
+// or else the item will not be usable.
+// Example: Someone whose username is "Master Pred_Man" should be written as "masterpredman" instead
+// Note: Do not use characters such as # in the display_name. It will cause the item to be unable to be selected.
+
+/datum/gear/fluff
+	path = /obj/item
+	sort_category = "Fluff Items"
+	display_name = "If this item can be chosen or seen, ping a coder immediately!"
+	ckeywhitelist = list("This entry should never be choosable with this variable set.") //If it does, then that means somebody fucked up the whitelist system pretty hard
+	character_name = list("This entry should never be choosable with this variable set.")
+	cost = 0
+
 /*
 /datum/gear/fluff/testhorn
 	path = /obj/item/weapon/bikehorn
@@ -7,6 +20,13 @@
 	allowed_roles = list("Engineer")	//Don't include this if the item is not role restricted
 	character_name = list("shitfacemcgee")	//Character name. this variable is required, or the item doesn't show in loadout. Change to "character_name = null" if not character restricted.
 */
+
+/datum/gear/fluff/collar //Use this as a base path for collars if you'd like to set tags in loadout. Make sure you don't use apostrophes in the display name or this breaks!
+	slot = slot_tie
+
+/datum/gear/fluff/collar/New()
+	..()
+	gear_tweaks += gear_tweak_collar_tag
 
 //  0-9 CKEYS
 

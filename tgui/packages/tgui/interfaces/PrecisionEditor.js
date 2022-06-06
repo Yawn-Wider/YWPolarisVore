@@ -1,8 +1,6 @@
-import { sortBy } from 'common/collections';
 import { useBackend } from '../backend';
 import { Button, LabeledList, Section, ColorBox, NoticeBox, Box } from '../components';
 import { Window } from '../layouts';
-import { LabeledListDivider } from '../components/LabeledList';
 
 export const PrecisionEditor = (props, context) => {
   const { act, data } = useBackend(context);
@@ -50,7 +48,7 @@ const SeedStatus = (props, context) => {
             <LabeledList.Item label="Genetic Integrity">
               {(100 - health) + "%"}
             </LabeledList.Item>
-          ) 
+          )
             : (
               <LabeledList.Item label="Genetic Integrity">
                 {"UNVIABLE"}
@@ -74,10 +72,10 @@ const SeedStatus = (props, context) => {
             ))}
           </LabeledList.Item>
           <Button
-            content="Edit Colors" 
+            content="Edit Colors"
             onClick={() => act('change_focus', { window: "colors" })} />
           <Button
-            content="Add Reagents" 
+            content="Add Reagents"
             onClick={() => act('change_focus', { window: "reagents" })} />
           <LabeledList.Divider size={2} />
           <Button
@@ -139,7 +137,7 @@ const BiochemEditor = (props, context) => {
         <LabeledList.Item label="Genetic Integrity">
           {(100 - health) + "%"}
         </LabeledList.Item>
-      ) 
+      )
         : (
           <LabeledList.Item label="Genetic Integrity">
             {"UNVIABLE"}
@@ -149,7 +147,7 @@ const BiochemEditor = (props, context) => {
         {"Available chems to choose are based on the reagents stored in the beaker. "}
         {" A minimum of 100 units of reagent is required to generate a viable sequence. "}
         {"The chosen reagent will be consumed in the process."}
-        <Box bold={1} mt={1}> 
+        <Box bold={1} mt={1}>
           {"This process severely damages genetic integrity."}
         </Box>
       </NoticeBox>
@@ -162,14 +160,14 @@ const BiochemEditor = (props, context) => {
           {health < 100 ? (
             <LabeledList.Item label="Available reagents">
               {beakerchems.map(item => (
-                <Button 
+                <Button
                   key={item.displayname}
                   fluid
                   content={item.displayname}
                   onClick={() => act('add_chem', { target_chem: item.name })} />
               ))}
             </LabeledList.Item>
-          ) 
+          )
             : (
               <NoticeBox warning={1}>
                 {"WARNING: Genetic integrity of seed is too poor to proceed."}
@@ -192,4 +190,4 @@ const BiochemEditor = (props, context) => {
         onClick={() => act('change_focus', { window: "main" })} />
     </LabeledList>
   );
-};  
+};

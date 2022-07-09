@@ -119,7 +119,6 @@
 	icon_state = "tile-tealcarpet"
 	no_variants = FALSE
 
-/* YW EDIT: Commented out to help with upstream merging.
 /obj/item/stack/tile/carpet/geo
 	icon_state = "tile-carpet-deco"
 	desc = "A piece of carpet with a gnarly geometric design. It is the same size as a normal floor tile!"
@@ -136,6 +135,7 @@
 	icon_state = "tile-carpet-happy"
 	desc = "A piece of carpet with happy patterns. It is the same size as a normal floor tile!"
 
+/* YW EDIT: Commented out to help with upstream merging.
 // TODO - Add descriptions to these
 /obj/item/stack/tile/carpet/bcarpet
 	icon_state = "tile-carpet"

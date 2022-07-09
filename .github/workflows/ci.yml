@@ -63,10 +63,12 @@ jobs:
           outputFile: output-annotations.txt
 
   unit_tests:
-    strategy:
-      matrix:
-        map: ['tether', 'stellar_delight', 'groundbase']
+    # YW EDIT start
+    #strategy:
+    #  matrix:
+    #    map: ['tether', 'stellar_delight', 'groundbase']
     # name: Integration Tests (${{ matrix.map }})
+    # YW EDIT: end
     name: Integration Tests
     # needs: ['file_tests', 'dreamchecker']
     runs-on: ubuntu-latest
@@ -93,8 +95,10 @@ jobs:
         env:
           TEST_DEFINE: "UNIT_TEST"
           TEST_FILE: "code/_unit_tests.dm"
-          MAP: ${{ matrix.map }}
-          REPLACE: true
+          # YW EDIT: start
+          #MAP: ${{ matrix.map }}
+          #REPLACE: true
+          # YW EDIT: end
           RUN: "1"
       - name: Compile POIs
         run: |
@@ -103,8 +107,10 @@ jobs:
         env:
           TEST_DEFINE: "MAP_TEST"
           TEST_FILE: "code/_map_tests.dm"
-          MAP: ${{ matrix.map }}
-          REPLACE: false
+          # YW EDIT: start
+          #MAP: ${{ matrix.map }}
+          #REPLACE: false
+          # YW EDIT: end
           RUN: "0"
       - name: Compile away missions
         run: |
@@ -113,15 +119,18 @@ jobs:
         env:
           TEST_DEFINE: "AWAY_MISSION_TEST"
           TEST_FILE: "code/_away_mission_tests.dm"
-          MAP: ${{ matrix.map }}
-          REPLACE: false
+          # YW EDIT: start
+          #MAP: ${{ matrix.map }}
+          #REPLACE: false
+          # YW EDIT: end
           RUN: "0"
-
-  tests_successful:
-    name: Integration Tests
-    needs: ['file_tests', 'dreamchecker', 'unit_tests']
-    runs-on: ubuntu-latest
-    steps:
-      - name: Report Success
-        run: |
-          echo "Jobs Successful!"
+  # YW EDIT: start
+  #tests_successful:
+    #name: Integration Tests
+    #needs: ['file_tests', 'dreamchecker', 'unit_tests']
+    #runs-on: ubuntu-latest
+    #steps:
+      #- name: Report Success
+        #run: |
+          #echo "Jobs Successful!"
+  # YW EDIT: end

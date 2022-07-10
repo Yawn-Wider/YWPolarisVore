@@ -1,4 +1,5 @@
 /datum/trait/neutral
+	category = TRAIT_TYPE_NEUTRAL
 
 /datum/trait/neutral/metabolism_up
 	name = "Metabolism, Fast"
@@ -227,7 +228,7 @@ YW change end */
 	cost = 0
 	custom_only = FALSE
 	can_take = SYNTHETICS
-	var_changes = list("organic_food_coeff" = 0, "synthetic_food_coeff" = 0.25)
+	var_changes = list("organic_food_coeff" = 0, "synthetic_food_coeff" = 0.6)
 
 /datum/trait/neutral/glowing_eyes
 	name = "Glowing Eyes"

@@ -113,8 +113,6 @@
 /mob/living/carbon/human/resize(var/new_size, var/animate = TRUE, var/uncapped = FALSE, var/ignore_prefs = FALSE, var/aura_animation = TRUE)
 	if(!resizable && !ignore_prefs)
 		return 1
-	if(species)
-		vis_height = species.icon_height
 	. = ..()
 	if(LAZYLEN(hud_list) && has_huds)
 		var/new_y_offset = vis_height * (size_multiplier - 1)
@@ -132,7 +130,6 @@
  * Ace was here! Redid this a little so we'd use math for shrinking characters. This is the old code.
  */
 
-
 /mob/living/proc/set_size()
 	set name = "Adjust Mass"
 	set category = "Abilities" //Seeing as prometheans have an IC reason to be changing mass.
@@ -142,12 +139,13 @@
 		return
 
 	var/nagmessage = "Adjust your mass to be a size between 25 to 200% (or 1% to 600% in dormitories). (DO NOT ABUSE)"
-	var/new_size = input(nagmessage, "Pick a Size") as num|null
+	var/default = size_multiplier * 100
+	var/new_size = tgui_input_number(usr, nagmessage, "Pick a Size", default, 600, 1)
 	if(size_range_check(new_size))
 		resize(new_size/100, uncapped = has_large_resize_bounds(), ignore_prefs = TRUE)
 		// I'm not entirely convinced that `src ? ADMIN_JMP(src) : "null"` here does anything
 		// but just in case it does, I'm leaving the null-src checking
-		message_admins("[key_name(src)] used the resize command in-game to be [new_size]% size. [src ? ADMIN_JMP(src) : "null"]")
+		log_admin("[key_name(src)] used the resize command in-game to be [new_size]% size. [src ? ADMIN_JMP(src) : "null"]")
 
 /*
 //Add the set_size() proc to usable verbs. By commenting this out, we can leave the proc and hand it to species that need it.

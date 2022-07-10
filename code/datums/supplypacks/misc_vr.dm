@@ -102,6 +102,18 @@
 	containername = "solgov medical hardsuit crate" //YW EDIT
 	access = access_engine
 
+/* YW EDIT: comments out breacher rig
+/datum/supply_pack/misc/breacher_rig
+	name = "unathi breacher hardsuit (empty)"
+	contains = list(
+			/obj/item/weapon/rig/breacher = 1
+			)
+	cost = 250
+	containertype = /obj/structure/closet/crate/secure/gear
+	containername = "unathi breacher hardsuit crate"
+	access = access_armory
+*/
+
 /datum/supply_pack/misc/zero_rig
 	name = "null hardsuit (jets)"
 	contains = list(

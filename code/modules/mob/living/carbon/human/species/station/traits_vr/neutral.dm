@@ -150,8 +150,8 @@ YW change end */
 	desc = "Makes you unable to gain nutrition from anything but blood. To compenstate, you get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
-	var_changes = list("organic_food_coeff" = 0)
-	excludes = list(/datum/trait/neutral/bloodsucker_freeform,/datum/trait/neutral/bloodsucker_freeform) //YW EDIT: /datum/trait/neutral/bloodsucker_freeform
+	var_changes = list("organic_food_coeff" = 0, "bloodsucker" = TRUE)
+	excludes = list(/datum/trait/positive/bloodsucker_plus) //YW EDIT: /datum/trait/positive/bloodsucker_plus
 
 /datum/trait/neutral/bloodsucker/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
@@ -162,6 +162,7 @@ YW change end */
 	desc = "You get fangs that can be used to drain blood from prey."
 	cost = 0
 	custom_only = FALSE
+	var_changes = list("bloodsucker" = TRUE)
 	excludes = list(/datum/trait/neutral/bloodsucker)
 */
 /datum/trait/neutral/bloodsucker_freeform/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -387,7 +388,7 @@ YW change end */
 	custom_only = FALSE
 	var_changes = list("spice_mod" = 0.25) // 25% as effective if spice_mod is set to 1. If it's not 1 in species.dm, update this!
 
-/*YW CHANGE START: Commented out because we got our own variants	
+/*YW CHANGE START: Commented out because we got our own variants
 // Alcohol Traits Start Here, from negative to positive.
 /datum/trait/neutral/alcohol_intolerance_advanced
 	name = "Liver of Air"

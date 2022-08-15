@@ -153,6 +153,15 @@
 	icon_state = "tile-carpet"
 YW Edit end */
 
+/obj/item/stack/tile/carpet/brncarpet
+	icon_state = "tile-carpet"
+/obj/item/stack/tile/carpet/blucarpet2
+	icon_state = "tile-carpet"
+/obj/item/stack/tile/carpet/greencarpet
+	icon_state = "tile-carpet"
+/obj/item/stack/tile/carpet/purplecarpet
+	icon_state = "tile-carpet"
+
 /obj/item/stack/tile/floor
 	name = "floor tile"
 	singular_name = "floor tile"

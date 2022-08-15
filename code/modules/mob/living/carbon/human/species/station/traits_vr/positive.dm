@@ -164,13 +164,13 @@
 	desc = "You've drunk so much that most booze doesn't even faze you. It takes something like a Pan-Galactic or a pint of Deathbell for you to even get slightly buzzed. You may wish to note this down in your medical records."
 	cost = 2
 	var_changes = list("alcohol_mod" = 0.25)
-	
+
 /datum/trait/positive/pain_tolerance_basic
 	name = "Pain Tolerant"
 	desc = "You're a little more resistant to pain than most, and experience 10% less pain from from all sources."
 	cost = 1
 	var_changes = list("pain_mod" = 0.9)
-	
+
 /datum/trait/positive/pain_tolerance_advanced
 	name = "Pain Tolerance, High "
 	desc = "You are noticeably more resistant to pain than most, and experience 20% less pain from all sources."
@@ -238,7 +238,7 @@
 	name = "Evolved Bloodsucker"
 	desc = "Makes you able to gain nutrition by draining blood as well as eating food. To compensate, you get fangs that can be used to drain blood from prey."
 	cost = 1
-	var_changes = list("organic_food_coeff" = 0.5) // Hopefully this works???
+	var_changes = list("organic_food_coeff" = 0.5, "bloodsucker" = TRUE)
 	excludes = list(/datum/trait/neutral/bloodsucker)
 
 /datum/trait/positive/bloodsucker_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
@@ -261,7 +261,7 @@
 	var_changes = list("cold_level_1" = 200,  "cold_level_2" = 150, "cold_level_3" = 90, "breath_cold_level_1" = 180, "breath_cold_level_2" = 100, "breath_cold_level_3" = 60, "cold_discomfort_level" = 210, "heat_level_1" = 305, "heat_level_2" = 360, "heat_level_3" = 700, "breath_heat_level_1" = 345, "breath_heat_level_2" = 380, "breath_heat_level_3" = 780, "heat_discomfort_level" = 295)
 	excludes = list(/datum/trait/positive/hotadapt)
 	can_take = ORGANICS
-	
+
 /datum/trait/positive/hotadapt
 	name = "Heat-Adapted"
 	desc = "You are able to withstand much hotter temperatures than other species, and can even be comfortable in extremely hot environments. You are also more vulnerable to cold environments as a consequence of these adaptations."

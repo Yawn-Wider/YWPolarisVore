@@ -8,7 +8,8 @@ Going to make a Pull Request? Make sure you read the [CONTRIBUTING.md](.github/C
 
 Yawn-Wider is a fork of the VOREStation code branch which is a fork of the Polaris code branch, itself a fork of the Baystation12 code branch, for the game Space Station 13.
 
-![Render Nanomaps](https://github.com/VOREStation/VOREStation/workflows/Render%20Nanomaps/badge.svg)
+![Render Nanomaps](https://github.com/Yawn-Wider/YWPolarisVore/workflows/Render%20Nanomaps/badge.svg)
+[![CI](https://github.com/Yawn-Wider/YWPolarisVore/actions/workflows/ci.yml/badge.svg)](https://github.com/Yawn-Wider/YWPolarisVore/actions/workflows/ci.yml)
 
 ---
 

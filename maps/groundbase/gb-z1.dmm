@@ -4191,6 +4191,9 @@
 	charge = 100;
 	maxcharge = 15000
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
 "jq" = (
@@ -4894,6 +4897,9 @@
 	},
 /obj/item/device/gps/security{
 	pixel_x = -3
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
@@ -5677,7 +5683,6 @@
 	id = "engine_public_access";
 	name = "Public Access Shutters";
 	pixel_x = -25;
-	pixel_y = 0;
 	req_access = list(10)
 	},
 /turf/simulated/floor/tiled,
@@ -5851,6 +5856,12 @@
 	outdoors = 0
 	},
 /area/maintenance/groundbase/level1/nwtunnel)
+"mQ" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/southeastspur)
 "mR" = (
 /obj/structure/bed/chair/comfy/orange{
 	dir = 4
@@ -7436,7 +7447,7 @@
 /obj/structure/window/reinforced{
 	dir = 1
 	},
-/obj/machinery/mining/drill,
+/obj/machinery/mining/drill/loaded,
 /turf/simulated/floor/tiled,
 /area/groundbase/cargo/mining)
 "qV" = (
@@ -10069,6 +10080,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/civilian/foodplace)
+"xk" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/southwestspur)
 "xm" = (
 /obj/effect/floor_decal/industrial/danger,
 /obj/machinery/atmospherics/pipe/simple/hidden/black,
@@ -10305,6 +10322,12 @@
 	},
 /turf/simulated/floor,
 /area/prison/cell_block/gb)
+"xL" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/eastspur)
 "xM" = (
 /obj/machinery/firealarm,
 /turf/simulated/floor/tiled/dark,
@@ -14284,6 +14307,12 @@
 	},
 /turf/simulated/floor/outdoors/sidewalk/slab/virgo3c,
 /area/groundbase/level1/westspur)
+"HQ" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/centsquare)
 "HR" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-2"
@@ -16583,6 +16612,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/engineering/atmos)
+"Nu" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/westspur)
 "Nv" = (
 /turf/simulated/floor/outdoors/grass/forest/virgo3c,
 /area/groundbase/level1/centsquare)
@@ -16730,6 +16765,10 @@
 	},
 /turf/simulated/floor/outdoors/sidewalk/side/virgo3c,
 /area/groundbase/level1/northspur)
+"NM" = (
+/obj/effect/mouse_hole_spawner,
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/westspur)
 "NN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -16993,6 +17032,12 @@
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/groundbase/command/ai/robot)
+"Ov" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/grass/virgo3c,
+/area/groundbase/level1/southeastspur)
 "Ow" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -19652,6 +19697,14 @@
 	},
 /turf/simulated/floor/carpet/sblucarpet,
 /area/groundbase/security/hos)
+"Vp" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor/outdoors/newdirt_nograss/virgo3c{
+	outdoors = 0
+	},
+/area/maintenance/groundbase/level1/nwtunnel)
 "Vq" = (
 /turf/simulated/floor/outdoors/newdirt/virgo3c,
 /area/groundbase/level1/southwestspur)
@@ -21206,6 +21259,9 @@
 	layer = 2.6
 	},
 /obj/item/weapon/tank/jetpack/carbondioxide,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/security/equipment)
 "Zc" = (
@@ -26619,7 +26675,7 @@ cB
 cB
 cB
 cB
-cB
+Nu
 AZ
 cv
 px
@@ -28492,7 +28548,7 @@ EZ
 mh
 Iw
 Tf
-vM
+xk
 Wm
 vM
 vM
@@ -28563,7 +28619,7 @@ MO
 MO
 MO
 MO
-FF
+Vp
 FF
 MO
 FF
@@ -29172,7 +29228,7 @@ mk
 cB
 cB
 cB
-cB
+NM
 gv
 Az
 Kh
@@ -30008,7 +30064,7 @@ Eb
 Eb
 Eb
 Eb
-Eb
+HQ
 Eb
 Eb
 Eb
@@ -33544,7 +33600,7 @@ qE
 qE
 qE
 Eb
-Eb
+HQ
 Eb
 Eb
 Eb
@@ -35162,7 +35218,7 @@ Uf
 Uf
 Uf
 Uf
-ck
+Ov
 ck
 TW
 ck
@@ -36231,7 +36287,7 @@ Ah
 Ah
 Ah
 MK
-MK
+xL
 sF
 MK
 MK
@@ -36582,7 +36638,7 @@ Uf
 Uf
 Uf
 Uf
-ck
+mQ
 ck
 Ac
 ck

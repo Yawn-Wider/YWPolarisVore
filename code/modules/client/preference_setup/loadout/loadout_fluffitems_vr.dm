@@ -334,6 +334,12 @@
 	character_name = list("M41L")
 
 //  D CKEYS
+/datum/gear/fluff/Aku_briefcase
+	path = /obj/item/weapon/storage/secure/briefcase/dealer
+	display_name = "Aku's dealer briefcase"
+	ckeywhitelist = list("defiintelynotarock")
+	character_name = list("Aku Zoles")
+
 /datum/gear/fluff/dhaeleena_medal
 	path = /obj/item/clothing/accessory/medal/silver/security/fluff/dhael
 	display_name = "Dhaeleena's Medal"
@@ -522,6 +528,13 @@
 	slot = slot_head
 	ckeywhitelist = list("jacobdragon")
 	character_name = list("Earthen Breath")
+
+/datum/gear/fluff/jademanique_freyr_mask
+	path = /obj/item/clothing/mask/fluff/freyr_mask
+	display_name = "Freyr's Mask"
+	slot = slot_head
+	ckeywhitelist = list("jademanique")
+	character_name = list("Freyr")
 
 /datum/gear/fluff/cirra_box
 	path = /obj/item/weapon/storage/box/fluff/cirra
@@ -1432,3 +1445,9 @@
 	ckeywhitelist = list ("thedavestdave")
 	character_name = list("Lucky")
 	allowed_roles = "Chaplain"
+
+/datum/gear/fluff/greek_dress
+    path = /obj/item/clothing/under/fluff/greek_dress
+    display_name = "mytilenean Dress"
+    ckeywhitelist = list("sudate")
+    character_name = list("Shea Corbett")

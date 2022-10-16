@@ -123,8 +123,9 @@
 		if(ishuman(body))
 			var/mob/living/carbon/human/H = body
 			add_overlay(H.overlays_standing)
-
-	if(!T)
+		default_pixel_x = body.default_pixel_x
+		default_pixel_y = body.default_pixel_y
+	if(!T && length(latejoin))
 		T = pick(latejoin)			//Safety in case we cannot find the body's position
 	if(T)
 		forceMove(T)
@@ -136,6 +137,7 @@
 		name = capitalize(pick(first_names_male)) + " " + capitalize(pick(last_names))
 	real_name = name
 	animate(src, pixel_y = 2, time = 10, loop = -1)
+	animate(pixel_y = default_pixel_y, time = 10, loop = -1)
 	observer_mob_list += src
 	..()
 
@@ -222,13 +224,13 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 	else
 		var/response
 		if(src.client && src.client.holder)
-			response = tgui_alert(src, "You have the ability to Admin-Ghost. The regular Ghost verb will announce your presence to dead chat. Both variants will allow you to return to your body using 'aghost'.\n\nWhat do you wish to do?", "Are you sure you want to ghost?", list("Ghost", "Admin Ghost", "Stay in body"))
+			response = tgui_alert(src, "You have the ability to Admin-Ghost. The regular Ghost verb will announce your presence to dead chat. Both variants will allow you to return to your body using 'aghost'.\n\nWhat do you wish to do?", "Are you sure you want to ghost?", list("Admin Ghost", "Ghost", "Stay in body"))
 			if(response == "Admin Ghost")
 				if(!src.client)
 					return
 				src.client.admin_ghost()
 		else
-			response = tgui_alert(src, "Are you -sure- you want to ghost?\n(You are alive, or otherwise have the potential to become alive. Don't abuse ghost unless you are inside a cryopod or equivalent! You can't change your mind so choose wisely!)", "Are you sure you want to ghost?", list("Ghost", "Stay in body")) // VOREStation edit because we don't make players stay dead for 30 minutes.
+			response = tgui_alert(src, "Are you -sure- you want to ghost?\n(You are alive, or otherwise have the potential to become alive. Don't abuse ghost unless you are inside a cryopod or equivalent! You can't change your mind so choose wisely!)", "Are you sure you want to ghost?", list("Stay in body", "Ghost"))
 		if(response != "Ghost")
 			return
 		resting = 1
@@ -505,10 +507,11 @@ This is the proc mobs get to turn into a ghost. Forked from ghostize due to comp
 /mob/observer/dead/stop_orbit()
 	. = ..()
 	//restart our floating animation after orbit is done.
-	pixel_y = 0
-	pixel_x = 0
+	pixel_y = default_pixel_y
+	pixel_x = default_pixel_x
 	transform = null
 	animate(src, pixel_y = 2, time = 10, loop = -1)
+	animate(pixel_y = default_pixel_y, time = 10, loop = -1)
 
 /mob/observer/dead/proc/stop_following()
 	following = null

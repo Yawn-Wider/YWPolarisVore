@@ -509,7 +509,7 @@
 /turf/simulated/floor/outdoors/snow/snow/snow2
 	name = "snow"
 	icon_state = "snow2" //YWEdit
-	movement_cost = 2	
+	movement_cost = 2
 	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
 
 /turf/simulated/floor/outdoors/snow/gravsnow
@@ -545,7 +545,9 @@
 /turf/simulated/floor/outdoors/snow/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(L.hovering) // Flying things shouldn't make footprints.
+		if(L.hovering || L.flying) // Flying things shouldn't make footprints.
+			if(L.flying)
+				L.adjust_nutrition(-0.5)
 			return ..()
 		var/mdir = "[A.dir]"
 		crossed_dirs[mdir] = 1
@@ -556,3 +558,11 @@
 	..()
 	for(var/d in crossed_dirs)
 		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
+
+//**** Here ends snow ****
+
+/turf/simulated/floor/concrete
+	name = "concrete"
+	icon = 'icons/turf/concrete.dmi'
+	icon_state = "concrete"
+	initial_flooring = /decl/flooring/concrete

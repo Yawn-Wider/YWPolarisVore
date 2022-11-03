@@ -171,7 +171,8 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 			"carbon" = 10,
 			"diamond" = 4,
 			"gold" = 15,
-			"silver" = 15))
+			"silver" = 15,
+			"hydrogen" = 2))
 	else
 		mineral_name = pickweight(list(
 			"uranium" = 7,

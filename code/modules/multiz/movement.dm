@@ -301,6 +301,12 @@
 /obj/mecha/can_fall()
 	return TRUE
 
+//YW ADDITION: start - pr #1294
+// same as above, but vehicles!
+/obj/vehicle/can_fall()
+	return TRUE
+//YW ADDITION: end
+
 /obj/item/pipe/can_fall()
 	. = ..()
 

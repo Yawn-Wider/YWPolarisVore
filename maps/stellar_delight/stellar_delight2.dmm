@@ -1477,15 +1477,23 @@
 /area/stellardelight/deck2/fore)
 "cZ" = (
 /obj/item/device/flashlight/lamp/green{
+	pixel_x = 7;
+	pixel_y = 16
+	},
+/obj/item/weapon/folder/blue_captain{
+	pixel_x = -6;
 	pixel_y = 7
 	},
-/obj/item/weapon/folder/blue_captain,
 /obj/structure/table/darkglass,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
 /obj/machinery/requests_console/preset/captain{
 	pixel_x = -30
+	},
+/obj/item/weapon/melee/chainofcommand,
+/obj/item/weapon/folder/blue_captain{
+	pixel_x = -6
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/crew_quarters/captain)
@@ -1780,6 +1788,18 @@
 /turf/simulated/floor/grass,
 /area/hydroponics)
 "dG" = (
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/structure/closet/walllocker_double/north{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
 /obj/effect/floor_decal/emblem/stellardelight{
 	dir = 9
 	},
@@ -3061,6 +3081,24 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/engineering/atmos/monitoring)
+"gz" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/structure/closet/walllocker_double/east{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/port)
 "gA" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -6104,6 +6142,24 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/eris/dark/danger,
 /area/engineering/engine_room)
+"nh" = (
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/structure/closet/walllocker_double/west{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/effect/floor_decal/milspec/color/green/half{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/fore)
 "ni" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/engineering/engine_room)
@@ -10517,14 +10573,14 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/atmos/storage)
 "xv" = (
-/obj/item/weapon/melee/chainofcommand,
-/obj/item/weapon/coin/phoron{
-	desc = "The face of the coin shows a portrait of the explorer who discovered the Virgo-Erigone system. The back depicts a Zodiac symbol that represents Virgo.";
-	name = "limited edition phoron coin"
-	},
-/obj/item/weapon/folder/blue_captain,
-/obj/item/weapon/stamp/captain,
 /obj/structure/table/darkglass,
+/obj/machinery/computer/skills{
+	pixel_x = 9
+	},
+/obj/item/weapon/paper_bin{
+	pixel_x = -7;
+	pixel_y = -2
+	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/crew_quarters/captain)
 "xw" = (
@@ -10752,6 +10808,24 @@
 /obj/structure/low_wall/bay/reinforced/steel,
 /turf/simulated/floor,
 /area/stellardelight/deck2/combustionworkshop)
+"xS" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/structure/closet/walllocker_double/east{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/fore)
 "xT" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -11717,6 +11791,7 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
+/obj/machinery/papershredder,
 /turf/simulated/floor/wood,
 /area/stellardelight/deck2/briefingroom)
 "Ae" = (
@@ -12028,9 +12103,6 @@
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
 "AO" = (
-/obj/machinery/computer/skills{
-	pixel_y = 7
-	},
 /obj/structure/table/darkglass,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
@@ -12039,6 +12111,16 @@
 	id = "captaindoor";
 	pixel_x = -15;
 	pixel_y = 2
+	},
+/obj/item/weapon/stamp/captain{
+	pixel_x = 10;
+	pixel_y = 6
+	},
+/obj/item/weapon/coin/phoron{
+	desc = "The face of the coin shows a portrait of the explorer who discovered the Virgo-Erigone system. The back depicts a Zodiac symbol that represents Virgo.";
+	name = "limited edition phoron coin";
+	pixel_x = 11;
+	pixel_y = -3
 	},
 /turf/simulated/floor/carpet/blucarpet,
 /area/crew_quarters/captain)
@@ -14527,6 +14609,24 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck2/fore)
+"Gk" = (
+/obj/effect/floor_decal/steeldecal/steel_decals5{
+	dir = 4
+	},
+/obj/structure/closet/walllocker_double/east{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/turf/simulated/floor/tiled,
+/area/stellardelight/deck2/starboard)
 "Gl" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -19936,6 +20036,25 @@
 	},
 /turf/simulated/wall/bay/r_wall/steel,
 /area/engineering/engine_room)
+"RZ" = (
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/structure/closet/crate/medical{
+	desc = "A crate full of emergency supplies to help with response and rescue operations. A logo of NanoTrasen with a checkmark is stamped on the crate.";
+	name = "NanoTrasen Emergency Supply Crate"
+	},
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/storage/firstaid/adv,
+/obj/item/weapon/storage/firstaid,
+/obj/item/bodybag/cryobag,
+/obj/item/bodybag/cryobag,
+/turf/simulated/floor/tiled/eris/dark/monofloor,
+/area/bridge)
 "Sb" = (
 /turf/simulated/floor/tiled/eris/dark/danger,
 /area/engineering/engine_room)
@@ -21216,12 +21335,6 @@
 	},
 /turf/simulated/floor/tiled/eris/dark/techfloor_grid,
 /area/storage/tech)
-"UW" = (
-/obj/structure/sign/poster{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/eris/dark/cargo,
-/area/crew_quarters/recreation_area)
 "UX" = (
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/carpet,
@@ -23262,6 +23375,21 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/techmaint,
 /area/storage/primary)
+"ZB" = (
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/structure/closet/walllocker_double/south{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/turf/simulated/floor/tiled/eris/white/cargo,
+/area/stellardelight/deck2/triage)
 "ZC" = (
 /obj/item/weapon/stool/padded{
 	dir = 8
@@ -31243,7 +31371,7 @@ Cj
 tP
 tU
 jd
-Cj
+gz
 Bf
 NG
 cO
@@ -31775,7 +31903,7 @@ zO
 Qe
 Qe
 Qe
-Qe
+nh
 PZ
 GY
 Qe
@@ -32905,7 +33033,7 @@ VG
 KH
 zz
 nt
-UW
+mt
 Bp
 oS
 oS
@@ -32949,7 +33077,7 @@ wz
 RQ
 Ze
 Eo
-Ze
+ZB
 QP
 gu
 Kf
@@ -33635,7 +33763,7 @@ jU
 TP
 Ld
 Uj
-Zj
+RZ
 Zj
 rN
 ry
@@ -33801,7 +33929,7 @@ zD
 ik
 Ze
 og
-Ze
+ZB
 QP
 sJ
 nJ
@@ -34893,7 +35021,7 @@ FA
 Zr
 sj
 FU
-Zr
+xS
 Zr
 vj
 pZ
@@ -35784,7 +35912,7 @@ Tk
 yu
 IX
 Mk
-Mk
+Gk
 LH
 Mk
 pm

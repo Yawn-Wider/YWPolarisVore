@@ -10,7 +10,7 @@ env:
 jobs:
   file_tests:
     name: Run Linters
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - name: Ensure +x on CI directory
@@ -36,7 +36,7 @@ jobs:
 
   dreamchecker:
     name: DreamChecker
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
 
@@ -71,7 +71,7 @@ jobs:
     # YW EDIT: end
     name: Integration Tests
     # needs: ['file_tests', 'dreamchecker']
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
       - name: Ensure +x on CI directory
@@ -124,13 +124,12 @@ jobs:
           #REPLACE: false
           # YW EDIT: end
           RUN: "0"
-  # YW EDIT: start
-  #tests_successful:
-    #name: Integration Tests
-    #needs: ['file_tests', 'dreamchecker', 'unit_tests']
-    #runs-on: ubuntu-latest
-    #steps:
-      #- name: Report Success
-        #run: |
-          #echo "Jobs Successful!"
-  # YW EDIT: end
+
+  tests_successful:
+    name: Integration Tests
+    needs: ['file_tests', 'dreamchecker', 'unit_tests']
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Report Success
+        run: |
+          echo "Jobs Successful!"

@@ -128,6 +128,8 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/view_feedback,
 	/client/proc/make_mentor,
 	/client/proc/unmake_mentor,
+	/client/proc/removetickets,
+	/client/proc/delbook,
 	/client/proc/setckey, //YW add - readds SetCkey proc
 	/client/proc/dbcon_fix //YW add - adds Fix Database Connection proc
 	)

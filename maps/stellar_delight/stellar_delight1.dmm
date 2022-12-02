@@ -48,6 +48,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/milspec/color/red,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "af" = (
@@ -254,7 +255,6 @@
 	color = "#42038a";
 	icon_state = "2-8"
 	},
-/mob/living/simple_mob/animal/passive/mimepet/gregory,
 /turf/simulated/floor/tiled/eris,
 /area/rnd/xenobiology/xenoflora)
 "aA" = (
@@ -4374,15 +4374,24 @@
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/exploration)
 "iV" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/bay/reinforced,
-/obj/machinery/door/blast/angled/open{
-	dir = 2;
-	id = "researchwindowlockdown"
+/obj/structure/cable/white{
+	icon_state = "1-2"
 	},
-/obj/structure/low_wall/bay/reinforced/steel,
-/turf/simulated/floor,
-/area/rnd/xenobiology/xenoflora)
+/obj/structure/disposalpipe/segment,
+/obj/structure/closet/walllocker_double/west{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/turf/simulated/floor/tiled/techmaint,
+/area/stellardelight/deck1/port)
 "iW" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -5250,6 +5259,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/port)
+"kV" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/angled/open{
+	dir = 4;
+	id = "researchwindowlockdown"
+	},
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/steel,
+/turf/simulated/floor,
+/area/rnd/xenobiology/xenoflora_storage)
 "kY" = (
 /obj/structure/cable/pink{
 	icon_state = "1-2"
@@ -5575,6 +5594,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/mob/living/simple_mob/animal/passive/mimepet/gregory,
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/research)
 "lH" = (
@@ -8850,6 +8870,7 @@
 	},
 /obj/item/weapon/gun/energy/sizegun,
 /obj/item/weapon/storage/box/donut,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "ss" = (
@@ -9053,6 +9074,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/milspec/color/red,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "sM" = (
@@ -10818,6 +10840,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/structure/closet/walllocker_double/north{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/port)
 "wM" = (
@@ -13258,6 +13292,7 @@
 "BM" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/recharger,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_equiptment_storage)
 "BN" = (
@@ -13403,16 +13438,6 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck1/exploration)
-"Ce" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/bay/reinforced,
-/obj/machinery/door/blast/angled/open{
-	dir = 4;
-	id = "researchwindowlockdown"
-	},
-/obj/structure/low_wall/bay/reinforced/steel,
-/turf/simulated/floor,
-/area/rnd/xenobiology/xenoflora_storage)
 "Cf" = (
 /obj/structure/cable/pink{
 	icon_state = "4-8"
@@ -13766,6 +13791,7 @@
 	pixel_y = 7
 	},
 /obj/item/weapon/pen,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
 "CR" = (
@@ -15443,11 +15469,11 @@
 /area/medical/morgue)
 "GI" = (
 /obj/machinery/door/firedoor/glass,
-/obj/structure/window/bay/reinforced,
 /obj/machinery/door/blast/angled/open{
 	dir = 2;
 	id = "researchwindowlockdown"
 	},
+/obj/structure/window/bay/reinforced,
 /obj/structure/low_wall/bay/reinforced/steel,
 /turf/simulated/floor,
 /area/stellardelight/deck1/researchhall)
@@ -16314,6 +16340,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/milspec/color/red,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "Iu" = (
@@ -17826,6 +17853,16 @@
 "LF" = (
 /turf/simulated/wall/bay/purple,
 /area/maintenance/stellardelight/deck1/starboardaft)
+"LG" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/angled/open{
+	dir = 2;
+	id = "researchwindowlockdown"
+	},
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/steel,
+/turf/simulated/floor,
+/area/rnd/xenobiology/xenoflora)
 "LH" = (
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
@@ -19613,6 +19650,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 8
 	},
+/obj/structure/closet/walllocker_double/north{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
 /turf/simulated/floor/tiled/techmaint,
 /area/stellardelight/deck1/aft)
 "PE" = (
@@ -20382,6 +20431,13 @@
 /obj/effect/floor_decal/steeldecal/steel_decals4{
 	dir = 6
 	},
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "researchwindowlockdown";
+	name = "Window Lockdown";
+	pixel_x = -24;
+	pixel_y = 23
+	},
 /turf/simulated/floor/tiled/eris,
 /area/rnd/xenobiology/xenoflora)
 "Rn" = (
@@ -20551,8 +20607,16 @@
 /area/security/tactical)
 "Ry" = (
 /obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/angled/open{
+	dir = 4;
+	id = "researchwindowlockdown"
+	},
 /obj/structure/window/bay/reinforced,
-/obj/structure/low_wall/bay/reinforced/purple,
+/obj/structure/low_wall/bay/reinforced/steel,
+/obj/structure/cable/green{
+	color = "#42038a";
+	icon_state = "4-8"
+	},
 /turf/simulated/floor,
 /area/rnd/xenobiology/xenoflora_storage)
 "Rz" = (
@@ -20757,6 +20821,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
+"RV" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/blast/angled/open{
+	dir = 2;
+	id = "researchwindowlockdown"
+	},
+/obj/structure/window/bay/reinforced,
+/obj/structure/low_wall/bay/reinforced/steel,
+/turf/simulated/floor,
+/area/rnd/xenobiology/xenoflora_storage)
 "RX" = (
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 1
@@ -22176,6 +22250,18 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/workshop)
 "UO" = (
+/obj/structure/closet/walllocker_double/east{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
+	},
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
 /obj/effect/floor_decal/milspec/color/red/half{
 	dir = 4
 	},
@@ -22382,15 +22468,23 @@
 /turf/simulated/wall/bay/purple,
 /area/stellardelight/deck1/exploequipment)
 "Vk" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/bay/reinforced,
-/obj/machinery/door/blast/angled/open{
-	dir = 2;
-	id = "researchwindowlockdown"
+/obj/structure/closet/walllocker_double/east{
+	desc = "A wall mounted storage cabinet marked with a cross and warning icon. This seems to contain an assortment of emergency supplies.";
+	name = "Emergency Cabinet"
 	},
-/obj/structure/low_wall/bay/reinforced/steel,
-/turf/simulated/floor,
-/area/rnd/xenobiology/xenoflora_storage)
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/device/radio,
+/obj/item/weapon/storage/briefcase/inflatable,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/weapon/tank/emergency/oxygen/engi,
+/obj/item/clothing/mask/breath,
+/obj/item/clothing/mask/breath,
+/obj/effect/floor_decal/milspec/color/emerald/half{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/stellardelight/deck1/starboard)
 "Vl" = (
 /obj/machinery/door/window/brigdoor/eastleft{
 	name = "Slime Pen 6";
@@ -22678,6 +22772,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/milspec/color/red,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "VG" = (
@@ -22754,20 +22849,6 @@
 /obj/effect/floor_decal/milspec/color/black,
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
-"VO" = (
-/obj/machinery/door/firedoor/glass,
-/obj/structure/window/bay/reinforced,
-/obj/machinery/door/blast/angled/open{
-	dir = 4;
-	id = "researchwindowlockdown"
-	},
-/obj/structure/cable/green{
-	color = "#42038a";
-	icon_state = "4-8"
-	},
-/obj/structure/low_wall/bay/reinforced/steel,
-/turf/simulated/floor,
-/area/rnd/xenobiology/xenoflora_storage)
 "VP" = (
 /obj/structure/cable/green{
 	icon_state = "2-8"
@@ -24295,6 +24376,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/milspec/color/red,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "YY" = (
@@ -24342,6 +24424,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/milspec/color/red,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_lockerroom)
 "Zc" = (
@@ -33097,7 +33180,7 @@ Sa
 xC
 hR
 ke
-rg
+iV
 Wz
 re
 MI
@@ -36219,7 +36302,7 @@ Wj
 Wj
 Wj
 Wj
-Wj
+Vk
 WU
 tw
 Wj
@@ -37107,7 +37190,7 @@ UF
 Rm
 Lz
 RR
-iV
+bj
 bD
 Cx
 JE
@@ -37249,7 +37332,7 @@ cT
 NV
 sj
 Oo
-iV
+LG
 uq
 vF
 uq
@@ -37391,7 +37474,7 @@ Qy
 wB
 DG
 PB
-iV
+LG
 bD
 vF
 uq
@@ -37675,7 +37758,7 @@ FA
 IR
 DG
 PB
-iV
+LG
 bD
 vF
 uq
@@ -37817,7 +37900,7 @@ XT
 kC
 sj
 Oo
-iV
+LG
 uq
 vF
 uq
@@ -37959,7 +38042,7 @@ BE
 As
 Jw
 bb
-iV
+bj
 bD
 vF
 uq
@@ -38094,8 +38177,8 @@ gg
 Er
 iC
 DH
-Ry
-Ry
+pQ
+pQ
 DH
 DH
 MR
@@ -38243,7 +38326,7 @@ FX
 Ro
 hr
 qx
-Vk
+pQ
 bD
 vF
 bD
@@ -38385,7 +38468,7 @@ pL
 Nq
 Yz
 YC
-Vk
+RV
 uq
 vF
 uq
@@ -38527,7 +38610,7 @@ xQ
 Ob
 Sq
 my
-Vk
+pQ
 uq
 vF
 uq
@@ -38662,12 +38745,12 @@ xo
 SR
 Vg
 pQ
-Ce
-Ce
+kV
+kV
 pQ
 pQ
-Ce
-VO
+kV
+Ry
 pQ
 pQ
 bD

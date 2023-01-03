@@ -52,7 +52,7 @@
 //VOREStation Add Start
 /obj/structure/closet/secure_closet/guncabinet/excursion
 	name = "expedition weaponry cabinet"
-	req_one_access = list(access_armory)
+	req_one_access = list(access_explorer,access_armory) // YW EDIT
 
 /obj/structure/closet/secure_closet/guncabinet/excursion/New()
 	..()

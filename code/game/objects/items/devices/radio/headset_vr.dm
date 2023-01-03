@@ -91,15 +91,15 @@
 	icon_state = "pilot_headset_alt"
 
 /obj/item/device/radio/headset/explorer
-	name = "away team member's headset"
-	desc = "Headset used by the away team for exploring. Access to the away team channel."
+	name = "explorer's headset" // YW EDIT
+	desc = "Headset used by the away team for exploring. Access to the away team channel." // YW EDIT
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/explorer
 
 /obj/item/device/radio/headset/explorer/alt
-	name = "away team's bowman headset"
-	desc = "Bowman headset used by the away team for exploring. Access to the away team channel."
+	name = "explorer's bowman headset" // YW EDIT
+	desc = "Bowman headset used by the away team for exploring. Access to the away team channel." // YW EDIT
 	icon_state = "exp_headset_alt"
 
 /obj/item/device/radio/headset/sar
@@ -114,14 +114,14 @@
 	desc = "A bowman headset for field medics."
 	icon_state = "sar_headset_alt"
 
-/* //They're all volunteers now.
+// YW Change start un-comment
 /obj/item/device/radio/headset/volunteer
 	name = "volunteer's headset"
 	desc = "A headset used by volunteers to expedition teams, has access to the Away Team channel."
 	icon_state = "pilot_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/device/encryptionkey/explorer
-*/
+// YW Change end un-comment
 
 /obj/item/device/radio/headset/talon
 	name = "talon headset"

@@ -137,7 +137,7 @@
 	one_access = TRUE
 
 /datum/supply_pack/randomised/misc/explorer_shield
-	name = "Away Team shield"
+	name = "Explorer shield" // YW EDIT
 	num_contained = 2
 	contains = list(
 			/obj/item/weapon/shield/riot/explorer,
@@ -146,7 +146,7 @@
 	cost = 75
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "exploration shield crate"
-	access = list(access_eva,
+	access = list(access_explorer, // YW EDIT
 				  access_pilot)
 	one_access = TRUE
 

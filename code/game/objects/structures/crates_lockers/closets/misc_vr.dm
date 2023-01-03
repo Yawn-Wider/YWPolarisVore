@@ -24,7 +24,7 @@
 
 /obj/structure/closet/secure_closet/guncabinet/rifle
 	name = "rifle cabinet"
-	req_one_access = list(access_brig)
+	req_one_access = list(access_explorer,access_brig) // YW EDIT
 
 	starts_with = list(
 		/obj/item/ammo_magazine/clip/c762/hunter = 9,
@@ -38,8 +38,8 @@
 	return ..()
 
 /obj/structure/closet/secure_closet/guncabinet/phase
-	name = "away team weapon cabinet"
-	req_one_access = list(access_brig)
+	name = "explorer weapon cabinet" // YW EDIT
+	req_one_access = list(access_explorer,access_brig) // YW EDIT
 
 	starts_with = list(
 		/obj/item/weapon/gun/energy/phasegun = 2,
@@ -51,7 +51,7 @@
  * Explorer
  */
 /obj/structure/closet/secure_closet/explorer
-	name = "away team locker"
+	name = "explorer locker" // YW EDIT
 	req_access = list(access_explorer)
 	closet_appearance = /decl/closet_appearance/secure_closet/expedition/explorer
 

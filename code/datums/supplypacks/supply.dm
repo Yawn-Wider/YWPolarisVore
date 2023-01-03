@@ -157,7 +157,7 @@
 	containername = "Cargo Train Trolley Crate"
 
 /datum/supply_pack/explorergear
-	name="Away Team gear"
+	name="Explorer gear" // YW EDIT
 	contains = list (
 					/obj/item/device/cataloguer,
 					/obj/item/device/geiger,
@@ -178,7 +178,7 @@
 					)
 	cost=25
 	containertype = /obj/structure/closet/crate/secure/xion
-	containername = "Away Team equipment"
+	containername = "Explorer equipment" // YW EDIT
 	access = list(access_eva, access_explorer)
 
 /datum/supply_pack/pilotgear
@@ -198,7 +198,7 @@
 					/obj/item/weapon/material/knife/tacknife/survival,
 					/obj/item/clothing/head/pilot_vr,
 					/obj/item/clothing/under/rank/pilot1,
-					/obj/item/clothing/suit/storage/toggle/bomber/pilot
+					/obj/item/device/cataloguer/compact
 					)
 	cost=20
 	containertype = /obj/structure/closet/crate/secure/xion

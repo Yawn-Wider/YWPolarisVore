@@ -1114,7 +1114,7 @@
 
 /obj/item/clothing/under/explorer
 	desc = "A green uniform for operating in hazardous environments."
-	name = "away team's jumpsuit"
+	name = "explorer's jumpsuit" // YW EDIT
 	icon_state = "explorer"
 
 /obj/item/clothing/under/explorer/armored

@@ -2,14 +2,16 @@
 var/const/access_explorer = 43
 /datum/access/explorer
 	id = access_explorer
-	desc = "Explorer"
+	desc = "Away Team"
 	region = ACCESS_REGION_GENERAL
 
-/*/var/const/access_pathfinder = 44
+/*
+/var/const/access_pathfinder = 44
 /datum/access/pathfinder
 	id = access_pathfinder
 	desc = "Pathfinder"
-	region = ACCESS_REGION_GENERAL YW Comment out*/
+	region = ACCESS_REGION_GENERAL
+YW Comment out */
 
 var/const/access_pilot = 67
 /datum/access/pilot

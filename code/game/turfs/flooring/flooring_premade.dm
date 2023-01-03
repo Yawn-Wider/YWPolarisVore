@@ -501,7 +501,18 @@
 		'sound/effects/footstep/snow4.ogg',
 		'sound/effects/footstep/snow5.ogg'))
 
-/turf/simulated/floor/outdoors/snow/snow
+/turf/simulated/floor/fakesnow
+	name = "fake snow"
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "snow"
+	initial_flooring = /decl/flooring/snow/fake
+
+/turf/simulated/floor/outdoors/snow/snow // YW Addition (radiant), for some reason, i have to clean this up at some point (izac)
+	name = "snow"
+	icon_state = "snow"
+	movement_cost = 4
+
+/turf/simulated/floor/snow/snow2
 	name = "snow"
 	icon_state = "snow"
 	movement_cost = 4

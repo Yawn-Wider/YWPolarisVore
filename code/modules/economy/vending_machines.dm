@@ -133,7 +133,7 @@
 /obj/machinery/vending/coffee
 	name = "Hot Drinks machine"
 	desc = "A Galaksi brand vending machine which dispenses hot drinks."
-	description_fluff = "The Ward-Takahashi Galaksi Samovar 55 has been reconstituting hot drinks from their powdered forms since... Well, 2555, but the design has hardly changed in a century or so."
+	description_fluff = "The Ward-Takahashi Galaksi Samovar 55 has been reconstituting hot drinks from their powdered forms since... Well, 2305, but the design has hardly changed in a century or so."
 	product_ads = "Have a drink!;Drink up!;It's good for you!;Would you like a hot joe?;I'd kill for some coffee!;The best beans in the galaxy.;Only the finest brew for you.;Mmmm. Nothing like a coffee.;I like coffee, don't you?;Coffee helps you work!;Try some tea.;We hope you like the best!;Try our new chocolate!;Admin conspiracies"
 	icon_state = "coffee"
 	vend_delay = 34
@@ -1229,6 +1229,7 @@
 		/obj/item/clothing/under/rank/security = 5,
 		/obj/item/clothing/under/rank/security2 = 5,
 		/obj/item/clothing/under/rank/security/turtleneck = 5,
+		/obj/item/clothing/under/rank/security/modern = 5,
 		/obj/item/clothing/under/rank/security/skirt = 5,
 		/obj/item/clothing/shoes/boots/jackboots = 5,
 		/obj/item/clothing/head/soft/sec = 5,

@@ -41,8 +41,6 @@ var/world_time_season
 				/obj/structure/flora/tree/jungle
 			)
 			animal_types = list(
-				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
-				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
 				/mob/living/simple_mob/vore/redpanda = 40,
 				/mob/living/simple_mob/vore/redpanda/fae = 2,
 				/mob/living/simple_mob/vore/sheep = 20,
@@ -75,8 +73,6 @@ var/world_time_season
 				/obj/structure/flora/tree/jungle
 			)
 			animal_types = list(
-				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
-				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
 				/mob/living/simple_mob/vore/redpanda = 40,
 				/mob/living/simple_mob/vore/redpanda/fae = 2,
 				/mob/living/simple_mob/vore/sheep = 20,
@@ -99,8 +95,6 @@ var/world_time_season
 			)
 
 			animal_types = list(
-				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
-				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
 				/mob/living/simple_mob/vore/redpanda = 40,
 				/mob/living/simple_mob/vore/redpanda/fae = 2,
 				/mob/living/simple_mob/vore/sheep = 20,
@@ -127,8 +121,6 @@ var/world_time_season
 
 			animal_types = list(
 				/mob/living/simple_mob/vore/rabbit/white = 40,
-				/mob/living/simple_mob/vore/alienanimals/teppi = 10,
-				/mob/living/simple_mob/vore/alienanimals/teppi/mutant = 1,
 				/mob/living/simple_mob/vore/redpanda = 10
 			)
 			if(prob(snow_chance))
@@ -241,3 +233,17 @@ var/world_time_season
 	snow_chance = 1
 /turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow
 	snow_chance = 1
+
+/turf/simulated/floor/water/seasonal/Initialize()
+	. = ..()
+	switch(world_time_season)
+		if("winter")
+			if(prob(99))
+				ChangeTurf(/turf/simulated/floor/outdoors/ice)
+
+/turf/simulated/floor/water/deep/seasonal/Initialize()
+	. = ..()
+	switch(world_time_season)
+		if("winter")
+			if(prob(75))
+				ChangeTurf(/turf/simulated/floor/outdoors/ice)

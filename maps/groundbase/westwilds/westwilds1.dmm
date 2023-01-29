@@ -1,4 +1,8 @@
 //MAP CONVERTED BY dmm2tgm.py THIS HEADER COMMENT PREVENTS RECONVERSION, DO NOT REMOVE
+"aa" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/west/unexplored)
 "ab" = (
 /turf/simulated/wall,
 /area/groundbase/science/outpost/anomaly_testing)
@@ -790,7 +794,7 @@
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/east_west{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/west)
 "gm" = (
 /turf/simulated/mineral/cave,
@@ -999,7 +1003,7 @@
 	name = "Burn Chamber Air Control";
 	output_tag = "burn_out";
 	pressure_setting = 0;
-	sensors = list("burn_sensor"="Burn Chamber Sensor")
+	sensors = list("burn_sensor" = "Burn Chamber Sensor")
 	},
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxins_mixing)
@@ -1306,7 +1310,7 @@
 /turf/simulated/floor,
 /area/groundbase/science/outpost/atmos)
 "kc" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/west/unexplored)
 "kh" = (
 /turf/simulated/wall/r_wall,
@@ -2538,7 +2542,7 @@
 /obj/machinery/vending/phoronresearch{
 	dir = 8;
 	name = "Toximate 2556";
-	products = list(/obj/item/device/transfer_valve=3,/obj/item/device/assembly/timer=6,/obj/item/device/assembly/signaler=6,/obj/item/device/assembly/prox_sensor=6,/obj/item/device/assembly/igniter=12)
+	products = list(/obj/item/device/transfer_valve = 3, /obj/item/device/assembly/timer = 6, /obj/item/device/assembly/signaler = 6, /obj/item/device/assembly/prox_sensor = 6, /obj/item/device/assembly/igniter = 12)
 	},
 /turf/simulated/floor/tiled,
 /area/groundbase/science/outpost/toxins_lab)
@@ -2924,7 +2928,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/science/outpost/anomaly_testing)
 "yy" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/west)
 "yI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -4378,7 +4382,7 @@
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/west)
 "JI" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -4661,7 +4665,7 @@
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/west)
 "Lf" = (
 /obj/machinery/atmospherics/unary/heat_exchanger{
@@ -4769,7 +4773,7 @@
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/west{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/west)
 "LM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -6673,11 +6677,11 @@ zM
 zM
 zM
 yy
-yy
 iL
 iL
-yy
-yy
+iL
+iL
+iL
 yy
 zM
 zM
@@ -7812,7 +7816,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 ia
 ia
@@ -9391,7 +9395,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -9698,7 +9702,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -11558,7 +11562,7 @@ ia
 ia
 kc
 kc
-kc
+aa
 ia
 ia
 ia
@@ -12047,7 +12051,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -13510,7 +13514,7 @@ ia
 ia
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -14483,7 +14487,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 ia
 ia
@@ -14801,7 +14805,7 @@ kc
 kc
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -15289,7 +15293,7 @@ Xk
 ia
 kc
 kc
-kc
+aa
 kc
 ia
 ia
@@ -16525,7 +16529,7 @@ ia
 ia
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -18918,7 +18922,7 @@ ia
 ia
 ia
 kc
-kc
+aa
 kc
 kc
 kc
@@ -20545,7 +20549,7 @@ ia
 ia
 kc
 kc
-kc
+aa
 kc
 kc
 kc
@@ -22550,7 +22554,7 @@ ia
 ia
 ia
 kc
-kc
+aa
 kc
 kc
 kc

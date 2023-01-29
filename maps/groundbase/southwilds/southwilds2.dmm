@@ -6,34 +6,32 @@
 	name = "impassable rock"
 	},
 /area/submap/groundbase/wilderness/south)
+"b" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/south/unexplored)
 "c" = (
 /turf/simulated/mineral/cave,
 /area/submap/groundbase/wilderness/south/cave)
+"d" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/south/unexplored)
 "l" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/south)
 "t" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/south)
 "B" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/north_south{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
-/area/submap/groundbase/wilderness/south)
-"C" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/south)
 "H" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/south/unexplored)
-"K" = (
-/obj/effect/map_effect/portal/line/side_b,
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
-/area/submap/groundbase/wilderness/south)
 "L" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
@@ -49,10 +47,10 @@
 /area/submap/groundbase/wilderness/south)
 "S" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/south,
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/south)
 "Y" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/south/unexplored)
 
 (1,1,1) = {"
@@ -2977,7 +2975,7 @@ H
 Y
 Y
 Y
-Y
+d
 Y
 Y
 Y
@@ -3101,7 +3099,7 @@ c
 H
 H
 Y
-Y
+d
 Y
 H
 c
@@ -4201,7 +4199,7 @@ H
 H
 H
 Y
-Y
+d
 Y
 H
 c
@@ -4289,7 +4287,7 @@ c
 H
 Y
 Y
-Y
+d
 Y
 H
 c
@@ -6684,7 +6682,7 @@ Y
 Y
 Y
 Y
-Y
+d
 Y
 Y
 Y
@@ -6883,9 +6881,9 @@ c
 c
 c
 H
+b
 H
 H
-H
 c
 c
 c
@@ -6905,24 +6903,6 @@ c
 c
 c
 H
-Y
-Y
-Y
-Y
-H
-H
-H
-H
-H
-H
-H
-H
-H
-Y
-Y
-Y
-Y
-Y
 Y
 Y
 Y
@@ -6933,6 +6913,24 @@ H
 H
 H
 H
+H
+H
+H
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+Y
+H
+H
+H
+H
+H
+H
 c
 c
 c
@@ -6952,7 +6950,7 @@ Y
 Y
 Y
 Y
-Y
+d
 Y
 Y
 Y
@@ -7047,7 +7045,7 @@ c
 H
 H
 H
-Y
+d
 Y
 Y
 Y
@@ -7488,7 +7486,7 @@ Y
 Y
 Y
 Y
-Y
+d
 Y
 Y
 Y
@@ -7725,8 +7723,8 @@ a
 "}
 (55,1,1) = {"
 S
-t
-t
+l
+l
 l
 H
 H
@@ -7928,7 +7926,7 @@ H
 H
 H
 Y
-Y
+d
 Y
 Y
 Y
@@ -8292,8 +8290,8 @@ Q
 a
 "}
 (59,1,1) = {"
-K
-t
+P
+l
 l
 l
 H
@@ -9708,8 +9706,8 @@ Y
 Y
 l
 l
-t
-C
+l
+L
 "}
 (69,1,1) = {"
 a
@@ -9793,7 +9791,7 @@ Y
 Y
 Y
 Y
-Y
+d
 Y
 Y
 Y
@@ -9924,7 +9922,7 @@ Y
 Y
 Y
 Y
-Y
+d
 Y
 Y
 Y
@@ -10120,7 +10118,7 @@ H
 Y
 Y
 Y
-Y
+d
 H
 H
 H
@@ -10275,8 +10273,8 @@ H
 H
 H
 l
-t
-t
+l
+l
 B
 "}
 (73,1,1) = {"
@@ -10469,7 +10467,7 @@ H
 Y
 Y
 Y
-Y
+d
 Y
 Y
 H
@@ -11774,7 +11772,7 @@ Y
 Y
 Y
 Y
-Y
+d
 Y
 Y
 Y
@@ -12285,7 +12283,7 @@ H
 H
 Y
 Y
-Y
+d
 Y
 Y
 Y
@@ -12363,7 +12361,7 @@ Y
 Y
 Y
 Y
-Y
+d
 Y
 H
 H
@@ -13600,7 +13598,7 @@ Y
 Y
 Y
 Y
-Y
+d
 H
 H
 H
@@ -14898,7 +14896,7 @@ H
 H
 H
 Y
-Y
+d
 H
 H
 H
@@ -15843,7 +15841,7 @@ Y
 Y
 Y
 Y
-Y
+d
 Y
 Y
 Y
@@ -16489,7 +16487,7 @@ Y
 Y
 Y
 Y
-Y
+d
 H
 H
 H

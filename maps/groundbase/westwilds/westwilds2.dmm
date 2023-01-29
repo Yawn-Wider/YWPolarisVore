@@ -31,6 +31,30 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/groundbase/science/outpost/anomaly_lab)
+"ae" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/west/unexplored)
+"af" = (
+/obj/effect/landmark/wildlife/water,
+/turf/simulated/floor/water/seasonal,
+/area/submap/groundbase/wilderness/west/unexplored)
+"ag" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/west/unexplored)
+"ah" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/structure/catwalk,
+/obj/structure/railing/grey,
+/obj/machinery/computer/ship/engines{
+	dir = 4;
+	req_one_access = null
+	},
+/turf/simulated/floor/plating,
+/area/shuttle/axolotl_engineering)
 "am" = (
 /obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 9
@@ -1088,12 +1112,6 @@
 /obj/effect/floor_decal/corner/red/border,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/groundbase/science/outpost/toxins_mixing)
-"iV" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
-/area/submap/groundbase/wilderness/west)
 "jb" = (
 /obj/effect/floor_decal/industrial/outline/blue,
 /obj/machinery/atmospherics/portables_connector{
@@ -1407,7 +1425,7 @@
 /turf/simulated/wall/r_wall,
 /area/groundbase/science/outpost/anomaly_testing)
 "kQ" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/west)
 "kR" = (
 /obj/structure/table/steel,
@@ -2089,18 +2107,6 @@
 /obj/machinery/meter,
 /turf/simulated/floor/tiled/white,
 /area/groundbase/science/outpost/toxing_gasworks)
-"qr" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/structure/catwalk,
-/obj/structure/railing/grey,
-/obj/machinery/computer/ship/engines{
-	dir = 4;
-	req_one_access = list(160)
-	},
-/turf/simulated/floor/plating,
-/area/shuttle/axolotl_engineering)
 "qw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -2574,7 +2580,7 @@
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/west{
 	dir = 8
 	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/west)
 "ui" = (
 /obj/machinery/door/firedoor/glass,
@@ -2813,12 +2819,6 @@
 	},
 /turf/simulated/wall/shull,
 /area/shuttle/axolotl)
-"vw" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 8
-	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
-/area/submap/groundbase/wilderness/west)
 "vx" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/grille,
@@ -3090,7 +3090,7 @@
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/east_west{
 	dir = 4
 	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/west)
 "xv" = (
 /obj/machinery/suspension_gen,
@@ -3948,7 +3948,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/axolotl_q1)
 "DA" = (
-/turf/simulated/floor/water,
+/turf/simulated/floor/water/seasonal,
 /area/submap/groundbase/wilderness/west/unexplored)
 "DB" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -6302,7 +6302,7 @@
 /turf/simulated/floor,
 /area/groundbase/science/outpost/substation)
 "YK" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/west/unexplored)
 "YL" = (
 /obj/structure/closet/excavation,
@@ -6539,8 +6539,8 @@ lO
 xr
 KF
 KF
-iV
-iV
+KF
+KF
 lO
 lO
 lO
@@ -6678,11 +6678,11 @@ fM
 fM
 fM
 YK
-YK
 nr
 nr
 nr
-YK
+nr
+nr
 YK
 fM
 fM
@@ -6820,7 +6820,7 @@ fM
 fM
 fM
 YK
-YK
+nr
 nr
 nr
 nr
@@ -7248,7 +7248,7 @@ YK
 YK
 nr
 nr
-nr
+ae
 nr
 nr
 nr
@@ -9076,7 +9076,7 @@ nr
 YK
 YK
 YK
-YK
+ag
 YK
 YK
 YK
@@ -9547,7 +9547,7 @@ YK
 YK
 YK
 YK
-YK
+ag
 YK
 YK
 nr
@@ -12181,7 +12181,7 @@ nr
 nr
 nr
 nr
-nr
+ae
 YK
 YK
 YK
@@ -12687,7 +12687,7 @@ YK
 YK
 YK
 YK
-YK
+ag
 YK
 YK
 YK
@@ -13764,7 +13764,7 @@ YK
 YK
 YK
 YK
-YK
+ag
 nr
 nr
 nr
@@ -14089,7 +14089,7 @@ YK
 YK
 YK
 YK
-YK
+ag
 YK
 YK
 YK
@@ -15817,7 +15817,7 @@ YK
 YK
 YK
 YK
-nr
+ae
 nr
 nr
 Zm
@@ -16201,7 +16201,7 @@ nr
 YK
 YK
 YK
-YK
+ag
 YK
 YK
 YK
@@ -16299,7 +16299,7 @@ DA
 DA
 DA
 DA
-DA
+af
 DA
 DA
 DA
@@ -19566,7 +19566,7 @@ nr
 nr
 YK
 YK
-YK
+ag
 YK
 YK
 YK
@@ -21295,7 +21295,7 @@ lR
 hG
 nG
 fl
-qr
+ah
 dq
 pq
 De
@@ -22212,7 +22212,7 @@ Wl
 nr
 YK
 YK
-YK
+ag
 nr
 nr
 nr
@@ -25990,11 +25990,11 @@ fM
 fM
 YK
 YK
-YK
+nr
 nr
 XS
 nr
-YK
+nr
 YK
 fB
 YK
@@ -26132,11 +26132,11 @@ fM
 fM
 fM
 YK
-YK
+nr
 nr
 XS
 nr
-YK
+nr
 YK
 CL
 fM
@@ -26274,7 +26274,7 @@ lO
 lO
 lO
 lO
-vw
+lE
 lE
 Kt
 lE

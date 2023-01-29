@@ -22,10 +22,18 @@
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/poi/wildvillage/plot/long)
 "f" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/poi/wildvillage/plot/square)
+"g" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
+/area/submap/groundbase/wilderness/south/unexplored)
+"h" = (
+/obj/effect/landmark/wildlife/forest,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
+/area/submap/groundbase/wilderness/south/unexplored)
 "j" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/poi/wildvillage/plot/wide)
 "l" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
@@ -34,7 +42,7 @@
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/poi/wildvillage/plot/long)
 "t" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/south)
 "v" = (
 /turf/simulated/floor/outdoors/sidewalk/slab,
@@ -44,7 +52,7 @@
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/poi/wildvillage)
 "z" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/poi/wildvillage/plot/long)
 "A" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
@@ -53,13 +61,7 @@
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/north_south{
 	dir = 1
 	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
-/area/submap/groundbase/wilderness/south)
-"C" = (
-/obj/effect/map_effect/portal/line/side_b{
-	dir = 1
-	},
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/south)
 "E" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
@@ -70,10 +72,6 @@
 "H" = (
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/south/unexplored)
-"K" = (
-/obj/effect/map_effect/portal/line/side_b,
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
-/area/submap/groundbase/wilderness/south)
 "L" = (
 /obj/effect/map_effect/portal/line/side_b{
 	dir = 1
@@ -81,7 +79,7 @@
 /turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/south)
 "O" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/poi/wildvillage)
 "P" = (
 /obj/effect/map_effect/portal/line/side_b,
@@ -92,10 +90,10 @@
 /area/submap/groundbase/wilderness/south)
 "S" = (
 /obj/effect/map_effect/portal/master/side_b/gb_wilds/south,
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/notrees_nomobs_lowsnow,
 /area/submap/groundbase/wilderness/south)
 "Y" = (
-/turf/simulated/floor/outdoors/grass/seasonal/dark/notrees_nomobs_lowsnow,
+/turf/simulated/floor/outdoors/grass/seasonal/dark/lowsnow,
 /area/submap/groundbase/wilderness/south/unexplored)
 
 (1,1,1) = {"
@@ -3286,7 +3284,7 @@ H
 H
 Y
 Y
-Y
+h
 H
 H
 c
@@ -3443,7 +3441,7 @@ c
 H
 H
 H
-H
+g
 H
 H
 H
@@ -4190,7 +4188,7 @@ H
 H
 H
 Y
-Y
+h
 Y
 H
 H
@@ -4244,7 +4242,7 @@ H
 H
 H
 Y
-Y
+h
 Y
 H
 c
@@ -5705,7 +5703,7 @@ c
 H
 H
 Y
-Y
+h
 H
 H
 H
@@ -6665,7 +6663,7 @@ c
 c
 H
 Y
-Y
+h
 H
 H
 c
@@ -6736,7 +6734,7 @@ Y
 Y
 Y
 Y
-Y
+h
 Y
 Y
 H
@@ -6784,7 +6782,7 @@ c
 c
 c
 H
-H
+g
 H
 c
 c
@@ -7768,8 +7766,8 @@ a
 "}
 (55,1,1) = {"
 S
-t
-t
+l
+l
 l
 H
 H
@@ -8335,8 +8333,8 @@ Q
 a
 "}
 (59,1,1) = {"
-K
-t
+P
+l
 l
 l
 H
@@ -9012,7 +9010,7 @@ H
 H
 H
 H
-Y
+h
 Y
 Y
 Y
@@ -9751,8 +9749,8 @@ Y
 Y
 l
 l
-t
-C
+l
+L
 "}
 (69,1,1) = {"
 a
@@ -10305,7 +10303,7 @@ Y
 Y
 H
 Y
-Y
+h
 H
 H
 H
@@ -10318,8 +10316,8 @@ H
 H
 H
 l
-t
-t
+l
+l
 B
 "}
 (73,1,1) = {"
@@ -12186,7 +12184,7 @@ c
 H
 Y
 Y
-Y
+h
 Y
 Y
 H
@@ -15177,7 +15175,7 @@ Y
 Y
 Y
 H
-H
+g
 H
 H
 c
@@ -15368,7 +15366,7 @@ c
 H
 H
 H
-H
+g
 H
 H
 H
@@ -15965,7 +15963,7 @@ H
 H
 H
 H
-H
+g
 H
 H
 c

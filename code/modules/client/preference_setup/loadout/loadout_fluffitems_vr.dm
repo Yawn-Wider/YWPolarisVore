@@ -561,6 +561,13 @@
 	ckeywhitelist = list("jemli")
 	character_name = list("Jemli")
 
+/datum/gear/fluff/fen_crown
+	path = /obj/item/clothing/head/crown
+	display_name = "Princess Crown"
+	slot = slot_head
+	ckeywhitelist = list("jemli")
+	character_name = list("Princess Afenia")
+
 /datum/gear/fluff/jeremiah_holster
 	path = /obj/item/clothing/accessory/holster/armpit
 	display_name = "Ace's Holster"
@@ -1455,6 +1462,12 @@
 	display_name = "yellow slime plushie"
 	ckeywhitelist = list("yecrowbarman")
 	character_name = list("Lemon Yellow", "Lemon Gettler Yellow", "Lemon Lee Yellow", "Lemon Jade Yellow") //different sleeves, same char
+
+/datum/gear/fluff/cephyra_d6
+	path = /obj/item/weapon/dice/loaded/ceph
+	display_name = "engraved d6"
+	ckeywhitelist = list("yeehawguvnah")
+	character_name = list("Cephyra")
 
 //  Z CKEYS
 /datum/gear/fluff/tachika_medal

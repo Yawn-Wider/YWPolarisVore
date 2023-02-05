@@ -120,7 +120,6 @@
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
 	species_allowed = list(SPECIES_VOX)
 
-
 /datum/sprite_accessory/hair/yw
 	icon = 'icons/mob/human_face_yw.dmi'
 	icon_add = 'icons/mob/human_face_yw.dmi'
@@ -144,3 +143,9 @@
 	name = "Vox Stubble (colorable)"
 	icon_state = "vox_color_stubble"
 	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/marking/yw/snootnose
+	name = "Snoot Nose (Cit)"
+	icon_state = "snootnose"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)

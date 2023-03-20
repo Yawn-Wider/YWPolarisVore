@@ -735,6 +735,12 @@
 				/obj/item/toy/plushie/tabby_cat,
 				/obj/item/toy/plushie/tuxedo_cat,
 				/obj/item/toy/plushie/white_cat,
+				//YawnWider Add Start
+				/obj/item/toy/plushie/teshari/_yw,
+				/obj/item/toy/plushie/teshari/w_yw,
+				/obj/item/toy/plushie/teshari/b_yw,
+				/obj/item/toy/plushie/teshari/y_yw,
+				//YawnWider Add End
 				//VOREStation Add Start
 				/obj/item/toy/plushie/lizardplushie,
 				/obj/item/toy/plushie/lizardplushie/kobold,
@@ -756,12 +762,6 @@
 							/obj/item/toy/plushie/borgplushie/drake/mine,
 							/obj/item/toy/plushie/borgplushie/drake/trauma)))
 				//VOREStation Add End
-				//YawnWider Add Start
-				/obj/item/toy/plushie/teshari/_yw,
-				/obj/item/toy/plushie/teshari/w_yw,
-				/obj/item/toy/plushie/teshari/b_yw,
-				/obj/item/toy/plushie/teshari/y_yw)
-				//YawnWider Add End
 
 /obj/random/plushielarge
 	name = "random large plushie"

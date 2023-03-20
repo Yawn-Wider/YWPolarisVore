@@ -170,7 +170,7 @@ var/list/_human_default_emotes = list(
 	/decl/emote/visible/vibrate,
 	/decl/emote/audible/croon,
 	/decl/emote/audible/lwarble,
-	/decl/emote/audible/croak_skrell
+	/decl/emote/audible/croak_skrell,
 
 	//VOREStation Add End
 	//YW ADDITION: Add Start

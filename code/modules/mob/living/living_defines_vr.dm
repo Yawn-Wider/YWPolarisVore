@@ -12,6 +12,10 @@
 	var/custom_exclaim = null
 	var/custom_whisper = null
 
+//custom temperature discomfort vars
+	var/list/custom_heat = list()
+	var/list/custom_cold = list()
+
 //YW Add Start
 /mob
 	var/wingdings = 0

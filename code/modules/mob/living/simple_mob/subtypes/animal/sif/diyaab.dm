@@ -34,7 +34,7 @@
 
 	minbodytemp = 175 //yw edit, Makes mobs survive cryogaia temps
 
-	movement_cooldown = 0
+	movement_cooldown = -1
 
 	melee_damage_lower = 2
 	melee_damage_upper = 6
@@ -66,4 +66,3 @@
 	speak = list("Awrr?", "Aowrl!", "Worrl.")
 	emote_see = list("sniffs the air cautiously","looks around")
 	emote_hear = list("snuffles")
-

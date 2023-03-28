@@ -15,7 +15,7 @@ GLOBAL_DATUM(revdata, /datum/getrev)
 			revision = REV.origin_commit || REV.commit
 			branch = "-Using TGS-" // TGS doesn't provide branch info yet
 			date = "-Using TGS-" // Or date
-	
+
 	if(!revision) // File parse method
 		var/list/head_branch = file2list(".git/HEAD", "\n")
 		if(head_branch.len)
@@ -46,7 +46,7 @@ GLOBAL_DATUM(revdata, /datum/getrev)
 	if(header)
 		. += "The following pull requests are currently test merged:"
 	for(var/datum/tgs_revision_information/test_merge/tm as anything in testmerge)
-		var/cm = tm.pull_request_commit
+		var/cm = tm.head_commit // YW Edit: TGS4
 		var/details = ": '" + html_encode(tm.title) + "' by " + html_encode(tm.author) + " at commit " + html_encode(copytext_char(cm, 1, 11))
 		if(details && findtext(details, "\[s\]") && (!usr || !usr.client.holder))
 			continue
@@ -60,9 +60,9 @@ GLOBAL_DATUM(revdata, /datum/getrev)
 	if(!GLOB.revdata)
 		to_chat(src, "<span class='warning'>Please wait until server initializations are complete.</span>")
 		return
-	
+
 	var/list/msg = list()
-	
+
 	if(GLOB.revdata.revision)
 		msg += "<b>Server revision:</b> B:[GLOB.revdata.branch] D:[GLOB.revdata.date]"
 		if(config.githuburl)

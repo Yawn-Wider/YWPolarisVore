@@ -1,7 +1,7 @@
 /datum/tgs_api/v5/proc/ListCustomCommands()
 	var/results = list()
 	custom_commands = list()
-	for(var/I in subtypesof(/datum/tgs_chat_command))
+	for(var/I in typesof(/datum/tgs_chat_command) - /datum/tgs_chat_command)
 		var/datum/tgs_chat_command/stc = new I
 		var/command_name = stc.name
 		if(!command_name || findtext(command_name, " ") || findtext(command_name, "'") || findtext(command_name, "\""))
@@ -30,39 +30,28 @@
 
 	var/datum/tgs_chat_command/sc = custom_commands[command]
 	if(sc)
-		var/text_response = sc.Run(u, params)
+		var/datum/tgs_message_content/response = sc.Run(u, params)
+		response = UpgradeDeprecatedCommandResponse(response, command)
+		
 		var/list/topic_response = list()
-		if(!istext(text_response))
-			TGS_ERROR_LOG("Custom command [command] should return a string! Got: \"[text_response]\"")
-			text_response = null
-		topic_response[DMAPI5_TOPIC_RESPONSE_COMMAND_RESPONSE_MESSAGE] = text_response
+		topic_response[DMAPI5_TOPIC_RESPONSE_COMMAND_RESPONSE_MESSAGE] = response?.text
+		topic_response[DMAPI5_TOPIC_RESPONSE_COMMAND_RESPONSE] = response?._interop_serialize()
 		return json_encode(topic_response)
 	return TopicResponse("Unknown custom chat command: [command]!")
 
-/*
+// Common proc b/c it's used by the V3/V4 APIs
+/datum/tgs_api/proc/UpgradeDeprecatedCommandResponse(datum/tgs_message_content/response, command)
+	// Backwards compatibility, used to return a string
+	if(istext(response))
+		warned_deprecated_command_runs = warned_deprecated_command_runs || list()
+		if(!warned_deprecated_command_runs[command])
+			TGS_WARNING_LOG("Custom chat command \"[command]\" is still returning a string. This behaviour is deprecated, please upgrade it to return a [/datum/tgs_message_content].")
+			warned_deprecated_command_runs[command] = TRUE
 
-The MIT License
+		return new /datum/tgs_message_content(response)
 
-Copyright (c) 2020 Jordan Brown
+	if(!istype(response))
+		TGS_ERROR_LOG("Custom chat command \"[command]\" should return a [/datum/tgs_message_content]! Got: \"[response]\"")
+		return null
 
-Permission is hereby granted, free of charge,
-to any person obtaining a copy of this software and
-associated documentation files (the "Software"), to
-deal in the Software without restriction, including
-without limitation the rights to use, copy, modify,
-merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom
-the Software is furnished to do so,
-subject to the following conditions:
-
-The above copyright notice and this permission notice
-shall be included in all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES
-OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR
-ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-*/
+	return response

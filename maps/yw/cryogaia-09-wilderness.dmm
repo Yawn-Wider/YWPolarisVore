@@ -531,12 +531,6 @@
 	},
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
-"Bo" = (
-/obj/structure/fence{
-	dir = 4
-	},
-/turf/simulated/floor/outdoors/snow/snow/cryogaia,
-/area/borealis2/outdoors/grounds)
 "BL" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 1
@@ -892,7 +886,7 @@
 	},
 /obj/structure/fence/corner,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
-/area/borealis2/outdoors/grounds)
+/area/borealis2/outdoors/exterior)
 "Qp" = (
 /obj/cryogaia_away_spawner/wilds,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
@@ -955,7 +949,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
-/area/borealis2/outdoors/grounds)
+/area/borealis2/outdoors/exterior)
 "Uh" = (
 /turf/simulated/floor/tiled/old_tile/gray,
 /area/borealis2/outdoors/exterior/explore1)
@@ -999,10 +993,6 @@
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/exterior/lake)
-"Wh" = (
-/obj/structure/fence,
-/turf/simulated/floor/outdoors/snow/snow/cryogaia,
-/area/borealis2/outdoors/grounds)
 "Wl" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 1
@@ -16212,7 +16202,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 AW
 jQ
 jQ
@@ -16374,7 +16364,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -16536,7 +16526,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -16698,7 +16688,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -16860,7 +16850,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -17022,7 +17012,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -17184,7 +17174,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -17346,7 +17336,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -17508,7 +17498,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -17670,7 +17660,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -17832,7 +17822,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -17994,7 +17984,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -18156,7 +18146,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -18318,7 +18308,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -18480,7 +18470,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -18642,7 +18632,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -18804,7 +18794,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -18966,7 +18956,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -19128,7 +19118,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -19290,7 +19280,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -19452,7 +19442,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -19614,7 +19604,7 @@ LH
 LH
 LH
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -20586,7 +20576,7 @@ hD
 VE
 LH
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -20748,7 +20738,7 @@ LH
 LH
 LH
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -20910,7 +20900,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -21072,7 +21062,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -21234,7 +21224,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -21396,7 +21386,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -21558,7 +21548,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -21882,7 +21872,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 yX
 yX
@@ -22044,7 +22034,7 @@ IF
 IF
 IF
 IF
-Bo
+AI
 MJ
 so
 so
@@ -22207,27 +22197,27 @@ IF
 IF
 IF
 Ql
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
-Wh
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
+HA
 XQ
 IF
 IF

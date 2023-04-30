@@ -5312,14 +5312,14 @@
 /turf/simulated/floor,
 /area/maintenance/substation/cargo)
 "cdb" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "packageSort1"
-	},
 /obj/effect/floor_decal/industrial/warning{
 	dir = 10
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
+	},
+/obj/machinery/conveyor_switch{
+	id = "packageSort1"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/disposals)
@@ -28262,8 +28262,8 @@
 /area/hallway/primary/starboard)
 "lei" = (
 /obj/machinery/conveyor{
-	dir = 4;
-	id = "QMLoad2"
+	id = "QMLoad2";
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/quartermaster/storage)
@@ -38952,7 +38952,7 @@
 	name = "Cargo Docking Hatch"
 	},
 /obj/machinery/conveyor{
-	dir = 4;
+	dir = 8;
 	id = "QMLoad2"
 	},
 /turf/simulated/floor/plating,
@@ -39808,6 +39808,13 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/steel,
 /area/rnd/lab)
+"pst" = (
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "QMLoad2"
+	},
+/turf/simulated/floor,
+/area/quartermaster/storage)
 "psF" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
@@ -61231,7 +61238,6 @@
 /area/teleporter)
 "yeV" = (
 /obj/machinery/conveyor_switch/oneway{
-	convdir = -1;
 	id = "QMLoad2"
 	},
 /obj/machinery/light{
@@ -82288,7 +82294,7 @@ mLh
 qEs
 qEs
 nCM
-lei
+pst
 trn
 wgL
 trn

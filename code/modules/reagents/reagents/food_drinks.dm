@@ -435,6 +435,7 @@
 	reagent_state = SOLID
 	nutriment_factor = 5
 	color = "#302000"
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/nutriment/chocolate
 	name = "Chocolate"
@@ -444,6 +445,7 @@
 	color = "#582815"
 	nutriment_factor = 5
 	taste_mult = 1.3
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/nutriment/instantjuice
 	name = "Juice Powder"
@@ -691,6 +693,7 @@
 	description = "A dry mix for making delicious brownies."
 	reagent_state = SOLID
 	color = "#441a03"
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/cakebatter
 	name = "Cake Batter"
@@ -1220,6 +1223,7 @@
 
 	glass_name = "chocolate milk"
 	glass_desc = "Deliciously fattening!"
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/drink/milk/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
@@ -1660,6 +1664,7 @@
 	cup_icon_state = "cup_coco"
 	cup_name = "cup of hot chocolate"
 	cup_desc = "Made with love! And cocoa beans."
+	allergen_type = ALLERGEN_CHOCOLATE
 
 /datum/reagent/drink/soda/sodawater
 	name = "Soda Water"
@@ -1834,7 +1839,7 @@
 
 	glass_name = "Chocolate Milkshake"
 	glass_desc = "A refreshing chocolate milkshake, just like mom used to make."
-	allergen_type = ALLERGEN_DAIRY //Made with dairy products
+	allergen_type = ALLERGEN_DAIRY|ALLERGEN_CHOCOLATE //Made with dairy products
 
 /datum/reagent/drink/milkshake/berryshake
 	name = "Berry Milkshake"
@@ -4517,10 +4522,11 @@
 /datum/reagent/ethanol/deathbell/affect_ingest(var/mob/living/carbon/M, var/alien, var/removed)
 	..()
 
-	if(dose * strength >= strength) // Early warning
-		M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
-	if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
-		M.slurring = max(M.slurring, 30)
+	if(M.species.robo_ethanol_drunk || !(M.isSynthetic()))
+		if(dose * strength >= strength) // Early warning
+			M.make_dizzy(24) // Intentionally higher than normal to compensate for it's previous effects.
+		if(dose * strength >= strength * 2.5) // Slurring takes longer. Again, intentional.
+			M.slurring = max(M.slurring, 30)
 
 /datum/reagent/nutriment/magicdust
 	name = "Magic Dust"

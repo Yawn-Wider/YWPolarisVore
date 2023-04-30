@@ -2139,9 +2139,8 @@
 /turf/simulated/floor/airless,
 /area/rnd/test_area)
 "fo" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "mining_internal";
-	name = "mining conveyor"
+/obj/machinery/conveyor_switch{
+	id = "mining_internal"
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/refinery)

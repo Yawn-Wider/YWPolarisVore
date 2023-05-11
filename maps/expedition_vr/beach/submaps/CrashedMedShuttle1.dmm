@@ -594,11 +594,11 @@
 "cf" = (
 /obj/machinery/embedded_controller/radio/simple_docking_controller{
 	frequency = 1380;
-	id_tag = "admin_shuttle";
+	id_tag = "crashedmedshuttle";
 	pixel_x = -25;
 	pixel_y = 0;
 	req_one_access = list(101);
-	tag_door = "admin_shuttle_hatch"
+	tag_door = "crashedmedshuttle_hatch"
 	},
 /obj/random/mob/spider/mutant,
 /turf/simulated/shuttle/plating,
@@ -619,7 +619,7 @@
 /obj/machinery/door/airlock/external{
 	frequency = 1380;
 	icon_state = "door_locked";
-	id_tag = "admin_shuttle_hatch";
+	id_tag = "crashedmedshuttle_hatch";
 	locked = 1;
 	name = "Shuttle Hatch";
 	req_access = null

@@ -501,6 +501,12 @@
 	ckeywhitelist = list("hunterbirk")
 	character_name = list("Amaryll")
 
+/datum/gear/fluff/aria_conduct_medal
+	path = /obj/item/clothing/accessory/medal/conduct
+	display_name = "Aria's Distinguished Conduct Medal"
+	ckeywhitelist = list("hunterbirk")
+	character_name = list("Aria Blue")
+
 //  I CKEYS
 /datum/gear/fluff/ruda_badge
 	path = /obj/item/clothing/accessory/badge/holo/detective/ruda
@@ -877,13 +883,13 @@
 	path = /obj/item/clothing/under/fluff/foxoflightsuit/
 	display_name = "padded flightsuit"
 	ckeywhitelist = list("pandora029")
-	character_name = list("Seona Young")
+	character_name = list("Shona Young")
 
 /datum/gear/fluff/seona_big_plushie
 	path = /obj/item/toy/plushie/fluff/seona_mofuorb
 	display_name = "comically oversized fox plushie"
 	ckeywhitelist = list("pandora029")
-	character_name = list("Seona Young")
+	character_name = list("Shona Young")
 
 /datum/gear/fluff/lily_medal
 	path = /obj/item/clothing/accessory/medal/silver/unity

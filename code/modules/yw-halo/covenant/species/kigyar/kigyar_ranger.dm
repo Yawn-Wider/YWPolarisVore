@@ -42,6 +42,11 @@
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
 	matter = list("nanolaminate" = 1)
 
+/obj/item/clothing/shoes/magboots/ranger_kigyar/noarmor
+	name = "Kig-yar ranger magboots"
+	desc = "A pair of boots made for kig-yars and t'vaoans."
+	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+
 /obj/item/clothing/head/helmet/ranger_kigyar
 	name = "Kig-yar ranger helmet"
 	desc = "A helmet made for ranger kig-yars. Useful in harsh, low gravity enviroments.  Requires a sealed bodysuit and armour to be functional."

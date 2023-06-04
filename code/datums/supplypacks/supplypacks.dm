@@ -24,7 +24,8 @@ var/list/all_supply_groups = list("Atmospherics",
 								  "Security",
 								  "Supplies",
 								  "Vendor Refills",
-								  "Voidsuits")
+								  "Voidsuits",
+								  "Xeno") //YW Addition - Xeno Category
 
 /datum/supply_pack
 	var/name = null

@@ -18,6 +18,28 @@
 	whitelisted = SPECIES_ZADDAT
 	allowed_roles = list("Chief Engineer", "Atmospheric Technician", "Engineer")
 
+/datum/gear/uniform/kigyarcasual
+	display_name = "Unarmored Bodysuit (Kig-Yar)"
+	path = /obj/item/clothing/under/kigyar/noarmor
+	sort_category = "Xenowear"
+	whitelisted = SPECIES_KIGYAR_YW
+/datum/gear/uniform/kigyartvaoancasual
+	display_name = "Unarmored Bodysuit (T'Vaoan)"
+	path = /obj/item/clothing/under/kigyar/noarmor
+	sort_category = "Xenowear"
+	whitelisted = SPECIES_TVAOAN_KIGYAR_YW
+
+/datum/gear/shoes/kigyar
+	display_name = "magclaws (Kig-Yar)"
+	path = /obj/item/clothing/shoes/magboots/ranger_kigyar/noarmor
+	sort_category = "Xenowear"
+	whitelisted = SPECIES_KIGYAR_YW
+
+/datum/gear/shoes/kigyartvaoan
+	display_name = "magclaws (T'Vaoan)"
+	path = /obj/item/clothing/shoes/magboots/ranger_kigyar/noarmor
+	sort_category = "Xenowear"
+	whitelisted = SPECIES_TVAOAN_KIGYAR_YW
 
 /* Commented out as a lot of these were added upstream if anything is missing add it to this file
 /datum/gear/suit/hood

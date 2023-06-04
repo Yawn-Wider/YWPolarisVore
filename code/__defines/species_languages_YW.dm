@@ -1,2 +1,6 @@
 #define LANGUAGE_PSIONIC "Psionic Communication"
 #define LANGUAGE_SIIK_TAJR "Siik Tajr"
+#define LANGUAGE_SANGHEILI  "Sangheili"
+#define LANGUAGE_UNGGOY     "Balahese"
+#define LANGUAGE_KIGYAR     "Ruuhti"
+#define LANGUAGE_TVOAI      "T\'voai"

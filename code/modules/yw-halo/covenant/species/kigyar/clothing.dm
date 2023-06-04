@@ -17,6 +17,10 @@
 	icon_state = "scouthelm_obj_major"
 	item_state = "scouthelm_major"
 
+/obj/item/clothing/under/kigyar/noarmor
+	name = "Kig-Yar Bodysuit (unarmored)"
+	desc = "A Kig-Yar body suit for Ruuhtians and T\'vaoans. Meant to be worn underneath a combat harness - This one is made of simple cloth and has no armor"
+	armor =  list(melee = 0, bullet = 0, laser = 0, energy = 10, bomb = 0, bio = 0, rad = 0)
 /obj/item/clothing/under/kigyar
 	name = "Kig-Yar Bodysuit"
 	desc = "A Kig-Yar body suit for Ruuhtians and T\'vaoans. Meant to be worn underneath a combat harness"
@@ -78,28 +82,3 @@
 	desc = "A protective harness for use during combat, Seems to be missing the armour-inserts for the arms."
 	armor = list(melee = 30, bullet = 40, laser = 40, energy = 40, bomb = 40, bio = 20, rad = 20)
 	body_parts_covered = UPPER_TORSO|LOWER_TORSO
-
-
-/obj/item/organ/external/arm/hollow_bones
-	min_broken_damage = 20 //Needs 10 less damage to break
-
-/obj/item/organ/external/arm/right/hollow_bones
-	min_broken_damage = 20
-
-/obj/item/organ/external/leg/hollow_bones
-	min_broken_damage = 20
-
-/obj/item/organ/external/leg/right/hollow_bones
-	min_broken_damage = 20
-
-/obj/item/organ/external/hand/hollow_bones
-	min_broken_damage = 20
-
-/obj/item/organ/external/hand/right/hollow_bones
-	min_broken_damage = 20
-
-/obj/item/organ/external/foot/hollow_bones
-	min_broken_damage = 20
-
-/obj/item/organ/external/foot/right/hollow_bones
-	min_broken_damage = 20

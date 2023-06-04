@@ -1,7 +1,3 @@
-#define ESWORD_LEAP_DIST 2
-#define ESWORD_LEAP_FAR_SPECIES list(/datum/species/sangheili,/datum/species/spartan, /datum/species/kig_yar_skirmisher)
-#define STAFF_LEAP_DIST 4
-
 /obj/effect/esword_path
 	name = "displaced air"
 	icon = null

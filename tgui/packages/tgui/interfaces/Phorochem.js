@@ -11,17 +11,40 @@ export const Phorochem = (props, context) => {
         <Section title="Phorochemistry Control">
           <LabeledList>
             <LabeledList.Item label="Commands">
-              <Button content="Recalibrate" onClick={() => act('recalibrate')} />
+              <Button
+                content="Recalibrate"
+                onClick={() => act('recalibrate')}
+              />
               <Button content="Begin Test" onClick={() => act('beginTest')} />
               <Button content="Abort Test" onClick={() => act('abortTest')} />
             </LabeledList.Item>
             <LabeledList.Item label="Intensity">
               <Button icon="backward" onClick={() => act('remove_intensity')} />
-              <Button content="1" disabled={intensity !== 1} selected={intensity === 1} />
-              <Button content="2" disabled={intensity !== 2} selected={intensity === 2} />
-              <Button content="3" disabled={intensity !== 3} selected={intensity === 3} />
-              <Button content="4" disabled={intensity !== 4} selected={intensity === 4} />
-              <Button content="5" disabled={intensity !== 5} selected={intensity === 5} />
+              <Button
+                content="1"
+                disabled={intensity !== 1}
+                selected={intensity === 1}
+              />
+              <Button
+                content="2"
+                disabled={intensity !== 2}
+                selected={intensity === 2}
+              />
+              <Button
+                content="3"
+                disabled={intensity !== 3}
+                selected={intensity === 3}
+              />
+              <Button
+                content="4"
+                disabled={intensity !== 4}
+                selected={intensity === 4}
+              />
+              <Button
+                content="5"
+                disabled={intensity !== 5}
+                selected={intensity === 5}
+              />
               <Button icon="forward" onClick={() => act('add_intensity')} />
             </LabeledList.Item>
           </LabeledList>

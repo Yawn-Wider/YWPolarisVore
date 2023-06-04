@@ -51,7 +51,7 @@
 		item_state_slots = null
 		hitsound = "swing_hit"
 	else
-		item_icons = list(slot_l_hand_str ='code/modules/yw-halo/icons/Energy_Sword_inhand Human.dmi',slot_r_hand_str = 'code/modules/yw-halo/icons/Energy_Sword_inhand Human.dmi')
+		item_icons = list(slot_l_hand_str ='code/modules/yw-halo/icons/Energy_Sword_inhand_Human.dmi',slot_r_hand_str = 'code/modules/yw-halo/icons/Energy_Sword_inhand_Human.dmi')
 		item_state_slots = list(
 		slot_l_hand_str = "[inhand_icon_state] l",
 		slot_r_hand_str = "[inhand_icon_state] r" )

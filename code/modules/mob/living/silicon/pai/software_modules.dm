@@ -423,6 +423,12 @@
 		user.add_language("Mouse")
 		user.add_language("Animal")
 		user.add_language("Teppi")
+		//YW EDIT - COVVIE LANGUAGE
+		user.add_language(LANGUAGE_SANGHEILI)
+		user.add_language(LANGUAGE_KIGYAR)
+		user.add_language(LANGUAGE_TVOAI)
+		user.add_language(LANGUAGE_UNGGOY)
+		//END YW EDIT
 	else
 		user.remove_language(LANGUAGE_UNATHI)
 		user.remove_language(LANGUAGE_SIIK)
@@ -450,6 +456,12 @@
 		user.remove_language("Mouse")
 		user.remove_language("Animal")
 		user.remove_language("Teppi")
+		//YW EDIT - COVVIE LANGUAGE
+		user.remove_language(LANGUAGE_SANGHEILI)
+		user.remove_language(LANGUAGE_KIGYAR)
+		user.remove_language(LANGUAGE_TVOAI)
+		user.remove_language(LANGUAGE_UNGGOY)
+		//END YW EDIT
 
 /datum/pai_software/translator/is_active(mob/living/silicon/pai/user)
 	return user.translator_on

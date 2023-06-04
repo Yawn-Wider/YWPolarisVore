@@ -20,7 +20,7 @@
 	speech_verb = "chirps"
 	colour = "vulpkanin"
 	syllables = list("hss","rar","hrar","har","rah","huss","hee","ha","schra","skraw","skree","skrss","hos","hosk")
-	key = "k"
+	key = "Q"
 
 /datum/language/tvoai
 	name = LANGUAGE_TVOAI
@@ -28,4 +28,4 @@
 	speech_verb = "chirps"
 	colour = "birdsongc"
 	syllables = list("hss","rar","hrar","har","rah","huss","hee","ha","schra","skraw","skree","skrss","hos","hosk")
-	key = "t"
+	key = "c"

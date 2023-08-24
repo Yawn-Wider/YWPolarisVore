@@ -184,13 +184,12 @@
 	min_age = 18
 	max_age = 110
 
-	blurb = "The fox-like Zorren are native to Virgo-Prime, however there are two distinct varieties of Zorren one with large ears and shorter fur, \
-	and the other with longer fur that is a bit more vibrant. The long-eared, short-furred Zorren have come to be known as Flatland Zorren as that \
-	is where most of their settlements are located. The Flatland Zorren are somewhat tribal and shamanistic as they have only recently started to be \
-	hired by the Trans-Stellar Corporations. The other variety of Zorren are known as Highland Zorren as they frequently settle in hilly and/or \
-	mountainous areas, they have a differing societal structure than the Flatland Zorren having a more feudal social structure, like the Flatland Zorren, \
-	the Highland Zorren have also only recently been hired by the Trans-Stellar Corporations, but thanks to the different social structure they seem to \
-	have adjusted better to their new lives. Though similar fox-like beings have been seen they are different than the Zorren."
+	blurb = "The fennec-like, blue-blooded Zorren are native to Virgo 4/Menhir and are descendants of a precursor species \
+			that is thought to be responsible for the near-collapse of the biosphere of the planet. \
+			With societies organised around hierarchal caste systems (such as the Royal Zorren) or freedom and strength (such as the Free Tribe Zorren), \
+			they now slowly recover from their previous hubris and aim to revitalize their planet. While many Zorren live in pre-industrial conditions by necessity, \
+			they are an interstellar species known for their pride and stubbornness and doggedly hold out on a Deathworld of their own creation. \
+			As local species, they hold moderate sway on local corporations and are hired by NT and other companies, although they find \"Outlander\" culture deeply weird."
 	wikilink="https://yawn.izac.live/Zorren"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
@@ -310,6 +309,8 @@
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	wikilink="https://yawn.izac.live/Tajaran"
 	agility = 90
+	can_climb = TRUE
+	climbing_delay = 1.00 //Cats are good climbers.
 
 /datum/species/skrell
 	spawn_flags = SPECIES_CAN_JOIN
@@ -378,7 +379,7 @@
 	tail_animation = 'icons/mob/species/vox/tail.dmi'
 	deform = 'icons/mob/human_races/r_def_vox_old.dmi'
 	color_mult = 1
-	
+
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)

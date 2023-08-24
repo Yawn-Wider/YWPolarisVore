@@ -340,6 +340,11 @@
 /obj/item/weapon/storage/firstaid/regular,
 /obj/item/weapon/storage/firstaid/o2,
 /obj/item/weapon/extinguisher/mini,
+/obj/structure/cable/yellow{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "aI" = (
@@ -495,6 +500,11 @@
 	},
 /obj/machinery/portable_atmospherics/canister/phoron,
 /obj/effect/floor_decal/industrial/outline/red,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "aX" = (
@@ -1594,6 +1604,12 @@
 /obj/random/multiple/corp_crate/talon_cargo,
 /turf/simulated/floor/tiled/techfloor,
 /area/talon_v2/maintenance/wing_starboard)
+"es" = (
+/obj/machinery/light/small,
+/obj/structure/catwalk,
+/obj/effect/landmark/stardog,
+/turf/simulated/floor/plating,
+/area/talon_v2/maintenance/fore_starboard)
 "et" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -3556,6 +3572,11 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
 /obj/effect/catwalk_plated/techfloor,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/plating,
 /area/shuttle/talonboat)
 "kJ" = (
@@ -3572,10 +3593,7 @@
 /obj/machinery/power/apc/talon/hyper{
 	pixel_y = -24
 	},
-/obj/structure/cable/green{
-	d2 = 8;
-	icon_state = "0-8"
-	},
+/obj/structure/cable/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "kP" = (
@@ -4197,16 +4215,10 @@
 /turf/simulated/floor/wood,
 /area/talon_v2/crew_quarters/sec_room)
 "mT" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/closet/crate/secure/phoron{
-	req_one_access = list(301)
+/obj/machinery/power/smes/buildable/offmap_spawn{
+	RCon_tag = "Talon Port SMES"
 	},
-/obj/item/weapon/tank/phoron/pressurized{
-	pixel_x = -3
-	},
-/obj/item/weapon/tank/phoron/pressurized{
-	pixel_x = 3
-	},
+/obj/structure/cable/yellow,
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "mV" = (
@@ -5272,11 +5284,6 @@
 /obj/structure/bed/chair/bay/shuttle{
 	dir = 1
 	},
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "qr" = (
@@ -5439,8 +5446,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
 /obj/structure/cable/green{
 	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
+	d2 = 8;
+	icon_state = "2-8"
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
@@ -6716,6 +6723,11 @@
 	dir = 1;
 	pixel_y = -28
 	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "uW" = (
@@ -7312,6 +7324,22 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
+	},
+/obj/structure/closet/crate/secure/phoron{
+	req_one_access = list(301)
+	},
+/obj/item/weapon/tank/phoron/pressurized{
+	pixel_x = -3
+	},
+/obj/item/weapon/tank/phoron/pressurized{
+	pixel_x = 3
+	},
+/obj/structure/cable/green{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/obj/machinery/power/terminal{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
@@ -8047,6 +8075,7 @@
 "zz" = (
 /obj/structure/catwalk,
 /obj/machinery/light/small,
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/plating,
 /area/talon_v2/maintenance/fore_port)
 "zA" = (
@@ -8198,6 +8227,7 @@
 /obj/structure/railing/grey{
 	dir = 4
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/port_store)
 "Ag" = (
@@ -10381,6 +10411,7 @@
 	dir = 4
 	},
 /obj/structure/closet/walllocker_double/survival/north,
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/talonboat)
 "Hz" = (
@@ -12249,6 +12280,11 @@
 	pixel_y = 26
 	},
 /obj/structure/bed/chair/bay/shuttle,
+/obj/structure/cable/yellow{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "MF" = (
@@ -13878,6 +13914,11 @@
 /obj/structure/closet/autolok_wall{
 	pixel_y = 32
 	},
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "RQ" = (
@@ -14727,6 +14768,11 @@
 	pixel_y = 32
 	},
 /obj/structure/bed/chair/bay/shuttle,
+/obj/structure/cable/yellow{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/talonboat)
 "UA" = (
@@ -15496,6 +15542,7 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/plating,
 /area/talon_v2/engineering/star_store)
 "WV" = (
@@ -29064,7 +29111,7 @@ Sg
 uZ
 rx
 XD
-jr
+es
 Bw
 av
 yJ

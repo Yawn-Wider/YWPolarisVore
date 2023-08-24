@@ -31,6 +31,7 @@
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 	var/absorbchance = 0					// % Chance of stomach beginning to absorb if prey struggles
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
+	var/escape_stun = 0						// AI controlled mobs with a number here will be weakened by the provided var when someone escapes, to prevent endless nom loops
 	var/transferchance = 0 					// % Chance of prey being trasnsfered, goes from 0-100%
 	var/transferchance_secondary = 0 		// % Chance of prey being transfered to transferchance_secondary, also goes 0-100%
 	var/save_digest_mode = TRUE				// Whether this belly's digest mode persists across rounds
@@ -345,13 +346,19 @@
 				var/obj/screen/fullscreen/F2 = L.overlay_fullscreen("belly2", /obj/screen/fullscreen/belly/colorized/overlay)
 				F2.icon_state = "[belly_fullscreen]_l1"
 				F2.color = belly_fullscreen_color_secondary
+			else
+				L.clear_fullscreen("belly2")
 			if("[belly_fullscreen]_l2" in icon_states('icons/mob/screen_full_colorized_vore_overlays.dmi'))
 				var/obj/screen/fullscreen/F3 = L.overlay_fullscreen("belly3", /obj/screen/fullscreen/belly/colorized/overlay)
 				F3.icon_state = "[belly_fullscreen]_l2"
 				F3.color = belly_fullscreen_color_trinary
+			else
+				L.clear_fullscreen("belly3")
 			if("[belly_fullscreen]_nc" in icon_states('icons/mob/screen_full_colorized_vore_overlays.dmi'))
 				var/obj/screen/fullscreen/F4 = L.overlay_fullscreen("belly4", /obj/screen/fullscreen/belly/colorized/overlay)
 				F4.icon_state = "[belly_fullscreen]_nc"
+			else
+				L.clear_fullscreen("belly4")
 		else
 			var/obj/screen/fullscreen/F = L.overlay_fullscreen("belly", /obj/screen/fullscreen/belly)
 			F.icon_state = belly_fullscreen
@@ -461,8 +468,8 @@
 	if (!(M in contents))
 		return 0 // They weren't in this belly anyway
 
-	if(istype(M, /mob/living/simple_mob/vore/hostile/morph/dominated_prey))
-		var/mob/living/simple_mob/vore/hostile/morph/dominated_prey/p = M
+	if(istype(M, /mob/living/simple_mob/vore/morph/dominated_prey))
+		var/mob/living/simple_mob/vore/morph/dominated_prey/p = M
 		p.undo_prey_takeover(FALSE)
 		return 0
 	for(var/mob/living/L in M.contents)
@@ -535,6 +542,9 @@
 	if(ismob(M))
 		var/mob/ourmob = M
 		ourmob.reset_view(null)
+
+	if(!owner.ckey && escape_stun)
+		owner.Weaken(escape_stun)
 
 	return 1
 
@@ -1180,7 +1190,7 @@
 		owner.update_icon()
 	for(var/mob/living/M in contents)
 		M.updateVRPanel()
-	owner.updateicon()
+	owner.update_icon()
 
 //Autotransfer callback
 /obj/belly/proc/check_autotransfer(var/prey, var/autotransferlocation)

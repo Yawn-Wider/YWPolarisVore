@@ -1,3 +1,4 @@
+// YW TODO: Fix this shit
 /hook/startup/proc/robot_modules_yw()
 	robot_modules["XenoMaid"] = /obj/item/weapon/robot_module/xenomaid
 	robot_modules["Blade"] = /obj/item/weapon/robot_module/blade

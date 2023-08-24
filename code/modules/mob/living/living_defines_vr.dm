@@ -3,6 +3,7 @@
 	var/forced_psay = FALSE				// If true will prevent the user from speaking with normal say/emotes, and instead redirect these to a private speech mode with their predator.
 	var/autowhisper = FALSE				// Automatically whisper
 	var/autowhisper_mode = null			// Mode to use with autowhisper
+	var/wingdings = 0 // YW Addition: For wingdings
 /mob/living
 	var/ooc_notes = null
 	var/ooc_notes_likes = null
@@ -21,7 +22,3 @@
 	var/list/custom_cold = list()
 	var/can_climb = FALSE //Checked by turfs when using climb_wall(). Defined here for silicons and simple mobs
 	var/climbing_delay = 1.5 //By default, mobs climb at quarter speed. To be overriden by specific simple mobs or species speed
-	//YW Add Start
-	/mob
-		var/wingdings = 0
-	//Yw Add End

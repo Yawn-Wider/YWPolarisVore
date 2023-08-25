@@ -613,7 +613,6 @@ var/datum/planet/borealis2/planet_borealis2 = null
 
 /datum/weather/borealis2/confetti
 	name = "confetti"
-	icon = 'icons/effects/weather_vr.dmi'
 	icon_state = "confetti"
 
 	transition_chances = list(

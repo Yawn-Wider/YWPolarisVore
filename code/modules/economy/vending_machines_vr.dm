@@ -92,7 +92,7 @@
 
 /obj/machinery/vending/fooditalian
 	name = "Italian Imports"
-	desc = "You wanted some italian food? Well here's some imported from the local pizza place!"
+	desc = "You wanted some Italian food? Well here's some imported from the local pizza place!"
 	icon_state = "hotfood"
 	products = list(/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/mushroompizza = 15,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/pizza/vegetablepizza = 15,
@@ -238,11 +238,6 @@
 	vend_delay = 10
 
 // Food Machines (for event/away maps)
-
-/obj/machinery/vending/fitness/New()
-	products += list(/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 8)
-	prices += list(/obj/item/weapon/reagent_containers/food/snacks/liquidprotein = 5)
-	..()
 
 /obj/machinery/vending/blood
 	name = "Blood-Onator"
@@ -950,6 +945,9 @@
 					/obj/item/weapon/storage/box/fluff/swimsuit/security = 5,
 					/obj/item/weapon/storage/box/fluff/swimsuit/medical = 5,
 					/obj/item/weapon/storage/box/fluff/swimsuit/cowbikini = 5,
+					/obj/item/weapon/storage/box/fluff/swimsuit/highclass = 5,
+					/obj/item/weapon/storage/box/fluff/swimsuit/risque = 5,
+					/obj/item/weapon/storage/box/fluff/swimsuit/streamlined = 5,
 					/obj/item/clothing/under/utility = 5,
 					/obj/item/clothing/under/utility/grey = 5,
 					/obj/item/clothing/under/utility/blue = 5,
@@ -1125,6 +1123,9 @@
 					/obj/item/weapon/storage/box/fluff/swimsuit/security = 50,
 					/obj/item/weapon/storage/box/fluff/swimsuit/medical = 50,
 					/obj/item/weapon/storage/box/fluff/swimsuit/cowbikini = 50,
+					/obj/item/weapon/storage/box/fluff/swimsuit/highclass = 50,
+					/obj/item/weapon/storage/box/fluff/swimsuit/risque = 50,
+					/obj/item/weapon/storage/box/fluff/swimsuit/streamlined = 50,
 					/obj/item/clothing/under/utility = 50,
 					/obj/item/clothing/under/utility/grey = 50,
 					/obj/item/clothing/under/utility/blue = 50,
@@ -2101,6 +2102,9 @@
 					/obj/item/weapon/storage/box/fluff/swimsuit/security = 5,
 					/obj/item/weapon/storage/box/fluff/swimsuit/medical = 5,
 					/obj/item/weapon/storage/box/fluff/swimsuit/cowbikini = 5,
+					/obj/item/weapon/storage/box/fluff/swimsuit/highclass = 5,
+					/obj/item/weapon/storage/box/fluff/swimsuit/risque = 5,
+					/obj/item/weapon/storage/box/fluff/swimsuit/streamlined = 5,
 					/obj/item/clothing/under/utility = 5,
 					/obj/item/clothing/under/utility/grey = 5,
 					/obj/item/clothing/under/utility/blue = 5,

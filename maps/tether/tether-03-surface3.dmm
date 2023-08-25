@@ -9032,7 +9032,6 @@
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's set to history channel, the show is talking about modern aliens.  I wonder what else is on?";
-	icon_state = "frame";
 	pixel_x = -32
 	},
 /turf/simulated/floor/tiled/freezer,
@@ -12871,7 +12870,6 @@
 /obj/structure/table/standard,
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Look's like it's set to the info station... I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /turf/simulated/floor/tiled,
@@ -12984,7 +12982,6 @@
 "avg" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Damn, looks like it's on the clown world channel. I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /obj/structure/table/woodentable,
@@ -19327,6 +19324,8 @@
 /obj/effect/floor_decal/corner/paleblue/border,
 /obj/effect/floor_decal/borderfloorwhite/corner2,
 /obj/effect/floor_decal/corner/paleblue/bordercorner2,
+/obj/structure/table/glass,
+/obj/item/device/healthanalyzer/guide,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/triage)
 "aFD" = (
@@ -19804,6 +19803,8 @@
 /obj/machinery/camera/network/medbay{
 	dir = 1
 	},
+/obj/item/device/healthanalyzer/guide,
+/obj/structure/table/glass,
 /turf/simulated/floor/tiled/white,
 /area/tether/surfacebase/medical/triage)
 "aGn" = (
@@ -19901,6 +19902,7 @@
 	id = "kitchen";
 	layer = 3.3
 	},
+/obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "aGu" = (
@@ -21065,18 +21067,17 @@
 /area/tether/surfacebase/servicebackroom)
 "aIk" = (
 /obj/structure/table/reinforced,
-/obj/machinery/door/blast/shutters{
-	dir = 8;
-	id = "kitchen";
-	layer = 3.3;
-	name = "Kitchen Shutters"
-	},
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/chemical_dispenser/bar_soft/full{
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
+	},
+/obj/machinery/door/blast/gate/thin{
+	dir = 8;
+	id = "kitchen";
+	layer = 3.3
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
@@ -22039,7 +22040,6 @@
 /area/rnd/robotics/mechbay)
 "aJS" = (
 /obj/machinery/computer/security/telescreen/entertainment{
-	icon_state = "frame";
 	pixel_x = -64
 	},
 /obj/machinery/computer/arcade/battle,
@@ -23083,6 +23083,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/cyan{
 	dir = 6
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/plating,
 /area/tether/surfacebase/topairlock)
 "aLX" = (
@@ -34105,6 +34106,16 @@
 	},
 /turf/simulated/floor/tiled/eris/steel/bar_dance,
 /area/tether/surfacebase/barbackmaintenance)
+"bfR" = (
+/obj/structure/disposalpipe/sortjunction{
+	dir = 8;
+	name = "Chemistry";
+	sortType = "Chemistry"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/turf/simulated/floor/tiled,
+/area/tether/surfacebase/surface_three_hall)
 "bfS" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
@@ -34278,7 +34289,7 @@
 	name = "box of measuring cups";
 	pixel_x = 2;
 	pixel_y = 3;
-	starts_with = list(/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup=7)
+	starts_with = list(/obj/item/weapon/reagent_containers/glass/beaker/measuring_cup = 7)
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
@@ -35612,7 +35623,6 @@
 "biO" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's set to Free-Anur-Entertanment, I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /obj/machinery/vending/coffee,
@@ -35878,7 +35888,6 @@
 /obj/structure/table/bench/sifwooden/padded,
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's set to history channel, the show is talking about modern aliens.  I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
@@ -38611,19 +38620,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/surface_three_hall)
-"dDQ" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/disposalpipe/sortjunction{
-	dir = 8;
-	name = "Chemistry";
-	sortType = "Chemistry"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/turf/simulated/floor/tiled,
-/area/tether/surfacebase/surface_three_hall)
 "dFg" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/regular{
@@ -39022,6 +39018,19 @@
 /obj/machinery/vending/sovietsoda,
 /turf/simulated/floor/tiled,
 /area/tether/surfacebase/cafeteria)
+"eYm" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "tourbus";
+	name = "tourbus"
+	},
+/obj/structure/cable/green{
+	dir = 1;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/yellow,
+/obj/effect/landmark/stardog,
+/turf/simulated/floor/tiled,
+/area/shuttle/tourbus/general)
 "fag" = (
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "tourbus";
@@ -43099,7 +43108,6 @@
 "scL" = (
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Looks like it's set to Free-Anur-Entertanment, I wonder what else is on?";
-	icon_state = "frame";
 	pixel_y = 32
 	},
 /obj/machinery/vending/cigarette,
@@ -44409,7 +44417,6 @@
 	},
 /obj/machinery/computer/security/telescreen/entertainment{
 	desc = "Look's like it's set to the info station... I wonder what else is on?";
-	icon_state = "frame";
 	pixel_x = 32;
 	pixel_y = -64
 	},
@@ -56550,7 +56557,7 @@ xOa
 aXa
 aXa
 kcC
-sJY
+eYm
 sJY
 fEX
 gCZ
@@ -57918,7 +57925,7 @@ aVk
 ahM
 aVt
 aRN
-dDQ
+bfR
 akn
 alk
 aZt

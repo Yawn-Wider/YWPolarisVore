@@ -79,7 +79,7 @@ var/global/list/robot_modules = list(
 	if(!R.client)
 		R.icon_selected = FALSE			// It wasnt a player selecting icon? Let them do it later!
 
-	create_equipment()
+	create_equipment(R)
 
 	for(var/obj/item/I in modules)
 		I.canremove = FALSE
@@ -641,9 +641,6 @@ var/global/list/robot_modules = list(
 	src.emag += new /obj/item/weapon/dogborg/pounce(src) //Pounce
 
 /obj/item/weapon/robot_module/robot/clerical/butler/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
-	var/obj/item/weapon/reagent_containers/food/condiment/enzyme/E = locate() in src.modules
-	E.reagents.add_reagent("enzyme", 2 * amount)
-
 	var/obj/item/weapon/reagent_containers/food/drinks/bottle/small/beer/PB = locate() in src.emag
 	if(PB)
 		PB.reagents.add_reagent("beer2", 2 * amount)
@@ -708,8 +705,8 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/weapon/tool/wrench/cyborg(src)
 	src.modules += new /obj/item/weapon/tool/wirecutters/cyborg(src)
 	src.modules += new /obj/item/device/multitool(src)
-	src.modules += new /obj/item/weapon/surgical/scalpel/cyborg(src)
-	src.modules += new /obj/item/weapon/surgical/circular_saw/cyborg(src)
+	src.modules += new /obj/item/weapon/surgical/hemostat/cyborg(src) //Synth repair
+	src.modules += new /obj/item/weapon/surgical/surgicaldrill/cyborg(src) //NIF repair
 	src.modules += new /obj/item/weapon/reagent_containers/syringe(src)
 	src.modules += new /obj/item/weapon/reagent_containers/glass/beaker/large(src)
 	src.modules += new /obj/item/weapon/storage/part_replacer(src)

@@ -30,7 +30,7 @@
 		return
 
 	if(href_list["ahelp"])
-		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG|R_EVENT))
+		if(!check_rights(R_ADMIN|R_MOD|R_DEBUG)) // YW Edit: Remove ahelp viewing from event permissions
 			return
 
 		var/ahelp_ref = href_list["ahelp"]

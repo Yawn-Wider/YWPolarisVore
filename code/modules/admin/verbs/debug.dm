@@ -639,7 +639,7 @@
 	set name = "Change Weather"
 	set desc = "Changes the current weather."
 
-	if(!check_rights(R_DEBUG))
+	if(!check_rights(R_DEBUG|R_EVENT)) //YW Edit: Event Makers can change weather
 		return
 
 	var/datum/planet/planet = tgui_input_list(usr, "Which planet do you want to modify the weather on?", "Change Weather", SSplanets.planets)

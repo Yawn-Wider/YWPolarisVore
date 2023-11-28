@@ -35,7 +35,7 @@
 	if(check_rights(R_ADMIN, 0))
 		sender_name = "<span class='admin'>[sender_name]</span>"
 	for(var/client/C in GLOB.admins)
-		if(check_rights(R_ADMIN|R_MOD|R_SERVER)) //VOREStation Edit
+		if(check_rights(R_ADMIN|R_MOD|R_SERVER, 0, C)) //VOREStation Edit //YW Edit, fix issue with C missing from check_rights, so all admins could see mchat
 			to_chat(C, "<span class='mod_channel'>" + create_text_tag("mod", "MOD:", C) + " <span class='name'>[sender_name]</span>([admin_jump_link(mob, C.holder)]): <span class='message'>[msg]</span></span>")
 
 	feedback_add_details("admin_verb","MS") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

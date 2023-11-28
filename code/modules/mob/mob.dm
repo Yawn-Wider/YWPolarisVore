@@ -696,11 +696,11 @@
 					for(var/datum/controller/subsystem/SS in Master.subsystems)
 						SS.stat_entry()
 
-			if(check_rights(R_ADMIN, 0))
+			if(check_rights(R_ADMIN, 0)) //YW EDIT: Only admins can check Tickets
 				if(statpanel("Tickets"))
 					GLOB.ahelp_tickets.stat_entry()
 
-			if(check_rights(R_ADMIN|R_DEBUG, 0))
+			if(check_rights(R_ADMIN|R_DEBUG, 0)) //YW EDIT: Only admins/debug can access SDQL
 				if(length(GLOB.sdql2_queries))
 					if(statpanel("SDQL2"))
 						stat("Access Global SDQL2 List", GLOB.sdql2_vv_statobj)

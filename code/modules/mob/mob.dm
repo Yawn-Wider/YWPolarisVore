@@ -696,15 +696,16 @@
 					for(var/datum/controller/subsystem/SS in Master.subsystems)
 						SS.stat_entry()
 
-			if(statpanel("Tickets"))
-				GLOB.ahelp_tickets.stat_entry()
+			if(check_rights(R_ADMIN, 0))
+				if(statpanel("Tickets"))
+					GLOB.ahelp_tickets.stat_entry()
 
-
-			if(length(GLOB.sdql2_queries))
-				if(statpanel("SDQL2"))
-					stat("Access Global SDQL2 List", GLOB.sdql2_vv_statobj)
-					for(var/datum/SDQL2_query/Q as anything in GLOB.sdql2_queries)
-						Q.generate_stat()
+			if(check_rights(R_ADMIN|R_DEBUG, 0))
+				if(length(GLOB.sdql2_queries))
+					if(statpanel("SDQL2"))
+						stat("Access Global SDQL2 List", GLOB.sdql2_vv_statobj)
+						for(var/datum/SDQL2_query/Q as anything in GLOB.sdql2_queries)
+							Q.generate_stat()
 
 		if(has_mentor_powers(client))
 			if(statpanel("Tickets"))

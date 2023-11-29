@@ -495,13 +495,12 @@ Extracted to its own procedure for easier logic handling with paper bundles.
 /**
  * Call the chat webhook to transmit a notification of a job request
  */
-/obj/machinery/photocopier/faxmachine/proc/message_chat_rolerequest(var/font_colour="#006100", var/role_to_ping, var/reason, var/jobname)
-	if(config.chat_webhook_url)
-		spawn(0)
-			var/query_string = "type=rolerequest"
-			query_string += "&key=[url_encode(config.chat_webhook_key)]"
-			query_string += "&ping=[url_encode(role_to_ping)]"
-			query_string += "&color=[url_encode(font_colour)]"
-			query_string += "&reason=[url_encode(reason)]"
-			query_string += "&job=[url_encode(jobname)]"
-			world.Export("[config.chat_webhook_url]?[query_string]")
+/obj/machinery/photocopier/faxmachine/proc/message_chat_rolerequest(message_color, ping_name, reason, role) // YW EDIT: Adds rolerequest webhook
+	world << "It went through?"
+	SSwebhooks.send(
+		WEBHOOK_ROLEREQUEST,
+		list(
+			"name" = "[using_map.dock_name] Automated Job Board Update Department: [ping_name]",
+			"body" = "A request has been sent from [using_map.station_name] for a [role]\n The stated reason for the request is: [reason]"
+		)
+	)

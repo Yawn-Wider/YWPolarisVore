@@ -16,6 +16,9 @@
 	heat_protection = UPPER_TORSO | LOWER_TORSO
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+	min_pressure_protection = 0 * ONE_ATMOSPHERE
+	max_pressure_protection = 2 * ONE_ATMOSPHERE
+	siemens_coefficient = 0.9
 	item_icons = list(
 		slot_l_hand_str = null,
 		slot_r_hand_str = null,
@@ -40,12 +43,18 @@
 	heat_protection = LEGS|FEET
 	min_cold_protection_temperature = SPACE_SUIT_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = FIRESUIT_MAX_HEAT_PROTECTION_TEMPERATURE
+	min_pressure_protection = 0 * ONE_ATMOSPHERE
+	max_pressure_protection = 2 * ONE_ATMOSPHERE
+	siemens_coefficient = 0.9
 	matter = list("nanolaminate" = 1)
 
 /obj/item/clothing/shoes/magboots/ranger_kigyar/noarmor
 	name = "Kig-yar ranger magboots"
 	desc = "A pair of boots made for kig-yars and t'vaoans."
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 0, rad = 0)
+	min_pressure_protection = 0 * ONE_ATMOSPHERE
+	max_pressure_protection = 2 * ONE_ATMOSPHERE
+	siemens_coefficient = 0.9
 
 /obj/item/clothing/head/helmet/ranger_kigyar
 	name = "Kig-yar ranger helmet"
@@ -63,6 +72,9 @@
 	heat_protection = HEAD
 	min_cold_protection_temperature = SPACE_HELMET_MIN_COLD_PROTECTION_TEMPERATURE
 	max_heat_protection_temperature = FIRE_HELMET_MAX_HEAT_PROTECTION_TEMPERATURE
+	min_pressure_protection = 0 * ONE_ATMOSPHERE
+	max_pressure_protection = 2 * ONE_ATMOSPHERE
+	siemens_coefficient = 0.9
 	armor = list(melee = 40, bullet = 35, laser = 35,energy = 35, bomb = 20, bio = 100, rad = 35)
 	item_icons = list(
 		slot_l_hand_str = null,

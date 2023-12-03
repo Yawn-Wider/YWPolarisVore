@@ -42,7 +42,7 @@ labelPRBasedOnFilePath:
     - 'tgui/public/**'
 
   # changes to anything tgs
-  "Type: TGS"
+  "Type: TGS":
     - 'code/__defines/tgs.dm'
     - 'code/__defines/tgs.config.dm'
     - 'code/modules/tgs/**'

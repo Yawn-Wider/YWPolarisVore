@@ -507,13 +507,15 @@ var/world_topic_spam_protect_time = world.timeofday
 
 	s += "<b>[station_name()]</b>";
 	s += " ("
-	s += "<a href=\"http://\">" //Change this to wherever you want the hub to link to.
+	s += "<a href=\"https://discord.gg/0uKK2Yrhgwvc4VSR\">" //Change this to wherever you want the hub to link to. //YW Edit - discord link
 //	s += "[game_version]"
-	s += "Default"  //Replace this with something else. Or ever better, delete it and uncomment the game version.
+	s += "Discord"  //Replace this with something else. Or ever better, delete it and uncomment the game version. //YW Edit - discord link
 	s += "</a>"
 	s += ")"
 
 	var/list/features = list()
+
+	features += "18+" //YW Edit - 18+ server
 
 	if(ticker)
 		if(master_mode)

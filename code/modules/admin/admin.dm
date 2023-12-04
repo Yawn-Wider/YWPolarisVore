@@ -64,12 +64,15 @@ var/global/floorIsLava = 0
 		[admin_jump_link(M, src)]\] <br>
 		<b>Mob type:</b> [M.type]<br>
 		<b>Inactivity time:</b> [M.client ? "[M.client.inactivity/600] minutes" : "Logged out"]<br/><br/>
-		<A href='?src=\ref[src];[HrefToken()];boot2=\ref[M]'>Kick</A> |
-		<A href='?_src_=holder;[HrefToken()];warn=[M.ckey]'>Warn</A> |
-		<A href='?src=\ref[src];[HrefToken()];newban=\ref[M]'>Ban</A> |
-		<A href='?src=\ref[src];[HrefToken()];jobban2=\ref[M]'>Jobban</A> |
-		<A href='?src=\ref[src];[HrefToken()];notes=show;mob=\ref[M]'>Notes</A>
-	"}
+	"} //YW Change: start, make sure you have admin or mod rights to mess with player notes
+	if (check_rights(R_ADMIN|R_MOD, 0))
+		body += {"
+			<A href='?src=\ref[src];[HrefToken()];boot2=\ref[M]'>Kick</A> |
+			<A href='?_src_=holder;[HrefToken()];warn=[M.ckey]'>Warn</A> |
+			<A href='?src=\ref[src];[HrefToken()];newban=\ref[M]'>Ban</A> |
+			<A href='?src=\ref[src];[HrefToken()];jobban2=\ref[M]'>Jobban</A> |
+			<A href='?src=\ref[src];[HrefToken()];notes=show;mob=\ref[M]'>Notes</A>
+		"} // YW Change: end
 
 	if(M.client)
 		body += "| <A HREF='?src=\ref[src];[HrefToken()];sendtoprison=\ref[M]'>Prison</A> | "
@@ -219,11 +222,19 @@ var/global/floorIsLava = 0
 /datum/admins/proc/PlayerNotes()
 	set category = "Admin"
 	set name = "Player Notes"
+	if (!istype(src,/datum/admins))
+		src = usr.client.holder
+	if (!istype(src,/datum/admins))
+		to_chat(usr, "Error: you are not an admin!")
 	if (!check_rights(R_ADMIN|R_MOD)) //YW Edit, make sure you have admin or mod rights to mess with player notes
 		return
 	PlayerNotesPage(1)
 
 /datum/admins/proc/PlayerNotesFilter()
+	if (!istype(src,/datum/admins))
+		src = usr.client.holder
+	if (!istype(src,/datum/admins))
+		to_chat(usr, "Error: you are not an admin!")
 	if (!check_rights(R_ADMIN|R_MOD)) //YW Edit, make sure you have admin or mod rights to mess with player notes
 		return
 	var/filter = tgui_input_text(usr, "Filter string (case-insensitive regex)", "Player notes filter")
@@ -253,6 +264,10 @@ var/global/floorIsLava = 0
 /datum/admins/proc/show_player_info(var/key as text)
 	set category = "Admin"
 	set name = "Show Player Info"
+	if (!istype(src,/datum/admins))
+		src = usr.client.holder
+	if (!istype(src,/datum/admins))
+		to_chat(usr, "Error: you are not an admin!")
 	if (!check_rights(R_ADMIN|R_MOD)) //YW Edit, make sure you have admin or mod rights to mess with player notes
 		return
 

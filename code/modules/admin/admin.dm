@@ -69,7 +69,14 @@ var/global/floorIsLava = 0
 		<A href='?src=\ref[src];[HrefToken()];newban=\ref[M]'>Ban</A> |
 		<A href='?src=\ref[src];[HrefToken()];jobban2=\ref[M]'>Jobban</A> |
 		<A href='?src=\ref[src];[HrefToken()];notes=show;mob=\ref[M]'>Notes</A>
-	"}
+	if (check_rights(R_ADMIN|R_MOD, 0))
+		body += {"
+			<A href='?src=\ref[src];[HrefToken()];boot2=\ref[M]'>Kick</A> |
+			<A href='?_src_=holder;[HrefToken()];warn=[M.ckey]'>Warn</A> |
+			<A href='?src=\ref[src];[HrefToken()];newban=\ref[M]'>Ban</A> |
+			<A href='?src=\ref[src];[HrefToken()];jobban2=\ref[M]'>Jobban</A> |
+			<A href='?src=\ref[src];[HrefToken()];notes=show;mob=\ref[M]'>Notes</A>
+		"} // YW Change: end
 
 	if(M.client)
 		body += "| <A HREF='?src=\ref[src];[HrefToken()];sendtoprison=\ref[M]'>Prison</A> | "

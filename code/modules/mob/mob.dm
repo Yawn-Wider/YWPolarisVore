@@ -70,7 +70,7 @@
 		to_chat(src, "<span class='filter_notice'><I>... You can almost hear someone talking ...</I></span>")
 	else
 		if(client && client.prefs.chat_timestamp)
-			msg = replacetext(msg, new/regex("^(<span(?: \[^>]*)?>)((?:.|\\n)*</span>)", ""), "$1[time] $2") 
+			msg = replacetext(msg, new/regex("^(<span(?: \[^>]*)?>)((?:.|\\n)*</span>)", ""), "$1[time] $2")
 			to_chat(src,msg)
 		else if(teleop)
 			to_chat(teleop, create_text_tag("body", "BODY:", teleop.client) + "[msg]")
@@ -696,7 +696,7 @@
 					for(var/datum/controller/subsystem/SS in Master.subsystems)
 						SS.stat_entry()
 
-			if(check_rights(R_ADMIN, 0)) //YW EDIT: Only admins can check Tickets
+			if(check_rights(R_ADMIN|R_MOD, 0)) //YW EDIT: Only admins/mods can check Tickets
 				if(statpanel("Tickets"))
 					GLOB.ahelp_tickets.stat_entry()
 

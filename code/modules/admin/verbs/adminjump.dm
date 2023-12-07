@@ -21,7 +21,7 @@
 		A = return_sorted_areas()[areaname]
 	else
 		var/newareaname = tgui_input_list(usr, "Pick an area:", "Jump to Area", return_sorted_areas())
-		A = return_sorted_areas()[newareaname]
+		A = return_sorted_areas()[newareaname] // YW EDIT - tgui_input_list returns strings even if var is area... Get area from name with this
 
 	if(!A)
 		return

@@ -20,7 +20,8 @@
 	if(areaname)
 		A = return_sorted_areas()[areaname]
 	else
-		A = tgui_input_list(usr, "Pick an area:", "Jump to Area", return_sorted_areas())
+		var/newareaname = tgui_input_list(usr, "Pick an area:", "Jump to Area", return_sorted_areas())
+		A = return_sorted_areas()[newareaname]
 
 	if(!A)
 		return

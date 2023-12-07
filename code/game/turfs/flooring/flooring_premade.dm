@@ -528,6 +528,7 @@
 	icon_state = "snow2" //YWEdit
 	movement_cost = 2
 	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
+	icon_edge = 'icons/turf/snow_yw.dmi' //YWEdit Temp fix
 
 /turf/simulated/floor/outdoors/snow/gravsnow
 	name = "snow"

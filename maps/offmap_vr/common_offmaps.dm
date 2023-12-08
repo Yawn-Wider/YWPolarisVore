@@ -5,7 +5,7 @@
 #include "../expedition_vr/alienship/alienship.dmm"
 #include "../expedition_vr/aerostat/aerostat.dmm"
 #include "../expedition_vr/aerostat/surface.dmm"
-#include "../expedition_vr/space/debrisfield.dmm"
+#include "../expedition_vr/space/debrisfield_yw.dmm" //YW Edit - YW debrisfield
 #include "../expedition_vr/space/fueldepot.dmm"
 #endif
 
@@ -85,7 +85,7 @@
 /datum/map_template/common_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
 	desc = "The Virgo 3 Debris Field away mission."
-	mappath = 'maps/expedition_vr/space/debrisfield.dmm'
+	mappath = 'maps/expedition_vr/space/debrisfield_yw.dmm' //YW Edit - _yw debris field
 	associated_map_datum = /datum/map_z_level/common_lateload/away_debrisfield
 
 /datum/map_template/common_lateload/away_debrisfield/on_map_loaded(z)

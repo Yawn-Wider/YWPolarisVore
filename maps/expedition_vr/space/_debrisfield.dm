@@ -53,6 +53,16 @@
 	icon = 'icons/turf/areas_vr.dmi'
 	icon_state = "dark"
 
+//YW ADDITIONS - DEBRIS FIELD LANDMARK
+/obj/effect/shuttle_landmark/premade/debrisfield/east
+	name = "Debris Field - East"
+	landmark_tag = "debrisfield_nw"
+
+/obj/effect/shuttle_landmark/premade/debrisfield/west
+	name = "Debris Field - West"
+	landmark_tag = "debrisfield_se"
+//END YW ADDITIONS
+
 /area/tether_away/debrisfield/shuttle_buffer //For space around shuttle landmarks to keep submaps from generating to block them
 	icon_state = "debrisexplored"
 	name = "\improper Space"
@@ -168,7 +178,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/luxury_boat/Initialize()
 	. = ..()
-	var/datum/lore/organization/O = loremaster.organizations[/datum/lore/organization/gov/elysia]
+	var/datum/lore/organization/O = loremaster.organizations[/datum/lore/organization/gov/almachi] //YW Change - gov we actually have
 	var/newname = "ECS-T [pick(O.ship_names)]"
 	name = newname
 	scanner_desc = {"\[i\]Registration\[/i\]: [newname]

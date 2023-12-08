@@ -29,8 +29,8 @@
 #endif
 
 /datum/map_template/virgo2
-	name = "Surface Content - Virgo 2"
-	desc = "For seeding submaps on Virgo 2"
+	name = "Surface Content - Borealis 2"		// YW EDIT - Borealis 2
+	desc = "For seeding submaps on Borealis 2"	// YW EDIT - Borealis 2
 	allow_duplicates = FALSE
 
 /datum/map_template/virgo2/Flake

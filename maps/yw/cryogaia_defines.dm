@@ -21,6 +21,8 @@
 #define Z_LEVEL_DEBRISFIELD				20
 #define Z_LEVEL_FUELDEPOT				21
 #define Z_LEVEL_GATEWAY					22
+#define Z_LEVEL_OM_ADVENTURE			23
+#define Z_LEVEL_REDGATE					24
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -217,6 +219,20 @@
 
 	lateload_gateway = null //Nothing right now.
 
+	lateload_redgate = list(
+		list("Redgate - Teppi Ranch"),
+		list("Redgate - Innland"),
+//		list("Redgate - Abandoned Island"),	//This will come back later
+		list("Redgate - Dark Adventure"),
+		list("Redgate - Eggnog Town Underground","Redgate - Eggnog Town"),
+		list("Redgate - Star Dog"),
+		list("Redgate - Hotsprings"),
+		list("Redgate - Rain City"),
+		list("Redgate - Islands Underwater","Redgate - Islands"),
+		list("Redgate - Moving Train", "Redgate - Moving Train Upper Level"),
+		list("Redgate - Fantasy Dungeon", "Redgate - Fantasy Town")
+		)
+
 	planet_datums_to_make = list(/datum/planet/borealis2)
 
 /datum/map/cryogaia/perform_map_generation()
@@ -271,6 +287,10 @@
 /obj/effect/overmap/visitable/sector/cryogaia
 	name = "Borealis Majoris"
 	desc = "Home to coldness, and your workplace."
+	scanner_desc = @{"[i]Registration[/i]: NSB Cryogaia
+[i]Class[/i]: Installation
+[i]Transponder[/i]: Transmitting (CIV), NanoTrasen IFF
+[b]Notice[/b]: NanoTrasen Colony, authorized personnel only"}
 	base = TRUE
 	icon_state = "globe"
 	color = "#00AAFF"
@@ -280,10 +300,12 @@
 	)
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list(Z_LEVEL_PLAINS,
-						  Z_LEVEL_CRYOGAIA_WILDERNESS,
-						  Z_LEVEL_CRYOGAIA_CAVES,
-						  Z_LEVEL_UNDERDARK
-						  )
+		Z_LEVEL_CRYOGAIA_WILDERNESS,
+		Z_LEVEL_CRYOGAIA_CAVES,
+		Z_LEVEL_UNDERDARK
+	)
+
+	levels_for_distress = list(Z_LEVEL_OFFMAP1, Z_LEVEL_BEACH, Z_LEVEL_AEROSTAT, Z_LEVEL_DEBRISFIELD, Z_LEVEL_FUELDEPOT)
 	var/mob_announce_cooldown = 0
 
 /obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
@@ -404,43 +426,12 @@
 	z = Z_LEVEL_CRYOGAIA_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
-/*
-/datum/map_z_level/tether/wilderness
-	name = "Wilderness"
-	flags = MAP_LEVEL_PLAYER
-	var/activated = 0
-	var/list/frozen_mobs = list()
 
-/datum/map_z_level/tether/wilderness/proc/activate_mobs()
-	if(activated && isemptylist(frozen_mobs))
-		return
-	activated = 1
-	for(var/mob/living/simple_mob/M in frozen_mobs)
-		M.life_disabled = 0
-		frozen_mobs -= M
-	frozen_mobs.Cut()
 
-/datum/map_z_level/tether/wilderness/wild_1
-	z = Z_LEVEL_SURFACE_WILDERNESS_1
-
-/datum/map_z_level/tether/wilderness/wild_2
-	z = Z_LEVEL_SURFACE_WILDERNESS_2
-
-/datum/map_z_level/tether/wilderness/wild_3
-	z = Z_LEVEL_SURFACE_WILDERNESS_3
-
-/datum/map_z_level/tether/wilderness/wild_4
-	z = Z_LEVEL_SURFACE_WILDERNESS_4
-
-/datum/map_z_level/tether/wilderness/wild_5
-	z = Z_LEVEL_SURFACE_WILDERNESS_5
-
-/datum/map_z_level/tether/wilderness/wild_6
-	z = Z_LEVEL_SURFACE_WILDERNESS_6
-
-/datum/map_z_level/tether/wilderness/wild_crash
-	z = Z_LEVEL_SURFACE_WILDERNESS_CRASH
-
-/datum/map_z_level/tether/wilderness/wild_ruins
-	z = Z_LEVEL_SURFACE_WILDERNESS_RUINS
-*/
+//No idea
+#include "../expedition_vr/aerostat/_aerostat.dm"
+/datum/map_template/common_lateload/away_aerostat
+	name = "Remmi Aerostat - Z1 Aerostat"
+	desc = "The Virgo 2 Aerostat away mission."
+	mappath = 'maps/expedition_vr/aerostat/aerostat.dmm'
+	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat

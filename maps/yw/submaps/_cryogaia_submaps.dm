@@ -28,13 +28,6 @@
 /// Away Missions
 #if AWAY_MISSION_TEST
 #include "cryogaia_plains/cryogaia_plains.dmm"
-#include "beach/beach.dmm"
-#include "beach/cave.dmm"
-#include "alienship/alienship.dmm"
-#include "aerostat/aerostat.dmm"
-#include "aerostat/surface.dmm"
-#include "space/debrisfield.dmm"
-#include "space/fueldepot.dmm"
 #endif
 
 #include "beach/_beach.dm"

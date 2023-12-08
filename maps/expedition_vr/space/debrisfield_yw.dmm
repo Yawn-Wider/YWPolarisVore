@@ -9,22 +9,12 @@
 "h" = (
 /turf/space,
 /area/space)
-"G" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/debrisfield/shuttle_buffer;
-	base_turf = /turf/space;
-	landmark_tag = "debrisfield_se";
-	name = "South East"
-	},
+"w" = (
+/obj/effect/shuttle_landmark/premade/debrisfield/west,
 /turf/space,
 /area/tether_away/debrisfield/shuttle_buffer)
-"J" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/debrisfield/shuttle_buffer;
-	base_turf = /turf/space;
-	landmark_tag = "debrisfield_nw";
-	name = "North West"
-	},
+"U" = (
+/obj/effect/shuttle_landmark/premade/debrisfield/east,
 /turf/space,
 /area/tether_away/debrisfield/shuttle_buffer)
 
@@ -2470,7 +2460,7 @@ d
 d
 d
 d
-d
+U
 d
 d
 d
@@ -4319,7 +4309,7 @@ d
 d
 d
 d
-J
+d
 d
 d
 d
@@ -17760,7 +17750,7 @@ d
 d
 d
 d
-G
+d
 d
 d
 d
@@ -18184,7 +18174,7 @@ d
 d
 d
 d
-d
+w
 d
 d
 d

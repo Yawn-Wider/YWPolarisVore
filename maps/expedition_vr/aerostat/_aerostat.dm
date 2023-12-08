@@ -1,9 +1,9 @@
 #include "../../submaps/pois_vr/aerostat/virgo2.dm"
 
 /obj/effect/overmap/visitable/sector/virgo2
-	name = "Virgo 2"
+	name = "Borealis 3" //YW Edit - Borealis
 	desc = "Includes the Remmi Aerostat and associated ground mining complexes."
-	scanner_desc = @{"[i]Stellar Body[/i]: Virgo 2
+	scanner_desc = @{"[i]Stellar Body[/i]: Borealis 3
 [i]Class[/i]: R-Class Planet
 [i]Habitability[/i]: Low (High Temperature, Toxic Atmosphere)
 [b]Notice[/b]: Planetary environment not suitable for life. Landing may be hazardous."}

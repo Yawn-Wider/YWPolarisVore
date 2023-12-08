@@ -34,12 +34,12 @@
 	shuttle = "Security Interceptor"
 
 /obj/machinery/computer/shuttle_control/explore/excursion
-	name = "short jump console"
+	name = "Excursion Shuttle control console"
 	shuttle_tag = "Excursion Shuttle"
 	req_one_access = list(access_pilot)
 
 /obj/machinery/computer/shuttle_control/explore/security
-	name = "short jump console"
+	name = "Security Interceptor control console"
 	shuttle_tag = "Security Interceptor"
 	req_one_access = list(access_secpilot)
 

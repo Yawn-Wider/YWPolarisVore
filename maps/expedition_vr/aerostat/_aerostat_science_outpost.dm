@@ -2,7 +2,7 @@
 
 
 /obj/effect/overmap/visitable/sector/virgo2
-	name = "Borealis 2" //YW Edit - Borealis
+	name = "Borealis 3" //YW Edit - Borealis
 	desc = "Includes the Remmi Aerostat and associated ground mining complexes."
 	scanner_desc = @{"[i]Stellar Body[/i]: Virgo 2
 [i]Class[/i]: R-Class Planet

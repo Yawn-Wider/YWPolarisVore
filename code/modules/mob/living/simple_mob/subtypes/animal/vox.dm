@@ -62,8 +62,6 @@
 				M.show_message("<span class='warning'>[user] gently taps [src] with the [O]. </span>")
 
 /mob/living/simple_mob/vox/armalis/verb/fire_quill(mob/target as mob in oview())
-
-
 	set name = "Fire quill"
 	set desc = "Fires a viciously pointed quill at a high speed."
 	set category = "Alien"
@@ -151,7 +149,6 @@
 	return
 
 /obj/item/vox/armalis_armour
-
 	name = "strange armour"
 	desc = "Hulking reinforced armour for something huge."
 	icon = 'icons/inventory/suit/item.dmi'
@@ -159,7 +156,6 @@
 	item_state = "armalis_armour"
 
 /obj/item/vox/armalis_amp
-
 	name = "strange lenses"
 	desc = "A series of metallic lenses and chains."
 	icon = 'icons/inventory/suit/item.dmi'

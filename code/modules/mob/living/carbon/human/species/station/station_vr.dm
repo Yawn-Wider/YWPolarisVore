@@ -31,7 +31,7 @@
 	lifespan, but due to their lust for violence, only a handful have ever survived beyond the age of 80, such as the infamous and \
 	legendary General Rain Silves who is claimed to have lived to 5000."
 
-	wikilink="https://yawn.izac.live/wiki/Sergal"
+	wikilink="https://yawn.izac.live/Sergal"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/sergal)
 
@@ -97,7 +97,7 @@
 	surviving in open air for long periods of time. However, Akula even today still require a high humidity environment to avoid drying out \
 	after a few days, which would make life on an arid world like Virgo-Prime nearly impossible if it were not for Skrellean technology to aid them."
 
-	wikilink="https://yawn.izac.live/wiki/Akula"
+	wikilink="https://yawn.izac.live/Akula"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/akula)
 
@@ -148,7 +148,7 @@
 	over and over again. Consequently, they struggle to make copies of same things. Both genders have a voice that echoes a lot. Their natural \
 	tone oscillates between tenor and soprano. They are excessively noisy when they quarrel in their native language."
 
-	wikilink="https://yawn.izac.live/wiki/Nevrean"
+	wikilink="https://yawn.izac.live/Nevrean"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/nevrean)
 
@@ -194,7 +194,7 @@
 			they now slowly recover from their previous hubris and aim to revitalize their planet. While many Zorren live in pre-industrial conditions by necessity, \
 			they are an interstellar species known for their pride and stubbornness and doggedly hold out on a Deathworld of their own creation. \
 			As local species, they hold moderate sway on local corporations and are hired by NT and other companies, although they find \"Outlander\" culture deeply weird."
-	wikilink="https://yawn.izac.live/wiki/Zorren"
+	wikilink="https://yawn.izac.live/Zorren"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/zorren)
 
@@ -243,7 +243,7 @@
 		/mob/living/carbon/human/proc/tie_hair)
 	digi_allowed = TRUE
 
-	wikilink="https://yawn.izac.live/wiki/Vulpkanin" //YW EDIT: Wiki
+	wikilink="https://yawn.izac.live/Vulpkanin" //YW EDIT: Wiki
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vulpkanin)
 
@@ -299,7 +299,7 @@
 	gluttonous = 0
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
-	wikilink="https://yawn.izac.live/wiki/Unathi"
+	wikilink="https://yawn.izac.live/Unathi"
 
 /datum/species/tajaran
 	spawn_flags = SPECIES_CAN_JOIN
@@ -314,7 +314,7 @@
 	inherent_verbs = list(/mob/living/carbon/human/proc/lick_wounds)
 	heat_discomfort_level = 295 //Prevents heat discomfort spam at 20c
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	wikilink="https://yawn.izac.live/wiki/Tajaran"
+	wikilink="https://yawn.izac.live/Tajaran"
 	agility = 90
 	can_climb = TRUE
 	climbing_delay = 1.00 //Cats are good climbers.
@@ -330,7 +330,7 @@
 	allergens = null
 	assisted_langs = list(LANGUAGE_EAL, LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX, LANGUAGE_PROMETHEAN)
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	wikilink="https://yawn.izac.live/wiki/Skrell"
+	wikilink="https://yawn.izac.live/Skrell"
 
 	water_breather = TRUE
 	water_movement = -4 //Negates shallow. Halves deep.
@@ -342,7 +342,7 @@
 	gluttonous = 0
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
-	wikilink="https://yawn.izac.live/wiki/Zaddat"
+	wikilink="https://yawn.izac.live/Zaddat"
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
@@ -356,7 +356,7 @@
 	spawn_flags = SPECIES_CAN_JOIN
 	min_age = 18
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
-	wikilink="https://yawn.izac.live/wiki/Diona"
+	wikilink="https://yawn.izac.live/Diona"
 
 /datum/species/human
 	blurb = "Humanity originated in the Sol system, and over the last three centuries has spread \
@@ -371,7 +371,7 @@
 	min_age = 18
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	base_color = "#EECEB3"
-	wikilink="https://yawn.izac.live/wiki/Human"
+	wikilink="https://yawn.izac.live/Human"
 
 /datum/species/human/vatgrown
 	spawn_flags = SPECIES_IS_RESTRICTED
@@ -390,7 +390,7 @@
 	descriptors = list(
 		/datum/mob_descriptor/vox_markings = 0
 		)
-	wikilink="https://yawn.izac.live/wiki/Vox"
+	wikilink="https://yawn.izac.live/Vox"
 
 /datum/species/harpy
 	name = SPECIES_RAPALA
@@ -421,7 +421,7 @@
 	who are known for having massive winged arms and talons as feet. They've been clocked at speeds of over 35 miler per hour chasing the planet's many fish-like fauna.\
 	The Rapalan's home-world 'Verita' is a strangely habitable gas giant, while no physical earth exists, there are fertile floating islands orbiting around the planet from past asteroid activity."
 
-	wikilink="https://yawn.izac.live/wiki/Rapala"
+	wikilink="https://yawn.izac.live/Rapala"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/rapala)
 

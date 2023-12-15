@@ -11,7 +11,7 @@
 	gluttonous = 0
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	descriptors = list()
-	wikilink="https://yawn.izac.live/wiki/Teshari" //YW EDIT
+	wikilink="https://yawn.izac.live/Teshari" //YW EDIT
 	agility = 90
 
 	male_sneeze_sound = list('sound/effects/mob_effects/tesharisneeze.ogg','sound/effects/mob_effects/tesharisneezeb.ogg')

@@ -37,7 +37,7 @@
 	Widely known for their voracious nature and violent tendencies when stressed or left unfed for long periods of time. \
 	Most, if not all chimeras possess the ability to undergo some type of regeneration process, at the cost of energy."
 
-	wikilink = "https://yawn.izac.live/wiki/Xenochimera"
+	wikilink = "https://yawn.izac.live/Xenochimera"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/xenochimera)
 
@@ -359,7 +359,7 @@
 	Before they were found they built great cities out of their silk, being united and subjugated in warring factions under great Star Queens  \
 	Who forced the working class to build huge, towering cities to attempt to reach the stars, which they worship as gems of great spiritual and magical significance."
 
-	wikilink = "https://yawn.izac.live/wiki/Vasilissans"
+	wikilink = "https://yawn.izac.live/Vasilissans"
 
 	catalogue_data = list(/datum/category_item/catalogue/fauna/vasilissan)
 

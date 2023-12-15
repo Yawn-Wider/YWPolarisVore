@@ -24,9 +24,9 @@ When editing the list, please try and keep similar probabilities near each other
 			var/info = "The following is a general tip to playing on Yawn-Wider! \n"
 			return pick(
 				/* prob(60); "[info] Got a question about gameplay, roleplay or the setting? Press F1 to Mentorhelp!", we dont really have mentors */
-				prob(60); "[info] We have a wiki which contains a few server specific pages including some lore, Please check it out at https://yawn.izac.live/Main_Page for mechanics undocumented at our wiki Please check it out at https://wiki.vore-station.net/Main_Page for help!",
+				prob(60); "[info] We have a wiki which contains a few server specific pages including some lore, Please check it out at https://yawn.izac.live/wiki/Main_Page for mechanics undocumented at our wiki Please check it out at https://wiki.vore-station.net/Main_Page for help!",
 				prob(60); "[info] Unsure about rules? Press F1 and ask our admins for clarification - they are happy to help.",
-				prob(50); "[info] To make this server fun for all types enjoyment, including conflicting desires, ERP is allowed but cannot be done near non-consenting people. If caught ERPing ICly, one can be arrested for public indecency, be mindful of those around you! https://yawn.izac.live/Server_Rules",
+				prob(50); "[info] To make this server fun for all types enjoyment, including conflicting desires, ERP is allowed but cannot be done near non-consenting people. If caught ERPing ICly, one can be arrested for public indecency, be mindful of those around you! https://yawn.izac.live/wiki/Server_Rules",
 				prob(35); "[info] Our discord is an excellent resource to stay up to date about changes and events!",
 				prob(35); "[info] Encountered what seems like a bug? Even if uncertain, feel free to go ahead and report it at https://github.com/Yawn-Wider/YWPolarisVore/issues !",
 				prob(30); "[info] Having difficulties getting started? Pressing F3 to speak and typing '; Hello! I'm a new hire. Could someone please give me a tour?' or as appropriate for your character is a good way to start! More help available at: https://wiki.vore-station.net/The_Basics",
@@ -67,7 +67,7 @@ When editing the list, please try and keep similar probabilities near each other
 				prob(25); "[info] It is a good idea to wait a few moments after using mechanics like lick, hug or headpat on another player. They might be typing up a response or wish to reciprocate, and if you run away you might miss out!",
 				prob(25); "[info] Participating in an away mission and see something acting strange? Try emoting or talking to it before resorting to fighting. It may be an event!",
 				prob(25); "[info] It is always a good idea to communicate on your department's private channel (whose key you can learn by examining your headset) when responding to an emergency! This lets your coworkers know if they might be needed!",
-				prob(25); "[info] While following the SOP is not mandatory, and you are free to break it (albeit, with potential in-character consequences), departments like security and medical do well to be familiar with them! https://yawn.izac.live/Standard_Operating_Procedure",
+				prob(25); "[info] While following the SOP is not mandatory, and you are free to break it (albeit, with potential in-character consequences), departments like security and medical do well to be familiar with them! https://yawn.izac.live/wiki/Standard_Operating_Procedure",
 				prob(25); "[info] Think a player is acting especially antagonistic? It might be better to Ahelp (with F1) rather than try to deal with it icly, staff can make sure it's all okay.",
 				prob(20); "[info] See a minor infraction as Security with a minimal time punishment? Consider using your ticket printer to give a non obtrusive punishment.",
 				prob(15); "[info] We are a roleplay server. This does not neccessarily mean 'serious' roleplay, levity and light-hearted RP is more than welcome!",
@@ -77,11 +77,11 @@ When editing the list, please try and keep similar probabilities near each other
 		if("lore")
 			var/info = "The following is tip for understanding the lore of Yawn-Wider \n"
 			return pick(
-				prob(50); "[info] You are currently working in the Borealis system. It is part of NanoTrasen, and quite isolated thanks to being a long distance away from any major System. https://yawn.izac.live/Cryogaia",
-				prob(50); "[info] The majority of employees live at the Space Station above Cryogaia called the NCS Serenity. Most people live underground, This is the place the shuttle takes you at the end of the round. https://yawn.izac.live/Cryogaia#NCS_Serenity",
+				prob(50); "[info] You are currently working in the Borealis system. It is part of NanoTrasen, and quite isolated thanks to being a long distance away from any major System. https://yawn.izac.live/wiki/Cryogaia",
+				prob(50); "[info] The majority of employees live at the Space Station above Cryogaia called the NCS Serenity. Most people live underground, This is the place the shuttle takes you at the end of the round. https://yawn.izac.live/wiki/Cryogaia#NCS_Serenity",
 				prob(10); "[info] Borealis is very far from any civlized system, taking a minimum of a couple months of travel using bluespace drives or use of expensive Bluespace Gates to cut the time down. https://wiki.vore-station.net/Infrastructure#Bluespace_Gate",
 				prob(10); "[info] Thaler is a universal currency. Its value is set to 1 second of FTL 'bluespace' travel. While ubiquitous in frontier worlds, it has an unfavourable exchange rate with most currencies used by well-settled regions, limiting immigration to places such as Earth. https://wiki.vore-station.net/Thaler",
-				prob(10); "[info] Sol is where NanoTrasen is headquartered more specifclly on Luna, and they mostly follow Admiralty Law, even out in its distant colonies. https://yawn.izac.live/Admiralty_Law",
+				prob(10); "[info] Sol is where NanoTrasen is headquartered more specifclly on Luna, and they mostly follow Admiralty Law, even out in its distant colonies. https://yawn.izac.live/wiki/Admiralty_Law",
 				prob(10); "[info] In certain silicon jobs or bodies there may be hard-wired functions ('laws') to limit dangerous behaviors or to encourage productivity. Remember that these are tied to the body, not the mind controlling the body!",
 				prob(5); "[info] Positronic minds are valued for their resilience, self sufficiency, and resistance to tampering. Each one is comparable to a typical human mind in capability, with similar properties of memory and cognitive alacrity.",
 				prob(5); "[info] Drones are much like our A.I in real life at their lower levels. At higher sophistication, they become like classic sci-fi robots. Drones' personalities can be overwritten by a skilled coder, memories tampered with.",

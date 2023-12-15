@@ -14,7 +14,7 @@
 		"Wolpin", "Saru", "Sparra")
 
 	spawn_flags = SPECIES_CAN_JOIN
-	wikilink="https://yawn.izac.live/Promethean" //YW EDIT
+	wikilink="https://yawn.izac.live/wiki/Promethean" //YW EDIT
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 	color_mult = 1
 	mob_size = MOB_MEDIUM //As of writing, original was MOB_SMALL - Allows normal swapping

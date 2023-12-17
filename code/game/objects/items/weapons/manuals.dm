@@ -13,7 +13,7 @@
 	author = "Engineering Encyclopedia"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
 	title = "Station Repairs and Construction"
 
-/obj/item/weapon/book/manual/engineering_construction/New()
+/obj/item/weapon/book/manual/engineering_construction/New() // YW EDIT: adds index.php?title= to dat
 	..()
 	dat = {"
 
@@ -21,7 +21,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Guide_to_Construction&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[config.wikiurl]index.php?title=Guide_to_Construction&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
@@ -291,7 +291,7 @@
 	author = "Engineering Encyclopedia"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
 	title = "Hacking"
 
-/obj/item/weapon/book/manual/engineering_hacking/New()
+/obj/item/weapon/book/manual/engineering_hacking/New() // YW EDIT: adds index.php?title= to dat
 	..()
 	dat = {"
 
@@ -299,7 +299,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Hacking&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[config.wikiurl]index.php?title=Hacking&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
@@ -647,13 +647,13 @@
 	author = "Simple Robotics"		 // Who wrote the thing, can be changed by pen or PC. It is not automatically assigned
 	title = "Guide to Robotics"
 
-/obj/item/weapon/book/manual/robotics_manual/New()
+/obj/item/weapon/book/manual/robotics_manual/New() // YW EDIT: adds index.php?title= to dat
 	..()
 	dat = {"
 		<html><head>
 		</head>
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Guide_to_Robotics&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[config.wikiurl]index.php?title=Guide_to_Robotics&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 		</html>
 		"}
@@ -872,7 +872,7 @@
 	author = "The Company"
 	title = "Corporate Regulations"
 
-/obj/item/weapon/book/manual/security_space_law/New()
+/obj/item/weapon/book/manual/security_space_law/New() // YW EDIT: adds index.php?title= to dat
 	..()
 	dat = {"
 
@@ -880,7 +880,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='97%' src="[config.wikiurl]Corporate_Regulations&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
+		<iframe width='100%' height='97%' src="[config.wikiurl]index.php?title=Corporate_Regulations&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>
 		</body>
 
 		</html>
@@ -897,7 +897,7 @@
 	author = "Medical Department"
 	title = "Medical Diagnostics Manual"
 
-/obj/item/weapon/book/manual/medical_diagnostics_manual/New()
+/obj/item/weapon/book/manual/medical_diagnostics_manual/New() // YW EDIT: adds index.php?title= to dat
 	..()
 	dat = {"<html>
 				<head>
@@ -931,7 +931,7 @@
 
 				<HR COLOR="steelblue" WIDTH="60%" ALIGN="LEFT">
 
-				<iframe width='100%' height='100%' src="[config.wikiurl]Guide_to_Medicine&printable=yes&removelinks=1" frameborder="0" id="main_frame"></iframe>
+				<iframe width='100%' height='100%' src="[config.wikiurl]index.php?title=Guide_to_Medicine&printable=yes&removelinks=1" frameborder="0" id="main_frame"></iframe>
 				</body>
 			</html>
 
@@ -945,7 +945,7 @@
 	author = "Engineering Encyclopedia"
 	title = "Engineering Textbook"
 
-/obj/item/weapon/book/manual/engineering_guide/New()
+/obj/item/weapon/book/manual/engineering_guide/New() // YW EDIT: adds index.php?title= to dat
 	..()
 	dat = {"
 
@@ -953,7 +953,7 @@
 		</head>
 
 		<body>
-		<iframe width='100%' height='100%' src="[config.wikiurl]Guide_to_Engineering&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>		</body>
+		<iframe width='100%' height='100%' src="[config.wikiurl]index.php?title=Guide_to_Engineering&printable=yes&remove_links=1" frameborder="0" id="main_frame"></iframe>		</body>
 
 		</html>
 

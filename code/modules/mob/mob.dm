@@ -616,6 +616,26 @@
 		var/mob/pulled = AM
 		pulled.inertia_dir = 0
 
+// We have pulled something before, so we should be able to safely continue pulling it. This proc is only for portals!
+/mob/proc/continue_pulling(var/atom/movable/AM)
+
+	if ( !AM || src==AM || !isturf(src.loc) )	//if there's no person pulling OR the person is pulling themself OR the object being pulled is inside something: abort!
+		return
+
+	if (AM.anchored)
+		return
+
+	src.pulling = AM
+	AM.pulledby = src
+
+	if(pullin)
+		pullin.icon_state = "pull1"
+
+	//Attempted fix for people flying away through space when cuffed and dragged.
+	if(ismob(AM))
+		var/mob/pulled = AM
+		pulled.inertia_dir = 0
+
 /mob/proc/can_use_hands()
 	return
 

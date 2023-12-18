@@ -73,25 +73,26 @@
 	access = access_ce
 
 /datum/supply_pack/hardsuits/com_medical_rig
-	name = "commonwealth medical hardsuit (loaded)"
+	name = "solgov medical hardsuit (loaded)" //YW EDIT
 	contains = list(
 			/obj/item/weapon/rig/baymed/equipped = 1
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Commonwealth medical hardsuit crate"
+	containername = "solgov medical hardsuit crate" //YW EDIT
 	access = access_medical
 
 /datum/supply_pack/hardsuits/com_engineering_rig
-	name = "commonwealth engineering hardsuit (loaded)"
+	name = "solgov engineering hardsuit (loaded)" //YW EDIT
 	contains = list(
 			/obj/item/weapon/rig/bayeng/equipped = 1
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure/gear
-	containername = "Commonwealth engineering hardsuit crate"
+	containername = "solgov medical hardsuit crate" //YW EDIT
 	access = access_engine
 
+/* YW EDIT: comments out breacher rig
 /datum/supply_pack/hardsuits/breacher_rig
 	name = "unathi breacher hardsuit (empty)"
 	contains = list(
@@ -101,6 +102,7 @@
 	containertype = /obj/structure/closet/crate/secure/gear
 	containername = "unathi breacher hardsuit crate"
 	access = access_armory
+*/
 
 /datum/supply_pack/hardsuits/zero_rig
 	name = "null hardsuit (jets)"

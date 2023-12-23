@@ -4,5 +4,5 @@
 	item_state_slots = list(slot_r_hand_str = "beret_white", slot_l_hand_str = "beret_white")
 	icon = 'icons/obj/clothing/hats_yw.dmi'
 	icon_state = "beret_blueshield"
-	icon_override = 'icons/mob/head_yw.dmi'
+	icon_override = 'icons/inventory/head/mob_yw.dmi'
 	item_state = "beret_blueshield"

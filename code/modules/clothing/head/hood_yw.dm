@@ -1,7 +1,7 @@
 /obj/item/clothing/head/hood/winter/snowsuit
 	name = "hood"
 	desc = "A generic hood."
-	icon = 'icons/mob/head_yw.dmi'
+	icon = 'icons/inventory/head/mob_yw.dmi'
 	icon_state = "hood"
 
 /obj/item/clothing/head/hood/winter/snowsuit/command

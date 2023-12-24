@@ -60,4 +60,5 @@
 	if(body_type == SPECIES_TESHARI)
 		if(!inhands)
 			return 'icons/mob/species/teshari/suit_yw.dmi'
-	..()
+	else
+		return ..()

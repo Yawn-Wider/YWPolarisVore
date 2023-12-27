@@ -78,7 +78,7 @@ When editing the list, please try and keep similar probabilities near each other
 			var/info = "The following is tip for understanding the lore of Yawn-Wider \n"
 			return pick(
 				prob(50); "[info] You are currently working in the Borealis system. It is part of NanoTrasen, and quite isolated thanks to being a long distance away from any major System. https://yawn.izac.live/Cryogaia",
-				prob(50); "[info] The majority of employees live at the Space Station above Cryogaia called the NCS Serenity. Most people live underground, This is the place the shuttle takes you at the end of the round. https://yawn.izac.live/Cryogaia#NCS_Serenity",
+				prob(50); "[info] The majority of employees live at the Space Station above Cryogaia called the NCS Serenity. This is the place the shuttle takes you at the end of the round. https://yawn.izac.live/Cryogaia#NCS_Serenity",
 				prob(10); "[info] Borealis is very far from any civlized system, taking a minimum of a couple months of travel using bluespace drives or use of expensive Bluespace Gates to cut the time down. https://wiki.vore-station.net/Infrastructure#Bluespace_Gate",
 				prob(10); "[info] Thaler is a universal currency. Its value is set to 1 second of FTL 'bluespace' travel. While ubiquitous in frontier worlds, it has an unfavourable exchange rate with most currencies used by well-settled regions, limiting immigration to places such as Earth. https://wiki.vore-station.net/Thaler",
 				prob(10); "[info] Sol is where NanoTrasen is headquartered more specifclly on Luna, and they mostly follow Admiralty Law, even out in its distant colonies. https://yawn.izac.live/Admiralty_Law",

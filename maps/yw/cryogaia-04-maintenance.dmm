@@ -327,6 +327,11 @@
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor,
 /area/maintenance/fish)
+"alY" = (
+/obj/structure/catwalk,
+/obj/effect/mist,
+/turf/simulated/floor/water/hotspring,
+/area/chapel/main)
 "amj" = (
 /obj/machinery/light_construct{
 	dir = 1
@@ -1377,6 +1382,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
+"aUA" = (
+/obj/structure/bed/chair/sofa/pew/right,
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "aUT" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
@@ -4331,6 +4346,17 @@
 "cQi" = (
 /turf/simulated/floor/plating,
 /area/maintenance/maintroom6)
+"cQu" = (
+/obj/item/device/radio/intercom{
+	dir = 8;
+	name = "Common Channel";
+	pixel_x = -21
+	},
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "cQx" = (
 /obj/structure/window/reinforced,
 /obj/structure/closet/firecloset,
@@ -6128,6 +6154,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
+"dWj" = (
+/obj/item/weapon/storage/fancy/crayons,
+/obj/structure/table/woodentable,
+/obj/item/stack/cable_coil/random,
+/obj/item/weapon/storage/fancy/blackcandle_box{
+	pixel_y = 14
+	},
+/turf/simulated/floor,
+/area/chapel/main)
 "dWn" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -7462,6 +7497,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/toilet)
+"eKX" = (
+/obj/structure/table/woodentable,
+/obj/random/potion_ingredient,
+/obj/item/weapon/storage/box/matches,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "eLc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -10682,6 +10723,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall,
 /area/crew_quarters/sleep/Dorm_9)
+"gPz" = (
+/obj/structure/bed/chair/sofa/pew/right,
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/obj/machinery/newscaster{
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "gQa" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
@@ -13232,6 +13283,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
+"ilK" = (
+/obj/structure/bed/chair/sofa/pew/left,
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/obj/effect/floor_decal/chapel{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "ilO" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -14138,6 +14199,23 @@
 /obj/item/weapon/virusdish/random,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"iIu" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/flame/candle/black{
+	pixel_x = -11
+	},
+/obj/item/weapon/flame/candle/black{
+	pixel_x = 11
+	},
+/obj/item/weapon/flame/candle/candelabra/everburn{
+	lit = 1
+	},
+/obj/structure/mirror{
+	dir = 1;
+	pixel_y = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "iIL" = (
 /obj/structure/table/standard,
 /obj/item/weapon/soap/nanotrasen,
@@ -15972,6 +16050,12 @@
 "jLN" = (
 /obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor,
+/area/chapel/main)
+"jLX" = (
+/obj/structure/catwalk,
+/obj/effect/decal/shadow/floor,
+/obj/effect/mist,
+/turf/simulated/floor/water/hotspring,
 /area/chapel/main)
 "jMc" = (
 /obj/machinery/camera/network/northern_star{
@@ -21043,6 +21127,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/sleep/cryo)
+"mDW" = (
+/obj/skeleton,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "mEg" = (
 /turf/simulated/floor,
 /area/maintenance/aft)
@@ -22975,6 +23063,16 @@
 /obj/structure/cable/green,
 /turf/simulated/floor/plating,
 /area/holodeck_control)
+"nPG" = (
+/obj/effect/floor_decal/spline/plain,
+/obj/structure/railing{
+	flags = null
+	},
+/obj/effect/decal/shadow/floor,
+/obj/structure/catwalk,
+/obj/effect/mist,
+/turf/simulated/floor/water/hotspring,
+/area/chapel/main)
 "nPH" = (
 /turf/simulated/wall,
 /area/ai_upload_foyer)
@@ -23801,6 +23899,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/perma/control)
+"ool" = (
+/turf/simulated/mineral/ignore_mapgen/cave,
+/area/chapel/main)
 "ooo" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -25855,6 +25956,7 @@
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/decal/shadow/floor,
 /obj/structure/catwalk,
+/obj/effect/mist,
 /turf/simulated/floor/water/hotspring,
 /area/chapel/main)
 "pwK" = (
@@ -26334,6 +26436,10 @@
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/dark,
 /area/borealis2/outdoors/grounds/tower/southwest)
+"pLL" = (
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/chapel/main)
 "pLP" = (
 /obj/machinery/door/airlock/medical{
 	name = "Virology Access";
@@ -26830,6 +26936,14 @@
 "pXX" = (
 /turf/simulated/floor/tiled/steel_grid,
 /area/maintenance/starboard)
+"pYg" = (
+/obj/structure/catwalk,
+/obj/machinery/alarm{
+	dir = 4;
+	pixel_x = -23
+	},
+/turf/simulated/floor,
+/area/chapel/main)
 "pYh" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/structure/cable{
@@ -27639,6 +27753,11 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/substation/atmospheric)
+"qxS" = (
+/obj/item/trash/bowl,
+/obj/item/clothing/head/witchwig,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "qyb" = (
 /obj/effect/floor_decal/techfloor/corner{
 	dir = 1
@@ -27879,6 +27998,19 @@
 	},
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/medical/morgue)
+"qHa" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/bone/skull{
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/obj/random/potion_ingredient,
+/obj/item/weapon/ore/diamond{
+	pixel_x = 6;
+	pixel_y = 13
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "qHg" = (
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/wood,
@@ -30050,6 +30182,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/chapel/office)
+"sdr" = (
+/obj/machinery/door/airlock/glass{
+	name = "Public Occult Room"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "sds" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -31088,6 +31226,10 @@
 	icon_state = "techmaint"
 	},
 /area/vacant/vacant_office)
+"sLZ" = (
+/obj/machinery/light,
+/turf/simulated/floor/carpet/bcarpet,
+/area/chapel/main)
 "sMe" = (
 /obj/item/weapon/stool/padded,
 /obj/effect/floor_decal/chapel{
@@ -32386,6 +32528,12 @@
 /obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/hallway/primary/starboard)
+"tzf" = (
+/obj/structure/table/woodentable,
+/obj/random/potion_ingredient,
+/obj/random/potion_ingredient,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "tzh" = (
 /obj/structure/table/gamblingtable,
 /obj/structure/safe/floor,
@@ -32499,11 +32647,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_9)
 "tCR" = (
-/obj/machinery/camera/network/civilian{
-	c_tag = "Chapel Hall";
-	dir = 1
-	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/bcarpet,
 /area/chapel/main)
 "tDC" = (
 /turf/simulated/mineral/cave,
@@ -35200,6 +35344,12 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
+"uYj" = (
+/obj/structure/bookcase{
+	name = "bookcase (Religious)"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "uYA" = (
 /obj/structure/table/reinforced,
 /obj/structure/sign/periodic{
@@ -36038,6 +36188,12 @@
 "vAe" = (
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
+"vAg" = (
+/obj/machinery/camera/network/civilian{
+	c_tag = "Chapel Hall"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "vAz" = (
 /obj/machinery/cryopod/robot,
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -38209,6 +38365,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
+"wRW" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/curtain/black,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor,
+/area/chapel/main)
 "wSr" = (
 /obj/structure/closet/wardrobe/chemistry_white,
 /obj/machinery/firealarm{
@@ -38564,6 +38727,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
+"xcy" = (
+/obj/structure/bed/chair/sofa/pew/left,
+/obj/effect/floor_decal/chapel{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "xdj" = (
 /obj/structure/table/standard,
 /obj/item/device/binoculars/spyglass,
@@ -54324,7 +54494,7 @@ nwk
 cWo
 cbR
 cWo
-ntw
+nPG
 sMe
 qML
 nwk
@@ -55289,14 +55459,14 @@ vku
 vku
 vns
 erA
-ebB
+jLX
 vns
 paV
 cHf
 dSk
 tOO
 cWo
-ntw
+nPG
 jjN
 liw
 bwu
@@ -55447,7 +55617,7 @@ vku
 nwk
 bwu
 vku
-mwy
+ool
 vku
 xWU
 lgt
@@ -55609,7 +55779,7 @@ vku
 jHr
 nwk
 vku
-mwy
+alY
 vku
 vku
 tLY
@@ -55770,9 +55940,9 @@ cCw
 vku
 nwk
 nwk
-vku
-mwy
-mwy
+wRW
+mih
+pYg
 vku
 vku
 vku
@@ -55932,11 +56102,11 @@ cCw
 vku
 nwk
 nwk
-vku
-mwy
-mwy
-mwy
-vku
+wRW
+ilK
+pLL
+cQu
+uYj
 vku
 suy
 vku
@@ -56092,13 +56262,13 @@ nHo
 igd
 cCw
 vku
-nwk
-nwk
+vAg
+tCR
 vku
-mwy
-mwy
-mwy
-vku
+gPz
+pjW
+nwk
+tzf
 otV
 sJR
 otV
@@ -56256,11 +56426,11 @@ crq
 vku
 nwk
 tCR
-vku
-mwy
-mwy
-mwy
-mwy
+sdr
+tCR
+nwk
+qxS
+iIu
 otV
 geY
 mOm
@@ -56417,12 +56587,12 @@ iFJ
 xEZ
 vku
 nwk
-nwk
+sLZ
 vku
-mwy
-mwy
-mwy
-mwy
+xcy
+qML
+nwk
+eKX
 otV
 weZ
 rop
@@ -56579,12 +56749,12 @@ crs
 lfy
 vku
 nwk
-bwu
-vku
-mwy
-mwy
-mwy
-mwy
+nwk
+wRW
+aUA
+mAs
+pLL
+mDW
 otV
 dwW
 rop
@@ -56742,11 +56912,11 @@ lfy
 vku
 nwk
 nwk
-vku
-mwy
-mwy
-mwy
-mwy
+wRW
+mih
+mih
+pLL
+ool
 otV
 xrQ
 nsk
@@ -56905,10 +57075,10 @@ vku
 fZp
 nwk
 vku
-mwy
-mwy
-mwy
-mwy
+alY
+dWj
+qHa
+ool
 otV
 voh
 eBV
@@ -57069,8 +57239,8 @@ vku
 vku
 nHo
 nHo
-mwy
-mwy
+gZI
+gZI
 otV
 otV
 otV

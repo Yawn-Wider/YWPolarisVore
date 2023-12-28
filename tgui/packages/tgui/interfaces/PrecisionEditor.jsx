@@ -2,8 +2,8 @@ import { useBackend } from '../backend';
 import { Button, LabeledList, Section, ColorBox, NoticeBox, Box } from '../components';
 import { Window } from '../layouts';
 
-export const PrecisionEditor = (props, context) => {
-  const { act, data } = useBackend(context);
+export const PrecisionEditor = (props) => {
+  const { act, data } = useBackend();
   // Extract `health` and `color` variables from the `data` object.
   const { screenstate } = data;
   return (
@@ -19,8 +19,8 @@ export const PrecisionEditor = (props, context) => {
   );
 };
 
-const SeedStatus = (props, context) => {
-  const { act, data } = useBackend(context);
+const SeedStatus = (props) => {
+  const { act, data } = useBackend();
   const { health, plantcolor, fruitcolor, chems, seedname } = data;
 
   return (
@@ -71,8 +71,8 @@ const SeedStatus = (props, context) => {
   );
 };
 
-const ColorEditor = (props, context) => {
-  const { act, data } = useBackend(context);
+const ColorEditor = (props) => {
+  const { act, data } = useBackend();
   const { plantcolor, fruitcolor } = data;
 
   return (
@@ -98,8 +98,8 @@ const ColorEditor = (props, context) => {
   );
 };
 
-const BiochemEditor = (props, context) => {
-  const { act, data } = useBackend(context);
+const BiochemEditor = (props) => {
+  const { act, data } = useBackend();
   const { beakerchems, health } = data;
 
   return (

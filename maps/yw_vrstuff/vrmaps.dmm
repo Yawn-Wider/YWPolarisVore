@@ -22,7 +22,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand11"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "aU" = (
 /obj/machinery/light{
 	dir = 1
@@ -74,25 +74,25 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "bB" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "bF" = (
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "bH" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 6
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "bW" = (
 /turf/unsimulated/wall,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "bY" = (
 /obj/structure/shuttle/window,
 /obj/machinery/light{
@@ -109,7 +109,7 @@
 "cp" = (
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "cr" = (
 /obj/item/weapon/storage/toolbox/mechanical,
 /obj/item/weapon/storage/toolbox/electrical,
@@ -120,12 +120,14 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand2"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "cz" = (
 /obj/effect/floor_decal/grass_edge,
-/mob/living/simple_mob/animal/giant_spider/tunneler,
+/mob/living/simple_mob/animal/giant_spider/tunneler{
+	faction = "bird"
+	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "cD" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -135,19 +137,19 @@
 /obj/structure/flora/tree/jungle,
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "cT" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 9
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "cY" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 10
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "dt" = (
 /obj/item/weapon/storage/box/scattershot/large,
 /obj/item/weapon/gun/projectile/automatic/z8,
@@ -156,30 +158,41 @@
 	},
 /area/vrworld)
 "dw" = (
-/mob/living/simple_mob/vore/aggressive/giant_snake,
+/mob/living/simple_mob/vore/aggressive/giant_snake{
+	faction = "bird"
+	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "dz" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 10
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
+"dJ" = (
+/obj/machinery/optable,
+/obj/machinery/oxygen_pump/anesthetic{
+	pixel_x = 32
+	},
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/vrworld/alwayslit)
 "ec" = (
 /obj/structure/flora/lily2,
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand4"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "eg" = (
 /obj/structure/flora/lily2,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "ep" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand11"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "eq" = (
 /obj/item/weapon/storage/box/scattershot/large,
 /turf/unsimulated/floor/techfloor_grid,
@@ -188,7 +201,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand2"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "eP" = (
 /obj/item/weapon/storage/box/scattershot/large,
 /obj/item/weapon/gun/projectile/automatic/glock,
@@ -202,16 +215,16 @@
 	dir = 10
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "eU" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand13"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "fa" = (
 /obj/structure/flora/tree/jungle,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "fc" = (
 /obj/structure/closet,
 /obj/item/clothing/shoes/boots/jungle,
@@ -247,11 +260,17 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "fd" = (
 /obj/structure/flora/log1,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
+"fs" = (
+/mob/living/simple_mob/vore/bee{
+	faction = "bird"
+	},
+/turf/unsimulated/floor/ironsand,
+/area/vrworld/alwayslit)
 "fu" = (
 /turf/unsimulated/floor{
 	icon_state = "plating";
@@ -265,7 +284,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "fD" = (
 /obj/item/weapon/reagent_containers/food/snacks/stew,
 /turf/unsimulated/floor/techfloor_grid,
@@ -279,21 +298,21 @@
 "fT" = (
 /obj/structure/flora/ausbushes,
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "gn" = (
 /obj/structure/flora/bush,
 /obj/effect/floor_decal/grass_edge{
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "gr" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 6
 	},
 /obj/random/mob/semirandom_mob_spawner/bird,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "gx" = (
 /obj/item/weapon/reagent_containers/pill/protein,
 /obj/item/weapon/reagent_containers/pill/protein,
@@ -337,30 +356,36 @@
 "he" = (
 /obj/structure/flora/tree/palm,
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "hf" = (
 /obj/item/weapon/gun/projectile/silenced,
 /turf/unsimulated/floor{
 	icon_state = "freezerfloor"
 	},
 /area/vrworld)
+"hh" = (
+/obj/item/weapon/card/id/centcom{
+	name = "\improper Mech ID"
+	},
+/turf/unsimulated/floor/techfloor_grid,
+/area/vrworld)
 "hs" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand7"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "ht" = (
 /obj/structure/flora/ausbushes,
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand7"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "hC" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 9
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "hD" = (
 /obj/random/tetheraid,
 /turf/unsimulated/floor/techfloor_grid,
@@ -387,7 +412,7 @@
 	dir = 1
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "iu" = (
 /obj/effect/floor_decal/grass_edge,
 /obj/effect/floor_decal/grass_edge{
@@ -396,7 +421,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand6"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "iw" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 5
@@ -406,26 +431,26 @@
 	dir = 1
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "iJ" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 5
 	},
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "iL" = (
 /obj/item/weapon/oar,
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "iU" = (
 /obj/vehicle/boat,
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "iY" = (
 /obj/structure/flora/tree/jungle,
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "ja" = (
 /obj/effect/landmark/virtual_reality{
 	name = The Jungle - Blue
@@ -433,11 +458,11 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "jf" = (
 /obj/structure/flora/ausbushes,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "jg" = (
 /obj/item/weapon/reagent_containers/food/snacks/stew,
 /turf/unsimulated/floor{
@@ -448,21 +473,21 @@
 "jq" = (
 /obj/random/mob/semirandom_mob_spawner/bird,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "jS" = (
 /obj/structure/flora/tree/palm,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "jU" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand6"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "ka" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand15"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "kz" = (
 /mob/living/simple_mob/humanoid/merc/ranged/smg,
 /turf/unsimulated/floor{
@@ -505,14 +530,16 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "kM" = (
 /obj/structure/flora/ausbushes,
-/mob/living/simple_mob/animal/giant_spider/tunneler,
+/mob/living/simple_mob/animal/giant_spider/tunneler{
+	faction = "bird"
+	},
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand2"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "kU" = (
 /obj/machinery/door/airlock,
 /obj/effect/mobblocker,
@@ -532,11 +559,13 @@
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "lj" = (
-/mob/living/simple_mob/animal/passive/fish/koi,
+/mob/living/simple_mob/animal/passive/fish/koi{
+	faction = "bird"
+	},
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "lk" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 10
@@ -544,20 +573,20 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand10"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "ln" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "lq" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "lr" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
@@ -566,7 +595,7 @@
 	dir = 10
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "lH" = (
 /mob/living/simple_mob/humanoid/merc/ranged/laser,
 /turf/unsimulated/floor{
@@ -606,8 +635,11 @@
 /area/vrworld)
 "mo" = (
 /obj/structure/flora/log2,
+/mob/living/simple_mob/vore/bee{
+	faction = "bird"
+	},
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "my" = (
 /obj/structure/flora/bush,
 /obj/effect/floor_decal/grass_edge{
@@ -616,12 +648,12 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand14"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "mE" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand9"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "mL" = (
 /obj/item/weapon/gun/energy/gun/nuclear,
 /turf/unsimulated/floor/techfloor_grid,
@@ -629,13 +661,22 @@
 "mN" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
+"mY" = (
+/obj/effect/floor_decal/grass_edge{
+	dir = 9
+	},
+/mob/living/simple_mob/animal/giant_spider/tunneler{
+	faction = "bird"
+	},
+/turf/unsimulated/floor/ironsand,
+/area/vrworld/alwayslit)
 "nf" = (
 /obj/structure/simple_door/wood,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "nj" = (
 /obj/effect/floor_decal/milspec/color/red,
 /obj/random/gun/random,
@@ -649,13 +690,13 @@
 	dir = 9
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "nD" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 5
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "nO" = (
 /obj/structure/closet/secure_closet/guncabinet/sidearm{
 	locked = 0;
@@ -669,16 +710,16 @@
 "oD" = (
 /obj/effect/floor_decal/grass_edge/corner,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "oI" = (
 /obj/structure/flora/lily2,
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "oL" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand12"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "pd" = (
 /obj/item/weapon/chainsaw,
 /turf/unsimulated/floor/steel,
@@ -691,10 +732,10 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand12"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "pX" = (
 /turf/simulated/wall/bay/red,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "qo" = (
 /mob/living/simple_mob/humanoid/russian/ranged{
 	faction = "syndicate"
@@ -706,12 +747,12 @@
 "qt" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "qx" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand10"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "qQ" = (
 /obj/item/weapon/storage/firstaid/surgery,
 /obj/structure/table/glass,
@@ -722,20 +763,16 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
-"re" = (
-/obj/machinery/oxygen_pump/anesthetic,
-/turf/simulated/wall/bay/blue,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "rr" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "rs" = (
 /obj/structure/flora/bush,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "rz" = (
 /obj/item/weapon/storage/box/scattershot/large,
 /obj/item/weapon/gun/projectile/shotgun/doublebarrel,
@@ -757,7 +794,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "rO" = (
 /obj/effect/floor_decal/milspec/hatchmarks,
 /turf/unsimulated/floor/steel,
@@ -790,7 +827,7 @@
 	dir = 6
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "sl" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 5
@@ -798,40 +835,39 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand7"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "so" = (
 /obj/structure/flora/tree/palm,
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "sq" = (
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand9"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "sx" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/effect/floor_decal/grass_edge{
 	dir = 6
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
-"sB" = (
-/obj/machinery/oxygen_pump/anesthetic,
-/turf/simulated/wall/bay/red,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "sF" = (
 /obj/machinery/optable,
+/obj/machinery/oxygen_pump/anesthetic{
+	pixel_x = -32
+	},
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "sI" = (
 /obj/item/device/radio/phone,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "sR" = (
 /obj/random/multiple/gun/projectile/shotgun,
 /obj/item/weapon/storage/box/scattershot/large,
@@ -844,13 +880,13 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand9"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "tr" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 1
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "tB" = (
 /obj/structure/medical_stand/anesthetic,
 /obj/item/weapon/reagent_containers/blood/prelabeled/OMinus,
@@ -862,7 +898,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "tD" = (
 /mob/living/simple_mob/humanoid/russian{
 	faction = "syndicate"
@@ -892,23 +928,25 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand13"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "uP" = (
 /obj/structure/flora/tree/jungle,
 /obj/effect/floor_decal/grass_edge{
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "uV" = (
-/mob/living/simple_mob/animal/passive/fish/salmon,
+/mob/living/simple_mob/animal/passive/fish/salmon{
+	faction = "bird"
+	},
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "vH" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand5"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "vU" = (
 /obj/machinery/vending/food/arojoan,
 /turf/unsimulated/floor/steel,
@@ -921,11 +959,11 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand15"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "wH" = (
 /obj/structure/flora/lily2,
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "wT" = (
 /obj/structure/sign/department/armory,
 /turf/unsimulated/wall/cult,
@@ -943,21 +981,35 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand13"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "xW" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 5
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
+"ye" = (
+/obj/machinery/autolathe{
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	hacked = 1;
+	name = "Unlocked Autolathe"
+	},
+/obj/fiftyspawner/steel,
+/obj/fiftyspawner/glass,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/vrworld/alwayslit)
 "yp" = (
 /obj/structure/flora/bush,
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "yu" = (
-/mob/living/simple_mob/animal/passive/crab,
+/mob/living/simple_mob/animal/passive/crab{
+	faction = "bird"
+	},
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "yA" = (
 /obj/random/tetheraid,
 /turf/unsimulated/floor{
@@ -971,28 +1023,30 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand4"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "yZ" = (
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand14"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "zj" = (
 /obj/item/weapon/gun/energy/x01,
 /turf/unsimulated/floor/techfloor_grid,
 /area/vrworld)
 "zF" = (
 /obj/structure/flora/ausbushes,
-/mob/living/simple_mob/vore/aggressive/giant_snake,
+/mob/living/simple_mob/vore/aggressive/giant_snake{
+	faction = "bird"
+	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "zK" = (
 /obj/structure/flora/ausbushes,
 /obj/effect/floor_decal/grass_edge{
 	dir = 9
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "zO" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 1
@@ -1000,7 +1054,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand2"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Ad" = (
 /obj/structure/closet,
 /obj/item/clothing/suit/storage/solgov/service/army/medical,
@@ -1038,7 +1092,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Ag" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
@@ -1049,25 +1103,33 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand15"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
+"Am" = (
+/mob/living/simple_mob/vore/bee{
+	faction = "bird"
+	},
+/turf/unsimulated/floor/ironsand{
+	icon_state = "ironsand11"
+	},
+/area/vrworld/alwayslit)
 "Aw" = (
 /obj/structure/flora/lily2,
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "AB" = (
 /obj/structure/flora/tree/palm,
 /obj/effect/floor_decal/grass_edge{
 	dir = 6
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "AF" = (
 /obj/structure/simple_door/wood,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "AK" = (
 /obj/machinery/light,
 /turf/unsimulated/floor/steel,
@@ -1090,7 +1152,7 @@
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Bp" = (
 /obj/fiftyspawner/glass,
 /obj/fiftyspawner/steel,
@@ -1104,7 +1166,7 @@
 "BP" = (
 /obj/structure/flora/bush,
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Cf" = (
 /obj/item/weapon/gun/projectile/automatic/tommygun,
 /turf/unsimulated/floor{
@@ -1118,14 +1180,14 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand10"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "CO" = (
 /obj/structure/flora/ausbushes,
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 6
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Dp" = (
 /obj/structure/table/standard,
 /obj/random/cash/huge,
@@ -1142,7 +1204,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand14"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "DJ" = (
 /turf/unsimulated/floor/steel,
 /area/vrworld)
@@ -1151,7 +1213,7 @@
 	dir = 4
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Es" = (
 /mob/living/simple_mob/humanoid/merc/melee,
 /turf/unsimulated/floor/techfloor_grid,
@@ -1163,20 +1225,20 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand11"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "ED" = (
 /obj/structure/flora/tree/jungle_small,
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand10"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "EE" = (
 /obj/structure/flora/tree/palm,
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 9
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "EJ" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
@@ -1184,7 +1246,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand14"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "ES" = (
 /mob/living/simple_mob/humanoid/merc/ranged/ionrifle,
 /turf/unsimulated/floor{
@@ -1195,7 +1257,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand4"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Gl" = (
 /obj/item/weapon/storage/box/scattershot/large,
 /turf/unsimulated/floor{
@@ -1210,6 +1272,18 @@
 /obj/machinery/vending/fooddessert,
 /turf/unsimulated/floor/steel,
 /area/vrworld)
+"GG" = (
+/obj/fiftyspawner/glass,
+/obj/machinery/autolathe{
+	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
+	hacked = 1;
+	name = "Unlocked Autolathe"
+	},
+/obj/fiftyspawner/steel,
+/turf/unsimulated/floor{
+	icon_state = "dark"
+	},
+/area/vrworld/alwayslit)
 "GH" = (
 /obj/machinery/mech_recharger,
 /obj/random/mech,
@@ -1236,10 +1310,14 @@
 /obj/item/weapon/material/knife/tacknife/combatknife,
 /turf/unsimulated/floor/steel,
 /area/vrworld)
+"Hv" = (
+/obj/structure/flora/log2,
+/turf/unsimulated/floor/irongrass,
+/area/vrworld/alwayslit)
 "Hy" = (
 /obj/structure/railing,
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "HL" = (
 /obj/machinery/autolathe{
 	desc = "Your typical Autolathe. It appears to have much more options than your regular one, however...";
@@ -1286,7 +1364,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Ig" = (
 /obj/structure/closet/secure_closet/guncabinet/rifle{
 	locked = 0;
@@ -1331,18 +1409,18 @@
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Iy" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/effect/floor_decal/grass_edge{
 	dir = 9
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "IG" = (
 /obj/structure/flora/log2,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "IJ" = (
 /obj/item/weapon/gun/projectile/automatic/stg,
 /turf/unsimulated/floor{
@@ -1359,13 +1437,13 @@
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Js" = (
 /obj/structure/flora/tree/jungle,
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand2"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "JF" = (
 /obj/structure/railing{
 	dir = 4
@@ -1373,15 +1451,23 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand5"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
+"Kc" = (
+/mob/living/simple_mob/vore/bee{
+	faction = "bird"
+	},
+/turf/unsimulated/floor/ironsand{
+	icon_state = "ironsand2"
+	},
+/area/vrworld/alwayslit)
 "KL" = (
 /turf/unsimulated/wall/planetary/normal,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "KZ" = (
 /obj/structure/flora/ausbushes,
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Lu" = (
 /obj/vehicle/train/rover/engine/dunebuggy,
 /obj/machinery/light/small{
@@ -1429,13 +1515,13 @@
 "MY" = (
 /obj/item/weapon/laserdome_flag/blue,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Nl" = (
 /obj/structure/railing{
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Ny" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
@@ -1443,7 +1529,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand7"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "NF" = (
 /mob/living/simple_mob/humanoid/merc/ranged/sniper,
 /turf/unsimulated/floor{
@@ -1471,7 +1557,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand2"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Oz" = (
 /mob/living/simple_mob/humanoid/russian/ranged{
 	faction = "syndicate"
@@ -1485,7 +1571,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand13"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Pi" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 10
@@ -1493,7 +1579,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand9"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "PE" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
@@ -1501,27 +1587,27 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand12"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "PP" = (
 /obj/structure/flora/ausbushes,
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "PX" = (
 /obj/structure/flora/ausbushes,
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand15"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Ql" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 9
 	},
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "QX" = (
 /obj/structure/closet,
 /obj/item/clothing/suit/armor/bulletproof,
@@ -1563,7 +1649,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand9"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Rs" = (
 /obj/item/weapon/gun/projectile/garand,
 /turf/unsimulated/floor{
@@ -1572,12 +1658,12 @@
 /area/vrworld)
 "RB" = (
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "RP" = (
 /obj/structure/flora/lily2,
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "RQ" = (
 /obj/item/weapon/reagent_containers/pill/protein,
 /turf/unsimulated/floor/techfloor_grid,
@@ -1588,7 +1674,7 @@
 	dir = 5
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Se" = (
 /turf/unsimulated/floor/techfloor_grid,
 /area/vrworld)
@@ -1597,7 +1683,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand14"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "SB" = (
 /mob/living/simple_mob/creature{
 	faction = "syndicate"
@@ -1614,7 +1700,7 @@
 	dir = 6
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Tk" = (
 /obj/structure/railing{
 	dir = 1
@@ -1623,13 +1709,13 @@
 	dir = 6
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Tt" = (
 /obj/structure/railing{
 	dir = 1
 	},
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Tx" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 5
@@ -1637,7 +1723,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand4"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "TD" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 8
@@ -1646,7 +1732,7 @@
 	dir = 4
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "TI" = (
 /obj/item/weapon/storage/toolbox/electrical,
 /turf/unsimulated/floor/steel,
@@ -1673,7 +1759,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand12"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Un" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 1
@@ -1681,21 +1767,21 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand4"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Ur" = (
 /obj/structure/flora/tree/jungle,
 /obj/effect/floor_decal/grass_edge{
 	dir = 5
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Us" = (
 /obj/structure/flora/ausbushes,
 /obj/effect/floor_decal/grass_edge{
 	dir = 10
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Uv" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 10
@@ -1706,7 +1792,7 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand9"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Uy" = (
 /obj/structure/flora/ausbushes,
 /obj/effect/floor_decal/grass_edge{
@@ -1716,7 +1802,7 @@
 	dir = 4
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Vf" = (
 /obj/structure/reagent_dispensers/fueltank/high,
 /turf/unsimulated/floor/steel,
@@ -1734,13 +1820,13 @@
 	dir = 5
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "VC" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 8
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "VN" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 1
@@ -1749,18 +1835,18 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand5"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "VP" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 1
 	},
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "VQ" = (
 /obj/structure/flora/ausbushes,
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "VT" = (
 /turf/space,
 /area/space)
@@ -1772,7 +1858,7 @@
 	dir = 9
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Wa" = (
 /obj/machinery/recharger/wallcharger{
 	dir = 1;
@@ -1786,7 +1872,7 @@
 /area/vrworld)
 "Wd" = (
 /turf/unsimulated/floor/irongrass,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Wg" = (
 /obj/effect/floor_decal/arrows{
 	dir = 4
@@ -1795,14 +1881,14 @@
 /area/vrworld)
 "Wv" = (
 /turf/simulated/wall/bay/blue,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "WF" = (
 /obj/structure/flora/lily2,
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 6
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "WJ" = (
 /turf/unsimulated/floor{
 	icon_state = "lino"
@@ -1811,7 +1897,7 @@
 "WM" = (
 /obj/structure/flora/log2,
 /turf/simulated/floor/water,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "WR" = (
 /obj/item/weapon/gun/energy/retro,
 /turf/unsimulated/floor/techfloor_grid,
@@ -1883,7 +1969,7 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Yy" = (
 /obj/effect/landmark/virtual_reality{
 	name = "The Race"
@@ -1900,14 +1986,14 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand5"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "YK" = (
 /obj/structure/flora/tree/jungle,
 /obj/effect/floor_decal/grass_edge{
 	dir = 1
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "YO" = (
 /obj/random/multiple/gun/projectile/shotgun,
 /obj/item/weapon/storage/box/scattershot/large,
@@ -1934,20 +2020,20 @@
 	dir = 1
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Zn" = (
 /obj/structure/flora/tree/jungle_small,
 /obj/effect/floor_decal/grass_edge{
 	dir = 1
 	},
 /turf/unsimulated/floor/ironsand,
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Zq" = (
 /obj/structure/simple_door/hardwood,
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
-/area/vrmap)
+/area/vrworld/alwayslit)
 "Zt" = (
 /obj/machinery/vending/foodstuffing,
 /turf/unsimulated/floor/steel,
@@ -2454,7 +2540,7 @@ Ma
 Se
 Se
 Ma
-Se
+hh
 Se
 Se
 IO
@@ -9760,7 +9846,7 @@ Wd
 Wd
 Wv
 Wv
-Wv
+GG
 Wv
 Wv
 Wv
@@ -10248,7 +10334,7 @@ Wv
 Yr
 rr
 rr
-sF
+dJ
 qQ
 bW
 kC
@@ -10410,7 +10496,7 @@ Wv
 Wv
 Wv
 Wv
-re
+Wv
 Wv
 bW
 bW
@@ -11053,7 +11139,7 @@ fT
 Wd
 Wd
 Un
-eu
+Kc
 RB
 RB
 RB
@@ -11371,7 +11457,7 @@ he
 Wd
 Wd
 Wd
-mo
+Hv
 Wd
 Wd
 Wd
@@ -12669,7 +12755,7 @@ Wd
 Wd
 Wd
 Wd
-hC
+mY
 cT
 Pb
 yp
@@ -14299,7 +14385,7 @@ Wd
 tc
 Oh
 cT
-ep
+Am
 RB
 dz
 cY
@@ -15094,11 +15180,11 @@ RB
 ep
 bH
 sx
-mo
+Hv
 Wd
 zK
 cT
-RB
+fs
 jf
 RB
 cp
@@ -16065,7 +16151,7 @@ bW
 bW
 bW
 pX
-sB
+pX
 pX
 pX
 pX
@@ -16715,7 +16801,7 @@ bW
 pX
 pX
 pX
-pX
+ye
 pX
 pX
 Wd

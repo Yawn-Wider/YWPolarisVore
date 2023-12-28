@@ -1,4 +1,10 @@
-/area/vrmap
+/area/vrworld
+	name = "VR World"
+	icon = 'icons/turf/areas_yw.dmi'
+	icon_state = "vr"
+	requires_power = 0
+
+/area/vrworld/alwayslit
 	luminosity = 1
 	dynamic_lighting = 0
 

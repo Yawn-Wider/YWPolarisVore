@@ -16,7 +16,7 @@
 	#include "residential/_residential.dm"
 	#include "residential/residential_keys.dm"
 	#include "../offmap_vr/common_offmaps.dm"
-	#include "../yw_vrstuff/_vrmaps.dm"
+	#include "yw_vrstuff/_vrmaps.dm"
 
 	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions
 		#include "cryogaia-01-centcomm.dmm" //centcom
@@ -29,7 +29,7 @@
 		#include "cryogaia-09-wilderness.dmm" //wilderness
 		#include "cryogaia-10-caves.dmm" // caves
 		#include "residential/residential.dmm" //residential level
-		#include "../yw_vrstuff/_vrmaps.dm" //vr map
+		#include "yw_vrstuff/_vrmaps.dm" //vr map
 	#endif
 
 	#include "submaps/_cryogaia_submaps.dm"

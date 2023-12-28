@@ -1128,6 +1128,7 @@
 /area/vrworld/alwayslit)
 "AF" = (
 /obj/structure/simple_door/wood,
+/obj/effect/mobblocker,
 /turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
 "AK" = (
@@ -1682,6 +1683,13 @@
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand14"
+	},
+/area/vrworld/alwayslit)
+"Sr" = (
+/obj/structure/simple_door/wood,
+/obj/effect/mobblocker,
+/turf/unsimulated/floor{
+	icon_state = "dark"
 	},
 /area/vrworld/alwayslit)
 "SB" = (
@@ -10006,7 +10014,7 @@ lh
 ln
 Uj
 ln
-nf
+Sr
 rr
 rr
 rr

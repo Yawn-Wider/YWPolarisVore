@@ -6,6 +6,13 @@
 /obj/structure/shuttle/window,
 /turf/unsimulated/floor/techfloor_grid,
 /area/vrworld)
+"aC" = (
+/obj/effect/floor_decal/grass_edge{
+	dir = 4
+	},
+/obj/tether_away_spawner/passivejunglemobs,
+/turf/unsimulated/floor/ironsand,
+/area/vrworld/alwayslit)
 "aK" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 9
@@ -167,6 +174,10 @@
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 10
 	},
+/turf/unsimulated/floor/ironsand,
+/area/vrworld/alwayslit)
+"dF" = (
+/obj/tether_away_spawner/aggressivejunglemobs,
 /turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
 "dJ" = (
@@ -474,6 +485,10 @@
 /obj/random/mob/semirandom_mob_spawner/bird,
 /turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
+"jr" = (
+/obj/tether_away_spawner/fishmobs,
+/turf/simulated/floor/water,
+/area/vrworld/alwayslit)
 "jS" = (
 /obj/structure/flora/tree/palm,
 /turf/unsimulated/floor/ironsand,
@@ -487,6 +502,13 @@
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand15"
 	},
+/area/vrworld/alwayslit)
+"km" = (
+/obj/effect/floor_decal/grass_edge/corner{
+	dir = 5
+	},
+/obj/tether_away_spawner/passivejunglemobs,
+/turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
 "kz" = (
 /mob/living/simple_mob/humanoid/merc/ranged/smg,
@@ -530,6 +552,13 @@
 /turf/unsimulated/floor{
 	icon_state = "dark"
 	},
+/area/vrworld/alwayslit)
+"kI" = (
+/obj/effect/floor_decal/grass_edge/corner{
+	dir = 6
+	},
+/obj/item/weapon/laserdome_flag/red,
+/turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
 "kM" = (
 /obj/structure/flora/ausbushes,
@@ -1004,6 +1033,11 @@
 /obj/structure/flora/bush,
 /turf/unsimulated/floor/irongrass,
 /area/vrworld/alwayslit)
+"yq" = (
+/obj/structure/flora/ausbushes,
+/obj/tether_away_spawner/fishmobs,
+/turf/simulated/floor/water,
+/area/vrworld/alwayslit)
 "yu" = (
 /mob/living/simple_mob/animal/passive/crab{
 	faction = "bird"
@@ -1104,6 +1138,12 @@
 	icon_state = "ironsand15"
 	},
 /area/vrworld/alwayslit)
+"Al" = (
+/obj/tether_away_spawner/aggressivejunglemobs,
+/turf/unsimulated/floor/ironsand{
+	icon_state = "ironsand5"
+	},
+/area/vrworld/alwayslit)
 "Am" = (
 /mob/living/simple_mob/vore/bee{
 	faction = "bird"
@@ -1202,6 +1242,7 @@
 /obj/effect/floor_decal/grass_edge{
 	dir = 8
 	},
+/obj/tether_away_spawner/aggressivejunglemobs,
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand14"
 	},
@@ -1214,6 +1255,12 @@
 	dir = 4
 	},
 /turf/unsimulated/floor/ironsand,
+/area/vrworld/alwayslit)
+"Ek" = (
+/obj/tether_away_spawner/aggressivejunglemobs,
+/turf/unsimulated/floor/ironsand{
+	icon_state = "ironsand11"
+	},
 /area/vrworld/alwayslit)
 "Es" = (
 /mob/living/simple_mob/humanoid/merc/melee,
@@ -1246,6 +1293,12 @@
 	},
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand14"
+	},
+/area/vrworld/alwayslit)
+"ER" = (
+/obj/tether_away_spawner/passivejunglemobs,
+/turf/unsimulated/floor/ironsand{
+	icon_state = "ironsand12"
 	},
 /area/vrworld/alwayslit)
 "ES" = (
@@ -1432,6 +1485,10 @@
 /obj/machinery/door/airlock,
 /turf/unsimulated/floor/techfloor_grid,
 /area/vrworld)
+"Ja" = (
+/obj/tether_away_spawner/passivejunglemobs,
+/turf/unsimulated/floor/ironsand,
+/area/vrworld/alwayslit)
 "Jg" = (
 /obj/structure/flora/log2,
 /obj/effect/floor_decal/grass_edge{
@@ -1469,6 +1526,12 @@
 /obj/effect/floor_decal/grass_edge,
 /turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
+"Lf" = (
+/obj/tether_away_spawner/aggressivejunglemobs,
+/turf/unsimulated/floor/ironsand{
+	icon_state = "ironsand6"
+	},
+/area/vrworld/alwayslit)
 "Lu" = (
 /obj/vehicle/train/rover/engine/dunebuggy,
 /obj/machinery/light/small{
@@ -1493,6 +1556,10 @@
 /obj/item/weapon/storage/toolbox/mechanical,
 /turf/unsimulated/floor/steel,
 /area/vrworld)
+"Mr" = (
+/obj/tether_away_spawner/aggressivejunglemobs,
+/turf/unsimulated/floor/irongrass,
+/area/vrworld/alwayslit)
 "Mx" = (
 /obj/effect/landmark/virtual_reality{
 	name = "The Abyss"
@@ -1581,6 +1648,13 @@
 	icon_state = "ironsand9"
 	},
 /area/vrworld/alwayslit)
+"PD" = (
+/obj/effect/floor_decal/grass_edge/corner{
+	dir = 9
+	},
+/obj/tether_away_spawner/aggressivejunglemobs,
+/turf/unsimulated/floor/ironsand,
+/area/vrworld/alwayslit)
 "PE" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 4
@@ -1647,6 +1721,7 @@
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 9
 	},
+/obj/tether_away_spawner/passivejunglemobs,
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand9"
 	},
@@ -1658,6 +1733,11 @@
 	},
 /area/vrworld)
 "RB" = (
+/turf/unsimulated/floor/ironsand,
+/area/vrworld/alwayslit)
+"RK" = (
+/obj/effect/floor_decal/grass_edge,
+/obj/tether_away_spawner/aggressivejunglemobs,
 /turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
 "RP" = (
@@ -10160,7 +10240,7 @@ VT
 (51,1,1) = {"
 KL
 RB
-cp
+RK
 Wd
 it
 Wd
@@ -10490,7 +10570,7 @@ iu
 Wd
 tr
 RB
-oL
+ER
 qx
 RB
 RB
@@ -10985,7 +11065,7 @@ Ev
 bB
 Ny
 xW
-RB
+dF
 jf
 RB
 RB
@@ -10995,7 +11075,7 @@ RB
 RB
 RB
 RB
-RB
+dF
 RB
 KL
 VT
@@ -11294,7 +11374,7 @@ VT
 (58,1,1) = {"
 KL
 bF
-bF
+jr
 bF
 iU
 bF
@@ -11638,7 +11718,7 @@ SV
 Wd
 Wd
 nD
-xW
+km
 jq
 jU
 RB
@@ -12114,7 +12194,7 @@ Wd
 Wd
 bF
 bF
-bF
+jr
 bF
 bF
 bF
@@ -12266,10 +12346,10 @@ VT
 (64,1,1) = {"
 KL
 bH
-bB
+aC
 gr
 Wd
-Wd
+Mr
 Wd
 Wd
 bF
@@ -12453,7 +12533,7 @@ Wd
 nD
 lq
 sl
-RB
+dF
 dw
 KL
 VT
@@ -12595,7 +12675,7 @@ Wd
 bF
 bF
 bF
-bF
+jr
 bF
 bF
 bF
@@ -12764,7 +12844,7 @@ Wd
 Wd
 Wd
 mY
-cT
+PD
 Pb
 yp
 Wd
@@ -12772,7 +12852,7 @@ bF
 bF
 bF
 bF
-VQ
+yq
 bF
 Wd
 Wd
@@ -12926,7 +13006,7 @@ yW
 ln
 Cu
 EE
-RB
+Ja
 Pi
 Us
 Wd
@@ -13569,7 +13649,7 @@ my
 ln
 cT
 RB
-vH
+Al
 zF
 RB
 RB
@@ -14555,7 +14635,7 @@ hC
 Rp
 RB
 RB
-ep
+Ek
 RB
 RB
 eT
@@ -14720,7 +14800,7 @@ RB
 RB
 RB
 RB
-RB
+dF
 RB
 RB
 KL
@@ -15022,7 +15102,7 @@ KL
 RB
 RB
 RB
-jU
+Lf
 RB
 RB
 cp
@@ -16016,7 +16096,7 @@ RB
 RB
 jS
 qx
-RB
+dF
 oL
 RB
 KL
@@ -16328,7 +16408,7 @@ Ad
 pX
 jU
 RB
-bH
+kI
 Tk
 Wd
 VP

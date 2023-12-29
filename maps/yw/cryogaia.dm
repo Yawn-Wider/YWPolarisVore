@@ -29,7 +29,6 @@
 		#include "cryogaia-09-wilderness.dmm" //wilderness
 		#include "cryogaia-10-caves.dmm" // caves
 		#include "residential/residential.dmm" //residential level
-		#include "yw_vrstuff/vrmaps.dmm" //vr map
 	#endif
 
 	#include "submaps/_cryogaia_submaps.dm"

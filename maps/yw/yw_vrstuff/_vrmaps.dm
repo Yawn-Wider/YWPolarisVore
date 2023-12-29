@@ -3,6 +3,7 @@
 #endif
 
 #include "vrmaps_turfs.dm"
+#include "vrmaps_things.dm"
 
 /datum/map_template/common_lateload/vrworld
 	name = "VR World"

@@ -3,8 +3,11 @@
 	faction = "bird"
 	prob_fall = 0
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/giant_spider/tunneler = 2,
 		/mob/living/simple_mob/vore/bee = 3,
+		/mob/living/simple_mob/animal/giant_spider = 2,
+		/mob/living/simple_mob/animal/giant_spider/hunter = 2,
+		/mob/living/simple_mob/animal/giant_spider/nurse = 2,
+		/mob/living/simple_mob/animal/giant_spider/tunneler = 1,
 		/mob/living/simple_mob/vore/aggressive/giant_snake = 1
 	)
 
@@ -36,6 +39,6 @@
 	faction = "bird"
 	prob_fall = 0
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/passive/fish/salmon = 1,
-		/mob/living/simple_mob/animal/passive/fish/koi = 1
+		/mob/living/simple_mob/animal/passive/fish/salmon = 3,
+		/mob/living/simple_mob/animal/passive/fish/koi = 3
 	)

@@ -12,3 +12,10 @@
 
 /obj/item/clothing/accessory/poncho/cloak/fluff/dropped() //makes the fluff cloaks not kek when used by a teshari
 	icon_override = 'icons/vore/custom_onmob_yw.dmi'
+
+/obj/item/clothing/accessory/medal/silver/achievement
+	name = "Medal of Achievement"
+	desc = "A silver medal awarded to corporate members who have achieved a corporate goal successfully."
+
+/obj/item/clothing/accessory/medal/silver/achievement/twoshuttlesevent
+	desc = "A silver medal awarded to corporate members who have achieved a corporate goal successfully. - This one was awarded for bringing two damaged shuttles back to Cryogaia for rescue and salvage."

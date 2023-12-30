@@ -152,6 +152,23 @@
 	ckeywhitelist = list("blackangelsace")
 	character_name = list("Nicodemus Jarvis")
 
+//Art Echard
+/datum/gear/fluff/art_medal1
+	path = /obj/item/clothing/accessory/medal/silver/achievement/twoshuttlesevent
+	display_name = "Medal of Achievement"
+	description = "A silver medal awarded to corporate members who have achieved a corporate goal successfully. - This one was awarded for bringing two damaged shuttles back to Cryogaia for rescue and salvage."
+	ckeywhitelist = list("blackangelsace")
+    character_name = list("Art Echard")
+
+//Bielbr12312332
+//Dustin Altmann
+/datum/gear/fluff/dustin_medal1
+	path = /obj/item/clothing/accessory/medal/silver/achievement/twoshuttlesevent
+	display_name = "Medal of Achievement"
+	description = "A silver medal awarded to corporate members who have achieved a corporate goal successfully. - This one was awarded for bringing two damaged shuttles back to Cryogaia for rescue and salvage."
+	ckeywhitelist = list("bielbr12312332")
+    character_name = list("Dustin Altmann")
+
 //benl8561
 //M.I.S.S.Y
 /datum/gear/fluff/missy_skirt
@@ -577,6 +594,15 @@
 	character_name = list("Harpsong")
 	allowed_roles = list("Security Officer")
 
+//Hiding_Dan
+//Sierra Ellis
+/datum/gear/fluff/sierra_medal1
+	path = /obj/item/clothing/accessory/medal/silver/achievement/twoshuttlesevent
+	display_name = "Medal of Achievement"
+	description = "A silver medal awarded to corporate members who have achieved a corporate goal successfully. - This one was awarded for bringing two damaged shuttles back to Cryogaia for rescue and salvage."
+	ckeywhitelist = list("hidingdan")
+    character_name = list("Sierra Ellis")
+
 //  I CKEYS
 
 //izac112
@@ -819,6 +845,15 @@
     ckeywhitelist = list("mocatheporg1")
     character_name = list("Mocha")
 
+//Montessquio
+//Elise Maschenny
+/datum/gear/fluff/elise_medal1
+	path = /obj/item/clothing/accessory/medal/silver/achievement/twoshuttlesevent
+	display_name = "Medal of Achievement"
+	description = "A silver medal awarded to corporate members who have achieved a corporate goal successfully. - This one was awarded for bringing two damaged shuttles back to Cryogaia for rescue and salvage."
+	ckeywhitelist = list("montessquio")
+    character_name = list("Elise Maschenny")
+
 //  N CKEYS
 //NESgamer190
 /datum/gear/fluff/lucy_flask
@@ -938,6 +973,14 @@
 	ckeywhitelist = list("snakewitharocketlauncher")
 	character_name = list("Alex Wolf")
 
+//Dakula
+/datum/gear/fluff/dakula_medal1
+	path = /obj/item/clothing/accessory/medal/silver/achievement/twoshuttlesevent
+	display_name = "Medal of Achievement"
+	description = "A silver medal awarded to corporate members who have achieved a corporate goal successfully. - This one was awarded for bringing two damaged shuttles back to Cryogaia for rescue and salvage."
+	ckeywhitelist = list("snakewitharocketlauncher")
+    character_name = list("Dakula")
+
 //splintergp
 //Aroozee Daarvoleast-Clark
 /datum/gear/fluff/aroozee_cloak
@@ -964,6 +1007,15 @@
 
 
 //  T CKEYS
+
+//TinnCatt
+//Kurkivor Snowstrider
+/datum/gear/fluff/kurkivor_medal1
+	path = /obj/item/clothing/accessory/medal/silver/achievement/twoshuttlesevent
+	display_name = "Medal of Achievement"
+	description = "A silver medal awarded to corporate members who have achieved a corporate goal successfully. - This one was awarded for bringing two damaged shuttles back to Cryogaia for rescue and salvage."
+	ckeywhitelist = list("tinncatt")
+    character_name = list("Kurkivor Snowstrider")
 
 //  U CKEYS
 

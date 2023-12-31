@@ -162,6 +162,8 @@
 /client/New(TopicData)
 	TopicData = null							//Prevent calls to client.Topic from connect
 
+	to_world_log("new connection") //YW DEBUG TO REMOVE
+
 	if(!(connection in list("seeker", "web")))					//Invalid connection type.
 		return null
 	if(byond_version < MIN_CLIENT_VERSION)		//Out of date client.
@@ -174,6 +176,7 @@
 
 	//Only show this if they are put into a new_player mob. Otherwise, "what title screen?"
 	if(isnewplayer(src.mob))
+		to_world_log("isnewplayer: [src]") //YW DEBUG TO REMOVE
 		to_chat(src, "<font color='red'>If the title screen is black, resources are still downloading. Please be patient until the title screen appears.</font>")
 
 	GLOB.clients += src
@@ -204,15 +207,19 @@
 	prefs.last_id = computer_id			//these are gonna be used for banning
 	prefs.client = src // Only relevant if we reloaded it from the global list, otherwise prefs/New sets it
 
+	to_world_log("hook_vr call on: [src]") //YW DEBUG TO REMOVE
+
 	hook_vr("client_new",list(src)) //VOREStation Code. For now this only loads vore prefs, so better put before mob.Login() call but after normal prefs are loaded.
 
 	. = ..()	//calls mob.Login()
+	to_world_log("called mob.Login() on [src]") //YW DEBUG TO REMOVE
 	prefs.sanitize_preferences()
 	if(prefs)
 		prefs.selecting_slots = FALSE
 
 	// Initialize tgui panel
 	tgui_panel.initialize()
+	to_world_log("calledtgui_panel.initialize() on [src]") //YW DEBUG TO REMOVE
 
 	connection_time = world.time
 	connection_realtime = world.realtime
@@ -225,6 +232,7 @@
 		to_chat(src, "<br>")
 
 	if(!winexists(src, "asset_cache_browser")) // The client is using a custom skin, tell them.
+		to_world_log("custom skin on [src]") //YW DEBUG TO REMOVE
 		to_chat(src, "<span class='warning'>Unable to access asset cache browser, if you are using a custom skin file, please allow DS to download the updated version, if you are not, then make a bug report. This is not a critical issue but can cause issues with resource downloading, as it is impossible to know when extra resources arrived to you.</span>")
 
 	if(holder)
@@ -239,6 +247,7 @@
 			sleep(2) // wait a bit more, possibly fixes hardware mode not re-activating right
 			winset(src, null, "command=\".configure graphics-hwmode on\"")
 
+	to_world_log("try log client to db[src]") //YW DEBUG TO REMOVE
 	log_client_to_db()
 
 	send_resources()
@@ -311,16 +320,19 @@
 /client/proc/log_client_to_db()
 
 	if ( IsGuestKey(src.key) )
+		to_world_log("is guest key: [src]") //YW DEBUG TO REMOVE
 		return
 
 	establish_db_connection()
 	if(!dbcon.IsConnected())
+		to_world_log("dbCon not connected") //YW DEBUG TO REMOVE
 		return
 
 	var/sql_ckey = sql_sanitize_text(src.ckey)
 
 	var/DBQuery/query = dbcon.NewQuery("SELECT id, datediff(Now(),firstseen) as age FROM erro_player WHERE ckey = '[sql_ckey]'")
 	query.Execute()
+	to_world_log("SQL tried select query") //YW DEBUG TO REMOVE
 	var/sql_id = 0
 	player_age = 0	// New players won't have an entry so knowing we have a connection we set this to zero to be updated if their is a record.
 	while(query.NextRow())
@@ -334,12 +346,16 @@
 		if(query_datediff.Execute() && query_datediff.NextRow())
 			account_age = text2num(query_datediff.item[1])
 
+	to_world_log("SQL tried account age") //YW DEBUG TO REMOVE
+
 	var/DBQuery/query_ip = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE ip = '[address]'")
 	query_ip.Execute()
 	related_accounts_ip = ""
 	while(query_ip.NextRow())
 		related_accounts_ip += "[query_ip.item[1]], "
 		break
+
+	to_world_log("SQL tried ip get") //YW DEBUG TO REMOVE
 
 	var/DBQuery/query_cid = dbcon.NewQuery("SELECT ckey FROM erro_player WHERE computerid = '[computer_id]'")
 	query_cid.Execute()
@@ -348,11 +364,14 @@
 		related_accounts_cid += "[query_cid.item[1]], "
 		break
 
+	to_world_log("SQL tried computerid get") //YW DEBUG TO REMOVE
+
 	//Just the standard check to see if it's actually a number
 	if(sql_id)
 		if(istext(sql_id))
 			sql_id = text2num(sql_id)
 		if(!isnum(sql_id))
+			to_world_log("Ssql_id not a number") //YW DEBUG TO REMOVE
 			return
 
 	var/admin_rank = "Player"
@@ -375,9 +394,11 @@
 
 	// IP Reputation Check
 	if(config.ip_reputation)
+		to_world_log("try ip reputation") //YW DEBUG TO REMOVE
 		if(config.ipr_allow_existing && player_age >= config.ipr_minimum_age)
 			log_admin("Skipping IP reputation check on [key] with [address] because of player age")
 		else if(update_ip_reputation()) //It is set now
+			to_world_log("got reputation") //YW DEBUG TO REMOVE
 			if(ip_reputation >= config.ipr_bad_score) //It's bad
 
 				//Log it
@@ -407,15 +428,20 @@
 		log_debug("Error loading play hours for [ckey]: [error_message]")
 		tgui_alert_async(src, "The query to load your existing playtime failed. Screenshot this, give the screenshot to a developer, and reconnect, otherwise you may lose any recorded play hours (which may limit access to jobs). ERROR: [error_message]", "PROBLEMS!!")
 	// VOREStation Edit End - Department Hours
+	to_world_log("end hours") //YW DEBUG TO REMOVE
 
 	if(sql_id)
+		to_world_log("update player with [sql_id]") //YW DEBUG TO REMOVE
 		//Player already identified previously, we need to just update the 'lastseen', 'ip' and 'computer_id' variables
 		var/DBQuery/query_update = dbcon.NewQuery("UPDATE erro_player SET lastseen = Now(), ip = '[sql_ip]', computerid = '[sql_computerid]', lastadminrank = '[sql_admin_rank]' WHERE id = [sql_id]")
 		query_update.Execute()
 	else
+		to_world_log("insert new row with [sql_ckey]") //YW DEBUG TO REMOVE
 		//New player!! Need to insert all the stuff
 		var/DBQuery/query_insert = dbcon.NewQuery("INSERT INTO erro_player (id, ckey, firstseen, lastseen, ip, computerid, lastadminrank) VALUES (null, '[sql_ckey]', Now(), Now(), '[sql_ip]', '[sql_computerid]', '[sql_admin_rank]')")
 		query_insert.Execute()
+
+	to_world_log("done with SQL stuff") //YW DEBUG TO REMOVE
 
 	//Logging player access
 	var/serverip = "[world.internet_address]:[world.port]"
@@ -443,8 +469,9 @@
 
 //send resources to the client. It's here in its own proc so we can move it around easiliy if need be
 /client/proc/send_resources()
-	spawn (10) //removing this spawn causes all clients to not get verbs.
-
+	to_world_log("sending resources to [src]") //YW DEBUG TO REMOVE
+	spawn (20) //removing this spawn causes all clients to not get verbs. // YW DEBUG INCREASED FROM 10 TO 20
+		to_world_log("spawn over for sending resources to [src]") //YW DEBUG TO REMOVE
 		//load info on what assets the client has
 		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 

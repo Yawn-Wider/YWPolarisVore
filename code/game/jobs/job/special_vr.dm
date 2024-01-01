@@ -68,13 +68,14 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = -1 //YW EDIT
-	spawn_positions = -1 //YW EDIT
+	total_positions = 1 //YW EDIT
+	spawn_positions = 1 //YW EDIT
 	supervisors = "the spirit of laughter"
 	selection_color = "#515151"
 	economic_modifier = 1
 	job_description = "A Clown is there to entertain the crew and keep high morale using various harmless pranks and ridiculous jokes!"
-	whitelist_only = 1
+	whitelist_only = 0 //YW EDIT
+	minimal_player_age = 3 //YW EDIT
 	latejoin_only = 0
 	requestable = FALSE
 	outfit_type = /decl/hierarchy/outfit/job/clown
@@ -99,14 +100,15 @@
 	departments = list(DEPARTMENT_CIVILIAN)
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = -1 //YW EDIT
-	spawn_positions = -1 //YW EDIT
+	total_positions = 1 //YW EDIT
+	spawn_positions = 1 //YW EDIT
 	supervisors = "the spirit of performance"
 	selection_color = "#515151"
 	economic_modifier = 1
 	job_description = "A Mime is there to entertain the crew and keep high morale using unbelievable performances and acting skills!"
 	alt_titles = list("Poseur" = /datum/alt_title/poseur)
-	whitelist_only = 1
+	whitelist_only = 0 //YW EDIT
+	minimal_player_age = 3 //YW EDIT
 	latejoin_only = 0
 	requestable = FALSE
 	outfit_type = /decl/hierarchy/outfit/job/mime

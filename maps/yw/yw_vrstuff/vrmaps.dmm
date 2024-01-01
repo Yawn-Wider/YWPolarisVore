@@ -157,12 +157,6 @@
 	icon_state = "lino"
 	},
 /area/vrworld)
-"dw" = (
-/mob/living/simple_mob/vore/aggressive/giant_snake{
-	faction = "bird"
-	},
-/turf/unsimulated/floor/ironsand,
-/area/vrworld/alwayslit)
 "dz" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 10
@@ -681,15 +675,6 @@
 /obj/structure/flora/tree/jungle_small,
 /turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
-"mY" = (
-/obj/effect/floor_decal/grass_edge{
-	dir = 9
-	},
-/mob/living/simple_mob/animal/giant_spider/tunneler{
-	faction = "bird"
-	},
-/turf/unsimulated/floor/ironsand,
-/area/vrworld/alwayslit)
 "nf" = (
 /obj/structure/simple_door/wood,
 /turf/unsimulated/floor{
@@ -1063,13 +1048,6 @@
 /obj/item/weapon/gun/energy/x01,
 /turf/unsimulated/floor/techfloor_grid,
 /area/vrworld)
-"zF" = (
-/obj/structure/flora/ausbushes,
-/mob/living/simple_mob/vore/aggressive/giant_snake{
-	faction = "bird"
-	},
-/turf/unsimulated/floor/ironsand,
-/area/vrworld/alwayslit)
 "zK" = (
 /obj/structure/flora/ausbushes,
 /obj/effect/floor_decal/grass_edge{
@@ -12538,7 +12516,7 @@ nD
 lq
 sl
 dF
-dw
+RB
 KL
 VT
 VT
@@ -12847,7 +12825,7 @@ Wd
 Wd
 Wd
 Wd
-mY
+hC
 PD
 Pb
 yp
@@ -13654,7 +13632,7 @@ ln
 cT
 RB
 Al
-zF
+jf
 RB
 RB
 RB

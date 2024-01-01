@@ -3603,8 +3603,8 @@
 	pixel_x = -30
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 8
+	dir = 8;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -6250,8 +6250,8 @@
 	dir = 8
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 8
+	dir = 8;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
@@ -7363,8 +7363,8 @@
 	dir = 4
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 8
+	dir = 8;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -7583,8 +7583,8 @@
 	dir = 8
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 4
+	dir = 4;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -12881,8 +12881,8 @@
 	dir = 9
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 8
+	dir = 8;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
@@ -16844,8 +16844,8 @@
 	dir = 4
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 8
+	dir = 8;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -20715,8 +20715,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/corner/brown,
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 4
+	dir = 4;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
@@ -20793,8 +20793,8 @@
 /area/security/detectives_office)
 "hZG" = (
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 8
+	dir = 8;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
@@ -22275,8 +22275,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 4
+	dir = 4;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -23089,13 +23089,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_c)
-"iWR" = (
-/obj/structure/fuel_port{
-	dir = 4;
-	pixel_x = 6
-	},
-/turf/simulated/wall/rshull,
-/area/shuttle/security)
 "iXz" = (
 /obj/structure/table/standard,
 /obj/item/weapon/cartridge/signal/science,
@@ -24369,6 +24362,9 @@
 "jze" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/structure/handrail,
+/obj/structure/fuel_port{
+	pixel_y = 32
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
 "jzi" = (
@@ -25510,8 +25506,8 @@
 "jXs" = (
 /obj/structure/closet/secure_closet/personal,
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 8
+	dir = 8;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -28361,13 +28357,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
-"lei" = (
-/obj/machinery/conveyor{
-	id = "QMLoad2";
-	dir = 8
-	},
-/turf/simulated/floor,
-/area/quartermaster/storage)
 "lev" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -29431,8 +29420,8 @@
 	dir = 4
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 8
+	dir = 8;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -30054,8 +30043,8 @@
 	dir = 10
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 4
+	dir = 4;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
@@ -31101,8 +31090,8 @@
 	dir = 4
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 4
+	dir = 4;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -49595,8 +49584,8 @@
 	dir = 4
 	},
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 4
+	dir = 4;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -53011,8 +53000,8 @@
 "uNO" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/sign/christmas/lights{
-	icon_state = "xmaslights";
-	dir = 4
+	dir = 4;
+	icon_state = "xmaslights"
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
@@ -66582,7 +66571,7 @@ fJY
 ixC
 kSt
 gsI
-iWR
+gsI
 gsI
 gsI
 baA
@@ -82157,7 +82146,7 @@ uuj
 qni
 trn
 yeV
-lei
+pst
 pBQ
 hiX
 ilq

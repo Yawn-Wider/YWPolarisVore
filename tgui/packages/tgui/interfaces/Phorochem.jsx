@@ -2,8 +2,8 @@ import { Button, LabeledList, ProgressBar, Section } from '../components';
 import { useBackend } from '../backend';
 import { Window } from '../layouts';
 
-export const Phorochem = (props, context) => {
-  const { act, data } = useBackend(context);
+export const Phorochem = (props) => {
+  const { act, data } = useBackend();
   const { intensity, phoron, message, timeLeft, timeLeftMax } = data;
   return (
     <Window width={425} height={270} resizable>

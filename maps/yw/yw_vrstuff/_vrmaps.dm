@@ -14,4 +14,4 @@
 /datum/map_z_level/common_lateload/vrworld_destination
 	name = "VR World"
 	z = Z_LEVEL_VRWORLD
-	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED
+	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_SEALED|MAP_LEVEL_CONTACT

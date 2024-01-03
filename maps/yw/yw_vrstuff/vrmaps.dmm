@@ -128,13 +128,6 @@
 	icon_state = "ironsand2"
 	},
 /area/vrworld/alwayslit)
-"cz" = (
-/obj/effect/floor_decal/grass_edge,
-/mob/living/simple_mob/animal/giant_spider/tunneler{
-	faction = "bird"
-	},
-/turf/unsimulated/floor/ironsand,
-/area/vrworld/alwayslit)
 "cD" = (
 /turf/unsimulated/floor{
 	icon_state = "dark"
@@ -164,12 +157,6 @@
 	icon_state = "lino"
 	},
 /area/vrworld)
-"dw" = (
-/mob/living/simple_mob/vore/aggressive/giant_snake{
-	faction = "bird"
-	},
-/turf/unsimulated/floor/ironsand,
-/area/vrworld/alwayslit)
 "dz" = (
 /obj/effect/floor_decal/grass_edge/corner{
 	dir = 10
@@ -562,9 +549,6 @@
 /area/vrworld/alwayslit)
 "kM" = (
 /obj/structure/flora/ausbushes,
-/mob/living/simple_mob/animal/giant_spider/tunneler{
-	faction = "bird"
-	},
 /turf/unsimulated/floor/ironsand{
 	icon_state = "ironsand2"
 	},
@@ -691,15 +675,6 @@
 /obj/structure/flora/tree/jungle_small,
 /turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
-"mY" = (
-/obj/effect/floor_decal/grass_edge{
-	dir = 9
-	},
-/mob/living/simple_mob/animal/giant_spider/tunneler{
-	faction = "bird"
-	},
-/turf/unsimulated/floor/ironsand,
-/area/vrworld/alwayslit)
 "nf" = (
 /obj/structure/simple_door/wood,
 /turf/unsimulated/floor{
@@ -801,6 +776,12 @@
 "rs" = (
 /obj/structure/flora/bush,
 /turf/unsimulated/floor/ironsand,
+/area/vrworld/alwayslit)
+"rt" = (
+/obj/structure/table/glass,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill,
+/turf/unsimulated/floor/irongrass,
 /area/vrworld/alwayslit)
 "rz" = (
 /obj/item/weapon/storage/box/scattershot/large,
@@ -1067,13 +1048,6 @@
 /obj/item/weapon/gun/energy/x01,
 /turf/unsimulated/floor/techfloor_grid,
 /area/vrworld)
-"zF" = (
-/obj/structure/flora/ausbushes,
-/mob/living/simple_mob/vore/aggressive/giant_snake{
-	faction = "bird"
-	},
-/turf/unsimulated/floor/ironsand,
-/area/vrworld/alwayslit)
 "zK" = (
 /obj/structure/flora/ausbushes,
 /obj/effect/floor_decal/grass_edge{
@@ -1208,6 +1182,10 @@
 /obj/structure/flora/bush,
 /turf/simulated/floor/water,
 /area/vrworld/alwayslit)
+"Cc" = (
+/obj/machinery/telecomms/relay/preset/station,
+/turf/unsimulated/floor/steel,
+/area/vrworld)
 "Cf" = (
 /obj/item/weapon/gun/projectile/automatic/tommygun,
 /turf/unsimulated/floor{
@@ -1915,6 +1893,10 @@
 	},
 /turf/unsimulated/floor/ironsand,
 /area/vrworld/alwayslit)
+"VI" = (
+/obj/machinery/appliance/cooker/grill,
+/turf/unsimulated/floor/irongrass,
+/area/vrworld/alwayslit)
 "VN" = (
 /obj/effect/floor_decal/grass_edge{
 	dir = 1
@@ -2158,8 +2140,8 @@ Ma
 Ma
 Ma
 Ma
-VT
-VT
+Ma
+Ma
 VT
 VT
 VT
@@ -2320,8 +2302,8 @@ QX
 DJ
 nO
 Ma
-VT
-VT
+Cc
+Ma
 VT
 VT
 VT
@@ -2482,8 +2464,8 @@ Mx
 DJ
 Ig
 wT
-VT
-VT
+Ma
+Ma
 VT
 VT
 VT
@@ -9930,8 +9912,8 @@ Wd
 Wd
 Wd
 Wd
-Wd
-Wd
+rt
+VI
 Wv
 Wv
 GG
@@ -10078,7 +10060,7 @@ VT
 (50,1,1) = {"
 KL
 RB
-cz
+cp
 Wd
 hC
 lh
@@ -12534,7 +12516,7 @@ nD
 lq
 sl
 dF
-dw
+RB
 KL
 VT
 VT
@@ -12843,7 +12825,7 @@ Wd
 Wd
 Wd
 Wd
-mY
+hC
 PD
 Pb
 yp
@@ -13650,7 +13632,7 @@ ln
 cT
 RB
 Al
-zF
+jf
 RB
 RB
 RB
@@ -16892,8 +16874,8 @@ pX
 ye
 pX
 pX
-Wd
-Wd
+VI
+rt
 Wd
 Wd
 Wd

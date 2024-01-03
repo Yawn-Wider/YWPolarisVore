@@ -23,6 +23,7 @@
 #define Z_LEVEL_GATEWAY					22
 #define Z_LEVEL_OM_ADVENTURE			23
 #define Z_LEVEL_REDGATE					24
+#define Z_LEVEL_VRWORLD					25
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -193,7 +194,12 @@
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space"),
-		list("Fuel Depot - Z1 Space")
+		list("Fuel Depot - Z1 Space"),
+		list("VR World")
+		)
+
+	lateload_overmap = list(
+		list("Grass Cave")
 		)
 
 	ai_shell_restricted = TRUE
@@ -210,11 +216,14 @@
 	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1, Z_LEVEL_ROGUEMINE_2)
 
-	lateload_gateway = list( //Gateway missions
-		list("Snow Outpost"),
-		list("Carp Farm"),
-		list("Snow Field"),
-		list("Listening Post")
+	lateload_gateway = list(
+		list("Gateway - Carp Farm"),
+		list("Gateway - Snow Field"),
+		list("Gateway - Listening Post"),
+		list(list("Gateway - Honleth Highlands A", "Gateway - Honleth Highlands B")),
+		list("Gateway - Arynthi Lake Underground A","Gateway - Arynthi Lake A"),
+		list("Gateway - Arynthi Lake Underground B","Gateway - Arynthi Lake B"),
+		list("Gateway - Wild West")
 		)
 
 	lateload_gateway = null //Nothing right now.

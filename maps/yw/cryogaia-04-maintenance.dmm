@@ -568,8 +568,11 @@
 /turf/simulated/mineral/cave,
 /area/maintenance/security_lower)
 "awQ" = (
-/obj/machinery/door/airlock/angled_bay/double/glass/chaplain{
-	dir = 8
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
@@ -2493,6 +2496,21 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
+"bKg" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 2;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 8;
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "bKr" = (
 /obj/structure/closet,
 /turf/simulated/floor/tiled/dark,
@@ -3727,9 +3745,17 @@
 	c_tag = "Chapel Hall";
 	dir = 5
 	},
-/obj/effect/decal/shadow/floor,
 /obj/structure/catwalk,
-/turf/simulated/floor/water/hotspring,
+/obj/structure/disposalpipe/segment{
+	dir = 1;
+	icon_state = "pipe-c"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 4;
+	icon_state = "1-4"
+	},
+/turf/simulated/floor,
 /area/chapel/main)
 "cvu" = (
 /obj/machinery/alarm{
@@ -9084,14 +9110,13 @@
 /area/vacant/vacant_site/locker)
 "fQq" = (
 /obj/effect/floor_decal/rust,
-/obj/structure/cable/green{
-	d1 = 2;
-	d2 = 4;
-	icon_state = "2-4"
-	},
 /obj/structure/disposalpipe/segment{
-	dir = 4;
-	icon_state = "pipe-c"
+	dir = 4
+	},
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
 /turf/simulated/floor,
 /area/maintenance/chapel)
@@ -9357,6 +9382,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/central)
+"fZF" = (
+/obj/structure/catwalk,
+/obj/effect/mist,
+/obj/effect/decal/shadow/floor,
+/turf/simulated/floor/water/hotspring,
+/area/chapel/main)
 "gaL" = (
 /obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/tiled/white,
@@ -10769,6 +10800,9 @@
 	},
 /obj/machinery/newscaster{
 	pixel_y = 32
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
@@ -14439,6 +14473,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
+"iQI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/chapel/main)
 "iQO" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green,
@@ -16106,6 +16149,17 @@
 /area/library_conference_room)
 "jLN" = (
 /obj/machinery/door/airlock/maintenance/common,
+/obj/structure/disposalpipe/segment,
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/structure/cable/green{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
 /turf/simulated/floor,
 /area/chapel/main)
 "jLX" = (
@@ -16599,6 +16653,12 @@
 	},
 /turf/simulated/floor/carpet/oracarpet,
 /area/library_conference_room)
+"jZH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/door/firedoor,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/chapel_morgue)
 "jZK" = (
 /obj/structure/table/marble,
 /obj/machinery/door/blast/shutters{
@@ -19221,6 +19281,11 @@
 "lqY" = (
 /turf/simulated/floor/carpet,
 /area/maintenance/maintroom2)
+"lrb" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "lrK" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -19742,14 +19807,17 @@
 /turf/simulated/floor/wood,
 /area/library)
 "lHK" = (
-/obj/structure/cable/green{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
+/obj/structure/disposalpipe/segment{
+	dir = 4;
+	icon_state = "pipe-c"
 	},
-/obj/structure/disposalpipe/segment,
-/turf/simulated/wall,
-/area/chapel/main)
+/obj/structure/cable/green{
+	d1 = 2;
+	d2 = 4;
+	icon_state = "2-4"
+	},
+/turf/simulated/floor,
+/area/maintenance/chapel)
 "lHO" = (
 /turf/simulated/mineral/ignore_mapgen/cave,
 /area/maintenance/medical_lower)
@@ -24345,6 +24413,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/airlock/angled_bay/double/glass/chaplain,
+/obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/chapel_morgue)
 "ozS" = (
@@ -27342,6 +27411,8 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet,
 /area/chapel/main)
 "qgi" = (
@@ -30310,6 +30381,9 @@
 /obj/machinery/door/airlock/glass{
 	name = "Public Occult Room"
 	},
+/obj/machinery/door/firedoor,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "sds" = (
@@ -32786,6 +32860,12 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_9)
 "tCR" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/chapel/main)
 "tDC" = (
@@ -33388,15 +33468,15 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "tQw" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
 /obj/structure/disposalpipe/segment{
 	dir = 2;
 	icon_state = "pipe-c"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
 	},
 /turf/simulated/floor/carpet,
 /area/chapel/main)
@@ -36937,6 +37017,15 @@
 	},
 /turf/simulated/floor,
 /area/engineering/atmos)
+"vPZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/chapel/main)
 "vQc" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -37447,6 +37536,11 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/lowfloor3)
+"wfq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/carpet,
+/area/chapel/main)
 "wgf" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 6
@@ -38905,6 +38999,9 @@
 /obj/effect/floor_decal/chapel{
 	dir = 1
 	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "xdj" = (
@@ -39754,6 +39851,15 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/maintroom6)
+"xzv" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/carpet,
+/area/chapel/main)
 "xzz" = (
 /obj/machinery/door/airlock/atmos{
 	name = "Atmospherics Maintenance";
@@ -40545,6 +40651,16 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled/hydro,
 /area/hydroponics)
+"xXR" = (
+/obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/main)
 "xXT" = (
 /obj/structure/railing{
 	dir = 4
@@ -54997,10 +55113,10 @@ mwy
 mwy
 wdi
 nHo
-eEU
+lHK
 jLN
 cvo
-alY
+fZF
 mih
 alY
 vku
@@ -55160,8 +55276,8 @@ voz
 wdi
 eEU
 fQq
-lHK
-mVS
+vku
+bKg
 mVS
 rjg
 rjg
@@ -55324,13 +55440,13 @@ eEU
 cUr
 vku
 nwk
-noc
-noc
-noc
-nwk
-nwk
+xzv
+wfq
+wfq
+lrb
+lrb
 qfR
-noc
+wfq
 tQw
 mJs
 soW
@@ -55486,7 +55602,7 @@ eEU
 yjm
 vku
 nwk
-nwk
+awQ
 nwk
 nwk
 nwk
@@ -55810,7 +55926,7 @@ pPB
 yjm
 vku
 nwk
-bwu
+xXR
 vku
 ool
 vku
@@ -55972,7 +56088,7 @@ igd
 cCw
 vku
 jHr
-nwk
+awQ
 vku
 alY
 vku
@@ -56134,7 +56250,7 @@ yek
 cCw
 vku
 nwk
-nwk
+awQ
 wRW
 mih
 pYg
@@ -56296,7 +56412,7 @@ mwI
 cCw
 vku
 nwk
-nwk
+awQ
 wRW
 ilK
 pLL
@@ -56620,9 +56736,9 @@ lLS
 crq
 vku
 nwk
-tCR
+vPZ
 sdr
-tCR
+iQI
 nwk
 qxS
 iIu
@@ -56960,7 +57076,7 @@ rOX
 fSK
 bRw
 lIA
-cBi
+jZH
 cBi
 rIz
 fjn

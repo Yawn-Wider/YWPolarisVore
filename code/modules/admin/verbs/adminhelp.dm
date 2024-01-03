@@ -424,14 +424,13 @@ GLOBAL_DATUM_INIT(ahelp_tickets, /datum/admin_help_tickets, new)
 	message_admins(msg)
 	log_admin(msg)
 	AddInteraction("[key_name_admin(usr)] is now handling this ticket.")
-	var/query_string = "type=admintake"
-	query_string += "&key=[url_encode(config.chat_webhook_key)]"
-	query_string += "&admin=[url_encode(key_name_admin(usr))]"
-	query_string += "&user=[url_encode(key_name(initiator))]"
-	world.Export("[config.chat_webhook_url]?[query_string]")
-
-
-
+	SSwebhooks.send( // YW EDIT: Reverts to use SSwebhooks
+		WEBHOOK_AHELP_SENT,
+		list(
+			"name" = "Ticket ([id]) (Game ID: [game_id]) being handled.",
+			"body" = "[key_name(usr)] is now handling the ticket."
+		)
+	)
 
 //Show the ticket panel
 /datum/admin_help/proc/TicketPanel()

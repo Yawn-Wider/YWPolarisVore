@@ -64,6 +64,7 @@
 			var/topic_response = list(DMAPI5_PARAMETER_CUSTOM_COMMANDS = ListCustomCommands())
 			return json_encode(topic_response)
 		// VOREStation Edit - End
+
 		if(DMAPI5_TOPIC_COMMAND_EVENT_NOTIFICATION)
 			var/list/event_notification = topic_parameters[DMAPI5_TOPIC_PARAMETER_EVENT_NOTIFICATION]
 			if(!istype(event_notification))
@@ -179,6 +180,7 @@
 
 			var/list/reattach_response = TopicResponse(error_message)
 			reattach_response[DMAPI5_PARAMETER_CUSTOM_COMMANDS] = ListCustomCommands()
+			reattach_response[DMAPI5_PARAMETER_TOPIC_PORT] = GetTopicPort()
 			return reattach_response
 
 		if(DMAPI5_TOPIC_COMMAND_SEND_CHUNK)

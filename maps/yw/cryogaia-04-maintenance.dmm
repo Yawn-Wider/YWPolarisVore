@@ -4834,9 +4834,12 @@
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
 "deE" = (
-/obj/machinery/space_heater,
 /obj/machinery/light/small{
 	dir = 8
+	},
+/obj/machinery/space_heater{
+	name = "sauna space heater";
+	set_temperature = 313.15
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
@@ -5997,7 +6000,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
 "dSy" = (
-/obj/machinery/space_heater,
+/obj/machinery/space_heater{
+	name = "sauna space heater";
+	set_temperature = 313.15
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "dSD" = (
@@ -18979,7 +18985,10 @@
 	id = "sauna2";
 	pixel_x = -24
 	},
-/obj/machinery/space_heater,
+/obj/machinery/space_heater{
+	name = "sauna space heater";
+	set_temperature = 313.15
+	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
 	},
@@ -21408,9 +21417,12 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/sleep/engi_wash)
 "mHq" = (
-/obj/machinery/space_heater,
 /obj/machinery/light/small{
 	dir = 4
+	},
+/obj/machinery/space_heater{
+	name = "sauna space heater";
+	set_temperature = 313.15
 	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
@@ -40931,11 +40943,14 @@
 	id = "sauna1";
 	pixel_x = 24
 	},
-/obj/machinery/space_heater,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain,
+/obj/machinery/space_heater{
+	name = "sauna space heater";
+	set_temperature = 313.15
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "yjm" = (

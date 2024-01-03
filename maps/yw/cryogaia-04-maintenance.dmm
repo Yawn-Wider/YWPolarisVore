@@ -7858,7 +7858,7 @@
 /area/ai_monitored/storage/emergency/eva)
 "eWi" = (
 /turf/simulated/floor/water/indoors,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "eWC" = (
 /obj/machinery/firealarm{
 	pixel_y = 24
@@ -8053,7 +8053,7 @@
 "fgD" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/water/indoors,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "fgQ" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -17709,7 +17709,7 @@
 "kzG" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/water/deep/indoors,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "kAb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
@@ -17929,7 +17929,7 @@
 /obj/structure/catwalk,
 /obj/random/trash_pile,
 /turf/simulated/floor,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "kFO" = (
 /obj/structure/railing{
 	dir = 1
@@ -18608,7 +18608,7 @@
 "kXU" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/water/deep/indoors,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "kXY" = (
 /obj/structure/stairs/spawner/west,
 /obj/structure/window/reinforced{
@@ -26909,7 +26909,7 @@
 "pUq" = (
 /obj/item/stack/rods,
 /turf/simulated/floor/water/deep/indoors,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "pUr" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -28353,7 +28353,7 @@
 /obj/structure/catwalk,
 /obj/effect/decal/shadow/floor,
 /turf/simulated/floor/water/indoors,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "qOW" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -29694,6 +29694,10 @@
 /obj/structure/lattice,
 /turf/simulated/floor,
 /area/engineering/atmos)
+"rIF" = (
+/obj/random/trash_pile,
+/turf/simulated/floor,
+/area/maintenance/chapel)
 "rIJ" = (
 /turf/simulated/wall/r_wall,
 /area/library)
@@ -33599,7 +33603,7 @@
 /obj/random/trash_pile,
 /obj/structure/catwalk,
 /turf/simulated/floor,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "tXX" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -33846,7 +33850,7 @@
 "udd" = (
 /obj/structure/boulder,
 /turf/simulated/floor/water/indoors,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "udi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -35778,7 +35782,7 @@
 "vgM" = (
 /obj/structure/catwalk,
 /turf/simulated/floor,
-/area/mine/explored/lower_rock)
+/area/maintenance/chapel)
 "vgO" = (
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
@@ -37217,6 +37221,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
+"vWR" = (
+/turf/simulated/floor/water/deep/indoors,
+/area/maintenance/chapel)
 "vWW" = (
 /obj/machinery/door/window/southright{
 	dir = 1;
@@ -57432,8 +57439,8 @@ vku
 vku
 nHo
 nHo
-gZI
-gZI
+nHo
+nHo
 otV
 otV
 otV
@@ -57594,8 +57601,8 @@ eEU
 eEU
 eEU
 eEU
-emb
-ewM
+eEU
+rIF
 mwy
 mwy
 mwy
@@ -57756,10 +57763,10 @@ oGC
 mvX
 iGJ
 nHo
-emb
+eEU
 vgM
-gZI
-gZI
+nHo
+nHo
 mwy
 mwy
 mwy
@@ -57918,10 +57925,10 @@ nHo
 nHo
 fya
 nHo
-emb
+eEU
 qON
 eWi
-gZI
+nHo
 mHL
 mHL
 mHL
@@ -58082,8 +58089,8 @@ lfy
 nHo
 udd
 fgD
-aDx
-gZI
+vWR
+nHo
 mHL
 sdj
 ggK
@@ -58244,7 +58251,7 @@ lfy
 nHo
 aDx
 kXU
-aDx
+vWR
 mwy
 mHL
 kEK
@@ -58404,9 +58411,9 @@ nHo
 vaR
 lfy
 nHo
-aDx
+vWR
 pUq
-aDx
+vWR
 mwy
 mHL
 sdj
@@ -58567,7 +58574,7 @@ eEU
 lfy
 nHo
 kFm
-aDx
+vWR
 tXP
 mwy
 mHL
@@ -58728,10 +58735,10 @@ mwy
 vaR
 lfy
 nHo
-aDx
+vWR
 pUq
 kzG
-gZI
+nHo
 mHL
 kEK
 xuY
@@ -58893,7 +58900,7 @@ nHo
 eWi
 fgD
 udd
-gZI
+nHo
 mHL
 kEK
 xuY
@@ -59052,7 +59059,7 @@ mwy
 nHo
 lfy
 nHo
-emb
+eEU
 qON
 mwy
 mwy
@@ -59214,7 +59221,7 @@ nHo
 nHo
 lfy
 eEU
-emb
+eEU
 vgM
 mwy
 mwy
@@ -59540,7 +59547,7 @@ lfy
 nHo
 nHo
 nHo
-gZI
+nHo
 hYh
 hYh
 hYh

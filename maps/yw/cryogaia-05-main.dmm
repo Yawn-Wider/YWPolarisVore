@@ -23000,13 +23000,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_c)
-"iWR" = (
-/obj/structure/fuel_port{
-	dir = 4;
-	pixel_x = 6
-	},
-/turf/simulated/wall/rshull,
-/area/shuttle/security)
 "iXz" = (
 /obj/structure/table/standard,
 /obj/item/weapon/cartridge/signal/science,
@@ -24276,6 +24269,9 @@
 "jze" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /obj/structure/handrail,
+/obj/structure/fuel_port{
+	pixel_y = 28
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
 "jzi" = (
@@ -66388,7 +66384,7 @@ fJY
 ixC
 kSt
 gsI
-iWR
+gsI
 gsI
 gsI
 baA

@@ -34889,6 +34889,7 @@
 	dir = 8;
 	pixel_x = 28
 	},
+/mob/living/silicon/robot/ai_shell,
 /turf/simulated/floor/tiled/dark,
 /area/ai_foyer)
 "utu" = (
@@ -40013,6 +40014,10 @@
 	},
 /turf/simulated/floor,
 /area/engineering/hallway_lower)
+"xti" = (
+/obj/structure/table/steel,
+/turf/simulated/floor,
+/area/maintenance/starboard)
 "xtk" = (
 /obj/structure/reagent_dispensers/fueltank,
 /turf/simulated/floor/tiled,
@@ -41558,10 +41563,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/aft)
-"ymn" = (
-/obj/structure/table/steel,
-/turf/simulated/floor,
-/area/maintenance/starboard)
 
 (1,1,1) = {"
 qDW
@@ -61528,7 +61529,7 @@ eNq
 whU
 whU
 hIa
-ymn
+xti
 kpQ
 eNq
 mwy

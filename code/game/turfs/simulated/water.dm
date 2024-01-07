@@ -112,7 +112,7 @@
 	under_state = "pool"
 	outdoors = OUTDOORS_NO
 
-/turf/simulated/floor/water/pool/black
+/turf/simulated/floor/water/pool/black // YW Addition
 	name = "pool"
 	desc = "Don't worry, it's not closed."
 	under_state = "poolblack"

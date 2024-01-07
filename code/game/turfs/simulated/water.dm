@@ -115,6 +115,7 @@
 /turf/simulated/floor/water/pool/black // YW Addition
 	name = "pool"
 	desc = "Don't worry, it's not closed."
+	icon = 'icons/turf/outdoors_yw.dmi'
 	under_state = "poolblack"
 	outdoors = OUTDOORS_NO
 

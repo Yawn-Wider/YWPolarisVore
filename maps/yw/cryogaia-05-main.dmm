@@ -2010,7 +2010,12 @@
 	external_pressure_bound = 101.3;
 	external_pressure_bound_default = 101.3;
 	pressure_checks = 1;
-	pressure_checks_default = 1
+	pressure_checks_default = 1;
+	name = "overpressurization vent"
+	},
+/obj/machinery/camera/network/medbay{
+	c_tag = "Medbay Auto Resleeving";
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/autoresleeving)
@@ -16477,11 +16482,13 @@
 /turf/simulated/floor/tiled/red,
 /area/security/armoury)
 "gqF" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/camera/network/engineering{
+	c_tag = "Engineering Lobby South";
+	dir = 1
 	},
-/turf/simulated/floor/tiled,
-/area/crew_quarters/locker)
+/turf/simulated/floor,
+/area/storage/tech)
 "gqK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
@@ -40023,6 +40030,7 @@
 	dir = 1;
 	pixel_y = -25
 	},
+/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "pwp" = (
@@ -42670,21 +42678,22 @@
 	external_pressure_bound = 101.3;
 	external_pressure_bound_default = 101.3;
 	pressure_checks = 1;
-	pressure_checks_default = 1
+	pressure_checks_default = 1;
+	name = "overpressurization vent"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/disposals)
 "qDD" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/door/airlock/engineering{
 	name = "Security Substation";
 	req_one_access = list(1,11,24)
 	},
 /obj/machinery/door/firedoor/border_only,
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/security)
 "qDN" = (
@@ -44219,9 +44228,6 @@
 /obj/item/weapon/circuitboard/communications{
 	pixel_x = 5;
 	pixel_y = -5
-	},
-/obj/machinery/light/small{
-	dir = 8
 	},
 /obj/machinery/power/apc{
 	dir = 8;
@@ -57094,6 +57100,9 @@
 	pixel_y = -3
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "wyL" = (
@@ -59530,6 +59539,9 @@
 	pixel_y = -3
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/storage/tech)
 "xuz" = (
@@ -74851,7 +74863,7 @@ kyp
 fzZ
 jYh
 rxl
-flG
+gqF
 kru
 evI
 iNn
@@ -79988,15 +80000,15 @@ uDf
 uDf
 uDf
 uDf
-qNF
-qNF
-qNF
-qNF
-qNF
-qNF
-qNF
-qNF
-qNF
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
 aOG
 mFx
 wZI
@@ -80041,7 +80053,7 @@ wEa
 awo
 meK
 woj
-gqF
+awo
 wEa
 cUe
 nLs

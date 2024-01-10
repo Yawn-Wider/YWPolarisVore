@@ -106,3 +106,12 @@
 	name = "Swimming Top"
 	icon_state = "swimtop"
 	has_color = TRUE
+
+/datum/category_item/underwear/top/nekobra
+	name = "Neko Bra"
+	icon_state = "bra_neko"
+	has_color = FALSE
+
+/datum/category_item/underwear/top/beebra
+	name = "Bee Bra"
+	icon_state = "bee_bra"

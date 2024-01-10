@@ -252,3 +252,33 @@
 	name = "Leotard"
 	icon_state = "leotard"
 	has_color = TRUE
+
+/datum/category_item/underwear/undershirt/band
+	name = "Band Tee"
+	icon_state = "band"
+	has_color = FALSE
+
+/datum/category_item/underwear/undershirt/alien
+	name = "Alien Shirt"
+	icon_state = "shirt_alien"
+	has_color = FALSE
+
+/datum/category_item/underwear/undershirt/skull
+	name = "Skull Shirt"
+	icon_state = "shirt_skull"
+	has_color = FALSE
+
+/datum/category_item/underwear/undershirt/peace
+	name = "Peace Shirt"
+	icon_state = "peace"
+	has_color = FALSE
+
+/datum/category_item/underwear/undershirt/bee
+	name = "Bee Shirt"
+	icon_state = "bee_shirt"
+	has_color = FALSE
+
+/datum/category_item/underwear/undershirt/one_arm
+	name = "Shoulder Shirt"
+	icon_state = "one_arm"
+	has_color = TRUE

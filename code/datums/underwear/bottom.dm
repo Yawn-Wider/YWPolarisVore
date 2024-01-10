@@ -31,6 +31,10 @@
 	name = "Boxers, green & blue striped"
 	icon_state = "boxers_green_and_blue"
 
+/datum/category_item/underwear/bottom/boxers_bee
+	name = "Bee Boxers"
+	icon_state = "boxers_bee"
+
 /datum/category_item/underwear/bottom/panties
 	name = "Panties"
 	icon_state = "panties"
@@ -106,3 +110,7 @@
 	name = "Swimming One Piece, Strapless"
 	icon_state = "swim_strapless_onepiece"
 	has_color = TRUE
+
+/datum/category_item/underwear/bottom/panties_bee
+	name = "Bee Panties"
+	icon_state = "bee_panties"

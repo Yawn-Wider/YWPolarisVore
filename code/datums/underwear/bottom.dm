@@ -31,10 +31,6 @@
 	name = "Boxers, green & blue striped"
 	icon_state = "boxers_green_and_blue"
 
-/datum/category_item/underwear/bottom/boxers_bee
-	name = "Bee Boxers"
-	icon_state = "boxers_bee"
-
 /datum/category_item/underwear/bottom/panties
 	name = "Panties"
 	icon_state = "panties"
@@ -116,6 +112,9 @@
 	name = "Bee Panties"
 	icon_state = "panties_bee"
 	icon = 'icons/mob/human_yw.dmi'
-	has_color = FALSE
 
+/datum/category_item/underwear/bottom/boxers_bee
+	name = "Bee Boxers"
+	icon = 'icons/mob/human_yw.dmi'
+	icon_state = "boxers_bee"
 // YW CHANGES END HERE //

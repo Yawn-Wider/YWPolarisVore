@@ -258,53 +258,53 @@
 /datum/category_item/underwear/undershirt/alien
 	name = "Alien Shirt"
 	icon_state = "shirt_alien"
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 	has_color = FALSE
 
 /datum/category_item/underwear/undershirt/pogoman
 	name = "Pogoman Shirt"
 	icon_state = "pogoman"
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 	has_color = FALSE
 
 /datum/category_item/underwear/undershirt/question
 	name = "Question Mark Shirt"
 	icon_state = "shirt_question"
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 	has_color = FALSE
 
 /datum/category_item/underwear/undershirt/band
 	name = "Band Tee"
 	icon_state = "band"
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 
 /datum/category_item/underwear/undershirt/ss13
 	name = "13 Shirt"
 	icon_state = "shirt_ss13"
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 
 
 /datum/category_item/underwear/undershirt/commie
 	name = "Communism Shirt"
 	icon_state = "shirt_commie"
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 
 
 /datum/category_item/underwear/undershirt/skull
 	name = "Skull Shirt"
 	icon_state = "shirt_skull"
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 
 
 /datum/category_item/underwear/undershirt/peace
 	name = "Peace Shirt"
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 	icon_state = "peace"
 
 
 /datum/category_item/underwear/undershirt/bee
 	name = "Bee Shirt"
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 	icon_state = "bee_shirt"
 
 // YW CHANGES END HERE //

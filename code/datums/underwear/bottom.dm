@@ -115,7 +115,7 @@
 /datum/category_item/underwear/bottom/beepanties
 	name = "Bee Panties"
 	icon_state = "panties_bee"
-	icon = "cons/mob/Human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 	has_color = FALSE
 
 // YW CHANGES END HERE //

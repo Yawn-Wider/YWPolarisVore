@@ -217,7 +217,7 @@
 // YW CHANGES BEGIN HERE //
 
 /datum/category_item/underwear/socks/shortthighstripe
-	icon = "icons/mob/human_yw.dmi"
+	icon = 'icons/mob/human_yw.dmi'
 	name = "Short Striped Socks"
 	icon_state = "socks_thigh_stripe_short"
 

@@ -213,3 +213,12 @@
 /datum/category_item/underwear/socks/stirrup_pantyhose
 	name = "Pantyhose, stirrup"
 	icon_state = "pantyhose-stir"
+
+// YW CHANGES BEGIN HERE //
+
+/datum/category_item/underwear/socks/shortthighstripe
+	icon = "icons/mob/human_yw.dmi"
+	name = "Short Striped Socks"
+	icon_state = "socks_thigh_stripe_short"
+
+// YW CHANGES END HERE //

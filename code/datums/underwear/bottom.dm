@@ -111,6 +111,11 @@
 	icon_state = "swim_strapless_onepiece"
 	has_color = TRUE
 
-/datum/category_item/underwear/bottom/panties_bee
+// YW CHANGES START HERE //
+/datum/category_item/underwear/bottom/beepanties
 	name = "Bee Panties"
-	icon_state = "bee_panties"
+	icon_state = "panties_bee"
+	icon = "cons/mob/Human_yw.dmi"
+	has_color = FALSE
+
+// YW CHANGES END HERE //

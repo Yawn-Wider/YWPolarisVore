@@ -107,11 +107,18 @@
 	icon_state = "swimtop"
 	has_color = TRUE
 
-/datum/category_item/underwear/top/nekobra
-	name = "Neko Bra"
-	icon_state = "bra_neko"
-	has_color = FALSE
+// YW CHANGES BEGIN HERE //
+
+/datum/category_item/underwear/top/ribbon
+	name = "Ribbon Bra"
+	icon_state = "ribbon"
+	icon = "icons/mob/human_yw.dmi"
+	has_color = TRUE
 
 /datum/category_item/underwear/top/beebra
 	name = "Bee Bra"
-	icon_state = "bee_bra"
+	icon_state = "bra_bee"
+	icon = "icons/mob/human_yw.dmi"
+	has_color = TRUE
+
+// YW CHANGES END HERE //

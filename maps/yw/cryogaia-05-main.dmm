@@ -910,6 +910,11 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
+"aro" = (
+/obj/structure/catwalk,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "arq" = (
 /obj/structure/bed/chair/comfy/black,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -988,6 +993,10 @@
 "ata" = (
 /turf/simulated/floor/tiled/white,
 /area/borealis2/elevator/medbay)
+"atj" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "ato" = (
 /obj/machinery/atmospherics/portables_connector,
 /turf/simulated/floor,
@@ -2009,9 +2018,9 @@
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos{
 	external_pressure_bound = 101.3;
 	external_pressure_bound_default = 101.3;
+	name = "overpressurization vent";
 	pressure_checks = 1;
-	pressure_checks_default = 1;
-	name = "overpressurization vent"
+	pressure_checks_default = 1
 	},
 /obj/machinery/camera/network/medbay{
 	c_tag = "Medbay Auto Resleeving";
@@ -3064,7 +3073,6 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/maintenance/research_starboard)
 "big" = (
@@ -4202,6 +4210,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/research_starboard)
 "bJZ" = (
@@ -5724,6 +5733,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/southeast)
+"ckL" = (
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "ckM" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 8
@@ -15098,6 +15111,11 @@
 /obj/structure/table/glass,
 /turf/simulated/floor/tiled,
 /area/security/briefing_room)
+"fRi" = (
+/obj/structure/catwalk,
+/obj/structure/lattice,
+/turf/simulated/open,
+/area/maintenance/research_starboard)
 "fRm" = (
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
@@ -17458,6 +17476,10 @@
 "gKK" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/grounds/tower/northeast)
+"gKL" = (
+/obj/structure/sign/directions/ladder_down,
+/turf/simulated/wall,
+/area/maintenance/research_starboard)
 "gLb" = (
 /obj/structure/bed/chair/sofa,
 /turf/simulated/floor/tiled/techfloor,
@@ -18156,6 +18178,13 @@
 /obj/machinery/r_n_d/circuit_imprinter,
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
+"gYA" = (
+/obj/random/trash_pile,
+/obj/effect/decal/cleanable/cobweb2{
+	icon_state = "cobweb1"
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "gZe" = (
 /obj/item/weapon/stool/padded,
 /obj/machinery/button/windowtint{
@@ -22039,9 +22068,12 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "iCT" = (
-/mob/living/simple_mob/animal/passive/penguin,
-/turf/simulated/floor/outdoors/snow/snow/cryogaia/covered,
-/area/borealis2/outdoors/grounds)
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/open,
+/area/maintenance/research_starboard)
 "iDd" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -22823,6 +22855,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
+"iTL" = (
+/obj/structure/closet/emcloset,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "iUf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
@@ -24240,6 +24276,10 @@
 /obj/effect/floor_decal/corner/yellow/diagonal,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_monitoring)
+"jyp" = (
+/mob/living/simple_mob/animal/passive/penguin,
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "jyt" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -26796,6 +26836,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
+"kxJ" = (
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "kxM" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/plating,
@@ -33379,6 +33422,10 @@
 	},
 /turf/simulated/floor,
 /area/medical/psych)
+"mVK" = (
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "mVR" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -37751,6 +37798,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/southeast)
+"oFy" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "oFS" = (
 /obj/structure/closet/secure_closet/miner,
 /obj/effect/floor_decal/corner/brown{
@@ -42409,6 +42463,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
+"qwD" = (
+/obj/effect/decal/cleanable/cobweb2,
+/obj/structure/ore_box,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "qwR" = (
 /obj/machinery/button/remote/blast_door{
 	id = "bridge blast";
@@ -42677,9 +42736,9 @@
 	dir = 8;
 	external_pressure_bound = 101.3;
 	external_pressure_bound_default = 101.3;
+	name = "overpressurization vent";
 	pressure_checks = 1;
-	pressure_checks_default = 1;
-	name = "overpressurization vent"
+	pressure_checks_default = 1
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/quartermaster/disposals)
@@ -43959,6 +44018,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
+"rbR" = (
+/obj/structure/table/rack{
+	dir = 8;
+	layer = 2.9
+	},
+/obj/random/maintenance/research,
+/obj/random/maintenance/research,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "rci" = (
 /obj/structure/table/rack{
 	dir = 8;
@@ -44274,6 +44342,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/research_starboard)
 "riu" = (
@@ -51906,6 +51975,11 @@
 	},
 /turf/simulated/wall,
 /area/maintenance/substation/cargo)
+"urZ" = (
+/obj/structure/ladder,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "usw" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -56759,6 +56833,10 @@
 /obj/effect/floor_decal/corner/red,
 /turf/simulated/floor/tiled/steel,
 /area/security/brig)
+"wrM" = (
+/obj/effect/decal/cleanable/cobweb2,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "wrO" = (
 /obj/structure/sign/department/shield,
 /turf/simulated/wall,
@@ -57430,6 +57508,10 @@
 "wEa" = (
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
+"wEd" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "wEm" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -58119,6 +58201,10 @@
 /obj/machinery/door/airlock/glass,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery)
+"wQG" = (
+/obj/random/obstruction,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "wRg" = (
 /obj/structure/sign/warning/lethal_turrets,
 /turf/simulated/wall,
@@ -59309,6 +59395,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/phoronics)
+"xqV" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "xsg" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -77629,13 +77719,13 @@ lzM
 wHh
 wKd
 qzq
-rEf
+gYA
 fUq
 fUq
 fUq
 fUq
-uDf
-uDf
+rbR
+qzq
 uDf
 uDf
 uDf
@@ -77791,13 +77881,13 @@ lzM
 rPL
 wKd
 pEe
-rEf
-rEf
-rEf
-kwz
-kwz
-eOs
-uDf
+kxJ
+atj
+oFy
+kxJ
+kxJ
+kxJ
+qzq
 uDf
 uDf
 uDf
@@ -77953,13 +78043,13 @@ lzM
 rPL
 wKd
 pEe
-rEf
-rEf
-rEf
-kwz
-kwz
-eOs
-uDf
+kxJ
+ckL
+qzq
+qwD
+atj
+atj
+qzq
 uDf
 uDf
 uDf
@@ -78114,17 +78204,17 @@ eNs
 lzM
 bst
 bhL
+xqV
+atj
+wQG
 qzq
-rEf
-rEf
-rEf
-kwz
-kwz
-eOs
+qzq
+wEd
+iTL
+qzq
+uDf
+uDf
 oRV
-uDf
-uDf
-uDf
 lta
 uDf
 uDf
@@ -78277,13 +78367,13 @@ lzM
 wKd
 wHh
 qzq
-rEf
-rEf
-rEf
-kwz
-kwz
-eOs
-uDf
+kxJ
+mVK
+qzq
+fRi
+aro
+qzq
+qzq
 uDf
 uDf
 uDf
@@ -78439,14 +78529,14 @@ lzM
 rir
 qzq
 qzq
-rEf
-rEf
-iCT
-kwz
-kwz
-eOs
+qzq
+qzq
+qzq
+fRi
+qzq
+qzq
 uDf
-uDf
+jyp
 uDf
 uDf
 lta
@@ -78599,14 +78689,14 @@ uzP
 aEE
 lzM
 bJU
+iCT
+atj
+xqV
+atj
 qzq
-rEf
-rEf
-rEf
-rEf
-kwz
-kwz
-eOs
+fRi
+wEd
+qzq
 uDf
 uDf
 uDf
@@ -78761,14 +78851,14 @@ qmv
 fUL
 lzM
 eHX
+iCT
+urZ
 qzq
-rEf
-rEf
-rEf
-rEf
-kwz
-kwz
-eOs
+wrM
+atj
+kxJ
+wEd
+qzq
 uDf
 uDf
 nTr
@@ -78924,13 +79014,13 @@ lzM
 lzM
 qSw
 aKm
-rEf
-rEf
-rEf
-rEf
-kwz
-kwz
-eOs
+gKL
+qzq
+qzq
+qzq
+qzq
+qzq
+qzq
 uDf
 uDf
 uDf

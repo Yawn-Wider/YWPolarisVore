@@ -13409,6 +13409,14 @@
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lockers)
+"Gn" = (
+/obj/machinery/camera/network/research{
+	c_tag = "Xenobiology Lobby";
+	dir = 4;
+	network = list("Research","Toxins Test Area")
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/shelter)
 "Gp" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -19074,6 +19082,11 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "Xenobiology Lobby";
+	dir = 4;
+	network = list("Research","Toxins Test Area")
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
@@ -38746,7 +38759,7 @@ VB
 yF
 Yk
 Yk
-cq
+Gn
 zd
 zd
 zd

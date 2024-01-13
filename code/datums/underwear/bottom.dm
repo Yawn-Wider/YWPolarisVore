@@ -106,3 +106,15 @@
 	name = "Swimming One Piece, Strapless"
 	icon_state = "swim_strapless_onepiece"
 	has_color = TRUE
+
+// YW CHANGES START HERE //
+/datum/category_item/underwear/bottom/beepanties
+	name = "Bee Panties"
+	icon_state = "panties_bee"
+	icon = 'icons/mob/human_yw.dmi'
+
+/datum/category_item/underwear/bottom/boxers_bee
+	name = "Bee Boxers"
+	icon = 'icons/mob/human_yw.dmi'
+	icon_state = "boxers_bee"
+// YW CHANGES END HERE //

@@ -24,6 +24,8 @@
 #define Z_LEVEL_OM_ADVENTURE			23
 #define Z_LEVEL_REDGATE					24
 #define Z_LEVEL_VRWORLD					25
+#define Z_LEVEL_FAR_MINING_UNDER		26
+#define Z_LEVEL_FAR_MINING_SURFACE		27
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -195,7 +197,8 @@
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space"),
 		list("Fuel Depot - Z1 Space"),
-		list("VR World")
+		list("VR World"),
+		list("Remote Mines - Underground", "Remote Mines - Surface")
 		)
 
 	lateload_overmap = list(
@@ -260,7 +263,9 @@
 		Z_LEVEL_CRYOGAIA_UPPER,
 		Z_LEVEL_PLAINS,
 		Z_LEVEL_CRYOGAIA_WILDERNESS,
-		Z_LEVEL_CRYOGAIA_CAVES
+		Z_LEVEL_CRYOGAIA_CAVES,
+		Z_LEVEL_FAR_MINING_UNDER,
+		Z_LEVEL_FAR_MINING_SURFACE
 	)
 
 // Commented out due to causing a lot of bugs. The base proc plus overmap achieves this functionality anyways.
@@ -306,13 +311,16 @@
 	color = "#00AAFF"
 	initial_generic_waypoints = list(
 		"cryogaia_excursion_hangar",
-		"cryogaia_security_hangar"
+		"cryogaia_security_hangar",
+		"far_mining_beacon"
 	)
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list(Z_LEVEL_PLAINS,
 		Z_LEVEL_CRYOGAIA_WILDERNESS,
 		Z_LEVEL_CRYOGAIA_CAVES,
-		Z_LEVEL_UNDERDARK
+		Z_LEVEL_UNDERDARK,
+		Z_LEVEL_FAR_MINING_UNDER,
+		Z_LEVEL_FAR_MINING_SURFACE
 	)
 
 	levels_for_distress = list(Z_LEVEL_OFFMAP1, Z_LEVEL_BEACH, Z_LEVEL_AEROSTAT, Z_LEVEL_DEBRISFIELD, Z_LEVEL_FUELDEPOT)

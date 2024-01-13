@@ -336,3 +336,7 @@
 	flags = MAP_LEVEL_PLAYER|MAP_LEVEL_PERSIST|MAP_LEVEL_MAPPABLE
 	base_turf = /turf/space
 	z = Z_LEVEL_OFFMAP1
+
+//////////////////////////////////////////////////////////////////////////////
+//Far Mining Zone used for Events
+#include "./far_mining/_far_mining.dm"

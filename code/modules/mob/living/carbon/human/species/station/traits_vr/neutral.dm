@@ -27,13 +27,13 @@
 	name = "Liver of Lilies"
 	desc = "You have a hard time with alcohol. Maybe you just never took to it, or maybe it doesn't agree with you... either way, drinks hit twice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
 	cost = 0
-	var_changes = list("alcohol_mod" = 2)
+	var_changes = list("chem_strength_alcohol" = 2)
 
 /datum/trait/neutral/alcohol_tolerance_basic
 	name = "Liver of Iron"
 	desc = "You can hold drinks much better than those lily-livered land-lubbers! Arr! You may wish to note this down in your medical records."
 	cost = 0
-	var_changes = list("alcohol_mod" = 0.75)
+	var_changes = list("chem_strength_alcohol" = 0.75)
 
 /*
 /datum/trait/neutral/cryogenic

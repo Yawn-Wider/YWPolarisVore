@@ -862,6 +862,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central4{
 	dir = 1
 	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -1646,11 +1649,9 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "bbS" = (
-/obj/effect/floor_decal/corner/white{
-	dir = 8
-	},
+/obj/effect/floor_decal/spline/plain/corner,
 /turf/simulated/floor/tiled,
-/area/hallway/lower/dorms)
+/area/crew_quarters/fitness)
 "bcb" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -2719,6 +2720,9 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/morgue)
+"bMs" = (
+/turf/simulated/floor/water/digestive_enzymes,
+/area/maintenance/atmos_control)
 "bMw" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -4293,6 +4297,11 @@
 "cHk" = (
 /turf/simulated/wall,
 /area/crew_quarters/kitchen/fish_farm)
+"cHw" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/firedoor_assembly,
+/turf/simulated/floor,
+/area/maintenance/atmos_control)
 "cHV" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 5
@@ -5714,6 +5723,10 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain/corner,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "dzG" = (
@@ -7185,6 +7198,8 @@
 /obj/structure/mirror{
 	pixel_y = 32
 	},
+/obj/item/weapon/stool/padded,
+/obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "erA" = (
@@ -7427,6 +7442,12 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
+"exP" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/fitness)
 "eyv" = (
 /turf/simulated/wall,
 /area/maintenance/atmos_control)
@@ -9030,6 +9051,9 @@
 /area/crew_quarters/sleep/cryo)
 "fzc" = (
 /obj/machinery/fitness/punching_bag/clown,
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "fzl" = (
@@ -10727,6 +10751,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/lower/central)
+"gAJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/fitness,
+/area/crew_quarters/fitness)
 "gAS" = (
 /obj/structure/table/standard,
 /obj/item/device/suit_cooling_unit,
@@ -11732,6 +11765,7 @@
 /area/medical/virologyaccess)
 "hdU" = (
 /obj/machinery/fitness/punching_bag,
+/obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "her" = (
@@ -12449,6 +12483,9 @@
 	icon_state = "2-4"
 	},
 /obj/effect/floor_decal/spline/plain/corner,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "hyF" = (
@@ -12502,6 +12539,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central4,
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -14014,6 +14054,7 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/decal/shadow/floor,
 /turf/simulated/floor/water/hotspring,
 /area/hallway/primary/starboard)
 "ioU" = (
@@ -18692,6 +18733,7 @@
 	dir = 1
 	},
 /obj/effect/mist,
+/obj/effect/decal/shadow/floor,
 /turf/simulated/floor/water/hotspring,
 /area/hallway/primary/starboard)
 "kFW" = (
@@ -18869,6 +18911,9 @@
 	icon_state = "1-2"
 	},
 /obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain/corner{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -20008,6 +20053,15 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/hallway/primary/starboard)
+"lpB" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central5,
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/tiled{
+	icon_state = "monotile"
+	},
+/area/crew_quarters/fitness)
 "lpD" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -22773,6 +22827,13 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/starboard)
+"mWj" = (
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/atmos_control)
 "mWk" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	dir = 2;
@@ -23162,7 +23223,6 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
 "nhk" = (
-/obj/structure/firedoor_assembly,
 /obj/structure/cable{
 	d1 = 2;
 	d2 = 8;
@@ -23798,6 +23858,9 @@
 /obj/structure/mirror{
 	dir = 1;
 	pixel_y = -32
+	},
+/obj/item/weapon/stool/padded{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
@@ -26318,6 +26381,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
 	},
+/obj/item/device/assembly/mousetrap/armed,
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "oXU" = (
@@ -26827,6 +26891,10 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/structure/catwalk,
+/obj/structure/railing{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "plg" = (
@@ -27285,6 +27353,7 @@
 	dir = 4
 	},
 /obj/machinery/light,
+/obj/machinery/fitness/heavy/lifter,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "pyh" = (
@@ -28287,6 +28356,12 @@
 	can_open = 1
 	},
 /area/maintenance/maintroom4)
+"pZH" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/fitness)
 "pZL" = (
 /obj/structure/cable{
 	icon_state = "1-4"
@@ -29353,10 +29428,6 @@
 /obj/structure/table/gamblingtable,
 /turf/simulated/floor/wood,
 /area/maintenance/dorm)
-"qHW" = (
-/obj/item/weapon/stool/padded,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/fitness)
 "qIc" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -29775,6 +29846,9 @@
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central6{
 	pixel_y = 8
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 1
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -30284,6 +30358,10 @@
 "rnn" = (
 /turf/simulated/floor/reinforced/n20,
 /area/engineering/atmos)
+"rnt" = (
+/obj/structure/catwalk,
+/turf/simulated/floor,
+/area/maintenance/atmos_control)
 "rnM" = (
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
@@ -35089,6 +35167,9 @@
 /obj/effect/floor_decal/steeldecal/steel_decals_central4{
 	dir = 1
 	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -35661,8 +35742,7 @@
 /turf/simulated/wall/r_wall,
 /area/chapel/main)
 "umL" = (
-/obj/machinery/fitness/heavy/lifter,
-/turf/simulated/floor/tiled,
+/turf/simulated/fitness,
 /area/crew_quarters/fitness)
 "umS" = (
 /obj/structure/cable/green{
@@ -36330,6 +36410,26 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
+"uHz" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/floor_decal/steeldecal/steel_decals_central5{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain/corner{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/tiled{
+	icon_state = "monotile"
+	},
+/area/crew_quarters/fitness)
 "uHC" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -36591,6 +36691,8 @@
 /area/crew_quarters/sleep/Dorm_9)
 "uMH" = (
 /obj/machinery/camera/network/civilian,
+/obj/machinery/fitness/heavy/lifter,
+/obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "uMJ" = (
@@ -38675,6 +38777,9 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/steeldecal/steel_decals_central5{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
 /turf/simulated/floor/tiled{
@@ -41277,7 +41382,7 @@
 /turf/simulated/floor/plating,
 /area/maintenance/chapel)
 "xwu" = (
-/obj/item/weapon/stool/padded{
+/obj/effect/floor_decal/spline/plain/corner{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -41981,6 +42086,15 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/holodeck_control)
+"xQV" = (
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/fitness)
 "xQW" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/table/steel,
@@ -42517,6 +42631,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/tcommsat/computer)
+"yfk" = (
+/turf/simulated/floor/water/digestive_enzymes,
+/area/mine/explored/lower_rock)
 "yfs" = (
 /obj/item/clothing/under/batter,
 /obj/effect/floor_decal/rust,
@@ -46421,7 +46538,7 @@ hYh
 hYh
 hYh
 hYh
-hYh
+emb
 kOT
 kOT
 hYh
@@ -47714,7 +47831,7 @@ mwy
 mwy
 mwy
 mwy
-kOT
+yfk
 kOT
 mwy
 mwy
@@ -47876,7 +47993,7 @@ mwy
 ewy
 ewy
 ewy
-emb
+yfk
 mwy
 mwy
 mwy
@@ -48038,7 +48155,7 @@ mwy
 ewy
 jAD
 vAe
-vAe
+bMs
 ewy
 ewy
 mwy
@@ -48844,7 +48961,7 @@ ueP
 ewy
 kzw
 kzw
-vAe
+rnt
 eyv
 ewy
 ewy
@@ -49006,7 +49123,7 @@ ueP
 ewy
 eyv
 eyv
-vAe
+mWj
 eyv
 ewy
 ewy
@@ -49334,7 +49451,7 @@ vsv
 exG
 ezy
 jai
-nnR
+cHw
 jAD
 ewy
 mwy
@@ -57240,8 +57357,8 @@ lPF
 qMS
 qwk
 gxb
-lEm
-lEm
+bbS
+pZH
 qYM
 ydw
 lEm
@@ -57403,7 +57520,7 @@ qMS
 ayH
 gxb
 erv
-qHW
+umL
 vUM
 oSF
 lEm
@@ -57568,7 +57685,7 @@ uMH
 umL
 tYJ
 bHJ
-umL
+lEm
 pxV
 vso
 jeS
@@ -57727,9 +57844,9 @@ qMS
 cpt
 gxb
 dzs
-lEm
-vUM
-oSF
+xQV
+uHz
+lpB
 xwu
 nCR
 vso
@@ -57889,10 +58006,10 @@ qUM
 qUM
 tid
 hdU
-lEm
-tYJ
-bHJ
-lEm
+umL
+gAJ
+umL
+exP
 nqf
 vso
 jeS
@@ -58051,10 +58168,10 @@ vFn
 sEo
 tid
 hdU
-lEm
-vUM
-oSF
-lEm
+umL
+gAJ
+umL
+exP
 vwT
 cEg
 jeS
@@ -61488,7 +61605,7 @@ woc
 veC
 sDe
 kaw
-bbS
+kaw
 veC
 vSL
 vSL

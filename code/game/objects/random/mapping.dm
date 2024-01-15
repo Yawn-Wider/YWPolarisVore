@@ -1690,5 +1690,5 @@
 /obj/random/multiple/legtrap/item_to_spawn()
 	return pick(
 				prob(67);list(/obj/item/device/assembly/mousetrap/armed),
-				prob(33);list(/obj/item/weapon/beartrap),
+				prob(33);list(/obj/item/weapon/beartrap/armed),
 				)

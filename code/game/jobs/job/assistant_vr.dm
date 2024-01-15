@@ -98,7 +98,8 @@
 	job_description = "A Visitor is just there to visit the place. They have no real authority or responsibility."
 	timeoff_factor = 0
 	requestable = FALSE
-	alt_titles = list("Guest" = /datum/alt_title/guest, "Traveler" = /datum/alt_title/traveler)
+	alt_titles = list("Guest" = /datum/alt_title/guest, "Traveler" = /datum/alt_title/traveler,
+	"Serenity Resident" = /datum/alt_title/resident) //YW Addition - Resident
 
 /datum/job/assistant/New()
 	..()

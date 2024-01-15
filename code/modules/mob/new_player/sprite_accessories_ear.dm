@@ -528,3 +528,17 @@
 	color_blend_mode = ICON_MULTIPLY
 	extra_overlay = "zorgoia_inner"
 	extra_overlay2 = "zorgoia_tips"
+
+// YW CHANGES START - Large Bunny Ears//
+
+/datum/sprite_accessory/ears/lbunnyears
+    name = "Large Bunny Ears"
+    desc = ""
+    icon = 'icons/mob/vore/ears_32x64_yw.dmi'
+    icon_state = "bun-large-inner"
+    extra_overlay = "bun-large-outer"
+    extra_overlay2 = "bun-large-tips"
+    do_colouration = 1
+    color_blend_mode = ICON_MULTIPLY
+
+// YW CHANGES END //

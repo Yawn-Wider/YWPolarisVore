@@ -52,6 +52,10 @@
 	name = "RS12 residential key"
 	access = list(8012)
 
+/obj/item/weapon/card/id/residential/rs13
+	name = "RS13 residential key"
+	access = list(8013)
+
 /obj/item/weapon/card/id/residential/rm1
 	name = "RM1 residential key"
 	access = list(8101)
@@ -229,3 +233,10 @@
 	description = "residential"
 	ckeywhitelist = list("")
 	character_name = list("")
+
+/datum/gear/fluff/res_key_rs13
+	path = /obj/item/weapon/card/id/residential/rs13
+	display_name = "RS13 keys"
+	description = "residential"
+	ckeywhitelist = list("jaybird1")
+	character_name = list("Trenton Stevens")

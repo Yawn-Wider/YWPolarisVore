@@ -18,7 +18,6 @@
 
 	outfit_type = /decl/hierarchy/outfit/job/assistant
 	job_description = "An Assistant does whatever is requested of them. Though they are part of the crew, they have no real authority."
-	alt_titles = list("Visitor" = /datum/alt_title/visitor, "Resident" = /datum/alt_title/resident) //YW Edit - Resident title
 /*	alt_titles = list("Technical Assistant" = /datum/alt_title/tech_assist,
 						"Medical Intern"= /datum/alt_title/med_intern, "Research Assistant" = /datum/alt_title/research_assist,
 						"Visitor" = /datum/alt_title/visitor)

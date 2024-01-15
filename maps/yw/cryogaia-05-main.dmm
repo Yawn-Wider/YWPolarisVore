@@ -1751,10 +1751,10 @@
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/grounds)
 "aIc" = (
-/obj/structure/disposalpipe/segment{
-	dir = 4
+/obj/structure/disposalpipe/trunk{
+	dir = 8
 	},
-/obj/structure/closet/secure_closet/personal,
+/obj/machinery/disposal,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "aIf" = (
@@ -4911,6 +4911,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/table/standard,
+/obj/item/weapon/coin/silver,
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -5042,6 +5043,8 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 6
 	},
+/obj/structure/closet/secure_closet/personal,
+/obj/item/weapon/storage/backpack/dufflebag,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "bXb" = (
@@ -5848,10 +5851,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_c)
 "clz" = (
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/table/rack/shelf,
-/obj/item/weapon/shovel,
-/obj/item/weapon/ice_pick,
+/obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "clL" = (
@@ -11629,8 +11629,9 @@
 /turf/simulated/floor/plating,
 /area/hallway/secondary/exit)
 "ewA" = (
-/obj/machinery/recharge_station,
-/obj/effect/floor_decal/industrial/outline/blue,
+/obj/item/weapon/stool/padded{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "ewF" = (
@@ -12137,6 +12138,8 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 9
 	},
+/obj/structure/closet/secure_closet/personal,
+/obj/item/weapon/storage/backpack/dufflebag,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "eIC" = (
@@ -13016,6 +13019,7 @@
 	},
 /obj/structure/closet/secure_closet/personal,
 /obj/machinery/light,
+/obj/item/weapon/storage/backpack/satchel,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "fau" = (
@@ -16767,7 +16771,9 @@
 	dir = 8;
 	pixel_x = 24
 	},
-/obj/structure/closet/secure_closet/personal,
+/obj/item/weapon/stool/padded{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "gsE" = (
@@ -19206,10 +19212,8 @@
 /turf/simulated/floor/tiled/steel,
 /area/security/hallway)
 "hrN" = (
-/obj/machinery/disposal,
-/obj/structure/disposalpipe/trunk{
-	dir = 8
-	},
+/obj/structure/closet/secure_closet/personal,
+/obj/item/weapon/storage/backpack/dufflebag,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "hrX" = (
@@ -20310,7 +20314,6 @@
 /obj/machinery/status_display{
 	pixel_x = 32
 	},
-/obj/structure/closet/secure_closet/personal,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "hOq" = (
@@ -20652,13 +20655,13 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
 "hUr" = (
-/obj/structure/closet/secure_closet/personal,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
+/obj/machinery/vending/coffee,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "hUy" = (
@@ -20905,6 +20908,16 @@
 /obj/item/clothing/glasses/sunglasses,
 /turf/simulated/floor/carpet,
 /area/security/detectives_office)
+"hZa" = (
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack/shelf,
+/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit,
+/obj/item/clothing/shoes/boots/winter/climbing,
+/obj/structure/noticeboard/airlock{
+	pixel_y = -30
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/locker)
 "hZM" = (
 /obj/structure/table/glass,
 /obj/item/device/universal_translator,
@@ -26079,9 +26092,11 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/lapvend{
-	dir = 8
+/obj/structure/window/reinforced{
+	dir = 1
 	},
+/obj/structure/closet/secure_closet/personal,
+/obj/item/weapon/storage/backpack/dufflebag,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "kgs" = (
@@ -29554,9 +29569,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/storage/emergency_storage/emergency)
 "lzA" = (
-/obj/machinery/vending/fitness{
-	dir = 4
+/obj/structure/window/reinforced{
+	dir = 1
 	},
+/obj/machinery/vending/loadout/clothing,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "lzB" = (
@@ -30428,7 +30444,7 @@
 /turf/simulated/floor/tiled/freezer,
 /area/medical/surgery_storage)
 "lQA" = (
-/obj/structure/closet/secure_closet/personal,
+/obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "lQN" = (
@@ -31094,12 +31110,16 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "mex" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit,
 /obj/item/clothing/shoes/boots/winter/climbing,
-/obj/structure/noticeboard/airlock{
-	pixel_y = -30
+/obj/item/device/radio/intercom{
+	name = "Common Channel";
+	pixel_y = -21
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -37792,6 +37812,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/cmo)
+"ozz" = (
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 4
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "ozR" = (
 /obj/machinery/computer/secure_data/detective_computer{
 	dir = 1
@@ -38762,7 +38788,6 @@
 /turf/simulated/floor/tiled/steel,
 /area/security/hallway)
 "oTa" = (
-/obj/structure/closet/emcloset,
 /obj/machinery/light{
 	dir = 8
 	},
@@ -43295,10 +43320,11 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
 "qGf" = (
-/obj/structure/closet/secure_closet/personal,
 /obj/machinery/camera/autoname{
 	dir = 4
 	},
+/obj/structure/closet/secure_closet/personal,
+/obj/item/weapon/storage/box/pocky,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "qGi" = (
@@ -47189,9 +47215,8 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "sir" = (
-/obj/structure/closet/wardrobe/xenos,
-/obj/item/clothing/suit/tajaran/furs,
-/obj/machinery/computer/timeclock/premade/south,
+/obj/machinery/recharge_station,
+/obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "siD" = (
@@ -47552,6 +47577,8 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 10
 	},
+/obj/structure/closet/secure_closet/personal,
+/obj/item/weapon/storage/backpack/dufflebag,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "spn" = (
@@ -49050,17 +49077,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
 "sTl" = (
-/obj/structure/window/reinforced{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
-/obj/structure/table/rack/shelf,
-/obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit,
-/obj/item/clothing/shoes/boots/winter/climbing,
-/obj/item/device/radio/intercom{
-	name = "Common Channel";
-	pixel_y = -21
-	},
+/obj/structure/closet/wardrobe/xenos,
+/obj/item/clothing/suit/tajaran/furs,
+/obj/machinery/computer/timeclock/premade/south,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "sTN" = (
@@ -54048,11 +54067,10 @@
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/showers)
 "veN" = (
-/obj/structure/disposalpipe/segment,
-/obj/item/clothing/head/ushanka,
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 6
-	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/structure/table/rack/shelf,
+/obj/item/weapon/shovel,
+/obj/item/weapon/ice_pick,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "veO" = (
@@ -54153,6 +54171,8 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 5
 	},
+/obj/structure/closet/secure_closet/personal,
+/obj/item/weapon/storage/backpack/dufflebag,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "vgY" = (
@@ -55086,6 +55106,7 @@
 	dir = 4
 	},
 /obj/structure/table/standard,
+/obj/item/clothing/head/ushanka,
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -55568,6 +55589,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/checkpoint)
+"vJT" = (
+/obj/structure/snowman/spider,
+/obj/effect/floor_decal/snow/floor/edges2{
+	dir = 1
+	},
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/grounds)
 "vKn" = (
 /obj/machinery/shipsensors{
 	dir = 1
@@ -60226,8 +60254,6 @@
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "xxx" = (
-/obj/structure/closet/secure_closet/personal,
-/obj/item/weapon/storage/backpack/dufflebag,
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
 	pixel_x = -30
@@ -79374,8 +79400,8 @@ mCf
 aHr
 vXN
 qzq
-uDf
-uDf
+ozz
+ozz
 nTr
 fIS
 lta
@@ -79538,7 +79564,7 @@ qzq
 qzq
 rEf
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -79684,9 +79710,9 @@ pGl
 vhU
 cei
 oTa
-lQA
+hrN
 lzA
-lQA
+ewA
 qGf
 xxx
 uRY
@@ -79700,7 +79726,7 @@ vEh
 wZI
 wZI
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -79849,7 +79875,7 @@ isE
 qoY
 osm
 xoC
-veN
+qoY
 qoY
 uUe
 tuV
@@ -79862,7 +79888,7 @@ haF
 sYG
 wZI
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -80024,7 +80050,7 @@ fRN
 lQN
 ike
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -80176,7 +80202,7 @@ eJe
 meK
 gHf
 sUN
-ewA
+wEa
 gQI
 lLZ
 wLN
@@ -80186,7 +80212,7 @@ eTP
 lQN
 lzK
 rEf
-uDf
+eOs
 uDf
 lta
 fIS
@@ -80348,7 +80374,7 @@ qiO
 lQN
 ike
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -80510,7 +80536,7 @@ lId
 lQN
 uuq
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -80672,7 +80698,7 @@ qiO
 lQN
 slU
 rEf
-woW
+vJT
 uDf
 lta
 uDf
@@ -80834,7 +80860,7 @@ oux
 lQN
 uuq
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -80996,7 +81022,7 @@ aEv
 vEh
 wZI
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -81158,7 +81184,7 @@ vEh
 wZI
 wZI
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -81308,9 +81334,9 @@ nSM
 nSM
 nSM
 nSM
-wEa
-wEa
-wEa
+veN
+sUN
+hZa
 aKm
 wZI
 wZI
@@ -81320,7 +81346,7 @@ wZI
 wZI
 rEf
 rEf
-uDf
+eOs
 uDf
 lta
 uDf
@@ -81480,8 +81506,8 @@ gGS
 uDf
 kdV
 uDf
-uDf
-uDf
+qwY
+qwY
 uDf
 fep
 lta

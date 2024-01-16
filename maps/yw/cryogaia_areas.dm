@@ -24,6 +24,7 @@
 	name = "Outside - Surface"
 	icon_state = "outside1"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
+	outdoors = OUTDOORS_YES
 
 /area/crew_quarters/meeting
 	name = "\improper Public Conference"

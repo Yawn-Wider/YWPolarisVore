@@ -342,7 +342,7 @@
 /obj/item/seeds/poppyseed,
 /obj/item/seeds/poppyseed,
 /obj/item/seeds/poppyseed,
-/obj/structure/loot_pile,
+/obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
 /area/maintenance/aft)
 "alt" = (
@@ -786,7 +786,7 @@
 "aCp" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/loot_pile,
+/obj/structure/loot_pile/maint/technical,
 /turf/simulated/floor/plating,
 /area/maintenance/starboard)
 "aCC" = (
@@ -4812,7 +4812,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/medical/biostorage2)
 "cWl" = (
-/obj/structure/loot_pile,
+/obj/structure/loot_pile/maint/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
 "cWo" = (
@@ -14515,7 +14515,7 @@
 /area/crew_quarters/sleep/Dorm_2)
 "izx" = (
 /obj/effect/floor_decal/rust,
-/obj/structure/loot_pile,
+/obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
 /area/maintenance/maintroom7)
 "izE" = (
@@ -17631,13 +17631,10 @@
 "kfx" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/decal/cleanable/dirt,
-/obj/structure/loot_pile,
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/decal/shadow/silhouette{
-	dir = 1
-	},
+/obj/structure/loot_pile/maint/trash,
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
 "kfy" = (
@@ -25696,7 +25693,7 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "oGx" = (
-/obj/structure/loot_pile,
+/obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
 /area/mine/explored/lower_rock)
 "oGB" = (
@@ -27912,9 +27909,9 @@
 /area/hallway/lower/aft)
 "pNO" = (
 /obj/effect/floor_decal/rust,
-/obj/structure/loot_pile,
 /obj/random/junk,
 /obj/item/device/binoculars/spyglass,
+/obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
 /area/maintenance/maintroom8)
 "pNW" = (
@@ -37168,7 +37165,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/lab)
 "vau" = (
-/obj/structure/loot_pile,
+/obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor/tiled/techfloor,
 /area/mine/explored/lower_rock)
 "vaz" = (
@@ -37617,6 +37614,10 @@
 /obj/machinery/light,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
+"vnn" = (
+/obj/structure/loot_pile/maint/junk,
+/turf/simulated/floor/plating,
+/area/maintenance/aft)
 "vnr" = (
 /obj/structure/table/steel,
 /obj/item/weapon/paper_bin,
@@ -39138,7 +39139,7 @@
 /obj/effect/decal/shadow/silhouette{
 	dir = 1
 	},
-/obj/structure/loot_pile,
+/obj/structure/loot_pile/maint/boxfort,
 /turf/simulated/floor,
 /area/maintenance/maintroom7)
 "whu" = (
@@ -59046,7 +59047,7 @@ bYn
 udc
 cRC
 udc
-cWl
+lQw
 mgo
 mwy
 mwy
@@ -61805,7 +61806,7 @@ uHx
 mRG
 mgo
 nxP
-cWl
+vnn
 mgo
 mwy
 mwy
@@ -62615,7 +62616,7 @@ lOA
 mgo
 mgo
 dAi
-cWl
+aBu
 mgo
 mwy
 mwy

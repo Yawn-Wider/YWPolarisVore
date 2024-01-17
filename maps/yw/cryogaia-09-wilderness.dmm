@@ -11,27 +11,27 @@
 "bn" = (
 /obj/item/weapon/material/shard,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "bL" = (
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/exterior)
 "bM" = (
 /turf/simulated/wall/r_lead,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "dU" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "eT" = (
 /obj/structure/grille,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "fg" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit,
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "gh" = (
 /obj/structure/flora/tree/winter,
 /turf/simulated/floor/outdoors/snow/gravsnow,
@@ -48,7 +48,7 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "ha" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -59,7 +59,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "hd" = (
 /obj/effect/floor_decal/rust,
 /obj/structure/closet/crate/large,
@@ -67,12 +67,12 @@
 /obj/random/maintenance,
 /obj/random/maintenance,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "hA" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "hD" = (
 /obj/machinery/power/apc{
 	dir = 4;
@@ -81,7 +81,7 @@
 	},
 /obj/structure/cable/cyan,
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "hT" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 8
@@ -96,11 +96,11 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "hZ" = (
 /obj/structure/sign/warning/radioactive,
 /turf/simulated/wall/r_lead,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "if" = (
 /mob/living/simple_mob/animal/sif/savik,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
@@ -123,7 +123,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "jG" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full{
@@ -131,7 +131,7 @@
 	icon_state = "fwindow"
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "jO" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -143,7 +143,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "jP" = (
 /obj/effect/floor_decal/snow/floor/edges3,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -154,7 +154,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "kg" = (
 /turf/simulated/floor/outdoors/ice,
 /area/borealis2/outdoors/exterior/lake)
@@ -163,23 +163,23 @@
 /obj/effect/floor_decal/rust/color_rustedfull,
 /obj/machinery/door/airlock/glass_external/public,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "kA" = (
 /obj/effect/overlay/snow/floor/pointy,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "kB" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/snow/floor/edges3{
 	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "kW" = (
 /obj/effect/floor_decal/rust,
 /mob/living/simple_mob/tomato/space,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "lb" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 8
@@ -197,7 +197,7 @@
 /area/borealis2/outdoors/exterior/lake)
 "mr" = (
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "nd" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -213,14 +213,14 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "ni" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_access = newlist()
 	},
 /obj/machinery/atmospheric_field_generator/perma/underdoors,
 /turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "nw" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 8
@@ -257,7 +257,7 @@
 	welded = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "ox" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 8
@@ -281,7 +281,7 @@
 	interval_upper_bound = 75
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "pd" = (
 /mob/living/simple_mob/animal/sif/siffet,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
@@ -303,7 +303,7 @@
 	},
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "qB" = (
 /mob/living/simple_mob/animal/passive/snowbull,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
@@ -327,7 +327,7 @@
 	pixel_y = 8
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "ry" = (
 /obj/structure/flora/tree/winter1,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
@@ -338,7 +338,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "sG" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/airlock/glass_external{
@@ -350,7 +350,7 @@
 	req_access = newlist()
 	},
 /turf/simulated/floor/tiled/dark,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "sJ" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 1
@@ -363,7 +363,7 @@
 "sK" = (
 /obj/structure/loot_pile/surface/bones,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "tb" = (
 /obj/effect/map_effect/portal/line/side_b,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
@@ -372,7 +372,7 @@
 /obj/effect/floor_decal/rust/color_rustedfull,
 /obj/machinery/door/airlock/glass_external/public,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "ue" = (
 /obj/effect/floor_decal/rust,
 /obj/item/device/geiger/wall{
@@ -380,27 +380,27 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "uE" = (
 /obj/effect/floor_decal/rust/mono_rusted1,
 /turf/simulated/wall,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "uF" = (
 /obj/effect/decal/cleanable/blood/tracks/footprints,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "uH" = (
 /obj/effect/overlay/snow/floor/pointy{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "uR" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "vi" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -414,7 +414,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "vY" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 4
@@ -432,12 +432,12 @@
 /obj/effect/floor_decal/rust,
 /obj/effect/overlay/snow/floor/pointy,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "xP" = (
 /obj/item/poi/brokenoldreactor,
 /obj/effect/map_effect/interval/effect_emitter/sparks,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "yz" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -462,7 +462,7 @@
 /area/borealis2/outdoors/exterior)
 "yX" = (
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "zc" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 8
@@ -502,7 +502,7 @@
 "Az" = (
 /obj/effect/floor_decal/rust/mono_rusted2,
 /turf/simulated/wall,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "AI" = (
 /obj/structure/fence{
 	dir = 4
@@ -518,7 +518,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "AZ" = (
 /obj/structure/fence/corner{
 	dir = 8
@@ -546,6 +546,10 @@
 	},
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
 /area/borealis2/outdoors/exterior)
+"Cp" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/exterior/explore1/interior)
 "De" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 4
@@ -584,23 +588,23 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "EN" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/snow/floor/edges2,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "EP" = (
 /obj/effect/shuttle_landmark/premade/trade/station,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "FH" = (
 /obj/effect/floor_decal/rust,
 /obj/effect/overlay/snow/floor/pointy{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "FL" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -608,7 +612,7 @@
 	},
 /obj/effect/floor_decal/snow/floor/edges2,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "Gt" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -629,7 +633,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "Ha" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/snow/floor/edges2,
@@ -637,13 +641,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "Hg" = (
 /obj/effect/decal/cleanable/blood/drip,
 /obj/effect/floor_decal/rust,
 /obj/effect/overlay/snow/floor/pointy,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "Hj" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 1
@@ -695,17 +699,17 @@
 	id_tag = "trade_shuttle_dock_pump"
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "IR" = (
 /obj/structure/symbol/sa,
 /turf/simulated/wall,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "Jk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "Kg" = (
 /obj/machinery/access_button{
 	command = "cycle_exterior";
@@ -728,7 +732,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "Kl" = (
 /obj/effect/floor_decal/snow/floor/edges2,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
@@ -748,14 +752,14 @@
 /area/borealis2/outdoors/exterior)
 "KS" = (
 /turf/simulated/wall,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "KT" = (
 /obj/item/device/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "Le" = (
 /obj/structure/flora/tree/dead,
 /turf/simulated/floor/outdoors/snow/snow/cryogaia,
@@ -778,14 +782,14 @@
 	tag_interior_door = "trade_shuttle_dock_inner"
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "LH" = (
 /turf/simulated/wall/r_wall,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "LO" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "Mc" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 4
@@ -798,21 +802,21 @@
 "My" = (
 /obj/effect/decal/remains/posi,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "MH" = (
 /obj/structure/window/reinforced/full{
 	dir = 10;
 	icon_state = "fwindow"
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "MJ" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 1
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad)
 "OE" = (
 /obj/effect/floor_decal/snow/floor/edges,
 /turf/simulated/floor/outdoors/ice,
@@ -895,7 +899,7 @@
 /obj/item/weapon/material/shard,
 /obj/effect/overlay/snow/floor/pointy,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "Sx" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 1
@@ -924,13 +928,13 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "Tv" = (
 /obj/effect/overlay/snow/floor/pointy{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "TB" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -939,7 +943,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "TG" = (
 /obj/structure/fence/door,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -952,7 +956,7 @@
 /area/borealis2/outdoors/exterior)
 "Uh" = (
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "Ul" = (
 /obj/effect/overlay/snow/floor,
 /obj/effect/floor_decal/snow/floor/edges2{
@@ -976,13 +980,13 @@
 	dir = 8
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "VW" = (
 /obj/machinery/atmospherics/pipe/simple/visible{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "VY" = (
 /obj/structure/girder,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -1012,7 +1016,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "WN" = (
 /obj/effect/floor_decal/snow/floor/edges2{
 	dir = 4
@@ -1026,7 +1030,7 @@
 "WT" = (
 /obj/effect/floor_decal/rust/mono_rusted3,
 /turf/simulated/wall,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "WV" = (
 /obj/machinery/power/smes/buildable/hybrid{
 	input_level = 0;
@@ -1042,7 +1046,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "XQ" = (
 /obj/structure/fence/corner{
 	dir = 4
@@ -1063,12 +1067,12 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "YJ" = (
 /obj/effect/floor_decal/rust/color_rustedfull,
 /obj/machinery/door/airlock/glass_external/freezable,
 /turf/simulated/floor/tiled/old_tile/gray,
-/area/borealis2/outdoors/exterior/explore1)
+/area/borealis2/outdoors/exterior/explore1/interior)
 "Zp" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor/border_only,
@@ -1077,7 +1081,7 @@
 	},
 /obj/structure/window/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/traderpad)
+/area/borealis2/outdoors/exterior/traderpad/interior)
 "Zw" = (
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 8
@@ -11341,7 +11345,7 @@ Uh
 Uh
 Uh
 KS
-VY
+Cp
 qG
 Gt
 IF

@@ -6,7 +6,7 @@
 	var/desc = "Someone neglected to write a nice description for this poor rock."
 
 	var/datum/time/current_time = new() // Holds the current time for sun positioning.  Note that we assume day and night is the same length because simplicity.
-	var/sun_process_interval = 1 HOUR
+	var/sun_process_interval = 30 MINUTES //YW Edit - Process sun a bit more often (previously 1 HOUR)
 	var/sun_last_process = null // world.time
 
 	var/datum/weather_holder/weather_holder
@@ -66,4 +66,3 @@
 	sun["brightness"] = new_brightness
 	sun["color"] = new_color
 	needs_work |= PLANET_PROCESS_SUN
-

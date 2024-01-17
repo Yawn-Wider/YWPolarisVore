@@ -1,123 +1,42 @@
-//Outpost area
+//Outdoors Area
+
 /area/borealis2
 	icon = 'icons/turf/areas_vr.dmi'
-/area/borealis2/elevator/medbasement
-	name = "Elevator shaft - Lower Medical"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-/area/borealis2/elevator/medbay
-	name = "Elevator shaft - Main Medical"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-/area/borealis2/elevator/medupper
-	name = "Elevator shaft - Upper Medical"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-/area/borealis2/elevator/dorms
-	name = "Elevator shaft - Dorms"
-/area/borealis2/elevator/scicargo
-	name = "Elevator shaft - Sci-Cargo"
-/area/borealis2/elevator/scimining
-	name = "Elevator shaft - Sci-Mining"
-/area/borealis2/elevator/sciminingtransit
-	name = "Elevator shaft - Depth tranist"
-/area/borealis2/elevator/uppermining
-	name = "Elevator shaft - Upper Level"
 /area/borealis2/outdoors
 	name = "Outside - Surface"
 	icon_state = "outside1"
 	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
 	outdoors = OUTDOORS_YES
 
-/area/crew_quarters/meeting
-	name = "\improper Public Conference"
-	icon_state = "courtroom"
-
-/area/borealis2/outdoors/grounds
-	name = "\The outpost grounds"
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
-
-/area/borealis2/outdoors/grounds/upper
-	name = "\The outpost grounds"
-	base_turf = /turf/simulated/open/cryogaia
-	icon_state = "outside2"
-
-/area/borealis2/outdoors/grounds/wall
-	name = "Perimeter Wall"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "submap_hostile_area"
-
-/area/borealis2/outdoors/grounds/walkway
-	name = "Perimeter Wall Walkway"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "submap_trespass_area"
-
-/area/borealis2/outdoors/grounds/walkway/exploration
-	name = "Exploration - Exterior Rooftop"
-
-/area/borealis2/outdoors/grounds/checkpoint
-	name = "Perimeter Checkpoint"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "submap_trespass_alt"
-
-/area/borealis2/outdoors/grounds/tower
-	name = "Perimeter Tower"
-	sound_env = SMALL_ENCLOSED
-	forbid_events = TRUE
-
-/area/borealis2/outdoors/grounds/tower/north
-	name = "Perimeter Tower - N"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "north"
-
-/area/borealis2/outdoors/grounds/tower/northeast
-	name = "Perimeter Tower - NE"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "northeast"
-
-/area/borealis2/outdoors/grounds/tower/east
-	name = "Perimeter Tower - E"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "east"
-
-/area/borealis2/outdoors/grounds/tower/southeast
-	name = "Perimeter Tower - SE"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "southeast"
-
-/area/borealis2/outdoors/grounds/tower/south
-	name = "Perimeter Tower - S"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "south"
-
-/area/borealis2/outdoors/grounds/tower/southwest
-	name = "Perimeter Tower - SW"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "southwest"
-
-/area/borealis2/outdoors/grounds/tower/west
-	name = "Perimeter Tower - W"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "west"
-
-/area/borealis2/outdoors/grounds/tower/northwest
-	name = "Perimeter Tower - NW"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "northwest"
-
 /area/borealis2/outdoors/exterior
 	name = "\The wilderness"
 	icon_state = "outside1unex"
 	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-
 /area/borealis2/outdoors/exterior/upper
 	name = "\The wilderness"
 	icon_state = "outside2unex"
 
-/area/borealis2/outdoors/exterior/lake
-	name = "The Ice Lake"
+//Outdoors Area - Wilderness
+/area/borealis2/outdoors/exterior/traderpad
+	name = "\improper Cryogaia Commerce Pad"
+	icon = 'icons/turf/areas_yw.dmi'
+	icon_state = "landingpad"
+
+/area/borealis2/outdoors/exterior/traderpad/interior
+	name = "\improper Cryogaia Commerce Pad"
+	icon = 'icons/turf/areas_yw.dmi'
+	icon_state = "landingpad"
+	outdoors = OUTDOORS_NO
 
 /area/borealis2/outdoors/exterior/explore1
 	name = "Abandoned building"
 	icon_state = "outside1"
+
+/area/borealis2/outdoors/exterior/explore1/interior
+	name = "Abandoned building"
+	icon_state = "outside1"
+	outdoors = OUTDOORS_NO
 
 /area/borealis2/outdoors/exterior/explore2
 	name = "Unexplored Area"
@@ -127,24 +46,127 @@
 	name = "Unexplored Caves"
 	icon_state = "outside3"
 
-/area/borealis2/outdoors/grounds/power
-	name = "\The Exterior Powerline"
-	icon = 'icons/turf/areas.dmi'
-	icon_state = "yellow"
+/area/borealis2/outdoors/exterior/lake
+	name = "The Ice Lake"
 
-/area/borealis2/outdoors/grounds/traderpad
-	name = "\improper Cryogaia Commerce Pad"
-	icon = 'icons/turf/areas_yw.dmi'
-	icon_state = "landingpad"
+// Outdoors Area - grounds
+/area/borealis2/outdoors/grounds
+	name = "\The outpost grounds"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
 
-/area/borealis2/outdoors/grounds/entrance
-	name = "\improper Cryogaia Compound Gate"
+/area/borealis2/outdoors/grounds/upper
+	name = "\The outpost grounds"
+	base_turf = /turf/simulated/open/cryogaia
+	icon_state = "outside2"
 
 /area/borealis2/outdoors/grounds/upper/solars
 	name = "\The solar array"
 	icon = 'icons/turf/areas.dmi'
 	icon_state = "panelsA"
+
+/area/borealis2/outdoors/grounds/power
+	name = "\The Exterior Powerline"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "yellow"
+
+/area/borealis2/outdoors/grounds/walkway
+	name = "Perimeter Wall Walkway"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "submap_trespass_area"
+
+/area/borealis2/outdoors/grounds/walkway/exploration
+	name = "Exploration - Exterior Rooftop"
+
+//Outpost Area
+
+/area/cryogaia/outpost/bonfire
+	name = "Bonfire Room"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "red"
+
+/area/cryogaia/outpost/checkpoint
+	name = "Perimeter Checkpoint"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "submap_trespass_alt"
+
+/area/cryogaia/outpost/wall
+	name = "Perimeter Wall"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "submap_hostile_area"
+
+/area/cryogaia/outpost/tower
+	name = "Perimeter Tower"
+	sound_env = SMALL_ENCLOSED
+	forbid_events = TRUE
+
+/area/cryogaia/outpost/tower/north
+	name = "Perimeter Tower - N"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "north"
+
+/area/cryogaia/outpost/tower/northeast
+	name = "Perimeter Tower - NE"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "northeast"
+
+/area/cryogaia/outpost/tower/east
+	name = "Perimeter Tower - E"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "east"
+
+/area/cryogaia/outpost/tower/southeast
+	name = "Perimeter Tower - SE"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "southeast"
+
+/area/cryogaia/outpost/tower/south
+	name = "Perimeter Tower - S"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "south"
+
+/area/cryogaia/outpost/tower/southwest
+	name = "Perimeter Tower - SW"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "southwest"
+
+/area/cryogaia/outpost/tower/west
+	name = "Perimeter Tower - W"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "west"
+
+/area/cryogaia/outpost/tower/northwest
+	name = "Perimeter Tower - NW"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "northwest"
+
+
+// Elevators
+/area/cryogaia/outpost/elevator/medbasement
+	name = "Elevator shaft - Lower Medical"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+/area/cryogaia/outpost/elevator/medbay
+	name = "Elevator shaft - Main Medical"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+/area/cryogaia/outpost/elevator/medupper
+	name = "Elevator shaft - Upper Medical"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+/area/cryogaia/outpost/elevator/dorms
+	name = "Elevator shaft - Dorms"
+/area/cryogaia/outpost/elevator/scicargo
+	name = "Elevator shaft - Sci-Cargo"
+/area/cryogaia/outpost/elevator/scimining
+	name = "Elevator shaft - Sci-Mining"
+/area/cryogaia/outpost/elevator/sciminingtransit
+	name = "Elevator shaft - Depth tranist"
+/area/cryogaia/outpost/elevator/uppermining
+	name = "Elevator shaft - Upper Level"
+
 //crew quarters-dorms
+
+/area/crew_quarters/meeting
+	name = "\improper Public Conference"
+	icon_state = "courtroom"
+
 /area/crew_quarters/showers
 	name = "\improper Unisex Showers"
 	icon_state = "recreation_area_restroom"

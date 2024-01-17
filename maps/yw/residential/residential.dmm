@@ -287,6 +287,23 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/residential/corridors)
+"bZ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom6)
 "cc" = (
 /turf/simulated/wall,
 /area/residential/room13)
@@ -330,11 +347,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom5)
@@ -446,11 +458,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /turf/simulated/floor/plating,
 /area/residential/mroom4)
 "db" = (
@@ -540,6 +547,23 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/residential/room13)
+"dN" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom2)
 "dP" = (
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/eris/white,
@@ -718,11 +742,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom3)
@@ -947,11 +966,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom3)
@@ -1276,11 +1290,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/residential/mroom4)
@@ -1523,11 +1532,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom5)
@@ -1782,6 +1786,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/room8)
+"ne" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom1)
 "nf" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -1934,11 +1955,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /turf/simulated/floor/plating,
 /area/residential/mroom2)
 "oi" = (
@@ -1987,11 +2003,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom2)
@@ -2625,11 +2636,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/residential/mroom6)
 "uh" = (
@@ -2656,11 +2662,6 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom4)
@@ -2807,11 +2808,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -3135,11 +3131,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -3553,6 +3544,23 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/residential/mroom1)
+"BX" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom3)
 "BZ" = (
 /obj/structure/curtain/open/privacy,
 /turf/simulated/floor/tiled/white,
@@ -3687,11 +3695,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -3866,11 +3869,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/residential/mroom6)
@@ -3880,11 +3878,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -4261,11 +4254,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/plating,
 /area/residential/mroom1)
 "GS" = (
@@ -4417,11 +4405,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
@@ -4487,11 +4470,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/residential/mroom3)
@@ -4548,6 +4526,23 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room6)
+"Io" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom5)
 "Iq" = (
 /obj/structure/musician/piano,
 /turf/simulated/floor/carpet,
@@ -4956,11 +4951,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
-	},
 /turf/simulated/floor/plating,
 /area/residential/mroom6)
 "Mq" = (
@@ -5132,11 +5122,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -5424,11 +5409,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 2;
-	d2 = 8;
-	icon_state = "2-8"
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom1)
@@ -5720,11 +5700,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/machinery/light/small{
 	dir = 1
@@ -6307,11 +6282,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/residential/mroom1)
@@ -6405,11 +6375,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
@@ -6604,6 +6569,23 @@
 /obj/machinery/vending/snack,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"Zt" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "Zu" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
@@ -21500,7 +21482,7 @@ aZ
 aZ
 aZ
 df
-Tu
+ne
 Ku
 df
 aZ
@@ -21521,7 +21503,7 @@ aZ
 aZ
 aZ
 Dp
-AS
+dN
 Fa
 Dp
 aZ
@@ -21542,7 +21524,7 @@ aZ
 aZ
 aZ
 qa
-sV
+BX
 ly
 qa
 aZ
@@ -21563,7 +21545,7 @@ aZ
 aZ
 aZ
 Wi
-Gj
+Zt
 tN
 Wi
 aZ
@@ -21584,7 +21566,7 @@ aZ
 aZ
 aZ
 PZ
-Pd
+Io
 Fr
 PZ
 aZ
@@ -21605,7 +21587,7 @@ aZ
 aZ
 aZ
 bK
-OQ
+bZ
 Sx
 bK
 aZ
@@ -21986,7 +21968,7 @@ aZ
 aZ
 aZ
 df
-Tu
+Pq
 Ku
 df
 aZ
@@ -22007,7 +21989,7 @@ aZ
 aZ
 aZ
 Dp
-AS
+of
 Fa
 Dp
 aZ
@@ -22028,7 +22010,7 @@ aZ
 aZ
 aZ
 qa
-sV
+fw
 ly
 qa
 aZ
@@ -22049,7 +22031,7 @@ aZ
 aZ
 aZ
 Wi
-Gj
+cY
 tN
 Wi
 aZ
@@ -22070,7 +22052,7 @@ aZ
 aZ
 aZ
 PZ
-Pd
+cu
 Fr
 PZ
 aZ
@@ -22091,7 +22073,7 @@ aZ
 aZ
 aZ
 bK
-OQ
+Mg
 Sx
 bK
 aZ

@@ -1,7 +1,6 @@
 //Simulated
 CRYOGAIA_TURF_CREATE(/turf/simulated/open)
 /turf/simulated/open/cryogaia
-	edge_blending_priority = 0.5 //Turfs which also have e_b_p and higher than this will plop decorative edges onto this turf
 	CRYOGAIA_SET_ATMOS
 
 /turf/simulated/open/cryogaia/Initialize(mapload)
@@ -46,12 +45,15 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/floor/outdoors/grass/sif)
 
 //a set of 'covered' outdoor tiles. can be used as shelter from storms and the inside of the caves.
 /turf/simulated/floor/outdoors/snow/snow/cryogaia/covered
+	edge_blending_priority = 0
 	outdoors = 0
 
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia/covered
+	edge_blending_priority = 0
 	outdoors = 0
 
 /turf/simulated/floor/outdoors/snow/gravsnow/cryogaia/covered
+	edge_blending_priority = 0
 	outdoors = 0
 
 /turf/simulated/floor/reinforced/cryogaia

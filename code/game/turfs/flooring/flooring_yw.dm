@@ -28,3 +28,22 @@
 	desc = "You can't tell if this is real grass or just cheap plastic imitation."
 	icon ='icons/obj/clockwork_objects.dmi'
 	icon_base = "grass"
+
+//Snow
+
+/decl/flooring/snowbrick
+	name = "snow brick floor"
+	desc = "Flattened snow."
+	icon = 'icons/turf/floors_yw.dmi'
+	icon_base = "tiles_snowbrick"
+	has_damage_range = 6
+	damage_temperature = T0C+200
+	descriptor = "bricks"
+	build_type = /obj/item/stack/tile/snowbrick
+	flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_CAN_BREAK | TURF_REMOVE_CROWBAR | TURF_REMOVE_SCREWDRIVER
+	footstep_sounds = list("human" = list(
+		'sound/effects/footstep/floor1.ogg',
+		'sound/effects/footstep/floor2.ogg',
+		'sound/effects/footstep/floor3.ogg',
+		'sound/effects/footstep/floor4.ogg',
+		'sound/effects/footstep/floor5.ogg'))

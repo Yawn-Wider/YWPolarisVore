@@ -1,5 +1,5 @@
-/turf/simulated/open
-	dynamic_lighting = 1 //I don't care if there's no true multiz lighting, this looks so much nicer it's not even funny -KK
+/turf/simulated/open/update_icon_edge()
+	return 0
 
 /turf/simulated/shuttle/floor/white/cryogaia
 	outdoors = 1

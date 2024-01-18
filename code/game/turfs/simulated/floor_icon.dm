@@ -100,6 +100,10 @@ var/image/no_ceiling_image = null
 	if(edge_blending_priority && !forbid_turf_edge())
 		update_icon_edge()
 
+/turf/simulated
+	var/edgeiconLayer = 2.1
+	var/edgeiconPlane = -45
+
 // This updates an edge from an adjacent turf onto us, not our own 'internal' edges.
 // For e.g. we might be outdoor metal plating, and we want to find sand next to us to have it 'spill onto' our turf with an overlay.
 /turf/simulated/proc/update_icon_edge()
@@ -114,8 +118,29 @@ var/image/no_ceiling_image = null
 		if(istype(T) && T.edge_blending_priority && edge_blending_priority < T.edge_blending_priority && icon_state != T.icon_state && !T.forbid_turf_edge())
 			var/cache_key = "[T.get_edge_icon_state()]-[checkdir]" // Usually [icon_state]-[dirnum]
 			if(!turf_edge_cache[cache_key])
-				var/image/I = image(icon = T.icon_edge, icon_state = "[T.get_edge_icon_state()]-edge", dir = checkdir, layer = ABOVE_TURF_LAYER) // VOREStation Edit - icon_edge
-				I.plane = TURF_PLANE
+				var/image/I = image(icon = T.icon_edge, icon_state = "[T.get_edge_icon_state()]-edge", dir = checkdir, layer = edgeiconLayer) // VOREStation Edit - icon_edge //YW Edit - EDGE_DECAL_LAYER
+				I.plane = edgeiconPlane // YW Edit - EDGE_DECAL_PLANE
+				turf_edge_cache[cache_key] = I
+			add_overlay(turf_edge_cache[cache_key])
+
+/turf/simulated/proc/update_icon_edge_debug()
+	for(var/checkdir in cardinal) // Check every direction
+		var/turf/simulated/T = get_step(src, checkdir) // Get the turf in that direction
+		// Our conditions:
+		// Has to be a /turf/simulated
+		// Has to have it's own edge_blending_priority
+		// Has to have a higher priority than us
+		// Their icon_state is not our icon_state
+		// They don't forbid_turf_edge
+		if(istype(T) && T.edge_blending_priority && edge_blending_priority < T.edge_blending_priority && icon_state != T.icon_state && !T.forbid_turf_edge())
+			var/cache_key = "[T.get_edge_icon_state()]-[checkdir]" // Usually [icon_state]-[dirnum]
+			if(turf_edge_cache[cache_key])
+				qdel(turf_edge_cache[cache_key])
+				turf_edge_cache.Remove(cache_key)
+
+			if(!turf_edge_cache[cache_key])
+				var/image/I = image(icon = T.icon_edge, icon_state = "[T.get_edge_icon_state()]-edge", dir = checkdir, layer = edgeiconLayer) // VOREStation Edit - icon_edge //YW Edit - EDGE_DECAL_LAYER
+				I.plane = edgeiconPlane // YW Edit - EDGE_DECAL_PLANE
 				turf_edge_cache[cache_key] = I
 			add_overlay(turf_edge_cache[cache_key])
 

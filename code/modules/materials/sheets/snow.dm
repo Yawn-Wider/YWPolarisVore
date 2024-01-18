@@ -10,6 +10,7 @@
 /obj/item/stack/material/snowbrick
 	name = "snow brick"
 	desc = "For all of your igloo building needs."
+	icon = 'icons/obj/stacks_yw.dmi' //YW Edit - new sprites
 	icon_state = "sheet-snowbrick"
 	default_type = "packed snow"
 	drop_sound = 'sound/items/drop/gloves.ogg'

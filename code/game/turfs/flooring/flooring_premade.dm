@@ -534,13 +534,16 @@
 	icon_state = "snow2" //YWEdit
 	movement_cost = 2
 	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
-	icon_edge = 'icons/turf/snow_yw.dmi' //YWEdit Temp fix
+	icon_edge = 'icons/turf/outdoors_edge_yw.dmi' //YWEdit fix
+	edge_blending_priority = 4 //YWEdit fix
 
 /turf/simulated/floor/outdoors/snow/gravsnow
 	name = "snow"
 	icon_state = "gravsnow"
 	initial_flooring = /decl/flooring/snow/gravsnow
 	movement_cost = 0
+	icon_edge = 'icons/turf/outdoors_edge_yw.dmi' //YWEdit fix
+	edge_blending_priority = 3 //YWEdit fix
 
 /turf/simulated/floor/outdoors/snow/gravsnow/Entered() //Prevents runtimes
 	return
@@ -550,6 +553,7 @@
 	icon_state = "snowyplating"
 	initial_flooring = /decl/flooring/snow/plating
 	movement_cost = 0
+	edge_blending_priority = 0.1 //YW Edit - give edge_blending
 
 /turf/simulated/floor/outdoors/snow/plating/drift
 	name = "snowy plating"
@@ -563,6 +567,7 @@
 	desc = "Hard as a rock and cold as ice."
 	icon = 'icons/turf/outdoors_yw.dmi'
 	icon_state = "rocks_snow"
+	edge_blending_priority = 0.1
 //YW ADDITIONS: end
 //YW CHANGES: end
 // TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud

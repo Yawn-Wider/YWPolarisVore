@@ -15,3 +15,4 @@
 	default_type = "packed snow"
 	drop_sound = 'sound/items/drop/gloves.ogg'
 	pickup_sound = 'sound/items/pickup/clothing.ogg'
+	no_variants = FALSE //YW Addition - has variants

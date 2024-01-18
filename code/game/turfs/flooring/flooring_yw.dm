@@ -36,10 +36,8 @@
 	desc = "Flattened snow."
 	icon = 'icons/turf/floors_yw.dmi'
 	icon_base = "tiles_snowbrick"
-	has_damage_range = 6
-	damage_temperature = T0C+200
-	descriptor = "bricks"
 	build_type = /obj/item/stack/tile/snowbrick
+	damage_temperature = T0C+200
 	flags = TURF_HAS_EDGES | TURF_HAS_CORNERS | TURF_CAN_BREAK | TURF_REMOVE_CROWBAR | TURF_REMOVE_SCREWDRIVER
 	footstep_sounds = list("human" = list(
 		'sound/effects/footstep/floor1.ogg',

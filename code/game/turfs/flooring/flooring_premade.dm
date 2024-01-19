@@ -569,6 +569,7 @@
 	desc = "Hard as a rock and cold as ice."
 	icon = 'icons/turf/outdoors_yw.dmi'
 	icon_state = "rocks_snow"
+	explosion_resistance = INFINITY
 	edge_blending_priority = 0.1
 //YW ADDITIONS: end
 //YW CHANGES: end

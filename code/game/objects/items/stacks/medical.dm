@@ -20,7 +20,7 @@
 		to_chat(user, "<span class='warning'>\The [src] cannot be applied to [M]!</span>")
 		return 1
 
-	if (!M.IsAdvancedToolUser())
+	if (!user.IsAdvancedToolUser())
 		to_chat(user, "<span class='warning'>You don't have the dexterity to do this!</span>")
 		return 1
 
@@ -262,6 +262,12 @@
 			use(1)
 			affecting.salve()
 			playsound(src, pick(apply_sounds), 25)
+
+/obj/item/stack/medical/ointment/simple
+	name = "ointment paste"
+	desc = "A simple thick paste used to salve burns."
+	singular_name = "old-ointment"
+	icon_state = "old-ointment"
 
 /obj/item/stack/medical/advanced/bruise_pack
 	name = "advanced trauma kit"

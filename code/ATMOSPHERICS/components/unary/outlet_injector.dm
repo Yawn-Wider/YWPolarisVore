@@ -167,7 +167,7 @@
 	if(istype(W, /obj/item/device/multitool)) //YW EDIT: aac
 		update_multitool_menu(user)
 		return 1
-	if (!W.is_wrench())
+	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 
 	playsound(src, W.usesound, 50, 1)

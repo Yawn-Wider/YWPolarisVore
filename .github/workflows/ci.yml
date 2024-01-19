@@ -10,9 +10,9 @@ env:
 jobs:
   file_tests:
     name: Run Linters
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
@@ -36,9 +36,9 @@ jobs:
 
   dreamchecker:
     name: DreamChecker
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
 
       - name: Cache SpacemanDMM
         uses: actions/cache@v3
@@ -57,7 +57,7 @@ jobs:
           ~/dreamchecker > ${GITHUB_WORKSPACE}/output-annotations.txt 2>&1
 
       - name: Annotate Linter
-        uses: yogstation13/DreamAnnotate@v1
+        uses: yogstation13/DreamAnnotate@v2
         if: always()
         with:
           outputFile: output-annotations.txt
@@ -71,9 +71,9 @@ jobs:
     # YW EDIT: end
     name: Integration Tests
     # needs: ['file_tests', 'dreamchecker']
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-20.04
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
         run: |
           chmod -R +x ./tools/ci
@@ -124,13 +124,12 @@ jobs:
           #REPLACE: false
           # YW EDIT: end
           RUN: "0"
-  # YW EDIT: start
-  #tests_successful:
-    #name: Integration Tests
-    #needs: ['file_tests', 'dreamchecker', 'unit_tests']
-    #runs-on: ubuntu-latest
-    #steps:
-      #- name: Report Success
-        #run: |
-          #echo "Jobs Successful!"
-  # YW EDIT: end
+
+  tests_successful:
+    name: Integration Tests
+    needs: ['file_tests', 'dreamchecker', 'unit_tests']
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Report Success
+        run: |
+          echo "Jobs Successful!"

@@ -63,6 +63,7 @@
 /turf/simulated/floor,
 /area/stellardelight/deck3/portdock)
 "aj" = (
+/obj/effect/landmark/free_ai_shell,
 /turf/simulated/floor/carpet/turcarpet,
 /area/ai)
 "ak" = (
@@ -122,16 +123,101 @@
 	},
 /turf/simulated/floor/tiled,
 /area/holodeck_control)
+"ap" = (
+/obj/machinery/vending/altevian,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/forestarroomb)
+"aq" = (
+/obj/structure/closet/walllocker_double/emergency_engi/south,
+/turf/simulated/floor,
+/area/stellardelight/deck2/fore)
+"ar" = (
+/obj/structure/closet/walllocker_double/command/ce{
+	dir = 4;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled,
+/area/crew_quarters/heads/chief)
+"as" = (
+/obj/structure/closet/walllocker_double/command/cmo{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/eris/white/cargo,
+/area/crew_quarters/heads/cmo)
 "at" = (
 /obj/structure/table/darkglass,
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
+"au" = (
+/obj/item/weapon/book/manual/command_guide,
+/obj/item/weapon/book/manual/standard_operating_procedure,
+/obj/item/weapon/book/manual/security_space_law,
+/obj/structure/closet/walllocker_double/command/hos{
+	dir = 4;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/crew_quarters/heads/hos)
+"av" = (
+/obj/item/device/taperecorder{
+	pixel_x = -3
+	},
+/obj/item/weapon/circuitboard/aicore{
+	pixel_x = -2;
+	pixel_y = 4
+	},
+/obj/item/weapon/circuitboard/teleporter,
+/obj/structure/closet/walllocker_double/command/rd{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/techfloor,
+/area/crew_quarters/heads/hor)
 "aw" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/aftstarroom)
+"ax" = (
+/obj/item/weapon/book/manual/command_guide,
+/obj/item/weapon/book/manual/command_guide,
+/obj/item/weapon/book/manual/standard_operating_procedure,
+/obj/item/weapon/book/manual/standard_operating_procedure,
+/obj/item/weapon/book/manual/security_space_law,
+/obj/item/weapon/book/manual/security_space_law,
+/obj/structure/closet/walllocker_double/command/iaa{
+	dir = 4;
+	pixel_x = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/lawoffice)
+"ay" = (
+/obj/item/weapon/book/manual/command_guide,
+/obj/item/weapon/book/manual/command_guide,
+/obj/item/weapon/book/manual/standard_operating_procedure,
+/obj/item/weapon/book/manual/standard_operating_procedure,
+/obj/item/weapon/book/manual/security_space_law,
+/obj/item/weapon/book/manual/security_space_law,
+/obj/structure/closet/walllocker_double/command/iaa{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/lawoffice)
+"az" = (
+/obj/item/device/megaphone,
+/obj/item/weapon/book/manual/standard_operating_procedure,
+/obj/item/weapon/book/manual/command_guide,
+/obj/structure/table/reinforced,
+/obj/item/weapon/folder/red,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/structure/closet/walllocker_double/command/north,
+/turf/simulated/floor/carpet,
+/area/crew_quarters/heads/hop)
 "aA" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/stellardelight/deck3/transitgateway)
@@ -141,10 +227,37 @@
 /obj/structure/low_wall/bay/reinforced/steel,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardcent)
+"aC" = (
+/obj/structure/lattice,
+/obj/structure/closet/walllocker_double/emergency_engi/east,
+/turf/simulated/open,
+/area/stellardelight/deck2/starboard)
 "aD" = (
 /obj/structure/table/steel,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/forestarrooma)
+"aE" = (
+/obj/structure/lattice,
+/obj/structure/closet/walllocker_double/emergency_engi/south,
+/turf/simulated/open,
+/area/stellardelight/deck2/port)
+"aF" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/obj/structure/closet/walllocker_double/emergency_engi/south,
+/turf/simulated/open,
+/area/stellardelight/deck2/port)
 "aG" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -160,6 +273,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/hop)
+"aI" = (
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/obj/structure/cable/green{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/vines,
+/turf/simulated/open,
+/area/stellardelight/deck2/fore)
 "aJ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/structure/window/bay/reinforced,
@@ -175,6 +300,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/hop)
+"aL" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/open,
+/area/stellardelight/deck2/fore)
 "aM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -182,6 +313,17 @@
 /turf/simulated/floor,
 /area/stellardelight/deck2/central)
 "aN" = (
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/landmark/vermin,
+/turf/simulated/open,
+/area/stellardelight/deck2/fore)
+"aO" = (
 /obj/structure/lattice,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -192,8 +334,9 @@
 /obj/structure/cable/blue{
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/vermin,
 /turf/simulated/open,
-/area/stellardelight/deck2/starboard)
+/area/stellardelight/deck2/fore)
 "aP" = (
 /obj/structure/bed/chair/shuttle{
 	dir = 1
@@ -216,9 +359,58 @@
 "aQ" = (
 /turf/simulated/floor/tiled/eris/dark/gray_platform,
 /area/stellardelight/deck3/commandhall)
+"aR" = (
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/landmark/vines,
+/turf/simulated/open,
+/area/stellardelight/deck2/fore)
 "aS" = (
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/forestarrooma)
+"aT" = (
+/obj/structure/lattice,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/cable/blue{
+	icon_state = "1-2"
+	},
+/obj/effect/landmark/vermin,
+/turf/simulated/open,
+/area/stellardelight/deck2/starboard)
+"aU" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/effect/landmark/vines,
+/turf/simulated/open,
+/area/stellardelight/deck2/port)
+"aV" = (
+/obj/structure/lattice,
+/obj/structure/disposalpipe/segment,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/landmark/vines,
+/turf/simulated/open,
+/area/stellardelight/deck2/starboard)
 "aX" = (
 /obj/structure/sign/deck3{
 	pixel_x = 32
@@ -228,11 +420,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/stellardelight/deck3/aft)
-"ba" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/effect/landmark/vines,
-/turf/simulated/open,
-/area/stellardelight/deck2/fore)
 "bb" = (
 /obj/effect/floor_decal/techfloor/orange{
 	dir = 8
@@ -775,17 +962,6 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/foreportrooma)
-"db" = (
-/obj/structure/lattice,
-/obj/structure/disposalpipe/segment,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/open,
-/area/stellardelight/deck2/starboard)
 "df" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -1576,6 +1752,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
 /turf/simulated/open,
 /area/crew_quarters/bar)
 "gh" = (
@@ -1704,7 +1883,7 @@
 	pixel_y = 6
 	},
 /obj/item/weapon/stamp/internalaffairs,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "gG" = (
 /obj/structure/lattice,
@@ -1938,7 +2117,7 @@
 /area/ai_upload)
 "hu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "hw" = (
 /obj/machinery/telecomms/processor/preset_one,
@@ -2376,28 +2555,15 @@
 /area/stellardelight/deck3/starboarddock)
 "jh" = (
 /obj/structure/closet/secure_closet/hop2,
-/obj/machinery/requests_console{
-	announcementConsole = 1;
-	department = "Bridge";
-	departmentType = 5;
-	name = "Bridge RC";
-	pixel_x = 30
-	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
+/obj/machinery/alarm/angled{
+	dir = 8;
+	pixel_x = 30
+	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/hop)
-"jl" = (
-/obj/item/weapon/book/manual/command_guide,
-/obj/item/weapon/book/manual/command_guide,
-/obj/item/weapon/book/manual/standard_operating_procedure,
-/obj/item/weapon/book/manual/standard_operating_procedure,
-/obj/item/weapon/book/manual/security_space_law,
-/obj/item/weapon/book/manual/security_space_law,
-/obj/structure/closet/walllocker_double/east,
-/turf/simulated/floor/tiled/dark,
-/area/lawoffice)
 "jm" = (
 /obj/structure/cable/green{
 	icon_state = "1-2"
@@ -2433,6 +2599,13 @@
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/crew_quarters/heads/chief)
+"jo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
 "jp" = (
 /obj/structure/closet,
 /obj/random/contraband,
@@ -2462,10 +2635,14 @@
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/hopdouble,
 /obj/structure/curtain/black,
-/obj/machinery/newscaster{
+/obj/effect/landmark/start/hop,
+/obj/machinery/requests_console{
+	announcementConsole = 1;
+	department = "Bridge";
+	departmentType = 5;
+	name = "Bridge RC";
 	pixel_y = 28
 	},
-/obj/effect/landmark/start/hop,
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/hop)
 "jE" = (
@@ -2684,18 +2861,6 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
-"ky" = (
-/obj/structure/closet/walllocker_double/north,
-/obj/item/device/megaphone,
-/obj/item/weapon/book/manual/standard_operating_procedure,
-/obj/item/weapon/book/manual/command_guide,
-/obj/structure/table/reinforced,
-/obj/item/weapon/folder/red,
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
-/turf/simulated/floor/carpet,
-/area/crew_quarters/heads/hop)
 "kz" = (
 /obj/machinery/airlock_sensor/airlock_exterior/shuttle{
 	dir = 6;
@@ -2738,7 +2903,6 @@
 	},
 /obj/structure/closet/secure_closet/hop,
 /obj/item/clothing/glasses/omnihud,
-/obj/item/weapon/paper/dockingcodes/sd,
 /obj/item/device/retail_scanner/command,
 /obj/item/weapon/storage/box/PDAs,
 /turf/simulated/floor/tiled,
@@ -2831,6 +2995,10 @@
 /obj/effect/map_helper/airlock/sensor/int_sensor,
 /obj/effect/floor_decal/fancy_shuttle{
 	fancy_shuttle_tag = "sdboat"
+	},
+/obj/structure/closet/emergsuit_wall{
+	dir = 1;
+	pixel_y = -32
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/sdboat/aft{
@@ -4696,7 +4864,7 @@
 /obj/structure/sign/painting/library_secure{
 	pixel_x = -30
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "rm" = (
 /obj/effect/floor_decal/techfloor{
@@ -4789,16 +4957,6 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
-"rw" = (
-/obj/structure/closet/walllocker_double/west,
-/obj/item/weapon/book/manual/command_guide,
-/obj/item/weapon/book/manual/command_guide,
-/obj/item/weapon/book/manual/standard_operating_procedure,
-/obj/item/weapon/book/manual/standard_operating_procedure,
-/obj/item/weapon/book/manual/security_space_law,
-/obj/item/weapon/book/manual/security_space_law,
-/turf/simulated/floor/tiled/dark,
-/area/lawoffice)
 "rx" = (
 /turf/simulated/wall/bay/white,
 /area/crew_quarters/heads/cmo)
@@ -4849,15 +5007,21 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/open,
 /area/stellardelight/deck2/port)
+"rW" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/portfore)
 "rX" = (
+/obj/effect/floor_decal/fancy_shuttle{
+	fancy_shuttle_tag = "sdboat"
+	},
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/structure/cable/green{
 	icon_state = "4-8"
-	},
-/obj/effect/floor_decal/fancy_shuttle{
-	fancy_shuttle_tag = "sdboat"
 	},
 /turf/simulated/floor/tiled,
 /area/shuttle/sdboat/aft{
@@ -5169,6 +5333,9 @@
 "tc" = (
 /obj/structure/cable/blue{
 	icon_state = "1-4"
+	},
+/obj/effect/mouse_hole_spawner{
+	dir = 8
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardfore)
@@ -5700,10 +5867,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_cyborg_station)
-"ve" = (
-/obj/structure/closet/walllocker_double/east,
-/turf/simulated/floor/tiled,
-/area/crew_quarters/heads/chief)
 "vf" = (
 /obj/structure/table/reinforced,
 /obj/machinery/photocopier/faxmachine{
@@ -5932,13 +6095,6 @@
 /obj/structure/low_wall/bay/reinforced/steel,
 /turf/simulated/floor,
 /area/stellardelight/deck2/port)
-"wc" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/effect/landmark/vermin,
-/turf/simulated/open,
-/area/stellardelight/deck2/starboard)
 "wd" = (
 /obj/structure/table/standard,
 /obj/item/weapon/aiModule/oxygen,
@@ -6390,7 +6546,7 @@
 	dir = 4
 	},
 /obj/effect/landmark/start/iaa,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "xN" = (
 /obj/structure/cable/green{
@@ -6449,7 +6605,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/stellardelight/deck3/aft)
 "xY" = (
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "xZ" = (
 /turf/simulated/floor/wood,
@@ -6834,7 +6990,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "zp" = (
 /obj/machinery/light/small{
@@ -7045,7 +7201,7 @@
 /obj/machinery/power/apc{
 	pixel_y = -28;
 	req_access = null;
-	req_one_access = list(11, 67)
+	req_one_access = list(11,67)
 	},
 /obj/structure/cable/green,
 /obj/effect/floor_decal/fancy_shuttle{
@@ -7111,7 +7267,7 @@
 /obj/item/device/tape/random,
 /obj/item/weapon/storage/secure/briefcase,
 /obj/structure/closet/walllocker_double/east,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Al" = (
 /obj/machinery/power/apc/angled{
@@ -7365,13 +7521,6 @@
 /obj/machinery/porta_turret,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_upload)
-"Ba" = (
-/obj/structure/closet/walllocker_double/east,
-/obj/item/weapon/book/manual/command_guide,
-/obj/item/weapon/book/manual/standard_operating_procedure,
-/obj/item/weapon/book/manual/security_space_law,
-/turf/simulated/floor/tiled/dark,
-/area/crew_quarters/heads/hos)
 "Bb" = (
 /obj/structure/bed/chair/bay/comfy/blue{
 	dir = 1
@@ -7727,6 +7876,7 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/fuel{
 	dir = 1
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor/tiled,
 /area/shuttle/sdboat/aft{
 	base_turf = /turf/simulated/floor/reinforced/airless
@@ -7736,7 +7886,7 @@
 	layer = 3.3;
 	pixel_x = -27
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "BZ" = (
 /obj/structure/cable/green{
@@ -7747,13 +7897,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/portaft)
-"Cb" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/effect/landmark/vermin,
-/turf/simulated/open,
-/area/stellardelight/deck2/fore)
 "Cc" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/angled_bay/hatch{
@@ -8005,7 +8148,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/machinery/alarm/angled,
+/obj/machinery/newscaster{
+	pixel_y = 28
+	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/heads/hop)
 "CS" = (
@@ -8555,18 +8700,6 @@
 	},
 /turf/simulated/open,
 /area/crew_quarters/bar)
-"Fc" = (
-/obj/structure/closet/walllocker_double/west,
-/obj/item/device/taperecorder{
-	pixel_x = -3
-	},
-/obj/item/weapon/circuitboard/aicore{
-	pixel_x = -2;
-	pixel_y = 4
-	},
-/obj/item/weapon/circuitboard/teleporter,
-/turf/simulated/floor/tiled/techfloor,
-/area/crew_quarters/heads/hor)
 "Fe" = (
 /obj/machinery/hologram/holopad,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -8996,22 +9129,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/ai_server_room)
-"GV" = (
-/obj/structure/lattice,
-/obj/structure/cable/green{
-	icon_state = "4-8"
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/open,
-/area/stellardelight/deck2/port)
 "GW" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/book/manual/supermatter_engine,
@@ -9168,7 +9285,7 @@
 /obj/structure/sign/painting/library_secure{
 	pixel_x = 30
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Hw" = (
 /obj/structure/sign/painting/public{
@@ -9457,13 +9574,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/heads/chief)
-"ID" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/effect/landmark/vines,
-/turf/simulated/open,
-/area/stellardelight/deck2/fore)
 "IG" = (
 /obj/structure/cable/blue{
 	icon_state = "4-8"
@@ -9990,7 +10100,7 @@
 /obj/machinery/power/apc{
 	pixel_y = -28;
 	req_access = null;
-	req_one_access = list(11, 67)
+	req_one_access = list(11,67)
 	},
 /obj/structure/cable/green{
 	icon_state = "0-4"
@@ -10282,6 +10392,12 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardfore)
+"Lo" = (
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/portaft)
 "Lr" = (
 /obj/effect/shuttle_landmark/premade/sd/deck3/starboardairlock,
 /turf/space,
@@ -10291,7 +10407,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Lw" = (
 /obj/effect/floor_decal/spline/plain,
@@ -10499,7 +10615,7 @@
 /obj/item/device/tape/random,
 /obj/item/weapon/storage/secure/briefcase,
 /obj/structure/closet/walllocker_double/west,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Mi" = (
 /obj/effect/floor_decal/corner_techfloor_grid{
@@ -10534,7 +10650,7 @@
 	pixel_y = 6
 	},
 /obj/item/weapon/stamp/internalaffairs,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Mo" = (
 /obj/structure/cable{
@@ -10605,13 +10721,6 @@
 /obj/random/maintenance,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardfore)
-"Mv" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/effect/landmark/vines,
-/turf/simulated/open,
-/area/stellardelight/deck2/fore)
 "Mw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -10721,6 +10830,7 @@
 	dir = 1
 	},
 /obj/item/device/retail_scanner/security,
+/obj/item/device/ticket_printer,
 /turf/simulated/floor/tiled/dark,
 /area/crew_quarters/heads/hos)
 "MO" = (
@@ -10830,13 +10940,6 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/stellardelight/deck3/cryo)
-"Nd" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/obj/effect/landmark/vines,
-/turf/simulated/open,
-/area/stellardelight/deck2/port)
 "Ne" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -11211,6 +11314,13 @@
 "Ol" = (
 /turf/simulated/wall/durasteel,
 /area/ai)
+"On" = (
+/obj/structure/cable/blue{
+	icon_state = "4-8"
+	},
+/obj/effect/landmark/stardog,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardfore)
 "Oo" = (
 /obj/machinery/alarm/angled{
 	dir = 8
@@ -11376,6 +11486,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/starboardcent)
 "OI" = (
@@ -11481,20 +11594,9 @@
 "OU" = (
 /turf/simulated/wall/bay/r_wall/steel,
 /area/stellardelight/deck3/cryo)
-"OV" = (
-/obj/structure/closet/walllocker_double/west,
-/turf/simulated/floor/tiled/eris/white/cargo,
-/area/crew_quarters/heads/cmo)
 "OX" = (
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/portcent)
-"OY" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 8
-	},
-/obj/effect/landmark/vines,
-/turf/simulated/open,
-/area/stellardelight/deck2/starboard)
 "Pa" = (
 /obj/structure/lattice,
 /turf/simulated/open,
@@ -12208,6 +12310,9 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
+/obj/effect/mouse_hole_spawner{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/portcent)
 "RN" = (
@@ -12387,7 +12492,7 @@
 	dir = 8;
 	pixel_y = 6
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "SB" = (
 /obj/machinery/requests_console/preset/ce{
@@ -12413,7 +12518,7 @@
 	layer = 3.3;
 	pixel_x = 27
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "SF" = (
 /obj/effect/floor_decal/steeldecal/steel_decals5{
@@ -13448,7 +13553,7 @@
 	dir = 4;
 	pixel_y = 6
 	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "Wr" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
@@ -13629,7 +13734,7 @@
 	dir = 8
 	},
 /obj/effect/landmark/start/iaa,
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/carpet/blue2,
 /area/lawoffice)
 "WX" = (
 /obj/machinery/camera/network/command{
@@ -13676,22 +13781,15 @@
 	icon_state = "1-2"
 	},
 /obj/effect/landmark/vermin,
+/obj/effect/mouse_hole_spawner{
+	dir = 8
+	},
 /turf/simulated/open,
 /area/crew_quarters/bar)
 "Xd" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden,
 /turf/simulated/floor/airless,
 /area/maintenance/stellardelight/deck3/starboardcent)
-"Xe" = (
-/obj/structure/lattice,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/open,
-/area/stellardelight/deck2/fore)
 "Xf" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/open,
@@ -14278,6 +14376,7 @@
 /obj/structure/cable/green{
 	icon_state = "1-2"
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/portfore)
 "Zl" = (
@@ -14353,6 +14452,7 @@
 /obj/machinery/alarm/angled{
 	dir = 4
 	},
+/obj/effect/landmark/stardog,
 /turf/simulated/floor,
 /area/maintenance/stellardelight/deck3/portaft)
 "ZC" = (
@@ -14361,6 +14461,10 @@
 	},
 /turf/simulated/open,
 /area/stellardelight/deck2/starboard)
+"ZD" = (
+/obj/effect/landmark/stardog,
+/turf/simulated/floor,
+/area/maintenance/stellardelight/deck3/starboardaft)
 "ZE" = (
 /obj/structure/cable/green{
 	icon_state = "4-8"
@@ -21611,7 +21715,7 @@ pf
 Ns
 Ns
 Ns
-Ns
+rW
 Ns
 eF
 IP
@@ -21650,7 +21754,7 @@ IN
 xi
 dE
 dE
-dE
+Lo
 dE
 Sw
 dE
@@ -21927,7 +22031,7 @@ CS
 oW
 oW
 oW
-Nd
+QF
 oW
 oW
 oW
@@ -22069,7 +22173,7 @@ Yw
 uf
 uf
 uf
-Mk
+aU
 uf
 uf
 uf
@@ -22366,7 +22470,7 @@ qq
 qq
 qq
 qq
-GV
+aF
 Ii
 qz
 qz
@@ -22749,7 +22853,7 @@ qF
 qF
 qF
 qF
-Cb
+aL
 qF
 qF
 qF
@@ -22758,7 +22862,7 @@ Cp
 qF
 qF
 qF
-Mv
+aL
 qF
 qF
 qF
@@ -22891,7 +22995,7 @@ qi
 qi
 qi
 qi
-Xe
+aN
 qi
 qi
 qi
@@ -22900,7 +23004,7 @@ kO
 qi
 qi
 qi
-Xe
+aR
 qi
 qi
 qi
@@ -22918,7 +23022,7 @@ Ig
 Ig
 Ig
 Cz
-CS
+aE
 ad
 Ze
 cY
@@ -23736,8 +23840,8 @@ qp
 NF
 qp
 Qp
-ba
-Ie
+Hf
+aI
 tV
 cb
 gy
@@ -23885,19 +23989,19 @@ cb
 kl
 AP
 Ve
-ve
+ar
 vf
 cb
 Pe
 pO
 UB
-Ba
+au
 mD
 zN
 FC
 yC
 dZ
-jl
+ax
 at
 WO
 Oy
@@ -24590,7 +24694,7 @@ oP
 dN
 UA
 Fj
-sO
+aq
 EJ
 rx
 rx
@@ -24737,19 +24841,19 @@ EJ
 To
 pd
 mI
-OV
+as
 SP
 EJ
 pV
 DI
 BQ
-Fc
+av
 Br
 uj
 PC
 XJ
 fT
-rw
+ay
 at
 WO
 AX
@@ -25036,7 +25140,7 @@ Wq
 xY
 yI
 WO
-ky
+az
 Ms
 kT
 yM
@@ -25731,7 +25835,7 @@ sd
 sd
 sd
 sd
-wy
+aO
 sd
 sd
 sd
@@ -25747,7 +25851,7 @@ sd
 sd
 Rj
 FL
-aN
+aT
 FL
 FL
 OI
@@ -25873,7 +25977,7 @@ qF
 qF
 qF
 qF
-ID
+KF
 qF
 qF
 qF
@@ -25889,7 +25993,7 @@ qF
 hC
 aJ
 ow
-wc
+ZC
 ow
 yP
 Ks
@@ -26150,7 +26254,7 @@ tF
 Sb
 Nz
 Jx
-FE
+ap
 sR
 FE
 Ef
@@ -26622,7 +26726,7 @@ mS
 mS
 mS
 mS
-db
+aV
 mS
 mS
 Rz
@@ -26751,7 +26855,7 @@ Ly
 KJ
 by
 ow
-Pa
+aC
 ow
 ow
 ow
@@ -26764,7 +26868,7 @@ ow
 ow
 ow
 ow
-OY
+ZC
 yP
 ow
 ZM
@@ -27045,7 +27149,7 @@ if
 if
 Ne
 iS
-iS
+jo
 Kz
 Dk
 qY
@@ -27143,7 +27247,7 @@ Jh
 RE
 RE
 Kq
-TP
+On
 DQ
 DQ
 DQ
@@ -27181,7 +27285,7 @@ ww
 MB
 Kt
 iv
-KJ
+ZD
 UQ
 KJ
 HF

@@ -13,7 +13,7 @@ export const meta = {
   render: () => <Story />,
 };
 
-const Story = (props, context) => {
+const Story = (props) => {
   if (!window.localStorage) {
     return <NoticeBox>Local storage is not available.</NoticeBox>;
   }
@@ -31,8 +31,12 @@ const Story = (props, context) => {
         </Button>
       }>
       <LabeledList>
-        <LabeledList.Item label="Keys in use">{localStorage.length}</LabeledList.Item>
-        <LabeledList.Item label="Remaining space">{formatSiUnit(localStorage.remainingSpace, 0, 'B')}</LabeledList.Item>
+        <LabeledList.Item label="Keys in use">
+          {localStorage.length}
+        </LabeledList.Item>
+        <LabeledList.Item label="Remaining space">
+          {formatSiUnit(localStorage.remainingSpace, 0, 'B')}
+        </LabeledList.Item>
       </LabeledList>
     </Section>
   );

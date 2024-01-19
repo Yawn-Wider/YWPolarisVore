@@ -367,17 +367,48 @@
 	feedback_add_details("admin_verb","THInstm") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 /client/verb/toggle_vchat()
-	set name = "Toggle VChat"
+	set name = "Toggle TGChat"
 	set category = "Preferences"
-	set desc = "Toggles VChat. Reloading VChat and/or reconnecting required to affect changes."
+	set desc = "Toggles TGChat. Reloading TGChat and/or reconnecting required to affect changes."
 
 	var/pref_path = /datum/client_preference/vchat_enable
 	toggle_preference(pref_path)
 	SScharacter_setup.queue_preferences_save(prefs)
 
-	to_chat(src, "You have toggled VChat [is_preference_enabled(pref_path) ? "on" : "off"]. \
-		You will have to reload VChat and/or reconnect to the server for these changes to take place. \
-		VChat message persistence is not guaranteed if you change this again before the start of the next round.")
+	to_chat(src, "You have toggled TGChat [is_preference_enabled(pref_path) ? "on" : "off"]. \
+		You will have to reload TGChat and/or reconnect to the server for these changes to take place. \
+		TGChat message persistence is not guaranteed if you change this again before the start of the next round.")
+
+/client/verb/toggle_tgui_inputlock()
+	set name = "Toggle TGUI Input Lock"
+	set category = "Preferences"
+	set desc = "Toggles whether or not pressing the 'Enter' key in TGUI input sends the message or creates a new line."
+
+	prefs.tgui_input_lock = !prefs.tgui_input_lock	//There is no preference datum for tgui input lock, nor for any TGUI prefs.
+	SScharacter_setup.queue_preferences_save(prefs)
+
+	to_chat(src, span_notice("You have toggled TGUI input lock: [prefs.tgui_input_lock ? "ON" : "OFF"] \n \
+	This setting determines whether pressing enter on TGUI input sends the input, or creates a newline."))
+
+/client/verb/toggle_chat_timestamps()
+	set name = "Toggle Chat Timestamps"
+	set category = "Preferences"
+	set desc = "Toggles whether or not messages in chat will display timestamps. Enabling this will not add timestamps to messages that have already been sent."
+
+	prefs.chat_timestamp = !prefs.chat_timestamp	//There is no preference datum for tgui input lock, nor for any TGUI prefs.
+	SScharacter_setup.queue_preferences_save(prefs)
+
+	to_chat(src, span_notice("You have toggled chat timestamps: [prefs.chat_timestamp ? "ON" : "OFF"]."))
+
+/client/verb/toggle_throwmode_messages()
+	set name = "Toggle Throw Mode Messages"
+	set category = "Preferences"
+	set desc = "Toggles whether or not activating throw mode (hotkey: R) will announce you're preparing to throw your current handheld item, or catch an incoming item if your hand is empty."
+
+	prefs.throwmode_loud = !prefs.throwmode_loud	//There is no preference datum for tgui input lock, nor for any TGUI prefs.
+	SScharacter_setup.queue_preferences_save(prefs)
+
+	to_chat(src, span_notice("You have toggled throw mode messages: [prefs.throwmode_loud ? "ON" : "OFF"]."))
 
 /client/verb/toggle_status_indicators()
 	set name = "Toggle Status Indicators"
@@ -509,7 +540,7 @@
 		to_chat(src,"You will [ (is_preference_enabled(pref_path)) ? "now" : "no longer"] receive debug logs.")
 		SScharacter_setup.queue_preferences_save(prefs)
 
-	feedback_add_details("admin_verb","TBeSpecial") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	feedback_add_details("admin_verb","TADebugLogs") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
 
 //Mods
 /client/proc/toggle_attack_logs()
@@ -524,4 +555,33 @@
 		to_chat(src,"You will [ (is_preference_enabled(pref_path)) ? "now" : "no longer"] receive attack logs.")
 		SScharacter_setup.queue_preferences_save(prefs)
 
-	feedback_add_details("admin_verb","TBeSpecial") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+	feedback_add_details("admin_verb","TAAttackLogs") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+//General
+/client/proc/toggle_admin_global_looc()
+	set name = "Toggle Admin Global LOOC Visibility"
+	set category = "Preferences"
+	set desc = "Toggles seeing LOOC messages outside your actual LOOC range."
+
+	var/pref_path = /datum/client_preference/holder/show_rlooc
+
+	if(holder)
+		toggle_preference(pref_path)
+		to_chat(src,"You will [ (is_preference_enabled(pref_path)) ? "now" : "no longer"] hear global LOOC.")
+		SScharacter_setup.queue_preferences_save(prefs)
+
+	feedback_add_details("admin_verb","TAGlobalLOOC") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!
+
+/client/proc/toggle_admin_deadchat()
+	set name = "Toggle Admin Living Deadchat"
+	set category = "Preferences"
+	set desc = "Toggles seeing deadchat while not observing."
+
+	var/pref_path = /datum/client_preference/holder/show_staff_dsay
+
+	if(holder)
+		toggle_preference(pref_path)
+		to_chat(src,"You will [ (is_preference_enabled(pref_path)) ? "now" : "no longer"] hear deadchat while not observing.")
+		SScharacter_setup.queue_preferences_save(prefs)
+
+	feedback_add_details("admin_verb","TADeadchat") //If you are copy-pasting this, ensure the 2nd parameter is unique to the new proc!

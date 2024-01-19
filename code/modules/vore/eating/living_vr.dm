@@ -1,17 +1,6 @@
 ///////////////////// Mob Living /////////////////////
 /mob/living
-	var/digestable = TRUE				// Can the mob be digested inside a belly?
-	var/devourable = TRUE				// Can the mob be devoured at all?
-	var/feeding = TRUE					// Can the mob be vorishly force fed or fed to others?
-	var/absorbable = TRUE				// Are you allowed to absorb this person?
-	var/resizable = TRUE				// Can other people resize you? (Usually ignored for self-resizes)
-	var/digest_leave_remains = FALSE	// Will this mob leave bones/skull/etc after the melty demise?
-	var/allowmobvore = TRUE				// Will simplemobs attempt to eat the mob?
-	var/allow_inbelly_spawning = FALSE	// Will we even bother with attempts of someone to spawn in in one of our bellies?
 	var/showvoreprefs = TRUE			// Determines if the mechanical vore preferences button will be displayed on the mob or not.
-	var/obj/belly/vore_selected			// Default to no vore capability.
-	var/list/vore_organs = list()		// List of vore containers inside a mob
-	var/absorbed = FALSE				// If a mob is absorbed into another
 	var/list/temp_language_sources = list()	//VOREStation Addition - Absorbs add languages to the pred
 	var/list/temp_languages = list()		//VOREStation Addition - Absorbs add languages to the pred
 	var/prey_controlled = FALSE			//VOREStation Addition
@@ -23,29 +12,20 @@
 	var/revive_ready = REVIVING_READY	// Only used for creatures that have the xenochimera regen ability, so far.
 	var/revive_finished = 0				// Only used for xenochimera regen, allows us to find out when the regen will finish.
 	var/metabolism = 0.0015
-	var/vore_taste = null				// What the character tastes like
-	var/vore_smell = null				// What the character smells like
 	var/no_vore = FALSE					// If the character/mob can vore.
 	var/restrict_vore_ventcrawl = FALSE // Self explanatory
-	var/noisy = FALSE					// Toggle audible hunger.
 	var/absorbing_prey = 0 				// Determines if the person is using the succubus drain or not. See station_special_abilities_vr.
 	var/drain_finalized = 0				// Determines if the succubus drain will be KO'd/absorbed. Can be toggled on at any time.
 	var/fuzzy = 0						// Preference toggle for sharp/fuzzy icon.
 	var/voice_freq = 0					// Preference for character voice frequency
 	var/list/voice_sounds_list = list()	// The sound list containing our voice sounds!
-	var/permit_healbelly = TRUE
-	var/stumble_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/slip_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/drop_vore = TRUE				//Enabled by default since you have to enable drop pred/prey to do this anyway
-	var/can_be_drop_prey = FALSE
-	var/can_be_drop_pred = FALSE
-	var/allow_spontaneous_tf = FALSE	// Obviously.
 	var/next_preyloop					// For Fancy sound internal loop
+	var/stuffing_feeder = FALSE			// Can feed foods to others whole, like trash eater can eat them on their own.
 	var/adminbus_trash = FALSE			// For abusing trash eater for event shenanigans.
 	var/adminbus_eat_minerals = FALSE	// This creature subsists on a diet of pure adminium.
 	var/vis_height = 32					// Sprite height used for resize features.
-	var/show_vore_fx = TRUE				// Show belly fullscreens
-	var/selective_preference = DM_DEFAULT	// Preference for selective bellymode
+	var/appendage_color = "#e03997" //Default pink. Used for the 'long_vore' trait.
+	var/appendage_alt_setting = FALSE	// Dictates if 'long_vore' user pulls prey to them or not. 1 = user thrown towards target.
 	var/regen_sounds = list(
 		'sound/effects/mob_effects/xenochimera/regen_1.ogg',
 		'sound/effects/mob_effects/xenochimera/regen_2.ogg',
@@ -53,31 +33,6 @@
 		'sound/effects/mob_effects/xenochimera/regen_3.ogg',
 		'sound/effects/mob_effects/xenochimera/regen_5.ogg'
 	)
-
-	var/nutrition_message_visible = TRUE
-	var/list/nutrition_messages = list(
-							"They are starving! You can hear their stomach snarling from across the room!",
-							"They are extremely hungry. A deep growl occasionally rumbles from their empty stomach.",
-							"",
-							"They have a stuffed belly, bloated fat and round from eating too much.",
-							"They have a rotund, thick gut. It bulges from their body obscenely, close to sagging under its own weight.",
-							"They are sporting a large, round, sagging stomach. It contains at least their body weight worth of glorping slush.",
-							"They are engorged with a huge stomach that sags and wobbles as they move. They must have consumed at least twice their body weight. It looks incredibly soft.",
-							"Their stomach is firmly packed with digesting slop. They must have eaten at least a few times worth their body weight! It looks hard for them to stand, and their gut jiggles when they move.",
-							"They are so absolutely stuffed that you aren't sure how it's possible for them to move. They can't seem to swell any bigger. The surface of their belly looks sorely strained!",
-							"They are utterly filled to the point where it's hard to even imagine them moving, much less comprehend it when they do. Their gut is swollen to monumental sizes and amount of food they consumed must be insane.")
-	var/weight_message_visible = TRUE
-	var/list/weight_messages = list(
-							"They are terribly lithe and frail!",
-							"They have a very slender frame.",
-							"They have a lightweight, athletic build.",
-							"They have a healthy, average body.",
-							"They have a thick, curvy physique.",
-							"They have a plush, chubby figure.",
-							"They have an especially plump body with a round potbelly and large hips.",
-							"They have a very fat frame with a bulging potbelly, squishy rolls of pudge, very wide hips, and plump set of jiggling thighs.",
-							"They are incredibly obese. Their massive potbelly sags over their waistline while their fat ass would probably require two chairs to sit down comfortably!",
-							"They are so morbidly obese, you wonder how they can even stand, let alone waddle around the station. They can't get any fatter without being immobilized.")
 
 //
 // Hook for generic creation of stuff on new creatures
@@ -91,7 +46,7 @@
 	//return TRUE to hook-caller
 	return TRUE
 
-/mob/living/proc/init_vore()
+/mob/proc/init_vore()
 	//Something else made organs, meanwhile.
 	if(LAZYLEN(vore_organs))
 		return TRUE
@@ -106,7 +61,7 @@
 			return TRUE
 
 	//Or, we can create a basic one for them
-	if(!LAZYLEN(vore_organs))
+	if(!LAZYLEN(vore_organs) && isliving(src))
 		LAZYINITLIST(vore_organs)
 		var/obj/belly/B = new /obj/belly(src)
 		vore_selected = B
@@ -114,6 +69,10 @@
 		B.name = "Stomach"
 		B.desc = "It appears to be rather warm and wet. Makes sense, considering it's inside \the [name]."
 		B.can_taste = TRUE
+		if(ishuman(src))
+			var/mob/living/carbon/human/H = src
+			if(istype(H.species,/datum/species/monkey))
+				allow_spontaneous_tf = TRUE
 		return TRUE
 
 //
@@ -150,7 +109,7 @@
 			///// If user clicked on their grabbed target
 			else if((src == G.affecting) && (attacker.a_intent == I_GRAB) && (attacker.zone_sel.selecting == BP_TORSO) && (is_vore_predator(G.affecting)))
 				if(!G.affecting.feeding)
-					to_chat(user, "<span class='notice'>[G.affecting] isn't willing to be fed.</span>")
+					to_chat(user, "<span class='vnotice'>[G.affecting] isn't willing to be fed.</span>")
 					log_and_message_admins("[key_name_admin(src)] attempted to feed themselves to [key_name_admin(G.affecting)] against their prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
 					return FALSE
 
@@ -163,11 +122,11 @@
 			///// If user clicked on anyone else but their grabbed target
 			else if((src != G.affecting) && (src != G.assailant) && (is_vore_predator(src)))
 				if(!feeding)
-					to_chat(user, "<span class='notice'>[src] isn't willing to be fed.</span>")
+					to_chat(user, "<span class='vnotice'>[src] isn't willing to be fed.</span>")
 					log_and_message_admins("[key_name_admin(attacker)] attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] against predator's prefs ([src ? ADMIN_JMP(src) : "null"])")
 					return FALSE
 				if(!(G.affecting.devourable))
-					to_chat(user, "<span class='notice'>[G.affecting] isn't able to be devoured.</span>")
+					to_chat(user, "<span class='vnotice'>[G.affecting] isn't able to be devoured.</span>")
 					log_and_message_admins("[key_name_admin(attacker)] attempted to feed [key_name_admin(G.affecting)] to [key_name_admin(src)] against prey's prefs ([G.affecting ? ADMIN_JMP(G.affecting) : "null"])")
 					return FALSE
 				if(attacker.feed_grabbed_to_other(attacker, G.affecting, src))
@@ -226,7 +185,7 @@
 //
 //	Verb for saving vore preferences to save file
 //
-/mob/living/proc/save_vore_prefs()
+/mob/proc/save_vore_prefs()
 	if(!client || !client.prefs_vr)
 		return FALSE
 	if(!copy_to_prefs_vr())
@@ -236,7 +195,7 @@
 
 	return TRUE
 
-/mob/living/proc/apply_vore_prefs()
+/mob/proc/apply_vore_prefs()
 	if(!client || !client.prefs_vr)
 		return FALSE
 	if(!client.prefs_vr.load_vore())
@@ -246,7 +205,7 @@
 
 	return TRUE
 
-/mob/living/proc/copy_to_prefs_vr()
+/mob/proc/copy_to_prefs_vr()
 	if(!client || !client.prefs_vr)
 		to_chat(src,"<span class='warning'>You attempted to save your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev.</span>")
 		return FALSE
@@ -274,7 +233,10 @@
 	P.pickup_pref = src.pickup_pref
 	P.drop_vore = src.drop_vore
 	P.slip_vore = src.slip_vore
+	P.throw_vore = src.throw_vore
+	P.food_vore = src.food_vore
 	P.stumble_vore = src.stumble_vore
+	P.eating_privacy_global = src.eating_privacy_global
 
 	P.nutrition_message_visible = src.nutrition_message_visible
 	P.nutrition_messages = src.nutrition_messages
@@ -292,7 +254,7 @@
 //
 //	Proc for applying vore preferences, given bellies
 //
-/mob/living/proc/copy_from_prefs_vr(var/bellies = TRUE)
+/mob/proc/copy_from_prefs_vr(var/bellies = TRUE)
 	if(!client || !client.prefs_vr)
 		to_chat(src,"<span class='warning'>You attempted to apply your vore prefs but somehow you're in this character without a client.prefs_vr variable. Tell a dev.</span>")
 		return FALSE
@@ -320,7 +282,10 @@
 	pickup_pref = P.pickup_pref
 	drop_vore = P.drop_vore
 	slip_vore = P.slip_vore
+	throw_vore = P.throw_vore
 	stumble_vore = P.stumble_vore
+	food_vore = P.food_vore
+	eating_privacy_global = P.eating_privacy_global
 
 	nutrition_message_visible = P.nutrition_message_visible
 	nutrition_messages = P.nutrition_messages
@@ -328,7 +293,9 @@
 	weight_messages = P.weight_messages
 
 	if(bellies)
-		release_vore_contents(silent = TRUE)
+		if(isliving(src))
+			var/mob/living/L = src
+			L.release_vore_contents(silent = TRUE)
 		vore_organs.Cut()
 		for(var/entry in P.belly_prefs)
 			list_to_object(entry,src)
@@ -397,7 +364,7 @@
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
 
-	visible_message("<span class='warning'>[src] licks [tasted]!</span>","<span class='notice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
+	visible_message("<span class='vwarning'>[src] licks [tasted]!</span>","<span class='vnotice'>You lick [tasted]. They taste rather like [tasted.get_taste_message()].</span>","<b>Slurp!</b>")
 
 
 /mob/living/proc/get_taste_message(allow_generic = 1)
@@ -436,7 +403,7 @@
 		return
 
 	setClickCooldown(DEFAULT_ATTACK_COOLDOWN)
-	visible_message("<span class='warning'>[src] smells [smelled]!</span>","<span class='notice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
+	visible_message("<span class='vwarning'>[src] smells [smelled]!</span>","<span class='vnotice'>You smell [smelled]. They smell like [smelled.get_smell_message()].</span>","<b>Sniff!</b>")
 
 /mob/living/proc/get_smell_message(allow_generic = 1)
 	if(!vore_smell && !allow_generic)
@@ -467,8 +434,8 @@
 	//You're in a belly!
 	if(isbelly(loc))
 		//You've been taken over by a morph
-		if(istype(src, /mob/living/simple_mob/vore/hostile/morph/dominated_prey))
-			var/mob/living/simple_mob/vore/hostile/morph/dominated_prey/s = src
+		if(istype(src, /mob/living/simple_mob/vore/morph/dominated_prey))
+			var/mob/living/simple_mob/vore/morph/dominated_prey/s = src
 			s.undo_prey_takeover(TRUE)
 			return
 		var/obj/belly/B = loc
@@ -480,8 +447,8 @@
 		muffled = FALSE		//Removes Muffling
 		forceMove(get_turf(src)) //Just move me up to the turf, let's not cascade through bellies, there's been a problem, let's just leave.
 		for(var/mob/living/simple_mob/SA in range(10))
-			SA.prey_excludes[src] = world.time
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(B.owner)] ([B.owner ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])")
+			LAZYSET(SA.prey_excludes, src, world.time)
+		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(B.owner)] ([B.owner ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[B.owner.x];Y=[B.owner.y];Z=[B.owner.z]'>JMP</a>" : "null"])")
 
 		if(!ishuman(B.owner))
 			B.owner.update_icons()
@@ -491,18 +458,18 @@
 		var/mob/living/silicon/pred = loc.loc //Thing holding the belly!
 		var/obj/item/device/dogborg/sleeper/belly = loc //The belly!
 
-		var/confirm = tgui_alert(src, "You're in a dogborg sleeper. This is for escaping from preference-breaking or if your predator disconnects/AFKs. If your preferences were being broken, please admin-help as well.", "Confirmation", list("Okay", "Cancel"))
+		var/confirm = tgui_alert(src, "You're in a cyborg sleeper. This is for escaping from preference-breaking or if your predator disconnects/AFKs. If your preferences were being broken, please admin-help as well.", "Confirmation", list("Okay", "Cancel"))
 		if(confirm != "Okay" || loc != belly)
 			return
 		//Actual escaping
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(pred)] (BORG) ([pred ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
+		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(pred)] (BORG) ([pred ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[pred.x];Y=[pred.y];Z=[pred.z]'>JMP</a>" : "null"])")
 		belly.go_out(src) //Just force-ejects from the borg as if they'd clicked the eject button.
 
 	//You're in an AI hologram!
 	else if(istype(loc, /obj/effect/overlay/aiholo))
 		var/obj/effect/overlay/aiholo/holo = loc
 		holo.drop_prey() //Easiest way
-		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(holo.master)] (AI HOLO) ([holo ? "<a href='?_src_=holder;adminplayerobservecoodjump=1;X=[holo.x];Y=[holo.y];Z=[holo.z]'>JMP</a>" : "null"])")
+		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of [key_name(holo.master)] (AI HOLO) ([holo ? "<a href='?_src_=holder;[HrefToken()];adminplayerobservecoodjump=1;X=[holo.x];Y=[holo.y];Z=[holo.z]'>JMP</a>" : "null"])")
 
 	//You're in a capture crystal! ((It's not vore but close enough!))
 	else if(iscapturecrystal(loc))
@@ -579,26 +546,45 @@
 		return FALSE
 
 	if(!prey.devourable)
-		to_chat(user, "<span class='notice'>They aren't able to be devoured.</span>")
+		to_chat(user, "<span class='vnotice'>They aren't able to be devoured.</span>")
 		log_and_message_admins("[key_name_admin(src)] attempted to devour [key_name_admin(prey)] against their prefs ([prey ? ADMIN_JMP(prey) : "null"])")
 		return FALSE
+	if(prey.absorbed || pred.absorbed)
+		to_chat(user, "<span class='vwarning'>They aren't aren't in a state to be devoured.</span>")
+		return FALSE
+
+	//Determining vore attempt privacy
+	var/message_range = world.view
+	if(!pred.is_slipping && !prey.is_slipping) //We only care about privacy preference if it's NOT a spontaneous vore.
+		switch(belly.eating_privacy_local) //if("loud") case not added, as it would not modify message_range
+			if("default")
+				if(pred.eating_privacy_global)
+					message_range = 1
+			if("subtle")
+				message_range = 1
+
+
+
 	// Slipnoms from chompstation downstream, credit to cadyn for the original PR.
 	// Prepare messages
 	if(prey.is_slipping)
-		attempt_msg = "<span class='warning'>It seems like [prey] is about to slide into [pred]'s [lowertext(belly.name)]!</span>"
-		success_msg = "<span class='warning'>[prey] suddenly slides into [pred]'s [lowertext(belly.name)]!</span>"
+		attempt_msg = "<span class='vwarning'>It seems like [prey] is about to slide into [pred]'s [lowertext(belly.name)]!</span>"
+		success_msg = "<span class='vwarning'>[prey] suddenly slides into [pred]'s [lowertext(belly.name)]!</span>"
 	else if(pred.is_slipping)
-		attempt_msg = "<span class='warning'>It seems like [prey] is gonna end up inside [pred]'s [lowertext(belly.name)] as [pred] comes sliding over!</span>"
-		success_msg = "<span class='warning'>[prey] suddenly slips inside of [pred]'s [lowertext(belly.name)] as [pred] slides into them!</span>"
+		attempt_msg = "<span class='vwarning'>It seems like [prey] is gonna end up inside [pred]'s [lowertext(belly.name)] as [pred] comes sliding over!</span>"
+		success_msg = "<span class='vwarning'>[prey] suddenly slips inside of [pred]'s [lowertext(belly.name)] as [pred] slides into them!</span>"
 	else if(user == pred) //Feeding someone to yourself
-		attempt_msg = "<span class='warning'>[pred] is attempting to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
-		success_msg = "<span class='warning'>[pred] manages to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
+		attempt_msg = "<span class='vwarning'>[pred] is attempting to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
+		success_msg = "<span class='vwarning'>[pred] manages to [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
 	else //Feeding someone to another person
-		attempt_msg = "<span class='warning'>[user] is attempting to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
-		success_msg = "<span class='warning'>[user] manages to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
+		attempt_msg = "<span class='vwarning'>[user] is attempting to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
+		success_msg = "<span class='vwarning'>[user] manages to make [pred] [lowertext(belly.vore_verb)] [prey] into their [lowertext(belly.name)]!</span>"
 
 	// Announce that we start the attempt!
-	user.visible_message(attempt_msg)
+
+
+	user.visible_message(attempt_msg, range = message_range)
+
 
 	// Now give the prey time to escape... return if they did
 	var/swallow_time
@@ -615,7 +601,7 @@
 		return FALSE // Prey escpaed (or user disabled) before timer expired.
 
 	// If we got this far, nom successful! Announce it!
-	user.visible_message(success_msg)
+	user.visible_message(success_msg, range = message_range)
 
 	// Actually shove prey into the belly.
 	if(istype(prey.loc, /obj/item/weapon/holder))
@@ -628,8 +614,8 @@
 		qdel(H)
 	else
 		belly.nom_mob(prey, user)
-	if(!ishuman(user))
-		user.update_icons()
+
+	user.update_icon()
 
 	// Inform Admins
 	if(pred == user)
@@ -694,6 +680,16 @@
     gas = list(
         "oxygen" = 100)
 
+/datum/gas_mixture/belly_air/nitrogen_breather
+    volume = 2500
+    temperature = 293.150
+    total_moles = 104
+
+/datum/gas_mixture/belly_air/nitrogen_breather/New()
+    . = ..()
+    gas = list(
+        "nitrogen" = 100)
+
 
 /mob/living/proc/feed_grabbed_to_self_falling_nom(var/mob/living/user, var/mob/living/prey)
 	var/belly = user.vore_selected
@@ -727,6 +723,9 @@
 /mob/living/proc/get_digestion_nutrition_modifier()
 	return 1
 
+/mob/living/proc/get_digestion_efficiency_modifier()
+	return 1
+
 /mob/living/proc/eat_trash()
 	set name = "Eat Trash"
 	set category = "Abilities"
@@ -752,7 +751,7 @@
 	if(istype(I, /obj/item/device/paicard))
 		var/obj/item/device/paicard/palcard = I
 		var/mob/living/silicon/pai/pocketpal = palcard.pai
-		if(!pocketpal.devourable)
+		if(pocketpal && (!pocketpal.devourable))
 			to_chat(src, "<span class='warning'>\The [pocketpal] doesn't allow you to eat it.</span>")
 			return
 
@@ -995,24 +994,57 @@
 	else //Not the droids we're looking for.
 		to_chat(src, "<span class='notice'>You pause for a moment to examine [I] and realize it's not even worth the energy to chew.</span>") //If it ain't ore or the type of sheets we can eat, bugger off!
 
+/mob/living/proc/toggle_stuffing_mode()
+	set name = "Toggle feeding mode"
+	set category = "Abilities"
+	set desc = "Switch whether you will try to feed other people food whole or normally, bite by bite."
+
+	stuffing_feeder = !stuffing_feeder
+	to_chat(src, "<span class='notice'>You will [stuffing_feeder ? "now" : "no longer"] try to feed food whole.</span>")
+
 /mob/living/proc/switch_scaling()
 	set name = "Switch scaling mode"
 	set category = "Preferences"
 	set desc = "Switch sharp/fuzzy scaling for current mob."
 	appearance_flags ^= PIXEL_SCALE
 	fuzzy = !fuzzy
+	update_transform()
+
+/mob/living/proc/center_offset()
+	set name = "Switch center offset mode"
+	set category = "Preferences"
+	set desc = "Switch sprite center offset to fix even/odd symmetry."
+	offset_override = !offset_override
+	update_transform()
 
 /mob/living/examine(mob/user, infix, suffix)
 	. = ..()
+	if(custom_link)
+		. += "Custom link: <span class='linkify'>[custom_link]</span>"
 	if(ooc_notes)
-		. += "<span class = 'deptradio'>OOC Notes:</span> <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a>"
-	. += "<span class='deptradio'><a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a></span>"
+		. += "OOC Notes: <a href='?src=\ref[src];ooc_notes=1'>\[View\]</a> - <a href='?src=\ref[src];print_ooc_notes_to_chat=1'>\[Print\]</a>"
+	. += "<a href='?src=\ref[src];vore_prefs=1'>\[Mechanical Vore Preferences\]</a>"
+
 
 /mob/living/Topic(href, href_list)	//Can't find any instances of Topic() being overridden by /mob/living in polaris' base code, even though /mob/living/carbon/human's Topic() has a ..() call
 	if(href_list["vore_prefs"])
 		display_voreprefs(usr)
 	if(href_list["ooc_notes"])
 		src.Examine_OOC()
+	if(href_list["edit_ooc_notes"])
+		if(usr == src)
+			set_metainfo_panel()
+	if(href_list["edit_ooc_note_likes"])
+		if(usr == src)
+			set_metainfo_likes()
+	if(href_list["edit_ooc_note_dislikes"])
+		if(usr == src)
+			set_metainfo_dislikes()
+	if(href_list["save_ooc_panel"])
+		if(usr == src)
+			save_ooc_panel()
+	if(href_list["print_ooc_notes_to_chat"])
+		print_ooc_notes_to_chat()
 	return ..()
 
 /mob/living/proc/display_voreprefs(mob/user)	//Called by Topic() calls on instances of /mob/living (and subtypes) containing vore_prefs as an argument
@@ -1036,11 +1068,14 @@
 	dispvoreprefs += "<b>Spontaneous vore pred:</b> [can_be_drop_pred ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Drop Vore:</b> [drop_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Slip Vore:</b> [slip_vore ? "Enabled" : "Disabled"]<br>"
+	dispvoreprefs += "<b>Throw vore:</b> [throw_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Stumble Vore:</b> [stumble_vore ? "Enabled" : "Disabled"]<br>"
+	dispvoreprefs += "<b>Food Vore:</b> [food_vore ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Inbelly Spawning:</b> [allow_inbelly_spawning ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Spontaneous transformation:</b> [allow_spontaneous_tf ? "Enabled" : "Disabled"]<br>"
 	dispvoreprefs += "<b>Can be stepped on/over:</b> [step_mechanics_pref ? "Allowed" : "Disallowed"]<br>"
 	dispvoreprefs += "<b>Can be picked up:</b> [pickup_pref ? "Allowed" : "Disallowed"]<br>"
+	dispvoreprefs += "<b>Global Vore Privacy is:</b> [eating_privacy_global ? "Subtle" : "Loud"]<br>"
 	user << browse("<html><head><title>Vore prefs: [src]</title></head><body><center>[dispvoreprefs]</center></body></html>", "window=[name]mvp;size=300x400;can_resize=1;can_minimize=0")
 	onclose(user, "[name]")
 	return
@@ -1050,59 +1085,157 @@
 	icon = 'icons/mob/screen_full_vore.dmi'
 	icon_state = ""
 
+/obj/screen/fullscreen/belly/colorized
+	icon = 'icons/mob/screen_full_colorized_vore.dmi'
+
+/obj/screen/fullscreen/belly/colorized/overlay
+	icon = 'icons/mob/screen_full_colorized_vore_overlays.dmi'
+
 /mob/living/proc/vorebelly_printout() //Spew the vorepanel belly messages into chat window for copypasting.
 	set name = "X-Print Vorebelly Settings"
 	set category = "Preferences"
 	set desc = "Print out your vorebelly messages into chat for copypasting."
 
-	for(var/belly in vore_organs)
-		if(isbelly(belly))
-			var/obj/belly/B = belly
-			to_chat(src, "<span class='notice'><b>Belly name:</b> [B.name]</span>")
-			to_chat(src, "<span class='notice'><b>Belly desc:</b> [B.desc]</span>")
-			to_chat(src, "<span class='notice'><b>Belly absorbed desc:</b> [B.absorbed_desc]</span>")
-			to_chat(src, "<span class='notice'><b>Vore verb:</b> [B.vore_verb]</span>")
-			to_chat(src, "<span class='notice'><b>Release verb:</b> [B.release_verb]</span>")
-			to_chat(src, "<span class='notice'><b>Struggle messages (outside):</b></span>")
-			for(var/msg in B.struggle_messages_outside)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Struggle messages (inside):</b></span>")
-			for(var/msg in B.struggle_messages_inside)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Absorbed struggle messages (outside):</b></span>")
-			for(var/msg in B.absorbed_struggle_messages_outside)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Absorbed struggle messages (inside):</b></span>")
-			for(var/msg in B.absorbed_struggle_messages_inside)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Digest messages (owner):</b></span>")
-			for(var/msg in B.digest_messages_owner)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Digest messages (prey):</b></span>")
-			for(var/msg in B.digest_messages_prey)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Absorb messages:</b></span>")
-			for(var/msg in B.absorb_messages_owner)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Absorb messages (prey):</b></span>")
-			for(var/msg in B.absorb_messages_prey)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Unabsorb messages:</b></span>")
-			for(var/msg in B.unabsorb_messages_owner)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Unabsorb messages (prey):</b></span>")
-			for(var/msg in B.unabsorb_messages_prey)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Examine messages:</b></span>")
-			for(var/msg in B.examine_messages)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			for(var/msg in B.examine_messages_absorbed)
-				to_chat(src, "<span class='notice'>[msg]</span>")
-			to_chat(src, "<span class='notice'><b>Emote lists:</b></span>")
-			for(var/EL in B.emote_lists)
-				to_chat(src, "<span class='notice'><b>[EL]:</b></span>")
-				for(var/msg in B.emote_lists[EL])
-					to_chat(src, "<span class='notice'>[msg]</span>")
+	var/result = tgui_alert(src, "Would you rather open the export panel?", "Selected Belly Export", list("Open Panel", "Print to Chat"))
+	if(result == "Open Panel")
+		var/mob/living/user = usr
+		if(!user)
+			to_chat(usr,"<span class='notice'>Mob undefined: [user]</span>")
+			return FALSE
+
+		var/datum/vore_look/export_panel/exportPanel
+		if(!exportPanel)
+			exportPanel = new(usr)
+
+		if(!exportPanel)
+			to_chat(user,"<span class='notice'>Export panel undefined: [exportPanel]</span>")
+			return
+
+		exportPanel.tgui_interact(user)
+	else
+		for(var/belly in vore_organs)
+			if(isbelly(belly))
+				var/obj/belly/B = belly
+				to_chat(src, "<span class='chatexport'><b>Belly name:</b> [B.name]</span>")
+				to_chat(src, "<span class='chatexport'><b>Belly desc:</b> [B.desc]</span>")
+				to_chat(src, "<span class='chatexport'><b>Belly absorbed desc:</b> [B.absorbed_desc]</span>")
+				to_chat(src, "<span class='chatexport'><b>Vore verb:</b> [B.vore_verb]</span>")
+				to_chat(src, "<span class='chatexport'><b>Struggle messages (outside):</b></span>")
+				for(var/msg in B.struggle_messages_outside)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Struggle messages (inside):</b></span>")
+				for(var/msg in B.struggle_messages_inside)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorbed struggle messages (outside):</b></span>")
+				for(var/msg in B.absorbed_struggle_messages_outside)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorbed struggle messages (inside):</b></span>")
+				for(var/msg in B.absorbed_struggle_messages_inside)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape attempt messages (owner):</b></span>")
+				for(var/msg in B.escape_attempt_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape attempt messages (prey):</b></span>")
+				for(var/msg in B.escape_attempt_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape messages (owner):</b></span>")
+				for(var/msg in B.escape_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape messages (prey):</b></span>")
+				for(var/msg in B.escape_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape messages (outside):</b></span>")
+				for(var/msg in B.escape_messages_outside)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape item messages (owner):</b></span>")
+				for(var/msg in B.escape_item_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape item messages (prey):</b></span>")
+				for(var/msg in B.escape_item_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape item messages (outside):</b></span>")
+				for(var/msg in B.escape_item_messages_outside)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape fail messages (owner):</b></span>")
+				for(var/msg in B.escape_fail_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Escape fail messages (prey):</b></span>")
+				for(var/msg in B.escape_fail_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorbed escape attempt messages (owner):</b></span>")
+				for(var/msg in B.escape_attempt_absorbed_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorbed escape attempt messages (prey):</b></span>")
+				for(var/msg in B.escape_attempt_absorbed_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorbed escape messages (owner):</b></span>")
+				for(var/msg in B.escape_absorbed_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorbed escape messages (prey):</b></span>")
+				for(var/msg in B.escape_absorbed_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorbed escape messages (outside):</b></span>")
+				for(var/msg in B.escape_absorbed_messages_outside)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorbed escape fail messages (owner):</b></span>")
+				for(var/msg in B.escape_fail_absorbed_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorbed escape fail messages (prey):</b></span>")
+				for(var/msg in B.escape_fail_absorbed_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Primary transfer messages (owner):</b></span>")
+				for(var/msg in B.primary_transfer_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Primary transfer messages (prey):</b></span>")
+				for(var/msg in B.primary_transfer_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Secondary transfer messages (owner):</b></span>")
+				for(var/msg in B.secondary_transfer_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Secondary transfer messages (prey):</b></span>")
+				for(var/msg in B.secondary_transfer_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Digest chance messages (owner):</b></span>")
+				for(var/msg in B.digest_chance_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Digest chance messages  (prey):</b></span>")
+				for(var/msg in B.digest_chance_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorb chance messages (owner):</b></span>")
+				for(var/msg in B.absorb_chance_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorb chance messages  (prey):</b></span>")
+				for(var/msg in B.absorb_chance_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Digest messages (owner):</b></span>")
+				for(var/msg in B.digest_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Digest messages (prey):</b></span>")
+				for(var/msg in B.digest_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorb messages (owner):</b></span>")
+				for(var/msg in B.absorb_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Absorb messages (prey):</b></span>")
+				for(var/msg in B.absorb_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Unabsorb messages (owner):</b></span>")
+				for(var/msg in B.unabsorb_messages_owner)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Unabsorb messages (prey):</b></span>")
+				for(var/msg in B.unabsorb_messages_prey)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Examine messages (when full):</b></span>")
+				for(var/msg in B.examine_messages)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Examine messages (with absorbed victims):</b></span>")
+				for(var/msg in B.examine_messages_absorbed)
+					to_chat(src, "<span class='chatexport'>[msg]</span>")
+				to_chat(src, "<span class='chatexport'><b>Emote lists:</b></span>")
+				for(var/EL in B.emote_lists)
+					to_chat(src, "<span class='chatexport'><b>[EL]:</b></span>")
+					for(var/msg in B.emote_lists[EL])
+						to_chat(src, "<span class='chatexport'>[msg]</span>")
 
 /**
  * Small helper component to manage the vore panel HUD icon
@@ -1117,11 +1250,11 @@
 
 /datum/component/vore_panel/RegisterWithParent()
 	. = ..()
-	RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, .proc/create_mob_button)
+	RegisterSignal(parent, COMSIG_MOB_CLIENT_LOGIN, PROC_REF(create_mob_button))
 	var/mob/living/owner = parent
 	if(owner.client)
 		create_mob_button(parent)
-	owner.verbs |= /mob/living/proc/insidePanel
+	owner.verbs |= /mob/proc/insidePanel
 	owner.vorePanel = new(owner)
 
 /datum/component/vore_panel/UnregisterFromParent()
@@ -1132,14 +1265,14 @@
 		owner?.client?.screen -= screen_icon
 		UnregisterSignal(screen_icon, COMSIG_CLICK)
 		qdel_null(screen_icon)
-	owner.verbs -= /mob/living/proc/insidePanel
+	owner.verbs -= /mob/proc/insidePanel
 	qdel_null(owner.vorePanel)
 
 /datum/component/vore_panel/proc/create_mob_button(mob/user)
 	var/datum/hud/HUD = user.hud_used
 	if(!screen_icon)
 		screen_icon = new()
-		RegisterSignal(screen_icon, COMSIG_CLICK, .proc/vore_panel_click)
+		RegisterSignal(screen_icon, COMSIG_CLICK, PROC_REF(vore_panel_click))
 	if(ispAI(user))
 		screen_icon.icon = 'icons/mob/pai_hud.dmi'
 		screen_icon.screen_loc = ui_acti
@@ -1153,7 +1286,7 @@
 /datum/component/vore_panel/proc/vore_panel_click(source, location, control, params, user)
 	var/mob/living/owner = user
 	if(istype(owner) && owner.vorePanel)
-		INVOKE_ASYNC(owner.vorePanel, .proc/tgui_interact, user)
+		INVOKE_ASYNC(owner.vorePanel, PROC_REF(tgui_interact), user)
 
 /**
  * Screen object for vore panel

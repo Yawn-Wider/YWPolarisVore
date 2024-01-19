@@ -97,3 +97,18 @@ VIRGO3B_TURF_CREATE(/turf/simulated/floor/outdoors/rocks)
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(5, 1, src)
 		s.start()
+
+// Shelter Capsule extra restrictions
+/datum/map_template/shelter/New()
+	..()
+	banned_areas += list(/area/groundbase/level3/escapepad)
+
+// Landmarks for wildlife events
+
+/obj/effect/landmark/wildlife/water
+	name = "aquatic wildlife"
+	wildlife_type = 1
+
+/obj/effect/landmark/wildlife/forest
+	name = "roaming wildlife"
+	wildlife_type = 2

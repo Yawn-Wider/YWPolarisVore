@@ -249,6 +249,7 @@
 	if(!check_rights(R_DEBUG))	return
 	src << browse(replacetext(SSatoms.InitLog(), "\n", "<br>"), "window=initlog")
 
+/*
 /client/proc/cmd_display_overlay_log()
 	set category = "Debug"
 	set name = "Display overlay Log"
@@ -256,7 +257,7 @@
 
 	if(!check_rights(R_DEBUG))	return
 	render_stats(SSoverlays.stats, src)
-
+*/
 // Render stats list for round-end statistics.
 /proc/render_stats(list/stats, user, sort = /proc/cmp_generic_stat_item_time)
 	sortTim(stats, sort, TRUE)
@@ -638,7 +639,7 @@
 	set name = "Change Weather"
 	set desc = "Changes the current weather."
 
-	if(!check_rights(R_DEBUG))
+	if(!check_rights(R_DEBUG|R_EVENT)) //YW Edit: Event Makers can change weather
 		return
 
 	var/datum/planet/planet = tgui_input_list(usr, "Which planet do you want to modify the weather on?", "Change Weather", SSplanets.planets)
@@ -650,6 +651,21 @@
 			var/log = "[key_name(src)] changed [planet.name]'s weather to [new_weather]."
 			message_admins(log)
 			log_admin(log)
+
+/datum/admins/proc/toggle_firework_override()
+	set category = "Fun"
+	set name = "Toggle Weather Firework Override"
+	set desc = "Toggles ability for weather fireworks to affect weather on planet of choice."
+
+	if(!check_rights(R_DEBUG))
+		return
+
+	var/datum/planet/planet = tgui_input_list(usr, "Which planet do you want to toggle firework effects on?", "Change Weather", SSplanets.planets)
+	if(istype(planet) && planet.weather_holder)
+		planet.weather_holder.firework_override = !(planet.weather_holder.firework_override)
+		var/log = "[key_name(src)] toggled [planet.name]'s firework override to [planet.weather_holder.firework_override ? "on" : "off"]."
+		message_admins(log)
+		log_admin(log)
 
 /datum/admins/proc/change_time()
 	set category = "Debug"

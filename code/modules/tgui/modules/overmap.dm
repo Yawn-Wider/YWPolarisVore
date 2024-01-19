@@ -11,7 +11,7 @@
 
 /datum/tgui_module/ship/Destroy()
 	if(LAZYLEN(viewers))
-		for(var/weakref/W in viewers)
+		for(var/datum/weakref/W in viewers)
 			var/M = W.resolve()
 			if(M)
 				unlook(M)
@@ -56,16 +56,16 @@
 		user.reset_view(linked)
 	user.set_viewsize(world.view + extra_view)
 	GLOB.moved_event.register(user, src, /datum/tgui_module/ship/proc/unlook)
-	LAZYDISTINCTADD(viewers, weakref(user))
+	LAZYDISTINCTADD(viewers, WEAKREF(user))
 
 /datum/tgui_module/ship/proc/unlook(var/mob/user)
 	user.reset_view()
 	user.set_viewsize() // reset to default
 	GLOB.moved_event.unregister(user, src, /datum/tgui_module/ship/proc/unlook)
-	LAZYREMOVE(viewers, weakref(user))
+	LAZYREMOVE(viewers, WEAKREF(user))
 
 /datum/tgui_module/ship/proc/viewing_overmap(mob/user)
-	return (weakref(user) in viewers)
+	return (WEAKREF(user) in viewers)
 
 /datum/tgui_module/ship/check_eye(var/mob/user)
 	if(!get_dist(user, tgui_host()) > 1 || user.blinded || !linked)
@@ -307,7 +307,8 @@
 		/* HELM */
 		if("add")
 			var/datum/computer_file/data/waypoint/R = new()
-			var/sec_name = tgui_input_text(usr, "Input navigation entry name", "New navigation entry", "Sector #[known_sectors.len]")
+			var/sec_name = tgui_input_text(usr, "Input navigation entry name", "New navigation entry", "Sector #[known_sectors.len]", MAX_NAME_LEN)
+			sec_name = sanitize(sec_name,MAX_NAME_LEN)
 			if(!sec_name)
 				sec_name = "Sector #[known_sectors.len]"
 			R.fields["name"] = sec_name
@@ -383,7 +384,7 @@
 			else
 				autopilot = !autopilot
 			. = TRUE
-		
+
 		if("apilot_lock")
 			autopilot_disabled = !autopilot_disabled
 			autopilot = FALSE

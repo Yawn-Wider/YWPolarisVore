@@ -1,5 +1,6 @@
 /datum/preferences
 	var/extra_languages = 0
+	var/preferred_language = "common" // VOREStation Edit: Allow selecting a preferred language
 
 /datum/category_item/player_setup_item/general/language
 	name = "Language"
@@ -9,14 +10,22 @@
 /datum/category_item/player_setup_item/general/language/load_character(var/savefile/S)
 	S["language"]			>> pref.alternate_languages
 	S["extra_languages"]	>> pref.extra_languages
-	testing("LANGSANI: Loaded from [pref.client]'s character [pref.real_name || "-name not yet loaded-"] savefile: [english_list(pref.alternate_languages || list())]")
+	if(islist(pref.alternate_languages))			// Because aparently it may not be?
+		testing("LANGSANI: Loaded from [pref.client]'s character [pref.real_name || "-name not yet loaded-"] savefile: [english_list(pref.alternate_languages || list())]")
 	S["language_prefixes"]	>> pref.language_prefixes
+	//VORE Edit Begin
+	S["preflang"]			>> pref.preferred_language
+	//VORE Edit End
+	S["language_custom_keys"]	>> pref.language_custom_keys
 
 /datum/category_item/player_setup_item/general/language/save_character(var/savefile/S)
 	S["language"]			<< pref.alternate_languages
 	S["extra_languages"]	<< pref.extra_languages
-	testing("LANGSANI: Saved to [pref.client]'s character [pref.real_name || "-name not yet loaded-"] savefile: [english_list(pref.alternate_languages || list())]")
+	if(islist(pref.alternate_languages))			// Because aparently it may not be?
+		testing("LANGSANI: Loaded from [pref.client]'s character [pref.real_name || "-name not yet loaded-"] savefile: [english_list(pref.alternate_languages || list())]")
 	S["language_prefixes"]	<< pref.language_prefixes
+	S["language_custom_keys"]	<< pref.language_custom_keys
+	S["preflang"]			<< pref.preferred_language // VOREStation Edit
 
 /datum/category_item/player_setup_item/general/language/sanitize_character()
 	if(!islist(pref.alternate_languages))
@@ -32,6 +41,11 @@
 			testing("LANGSANI: Truncated [pref.client]'s character [pref.real_name || "-name not yet loaded-"] language list because it was too long (len: [pref.alternate_languages.len], allowed: [S.num_alternate_languages])")
 			pref.alternate_languages.len = (S.num_alternate_languages + pref.extra_languages) // Truncate to allowed length
 
+		// VOREStation Edit Start
+		if((!(pref.preferred_language in pref.alternate_languages) && !(pref.preferred_language == LANGUAGE_GALCOM) && !(pref.preferred_language == S.language)) || !pref.preferred_language) // Safety handling for if our preferred language is ever somehow removed from the character's list of langauges, or they don't have one set
+			pref.preferred_language = S.language // Reset to default, for safety
+		// VOREStation Edit end
+
 		// Sanitize illegal languages
 		for(var/language in pref.alternate_languages)
 			var/datum/language/L = GLOB.all_languages[language]
@@ -44,6 +58,14 @@
 	for(var/prefix in pref.language_prefixes)
 		if(prefix in forbidden_prefixes)
 			pref.language_prefixes -= prefix
+	if(isnull(pref.language_custom_keys))
+		pref.language_custom_keys = list()
+	var/datum/species/S = GLOB.all_species[pref.species]
+	for(var/key in pref.language_custom_keys)
+		if(!pref.language_custom_keys[key])
+			pref.language_custom_keys.Remove(key)
+		if(!((pref.language_custom_keys[key] == S.language) || (pref.language_custom_keys[key] == S.default_language && S.default_language != S.language) || (pref.language_custom_keys[key] in pref.alternate_languages)))
+			pref.language_custom_keys.Remove(key)
 
 /datum/category_item/player_setup_item/general/language/content()
 	. += "<b>Languages</b><br>"
@@ -52,14 +74,14 @@
 		testing("LANGSANI: Truncated [pref.client]'s character [pref.real_name || "-name not yet loaded-"] language list because it was too long (len: [pref.alternate_languages.len], allowed: [S.num_alternate_languages])")
 		pref.alternate_languages.len = (S.num_alternate_languages + pref.extra_languages) // Truncate to allowed length
 	if(S.language)
-		. += "- [S.language]<br>"
+		. += "- [S.language] - <a href='?src=\ref[src];set_custom_key=[S.language]'>Set Custom Key</a><br>"
 	if(S.default_language && S.default_language != S.language)
-		. += "- [S.default_language]<br>"
+		. += "- [S.default_language] - <a href='?src=\ref[src];set_custom_key=[S.default_language]'>Set Custom Key</a><br>"
 	if(S.num_alternate_languages + pref.extra_languages)
 		if(pref.alternate_languages.len)
 			for(var/i = 1 to pref.alternate_languages.len)
 				var/lang = pref.alternate_languages[i]
-				. += "- [lang] - <a href='?src=\ref[src];remove_language=[i]'>remove</a><br>"
+				. += "- [lang] - <a href='?src=\ref[src];remove_language=[i]'>remove</a> - <a href='?src=\ref[src];set_custom_key=[lang]'>Set Custom Key</a><br>"
 
 		if(pref.alternate_languages.len < (S.num_alternate_languages + pref.extra_languages))
 			. += "- <a href='?src=\ref[src];add_language=1'>add</a> ([(S.num_alternate_languages + pref.extra_languages) - pref.alternate_languages.len] remaining)<br>"
@@ -68,6 +90,7 @@
 
 	. += "<b>Language Keys</b><br>"
 	. += " [jointext(pref.language_prefixes, " ")] <a href='?src=\ref[src];change_prefix=1'>Change</a> <a href='?src=\ref[src];reset_prefix=1'>Reset</a><br>"
+	. += "<b>Preferred Language</b> <a href='?src=\ref[src];pref_lang=1'>[pref.preferred_language]</a><br>" // VOREStation Add
 
 /datum/category_item/player_setup_item/general/language/OnTopic(var/href,var/list/href_list, var/mob/user)
 	if(href_list["remove_language"])
@@ -126,5 +149,51 @@
 	else if(href_list["reset_prefix"])
 		pref.language_prefixes = config.language_prefixes.Copy()
 		return TOPIC_REFRESH
+
+	else if(href_list["set_custom_key"])
+		var/lang = href_list["set_custom_key"]
+		if(!(lang in GLOB.all_languages))
+			return TOPIC_REFRESH
+
+		var/oldkey = ""
+		for(var/key in pref.language_custom_keys)
+			if(pref.language_custom_keys[key] == lang)
+				oldkey = key
+				break
+
+		var/char = tgui_input_text(user, "Input a language key for [lang]. Input a single space to reset.", "Language Custom Key", oldkey)
+		if(length(char) != 1)
+			return TOPIC_REFRESH
+		else if(char == " ")
+			for(var/key in pref.language_custom_keys)
+				if(pref.language_custom_keys[key] == lang)
+					pref.language_custom_keys -= key
+					break
+		else if(contains_az09(char))
+			if(!(char in pref.language_custom_keys))
+				pref.language_custom_keys += char
+			pref.language_custom_keys[char] = lang
+		else
+			tgui_alert_async(user, "Improper language key. Rejected.", "Error")
+
+		return TOPIC_REFRESH
+
+	// VOREStation Add: Preferred Language
+	else if(href_list["pref_lang"])
+		if(pref.species) // Safety to prevent a null runtime here
+			var/datum/species/S = GLOB.all_species[pref.species]
+			var/list/lang_opts = list(S.language) + pref.alternate_languages + LANGUAGE_GALCOM
+			var/selection = tgui_input_list(user, "Choose your preferred spoken language:", "Preferred Spoken Language", lang_opts, pref.preferred_language)
+			if(!selection) // Set our preferred to default, just in case.
+				tgui_alert_async(user, "Preferred Language not modified.", "Selection Canceled")
+			if(selection)
+				pref.preferred_language = selection
+				if(selection == "common" || selection == S.language)
+					tgui_alert_async(user, "You will now speak your standard default language, [S.language ? S.language : "common"], if you do not specify a language when speaking.", "Preferred Set to Default")
+				else // Did they set anything else?
+					tgui_alert_async(user, "You will now speak [pref.preferred_language] if you do not specify a language when speaking.", "Preferred Language Set")
+			return TOPIC_REFRESH
+	// VOREStation Add End
+
 
 	return ..()

@@ -203,42 +203,42 @@
 /area/proc/fire_alert()
 	if(!fire)
 		fire = 1	//used for firedoor checks
-		updateicon()
+		update_icon()
 		firedoors_update()
 
 /area/proc/fire_reset()
 	if (fire)
 		fire = 0	//used for firedoor checks
-		updateicon()
+		update_icon()
 		firedoors_update()
 
 /area/proc/readyalert()
 	if(!eject)
 		eject = 1
-		updateicon()
+		update_icon()
 	return
 
 /area/proc/readyreset()
 	if(eject)
 		eject = 0
-		updateicon()
+		update_icon()
 	return
 
 /area/proc/partyalert()
 	if (!( party ))
 		party = 1
-		updateicon()
+		update_icon()
 		firedoors_update()
 	return
 
 /area/proc/partyreset()
 	if (party)
 		party = 0
-		updateicon()
+		update_icon()
 		firedoors_update()
 	return
 
-/area/proc/updateicon()
+/area/update_icon()
 	if ((fire || eject || party) && (!requires_power||power_environ) && !istype(src, /area/space))//If it doesn't require power, can still activate this proc.
 		if(fire && !eject && !party)
 			icon_state = null // Let lights take care of it
@@ -282,7 +282,7 @@
 	for(var/obj/machinery/M in src)	// for each machine in the area
 		M.power_change()			// reverify power status (to update icons etc.)
 	if (fire || eject || party)
-		updateicon()
+		update_icon()
 
 /area/proc/usage(var/chan, var/include_static = TRUE)
 	var/used = 0
@@ -423,7 +423,7 @@ var/list/mob/living/forced_ambiance_list = new
 			L << chosen_ambiance
 		else
 			L << sound(null, channel = CHANNEL_AMBIENCE_FORCED)
-	else if(src.ambience.len)
+	else if(src.ambience && src.ambience.len)
 		var/ambience_odds = L?.client.prefs.ambience_chance
 		if(prob(ambience_odds) && (world.time >= L.client.time_last_ambience_played + 1 MINUTE))
 			var/sound = pick(ambience)
@@ -465,7 +465,7 @@ var/list/mob/living/forced_ambiance_list = new
 
 /area/proc/prison_break(break_lights = TRUE, open_doors = TRUE, open_blast_doors = TRUE)
 	var/obj/machinery/power/apc/theAPC = get_apc()
-	if(theAPC.operating)
+	if(theAPC && theAPC.operating)
 		if(break_lights)
 			for(var/obj/machinery/power/apc/temp_apc in src)
 				temp_apc.overload_lighting(70)

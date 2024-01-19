@@ -1845,6 +1845,14 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/outpost/mining_north)
+"ez" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "eA" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
@@ -1996,6 +2004,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
+"eV" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "eW" = (
 /obj/structure/reagent_dispensers/watertank,
 /obj/item/weapon/reagent_containers/glass/bucket,
@@ -2139,9 +2159,8 @@
 /turf/simulated/floor/airless,
 /area/rnd/test_area)
 "fo" = (
-/obj/machinery/conveyor_switch/oneway{
-	id = "mining_internal";
-	name = "mining conveyor"
+/obj/machinery/conveyor_switch{
+	id = "mining_internal"
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/refinery)
@@ -2464,7 +2483,7 @@
 "fZ" = (
 /obj/turbolift_map_holder/lumber/serviceelevator,
 /turf/simulated/floor/holofloor/tiled/dark,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "ga" = (
 /obj/machinery/power/apc{
 	dir = 8;
@@ -3172,7 +3191,7 @@
 /area/gateway)
 "hF" = (
 /turf/simulated/floor/holofloor/tiled/dark,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "hG" = (
 /obj/machinery/atmospherics/unary/freezer{
 	icon_state = "freezer"
@@ -4135,6 +4154,15 @@
 /obj/structure/ore_box,
 /turf/simulated/floor/tiled/asteroid_steel,
 /area/mine/explored)
+"kb" = (
+/obj/structure/cable{
+	icon_state = "1-4"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "kc" = (
 /obj/structure/table/steel,
 /obj/machinery/cell_charger,
@@ -4591,7 +4619,7 @@
 	name = "Burn Chamber Air Control";
 	output_tag = "burn_out";
 	pressure_setting = 0;
-	sensors = list("burn_sensor"="Burn Chamber Sensor")
+	sensors = list("burn_sensor" = "Burn Chamber Sensor")
 	},
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5585,6 +5613,18 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/rnd/outpost/launch)
+"nD" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "nE" = (
 /obj/item/weapon/pickaxe/three_pick,
 /turf/simulated/mineral/floor/ignore_mapgen/cave,
@@ -7170,7 +7210,7 @@
 /area/rnd/xenobiology/secure)
 "rm" = (
 /turf/simulated/wall,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "rn" = (
 /obj/structure/grille,
 /obj/structure/cable/blue{
@@ -7827,6 +7867,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/rnd/outpost/storage)
+"ti" = (
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/structure/cable{
+	d2 = 2;
+	icon_state = "0-2"
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "tj" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -8405,6 +8457,15 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/steel,
 /area/rnd/xenobiology/failsafe)
+"uE" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/structure/cable{
+	icon_state = "2-8"
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "uF" = (
 /obj/machinery/door/airlock/glass_mining{
 	name = "Production Area";
@@ -9807,7 +9868,7 @@
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "yd" = (
 /obj/effect/floor_decal/corner/purple{
 	dir = 9
@@ -10456,6 +10517,12 @@
 /obj/structure/undies_wardrobe,
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/west_hall)
+"zG" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/dark,
+/area/gateway)
 "zH" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -10707,7 +10774,7 @@
 /area/outpost/mining_main/west_hall)
 "Ah" = (
 /turf/simulated/shuttle/wall/voidcraft/red,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "Ai" = (
 /turf/simulated/wall,
 /area/maintenance/substation/mining)
@@ -12437,7 +12504,7 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "El" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -12849,6 +12916,12 @@
 /obj/item/clothing/suit/bio_suit/scientist,
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/secure)
+"EY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "EZ" = (
 /obj/structure/cable/blue{
 	d1 = 2;
@@ -12926,7 +12999,7 @@
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "Fj" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -13336,6 +13409,14 @@
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled/white,
 /area/rnd/lockers)
+"Gn" = (
+/obj/machinery/camera/network/research{
+	c_tag = "Xenobiology Lobby";
+	dir = 4;
+	network = list("Research","Toxins Test Area")
+	},
+/turf/simulated/floor/tiled,
+/area/maintenance/shelter)
 "Gp" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -13716,6 +13797,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/south_hall)
+"Hl" = (
+/obj/machinery/alarm{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "Hm" = (
 /obj/machinery/door/airlock/hatch{
 	name = "Xenobiological Research Equipment";
@@ -14250,7 +14338,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "Ix" = (
 /turf/simulated/wall,
 /area/rnd/outpost/launch)
@@ -14755,7 +14843,7 @@
 /area/maintenance/shelter)
 "JB" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner/red,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "JC" = (
 /obj/machinery/sparker{
 	id = "Xenobiofire";
@@ -15739,6 +15827,11 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 8;
+	icon_state = "1-8"
+	},
 /turf/simulated/floor/tiled,
 /area/gateway)
 "LQ" = (
@@ -15884,7 +15977,7 @@
 "Mg" = (
 /obj/structure/sign/deck/third,
 /turf/simulated/shuttle/wall/voidcraft/red,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "Mh" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -16017,6 +16110,15 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/rnd/outpost/mixing)
+"My" = (
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "PubPrep";
+	layer = 3.3;
+	name = "Public Access Shutter"
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "Mz" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -16206,6 +16308,12 @@
 /obj/structure/disposalpipe/trunk,
 /turf/simulated/floor/reinforced,
 /area/vacant/vacant_site/east)
+"MV" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "MX" = (
 /obj/structure/table/standard,
 /obj/item/weapon/reagent_containers/dropper{
@@ -16314,6 +16422,24 @@
 	},
 /turf/simulated/floor/tiled/freezer,
 /area/outpost/mining_main/west_hall)
+"Nj" = (
+/obj/machinery/door/blast/shutters{
+	dir = 4;
+	id = "PubPrep";
+	layer = 3.3;
+	name = "Public Access Shutter"
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "Nk" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -16480,6 +16606,9 @@
 	},
 /turf/simulated/floor/tiled/hydro,
 /area/rnd/xenobiology/xenoflora)
+"ND" = (
+/turf/simulated/floor/tiled/dark,
+/area/gateway)
 "NE" = (
 /obj/machinery/light{
 	dir = 8
@@ -17187,12 +17316,11 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/anomaly)
 "Pk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 5
+/obj/structure/cable{
+	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/gateway)
 "Pl" = (
@@ -17483,6 +17611,21 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/research)
+"PV" = (
+/obj/structure/redgate,
+/turf/simulated/floor/tiled/dark,
+/area/gateway)
+"PW" = (
+/obj/machinery/button/remote/blast_door{
+	dir = 4;
+	id = "PubPrep";
+	name = "Public Access Shutter -control";
+	pixel_x = 22;
+	pixel_y = 0;
+	req_access = list(62)
+	},
+/turf/simulated/floor/tiled,
+/area/gateway)
 "PX" = (
 /obj/structure/grille,
 /obj/structure/railing{
@@ -17825,6 +17968,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
+"QR" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/dark,
+/area/gateway)
 "QS" = (
 /obj/machinery/conveyor_switch{
 	id = "mining_external"
@@ -18001,7 +18150,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/scimining)
+/area/cryogaia/outpost/elevator/scimining)
 "Rs" = (
 /obj/machinery/atmospherics/pipe/manifold/visible{
 	dir = 8
@@ -18569,6 +18718,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/mid)
+"SJ" = (
+/obj/machinery/light,
+/turf/simulated/floor/tiled,
+/area/gateway)
 "SL" = (
 /obj/structure/grille,
 /obj/machinery/door/firedoor,
@@ -18929,6 +19082,11 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
+	},
+/obj/machinery/camera/network/research{
+	c_tag = "Xenobiology Lobby";
+	dir = 4;
+	network = list("Research","Toxins Test Area")
 	},
 /turf/simulated/floor/tiled,
 /area/rnd/hallway)
@@ -34400,12 +34558,12 @@ OV
 OV
 KS
 KS
-KS
-KS
-KS
-KS
-KS
-KS
+kG
+kG
+kG
+kG
+kG
+kG
 KS
 KS
 KS
@@ -34562,12 +34720,12 @@ Vh
 OV
 WL
 KS
-KS
-KS
-KS
-KS
-KS
-KS
+kG
+zG
+ND
+ND
+zG
+kG
 KS
 KS
 Ct
@@ -34724,12 +34882,12 @@ dO
 dO
 WL
 KS
-KS
-KS
-KS
-KS
-KS
-KS
+kG
+ND
+ND
+PV
+ND
+kG
 KS
 KS
 Ct
@@ -34886,12 +35044,12 @@ oX
 JZ
 WL
 KS
-KS
-KS
-KS
-KS
-KS
-KS
+kG
+QR
+QR
+QR
+QR
+kG
 KS
 KS
 Ct
@@ -35048,12 +35206,12 @@ qa
 qa
 WL
 aW
-aW
-aW
-aW
-KS
-KS
-KS
+kG
+MV
+EY
+RS
+SJ
+kG
 KS
 KS
 Ct
@@ -35210,12 +35368,12 @@ cV
 cV
 WL
 aW
-aW
-aW
-aW
-aW
-KS
-KS
+kG
+ti
+kb
+TI
+TI
+kG
 KS
 KS
 we
@@ -35372,12 +35530,12 @@ cV
 cV
 WL
 Zl
-Zl
-Zl
-aW
-aW
-aW
-KS
+kG
+Hl
+eV
+RZ
+TI
+kG
 KS
 KS
 we
@@ -35534,12 +35692,12 @@ VY
 Vp
 WL
 Zl
-Zl
-Zl
-Zl
-aW
-aW
-aW
+kG
+PW
+nD
+TI
+TI
+kG
 KS
 KS
 we
@@ -35698,8 +35856,8 @@ kG
 kG
 kG
 kG
-kG
-kG
+Nj
+My
 kG
 kG
 aW
@@ -35860,7 +36018,7 @@ kG
 Jy
 us
 np
-TI
+nD
 TI
 EI
 kG
@@ -36182,8 +36340,8 @@ Oc
 pr
 hE
 TI
-Fa
-TI
+uE
+ez
 LP
 RS
 Ca
@@ -38601,7 +38759,7 @@ VB
 yF
 Yk
 Yk
-cq
+Gn
 zd
 zd
 zd

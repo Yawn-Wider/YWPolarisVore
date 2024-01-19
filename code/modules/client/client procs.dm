@@ -70,7 +70,7 @@
 
 	if(href_list["irc_msg"])
 		if(!holder && received_irc_pm < world.time - 6000) //Worse they can do is spam IRC for 10 minutes
-			to_chat(usr, "<span class='warning'>You are no longer able to use this, it's been more then 10 minutes since an admin on IRC has responded to you</span>")
+			to_chat(usr, "<span class='warning'>You are no longer able to use this, it's been more than 10 minutes since an admin on IRC has responded to you</span>")
 			return
 		if(mute_irc)
 			to_chat(usr, "<span class='warning'You cannot use this as your client has been muted from sending messages to the admins on IRC</span>")
@@ -133,7 +133,6 @@
 		if("usr")		hsrc = mob
 		if("prefs")		return prefs.process_link(usr,href_list)
 		if("vars")		return view_var_Topic(href,href_list,hsrc)
-		if("chat")		return chatOutput.Topic(href, href_list)
 
 	switch(href_list["action"])
 		if("openLink")
@@ -169,14 +168,9 @@
 		return null
 
 	if(!config.guests_allowed && IsGuestKey(key))
-		alert(src,"This server doesn't allow guest accounts to play. Please go to http://www.byond.com/ and register for a key.","Guest") // Not tgui_alert
+		alert(src,"This server doesn't allow guest accounts to play. Please go to https://www.byond.com/ and register for a key.","Guest") // Not tgui_alert
 		del(src)
 		return
-
-	chatOutput = new /datum/chatOutput(src) //veechat
-	chatOutput.send_resources()
-	spawn()
-		chatOutput.start()
 
 	//Only show this if they are put into a new_player mob. Otherwise, "what title screen?"
 	if(isnewplayer(src.mob))
@@ -185,7 +179,11 @@
 	GLOB.clients += src
 	GLOB.directory[ckey] = src
 
+	// Instantiate tgui panel
+	tgui_panel = new(src, "browseroutput")
+
 	GLOB.ahelp_tickets.ClientLogin(src)
+	GLOB.mhelp_tickets.ClientLogin(src)
 
 	//Admin Authorisation
 	holder = admin_datums[ckey]
@@ -206,10 +204,15 @@
 	prefs.last_id = computer_id			//these are gonna be used for banning
 	prefs.client = src // Only relevant if we reloaded it from the global list, otherwise prefs/New sets it
 
+	hook_vr("client_new",list(src)) //VOREStation Code. For now this only loads vore prefs, so better put before mob.Login() call but after normal prefs are loaded.
+
 	. = ..()	//calls mob.Login()
 	prefs.sanitize_preferences()
 	if(prefs)
 		prefs.selecting_slots = FALSE
+
+	// Initialize tgui panel
+	tgui_panel.initialize()
 
 	connection_time = world.time
 	connection_realtime = world.realtime
@@ -250,8 +253,6 @@
 		if(config.aggressive_changelog)
 			src.changes()
 
-	hook_vr("client_new",list(src)) //VOREStation Code
-
 	if(config.paranoia_logging)
 		var/alert = FALSE //VOREStation Edit start.
 		if(isnum(player_age) && player_age == 0)
@@ -263,7 +264,7 @@
 		if(alert)
 			for(var/client/X in GLOB.admins)
 				if(X.is_preference_enabled(/datum/client_preference/holder/play_adminhelp_ping))
-					X << 'sound/voice/bcriminal.ogg'
+					X << 'sound/effects/tones/newplayerping.ogg'
 				window_flash(X)
 		//VOREStation Edit end.
 
@@ -278,6 +279,7 @@
 		mentorholder.owner = null
 		GLOB.mentors -= src
 	GLOB.ahelp_tickets.ClientLogout(src)
+	GLOB.mhelp_tickets.ClientLogout(src)
 	GLOB.directory -= ckey
 	GLOB.clients -= src
 	return ..()
@@ -447,7 +449,7 @@
 		src << browse('code/modules/asset_cache/validate_assets.html', "window=asset_cache_browser")
 
 		//Precache the client with all other assets slowly, so as to not block other browse() calls
-		addtimer(CALLBACK(GLOBAL_PROC, /proc/getFilesSlow, src, SSassets.preload, FALSE), 5 SECONDS)
+		addtimer(CALLBACK(GLOBAL_PROC, GLOBAL_PROC_REF(getFilesSlow), src, SSassets.preload, FALSE), 5 SECONDS)
 
 /mob/proc/MayRespawn()
 	return 0
@@ -483,34 +485,11 @@
 		return FALSE
 	return ..()
 
-/client/verb/reload_vchat()
-	set name = "Reload VChat"
-	set category = "OOC"
-
-	//Timing
-	if(src.chatOutputLoadedAt > (world.time - 10 SECONDS))
-		tgui_alert_async(src, "You can only try to reload VChat every 10 seconds at most.")
-		return
-
-	// YW EDIT: disabled until we can fix the lag: verbs -= /client/proc/vchat_export_log
-
-	//Log, disable
-	log_debug("[key_name(src)] reloaded VChat.")
-	winset(src, null, "outputwindow.htmloutput.is-visible=false;outputwindow.oldoutput.is-visible=false;outputwindow.chatloadlabel.is-visible=true")
-
-	//The hard way
-	qdel_null(src.chatOutput)
-	chatOutput = new /datum/chatOutput(src) //veechat
-	chatOutput.send_resources()
-	spawn()
-		chatOutput.start()
-
-
 //This is for getipintel.net.
 //You're welcome to replace this proc with your own that does your own cool stuff.
 //Just set the client's ip_reputation var and make sure it makes sense with your config settings (higher numbers are worse results)
 /client/proc/update_ip_reputation()
-	var/request = "http://check.getipintel.net/check.php?ip=[address]&contact=[config.ipr_email]"
+	var/request = "https://check.getipintel.net/check.php?ip=[address]&contact=[config.ipr_email]"
 	var/http[] = world.Export(request)
 
 	/* Debug

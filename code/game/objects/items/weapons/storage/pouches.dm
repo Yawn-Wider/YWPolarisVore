@@ -49,12 +49,14 @@
 	desc = "This storage pouch can be used to provide a good amount of additional storage for quick access."
 	icon_state = "large_generic"
 	max_storage_space = ITEMSIZE_COST_SMALL*6
+	remove_delay = 3 SECONDS //VOREStation Add: Slightly more cumbersome
 
 /obj/item/weapon/storage/pouch/small
 	name = "storage pouch (small)"
 	desc = "This storage pouch can be used to provide a small amount of additional storage for quick access."
 	icon_state = "small_generic"
 	max_storage_space = ITEMSIZE_COST_SMALL*2
+	remove_delay = 1 SECOND //VOREStation Add: Slightly less cumbersome
 
 /obj/item/weapon/storage/pouch/ammo
 	name = "storage pouch (ammo)"
@@ -74,6 +76,8 @@
 		/obj/item/weapon/weldingtool,
 		/obj/item/weapon/tool/wirecutters,
 		/obj/item/weapon/tool/wrench,
+		/obj/item/weapon/tool/transforming/powerdrill,
+		/obj/item/weapon/tool/transforming/jawsoflife,
 		/obj/item/device/multitool,
 		/obj/item/device/flashlight,
 		/obj/item/weapon/cell/device,
@@ -93,9 +97,9 @@
 		/obj/item/weapon/extinguisher/mini,
 		/obj/item/weapon/tape_roll,
 		/obj/item/device/integrated_electronics/wirer,
-		/obj/item/device/integrated_electronics/debugger, 
-		/obj/item/weapon/shovel/spade, 
-		/obj/item/stack/nanopaste, 
+		/obj/item/device/integrated_electronics/debugger,
+		/obj/item/weapon/shovel/spade,
+		/obj/item/stack/nanopaste,
 		/obj/item/device/geiger
 	) //Vorestation Add - make it the same as the tool-belt why was it not like this to start with wtf
 
@@ -154,7 +158,7 @@
 		/obj/item/stack/nanopaste,
 		/obj/item/taperoll/medical,
 		/obj/item/weapon/storage/box/freezer,
-		/obj/item/clothing/mask/chewable/candy/lolli,    
+		/obj/item/clothing/mask/chewable/candy/lolli,
 	) //Vorestation add - added a bunch of misc medical stuff
 	max_storage_space = ITEMSIZE_COST_SMALL*3 //Vorestation Add - makes it slightly smaller since its a lot of stuff with pocket access
 	remove_delay = 5 //Vorestation Add - .5 second delay, get the medical things faster because there is no reason to use this otherwise. still gotta stop moving to take things out.
@@ -214,6 +218,6 @@
 	name = "storage pouch of holding"
 	desc = "This storage pouch can be used to provide some additional storage for quick access. Seems to use extradimensional storage!"
 	icon_state = "holdingpouch"
-	max_storage_space = INVENTORY_STANDARD_SPACE // Size of a normal backpack, compared to a normal BoH, which is way bigger
+	max_storage_space = INVENTORY_POUCH_SPACE*2 //VOREStation Edit: Consistency with normal bags of holding
 
 #undef INVENTORY_POUCH_SPACE

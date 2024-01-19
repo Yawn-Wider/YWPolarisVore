@@ -15,6 +15,8 @@
 	#include "service_elevator_things.dm"
 	#include "residential/_residential.dm"
 	#include "residential/residential_keys.dm"
+	#include "../offmap_vr/common_offmaps.dm"
+	#include "yw_vrstuff/_vrmaps.dm"
 
 	#if !AWAY_MISSION_TEST //Don't include these for just testing away missions
 		#include "cryogaia-01-centcomm.dmm" //centcom

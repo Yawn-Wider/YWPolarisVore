@@ -36,6 +36,10 @@
 		"Parrot" = "pai-parrot",
 		"Rabbit" = "pai-rabbit",
 		//VOREStation Addition Start
+		"Dire wolf" = "pai-diredog",
+		"Horse (Lune)" = "pai-horse_lune",
+		"Horse (Soleil)" = "pai-horse_soleil",
+		"Dragon" = "pai-pdragon",
 		"Bear" = "pai-bear",
 		"Fennec" = "pai-fen",
 		"Type Zero" = "pai-typezero",
@@ -145,6 +149,9 @@
 	// Vorestation Edit: Meta Info for pAI
 	if (client.prefs)
 		ooc_notes = client.prefs.metadata
+		ooc_notes_likes = client.prefs.metadata_likes
+		ooc_notes_dislikes = client.prefs.metadata_dislikes
+
 	src << sound('sound/effects/pai_login.ogg', volume = 75)	//VOREStation Add
 
 // this function shows the information about being silenced as a pAI in the Status panel
@@ -266,7 +273,7 @@
 		M.ejectpai()
 	//I'm not sure how much of this is necessary, but I would rather avoid issues.
 	if(istype(card.loc,/obj/item/rig_module))
-		to_chat(src, "There is no room to unfold inside this rig module. You're good and stuck.")
+		to_chat(src, "<span class='filter_notice'>There is no room to unfold inside this rig module. You're good and stuck.</span>")
 		return 0
 	else if(istype(card.loc,/mob))
 		var/mob/holder = card.loc
@@ -295,7 +302,7 @@
 	canmove = TRUE
 
 	var/turf/T = get_turf(src)
-	if(istype(T)) T.visible_message("<b>[src]</b> folds outwards, expanding into a mobile form.")
+	if(istype(T)) T.visible_message("<span class='filter_notice'><b>[src]</b> folds outwards, expanding into a mobile form.</span>")
 	verbs |= /mob/living/silicon/pai/proc/pai_nom
 	verbs |= /mob/living/proc/vertical_nom
 	update_icon()
@@ -366,7 +373,7 @@
 		resting = !resting
 		icon_state = resting ? "[chassis]_rest" : "[chassis]"
 		update_icon() //VOREStation edit
-	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"]</span>")
+	to_chat(src, "<span class='notice'>You are now [resting ? "resting" : "getting up"].</span>")
 
 	canmove = !resting
 
@@ -436,7 +443,7 @@
 	release_vore_contents(FALSE) //VOREStation Add
 
 	var/turf/T = get_turf(src)
-	if(istype(T) && !silent) T.visible_message("<b>[src]</b> neatly folds inwards, compacting down to a rectangular card.")
+	if(istype(T) && !silent) T.visible_message("<span class='filter_notice'><b>[src]</b> neatly folds inwards, compacting down to a rectangular card.</span>")
 
 	if(client)
 		src.stop_pulling()
@@ -535,6 +542,6 @@
 		return
 
 	close_up()
-	visible_message("<b>[src]</b> fades away from the screen, the pAI device goes silent.")
+	visible_message("<span class='filter_notice'><b>[src]</b> fades away from the screen, the pAI device goes silent.</span>")
 	card.removePersonality()
 	clear_client()

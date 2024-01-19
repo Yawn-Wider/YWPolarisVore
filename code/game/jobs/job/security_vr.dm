@@ -16,17 +16,26 @@
 /datum/alt_title/security_manager
 	title = "Security Manager"
 
+/datum/job/hos/get_request_reasons()
+	return list("Wildlife management", "Forensic investigation", "Training crew")
+
 
 /datum/job/warden
 	pto_type = PTO_SECURITY
 	dept_time_required = 20
-	alt_titles = list("Brig Sentry" = /datum/alt_title/brig_sentry, "Armory Superintendent" = /datum/alt_title/armory_superintendent)
+	alt_titles = list("Brig Sentry" = /datum/alt_title/brig_sentry, "Armory Superintendent" = /datum/alt_title/armory_superintendent, "Master-at-Arms" = /datum/alt_title/master_at_arms)
 
 /datum/alt_title/brig_sentry
 	title = "Brig Sentry"
 
 /datum/alt_title/armory_superintendent
 	title = "Armory Superintendent"
+
+/datum/alt_title/master_at_arms
+	title = "Master-at-Arms"
+
+/datum/job/warden/get_request_reasons()
+	return list("Wildlife management")
 
 
 /datum/job/detective
@@ -38,6 +47,9 @@
 
 /datum/alt_title/security_inspector
 	title = "Security Inspector"
+
+/datum/job/detective/get_request_reasons()
+	return list("Forensic investigation")
 
 
 /datum/job/officer
@@ -58,3 +70,6 @@
 
 /datum/alt_title/security_contractor
 	title = "Security Contractor"
+
+/datum/job/officer/get_request_reasons()
+	return list("Wildlife management")

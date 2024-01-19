@@ -118,6 +118,11 @@
 	icon_state = "wood"
 	initial_flooring = /decl/flooring/wood
 
+/turf/simulated/floor/wood/airless
+	oxygen = 0
+	nitrogen = 0
+	temperature = TCMB
+
 /turf/simulated/floor/wood/broken
 	icon_state = "wood-broken0" // This gets changed when spawned.
 
@@ -271,6 +276,7 @@
 
 /turf/simulated/floor/tiled/kafel_full
 	name = "floor"
+	desc = "Ceramic tile flooring."
 	icon_state = "kafel_full"
 	initial_flooring = /decl/flooring/tiling/new_tile/kafel
 /turf/simulated/floor/tiled/kafel_full/white
@@ -424,6 +430,12 @@
 	icon_state = "darkmarble"
 	initial_flooring = /decl/flooring/bmarble
 
+/turf/simulated/floor/fakesprings // YW Addition: I don't care enough to fix catwalk decals, have this hack
+	name = "Hotsprings"
+	desc = "A natural hotspring connecting to an aquifer. It seems the facility was built ontop of it."
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "seashallow"
+
 //ATMOS PREMADES
 /turf/simulated/floor/reinforced/airless
 	name = "vacuum floor"
@@ -501,7 +513,20 @@
 		'sound/effects/footstep/snow4.ogg',
 		'sound/effects/footstep/snow5.ogg'))
 
-/turf/simulated/floor/outdoors/snow/snow
+/turf/simulated/floor/fakesnow
+	name = "fake snow"
+	icon = 'icons/turf/outdoors.dmi'
+	icon_state = "snow"
+	initial_flooring = /decl/flooring/snow/fake
+
+/turf/simulated/floor/outdoors/snow/snow // YW Addition (radiant), for some reason, i have to clean this up at some point (izac)
+	name = "snow"
+	icon_state = "snow"
+	movement_cost = 4
+	edge_blending_priority = 4.1
+	icon_edge = 'icons/turf/outdoors_edge_yw.dmi'
+
+/turf/simulated/floor/snow/snow2
 	name = "snow"
 	icon_state = "snow"
 	movement_cost = 4
@@ -509,14 +534,18 @@
 /turf/simulated/floor/outdoors/snow/snow/snow2
 	name = "snow"
 	icon_state = "snow2" //YWEdit
-	movement_cost = 2	
+	movement_cost = 2
 	initial_flooring = /decl/flooring/snow/snow2 //YWEdit
+	icon_edge = 'icons/turf/outdoors_edge_yw.dmi' //YWEdit fix
+	edge_blending_priority = 4 //YWEdit fix
 
 /turf/simulated/floor/outdoors/snow/gravsnow
 	name = "snow"
 	icon_state = "gravsnow"
 	initial_flooring = /decl/flooring/snow/gravsnow
 	movement_cost = 0
+	icon_edge = 'icons/turf/outdoors_edge_yw.dmi' //YWEdit fix
+	edge_blending_priority = 3 //YWEdit fix
 
 /turf/simulated/floor/outdoors/snow/gravsnow/Entered() //Prevents runtimes
 	return
@@ -526,6 +555,7 @@
 	icon_state = "snowyplating"
 	initial_flooring = /decl/flooring/snow/plating
 	movement_cost = 0
+	edge_blending_priority = 0.1 //YW Edit - give edge_blending
 
 /turf/simulated/floor/outdoors/snow/plating/drift
 	name = "snowy plating"
@@ -539,13 +569,17 @@
 	desc = "Hard as a rock and cold as ice."
 	icon = 'icons/turf/outdoors_yw.dmi'
 	icon_state = "rocks_snow"
+	explosion_resistance = INFINITY
+	edge_blending_priority = 0.1
 //YW ADDITIONS: end
 //YW CHANGES: end
 // TODO: Move foortprints to a datum-component signal so they can actually be applied to other turf types, like sand, or mud
 /turf/simulated/floor/outdoors/snow/Entered(atom/A)
 	if(isliving(A))
 		var/mob/living/L = A
-		if(L.hovering) // Flying things shouldn't make footprints.
+		if(L.hovering || L.flying) // Flying things shouldn't make footprints.
+			if(L.flying)
+				L.adjust_nutrition(-0.5)
 			return ..()
 		var/mdir = "[A.dir]"
 		crossed_dirs[mdir] = 1
@@ -556,3 +590,11 @@
 	..()
 	for(var/d in crossed_dirs)
 		add_overlay(image(icon = 'icons/turf/outdoors.dmi', icon_state = "snow_footprints", dir = text2num(d)))
+
+//**** Here ends snow ****
+
+/turf/simulated/floor/concrete
+	name = "concrete"
+	icon = 'icons/turf/concrete.dmi'
+	icon_state = "concrete"
+	initial_flooring = /decl/flooring/concrete

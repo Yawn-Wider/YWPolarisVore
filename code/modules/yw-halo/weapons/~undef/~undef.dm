@@ -1,0 +1,2 @@
+#undef CLEAR_CASINGS
+#undef CASELESS

@@ -44,6 +44,12 @@
 		assign_uid()
 		id_tag = num2text(uid)
 
+/obj/machinery/atmospherics/unary/vent_scrubber/proc/update_area()
+	initial_loc = get_area(loc)
+	area_uid = "\ref[initial_loc]"
+	assign_uid()
+	id_tag = num2text(uid)
+
 /obj/machinery/atmospherics/unary/vent_scrubber/Destroy()
 	unregister_radio(src, frequency)
 	if(initial_loc)
@@ -268,7 +274,7 @@
 	if(istype(W, /obj/item/device/multitool)) //YW EDIT: aac
 		update_multitool_menu(user)
 		return 1
-	if (!W.is_wrench())
+	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if (!(stat & NOPOWER) && use_power)
 		to_chat(user, "<span class='warning'>You cannot unwrench \the [src], turn it off first.</span>")
@@ -305,5 +311,5 @@
 		<li>[format_tag("ID Tag","id_tag", "set_id")]</li>
 		<li><b>AAC Acces:</b> <a href="?src=\ref[src];toggleadvcontrol=1">[advcontrol ? "Allowed" : "Blocked"]</a>
 	</ul>
-	"} 
+	"}
 //YW EDIT: aac end

@@ -8,7 +8,7 @@
 	var/channel = "NCS Northern Star News Feed"
 	var/obj/machinery/camera/network/thunder/camera
 	var/obj/item/device/radio/radio
-	var/weakref/showing
+	var/datum/weakref/showing
 	var/showing_name
 
 /obj/item/device/tvcamera/New()
@@ -65,7 +65,8 @@
 	if(..())
 		return 1
 	if(href_list["channel"])
-		var/nc = tgui_input_text(usr, "Channel name", "Select new channel name", channel)
+		var/nc = tgui_input_text(usr, "Channel name", "Select new channel name", channel, MAX_NAME_LEN)
+		nc = sanitize(nc,MAX_NAME_LEN)
 		if(nc)
 			channel = nc
 			camera.c_tag = channel
@@ -94,7 +95,7 @@
 	if(showing)
 		hide_tvs(showing)
 
-	showing = weakref(thing)
+	showing = WEAKREF(thing)
 	showing_name = "[thing]"
 	for(var/obj/machinery/computer/security/telescreen/entertainment/ES as anything in GLOB.entertainment_screens)
 		ES.show_thing(thing)
@@ -220,4 +221,3 @@
 				return
 
 	..()
-

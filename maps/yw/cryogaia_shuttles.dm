@@ -20,11 +20,12 @@
 
 // The 'ship' of the excursion shuttle
 /obj/effect/overmap/visitable/ship/landable/excursion
-	name = "Excursion Shuttle"
+	name = "NSV Mother Carp"
 	desc = "The traditional Excursion Shuttle. NT Approved!"
 	vessel_mass = 10000
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Excursion Shuttle"
+	known = TRUE
 
 /obj/effect/overmap/visitable/ship/landable/security
 	name = "Security Interceptor"
@@ -32,14 +33,15 @@
 	vessel_mass = 2500
 	vessel_size = SHIP_SIZE_SMALL
 	shuttle = "Security Interceptor"
+	known = TRUE
 
 /obj/machinery/computer/shuttle_control/explore/excursion
-	name = "short jump console"
+	name = "Excursion Shuttle control console"
 	shuttle_tag = "Excursion Shuttle"
 	req_one_access = list(access_pilot)
 
 /obj/machinery/computer/shuttle_control/explore/security
-	name = "short jump console"
+	name = "Security Interceptor control console"
 	shuttle_tag = "Security Interceptor"
 	req_one_access = list(access_secpilot)
 

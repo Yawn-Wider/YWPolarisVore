@@ -1184,7 +1184,7 @@
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_override = 'icons/vore/custom_onmob_vr.dmi'
 	suit_type = "probably not magical"
-	icon_state = "nikki"
+	icon_state = "nikkicape"
 	w_class = ITEMSIZE_SMALL // It is after all only a necklace
 	armor = list("melee" = 0, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 0, "bio" = 0, "rad" = 0) // this isn't armor, it's a dorky frickin cape
 	siemens_coefficient = 0.9
@@ -1422,8 +1422,32 @@
 	icon_state = "stamp-midhorror"
 	stamptext = "This paper has been certified by The Council of Mid Horror"
 
-//thedavestdave Lucky
-///I know this is pretty bodgey but if it stupid and it works it isn't stupid
+//Coolcrow420 - M41l
+/obj/item/weapon/implant/language/fluff/m41l
+	name = "dusty hard drive"
+	desc = "A hard drive containing knowledge of various languages."
+
+/obj/item/weapon/implant/language/fluff/m41l/post_implant(mob/M)
+	to_chat(M,"<span class='notice'>LANGUAGES - LOADING</span>")
+	M.add_language(LANGUAGE_SKRELLIAN)
+	M.add_language(LANGUAGE_UNATHI)
+	M.add_language(LANGUAGE_SIIK)
+	M.add_language(LANGUAGE_EAL)
+	M.add_language(LANGUAGE_SCHECHI)
+	M.add_language(LANGUAGE_ZADDAT)
+	M.add_language(LANGUAGE_BIRDSONG)
+	M.add_language(LANGUAGE_SAGARU)
+	M.add_language(LANGUAGE_DAEMON)
+	M.add_language(LANGUAGE_ENOCHIAN)
+	M.add_language(LANGUAGE_VESPINAE)
+//	M.add_language(LANGUAGE_SLAVIC)
+	M.add_language(LANGUAGE_DRUDAKAR)
+	M.add_language(LANGUAGE_SPACER)
+	M.add_language(LANGUAGE_TAVAN)
+	M.add_language(LANGUAGE_ECHOSONG)
+	to_chat(M,"<span class='notice'>LANGUAGES - INITIALISED</span>")
+
+//thedavestdave - Lucky
 /obj/item/clothing/suit/armor/combat/crusader_costume/lucky
 	icon = 'icons/vore/custom_clothes_vr.dmi'
 	icon_state = "luck"
@@ -1489,3 +1513,65 @@
 	icon = 'icons/vore/custom_items_vr.dmi'
 	item_icons = list(slot_l_hand_str = 'icons/vore/custom_items_left_hand_vr.dmi', slot_r_hand_str = 'icons/vore/custom_items_right_hand_vr.dmi')
 	icon_state = "kyuholotar"
+
+//Pandora029 - Shona Young
+/obj/item/toy/plushie/fluff/seona_mofuorb
+	name = "comically oversized fox-orb plushie"
+	desc = "A humongous & adorable Largo© brand stuffed-toy that resembles a mix of slime and absurdly fluffy fox. It's colored white largely, with the tips of it's fox-like ears and tail transitioning to a nice pink-ish color. Comes complete with reactive expressions, according to the label."
+	icon = 'icons/vore/custom_items_vr.dmi'
+	icon_state = "pandorba"
+	pokephrase = "Gecker!"
+	attack_verb = list("fluffed", "fwomped", "fuwa'd", "squirmshed")
+
+/obj/item/toy/plushie/fluff/seona_mofuorb/attack_self(mob/user as mob)
+	if(stored_item && opened && !searching)
+		searching = TRUE
+		if(do_after(user, 10))
+			to_chat(user, "You find \icon[stored_item] [stored_item] in [src]!")
+			stored_item.forceMove(get_turf(src))
+			stored_item = null
+			searching = FALSE
+			return
+		else
+			searching = FALSE
+
+	if(world.time - last_message <= 5 SECONDS)
+		return
+	if(user.a_intent == I_HELP)
+		user.visible_message("<span class='notice'><b>\The [user]</b> hugs [src]!</span>","<span class='notice'>You hug [src]!</span>")
+		icon_state = "pandorba"
+	else if (user.a_intent == I_HURT)
+		user.visible_message("<span class='warning'><b>\The [user]</b> punches [src]!</span>","<span class='warning'>You punch [src]!</span>")
+		icon_state = "pandorba_h"
+	else if (user.a_intent == I_GRAB)
+		user.visible_message("<span class='warning'><b>\The [user]</b> attempts to strangle [src]!</span>","<span class='warning'>You attempt to strangle [src]!</span>")
+		icon_state = "pandorba_g"
+	else
+		user.visible_message("<span class='notice'><b>\The [user]</b> pokes [src].</span>","<span class='notice'>You poke [src].</span>")
+		icon_state = "pandorba_d"
+		playsound(src, 'sound/items/drop/plushie.ogg', 25, 0)
+		visible_message("[src] says, \"[pokephrase]\"")
+	last_message = world.time
+
+//Yeehawguvnah - Cephyra
+
+/obj/item/weapon/dice/loaded/ceph
+	name = "engraved d6"
+	desc = "A die with six sides. It's fairly well-made, made of an unclear black material with silver pips. If you were to touch it, your hands tingle slightly as though from static. On closer inspection, it's finely engraved with curving, fractal patterns."
+	icon_state = "ceph_d66"
+
+/obj/item/weapon/dice/loaded/ceph/rollDice(mob/user, silent)
+	..()
+	icon_state = "ceph_d6[result]"
+
+/obj/item/weapon/dice/loaded/ceph/New()
+	icon_state = "ceph_d6[rand(1,sides)]"
+
+
+//abc123: Mira Nesyne
+/obj/item/clothing/accessory/medal/silver/fluff/abc314
+	name = "Health Service Achievement medal"
+	desc = "A small silver medal with the inscription \"For going above and beyond in the field.\" on it, along with the name Mira Nesyne."
+
+	icon = 'icons/inventory/accessory/item.dmi'
+	icon_state = "silver"

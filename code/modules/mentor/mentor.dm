@@ -107,7 +107,7 @@ var/list/mentor_verbs_default = list(
 	if(href_list["mhelp"])
 		var/mhelp_ref = href_list["mhelp"]
 		var/datum/mentor_help/MH = locate(mhelp_ref)
-		if (MH)
+		if (MH && istype(MH, /datum/mentor_help))
 			MH.Action(href_list["mhelp_action"])
 		else
 			to_chat(C, "Ticket [mhelp_ref] has been deleted!")
@@ -159,6 +159,24 @@ var/list/mentor_verbs_default = list(
 /proc/has_mentor_powers(client/C)
 	return C.holder || C.mentorholder
 
+// This not really a great place to put it, but this verb replaces adminhelp in hotkeys so that people requesting help can select the type they need
+// You can still directly adminhelp if necessary, this ONLY replaces the inbuilt hotkeys
+
+/client/verb/requesthelp()
+	set category = "Admin"
+	set name = "Request help"
+	set hidden = 1
+
+	var/mhelp = tgui_alert(usr, "Select the help you need.","Request for Help",list("Adminhelp","Mentorhelp")) == "Mentorhelp"
+	var/msg = tgui_input_text(usr, "Input your request for help.", "Request for Help")
+
+	if (mhelp)
+		mentorhelp(msg)
+		return
+
+	adminhelp(msg)
+
+
 /client/proc/cmd_mentor_pm(whom, msg, datum/mentor_help/MH)
 	set category = "Admin"
 	set name = "Mentor-PM"
@@ -168,7 +186,8 @@ var/list/mentor_verbs_default = list(
 		to_chat(src, "<span class='pm warning'>Error: Mentor-PM: You are unable to use admin PM-s (muted).</span>")
 		return
 
-	if(!(has_mentor_powers(src)) && !current_mentorhelp)
+	//Not a mentor and no open ticket
+	if(!has_mentor_powers(src) && !current_mentorhelp)
 		to_chat(src, "<span class='pm warning'>You can no longer reply to this ticket, please open another one by using the Mentorhelp verb if need be.</span>")
 		to_chat(src, "<span class='pm notice'>Message: [msg]</span>")
 		return
@@ -181,16 +200,7 @@ var/list/mentor_verbs_default = list(
 	else if(istype(whom,/client))
 		recipient = whom
 
-	if(!recipient)
-		if(has_mentor_powers(src))
-			to_chat(src, "<span class='pm warning'>Error: Mentor-PM: Client not found.</span>")
-			to_chat(src, msg)
-		else
-			log_admin("Mentorhelp: [key_name(src)] sent [msg]")
-			current_mentorhelp.MessageNoRecipient(msg)
-		return
-
-		//get message text, limit it's length.and clean/escape html
+	//get message text, limit it's length.and clean/escape html
 	if(!msg)
 		msg = tgui_input_text(src,"Message:", "Mentor-PM to [whom]")
 
@@ -204,10 +214,17 @@ var/list/mentor_verbs_default = list(
 		if(!recipient)
 			if(has_mentor_powers(src))
 				to_chat(src, "<span class='pm warning'>Error:Mentor-PM: Client not found.</span>")
+				to_chat(src, msg)
 			else
-				log_admin("Mentorhelp: [key_name(src)] sent [msg]")
+				log_admin("Mentorhelp: [key_name(src)]: [msg]")
 				current_mentorhelp.MessageNoRecipient(msg)
 			return
+
+	//Has mentor powers but the recipient no longer has an open ticket
+	if(has_mentor_powers(src) && !recipient.current_mentorhelp)
+		to_chat(src, "<span class='pm warning'>You can no longer reply to this ticket.</span>")
+		to_chat(src, "<span class='pm notice'>Message: [msg]</span>")
+		return
 
 	if (src.handle_spam_prevention(msg,MUTE_ADMINHELP))
 		return
@@ -233,7 +250,7 @@ var/list/mentor_verbs_default = list(
 	to_chat(recipient, "<i><span class='mentor'>Mentor-PM from-<b><a href='?mentorhelp_msg=\ref[src]'>[src]</a></b>: [msg]</span></i>")
 	to_chat(src, "<i><span class='mentor'>Mentor-PM to-<b>[recipient]</b>: [msg]</span></i>")
 
-	log_admin("[key_name(src)] sent [msg] to [key_name(recipient)]")
+	log_admin("[key_name(src)]->[key_name(recipient)]: [msg]")
 
 	if(recipient.is_preference_enabled(/datum/client_preference/play_mentorhelp_ping))
 		recipient << 'sound/effects/mentorhelp.mp3'

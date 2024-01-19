@@ -236,6 +236,17 @@ I said no!
 	)
 	result = /obj/item/weapon/reagent_containers/food/snacks/jellysandwich/peanutbutter
 
+/datum/recipe/clubsandwich
+	reagents = list("mayo" = 5)
+	items = list(
+		/obj/item/weapon/reagent_containers/food/snacks/slice/bread,
+		/obj/item/weapon/reagent_containers/food/snacks/slice/bread,
+		/obj/item/weapon/reagent_containers/food/snacks/meat/chicken,
+		/obj/item/weapon/reagent_containers/food/snacks/bacon,
+		/obj/item/weapon/reagent_containers/food/snacks/cheesewedge
+	)
+	fruit = list("tomato" = 1, "lettuce" = 1)
+	result = /obj/item/weapon/reagent_containers/food/snacks/clubsandwich
 
 /datum/recipe/tomatosoup
 	fruit = list("tomato" = 2)
@@ -812,13 +823,6 @@ I said no!
 	)
 	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify end product
 	result = /obj/item/weapon/reagent_containers/food/snacks/lomein
-
-/datum/recipe/chickennoodlesoup
-	fruit = list("carrot" = 1)
-	reagents = list("water" = 10)
-	items = list( /obj/item/weapon/reagent_containers/food/snacks/spagetti, /obj/item/weapon/reagent_containers/food/snacks/rawcutlet)
-	reagent_mix = RECIPE_REAGENT_REPLACE //Simplify end product
-	result = /obj/item/weapon/reagent_containers/food/snacks/chickennoodlesoup
 
 /datum/recipe/chickennoodlesoup
 	fruit = list("carrot" = 1)

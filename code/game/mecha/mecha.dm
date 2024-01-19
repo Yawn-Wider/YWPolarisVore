@@ -44,17 +44,6 @@
 	var/health = 300 					//Health is health
 	var/maxhealth = 300 				//Maxhealth is maxhealth.
 	var/deflect_chance = 10 			//Chance to deflect the incoming projectiles, hits, or lesser the effect of ex_act.
-	//the values in this list show how much damage will pass through, not how much will be absorbed.
-	var/list/damage_absorption = list(
-									"brute"=0.8,
-									"fire"=1.2,
-									"bullet"=0.9,
-									"laser"=1,
-									"energy"=1,
-									"bomb"=1,
-									"bio"=1,
-									"rad"=1
-									)
 
 	var/damage_minimum = 10				//Incoming damage lower than this won't actually deal damage. Scrapes shouldn't be a real thing.
 	var/minimum_penetration = 15		//Incoming damage won't be fully applied if you don't have at least 20. Almost all AP clears this.
@@ -577,7 +566,7 @@
 		"View Stats" = radial_image_statpanel
 	)
 
-	var/choice = show_radial_menu(user, src, choices, custom_check = CALLBACK(src, .proc/check_occupant_radial, user), require_near = TRUE, tooltips = TRUE)
+	var/choice = show_radial_menu(user, src, choices, custom_check = CALLBACK(src, PROC_REF(check_occupant_radial), user), require_near = TRUE, tooltips = TRUE)
 	if(!check_occupant_radial(user))
 		return
 	if(!choice)
@@ -1043,15 +1032,8 @@
 
 /obj/mecha/proc/get_damage_absorption()
 	var/obj/item/mecha_parts/component/armor/AC = internal_components[MECH_ARMOR]
-
-	if(!istype(AC))
-		return
-
-	else
-		if(AC.get_efficiency() > 0.25)
-			return AC.damage_absorption
-
-	return
+	if(istype(AC) && AC.get_efficiency() > 0.25)
+		return AC.damage_absorption
 
 /obj/mecha/proc/absorbDamage(damage,damage_type)
 	return call((proc_res["dynabsorbdamage"]||src), "dynabsorbdamage")(damage,damage_type)
@@ -1464,7 +1446,7 @@
 				to_chat(user, "<span class='warning'>Invalid ID: Access denied.</span>")
 		else
 			to_chat(user, "<span class='warning'>Maintenance protocols disabled by operator.</span>")
-	else if(W.is_wrench())
+	else if(W.has_tool_quality(TOOL_WRENCH))
 		if(state==MECHA_BOLTS_SECURED)
 			state = MECHA_PANEL_LOOSE
 			to_chat(user, "You undo the securing bolts.")
@@ -1472,7 +1454,7 @@
 			state = MECHA_BOLTS_SECURED
 			to_chat(user, "You tighten the securing bolts.")
 		return
-	else if(W.is_crowbar())
+	else if(W.has_tool_quality(TOOL_CROWBAR))
 		if(state==MECHA_PANEL_LOOSE)
 			state = MECHA_CELL_OPEN
 			to_chat(user, "You open the hatch to the power unit")
@@ -1505,7 +1487,7 @@
 			else
 				to_chat(user, "There's not enough wire to finish the task.")
 		return
-	else if(W.is_screwdriver())
+	else if(W.has_tool_quality(TOOL_SCREWDRIVER))
 		if(hasInternalDamage(MECHA_INT_TEMP_CONTROL))
 			clearInternalDamage(MECHA_INT_TEMP_CONTROL)
 			to_chat(user, "You repair the damaged temperature controller.")
@@ -1544,8 +1526,8 @@
 				to_chat(user, "There's already a powercell installed.")
 		return
 
-	else if(istype(W, /obj/item/weapon/weldingtool) && user.a_intent != I_HURT)
-		var/obj/item/weapon/weldingtool/WT = W
+	else if(W.has_tool_quality(TOOL_WELDER) && user.a_intent != I_HURT)
+		var/obj/item/weapon/weldingtool/WT = W.get_welder()
 		var/obj/item/mecha_parts/component/hull/HC = internal_components[MECH_HULL]
 		var/obj/item/mecha_parts/component/armor/AC = internal_components[MECH_ARMOR]
 		if (WT.remove_fuel(0,user))
@@ -1585,15 +1567,27 @@
 			for(var/slot in internal_components)
 				var/obj/item/mecha_parts/component/C = internal_components[slot]
 
-				if(C)
+				if(!C)
+					to_chat(user, "<span class='notice'>There are no components installed!</span>")
+					return
 
-					if(C.integrity < C.max_integrity)
-						while(C.integrity < C.max_integrity && NP && do_after(user, 1 SECOND, src))
-							if(NP.use(1))
-								C.adjust_integrity(10)
+				if(C.integrity >= C.max_integrity)
+					to_chat(user, "<span class='notice'>\The [C] does not require repairs.</span>")
 
-						to_chat(user, "<span class='notice'>You repair damage to \the [C].</span>")
+				else if(C.integrity < C.max_integrity)
+					to_chat(user, "<span class='notice'>You start to repair damage to \the [C].</span>")
+					while(C.integrity < C.max_integrity && NP)
+						if(do_after(user, 1 SECOND, src))
+							NP.use(1)
+							C.adjust_integrity(NP.mech_repair)
 
+							if(C.integrity >= C.max_integrity)
+								to_chat(user, "<span class='notice'>You finish repairing \the [C].</span>")
+								break
+
+							else if(NP.amount == 0)
+								to_chat(user, "<span class='warning'>Insufficient nanopaste to complete repairs!</span>")
+								break
 			return
 
 		else
@@ -2905,3 +2899,15 @@
 				occupant.throw_alert("mech damage", /obj/screen/alert/low_mech_integrity, 3)
 			else
 				occupant.clear_alert("mech damage")
+
+/obj/mecha/blob_act(var/obj/structure/blob/B)
+	var/datum/blob_type/blob = B?.overmind?.blob_type
+	if(!istype(blob))
+		return FALSE
+
+	var/damage = rand(blob.damage_lower, blob.damage_upper)
+	src.take_damage(damage, blob.damage_type)
+	visible_message("<span class='danger'>\The [B] [blob.attack_verb] \the [src]!</span>", "<span class='danger'>[blob.attack_message_synth]!</span>")
+	playsound(src, 'sound/effects/attackblob.ogg', 50, 1)
+
+	return ..()

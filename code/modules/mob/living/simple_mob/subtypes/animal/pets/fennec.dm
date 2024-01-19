@@ -5,7 +5,7 @@
 	icon_state = "fennec"
 	item_state = "fennec"
 
-	movement_cooldown = 0.5 SECONDS
+	movement_cooldown = -1
 
 	see_in_dark = 6
 	response_help  = "pets"
@@ -15,7 +15,7 @@
 	holder_type = /obj/item/weapon/holder/fennec
 	mob_size = MOB_SMALL
 
-	has_langs = list("Cat, Dog") //they're similar, why not.
+	has_langs = list(LANGUAGE_ANIMAL)
 
 /mob/living/simple_mob/animal/passive/fennec/faux
 	name = "faux"

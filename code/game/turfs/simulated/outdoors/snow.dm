@@ -14,7 +14,9 @@
 /turf/simulated/floor/outdoors/snow/snow/Entered(atom/A)
 	if(isliving(A) && !istype(A, /mob/living/simple_mob))
 		var/mob/living/L = A
-		if(L.hovering) // Flying things shouldn't make footprints.
+		if(L.hovering || L.flying) // Flying things shouldn't make footprints.
+			if(L.flying)
+				L.adjust_nutrition(-0.5)
 			return ..()
 		var/mdir = "[A.dir]"
 		crossed_dirs[mdir] = 1
@@ -50,7 +52,7 @@
 	name = "ice"
 	icon_state = "ice"
 	desc = "Looks slippery."
-	edge_blending_priority = 0
+	edge_blending_priority = 0.1 //YW Edit - allow edge blending
 	can_be_plated = FALSE
 
 /turf/simulated/floor/outdoors/ice/dark
@@ -77,3 +79,4 @@
 	icon_state = "ice"
 	desc = "Looks slippery."
 	movement_cost = 4
+	edge_blending_priority = 0

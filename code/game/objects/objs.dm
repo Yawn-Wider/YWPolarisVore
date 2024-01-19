@@ -22,8 +22,24 @@
 	var/Mtoollink = 0 //YW EDIT: aac
 	var/show_examine = TRUE	// Does this pop up on a mob when the mob is examined?
 
+	var/redgate_allowed = TRUE	//can we be taken through the redgate, in either direction?
+
 /obj/Destroy()
 	STOP_PROCESSING(SSobj, src)
+
+	//VOREStation Add Start - I really am an idiot why did I make it this way
+	if(micro_target)
+		for(var/thing in src.contents)
+			if(!ismob(thing))
+				continue
+			var/mob/m = thing
+			if(isbelly(src.loc))
+				m.forceMove(src.loc)
+			else
+				m.forceMove(get_turf(src.loc))
+			m.visible_message("<span class = 'notice'>\The [m] tumbles out of \the [src]!</span>")
+	//VOREStation Add End
+
 	return ..()
 
 /obj/Topic(href, href_list, var/datum/tgui_state/state = GLOB.tgui_default_state)

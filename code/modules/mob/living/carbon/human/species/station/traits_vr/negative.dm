@@ -32,7 +32,7 @@
 	var_changes = list("total_health" = 75)
 
 /datum/trait/negative/endurance_low/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.setMaxHealth(S.total_health)
 
 /datum/trait/negative/endurance_very_low
@@ -42,7 +42,7 @@
 	var_changes = list("total_health" = 50)
 
 /datum/trait/negative/endurance_very_low/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	H.setMaxHealth(S.total_health)
 
 //YW ADDITIONS: START
@@ -110,7 +110,7 @@
 	name = "Liver of Air"
 	desc = "The only way you can hold a drink is if it's in your own two hands, and even then you'd best not inhale too deeply near it. Drinks hit thrice as hard. You may wish to note this down in your medical records, and perhaps your exploitable info as well."
 	cost = -1
-	var_changes = list("alcohol_mod" = 3)
+	var_changes = list("chem_strength_alcohol" = 3)
 
 /datum/trait/negative/pain_intolerance_basic
 	name = "Pain Intolerant"
@@ -162,7 +162,7 @@
 	cost = -3 // increased due to medical intervention needed. :YW EDIT
 
 /datum/trait/negative/hollow/apply(var/datum/species/S,var/mob/living/carbon/human/H)
-	..(S,H)
+	..()
 	for(var/obj/item/organ/external/O in H.organs)
 		O.min_broken_damage *= 0.5
 		O.min_bruised_damage *= 0.5
@@ -176,7 +176,7 @@
 
 /datum/trait/negative/neural_hypersensitivity
 	name = "Neural Hypersensitivity"
-	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Doubles traumatic shock."
+	desc = "Your nerves are particularly sensitive to physical changes, leading to experiencing twice the intensity of pain and pleasure alike. Makes all pain effects twice as strong, and occur at half as much damage."
 	cost = -1
 	var_changes = list("trauma_mod" = 2)
 	can_take = ORGANICS
@@ -188,19 +188,12 @@
 /datum/trait/negative/breathes/phoron
 	name = "Phoron Breather"
 	desc = "You breathe phoron instead of oxygen (which is poisonous to you), much like a Vox."
-	var_changes = list("breath_type" = "phoron", "poison_type" = "oxygen")
+	var_changes = list("breath_type" = "phoron", "poison_type" = "oxygen", "ideal_air_type" = /datum/gas_mixture/belly_air/vox)
 
 /datum/trait/negative/breathes/nitrogen
 	name = "Nitrogen Breather"
 	desc = "You breathe nitrogen instead of oxygen (which is poisonous to you). Incidentally, phoron isn't poisonous to breathe to you."
-	var_changes = list("breath_type" = "nitrogen", "poison_type" = "oxygen")
-
-/datum/trait/negative/monolingual
-	name = "Monolingual"
-	desc = "You are not good at learning languages."
-	cost = -3
-	var_changes = list("num_alternate_languages" = 0)
-	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
+	var_changes = list("breath_type" = "nitrogen", "poison_type" = "oxygen", "ideal_air_type" = /datum/gas_mixture/belly_air/nitrogen_breather)
 
 /datum/trait/negative/monolingual
 	name = "Monolingual"

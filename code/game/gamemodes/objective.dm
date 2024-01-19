@@ -431,7 +431,7 @@ var/global/list/all_objectives = list()
 		"a site manager's jumpsuit" = /obj/item/clothing/under/rank/captain,
 		"a functional AI" = /obj/item/device/aicard,
 		"a pair of magboots" = /obj/item/clothing/shoes/magboots,
-		"the station blueprints" = /obj/item/blueprints,
+		"the station blueprints" = /obj/item/areaeditor/blueprints,
 		"a nasa voidsuit" = /obj/item/clothing/suit/space/void,
 		"28 moles of phoron (full tank)" = /obj/item/weapon/tank,
 		"a sample of slime extract" = /obj/item/slime_extract,
@@ -623,6 +623,12 @@ var/global/list/all_objectives = list()
 
 /datum/objective/absorb/check_completion()
 	if(owner && owner.changeling && owner.changeling.absorbed_dna && (owner.changeling.absorbedcount >= target_amount))
+		return 1
+	else
+		return 0
+
+/datum/objective/vore/check_completion()
+	if(owner && owner.vore_prey_eaten >= target_amount)
 		return 1
 	else
 		return 0

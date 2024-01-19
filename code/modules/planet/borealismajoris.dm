@@ -9,12 +9,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	amounts of both carbon dioxide and nitrogen. Originally being a lumber colony, recent findings show copious amounts of Phoron deep under the surface, \
 	the Phoron is very desirable by many corporations, including NanoTrasen."
 	current_time = new /datum/time/borealis2()
-// YW - See the Defines for this, so that it can be edited there if needed.
-/*	expected_z_levels = list(
-						Z_LEVEL_CRYOGAIA_LOWER,
-						Z_LEVEL_CRYOGAIA_MAIN,
-						Z_LEVEL_CRYOGAIA_MINE,
-						)*/
+	//	expected_z_levels = list(1) // This is defined elsewhere.
 	planetary_wall_type = /turf/unsimulated/wall/planetary/borealis2
 
 /datum/planet/borealis2/New()
@@ -98,8 +93,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 
 		new_color = rgb(new_r, new_g, new_b)
 
-	spawn(1)
-		update_sun_deferred(2, new_brightness, new_color)
+	update_sun_deferred(new_brightness, new_color)
 
 
 /datum/weather_holder/borealis2
@@ -113,10 +107,13 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		WEATHER_RAIN		= new /datum/weather/borealis2/rain(),
 		WEATHER_STORM		= new /datum/weather/borealis2/storm(),
 		WEATHER_HAIL		= new /datum/weather/borealis2/hail(),
+		WEATHER_FOG			= new /datum/weather/borealis2/fog(),
 		WEATHER_BLOOD_MOON	= new /datum/weather/borealis2/blood_moon(),
 		WEATHER_EMBERFALL	= new /datum/weather/borealis2/emberfall(),
 		WEATHER_ASH_STORM	= new /datum/weather/borealis2/ash_storm(),
-		WEATHER_FALLOUT		= new /datum/weather/borealis2/fallout()
+		WEATHER_FALLOUT		= new /datum/weather/borealis2/fallout(),
+		WEATHER_FALLOUT_TEMP	= new /datum/weather/borealis2/fallout/temp(),
+		WEATHER_CONFETTI	= new /datum/weather/borealis2/confetti()
 		)
 	roundstart_weather_chances = list(
 		WEATHER_CLEAR		= 30,
@@ -146,6 +143,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		"The sky is visible.",
 		"The weather is calm."
 		)
+	imminent_transition_message = "The sky is rapidly clearing up."
 	sky_visible = TRUE
 
 /datum/weather/borealis2/overcast
@@ -165,6 +163,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		"Clouds cut off your view of the sky.",
 		"It's very cloudy."
 		)
+	imminent_transition_message = "Benign clouds are quickly gathering."
 
 /datum/weather/borealis2/light_snow
 	name = "light snow"
@@ -183,6 +182,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		"Small snowflakes begin to fall from above.",
 		"It begins to snow lightly.",
 		)
+	imminent_transition_message = "It appears a light snow is about to start."
 
 /datum/weather/borealis2/snow
 	name = "moderate snow"
@@ -205,6 +205,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		"It's starting to snow.",
 		"The air feels much colder as snowflakes fall from above."
 	)
+	imminent_transition_message = "A snowfall is starting."
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_snow
 	indoor_sounds_type = /datum/looping_sound/weather/inside_snow
 
@@ -239,13 +240,14 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		"Strong winds howl around you as a blizzard appears.",
 		"It starts snowing heavily, and it feels extremly cold now."
 	)
+	imminent_transition_message = "Wind is howling. Blizzard is coming."
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
 
 
 /datum/weather/borealis2/blizzard/process_effects()
 	..()
-	/* Commented out because of :Optimizes SSplanets initialization #10119: on vore 
+	/* Commented out because of :Optimizes SSplanets initialization #10119: on vore
 	for(var/turf/simulated/floor/outdoors/snow/S as anything in SSplanets.new_outdoor_turfs) //This didn't make any sense before SSplanets, either
 		if(S.z in holder.our_planet.expected_z_levels)
 			for(var/dir_checked in cardinal)
@@ -282,6 +284,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	transition_messages = list(
 		"The sky is dark, and rain falls down upon you."
 	)
+	imminent_transition_message = "Light drips of water are starting to fall from the sky."
 	outdoor_sounds_type = /datum/looping_sound/weather/rain
 	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
@@ -325,6 +328,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		"Loud thunder is heard in the distance.",
 		"A bright flash heralds the approach of a storm."
 	)
+	imminent_transition_message = "You can hear distant thunder. Storm is coming."
 	outdoor_sounds_type = /datum/looping_sound/weather/rain
 	indoor_sounds_type = /datum/looping_sound/weather/rain/indoors
 
@@ -410,6 +414,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		"It begins to hail.",
 		"An intense chill is felt, and chunks of ice start to fall from the sky, towards you."
 	)
+	imminent_transition_message = "Small bits of ice are falling from the sky, growing larger by the second. Hail is starting, get to cover!"
 
 /datum/weather/borealis2/hail/process_effects()
 	..()
@@ -443,6 +448,30 @@ var/datum/planet/borealis2/planet_borealis2 = null
 			if(show_message)
 				to_chat(H, effect_message)
 
+/datum/weather/borealis2/fog
+	name = "fog"
+	icon_state = "fog"
+	wind_high = 1
+	wind_low = 0
+	light_modifier = 0.7
+
+	temp_high = 283.15 // 10c
+	temp_low = 	273.15 // 0c
+
+	transition_chances = list(
+		WEATHER_FOG = 10,
+		WEATHER_OVERCAST = 15
+		)
+	observed_message = "A fogbank has rolled over the region."
+	transition_messages = list(
+		"Fog rolls in.",
+		"Visibility falls as the air becomes dense.",
+		"The clouds drift lower, as if to smother the forests."
+	)
+	imminent_transition_message = "Clouds are drifting down as the area is getting foggy."
+	outdoor_sounds_type = /datum/looping_sound/weather/wind
+	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
+
 /datum/weather/borealis2/blood_moon
 	name = "blood moon"
 	light_modifier = 0.5
@@ -455,6 +484,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	transition_messages = list(
 		"The sky turns blood red!"
 	)
+	imminent_transition_message = "The sky is turning red. Blood Moon is starting."
 	outdoor_sounds_type = /datum/looping_sound/weather/wind
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 
@@ -475,6 +505,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	transition_messages = list(
 		"Gentle embers waft down around you like grotesque snow."
 	)
+	imminent_transition_message = "Dark smoke is filling the sky, as ash and embers start to rain down."
 	outdoor_sounds_type = /datum/looping_sound/weather/wind
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 
@@ -496,6 +527,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	transition_messages = list(
 		"Smoldering clouds of scorching ash billow down around you!"
 	)
+	imminent_transition_message = "Dark smoke is filling the sky, as ash and embers fill the air and wind is picking up too. Ashstorm is coming, get to cover!"
 	// Lets recycle.
 	outdoor_sounds_type = /datum/looping_sound/weather/outside_blizzard
 	indoor_sounds_type = /datum/looping_sound/weather/inside_blizzard
@@ -525,6 +557,7 @@ var/datum/planet/borealis2/planet_borealis2 = null
 	transition_messages = list(
 		"Radioactive soot and ash start to float down around you, contaminating whatever they touch."
 	)
+	imminent_transition_message = "Sky and clouds are growing sickly green... Radiation storm is approaching, get to cover!"
 	outdoor_sounds_type = /datum/looping_sound/weather/wind
 	indoor_sounds_type = /datum/looping_sound/weather/wind/indoors
 
@@ -559,3 +592,30 @@ var/datum/planet/borealis2/planet_borealis2 = null
 		return
 	if(T.is_outdoors())
 		SSradiation.radiate(T, rand(fallout_rad_low, fallout_rad_high))
+
+/datum/weather/borealis2/fallout/temp
+	name = "short-term fallout"
+	timer_low_bound = 1
+	timer_high_bound = 3
+	transition_chances = list(
+		WEATHER_FALLOUT = 10,
+		WEATHER_RAIN = 50,
+		WEATHER_FOG = 35,
+		WEATHER_STORM = 20,
+		WEATHER_OVERCAST = 5
+		)
+
+/datum/weather/borealis2/confetti
+	name = "confetti"
+	icon_state = "confetti"
+
+	transition_chances = list(
+		WEATHER_CLEAR = 50,
+		WEATHER_OVERCAST = 20,
+		WEATHER_CONFETTI = 5
+		)
+	observed_message = "Confetti is raining from the sky."
+	transition_messages = list(
+		"Suddenly, colorful confetti starts raining from the sky."
+	)
+	imminent_transition_message = "A rain is starting... A rain of confetti...?"

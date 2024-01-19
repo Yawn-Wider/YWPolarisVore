@@ -55,6 +55,7 @@
 /datum/map_template/surface/plains
 	name = "Surface Content - Plains"
 	desc = "Used to make the surface outside the outpost be 16% less boring."
+	annihilate = 1 //We nuke all trees under because we can
 
 // To be added: Templates for surface exploration when they are made.
 
@@ -338,7 +339,7 @@
 	name = "Syndi Sniper"
 	desc = "Syndicate watch tower, deadly but secluded"
 	mappath = 'maps/submaps/surface_submaps/plains_yw/syndisniper.dmm'
-	
+
 	cost = 5
 
 /datum/map_template/surface/plains/drgnplateu

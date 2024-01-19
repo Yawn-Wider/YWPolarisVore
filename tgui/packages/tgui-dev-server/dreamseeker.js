@@ -6,8 +6,8 @@
 
 import { exec } from 'child_process';
 import { promisify } from 'util';
-import { createLogger } from './logging.js';
-import { require } from './require.js';
+import { createLogger } from './logging';
+import { require } from './require';
 
 const axios = require('axios');
 const logger = createLogger('dreamseeker');
@@ -24,9 +24,14 @@ export class DreamSeeker {
   }
 
   topic(params = {}) {
+    // prettier-ignore
     const query = Object.keys(params)
-      .map((key) => encodeURIComponent(key) + '=' + encodeURIComponent(params[key]))
+      .map(key => encodeURIComponent(key)
+        + '=' + encodeURIComponent(params[key]))
       .join('&');
+    logger.log(
+      `topic call at ${this.client.defaults.baseURL + '/dummy?' + query}`
+    );
     return this.client.get('/dummy?' + query);
   }
 }

@@ -1119,6 +1119,7 @@
 	if(alien == IS_DIONA)
 		return
 	M.radiation = max(M.radiation - 30 * removed * M.species.chem_strength_heal, 0)
+	M.accumulated_rads = max(M.accumulated_rads - 30 * removed * M.species.chem_strength_heal, 0)
 
 /datum/reagent/arithrazine
 	name = "Arithrazine"
@@ -1136,6 +1137,7 @@
 	if(alien == IS_DIONA)
 		return
 	M.radiation = max(M.radiation - 70 * removed * M.species.chem_strength_heal, 0)
+	M.accumulated_rads = max(M.accumulated_rads - 70 * removed * M.species.chem_strength_heal, 0)
 	M.adjustToxLoss(-10 * removed)
 	if(prob(60))
 		M.take_organ_damage(4 * removed, 0)
@@ -1429,7 +1431,7 @@
 	reagent_state = LIQUID
 	color = "#80af9c"
 	metabolism = REM * 0.002
-	overdose = REAGENTS_OVERDOSE * 0.25
+	overdose = REAGENTS_OVERDOSE
 	scannable = 1
 
 /datum/reagent/earthsblood

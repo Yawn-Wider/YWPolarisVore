@@ -3,16 +3,13 @@
 /obj/effect/overmap/visitable/sector/debrisfield,
 /turf/space,
 /area/space)
-"b" = (
-/obj/effect/shuttle_landmark{
-	base_area = /area/tether_away/debrisfield/shuttle_buffer;
-	base_turf = /turf/space;
-	landmark_tag = "debrisfield_nw";
-	name = "North West"
-	},
+"d" = (
 /turf/space,
 /area/tether_away/debrisfield/shuttle_buffer)
-"c" = (
+"h" = (
+/turf/space,
+/area/space)
+"G" = (
 /obj/effect/shuttle_landmark{
 	base_area = /area/tether_away/debrisfield/shuttle_buffer;
 	base_turf = /turf/space;
@@ -21,12 +18,15 @@
 	},
 /turf/space,
 /area/tether_away/debrisfield/shuttle_buffer)
-"d" = (
+"J" = (
+/obj/effect/shuttle_landmark{
+	base_area = /area/tether_away/debrisfield/shuttle_buffer;
+	base_turf = /turf/space;
+	landmark_tag = "debrisfield_nw";
+	name = "North West"
+	},
 /turf/space,
 /area/tether_away/debrisfield/shuttle_buffer)
-"h" = (
-/turf/space,
-/area/space)
 
 (1,1,1) = {"
 h
@@ -4319,7 +4319,7 @@ d
 d
 d
 d
-b
+J
 d
 d
 d
@@ -17760,7 +17760,7 @@ d
 d
 d
 d
-c
+G
 d
 d
 d

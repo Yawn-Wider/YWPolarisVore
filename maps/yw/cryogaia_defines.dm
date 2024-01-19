@@ -21,6 +21,9 @@
 #define Z_LEVEL_DEBRISFIELD				20
 #define Z_LEVEL_FUELDEPOT				21
 #define Z_LEVEL_GATEWAY					22
+#define Z_LEVEL_OM_ADVENTURE			23
+#define Z_LEVEL_REDGATE					24
+#define Z_LEVEL_VRWORLD					25
 
 //Camera networks
 #define NETWORK_CRYOGAIA "Cryogaia"
@@ -123,56 +126,58 @@
 		/area/crew_quarters/sleep/Dorm_7/holo,
 		/area/outpost/mining_main/maintenance,
 		/area/outpost/research/power,
-		/area/borealis2/elevator/scimining,
-		/area/vacant/vacant_site/east,
 		/area/tcommsat/chamber,
+		/area/tcommsat/powercontrol,
 		/area/tcomfoyer,
-		/area/maintenance/dorm,
 		/area/vacant/vacant_site,
+		/area/vacant/vacant_site/private,
+		/area/vacant/vacant_site/locker,
+		/area/vacant/vacant_site/east,
+		/area/maintenance/dorm,
 		/area/maintenance/maintroom1,
 		/area/maintenance/maintroom2,
 		/area/maintenance/maintroom3,
 		/area/maintenance/maintroom4,
 		/area/maintenance/maintroom5,
 		/area/maintenance/maintroom8,
-		/area/vacant/vacant_site/private,
-		/area/borealis2/elevator/medbasement,
 		/area/maintenance/lowfloor2,
+		/area/cryogaia/outpost/bonfire,
+		/area/cryogaia/outpost/checkpoint,
+		/area/cryogaia/outpost/wall,
+		/area/cryogaia/outpost/tower/southwest,
+		/area/cryogaia/outpost/tower/south,
+		/area/cryogaia/outpost/tower/southeast,
+		/area/cryogaia/outpost/tower/east,
+		/area/cryogaia/outpost/tower/west,
+		/area/cryogaia/outpost/tower/northwest,
+		/area/cryogaia/outpost/tower/northeast,
+		/area/cryogaia/outpost/exploration_shed,
+		/area/cryogaia/outpost/elevator/medbasement,
+		/area/cryogaia/outpost/elevator/medbay,
+		/area/cryogaia/outpost/elevator/medupper,
+		/area/cryogaia/outpost/elevator/scicargo,
+		/area/cryogaia/outpost/elevator/scimining,
+		/area/cryogaia/outpost/elevator/uppermining,
 		/area/borealis2/outdoors,
-		/area/borealis2/outdoors/exterior/explore3,
 		/area/borealis2/outdoors/exterior,
 		/area/borealis2/outdoors/exterior/upper,
+		/area/borealis2/outdoors/exterior/traderpad,
+		/area/borealis2/outdoors/exterior/traderpad/interior,
+		/area/borealis2/outdoors/exterior/explore1,
+		/area/borealis2/outdoors/exterior/explore1/interior,
 		/area/borealis2/outdoors/exterior/explore2,
+		/area/borealis2/outdoors/exterior/explore3,
 		/area/borealis2/outdoors/exterior/lake,
-		/area/cryogaia/outpost/exploration_shed,
 		/area/borealis2/outdoors/grounds,
-		/area/borealis2/outdoors/grounds/traderpad,
-		/area/borealis2/elevator/scicargo,
 		/area/borealis2/outdoors/grounds/power,
 		/area/borealis2/outdoors/grounds/upper/solars,
-		/area/borealis2/outdoors/exterior/explore1,
-		/area/security/airlock,
-		/area/borealis2/elevator/medbay,
-		/area/storage/auxillary,
-		/area/vacant/vacant_site/locker,
-		/area/tcommsat/powercontrol,
-		/area/constructionsite/medical,
-		/area/borealis2/outdoors/grounds/entrance,
-		/area/security/vacantoffice,
-		/area/borealis2/outdoors/grounds/tower/southwest,
-		/area/borealis2/outdoors/grounds/tower/south,
-		/area/borealis2/outdoors/grounds/tower/southeast,
-		/area/borealis2/outdoors/grounds/tower/east,
-		/area/borealis2/outdoors/grounds/tower/west,
-		/area/borealis2/outdoors/grounds/tower/northwest,
-		/area/borealis2/outdoors/grounds/tower/northeast,
-		/area/borealis2/outdoors/grounds/checkpoint,
-		/area/borealis2/outdoors/grounds/wall,
 		/area/borealis2/outdoors/grounds/upper,
-		/area/cryogaia/station/ert_arrival,
-		/area/borealis2/elevator/uppermining,
-		/area/borealis2/elevator/medupper,
 		/area/borealis2/outdoors/grounds/walkway,
+		/area/security/airlock,
+		/area/storage/auxillary,
+		/area/constructionsite/medical,
+		/area/security/vacantoffice,
+		/area/cryogaia/station/ert_arrival,
 		/area/cryogaia/station/excursion_overhang
 		)
 
@@ -191,7 +196,12 @@
 		list("Desert Planet - Z1 Beach","Desert Planet - Z2 Cave"),
 		list("Remmi Aerostat - Z1 Aerostat","Remmi Aerostat - Z2 Surface"),
 		list("Debris Field - Z1 Space"),
-		list("Fuel Depot - Z1 Space")
+		list("Fuel Depot - Z1 Space"),
+		list("VR World")
+		)
+
+	lateload_overmap = list(
+		list("Grass Cave")
 		)
 
 	ai_shell_restricted = TRUE
@@ -208,14 +218,32 @@
 	belter_transit_z =	 	list(Z_LEVEL_CRYOGAIA_MISC)
 	belter_belt_z = 		list(Z_LEVEL_ROGUEMINE_1, Z_LEVEL_ROGUEMINE_2)
 
-	lateload_gateway = list( //Gateway missions
-		list("Snow Outpost"),
-		list("Carp Farm"),
-		list("Snow Field"),
-		list("Listening Post")
+	lateload_gateway = list(
+		list("Gateway - Carp Farm"),
+		list("Gateway - Snow Field"),
+		list("Gateway - Listening Post"),
+		list(list("Gateway - Honleth Highlands A", "Gateway - Honleth Highlands B")),
+		list("Gateway - Arynthi Lake Underground A","Gateway - Arynthi Lake A"),
+		list("Gateway - Arynthi Lake Underground B","Gateway - Arynthi Lake B"),
+		list("Gateway - Wild West")
 		)
 
 	lateload_gateway = null //Nothing right now.
+
+	lateload_redgate = list(
+		list("Redgate - Teppi Ranch"),
+		list("Redgate - Innland"),
+//		list("Redgate - Abandoned Island"),	//This will come back later
+		list("Redgate - Dark Adventure"),
+		list("Redgate - Eggnog Town Underground","Redgate - Eggnog Town"),
+		list("Redgate - Star Dog"),
+		list("Redgate - Hotsprings"),
+		list("Redgate - Rain City"),
+		list("Redgate - Islands Underwater","Redgate - Islands"),
+		list("Redgate - Moving Train", "Redgate - Moving Train Upper Level"),
+		list("Redgate - Fantasy Dungeon", "Redgate - Fantasy Town"),
+		list("Redgate - Laserdome")
+		)
 
 	planet_datums_to_make = list(/datum/planet/borealis2)
 
@@ -271,6 +299,10 @@
 /obj/effect/overmap/visitable/sector/cryogaia
 	name = "Borealis Majoris"
 	desc = "Home to coldness, and your workplace."
+	scanner_desc = @{"[i]Registration[/i]: NSB Cryogaia
+[i]Class[/i]: Installation
+[i]Transponder[/i]: Transmitting (CIV), NanoTrasen IFF
+[b]Notice[/b]: NanoTrasen Colony, authorized personnel only"}
 	base = TRUE
 	icon_state = "globe"
 	color = "#00AAFF"
@@ -280,10 +312,13 @@
 	)
 	//Despite not being in the multi-z complex, these levels are part of the overmap sector
 	extra_z_levels = list(Z_LEVEL_PLAINS,
-						  Z_LEVEL_CRYOGAIA_WILDERNESS,
-						  Z_LEVEL_CRYOGAIA_CAVES,
-						  Z_LEVEL_UNDERDARK
-						  )
+		Z_LEVEL_CRYOGAIA_WILDERNESS,
+		Z_LEVEL_CRYOGAIA_CAVES,
+		Z_LEVEL_UNDERDARK
+	)
+
+	levels_for_distress = list(Z_LEVEL_OFFMAP1, Z_LEVEL_BEACH, Z_LEVEL_AEROSTAT, Z_LEVEL_DEBRISFIELD, Z_LEVEL_FUELDEPOT)
+	var/mob_announce_cooldown = 0
 
 /obj/effect/overmap/visitable/sector/cryogaia/Crossed(var/atom/movable/AM)
 	. = ..()
@@ -294,6 +329,11 @@
 	announce_atc(AM,going = TRUE)
 
 /obj/effect/overmap/visitable/sector/cryogaia/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
+		if(world.time < mob_announce_cooldown)
+			return
+		else
+			mob_announce_cooldown = world.time + 5 MINUTES
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
@@ -309,7 +349,14 @@
 /obj/effect/overmap/visitable/sector/cryogaia/get_space_zlevels()
 	return list() //None!
 
+/obj/effect/overmap/visitable/sector/virgo3b
+	var/mob_announce_cooldown = 0
 /obj/effect/overmap/visitable/sector/virgo3b/proc/announce_atc(var/atom/movable/AM, var/going = FALSE)
+	if(istype(AM, /obj/effect/overmap/visitable/ship/simplemob))
+		if(world.time < mob_announce_cooldown)
+			return
+		else
+			mob_announce_cooldown = world.time + 5 MINUTES
 	var/message = "Sensor contact for vessel '[AM.name]' has [going ? "left" : "entered"] ATC control area."
 	//For landables, we need to see if their shuttle is cloaked
 	if(istype(AM, /obj/effect/overmap/visitable/ship/landable))
@@ -391,43 +438,12 @@
 	z = Z_LEVEL_CRYOGAIA_MISC
 	name = "Misc"
 	flags = MAP_LEVEL_ADMIN|MAP_LEVEL_CONTACT|MAP_LEVEL_XENOARCH_EXEMPT
-/*
-/datum/map_z_level/tether/wilderness
-	name = "Wilderness"
-	flags = MAP_LEVEL_PLAYER
-	var/activated = 0
-	var/list/frozen_mobs = list()
 
-/datum/map_z_level/tether/wilderness/proc/activate_mobs()
-	if(activated && isemptylist(frozen_mobs))
-		return
-	activated = 1
-	for(var/mob/living/simple_mob/M in frozen_mobs)
-		M.life_disabled = 0
-		frozen_mobs -= M
-	frozen_mobs.Cut()
 
-/datum/map_z_level/tether/wilderness/wild_1
-	z = Z_LEVEL_SURFACE_WILDERNESS_1
-
-/datum/map_z_level/tether/wilderness/wild_2
-	z = Z_LEVEL_SURFACE_WILDERNESS_2
-
-/datum/map_z_level/tether/wilderness/wild_3
-	z = Z_LEVEL_SURFACE_WILDERNESS_3
-
-/datum/map_z_level/tether/wilderness/wild_4
-	z = Z_LEVEL_SURFACE_WILDERNESS_4
-
-/datum/map_z_level/tether/wilderness/wild_5
-	z = Z_LEVEL_SURFACE_WILDERNESS_5
-
-/datum/map_z_level/tether/wilderness/wild_6
-	z = Z_LEVEL_SURFACE_WILDERNESS_6
-
-/datum/map_z_level/tether/wilderness/wild_crash
-	z = Z_LEVEL_SURFACE_WILDERNESS_CRASH
-
-/datum/map_z_level/tether/wilderness/wild_ruins
-	z = Z_LEVEL_SURFACE_WILDERNESS_RUINS
-*/
+//No idea
+#include "../expedition_vr/aerostat/_aerostat.dm"
+/datum/map_template/common_lateload/away_aerostat
+	name = "Remmi Aerostat - Z1 Aerostat"
+	desc = "The Virgo 2 Aerostat away mission."
+	mappath = 'maps/expedition_vr/aerostat/aerostat.dmm'
+	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat

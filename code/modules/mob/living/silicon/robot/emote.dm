@@ -17,6 +17,7 @@ var/list/_robot_default_emotes = list(
 	/decl/emote/visible/sidestep,
 	/decl/emote/audible/synth,
 	/decl/emote/audible/synth/beep,
+	/decl/emote/audible/synth/bing,
 	/decl/emote/audible/synth/buzz,
 	/decl/emote/audible/synth/confirm,
 	/decl/emote/audible/synth/deny,
@@ -33,4 +34,6 @@ var/list/_robot_default_emotes = list(
 )
 
 /mob/living/silicon/robot/get_available_emotes()
-	return global._robot_default_emotes
+	var/list/fulllist = global._robot_default_emotes.Copy()
+	fulllist |= _human_default_emotes
+	return fulllist

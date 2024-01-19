@@ -42,9 +42,9 @@
 
 /obj/machinery/atmospherics/valve/init_dir()
 	switch(dir)
-		if(NORTH || SOUTH)
+		if(NORTH,SOUTH)
 			initialize_directions = NORTH|SOUTH
-		if(EAST || WEST)
+		if(EAST,WEST)
 			initialize_directions = EAST|WEST
 
 /obj/machinery/atmospherics/valve/get_neighbor_nodes_for_init()
@@ -292,7 +292,7 @@
 	if(istype(W, /obj/item/device/multitool)) //YW EDIT: aac
 		update_multitool_menu(user)
 		return 1
-	if (!W.is_wrench())
+	if (!W.has_tool_quality(TOOL_WRENCH))
 		return ..()
 	if (istype(src, /obj/machinery/atmospherics/valve/digital) && !src.allowed(user))
 		to_chat(user, "<span class='warning'>Access denied.</span>")

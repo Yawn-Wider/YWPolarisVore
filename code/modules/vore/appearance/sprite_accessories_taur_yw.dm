@@ -33,3 +33,8 @@
 /datum/sprite_accessory/tail/taur/long_lizard/scaled
 	name = "Large Dragon Tail/W scales"
 	extra_overlay = "big_liz_mark"
+
+/datum/sprite_accessory/tail/taur/azrien
+	name = "Azrien (Taur)"
+	icon_state = "aztaur"
+	icon = 'icons/mob/vore/taurs_yw.dmi'

@@ -129,6 +129,7 @@ var/list/gamemode_cache = list()
 	var/static/discordurl
 	var/static/rulesurl
 	var/static/mapurl
+	var/static/patreonurl
 
 	//Alert level description
 	var/static/alert_desc_green = "All threats to the station have passed. Security may not have weapons visible, privacy laws are once again fully enforced."
@@ -301,6 +302,8 @@ var/list/gamemode_cache = list()
 
 	var/static/suggested_byond_version
 	var/static/suggested_byond_build
+
+	var/static/invoke_youtubedl = null
 
 /datum/configuration/New()
 	var/list/L = subtypesof(/datum/game_mode)
@@ -555,6 +558,9 @@ var/list/gamemode_cache = list()
 
 				if ("discordurl")
 					config.discordurl = value
+
+				if ("patreonurl")
+					config.patreonurl = value
 
 				if ("guest_jobban")
 					config.guest_jobban = 1
@@ -973,6 +979,9 @@ var/list/gamemode_cache = list()
 				if("vgs_server_port")
 					config.vgs_server_port = text2num(value)
 				// VOREStation Edit End
+
+				if("invoke_youtubedl")
+					config.invoke_youtubedl = value
 
 				else
 					log_misc("Unknown setting in configuration: '[name]'")

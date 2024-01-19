@@ -8,7 +8,7 @@ var/list/admin_verbs_default = list(
 	/client/proc/cmd_mod_say,			//VOREStation Add,
 	/client/proc/cmd_event_say,			//VOREStation Add,
 	/client/proc/cmd_mentor_ticket_panel,
-	/client/proc/cmd_mentor_say
+	/client/proc/cmd_mentor_say,
 //	/client/proc/hide_verbs,			//hides all our adminverbs, //VOREStation Remove,
 //	/client/proc/hide_most_verbs,		//hides all our hideable adminverbs, //VOREStation Remove,
 //	/client/proc/debug_variables,		//allows us to -see- the variables of any instance in the game. +VAREDIT needed to modify, //VOREStation Remove,
@@ -18,6 +18,8 @@ var/list/admin_verbs_default = list(
 //	/client/proc/cmd_mod_say,
 //	/client/proc/deadchat				//toggles deadchat on/off,
 //	/client/proc/toggle_ahelp_sound,
+	/client/proc/toggle_admin_global_looc,
+	/client/proc/toggle_admin_deadchat
 	)
 
 var/list/admin_verbs_admin = list(
@@ -75,6 +77,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/check_ai_laws,			//shows AI and borg laws,
 	/client/proc/rename_silicon,		//properly renames silicons,
 	/client/proc/manage_silicon_laws,	// Allows viewing and editing silicon laws. ,
+	/client/proc/modify_robot,
 	/client/proc/check_antagonists,
 	/client/proc/admin_memo,			//admin memo system. show/delete/write. +SERVER needed to delete admin memos of others,
 	/client/proc/dsay,					//talk in deadchat using our ckey/fakekey,
@@ -126,6 +129,8 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/view_feedback,
 	/client/proc/make_mentor,
 	/client/proc/unmake_mentor,
+	/client/proc/removetickets,
+	/client/proc/delbook,
 	/client/proc/setckey, //YW add - readds SetCkey proc
 	/client/proc/dbcon_fix //YW add - adds Fix Database Connection proc
 	)
@@ -139,6 +144,7 @@ var/list/admin_verbs_sounds = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
 	/client/proc/play_server_sound,
+	/client/proc/play_web_sound,
 	/client/proc/play_z_sound
 	)
 
@@ -160,11 +166,17 @@ var/list/admin_verbs_fun = list(
 	/datum/admins/proc/call_supply_drop,
 	/datum/admins/proc/call_drop_pod,
 	/client/proc/smite,
-	/client/proc/smite_vr, //VOREStation Add,
 	/client/proc/admin_lightning_strike,
 	/client/proc/resize, //VOREStation Add,
 	/client/proc/cmd_admin_droppod_deploy,
-	/client/proc/adminorbit //VOREStation Add,
+	/client/proc/adminorbit, //VOREStation Add
+	/client/proc/add_mob_for_narration,	//VOREStation Add
+	/client/proc/remove_mob_for_narration,	//VOREStation Add
+	/client/proc/narrate_mob,	//VOREStation Add
+	/client/proc/narrate_mob_args, //VOREStation Add
+	/client/proc/getPlayerStatus, //VORESTation Add
+	/client/proc/manage_event_triggers
+
 	)
 
 var/list/admin_verbs_spawn = list(
@@ -180,7 +192,8 @@ var/list/admin_verbs_spawn = list(
 	/client/proc/spawn_chemdisp_cartridge,
 	/client/proc/map_template_load,
 	/client/proc/map_template_upload,
-	/client/proc/map_template_load_on_new_z
+	/client/proc/map_template_load_on_new_z,
+	/client/proc/eventkit_open_mob_spawner //VOREStation Add
 	)
 
 var/list/admin_verbs_server = list(
@@ -230,7 +243,7 @@ var/list/admin_verbs_debug = list(
 	/client/proc/cmd_debug_tog_aliens,
 	/client/proc/cmd_display_del_log,
 	/client/proc/cmd_display_init_log,
-	/client/proc/cmd_display_overlay_log,
+	// /client/proc/cmd_display_overlay_log,
 	/client/proc/air_report,
 	/client/proc/reload_admins,
 	/client/proc/reload_eventMs,
@@ -267,7 +280,8 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/change_time,
 	/client/proc/admin_give_modifier,
 	/client/proc/simple_DPS,
-	/datum/admins/proc/view_feedback
+	/datum/admins/proc/view_feedback,
+	/client/proc/stop_sounds
 	)
 
 var/list/admin_verbs_paranoid_debug = list(
@@ -314,6 +328,7 @@ var/list/admin_verbs_hideable = list(
 	/client/proc/play_local_sound,
 	/client/proc/play_sound,
 	/client/proc/play_server_sound,
+	/client/proc/play_web_sound,
 	/client/proc/object_talk,
 	/datum/admins/proc/cmd_admin_dress,
 	/client/proc/cmd_admin_gib_self,
@@ -363,7 +378,8 @@ var/list/admin_verbs_hideable = list(
 	/proc/possess,
 	/proc/release,
 	/datum/admins/proc/set_uplink, //VOREStation Add,
-	/datum/admins/proc/set_tcrystals
+	/datum/admins/proc/set_tcrystals,
+	/client/proc/stop_sounds
 	)
 var/list/admin_verbs_mod = list(
 	/client/proc/cmd_admin_pm_context,	//right-click adminPM interface,

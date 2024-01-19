@@ -13,7 +13,9 @@
 	var/static/plating_colors = list(
 		/obj/item/stack/tile/floor = "#858a8f",
 		/obj/item/stack/tile/floor/dark = "#4f4f4f",
-		/obj/item/stack/tile/floor/white = "#e8e8e8")
+		/obj/item/stack/tile/floor/white = "#e8e8e8",
+		/obj/item/stack/tile/floor/techmaint = "#4d585b",
+		/obj/item/stack/tile/floor/techgrey = "#363f43")
 	var/health = 100
 	var/maxhealth = 100
 
@@ -85,12 +87,12 @@
 	qdel(src)
 
 /obj/structure/catwalk/attackby(obj/item/C as obj, mob/user as mob)
-	if(istype(C, /obj/item/weapon/weldingtool))
-		var/obj/item/weapon/weldingtool/WT = C
+	if(C.has_tool_quality(TOOL_WELDER))
+		var/obj/item/weapon/weldingtool/WT = C.get_welder()
 		if(WT.isOn() && WT.remove_fuel(0, user))
 			deconstruct(user)
 			return
-	if(C.is_crowbar() && plated_tile)
+	if(C.has_tool_quality(TOOL_CROWBAR) && plated_tile)
 		hatch_open = !hatch_open
 		if(hatch_open)
 			playsound(src, 'sound/items/Crowbar.ogg', 100, 2)
@@ -189,3 +191,13 @@
 	icon_state = "catwalk_platedwhite"
 	tile = /obj/item/stack/tile/floor/white
 	platecolor = "#e8e8e8"
+
+/obj/effect/catwalk_plated/techmaint
+	icon_state = "catwalk_techmaint"
+	tile = /obj/item/stack/tile/floor/techmaint
+	platecolor = "#4d585b"
+
+/obj/effect/catwalk_plated/techfloor
+	icon_state = "catwalk_techfloor"
+	tile = /obj/item/stack/tile/floor/techgrey
+	platecolor = "#363f43"

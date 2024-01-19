@@ -1,13 +1,3 @@
-/mob/living/simple_mob/vox
-	min_oxy = 0
-	max_oxy = 0
-	min_tox = 5
-	max_tox = 0
-	min_co2 = 0
-	max_co2 = 5
-	min_n2 = 0 //breathe N2
-	max_n2 = 0
-
 /mob/living/simple_mob/vox/armalis
 	name = "serpentine alien"
 	real_name = "serpentine alien"
@@ -15,12 +5,26 @@
 	icon = 'icons/mob/vox.dmi'
 	icon_state = "armalis"
 	icon_living = "armalis"
+	min_oxy = 0
+	max_oxy = 0
+	min_tox = 0
+	max_tox = 0
+	min_co2 = 0
+	max_co2 = 0
+	min_n2 = 0
+	max_n2 = 0
+	minbodytemp = 0
 	maxHealth = 500
 	health = 500
+	taser_kill = 0
+	has_langs = list(LANGUAGE_VOX)
+	ic_revivable = 1
+	has_hands = 1
 	response_harm = "slashes at the"
 	harm_intent_damage = 0
 	melee_damage_lower = 30
 	melee_damage_upper = 40
+	attack_sharp = 1
 	attacktext = "slammed its enormous claws into"
 	movement_cooldown = 2
 //	environment_smash_flags = SMASH_LIGHT_STRUCTURES | SMASH_CONTAINERS | SMASH_WALLS // WALLS Temporary commenting, YW - Hv3
@@ -62,8 +66,6 @@
 				M.show_message("<span class='warning'>[user] gently taps [src] with the [O]. </span>")
 
 /mob/living/simple_mob/vox/armalis/verb/fire_quill(mob/target as mob in oview())
-
-
 	set name = "Fire quill"
 	set desc = "Fires a viciously pointed quill at a high speed."
 	set category = "Alien"
@@ -95,8 +97,16 @@
 	var/text = null
 
 	targets += getmobs() //Fill list, prompt user with list
-	target = input("Select a creature!", "Speak to creature", null, null) as null|anything in targets
-	text = input("What would you like to say?", "Speak to creature", null, null)
+	for(var/key in targets)
+		var/mob/mobx = targets[key]
+		if(!mobx.ckey)
+			targets -= key
+
+	target = tgui_input_list(src, "Select a creature!", "Speak to creature", targets)
+
+	if(!target) return
+
+	text = tgui_input_text(src, "What would you like to say?", "Speak to creature")
 
 	if (!target || !text)
 		return
@@ -110,7 +120,7 @@
 	to_chat(M, "<span class='notice'>Like lead slabs crashing into the ocean, alien thoughts drop into your mind: [text]</span>")
 	if(istype(M,/mob/living/carbon/human))
 		var/mob/living/carbon/human/H = M
-		if(H.species.name == "Vox")
+		if(H.species.name == SPECIES_VOX)
 			return
 		to_chat(H, "<span class='warning'>Your nose begins to bleed...</span>")
 		H.drip(1)
@@ -128,30 +138,27 @@
 		maxHealth += 200
 		health += 200
 		visible_message("<span class='notice'>[src] is quickly outfitted in [O] by [user].</span>","<span class='notice'>You quickly outfit [src] in [O].</span>")
-		regenerate_icons()
+		update_icon()
 		return
 	if(istype(O,/obj/item/vox/armalis_amp))
 		user.drop_item(O, src)
 		amp = O
 		visible_message("<span class='notice'>[src] is quickly outfitted in [O] by [user].</span>","<span class='notice'>You quickly outfit [src] in [O].</span>")
-		regenerate_icons()
+		update_icon()
 		return
 	return ..()
 
-/mob/living/simple_mob/vox/armalis/regenerate_icons()
-	..()
-	overlays = list()
+/mob/living/simple_mob/vox/armalis/update_icon()
+	. = ..()
 	if(armour)
 		var/icon/armour = image('icons/mob/vox.dmi',"armour")
 		movement_cooldown = 4
-		overlays += armour
+		add_overlay(armour)
 	if(amp)
 		var/icon/amp = image('icons/mob/vox.dmi',"amplifier")
-		overlays += amp
-	return
+		add_overlay(amp)
 
 /obj/item/vox/armalis_armour
-
 	name = "strange armour"
 	desc = "Hulking reinforced armour for something huge."
 	icon = 'icons/inventory/suit/item.dmi'
@@ -159,7 +166,6 @@
 	item_state = "armalis_armour"
 
 /obj/item/vox/armalis_amp
-
 	name = "strange lenses"
 	desc = "A series of metallic lenses and chains."
 	icon = 'icons/inventory/suit/item.dmi'

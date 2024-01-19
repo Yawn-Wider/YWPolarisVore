@@ -158,6 +158,22 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/mothscream,
 	/decl/emote/audible/mothchitter,
 	/decl/emote/audible/mothlaugh,
+	/decl/emote/audible/multichirp,
+	/decl/emote/audible/gnarl,
+	/decl/emote/audible/teshsqueak,
+	/decl/emote/audible/teshchirp,
+	/decl/emote/audible/teshtrill,
+	/decl/emote/audible/teshscream,
+	/decl/emote/visible/bounce,
+	/decl/emote/visible/jiggle,
+	/decl/emote/visible/lightup,
+	/decl/emote/visible/vibrate,
+	/decl/emote/audible/croon,
+	/decl/emote/audible/lwarble,
+	/decl/emote/audible/croak_skrell,
+	/decl/emote/audible/roarbark,
+	/decl/emote/audible/dook,
+
 	//VOREStation Add End
 	//YW ADDITION: Add Start
 	/decl/emote/audible/chirp,
@@ -306,18 +322,19 @@ var/list/_simple_mob_default_emotes = list(
 	/decl/emote/audible/warble,
 	/decl/emote/audible/vox_shriek,
 	/decl/emote/audible/purr,
-	/decl/emote/audible/purrlong
+	/decl/emote/audible/purrlong,
+	/decl/emote/audible/dook
 
 	)
 	//VOREStation Add End
 
 /mob/living/carbon/human/get_available_emotes()
-	. = global._human_default_emotes
+	. = global._human_default_emotes.Copy()
 	if(length(species?.default_emotes))
-		. |= species.default_emotes
+		return . | species.default_emotes
 
 /mob/living/simple_mob/get_available_emotes()
-	. = global._simple_mob_default_emotes
+	. = global._simple_mob_default_emotes.Copy()
 
 /mob/living/carbon/human/verb/pose()
 	set name = "Set Pose"
@@ -326,7 +343,7 @@ var/list/_simple_mob_default_emotes = list(
 
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
-	pose = sanitize(tgui_input_text(usr, "This is [src]. [T.he]...", "Pose", null))
+	pose = strip_html_simple(tgui_input_text(usr, "This is [src]. [T.he]...", "Pose", null))
 
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"
@@ -389,6 +406,6 @@ var/list/_simple_mob_default_emotes = list(
 
 	var/new_flapping = isnull(setting) ? !flapping : setting
 	if(new_flapping != flapping)
-		flapping = setting
+		flapping = new_flapping
 		update_wing_showing()
 	return 1

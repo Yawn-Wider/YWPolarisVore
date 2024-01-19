@@ -1,9 +1,9 @@
 #include "../../submaps/pois_vr/aerostat/virgo2.dm"
 
 /obj/effect/overmap/visitable/sector/virgo2
-	name = "Virgo 2"
+	name = "Borealis 3" //YW Edit - Borealis
 	desc = "Includes the Remmi Aerostat and associated ground mining complexes."
-	scanner_desc = @{"[i]Stellar Body[/i]: Virgo 2
+	scanner_desc = @{"[i]Stellar Body[/i]: Borealis 3
 [i]Class[/i]: R-Class Planet
 [i]Habitability[/i]: Low (High Temperature, Toxic Atmosphere)
 [b]Notice[/b]: Planetary environment not suitable for life. Landing may be hazardous."}
@@ -48,7 +48,7 @@
 				continue
 			if(!priority_process) sleep(-1)
 			T.resources = list()
-			T.resources["silicates"] = rand(3,5)
+			T.resources["sand"] = rand(3,5)
 			T.resources["carbon"] = rand(3,5)
 
 			var/current_cell = map[get_map_cell(x,y)]
@@ -60,8 +60,8 @@
 				T.resources["marble"] =   rand(RESOURCE_LOW_MIN, RESOURCE_MID_MAX)
 				T.resources["diamond"] =  0
 				T.resources["phoron"] =   0
-				T.resources["osmium"] =   0
-				T.resources["hydrogen"] = 0
+				T.resources["platinum"] =   0
+				T.resources["mhydrogen"] = 0
 				T.resources["verdantium"] = 0
 				T.resources["lead"]     = 0
 				//T.resources["copper"] =   rand(RESOURCE_MID_MIN, RESOURCE_HIGH_MAX)
@@ -76,10 +76,10 @@
 				T.resources["silver"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["uranium"] =  rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["phoron"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
-				T.resources["osmium"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
+				T.resources["platinum"] =   rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["verdantium"] = rand(RESOURCE_LOW_MIN, RESOURCE_LOW_MAX)
 				T.resources["lead"] =     rand(RESOURCE_LOW_MIN, RESOURCE_MID_MAX)
-				T.resources["hydrogen"] = 0
+				T.resources["mhydrogen"] = 0
 				T.resources["diamond"] =  0
 				T.resources["hematite"] = 0
 				T.resources["marble"] =   0
@@ -95,8 +95,8 @@
 				T.resources["diamond"] =  rand(RESOURCE_LOW_MIN,  RESOURCE_LOW_MAX)
 				T.resources["verdantium"] = rand(RESOURCE_LOW_MIN, RESOURCE_MID_MAX)
 				T.resources["phoron"] =   rand(RESOURCE_HIGH_MIN, RESOURCE_HIGH_MAX)
-				T.resources["osmium"] =   rand(RESOURCE_HIGH_MIN, RESOURCE_HIGH_MAX)
-				T.resources["hydrogen"] = rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
+				T.resources["platinum"] =   rand(RESOURCE_HIGH_MIN, RESOURCE_HIGH_MAX)
+				T.resources["mhydrogen"] = rand(RESOURCE_MID_MIN,  RESOURCE_MID_MAX)
 				T.resources["marble"] =   rand(RESOURCE_MID_MIN, RESOURCE_HIGH_MAX)
 				T.resources["lead"] =     rand(RESOURCE_LOW_MIN, RESOURCE_HIGH_MAX)
 				T.resources["hematite"] = 0
@@ -139,7 +139,7 @@
 	prob_fall = 30
 	//guard = 20
 	mobs_to_pick_from = list(
-		/mob/living/simple_mob/animal/space/jelly = 6,
+		/mob/living/simple_mob/vore/jelly = 6,
 		/mob/living/simple_mob/mechanical/viscerator = 6,
 		/mob/living/simple_mob/vore/aggressive/corrupthound = 3,
 		/mob/living/simple_mob/vore/oregrub = 2,
@@ -282,22 +282,22 @@ VIRGO2_TURF_CREATE(/turf/simulated/floor/hull)
 	ambience = null
 
 /area/offmap/aerostat/surface/outpost/backroom
-	name = "V4 Outpost - Research Area"
+	name = "V2 Outpost - Research Area"
 /area/offmap/aerostat/surface/outpost/hallway
-	name = "V4 Outpost - Hallway"
+	name = "V2 Outpost - Hallway"
 /area/offmap/aerostat/surface/outpost/cafe
-	name = "V4 Outpost - Cafe"
+	name = "V2 Outpost - Cafe"
 /area/offmap/aerostat/surface/outpost/park
-	name = "V4 Outpost - Park"
+	name = "V2 Outpost - Park"
 /area/offmap/aerostat/surface/outpost/officerone
-	name = "V4 Outpost - Officer's Quarters 1"
+	name = "V2 Outpost - Officer's Quarters 1"
 /area/offmap/aerostat/surface/outpost/officertwo
-	name = "V4 Outpost - Officer's Quarters 2"
+	name = "V2 Outpost - Officer's Quarters 2"
 /area/offmap/aerostat/surface/outpost/barracks
-	name = "V4 Outpost - Barracks"
+	name = "V2 Outpost - Barracks"
 /area/offmap/aerostat/surface/outpost/airlock
-	name = "V4 Outpost - Airlock"
+	name = "V2 Outpost - Airlock"
 /area/offmap/aerostat/surface/outpost/powerroom
-	name = "V4 Outpost - Power Room"
+	name = "V2 Outpost - Power Room"
 /area/offmap/aerostat/surface/outpost/guardpost
-	name = "V4 Outpost - Guard Post"
+	name = "V2 Outpost - Guard Post"

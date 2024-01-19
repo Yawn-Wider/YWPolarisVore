@@ -5,11 +5,15 @@
 
 	starts_with = list(
 		/obj/item/clothing/accessory/storage/brown_vest,
-		/obj/item/blueprints,
+		/obj/item/areaeditor/blueprints,
+		/obj/item/wire_reader,
 		///obj/item/clamp,	//VOREStation Removal: without leaks those are pointless,
 		///obj/item/clamp,	//VOREStation Removal: without leaks those are pointless,
 		/obj/item/clothing/under/rank/chief_engineer,
 		/obj/item/clothing/under/rank/chief_engineer/skirt,
+		/obj/item/clothing/under/rank/neo_chiefengi,
+		/obj/item/clothing/under/rank/neo_chiefengi_skirt,
+		/obj/item/clothing/under/rank/neo_ce_gorka,
 		/obj/item/clothing/head/hardhat/white,
 		///obj/item/clothing/head/welding,	//VOREStation Removal: Locker bloat, grr. They get fancy goggles or can raid the welding supplies locker for one of these.
 		/obj/item/clothing/gloves/heavy_engineer,	//VOREStation Edit: chief gets the good shit
@@ -100,7 +104,8 @@
 		/obj/item/clothing/shoes/boots/winter/engineering,
 		/obj/item/weapon/tank/emergency/oxygen/engi,
 		/obj/item/weapon/storage/belt/utility,	//VOREStation Add
-		/obj/item/weapon/reagent_containers/spray/windowsealant) //VOREStation Add
+		/obj/item/weapon/reagent_containers/spray/windowsealant,	//VOREStation Add
+		/obj/item/areaeditor/blueprints/engineers) //VOREStation Add
 
 /obj/structure/closet/secure_closet/engineering_personal/Initialize()
 	if(prob(50))

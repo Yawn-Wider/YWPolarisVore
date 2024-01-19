@@ -7,8 +7,8 @@ type Data = {
   armed: BooleanLike;
 };
 
-export const NtosRevelation = (props, context) => {
-  const { act, data } = useBackend<Data>(context);
+export const NtosRevelation = (props) => {
+  const { act, data } = useBackend<Data>();
   const { armed } = data;
   return (
     <NtosWindow width={400} height={250} theme="syndicate">
@@ -36,7 +36,14 @@ export const NtosRevelation = (props, context) => {
               }
             />
           </LabeledList>
-          <Button fluid bold content="ACTIVATE" textAlign="center" color="bad" disabled={!armed} />
+          <Button
+            fluid
+            bold
+            content="ACTIVATE"
+            textAlign="center"
+            color="bad"
+            disabled={!armed}
+          />
         </Section>
       </NtosWindow.Content>
     </NtosWindow>

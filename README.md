@@ -2,13 +2,16 @@
 
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/compatibility-club-penguin.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/no-ragrets.svg)](http://forthebadge.com)
 
-[Website (we dont have one)](https://www.youtube.com/watch?v=oHg5SJYRHA0) - [Forums](https://yawn-widerstation.proboards.com/) - [Wiki](https://yawn.izac.live/index.php?title=Main_Page) - [Discord](https://discord.gg/Wh27EAY)
+[Website (we dont have one)](https://www.youtube.com/watch?v=oHg5SJYRHA0) - [Forums](https://yawn-widerstation.proboards.com/) - [Wiki](https://yawn.izac.live/Main_Page) - [Discord](https://discord.gg/Wh27EAY)
 
 Going to make a Pull Request? Make sure you read the [CONTRIBUTING.md](.github/CONTRIBUTING.md) first!
 
+Want to make a test server or your own private server? Read our [GitHub Wiki!](https://github.com/VOREStation/VOREStation/wiki)
+
 Yawn-Wider is a fork of the VOREStation code branch which is a fork of the Polaris code branch, itself a fork of the Baystation12 code branch, for the game Space Station 13.
 
-![Render Nanomaps](https://github.com/VOREStation/VOREStation/workflows/Render%20Nanomaps/badge.svg)
+![Render Nanomaps](https://github.com/Yawn-Wider/YWPolarisVore/workflows/Render%20Nanomaps/badge.svg)
+[![CI](https://github.com/Yawn-Wider/YWPolarisVore/actions/workflows/ci.yml/badge.svg)](https://github.com/Yawn-Wider/YWPolarisVore/actions/workflows/ci.yml)
 
 ---
 
@@ -24,9 +27,9 @@ If you wish to develop and host this codebase in a closed source manner you may 
 See [here](https://www.gnu.org/licenses/why-affero-gpl.html) for more information.
 
 Any files located in the
-`vorestation/goon`,
-`vorestation/icons/goonstation`, or
-`vorestation/sound/goonstation`
+`YWPolarisVore/goon`,
+`YWPolarisVore/icons/goonstation`, or
+`YWPolarisVore/sound/goonstation`
 directories, or any subdirectories of mentioned directories are licensed under the
 Creative Commons 3.0 BY-NC-SA license
 (https://creativecommons.org/licenses/by-nc-sa/3.0)

@@ -15,10 +15,10 @@ type NumberInputData = {
   title: string;
 };
 
-export const NumberInputModal = (props, context) => {
-  const { act, data } = useBackend<NumberInputData>(context);
+export const NumberInputModal = (props) => {
+  const { act, data } = useBackend<NumberInputData>();
   const { init_value, large_buttons, message = '', timeout, title } = data;
-  const [input, setInput] = useLocalState(context, 'input', init_value);
+  const [input, setInput] = useLocalState('input', init_value);
   const onChange = (value: number) => {
     if (value === input) {
       return;
@@ -33,7 +33,9 @@ export const NumberInputModal = (props, context) => {
   };
   // Dynamically changes the window height based on the message.
   const windowHeight =
-    140 + (message.length > 30 ? Math.ceil(message.length / 3) : 0) + (message.length && large_buttons ? 5 : 0);
+    140 +
+    (message.length > 30 ? Math.ceil(message.length / 3) : 0) +
+    (message.length && large_buttons ? 5 : 0);
 
   return (
     <Window title={title} width={270} height={windowHeight}>
@@ -67,8 +69,8 @@ export const NumberInputModal = (props, context) => {
 };
 
 /** Gets the user input and invalidates if there's a constraint. */
-const InputArea = (props, context) => {
-  const { act, data } = useBackend<NumberInputData>(context);
+const InputArea = (props) => {
+  const { act, data } = useBackend<NumberInputData>();
   const { min_value, max_value, init_value } = data;
   const { input, onClick, onChange } = props;
 
@@ -84,6 +86,7 @@ const InputArea = (props, context) => {
       </Stack.Item>
       <Stack.Item grow>
         <RestrictedInput
+          allowFloats
           autoFocus
           autoSelect
           fluid

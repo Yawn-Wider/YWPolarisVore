@@ -16,8 +16,8 @@ var/list/department_radio_keys = list(
 	":u" = "Supply",		".u" = "Supply",
 	":v" = "Service",		".v" = "Service",
 	":p" = "AI Private",	".p" = "AI Private",
-	":y" = "Explorer",	".y" = "Explorer",
-	":a" = "Talon",		".a" = "Talon", //VOREStation Add,
+	":a" = "Away Team",	".a" = "Away Team",	//VOREStation Edit
+	":y" = "Talon",		".y" = "Talon", //VOREStation Add,
 	":g" = "Casino",	".g" = "Casino",
 
 	":R" = "right ear",	".R" = "right ear",
@@ -36,8 +36,8 @@ var/list/department_radio_keys = list(
 	":U" = "Supply",		".U" = "Supply",
 	":V" = "Service",		".V" = "Service",
 	":P" = "AI Private",	".P" = "AI Private",
-	":Y" = "Explorer",	".Y" = "Explorer",
-	":A" = "Talon",		".A" = "Talon", //VOREStation Add,
+	":A" = "Away Team",	".A" = "Away Team",
+	":Y" = "Talon",		".Y" = "Talon", //VOREStation Add,
 	":G" = "Casino",	".G" = "Casino",
 
 	// Cyrillic characters on the same keys on the Russian QWERTY (phonetic) layout
@@ -58,8 +58,8 @@ var/list/department_radio_keys = list(
 	":г" = "Supply",        ".г" = "Supply",
 	":м" = "Service",        ".м" = "Service",
 	":з" = "AI Private",    ".з" = "AI Private",
-	":н" = "Explorer",    ".н" = "Explorer",
-	":ф" = "Talon",        ".ф" = "Talon", //VOREStation Add
+	":ф" = "Away Team",    ".ф" = "Away Team",
+	":н" = "Talon",        ".н" = "Talon", //VOREStation Add
 	":п" = "Casino",	".п" = "Casino",
 )
 
@@ -167,6 +167,8 @@ var/list/channel_to_radio_key = new
 	if(forced_psay)
 		psay(message)
 		return
+	if(autowhisper)
+		whispering = 1
 	//VOREStation Addition End
 	//Parse the mode
 	var/message_mode = parse_message_mode(message, "headset")
@@ -341,7 +343,9 @@ var/list/channel_to_radio_key = new
 	//The 'post-say' static speech bubble
 	var/speech_bubble_test = say_test(message)
 	//var/image/speech_bubble = image('icons/mob/talk_vr.dmi',src,"h[speech_bubble_test]") //VOREStation Edit. Commented this out in case we need to reenable.
-	var/speech_type = speech_bubble_appearance()
+	var/speech_type = custom_speech_bubble
+	if(!speech_type || speech_type == "default")
+		speech_type = speech_bubble_appearance()
 	var/image/speech_bubble = generate_speech_bubble(src, "[speech_type][speech_bubble_test]")
 	var/sb_alpha = 255
 	var/atom/loc_before_turf = src
@@ -364,7 +368,8 @@ var/list/channel_to_radio_key = new
 
 			if(M && src) //If we still exist, when the spawn processes
 				//VOREStation Add - Ghosts don't hear whispers
-				if(whispering && !is_preference_enabled(/datum/client_preference/whisubtle_vis) && isobserver(M) && !M.client?.holder)
+				if(whispering && isobserver(M) && (!M.is_preference_enabled(/datum/client_preference/ghost_see_whisubtle) || \
+				(!is_preference_enabled(/datum/client_preference/whisubtle_vis)  && !M.client?.holder)))
 					M.show_message("<span class='game say'><span class='name'>[src.name]</span> [w_not_heard].</span>", 2)
 					return
 				//VOREStation Add End

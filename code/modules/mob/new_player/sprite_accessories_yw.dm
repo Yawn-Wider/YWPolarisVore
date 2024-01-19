@@ -120,7 +120,6 @@
 	body_parts = list(BP_L_FOOT,BP_R_FOOT,BP_L_LEG,BP_R_LEG,BP_L_ARM,BP_R_ARM,BP_L_HAND,BP_R_HAND,BP_TORSO,BP_GROIN,BP_HEAD)
 	species_allowed = list(SPECIES_VOX)
 
-
 /datum/sprite_accessory/hair/yw
 	icon = 'icons/mob/human_face_yw.dmi'
 	icon_add = 'icons/mob/human_face_yw.dmi'
@@ -144,3 +143,44 @@
 	name = "Vox Stubble (colorable)"
 	icon_state = "vox_color_stubble"
 	species_allowed = list(SPECIES_VOX)
+
+/datum/sprite_accessory/hair/skirmisherquills
+	name = "Long Feathers"
+	icon = 'code/modules/yw-halo/covenant/species/tvoan/r_skirmishers.dmi'
+	icon_add = 'code/modules/yw-halo/covenant/species/tvoan/r_skirmishers.dmi'
+	icon_state = "tvoanhair1"
+	species_allowed = list(SPECIES_TVAOAN_KIGYAR_YW)
+
+/datum/sprite_accessory/hair/skirmisherquills/two
+	name = "Short Feathers"
+	icon = 'code/modules/yw-halo/covenant/species/tvoan/r_skirmishers.dmi'
+	icon_add = 'code/modules/yw-halo/covenant/species/tvoan/r_skirmishers.dmi'
+	icon_state = "tvoanhair2"
+	species_allowed = list(SPECIES_TVAOAN_KIGYAR_YW)
+
+/datum/sprite_accessory/hair/kiggyhair/
+	name = "No Quills"
+	icon = 'code/modules/yw-halo/covenant/species/kigyar/r_kig-yar.dmi'
+	icon_add = 'code/modules/yw-halo/covenant/species/kigyar/r_kig-yar.dmi'
+	icon_state = "h_kiggyhair"
+	species_allowed = list(SPECIES_KIGYAR_YW)
+
+/datum/sprite_accessory/hair/kiggyhair/one
+	name = "Long Quills"
+	icon = 'code/modules/yw-halo/covenant/species/kigyar/r_kig-yar.dmi'
+	icon_add = 'code/modules/yw-halo/covenant/species/kigyar/r_kig-yar.dmi'
+	icon_state = "h_kiggyhairone"
+	species_allowed = list(SPECIES_KIGYAR_YW)
+
+/datum/sprite_accessory/hair/kiggyhair/two
+	name = "Short Quills"
+	icon = 'code/modules/yw-halo/covenant/species/kigyar/r_kig-yar.dmi'
+	icon_add = 'code/modules/yw-halo/covenant/species/kigyar/r_kig-yar.dmi'
+	icon_state = "h_kiggyhairtwo"
+	species_allowed = list(SPECIES_KIGYAR_YW)
+
+/datum/sprite_accessory/marking/yw/snootnose
+	name = "Snoot Nose (Cit)"
+	icon_state = "snootnose"
+	color_blend_mode = ICON_MULTIPLY
+	body_parts = list(BP_HEAD)

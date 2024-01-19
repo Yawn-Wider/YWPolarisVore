@@ -4,7 +4,7 @@
 	var/last_emote_summary
 
 /mob/proc/get_available_emotes()
-	return global._default_mob_emotes
+	return global._default_mob_emotes.Copy()
 
 /mob/proc/can_emote(var/emote_type)
 	return (stat == CONSCIOUS)
@@ -31,6 +31,9 @@
 		if(forced_psay)
 			pme(message)
 			return
+		if(autowhisper)
+			return me_verb_subtle(message)
+
 		//VOREStation Addition End
 
 		if(act == "help")
@@ -128,6 +131,7 @@
 	if(findtext(subtext, "*"))
 		// abort abort!
 		to_chat(emoter, SPAN_WARNING("You may use only one \"["*"]\" symbol in your emote."))
+		to_chat(emoter, SPAN_WARNING(message))
 		return
 
 	if(pretext)
@@ -184,7 +188,10 @@
 
 	if(input)
 		log_emote(message,src) //Log before we add junk
-		message = "<span class='emote'><B>[src]</B> [input]</span>"
+		if(usr && usr.client)
+			message = "<span class='emote'><B>[src]</B> [input]</span>"
+		else
+			message = "<span class='npcemote'><B>[src]</B> [input]</span>"
 	else
 		return
 

@@ -214,7 +214,7 @@
 /obj/item/clothing/suit/space/vox/civ
 	name = "vox assistant pressure suit"
 	desc = "A cheap and oddly-shaped pressure suit made for vox crewmembers."
-	icon = 'icons/obj/clothing/suits_yw.dmi'
+	icon = 'icons/inventory/suit/mob_yw.dmi'
 	icon_state = "vox-civ-assistant"
 	allowed = list(/obj/item/weapon/tank,/obj/item/weapon/pen,/obj/item/device/flashlight/pen)
 	armor = list(melee = 5, bullet = 5, laser = 5, energy = 5, bomb = 0, bio = 100, rad = 25)

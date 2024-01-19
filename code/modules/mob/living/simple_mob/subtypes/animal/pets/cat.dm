@@ -35,7 +35,7 @@ var/list/_cat_default_emotes = list(
 	icon_state = "cat2"
 	item_state = "cat2"
 
-	movement_cooldown = 0.5 SECONDS
+	movement_cooldown = -1
 
 	meat_amount = 1
 	see_in_dark = 6 // Not sure if this actually works.
@@ -46,7 +46,7 @@ var/list/_cat_default_emotes = list(
 	holder_type = /obj/item/weapon/holder/cat
 	mob_size = MOB_SMALL
 
-	has_langs = list("Cat")
+	has_langs = list(LANGUAGE_ANIMAL)
 
 	var/mob/living/friend = null // Our best pal, who we'll follow. Meow.
 	var/named = FALSE //have I been named yet?
@@ -60,7 +60,7 @@ var/list/_cat_default_emotes = list(
 	return ..()
 
 /mob/living/simple_mob/animal/passive/cat/get_available_emotes()
-	return global._cat_default_emotes
+	return global._cat_default_emotes.Copy()
 
 /mob/living/simple_mob/animal/passive/cat/handle_special()
 	if(!stat && prob(2)) // spooky

@@ -36,10 +36,16 @@ labelPRBasedOnFilePath:
   "Type: .git or .github":
     - '.github/**'
     - '.git/**'
-    
+
   # Contains changes to the TGUI bundle
   "Type: TGUI Bundle":
     - 'tgui/public/**'
+
+  # changes to anything tgs
+  "Type: TGS":
+    - 'code/__defines/tgs.dm'
+    - 'code/__defines/tgs.config.dm'
+    - 'code/modules/tgs/**'
 
 ##### Greetings ########################################################################################################
 # Comment to be posted to welcome users when they open their first PR
@@ -99,7 +105,7 @@ firstIssueWelcomeComment: >
 ###### PR/Branch Up-To-Date Checker ####################################################################################
 # Check if the branch is up to date with master when certain files are modified
 #checkUpToDate:
-#  # The default branch is "master", change the branch if you want to check against a different target branch  
+#  # The default branch is "master", change the branch if you want to check against a different target branch
 #  targetBranch: master
 #  files:
 #  # File paths that you want to check for

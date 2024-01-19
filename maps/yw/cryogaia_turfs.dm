@@ -1,10 +1,11 @@
 //Simulated
 CRYOGAIA_TURF_CREATE(/turf/simulated/open)
 /turf/simulated/open/cryogaia
-	edge_blending_priority = 0.5 //Turfs which also have e_b_p and higher than this will plop decorative edges onto this turf
-/turf/simulated/open/cryogaia/New()
-	..()
-	if(outdoors)
+	CRYOGAIA_SET_ATMOS
+
+/turf/simulated/open/cryogaia/Initialize(mapload)
+	. = ..()
+	if(is_outdoors())
 		SSplanets.addTurf(src)
 
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor)
@@ -171,7 +172,8 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/mineral/floor)
 			"carbon" = 10,
 			"diamond" = 4,
 			"gold" = 15,
-			"silver" = 15))
+			"silver" = 15,
+			"hydrogen" = 2))
 	else
 		mineral_name = pickweight(list(
 			"uranium" = 7,

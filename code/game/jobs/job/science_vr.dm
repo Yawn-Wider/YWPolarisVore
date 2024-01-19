@@ -25,6 +25,9 @@
 /datum/alt_title/head_scientist
 	title = "Head Scientist"
 
+/datum/job/rd/get_request_reasons()
+	return list("Repairs needed", "Training crew")
+
 
 /datum/job/scientist
 	spawn_positions = 5
@@ -87,6 +90,9 @@
 
 /datum/alt_title/assembly_tech
 	title = "Assembly Technician"
+
+/datum/job/roboticist/get_request_reasons()
+	return list("Repairs needed")
 
 //////////////////////////////////
 //			Xenobotanist

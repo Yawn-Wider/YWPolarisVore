@@ -607,7 +607,7 @@
 	to forming buds, the petals of which secrete the luminescent sap containing the pollen at the time of blooming. Certain \
 	horticulturists have found ways of halting this process prior to the secretion of the sap, leaving the flower's petals \
 	bright, at the cost of making that bud sterile."
-	value = CATALOGUER_REWARD_HARD
+	value = CATALOGUER_REWARD_MEDIUM
 
 /obj/structure/flora/sif/frostbelle
 	name = "frostbelle shrub"
@@ -640,3 +640,48 @@
 
 /obj/structure/flora/sif/frostbelle/get_harvestable_desc()
 	return "<span class='notice'>\The [src] seems to be budding.</span>"
+
+//Start of underwater plants
+
+/obj/structure/flora/underwater
+	name = "underwater plant"
+	desc = "A plant that thrives deep under water."
+	icon = 'icons/obj/flora/underwaterflora.dmi'
+	icon_state = "plant-1"
+
+/obj/structure/flora/underwater/plant1
+	icon_state = "plant-1"
+
+/obj/structure/flora/underwater/plant2
+	icon_state = "plant-2"
+
+/obj/structure/flora/underwater/plant3
+	icon_state = "plant-3"
+
+/obj/structure/flora/underwater/plant4
+	icon_state = "plant-4"
+
+/obj/structure/flora/underwater/plant5
+	icon_state = "plant-5"
+
+/obj/structure/flora/underwater/seaweed1
+	icon_state = "seaweed-1"
+
+/obj/structure/flora/underwater/seaweed2
+	icon_state = "seaweed-2"
+
+/obj/structure/flora/underwater/seaweed3
+	icon_state = "seaweed-3"
+
+/obj/structure/flora/underwater/grass1
+	icon_state = "grass-1"
+
+/obj/structure/flora/underwater/grass2
+	icon_state = "grass-2"
+
+/obj/structure/flora/underwater/grass3
+	icon_state = "grass-3"
+
+/obj/structure/flora/underwater/grass4
+	icon_state = "grass-4"
+

@@ -6,7 +6,7 @@
 
 /datum/sprite_accessory/hair
 
-	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN, SPECIES_SHADEKIN_YW) //This lets all races use the default hairstyles. // yw edit shadekin
+	species_allowed = list(SPECIES_HUMAN, SPECIES_SKRELL, SPECIES_UNATHI, SPECIES_TAJ, SPECIES_TESHARI, SPECIES_NEVREAN, SPECIES_AKULA, SPECIES_SERGAL, SPECIES_FENNEC, SPECIES_ZORREN_HIGH, SPECIES_VULPKANIN, SPECIES_XENOCHIMERA, SPECIES_XENOHYBRID, SPECIES_VASILISSAN, SPECIES_RAPALA, SPECIES_PROTEAN, SPECIES_ALRAUNE, SPECIES_WEREBEAST, SPECIES_SHADEKIN, SPECIES_SHADEKIN_CREW, SPECIES_ALTEVIAN, SPECIES_SHADEKIN_YW, SPECIES_KIGYAR_YW, SPECIES_TVAOAN_KIGYAR_YW, SPECIES_SANGHEILI_YW, SPECIES_UNGGOY_YW) //This lets all races use the default hairstyles. // yw edit shadekin and covenants
 
 /datum/sprite_accessory/hair/astolfo
 	name = "Astolfo"
@@ -80,6 +80,12 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "hair_twincurl"
+
+/datum/sprite_accessory/hair/twindrillslong
+	name = "Twin Drills Long"
+	icon = 'icons/mob/human_face_vr.dmi'
+	icon_add = 'icons/mob/human_face_vr_add.dmi'
+	icon_state = "hair_twincurllong"
 
 /datum/sprite_accessory/hair/crescent_moon
 	name = "Crescent-Moon"
@@ -156,6 +162,13 @@
 	icon = 'icons/mob/human_face_vr.dmi'
 	icon_add = 'icons/mob/human_face_vr_add.dmi'
 	icon_state = "soghun_dubhorns"
+	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
+
+/datum/sprite_accessory/hair/una_quinthorns
+	name = "Quintiple Unathi Horns"
+	icon = 'icons/mob/human_face_vr.dmi'
+	icon_add = 'icons/mob/human_face_vr_add.dmi'
+	icon_state = "unathi_quintiple_horns"
 	species_allowed = list(SPECIES_UNATHI, SPECIES_XENOCHIMERA, SPECIES_PROTEAN)
 
 /datum/sprite_accessory/hair/taj_ears
@@ -571,7 +584,7 @@
 	var/desc = "You should not see this..."
 
 /datum/sprite_accessory/hair_accessory/verie_hair_glow
-	name = "verie's hair glow"
+	name = "veries hair glow"
 	desc = ""
 	icon_state = "verie_hair_glow"
 	ignores_lighting = 1

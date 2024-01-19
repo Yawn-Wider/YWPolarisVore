@@ -78,6 +78,18 @@
 /turf/simulated/wall/resin/Initialize(mapload)
 	. = ..(mapload, "resin",null,"resin")
 
+/turf/simulated/wall/concrete
+	icon_state = "brick"
+
+/turf/simulated/wall/concrete/Initialize(mapload)
+	. = ..(mapload, "concrete") //3strong
+
+/turf/simulated/wall/r_concrete
+	icon_state = "rbrick"
+
+/turf/simulated/wall/r_concrete/Initialize(mapload)
+	. = ..(mapload, "concrete","plasteel rebar") //3strong
+
 // Kind of wondering if this is going to bite me in the butt.
 /turf/simulated/wall/skipjack/Initialize(mapload)
 	. = ..(mapload, "alienalloy")
@@ -320,10 +332,9 @@
 /obj/structure/hull_corner
 	name = "hull corner"
 	plane = OBJ_PLANE - 1
-	
 	icon = 'icons/turf/wall_masks.dmi'
 	icon_state = "hull_corner"
-	
+
 	anchored = TRUE
 	density = TRUE
 	breakable = TRUE
@@ -340,19 +351,19 @@
 
 /obj/structure/hull_corner/proc/update_look()
 	cut_overlays()
-	
+
 	var/turf/simulated/wall/T
 	for(var/direction in get_dirs_to_test())
 		T = get_step(src, direction)
 		if(!istype(T) || T.material?.icon_base != "hull")
 			continue
-		
+
 		name = T.name
 		desc = T.desc
-		
+
 		var/datum/material/B = T.material
 		var/datum/material/R = T.reinf_material
-		
+
 		if(B?.icon_colour)
 			color = B.icon_colour
 		if(R?.icon_colour)
@@ -360,7 +371,7 @@
 			I.color = R.icon_colour
 			add_overlay(I)
 		break
-	
+
 	if(!T)
 		warning("Hull corner at [x],[y] not placed adjacent to a hull it can find.")
 
@@ -390,7 +401,7 @@
 
 /turf/simulated/wall/eris/can_join_with_low_wall(var/obj/structure/low_wall/WF)
 	return istype(WF, /obj/structure/low_wall/eris)
-	
+
 /turf/simulated/wall/eris/special_wall_connections(list/dirs, list/inrange)
 	..()
 	for(var/direction in cardinal)

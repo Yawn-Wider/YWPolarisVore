@@ -38,7 +38,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "ag" = (
 /obj/machinery/power/apc{
 	name = "south bump";
@@ -46,7 +46,7 @@
 	},
 /obj/structure/cable,
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "ah" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable{
@@ -106,7 +106,7 @@
 /area/medical/medbayupper)
 "an" = (
 /turf/simulated/open,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "ao" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -150,7 +150,7 @@
 /obj/structure/catwalk,
 /obj/machinery/light/spot/no_nightshift,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "at" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -163,13 +163,13 @@
 "au" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "av" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "aw" = (
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 1
@@ -201,7 +201,7 @@
 /obj/structure/catwalk,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "aB" = (
 /obj/machinery/computer/ship/helm,
 /obj/structure/panic_button{
@@ -384,7 +384,7 @@
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "aZ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -493,7 +493,7 @@
 	c_tag = "Southeast Tower - Upper"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "bl" = (
 /obj/effect/landmark/map_data/borealis2{
 	height = 5
@@ -599,7 +599,7 @@
 /obj/structure/catwalk,
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "bw" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/voidcraft{
@@ -801,7 +801,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "bT" = (
 /obj/structure/closet/crate/freezer/rations,
 /obj/item/weapon/storage/mre/menu11,
@@ -857,7 +857,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "cc" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -1153,7 +1153,7 @@
 /area/medical/medbayskybridge)
 "cH" = (
 /turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "cI" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner,
 /area/shuttle/excursion)
@@ -1189,7 +1189,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "cM" = (
 /obj/structure/sign/greencross{
 	pixel_x = -32
@@ -1400,7 +1400,7 @@
 "dg" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "dh" = (
 /obj/machinery/power/solar{
 	id = "portsolar";
@@ -1482,7 +1482,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "dt" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -1782,7 +1782,7 @@
 /area/chapel/monastery/upper)
 "dW" = (
 /turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "dX" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 1;
@@ -2011,7 +2011,7 @@
 "ez" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "eA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -2203,7 +2203,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "eR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -2229,7 +2229,7 @@
 /area/shuttle/excursion)
 "eT" = (
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "eU" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -2237,7 +2237,7 @@
 	flags = null
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "eV" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -2295,7 +2295,7 @@
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "fe" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/tiled,
@@ -2375,7 +2375,7 @@
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "fn" = (
 /obj/machinery/light{
 	dir = 4
@@ -2443,7 +2443,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "fx" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -2484,7 +2484,7 @@
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "fD" = (
 /obj/machinery/button/remote/blast_door{
 	dir = 4;
@@ -2534,7 +2534,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "fK" = (
 /obj/structure/lattice,
 /obj/structure/cable/green{
@@ -2583,7 +2583,7 @@
 "fP" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "fQ" = (
 /obj/structure/frame,
 /obj/machinery/atmospherics/pipe/simple/hidden/fuel,
@@ -2643,7 +2643,7 @@
 "fZ" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "gb" = (
 /obj/machinery/firealarm{
 	dir = 1;
@@ -2692,7 +2692,7 @@
 "gi" = (
 /obj/structure/closet/crate,
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "gj" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -2770,7 +2770,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "gt" = (
 /obj/machinery/light{
 	dir = 1
@@ -2820,7 +2820,7 @@
 	},
 /obj/machinery/light/spot/no_nightshift,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "gA" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -2841,10 +2841,10 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "gD" = (
 /turf/simulated/open,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "gE" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
@@ -2920,7 +2920,7 @@
 "gP" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "gQ" = (
 /obj/machinery/door/window/brigdoor/northright{
 	dir = 2;
@@ -2967,11 +2967,11 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "gV" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "gW" = (
 /obj/machinery/door/airlock/maintenance/sec,
 /obj/machinery/door/firedoor,
@@ -3380,14 +3380,14 @@
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "hJ" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "hK" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -3495,7 +3495,7 @@
 /area/cryogaia/station/explorer_prep)
 "hT" = (
 /turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "hU" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -3625,7 +3625,7 @@
 	},
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "ii" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -3751,7 +3751,7 @@
 	},
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "iu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -3880,7 +3880,6 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "iC" = (
-/obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/research{
 	name = "Pathfinder's Office";
 	req_access = newlist();
@@ -4000,7 +3999,7 @@
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "iM" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -4074,7 +4073,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "iT" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -4092,7 +4091,7 @@
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "iW" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -4172,7 +4171,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "je" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -4344,7 +4343,7 @@
 /area/cryogaia/station/explorer_prep)
 "js" = (
 /turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "jt" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled,
@@ -4366,7 +4365,7 @@
 	},
 /obj/machinery/light/spot/no_nightshift,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "jx" = (
 /turf/simulated/wall/r_wall,
 /area/borealis2/outdoors/exterior/upper)
@@ -4478,7 +4477,7 @@
 "jH" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "jI" = (
 /obj/structure/closet/crate,
 /obj/random/maintenance/clean,
@@ -4621,7 +4620,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "jX" = (
 /obj/structure/closet/secure_closet/personal/volunteer,
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -4673,7 +4672,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "kc" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
@@ -4964,7 +4963,7 @@
 "kI" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "kJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -5001,7 +5000,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "kN" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -5011,7 +5010,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "kO" = (
 /obj/structure/closet/secure_closet/personal/volunteer,
 /obj/effect/floor_decal/corner_oldtile/gray{
@@ -5091,7 +5090,7 @@
 "kX" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "kY" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -5234,7 +5233,7 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "ln" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -5260,7 +5259,7 @@
 "lp" = (
 /obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "lq" = (
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 1
@@ -5391,7 +5390,7 @@
 /area/cryogaia/station/explorer_entrance)
 "lB" = (
 /turf/simulated/open,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "lC" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -5626,7 +5625,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "mc" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/folder/yellow,
@@ -5719,7 +5718,7 @@
 /area/cryogaia/station/explorer_entrance)
 "mm" = (
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "mn" = (
 /obj/structure/table/rack/steel,
 /obj/random/maintenance/security,
@@ -5771,7 +5770,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "mu" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 1
@@ -5791,7 +5790,7 @@
 	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "mw" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -5988,7 +5987,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "mP" = (
 /obj/machinery/mineral/equipment_vendor/survey,
 /obj/effect/floor_decal/corner_oldtile/gray,
@@ -6045,7 +6044,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/medupper)
+/area/cryogaia/outpost/elevator/medupper)
 "mV" = (
 /obj/structure/table/woodentable,
 /obj/item/device/camera,
@@ -6192,7 +6191,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "ni" = (
 /obj/structure/bookcase/manuals/medical,
 /obj/item/weapon/book/manual/stasis,
@@ -6231,7 +6230,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "nm" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -6253,7 +6252,7 @@
 /area/quartermaster/miningdock)
 "no" = (
 /turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "np" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -6304,7 +6303,7 @@
 	pixel_y = -24
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "nw" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
@@ -6400,7 +6399,7 @@
 "nE" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "nF" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	frequency = 1379;
@@ -6462,7 +6461,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "nN" = (
 /obj/structure/railing,
 /obj/machinery/light/no_nightshift{
@@ -6539,7 +6538,7 @@
 "ol" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "om" = (
 /turf/unsimulated/wall/planetary/borealis2,
 /area/borealis2/outdoors/grounds/upper)
@@ -6697,7 +6696,7 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "oE" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -6773,7 +6772,7 @@
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "oM" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -6786,7 +6785,7 @@
 /area/quartermaster/miningdock)
 "oQ" = (
 /turf/simulated/open,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "oS" = (
 /obj/machinery/power/solar{
 	id = "portsolar";
@@ -6893,7 +6892,7 @@
 "pg" = (
 /obj/structure/sign/deck/second,
 /turf/simulated/shuttle/wall/voidcraft/blue,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "pl" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -6926,7 +6925,7 @@
 "pn" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "po" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 4;
@@ -6940,12 +6939,12 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "pt" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "pu" = (
 /obj/machinery/alarm{
 	dir = 8;
@@ -7015,7 +7014,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "pP" = (
 /turf/simulated/floor/tiled/white,
-/area/borealis2/elevator/medupper)
+/area/cryogaia/outpost/elevator/medupper)
 "pQ" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
@@ -7080,7 +7079,7 @@
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "qr" = (
 /obj/machinery/light{
 	dir = 8
@@ -7104,7 +7103,7 @@
 /area/medical/medbayskybridge)
 "qB" = (
 /turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "qD" = (
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/techmaint,
@@ -7184,7 +7183,7 @@
 	name = "carpspawn"
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "qZ" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
@@ -7247,7 +7246,7 @@
 	name = "carpspawn"
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "rt" = (
 /obj/machinery/door/firedoor/glass/hidden/steel,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
@@ -7333,7 +7332,7 @@
 "rH" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "rI" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -7352,7 +7351,7 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "rP" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -7380,7 +7379,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "sa" = (
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -7396,7 +7395,7 @@
 	},
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "sj" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	frequency = 1379;
@@ -7519,12 +7518,12 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "ta" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "tb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -7616,7 +7615,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "tv" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -7641,7 +7640,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "tF" = (
 /obj/item/device/radio/intercom{
 	dir = 4;
@@ -7652,7 +7651,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "tG" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -7765,7 +7764,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "ud" = (
 /obj/structure/disposalpipe/trunk{
 	dir = 4
@@ -7839,7 +7838,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "uO" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -7856,7 +7855,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "uY" = (
 /obj/machinery/power/thermoregulator/cryogaia{
 	dir = 8;
@@ -7878,7 +7877,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "va" = (
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
@@ -7947,7 +7946,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "vu" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -7999,7 +7998,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "vG" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -8045,7 +8044,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "vM" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -8077,7 +8076,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "vR" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -8164,14 +8163,14 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "ws" = (
 /obj/machinery/camera/network/security{
 	c_tag = "Southwest Tower - Upper";
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "wu" = (
 /turf/simulated/floor/reinforced,
 /area/shuttle/excursion)
@@ -8210,13 +8209,13 @@
 "wG" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "wH" = (
 /obj/structure/railing/grey{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "wI" = (
 /obj/machinery/camera/network/civilian{
 	c_tag = "Monastery Top Rec Room";
@@ -8259,7 +8258,7 @@
 	pixel_y = -21
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "wT" = (
 /obj/structure/cable{
 	icon_state = "0-4"
@@ -8270,7 +8269,7 @@
 	pixel_x = -28
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/medupper)
+/area/cryogaia/outpost/elevator/medupper)
 "wV" = (
 /obj/machinery/camera/autoname{
 	dir = 4
@@ -8350,14 +8349,14 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "xm" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "xn" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
@@ -8376,7 +8375,7 @@
 	c_tag = "East Tower - Upper"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "xv" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -8436,7 +8435,7 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "xM" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8458,7 +8457,7 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "xP" = (
 /obj/machinery/recharge_station,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -8505,7 +8504,7 @@
 "yd" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "ye" = (
 /obj/structure/shuttle/engine/heater{
 	dir = 8
@@ -8517,7 +8516,7 @@
 /area/shuttle/belter)
 "yi" = (
 /turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "yk" = (
 /obj/machinery/light/small{
 	dir = 4
@@ -8539,7 +8538,7 @@
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "ys" = (
 /obj/machinery/door/airlock/glass_security{
 	name = "Security Breakroom"
@@ -8557,7 +8556,7 @@
 	},
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "yw" = (
 /obj/machinery/door/firedoor/glass/hidden/steel{
 	dir = 2
@@ -8616,7 +8615,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "yD" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -8628,7 +8627,7 @@
 /area/medical/medbayupper)
 "yJ" = (
 /turf/simulated/open,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "yK" = (
 /obj/structure/table/standard,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
@@ -8682,7 +8681,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "zg" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -8832,7 +8831,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "zP" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
@@ -8894,7 +8893,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "Ag" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/door/firedoor/glass,
@@ -8934,10 +8933,10 @@
 	c_tag = "West Tower - Upper"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "At" = (
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Av" = (
 /obj/structure/bed/chair/wood{
 	dir = 4
@@ -8965,7 +8964,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "AA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -9087,7 +9086,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "Bg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -9187,7 +9186,7 @@
 /area/chapel/monastery/upper)
 "BH" = (
 /turf/simulated/open,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "BI" = (
 /obj/structure/window/reinforced{
 	dir = 8;
@@ -9241,7 +9240,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "BP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -9272,7 +9271,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "Cb" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -9294,7 +9293,7 @@
 "Ci" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Cj" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 9
@@ -9332,7 +9331,7 @@
 "Cq" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "Cs" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -9370,7 +9369,7 @@
 /obj/machinery/door/firedoor,
 /obj/machinery/door/airlock/maintenance/medical,
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/medupper)
+/area/cryogaia/outpost/elevator/medupper)
 "CE" = (
 /obj/machinery/door/airlock/glass_medical{
 	name = "Staff Room";
@@ -9424,7 +9423,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "CV" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/window/reinforced{
@@ -9440,7 +9439,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "CY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -9451,7 +9450,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "Dc" = (
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
@@ -9493,7 +9492,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "Dl" = (
 /obj/effect/overmap/visitable/sector/cryogaia,
 /turf/simulated/open/cryogaia,
@@ -9514,7 +9513,7 @@
 	pixel_x = 30
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "Dr" = (
 /obj/structure/girder,
 /turf/simulated/floor/plating,
@@ -9568,7 +9567,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "DA" = (
 /obj/structure/shuttle/engine/heater,
 /obj/structure/window/reinforced{
@@ -9621,7 +9620,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "DL" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
@@ -9635,7 +9634,7 @@
 /area/quartermaster/miningdock)
 "DV" = (
 /turf/simulated/floor/holofloor/tiled/dark,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "DZ" = (
 /obj/effect/floor_decal/corner/red{
 	dir = 9
@@ -9647,7 +9646,7 @@
 /obj/machinery/space_heater,
 /obj/structure/railing/grey,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "Ee" = (
 /obj/structure/bed/chair/wood{
 	dir = 8
@@ -9732,7 +9731,7 @@
 	icon_state = "32-2"
 	},
 /turf/simulated/open,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "Er" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -9813,10 +9812,10 @@
 	flags = null
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "EM" = (
 /turf/simulated/open,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "EN" = (
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
@@ -9926,7 +9925,7 @@
 	pixel_y = 21
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "Fq" = (
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
@@ -9945,7 +9944,7 @@
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "FC" = (
 /turf/simulated/wall/r_wall,
 /area/borealis2/outdoors/grounds/upper)
@@ -10036,7 +10035,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Gg" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
@@ -10050,10 +10049,10 @@
 /area/security/watchtower)
 "Gh" = (
 /turf/simulated/wall,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "Gn" = (
 /turf/simulated/open,
-/area/borealis2/elevator/medupper)
+/area/cryogaia/outpost/elevator/medupper)
 "Go" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -10132,7 +10131,7 @@
 "GK" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "GL" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 5
@@ -10249,14 +10248,14 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "HH" = (
 /obj/structure/railing/grey{
 	dir = 1
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "HJ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10387,7 +10386,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Iw" = (
 /obj/structure/flora/pottedplant/large,
 /obj/effect/floor_decal/corner/paleblue{
@@ -10689,7 +10688,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "JP" = (
 /obj/structure/disposalpipe/junction{
 	dir = 8
@@ -10848,14 +10847,14 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "Kw" = (
 /obj/structure/railing/grey{
 	dir = 8
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "Kx" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/structure/cable/green{
@@ -10876,7 +10875,7 @@
 /area/cryogaia/station/hallway/primary/upper/south)
 "KB" = (
 /turf/simulated/shuttle/wall/voidcraft/blue,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "KD" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -10892,7 +10891,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "KH" = (
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
@@ -11010,7 +11009,7 @@
 /area/crew_quarters/medbreak)
 "Ll" = (
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "Lm" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -11051,7 +11050,7 @@
 /area/chapel/monastery/upper)
 "Lv" = (
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "LC" = (
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/plating,
@@ -11084,7 +11083,7 @@
 /area/medical/medbayupper)
 "LK" = (
 /turf/simulated/open,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "LO" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -11128,7 +11127,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "Mg" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -11137,11 +11136,11 @@
 /area/constructionsite/medical/upper)
 "Mh" = (
 /turf/simulated/wall/titanium,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "Mj" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "Mm" = (
 /obj/machinery/access_button/airlock_exterior{
 	master_tag = "Monastary_Upper_NW_Exit";
@@ -11190,7 +11189,7 @@
 "MB" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "MG" = (
 /turf/simulated/wall,
 /area/cryogaia/station/medical/upper)
@@ -11211,7 +11210,7 @@
 	},
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "MV" = (
 /turf/simulated/wall,
 /area/crew_quarters/medbreak)
@@ -11379,7 +11378,7 @@
 /area/security/watchtower)
 "NU" = (
 /turf/simulated/open,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "NX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/door/airlock/multi_tile/metal/mait{
@@ -11440,7 +11439,7 @@
 "Ol" = (
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Oo" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -11514,7 +11513,7 @@
 	pixel_x = -21
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "OF" = (
 /obj/effect/landmark/start{
 	name = "Medical Doctor"
@@ -11572,7 +11571,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "OS" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -11582,7 +11581,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "OT" = (
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "OY" = (
 /obj/structure/stasis_cage,
 /obj/effect/floor_decal/corner_oldtile/gray,
@@ -11594,7 +11593,7 @@
 "Pa" = (
 /obj/machinery/camera/network/security,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Pe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -11635,7 +11634,7 @@
 "Pl" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "Pm" = (
 /obj/effect/floor_decal/borderfloorblack/corner,
 /obj/effect/floor_decal/industrial/danger/corner,
@@ -11694,7 +11693,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "Py" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -11704,10 +11703,10 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "PA" = (
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "PC" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -11754,7 +11753,7 @@
 "PR" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "PS" = (
 /turf/unsimulated/wall/planetary/borealis2,
 /area/borealis2/outdoors)
@@ -11843,7 +11842,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Qp" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -11958,7 +11957,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "QS" = (
 /obj/machinery/atmospherics/unary/vent_pump/high_volume{
 	dir = 4;
@@ -11973,7 +11972,7 @@
 /area/shuttle/excursion)
 "QX" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "QY" = (
 /turf/simulated/wall,
 /area/maintenance/auxsolarport)
@@ -12076,7 +12075,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "Ru" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -12107,7 +12106,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "RE" = (
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
@@ -12150,7 +12149,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "RQ" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -12292,13 +12291,13 @@
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Sx" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "Sy" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner,
 /obj/structure/sign/warning/docking_area,
@@ -12329,7 +12328,7 @@
 	},
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "SH" = (
 /obj/machinery/vending/snack{
 	dir = 8
@@ -12343,7 +12342,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "SN" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -12358,7 +12357,7 @@
 /area/chapel/monastery/music)
 "SZ" = (
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "Tb" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -12368,7 +12367,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "Tg" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -12589,7 +12588,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Uw" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
@@ -12597,7 +12596,7 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "Ux" = (
 /obj/item/device/radio/intercom/department/security{
 	dir = 4;
@@ -12695,7 +12694,7 @@
 "UN" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "UO" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -12724,7 +12723,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "UR" = (
 /obj/structure/cable/yellow{
 	d1 = 1;
@@ -12768,10 +12767,10 @@
 /obj/structure/table/steel,
 /obj/machinery/recharger,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "UZ" = (
 /turf/simulated/wall,
-/area/borealis2/elevator/medupper)
+/area/cryogaia/outpost/elevator/medupper)
 "Va" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -13037,17 +13036,17 @@
 	dir = 4
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "WK" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "WL" = (
 /obj/structure/railing/grey{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "WR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13063,7 +13062,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "WU" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -13103,7 +13102,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/west)
+/area/cryogaia/outpost/tower/west)
 "WZ" = (
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
@@ -13150,14 +13149,14 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "Xh" = (
 /obj/structure/railing/grey{
 	dir = 1
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "Xj" = (
 /obj/structure/railing{
 	dir = 4
@@ -13214,7 +13213,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "Xx" = (
 /turf/simulated/open,
 /area/quartermaster/miningdock)
@@ -13251,7 +13250,7 @@
 	c_tag = "South Tower - Upper"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "XH" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -13294,7 +13293,7 @@
 	req_one_access = list()
 	},
 /turf/simulated/floor/plating/snow/plating,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "XS" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -13330,15 +13329,15 @@
 	},
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/southwest)
+/area/cryogaia/outpost/tower/southwest)
 "XW" = (
 /obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/south)
+/area/cryogaia/outpost/tower/south)
 "XZ" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "Yb" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -13365,11 +13364,11 @@
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "Yi" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "Yj" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
@@ -13397,17 +13396,17 @@
 /area/civilian/atrium/upper)
 "Ys" = (
 /turf/simulated/shuttle/wall/voidcraft/blue,
-/area/borealis2/elevator/medupper)
+/area/cryogaia/outpost/elevator/medupper)
 "Yt" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "Yu" = (
 /obj/machinery/camera/network/security{
 	c_tag = "Northwest Tower - Upper"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northwest)
+/area/cryogaia/outpost/tower/northwest)
 "Yx" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -13486,7 +13485,7 @@
 "YZ" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds/tower/east)
+/area/cryogaia/outpost/tower/east)
 "Zc" = (
 /obj/structure/table/rack/shelf/steel,
 /obj/random/maintenance/clean,
@@ -13507,7 +13506,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/elevator/uppermining)
+/area/cryogaia/outpost/elevator/uppermining)
 "Zh" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -13528,7 +13527,7 @@
 /area/medical/medbayupper)
 "Zt" = (
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "Zu" = (
 /obj/structure/railing/grey,
 /obj/machinery/firealarm{
@@ -13536,7 +13535,7 @@
 	pixel_y = 26
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/checkpoint)
+/area/cryogaia/outpost/checkpoint)
 "Zv" = (
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 1
@@ -13552,12 +13551,12 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/northeast)
+/area/cryogaia/outpost/tower/northeast)
 "Zy" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/tower/southeast)
+/area/cryogaia/outpost/tower/southeast)
 "ZA" = (
 /obj/effect/landmark{
 	name = "blobstart"
@@ -13673,7 +13672,7 @@
 /area/medical/medbayupper)
 "ZZ" = (
 /turf/simulated/shuttle/wall/voidcraft/hard_corner/blue,
-/area/borealis2/elevator/medupper)
+/area/cryogaia/outpost/elevator/medupper)
 
 (1,1,1) = {"
 PS
@@ -29678,8 +29677,8 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
+AN
+AN
 nQ
 nQ
 nQ
@@ -29840,8 +29839,8 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
+AN
+AN
 nQ
 nQ
 nQ
@@ -30002,8 +30001,8 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
+AN
+AN
 nQ
 nQ
 nQ
@@ -30164,8 +30163,8 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
+AN
+AN
 nQ
 nQ
 nQ
@@ -30326,8 +30325,8 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
+AN
+AN
 nQ
 nQ
 nQ
@@ -30488,7 +30487,7 @@ rx
 Sa
 oS
 gc
-nQ
+AN
 nQ
 nQ
 nQ
@@ -30650,7 +30649,7 @@ rx
 Sa
 oS
 gc
-nQ
+AN
 nQ
 nQ
 nQ
@@ -30812,7 +30811,7 @@ rx
 Sa
 oS
 gc
-nQ
+AN
 nQ
 nQ
 nQ
@@ -30974,9 +30973,9 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -31136,9 +31135,9 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -31298,9 +31297,9 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -31460,9 +31459,9 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -31622,9 +31621,9 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -31784,9 +31783,9 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -31946,9 +31945,9 @@ rx
 Sa
 oS
 gc
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -32108,9 +32107,9 @@ rx
 tc
 oS
 gc
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -32270,9 +32269,9 @@ va
 IQ
 IQ
 gf
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -32429,12 +32428,12 @@ Sa
 oS
 va
 gc
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -32591,12 +32590,12 @@ hG
 va
 IQ
 gf
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -32751,14 +32750,14 @@ va
 va
 hG
 gc
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ

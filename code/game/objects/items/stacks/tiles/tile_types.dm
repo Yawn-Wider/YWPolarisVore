@@ -219,24 +219,6 @@
 	icon_state = "tile-carpet-happy"
 	desc = "A piece of carpet with happy patterns. It is the same size as a normal floor tile!"
 
-/* YW EDIT: Commented out to help with upstream merging.
-// TODO - Add descriptions to these
-/obj/item/stack/tile/carpet/bcarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/blucarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/turcarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/sblucarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/gaycarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/purcarpet
-	icon_state = "tile-carpet"
-/obj/item/stack/tile/carpet/oracarpet
-	icon_state = "tile-carpet"
-YW Edit end */
-
 /obj/item/stack/tile/floor
 	name = "floor tile"
 	singular_name = "floor tile"

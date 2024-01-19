@@ -394,3 +394,8 @@
 /obj/item/weapon/material/barbedwire/plastic
 	name = "snare wire"
 	default_material = MAT_PLASTIC
+
+// YW ADDITION
+/obj/item/weapon/beartrap/armed
+	icon_state = "beartrap1"
+	deployed = 1

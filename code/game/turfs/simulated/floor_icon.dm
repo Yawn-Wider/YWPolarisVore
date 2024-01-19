@@ -114,8 +114,8 @@ var/image/no_ceiling_image = null
 		if(istype(T) && T.edge_blending_priority && edge_blending_priority < T.edge_blending_priority && icon_state != T.icon_state && !T.forbid_turf_edge())
 			var/cache_key = "[T.get_edge_icon_state()]-[checkdir]" // Usually [icon_state]-[dirnum]
 			if(!turf_edge_cache[cache_key])
-				var/image/I = image(icon = T.icon_edge, icon_state = "[T.get_edge_icon_state()]-edge", dir = checkdir, layer = ABOVE_TURF_LAYER) // VOREStation Edit - icon_edge
-				I.plane = TURF_PLANE
+				var/image/I = image(icon = T.icon_edge, icon_state = "[T.get_edge_icon_state()]-edge", dir = checkdir, layer = ABOVE_TURF_LAYER) // VOREStation Edit
+				//I.plane = edgeiconPlane // YW Edit - Do not use planes - breaks the upper open space turf grey plane
 				turf_edge_cache[cache_key] = I
 			add_overlay(turf_edge_cache[cache_key])
 

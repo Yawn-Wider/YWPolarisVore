@@ -1680,3 +1680,15 @@
 				prob(1);list(/obj/item/mecha_parts/mecha_equipment/tool/drill/diamonddrill),
 				)
 //VOREStation Add End
+
+/obj/random/multiple/legtrap //YW Addition
+	name = "random legtraps"
+	desc = "Random legtraps (beartraps and mousetraps)."
+	icon = 'icons/misc/random_spawners.dmi'
+	icon_state = "generic"
+
+/obj/random/multiple/legtrap/item_to_spawn()
+	return pick(
+				prob(67);list(/obj/item/device/assembly/mousetrap/armed),
+				prob(33);list(/obj/item/weapon/beartrap/armed),
+				)

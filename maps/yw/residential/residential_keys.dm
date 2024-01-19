@@ -52,6 +52,10 @@
 	name = "RS12 residential key"
 	access = list(8012)
 
+/obj/item/weapon/card/id/residential/rs13
+	name = "RS13 residential key"
+	access = list(8013)
+
 /obj/item/weapon/card/id/residential/rm1
 	name = "RM1 residential key"
 	access = list(8101)
@@ -96,15 +100,15 @@
 	path = /obj/item/weapon/card/id/residential/s1
 	display_name = "S1 keys"
 	description = "residential"
-	ckeywhitelist = list("laylaveridian", "devilsaaron")
-	character_name = list("May Clark", "Vexilla", "Samantha Clark")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_s2
 	path = /obj/item/weapon/card/id/residential/s2
 	display_name = "S2 keys"
 	description = "residential"
-	ckeywhitelist = list("shadowquill", "cheekycrenando")
-	character_name = list("Sueeks Rskuzu-Ahslru", "Srusu Rskuzu-Ahslru")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_s3
 	path = /obj/item/weapon/card/id/residential/s3
@@ -117,15 +121,15 @@
 	path = /obj/item/weapon/card/id/residential/s4
 	display_name = "S4 keys"
 	description = "residential"
-	ckeywhitelist = list("corionis")
-	character_name = list("Arcana Valinar")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_s5
 	path = /obj/item/weapon/card/id/residential/s5
 	display_name = "S5 keys"
 	description = "residential"
-	ckeywhitelist = list("joezill", "sinoxatori")
-	character_name = list("Ciri Vulture", "Kasali Vulture")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 // MEDIUM KEYS
 
@@ -133,15 +137,15 @@
 	path = /obj/item/weapon/card/id/residential/rm1
 	display_name = "RM1 keys"
 	description = "residential"
-	ckeywhitelist = list("esperkin", "dwaggy90", "roguenoob")
-	character_name = list("Sheri Calen", "Saur Darastrix", "Basir Fahim")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_rm2
 	path = /obj/item/weapon/card/id/residential/rm2
 	display_name = "RM2 keys"
 	description = "residential"
-	ckeywhitelist = list("ashvor", "sleepyretard")
-	character_name = list("Sawyer Collins", "Vanechka Penkina")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 
 // SMALL KEYS
@@ -164,29 +168,29 @@
 	path = /obj/item/weapon/card/id/residential/rs3
 	display_name = "RS3 keys"
 	description = "residential"
-	ckeywhitelist = list("calvinmcmurray")
-	character_name = list("Ru-rek Nizarro")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_rs4
 	path = /obj/item/weapon/card/id/residential/rs4
 	display_name = "RS4 keys"
 	description = "residential"
-	ckeywhitelist = list("lukevale")
-	character_name = list("Isha Breisacher")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_rs5
 	path = /obj/item/weapon/card/id/residential/rs5
 	display_name = "RS5 keys"
 	description = "residential"
-	ckeywhitelist = list("codavanistok")
-	character_name = list("Coda Vanistok")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_rs6
 	path = /obj/item/weapon/card/id/residential/rs6
 	display_name = "RS6 keys"
 	description = "residential"
-	ckeywhitelist = list("generalpantsu","izac112")
-	character_name = list("Raine Kimberly","Jill Chambers")
+	ckeywhitelist = list("izac112")
+	character_name = list("Jill Chambers")
 
 /datum/gear/fluff/res_key_rs7
 	path = /obj/item/weapon/card/id/residential/rs7
@@ -199,33 +203,40 @@
 	path = /obj/item/weapon/card/id/residential/rs8
 	display_name = "RS8 keys"
 	description = "residential"
-	ckeywhitelist = list("cebutris")
-	character_name = list("Dakota Elliot")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_rs9
 	path = /obj/item/weapon/card/id/residential/rs9
 	display_name = "RS9 keys"
 	description = "residential"
-	ckeywhitelist = list("guiltybeans", "rareshekel")
-	character_name = list("Reez Sheeh", "Easju Nawry")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_rs10
 	path = /obj/item/weapon/card/id/residential/rs10
 	display_name = "RS10 keys"
 	description = "residential"
-	ckeywhitelist = list("mocatheporg1")
-	character_name = list("Mocha")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_rs11
 	path = /obj/item/weapon/card/id/residential/rs11
 	display_name = "RS11 keys"
 	description = "residential"
-	ckeywhitelist = list("rouwren")
-	character_name = list("Rin Deimos")
+	ckeywhitelist = list("")
+	character_name = list("")
 
 /datum/gear/fluff/res_key_rs12
 	path = /obj/item/weapon/card/id/residential/rs12
 	display_name = "RS12 keys"
 	description = "residential"
-	ckeywhitelist = list("kbraid")
-	character_name = list("Eili")
+	ckeywhitelist = list("")
+	character_name = list("")
+
+/datum/gear/fluff/res_key_rs13
+	path = /obj/item/weapon/card/id/residential/rs13
+	display_name = "RS13 keys"
+	description = "residential"
+	ckeywhitelist = list("jaybird1")
+	character_name = list("Trenton Stevens")

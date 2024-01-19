@@ -523,6 +523,8 @@
 	name = "snow"
 	icon_state = "snow"
 	movement_cost = 4
+	edge_blending_priority = 4.1
+	icon_edge = 'icons/turf/outdoors_edge_yw.dmi'
 
 /turf/simulated/floor/snow/snow2
 	name = "snow"

@@ -214,6 +214,7 @@
 	icon_state = "rollerbedadv"
 	bedtype = /obj/structure/bed/roller/adv
 	rollertype = /obj/item/roller/adv
+	surgery_odds = 75 //YW Edit
 
 /obj/structure/bed/roller/update_icon()
 	return

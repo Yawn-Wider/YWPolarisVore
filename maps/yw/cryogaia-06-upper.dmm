@@ -1673,6 +1673,9 @@
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
 	},
+/obj/machinery/camera/autoname{
+	dir = 1
+	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "dK" = (
@@ -7422,7 +7425,6 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 4
 	},
-/obj/machinery/camera/network/civilian,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "sr" = (
@@ -7787,6 +7789,7 @@
 /obj/effect/floor_decal/corner/white/full{
 	dir = 8
 	},
+/obj/machinery/camera/network/civilian,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "um" = (
@@ -9006,6 +9009,13 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/maintenance/auxsolarport)
+"AJ" = (
+/obj/effect/floor_decal/corner/white{
+	dir = 1
+	},
+/obj/machinery/camera/network/civilian,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "AK" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/dark,
@@ -29114,7 +29124,7 @@ kW
 AN
 AN
 Nj
-wp
+AJ
 PG
 Nj
 AN

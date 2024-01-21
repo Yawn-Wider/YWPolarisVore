@@ -73,6 +73,26 @@
 /obj/machinery/light{
 	dir = 1
 	},
+/obj/item/weapon/storage/fancy/cigarettes/killthroat{
+	pixel_y = 9;
+	pixel_x = 10
+	},
+/obj/machinery/light/small/fairylights{
+	pixel_y = 15
+	},
+/obj/item/weapon/haircomb{
+	pixel_y = 8;
+	pixel_x = -5
+	},
+/obj/item/modular_computer/laptop/preset/custom_loadout/elite{
+	icon_state = "elite-closed";
+	pixel_y = -6;
+	pixel_x = 14
+	},
+/obj/structure/sign/poster{
+	dir = 1;
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "au" = (
@@ -626,6 +646,15 @@
 /obj/item/clothing/accessory/maid_arms,
 /obj/item/clothing/head/headband/maid,
 /obj/item/clothing/under/dress/maid,
+/obj/item/clothing/suit/ianshirt,
+/obj/item/clothing/under/pants/baggy/greyjeans,
+/obj/item/clothing/under/bluepyjamas,
+/obj/item/weapon/storage/firstaid/surgery,
+/obj/item/clothing/under/rank/nursesuit,
+/obj/item/clothing/head/nursehat,
+/obj/item/clothing/suit/neo_medical_coat,
+/obj/item/clothing/under/pants/baggy/camo,
+/obj/item/clothing/under/pants/ripped,
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "eN" = (
@@ -1280,6 +1309,14 @@
 	},
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/machinery/light,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+	pixel_y = -4;
+	pixel_x = -11
+	},
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = -6;
+	pixel_y = -4
+	},
 /turf/simulated/floor/lino,
 /area/residential/room13)
 "iZ" = (
@@ -1411,6 +1448,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
 	},
+/obj/item/weapon/storage/backpack/dufflebag/cratebooze,
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/room13)
 "jZ" = (
@@ -1655,6 +1693,13 @@
 /obj/structure/flora/pottedplant/smalltree,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/light/small/fairylights{
+	pixel_y = 15
+	},
+/obj/structure/sign/poster{
+	dir = 1;
+	pixel_y = 32
 	},
 /turf/simulated/floor/wood,
 /area/residential/room13)
@@ -2119,9 +2164,12 @@
 /turf/simulated/floor/plating,
 /area/residential/room6)
 "pC" = (
-/obj/machinery/door/airlock/silver,
+/obj/machinery/door/airlock/silver{
+	name = "Bedroom"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/effect/floor_decal/spline/plain,
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "pG" = (
@@ -2192,6 +2240,18 @@
 /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
 /obj/item/weapon/reagent_containers/food/snacks/chocolatebar,
 /obj/effect/floor_decal/borderfloorwhite,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
+/obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
 /turf/simulated/floor/lino,
 /area/residential/room13)
 "pW" = (
@@ -2276,6 +2336,10 @@
 /area/residential/mansion)
 "qL" = (
 /obj/structure/table/fancyblack,
+/obj/item/champagne{
+	pixel_y = 9;
+	pixel_x = -10
+	},
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "qR" = (
@@ -2873,6 +2937,10 @@
 /obj/structure/sign/clock{
 	pixel_y = 31
 	},
+/obj/machinery/light/small/fairylights{
+	pixel_y = 15
+	},
+/obj/item/clothing/suit/storage/toggle/hoodie/fluff,
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "wJ" = (
@@ -2944,6 +3012,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
+/obj/item/weapon/broken_bottle,
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "xH" = (
@@ -3346,6 +3415,11 @@
 "AM" = (
 /obj/structure/table/fancyblack,
 /obj/item/weapon/material/ashtray/glass,
+/obj/item/weapon/bone/skull{
+	pixel_y = 5;
+	pixel_x = 9
+	},
+/obj/item/weapon/bone,
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "AN" = (
@@ -3418,6 +3492,7 @@
 	},
 /obj/effect/floor_decal/corner_oldtile/gray/diagonal,
 /obj/effect/decal/cleanable/vomit,
+/obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/white,
 /area/residential/room13)
 "Bm" = (
@@ -3621,6 +3696,10 @@
 /obj/item/clothing/shoes/slippers,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"CE" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/lino,
+/area/residential/room13)
 "CG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -4001,7 +4080,9 @@
 /turf/simulated/floor/lino,
 /area/residential/mansion)
 "ES" = (
-/obj/machinery/door/airlock/silver,
+/obj/machinery/door/airlock/silver{
+	name = "Bathroom"
+	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room13)
 "ET" = (
@@ -4339,6 +4420,13 @@
 	pixel_y = 5
 	},
 /obj/structure/dirtybed,
+/obj/machinery/light/small/fairylights{
+	pixel_y = 15
+	},
+/obj/structure/sign/poster{
+	dir = 1;
+	pixel_y = 32
+	},
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "Hv" = (
@@ -4560,6 +4648,13 @@
 /obj/structure/shuttle/window,
 /turf/simulated/shuttle/wall/dark/no_join,
 /area/residential/ship_bay)
+"Iw" = (
+/obj/structure/sign/poster{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/room13)
 "IB" = (
 /obj/structure/sign/double/barsign{
 	pixel_x = -2;
@@ -4762,6 +4857,7 @@
 	dir = 1;
 	pixel_y = -22
 	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "Ku" = (
@@ -4845,6 +4941,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/structure/sign/poster{
+	dir = 1;
+	pixel_y = 32
 	},
 /turf/simulated/floor/wood,
 /area/residential/room13)
@@ -4933,6 +5033,9 @@
 	dir = 4
 	},
 /obj/item/weapon/book/custom_library/fiction/woodysgotwood,
+/obj/item/weapon/cat_box{
+	pixel_y = 19
+	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/room13)
 "Mc" = (
@@ -5066,6 +5169,10 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/residential/room4)
+"Nv" = (
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/wood,
+/area/residential/room13)
 "Nw" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -5649,6 +5756,12 @@
 	dir = 1
 	},
 /obj/structure/closet/crate/wooden,
+/obj/machinery/light/small/fairylights{
+	pixel_y = 15
+	},
+/obj/item/weapon/storage/box/lights/tubes,
+/obj/item/weapon/broken_bottle,
+/obj/item/weapon/broken_bottle,
 /turf/simulated/floor/wood,
 /area/residential/room13)
 "RG" = (
@@ -6416,7 +6529,13 @@
 /obj/machinery/door/firedoor/glass/hidden,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/silver,
+/obj/effect/floor_decal/spline/plain{
+	pixel_y = 29;
+	pixel_x = -1
+	},
+/obj/machinery/door/airlock/silver{
+	name = "Kitchen"
+	},
 /turf/simulated/floor/wood/cryogaia,
 /area/residential/room13)
 "Yn" = (
@@ -16079,11 +16198,11 @@ aq
 xB
 zR
 cc
-ii
+Iw
 uZ
 cc
 mv
-yZ
+CE
 pP
 cc
 aZ
@@ -16400,7 +16519,7 @@ aZ
 aZ
 cc
 Ht
-UG
+Nv
 eM
 cc
 ii

@@ -31,7 +31,7 @@
 	var/digestchance = 0					// % Chance of stomach beginning to digest if prey struggles
 	var/absorbchance = 0					// % Chance of stomach beginning to absorb if prey struggles
 	var/escapechance = 0 					// % Chance of prey beginning to escape if prey struggles.
-	var/escapechance_absorbed = 20			// % Chance of absorbed prey finishing an escape. Requires a successful escape roll against the above as well.
+	var/escapechance_absorbed = 0			// % Chance of absorbed prey finishing an escape. Requires a successful escape roll against the above as well.
 	var/escape_stun = 0						// AI controlled mobs with a number here will be weakened by the provided var when someone escapes, to prevent endless nom loops
 	var/transferchance = 0 					// % Chance of prey being trasnsfered, goes from 0-100%
 	var/transferchance_secondary = 0 		// % Chance of prey being transfered to transferchance_secondary, also goes 0-100%
@@ -551,7 +551,7 @@
 
 	//Print notifications/sound if necessary
 	if(!silent && count)
-		owner.visible_message("<font color='green'><b>[owner] [release_verb] everything from their [lowertext(name)]!</b></font>", range = privacy_range)
+		owner.visible_message("<span class='vnotice'><font color='green'><b>[owner] [release_verb] everything from their [lowertext(name)]!</b></font></span>", range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -631,7 +631,7 @@
 
 	//Print notifications/sound if necessary
 	if(!silent)
-		owner.visible_message("<font color='green'><b>[owner] [release_verb] [M] from their [lowertext(name)]!</b></font>",range = privacy_range)
+		owner.visible_message("<span class='vnotice'><font color='green'><b>[owner] [release_verb] [M] from their [lowertext(name)]!</b></font></span>",range = privacy_range)
 		var/soundfile
 		if(!fancy_vore)
 			soundfile = classic_release_sounds[release_sound]
@@ -703,7 +703,7 @@
 	formatted_message = replacetext(formatted_message, "%countprey", living_count)
 	formatted_message = replacetext(formatted_message, "%count", contents.len)
 
-	return("<span class='vwarning'>[formatted_message]</span>")
+	return("<i><font color='red'>[formatted_message]</font></i>")
 
 /obj/belly/proc/get_examine_msg_absorbed()
 	if(!(contents.len) || !(examine_messages_absorbed.len) || !display_absorbed_examine)
@@ -727,7 +727,7 @@
 	formatted_message = replacetext(formatted_message, "%prey", english_list(absorbed_victims))
 	formatted_message = replacetext(formatted_message, "%countprey", absorbed_count)
 
-	return("<span class='vwarning'>[formatted_message]</span>")
+	return("<i><font color='red'>[formatted_message]</font></i>")
 
 // The next function gets the messages set on the belly, in human-readable format.
 // This is useful in customization boxes and such. The delimiter right now is \n\n so
@@ -1521,7 +1521,7 @@
 
 	//absorb resists
 	if(escapable || owner.stat) //If the stomach has escapable enabled or the owner is dead/unconscious
-		if(prob(escapechance_absorbed) || owner.stat) //Let's have it check to see if the prey's escape attempt starts.
+		if(prob(escapechance) || owner.stat) //Let's have it check to see if the prey's escape attempt starts.
 
 
 			var/living_count = 0

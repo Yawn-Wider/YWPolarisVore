@@ -21173,9 +21173,6 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/rnd/workshop)
 "isE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 9
 	},
@@ -34261,6 +34258,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
@@ -57566,19 +57566,19 @@
 	},
 /area/quartermaster/disposals)
 "wTU" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1;
-	layer = 2.9
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 1;
 	pixel_y = -9
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1;
+	layer = 2.9
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -58730,6 +58730,9 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 1;
 	layer = 2.9
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -59948,6 +59951,9 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1;
 	pixel_y = -9
+	},
+/obj/effect/floor_decal/corner_steel_grid{
+	dir = 10
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"

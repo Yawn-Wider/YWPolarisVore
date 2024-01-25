@@ -345,7 +345,7 @@ var/list/holder_mob_icon_cache = list()
 	return H
 
 /obj/item/weapon/holder/human
-	icon = 'icons/mob/holder_complex_yw.dmi'
+	icon = 'icons/mob/holder_complex_yw.dmi' //YW Edit - yw complex
 	var/list/generate_for_slots = list(slot_l_hand_str, slot_r_hand_str, slot_back_str)
 	item_icons = list(slot_l_hand_str = 'icons/mob/holder_complex_yw.dmi', slot_r_hand_str = 'icons/mob/holder_complex_yw.dmi') //YW Add - holder
 

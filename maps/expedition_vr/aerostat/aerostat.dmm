@@ -99,13 +99,6 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/solars)
-"aA" = (
-/obj/machinery/power/quantumpad,
-/obj/structure/cable{
-	icon_state = "0-4"
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
 "aB" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 5
@@ -134,10 +127,12 @@
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/solars)
 "aF" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 10
+/obj/machinery/atmospherics/binary/algae_farm,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 6;
+	icon_state = "intact"
 	},
-/turf/simulated/floor/tiled/eris/steel/panels,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "aG" = (
 /obj/structure/cable/yellow{
@@ -158,10 +153,12 @@
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/solars)
 "aI" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 6
+/obj/machinery/atmospherics/binary/algae_farm,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 10;
+	icon_state = "intact"
 	},
-/turf/simulated/floor/tiled/eris/steel/panels,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "aJ" = (
 /obj/effect/decal/cleanable/cobweb,
@@ -331,12 +328,6 @@
 /obj/machinery/door/airlock/external,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/aerostat)
-"bj" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/machinery/portable_atmospherics/canister/empty/oxygen,
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
 "bl" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
@@ -373,12 +364,6 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/aerostat)
-"bs" = (
-/obj/machinery/atmospherics/trinary/atmos_filter/m_filter{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
 "bt" = (
 /obj/structure/cable/yellow{
 	icon_state = "1-4"
@@ -414,7 +399,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "bB" = (
@@ -423,25 +408,13 @@
 	},
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"bC" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/door/airlock,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
 "bD" = (
 /obj/machinery/portable_atmospherics/canister/empty/oxygen,
 /obj/effect/floor_decal/industrial/outline/blue,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "bE" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 8
-	},
+/obj/machinery/portable_atmospherics/canister/empty/carbon_dioxide,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "bH" = (
@@ -454,12 +427,6 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/aerostat)
-"bJ" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
 "bK" = (
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
@@ -470,12 +437,9 @@
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "bN" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"bO" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 4
+/obj/machinery/portable_atmospherics/canister/empty/carbon_dioxide,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
@@ -485,37 +449,9 @@
 	},
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"bQ" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"bR" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"bS" = (
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
 "bX" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
+/obj/machinery/portable_atmospherics/canister/empty/oxygen,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "bY" = (
 /obj/machinery/portable_atmospherics/canister/empty/carbon_dioxide,
@@ -548,9 +484,7 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "ce" = (
@@ -562,10 +496,6 @@
 "ch" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-4"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
@@ -591,10 +521,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "1-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "cn" = (
@@ -611,8 +537,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "2-4"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "cp" = (
@@ -629,8 +553,6 @@
 /obj/structure/cable/heavyduty{
 	icon_state = "2-8"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "cv" = (
@@ -687,18 +609,22 @@
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "cG" = (
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/machinery/atmospherics/portables_connector{
-	dir = 8
-	},
+/obj/effect/floor_decal/industrial/warning/dust/corner,
+/obj/item/trash/candle,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "cH" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 8
+	},
+/obj/item/trash/candle,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "cJ" = (
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 1
+	},
+/obj/item/trash/candle,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "cK" = (
@@ -707,6 +633,7 @@
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "cN" = (
+/obj/structure/table/standard,
 /obj/effect/decal/cleanable/cobweb2,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
@@ -720,6 +647,7 @@
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "cP" = (
+/obj/tether_away_spawner/aerostat_inside,
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
@@ -740,6 +668,13 @@
 /obj/machinery/portable_atmospherics/canister/empty/carbon_dioxide,
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/effect/decal/cleanable/cobweb2,
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"cU" = (
+/obj/machinery/door/airlock/multi_tile/metal{
+	dir = 1;
+	icon_state = "door_closed"
+	},
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "cX" = (
@@ -930,7 +865,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/rust,
-/obj/machinery/door/airlock/hatch,
+/obj/machinery/door/airlock/maintenance/common,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "dt" = (
@@ -1229,95 +1164,35 @@
 	},
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"ek" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"em" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"er" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
 "eE" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/random/toolbox,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"eF" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/virgo2,
+"eI" = (
+/obj/random/tank,
+/turf/simulated/floor/bluegrid/virgo2,
 /area/tether_away/aerostat/inside)
 "eL" = (
 /obj/structure/railing,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat)
-"eS" = (
-/obj/machinery/power/thermoregulator,
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"fV" = (
+"fj" = (
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
+	dir = 5
 	},
-/obj/machinery/portable_atmospherics/canister/nitrogen,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "gt" = (
 /obj/structure/railing{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/purple,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat)
-"gv" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/black,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"gw" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	req_access = list();
-	req_one_access = list()
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"gK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/door/airlock,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
 "gQ" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
+/obj/structure/table/standard,
+/obj/fiftyspawner/osmium,
+/obj/random/toolbox,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "gT" = (
@@ -1327,97 +1202,33 @@
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat)
 "gX" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/structure/salvageable/data,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"he" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 10
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"hr" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/blue{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"iA" = (
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 4
-	},
+"hy" = (
+/obj/structure/table/standard,
+/obj/random/powercell,
+/obj/random/toolbox,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"iE" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/door/airlock,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"iI" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+"ip" = (
+/obj/structure/table/standard,
+/obj/fiftyspawner/phoron,
+/obj/random/cigarettes,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"iL" = (
-/obj/machinery/atmospherics/valve/digital{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"jh" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"jY" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"kc" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"ke" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"kg" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
+"jH" = (
+/obj/machinery/light/small,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"kq" = (
-/obj/structure/railing,
-/obj/machinery/atmospherics/pipe/vent/high_volume{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
+"jR" = (
+/obj/random/plushie,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"kA" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
 "kD" = (
 /obj/effect/shuttle_landmark{
 	base_area = /area/tether_away/aerostat;
@@ -1427,119 +1238,24 @@
 	},
 /turf/unsimulated/floor/sky/virgo2_sky,
 /area/tether_away/aerostat)
-"lA" = (
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 5
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"lD" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"lS" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/bluegrid/virgo2,
-/area/tether_away/aerostat/inside)
-"lU" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"ms" = (
-/obj/machinery/atmospherics/pipe/simple/visible/universal{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"mG" = (
-/obj/structure/cable{
-	icon_state = "1-8"
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"mU" = (
-/obj/machinery/atmospherics/portables_connector{
-	dir = 1
-	},
-/obj/machinery/portable_atmospherics/canister/empty/nitrogen,
-/obj/effect/floor_decal/industrial/outline/blue,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"mW" = (
-/obj/structure/railing,
-/obj/machinery/atmospherics/pipe/vent/high_volume{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"nf" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 5
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"nj" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"nl" = (
-/obj/machinery/atmospherics/portables_connector,
-/obj/effect/floor_decal/industrial/outline/blue,
-/obj/machinery/portable_atmospherics/canister/air,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"oc" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"of" = (
+"lj" = (
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
+	dir = 5
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
+/obj/machinery/portable_atmospherics/canister/empty/carbon_dioxide,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"om" = (
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/black,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"ow" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 8
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
+"lF" = (
+/obj/structure/girder,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"oy" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/eris/steel/panels,
+"mi" = (
+/obj/structure/salvageable/autolathe,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"oB" = (
+/obj/machinery/door/airlock/maintenance/common,
+/turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "pd" = (
 /obj/effect/shuttle_landmark{
@@ -1550,193 +1266,111 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/aerostat)
-"qN" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
+"py" = (
+/obj/structure/old_roboprinter,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"ri" = (
-/obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 6
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"rw" = (
-/obj/machinery/alarm/nobreach{
-	dir = 4;
-	pixel_x = -22
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"rM" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+"pN" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
 	},
+/obj/effect/decal/cleanable/cobweb2,
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"pX" = (
+/obj/structure/bed/chair,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"rS" = (
-/obj/machinery/door/airlock/external,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"tx" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/black{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"tG" = (
-/obj/machinery/atmospherics/pipe/simple/visible/purple{
-	dir = 5
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"tX" = (
-/obj/machinery/atmospherics/pipe/simple/visible/purple,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"ud" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"uF" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"uM" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"uS" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 6
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"vh" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"vj" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"vu" = (
-/obj/machinery/light/small,
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/bluegrid/virgo2,
-/area/tether_away/aerostat/inside)
-"vY" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/bluegrid/virgo2,
-/area/tether_away/aerostat/inside)
-"wf" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/blue,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"wk" = (
+"pZ" = (
 /obj/effect/floor_decal/industrial/warning/dust{
+	dir = 6
+	},
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"qw" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"qN" = (
+/obj/structure/bed/chair{
 	dir = 1
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"ts" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
 /turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"uI" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 4
+	},
+/obj/item/trash/candle,
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"vV" = (
+/obj/structure/salvageable/machine,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"wl" = (
+/obj/structure/ghost_pod/manual/lost_drone/dogborg,
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"wt" = (
+/obj/structure/salvageable/data_os,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "wP" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 8
+	},
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
-	},
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"wY" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
+"xo" = (
+/obj/random/action_figure,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"xw" = (
+/obj/structure/salvageable/machine_os,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"xD" = (
+/obj/random/firstaid,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"xC" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"yD" = (
-/obj/machinery/atmospherics/binary/pump,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"yV" = (
-/obj/effect/floor_decal/industrial/warning/corner{
+"xF" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"yZ" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/door/airlock,
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"zg" = (
-/obj/machinery/atmospherics/unary/vent_pump/on,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"zK" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
 	},
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"zM" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 4
+"xP" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 9
 	},
 /turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"ye" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner,
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"zy" = (
+/obj/machinery/atmospherics/binary/algae_farm,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "zX" = (
 /obj/effect/shuttle_landmark{
@@ -1747,120 +1381,41 @@
 	},
 /turf/unsimulated/floor/sky/virgo2_sky,
 /area/tether_away/aerostat)
-"zY" = (
-/obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
-	},
-/obj/machinery/atmospherics/pipe/vent/high_volume{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
+"Ab" = (
+/obj/structure/bed/padded,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
 "Ae" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner,
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 8
-	},
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"Af" = (
-/obj/machinery/portable_atmospherics/canister/nitrogen,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"AV" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"AZ" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+"Au" = (
+/obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"Ba" = (
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/shuttle/wall/voidcraft/green/virgo2,
+"AN" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
 "Bj" = (
-/obj/effect/floor_decal/industrial/warning/dust{
+/obj/random/firstaid,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"BG" = (
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/tether_away_spawner/aerostat_inside{
+	prob_fall = 25
+	},
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"Cx" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 1
 	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"BD" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"BN" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"BP" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 4
-	},
 /turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"BR" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock,
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"Cd" = (
-/obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/purple{
-	dir = 10
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"Ci" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/universal,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"CI" = (
-/obj/effect/floor_decal/rust,
-/obj/machinery/door/airlock/external,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"CJ" = (
-/obj/machinery/door/airlock/multi_tile/glass{
-	dir = 2;
-	req_access = list()
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
 /area/tether_away/aerostat/inside)
 "Dt" = (
 /obj/effect/shuttle_landmark{
@@ -1871,315 +1426,135 @@
 	},
 /turf/unsimulated/floor/sky/virgo2_sky,
 /area/tether_away/aerostat)
-"DB" = (
-/mob/living/bot/cleanbot{
-	name = "Eduardo"
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"DL" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/bluegrid/virgo2,
-/area/tether_away/aerostat/inside)
-"DQ" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"DS" = (
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
+"Ef" = (
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
+/obj/effect/decal/cleanable/cobweb,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"EH" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
+"Fi" = (
+/obj/machinery/atmospherics/binary/algae_farm,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 5;
+	icon_state = "intact"
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 5;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"EZ" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
+"FJ" = (
+/obj/structure/table/standard,
+/obj/random/powercell,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"Ff" = (
-/obj/machinery/door/airlock,
+"GK" = (
+/obj/random/material,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"Gg" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"Gq" = (
-/obj/effect/decal/cleanable/cobweb2,
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"GI" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"GY" = (
-/obj/machinery/atmospherics/unary/freezer{
-	dir = 8
-	},
+"GX" = (
+/obj/random/drinkbottle,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"Hd" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"He" = (
-/obj/machinery/portable_atmospherics/canister/phoron,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"Hz" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/corner{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"HG" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/red{
-	dir = 1
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"HV" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 10
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"Ij" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"Io" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"II" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"IP" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"Jd" = (
+"HL" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
-/obj/machinery/portable_atmospherics/canister/phoron,
+/obj/random/cigarettes,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"HT" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
 /turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"Ij" = (
+/obj/tether_away_spawner/aerostat_inside,
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"IC" = (
+/obj/random/toy,
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"IF" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 8
+	},
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"IJ" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"JA" = (
+/obj/effect/decal/cleanable/blood,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "JG" = (
 /obj/structure/metal_edge,
 /turf/unsimulated/floor/sky/virgo2_sky,
 /area/tether_away/aerostat)
-"Kc" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
+"JI" = (
+/obj/structure/table/standard,
+/obj/random/powercell,
+/obj/random/contraband,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"Ke" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/supply,
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"Ki" = (
-/obj/structure/railing{
-	dir = 1;
-	icon_state = "railing0"
-	},
-/obj/machinery/atmospherics/pipe/vent/high_volume{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"KE" = (
-/obj/machinery/atmospherics/pipe/simple/visible/blue{
+"Km" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 4
 	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"KW" = (
-/obj/structure/cable{
-	icon_state = "1-4"
-	},
-/obj/structure/cable{
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/bluegrid/virgo2,
-/area/tether_away/aerostat/inside)
-"KY" = (
-/obj/machinery/atmospherics/pipe/simple/visible/purple{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"La" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"LC" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/black,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"LI" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 6
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"Mu" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"Mx" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"MW" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"MZ" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 8
 	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"No" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 8
-	},
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"Nr" = (
-/obj/machinery/atmospherics/pipe/simple/visible/red{
-	dir = 5
-	},
+"Kr" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner,
+/obj/effect/decal/cleanable/cobweb,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"NP" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+"Lb" = (
+/obj/structure/table/standard,
+/obj/item/weapon/gun/energy/taser/xeno,
+/obj/random/cigarettes,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"LZ" = (
+/obj/random/drinkbottle,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"Mn" = (
+/obj/structure/table/standard,
+/obj/random/material,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"MF" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"NZ" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/wall/virgo2,
+"Nl" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner,
+/turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"Oy" = (
+"NM" = (
 /obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"OM" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/turf/simulated/floor/plating/virgo2,
+"Ob" = (
+/obj/structure/salvageable/computer,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "ON" = (
 /obj/structure/railing{
@@ -2188,289 +1563,146 @@
 	},
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat)
-"PP" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"PX" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/blue{
-	dir = 1
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"Qk" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 6
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"QU" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+"OV" = (
+/obj/effect/floor_decal/rust,
+/obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
-	dir = 1
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/solars)
+"PK" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"QM" = (
+/obj/machinery/atmospherics/binary/algae_farm,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 5;
+	icon_state = "intact"
 	},
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"Sg" = (
-/obj/machinery/atmospherics/trinary/mixer/t_mixer{
+"Re" = (
+/obj/machinery/portable_atmospherics/canister/empty/carbon_dioxide,
+/obj/machinery/atmospherics/portables_connector{
 	dir = 4
 	},
-/turf/simulated/floor/plating/virgo2,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"Sj" = (
-/obj/machinery/atmospherics/binary/pump{
+"Rt" = (
+/obj/random/contraband,
+/turf/simulated/floor/bluegrid/virgo2,
+/area/tether_away/aerostat/inside)
+"RV" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/effect/decal/cleanable/cobweb,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"Sh" = (
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/drip,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"Tk" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning,
+"SJ" = (
+/obj/structure/table/standard,
+/obj/effect/decal/cleanable/cobweb2,
+/obj/random/contraband,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 "Tq" = (
 /obj/effect/overmap/visitable/sector/virgo2,
 /turf/unsimulated/floor/sky/virgo2_sky,
 /area/tether_away/aerostat)
-"Tu" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/supply,
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
 "TH" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/purple{
-	dir = 8
-	},
+/obj/random/contraband,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"TJ" = (
-/obj/machinery/atmospherics/binary/pump{
-	dir = 1
-	},
+"TQ" = (
+/obj/effect/floor_decal/industrial/warning/dust,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
-"TN" = (
-/obj/machinery/atmospherics/pipe/simple/visible/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"TU" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
+"Ut" = (
+/obj/structure/salvageable/server_os,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"TW" = (
-/obj/machinery/atmospherics/pipe/simple/visible/black{
-	dir = 9
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"TX" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 9
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"TY" = (
-/obj/machinery/atmospherics/pipe/simple/visible/purple{
-	dir = 6
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"Ua" = (
-/obj/structure/railing{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/supply,
-/obj/machinery/atmospherics/pipe/simple/visible/scrubbers{
-	dir = 6
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
 "UK" = (
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"US" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/corner,
+/obj/structure/table/standard,
+/obj/random/cargopod,
+/obj/random/junk,
+/obj/random/maintenance,
 /turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"Vf" = (
-/obj/machinery/portable_atmospherics/canister/oxygen,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"Vi" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 6
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"VF" = (
-/obj/machinery/door/airlock/external,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"VN" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/techfloor/virgo2,
-/area/tether_away/aerostat/inside)
-"VO" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 9
-	},
-/turf/simulated/floor/bluegrid/virgo2,
 /area/tether_away/aerostat/inside)
 "VR" = (
 /obj/machinery/door/airlock/external,
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat/inside)
+"VS" = (
+/obj/structure/table/standard,
+/obj/item/weapon/gun/energy/taser/xeno,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"Wq" = (
+/obj/machinery/atmospherics/binary/algae_farm,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 9;
+	icon_state = "intact"
+	},
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
 "WS" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/purple{
-	dir = 4
-	},
 /turf/simulated/floor/plating/virgo2,
 /area/tether_away/aerostat)
-"Xc" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/wall/virgo2,
+"Xu" = (
+/obj/structure/salvageable/implant_container,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"Xg" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"XV" = (
-/obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 1
-	},
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"Yj" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"Yu" = (
-/obj/structure/cable/heavyduty{
-	icon_state = "1-2"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/turf/simulated/floor/tiled/eris/steel/panels,
-/area/tether_away/aerostat/inside)
-"YN" = (
-/obj/structure/railing{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/visible/red,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat)
-"YP" = (
-/obj/machinery/atmospherics/pipe/simple/visible/supply,
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"YU" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/warning/dust{
+"XU" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"YW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 8
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 8
-	},
-/turf/simulated/wall/virgo2,
-/area/tether_away/aerostat/inside)
-"Zc" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
+"Yr" = (
+/obj/effect/floor_decal/industrial/warning/dust{
 	dir = 4
 	},
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"Yz" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/random/toolbox,
 /turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
-"ZL" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/turf/simulated/floor/plating/virgo2,
-/area/tether_away/aerostat/inside)
-"ZO" = (
-/obj/machinery/atmospherics/trinary/atmos_filter{
+"YV" = (
+/obj/structure/bed/chair{
 	dir = 4
 	},
+/obj/effect/decal/cleanable/blood/gibs,
 /turf/simulated/floor/plating/virgo2,
+/area/tether_away/aerostat/inside)
+"YZ" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 4
+	},
+/obj/structure/bed/chair,
+/turf/simulated/floor/tiled/techfloor/virgo2,
+/area/tether_away/aerostat/inside)
+"ZS" = (
+/obj/effect/floor_decal/industrial/warning/dust{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/cobweb2,
+/turf/simulated/floor/tiled/techfloor/virgo2,
 /area/tether_away/aerostat/inside)
 
 (1,1,1) = {"
@@ -8081,8 +7313,8 @@ aw
 aa
 ac
 ac
-CI
-CI
+cw
+cw
 ac
 ac
 aa
@@ -8221,7 +7453,7 @@ aw
 aw
 aa
 ac
-be
+bK
 ac
 cw
 cw
@@ -8362,8 +7594,8 @@ aw
 aw
 aa
 ac
-be
-be
+bK
+Ab
 ac
 cw
 cw
@@ -8503,9 +7735,9 @@ aw
 aw
 aa
 ac
-be
-be
-be
+bK
+bK
+bK
 ac
 cw
 cw
@@ -8644,10 +7876,10 @@ aw
 aw
 aa
 ac
-be
-be
-be
-be
+xo
+bK
+bK
+Ab
 ac
 cX
 da
@@ -8785,11 +8017,11 @@ aw
 aw
 aa
 ac
-be
-be
-be
-be
-be
+AN
+AN
+lF
+bK
+bK
 ac
 cw
 cw
@@ -8929,15 +8161,15 @@ ac
 be
 be
 be
+AN
 be
-be
-be
+Ab
 ac
 cw
 cw
 ac
 be
-be
+AN
 be
 be
 be
@@ -9073,7 +8305,7 @@ be
 be
 be
 be
-be
+bK
 ac
 cw
 cw
@@ -9211,20 +8443,20 @@ ac
 be
 be
 be
+Ij
 be
 be
 be
-be
-be
+Ab
 ac
-VR
-VR
+be
+cU
 ac
 bv
+bK
 be
 be
-be
-be
+AN
 be
 be
 be
@@ -9363,8 +8595,8 @@ bK
 bK
 bK
 bv
-be
-be
+bK
+bK
 be
 be
 be
@@ -9500,14 +8732,14 @@ be
 ar
 be
 be
-Ff
+oB
 bK
 bK
 bK
-Ff
-be
-be
-be
+oB
+JA
+bK
+bK
 be
 be
 be
@@ -9631,9 +8863,9 @@ aw
 aw
 aa
 ac
-be
-be
-be
+AN
+AN
+AN
 be
 be
 bv
@@ -9647,14 +8879,14 @@ bv
 bK
 bK
 bv
+Ab
+LZ
+Ab
+jR
+Ab
+bK
 be
-be
-be
-be
-be
-be
-be
-be
+Ij
 be
 be
 ac
@@ -9776,7 +9008,7 @@ bl
 bl
 bl
 bl
-wP
+bl
 bl
 bv
 UK
@@ -9786,7 +9018,7 @@ UK
 UK
 UK
 bv
-Zc
+bK
 bK
 bv
 bv
@@ -9918,26 +9150,26 @@ bB
 bB
 bB
 bB
-HV
-La
-yZ
-Yu
-Yu
-Yu
-IP
-Yu
-Yu
+bB
+bB
+bz
+bB
+bB
+bB
+bB
+bB
+bB
 cd
 ch
-Mx
-bv
-bJ
-bK
-bK
-bK
 bK
 bv
-wP
+UK
+UK
+UK
+UK
+UK
+bv
+bl
 bl
 bl
 bl
@@ -10060,26 +9292,26 @@ bn
 bn
 bn
 bn
-Ae
-wY
+bn
+bn
 bv
-Gq
-UK
-UK
-lD
-UK
-UK
+bK
+bK
+bK
+bK
+bK
+bK
 bv
-Mu
+ci
 co
-Hd
-ek
-La
-AZ
-AZ
-AZ
-BR
-BD
+cd
+bB
+bB
+bB
+bB
+bB
+bz
+bB
 bB
 bB
 bB
@@ -10196,39 +9428,39 @@ aw
 aa
 ac
 be
-be
-be
-be
+Nl
+bl
+bl
+bl
+bl
+bl
+bl
+bp
 bv
-bv
-bv
-UK
-CJ
-bv
-UK
-UK
-UK
-lD
-UK
+hy
+bK
+bK
+bK
+bK
 UK
 bv
-VN
+ci
 ci
 bv
 gQ
-kg
 bK
+vV
 bK
-bK
+ip
 bv
 Ae
-bn
-bn
-bn
-bn
-bn
-bn
-bn
+Yr
+Yr
+Yr
+Yr
+Yr
+Yr
+Km
 ce
 ac
 ac
@@ -10338,39 +9570,39 @@ aa
 ac
 be
 be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
-UK
-UK
-UK
-Gg
+bL
+ye
+bL
+ye
+bL
+bL
 bv
-UK
-UK
-UK
-lD
-UK
-UK
-bv
-VN
+ci
 ci
 bv
-bK
-kg
-bK
-bK
-bK
+YZ
+ye
+bL
+ye
+bL
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 ac
 aa
@@ -10480,39 +9712,39 @@ ac
 be
 be
 be
-be
-be
-bv
-bv
-UK
-UK
-UK
-Gg
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
 aF
-bN
-MZ
-bR
-BN
-MZ
+MF
+aF
+MF
+bK
+aF
 bv
-VN
+ci
 ci
 bv
-bK
-kg
-bK
-bK
-bK
+QM
+MF
+QM
+MF
+QM
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 ac
@@ -10622,39 +9854,39 @@ be
 be
 be
 be
-be
-be
-bv
-UK
-UK
-UK
-UK
-Gg
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
 bN
+MF
 bN
-UK
-bR
-Bj
-eS
+MF
+bK
+bN
 bv
-VN
+ci
 ci
 bv
-bK
-kg
-bK
-bK
-bK
+bN
+MF
+bN
+MF
+bN
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 be
@@ -10764,39 +9996,39 @@ be
 be
 be
 be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
-UK
-UK
-UK
-UK
-Gg
-bv
-bN
-bN
-UK
-bR
+zy
+MF
+zy
+MF
 Bj
-UK
+zy
 bv
-VN
+ci
 ci
 bv
-bP
-YU
-bP
-bP
-bP
+zy
+MF
+zy
+MF
+zy
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 be
@@ -10906,39 +10138,39 @@ be
 be
 be
 be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
-UK
-UK
-UK
-UK
-Gg
+Re
+MF
+Re
+MF
+bK
+Re
 bv
-bN
-bN
-UK
-bR
-Bj
-eS
-bv
-VN
+ci
 ci
 bv
-bK
-US
-bO
-iA
-bK
+Re
+MF
+Re
+MF
+Re
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 be
@@ -11048,39 +10280,39 @@ be
 be
 be
 be
-be
-be
-gw
-UK
-UK
-UK
-uM
-II
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
 aI
-bN
-Xg
-bR
+MF
+aI
+MF
 bX
-Xg
+aI
 bv
-VN
+ci
 ci
 bv
-bK
-Tk
-aA
-oc
-bK
+Wq
+MF
+Wq
+MF
+Wq
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 be
@@ -11190,39 +10422,39 @@ be
 be
 be
 be
-be
-be
-UK
-UK
-UK
-UK
-oy
-jY
+IF
+bn
+bn
+bn
+bn
+bn
+bn
+Cx
 bv
-UK
-UK
-oy
-bS
-XV
-UK
+ZS
+xF
+bP
+xF
+bP
+bP
 bv
-VN
+ci
 ci
 bv
-bK
-Hz
-ow
-yV
-bK
+ZS
+xF
+bP
+xF
+bP
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+pN
+bn
+bn
+bn
+bn
+bn
+bn
+Cx
 be
 be
 be
@@ -11344,16 +10576,16 @@ bv
 bv
 bv
 bv
-bC
+oB
 bv
 ac
 ce
-VN
+ci
 cp
 ce
 ac
-YW
-Xc
+oB
+bv
 bv
 bv
 bv
@@ -11470,47 +10702,47 @@ be
 be
 be
 bv
-bK
-bK
-bK
+py
+py
+py
 cB
 bv
-TY
-tX
-TH
-tX
-TH
-tX
-TH
-tX
-tG
+bD
+bD
+bD
+bD
+bq
 be
-rw
-DS
-fV
-Af
+TH
+be
+be
+be
+be
+TQ
+bY
+bY
 ac
-NP
-em
+ci
+ci
 ac
 cQ
-Yj
-ZL
+bq
 be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+bE
+xD
+TQ
+bD
+bD
+bD
+bD
+bv
+RV
+py
+py
+py
 bv
 be
 be
@@ -11616,43 +10848,43 @@ bK
 bK
 bK
 cB
-be
-KY
-be
-ZO
-MW
-bs
-be
-ZO
-nj
-bs
+bv
+bn
+bn
+bn
+bn
+Cx
 be
 be
-DS
-ke
-Vf
+be
+be
+be
+be
+TQ
+bY
+bY
 ac
-QU
-EZ
+ci
+ci
 ac
 bx
-Oy
-jh
+bq
 be
 be
 be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+IF
+bn
+bn
+bn
+bn
+bv
+qw
+bK
+bK
+bK
 bv
 be
 be
@@ -11754,32 +10986,31 @@ be
 be
 be
 bv
-bK
-bK
-bK
+BG
+BG
+BG
 cB
-be
-KY
-uS
-tx
-LC
-tx
-cH
-tx
-gv
-TW
+oB
 be
 be
-DS
-Jd
-He
+be
+be
+be
+be
+be
+be
+be
+be
+be
+TQ
+bY
+bY
 ac
-VN
+ci
 ci
 ac
 bY
-of
-eF
+bq
 be
 be
 be
@@ -11791,10 +11022,11 @@ be
 be
 be
 be
-be
-be
-be
-be
+oB
+qw
+BG
+BG
+BG
 bv
 be
 be
@@ -11884,7 +11116,7 @@ aw
 aw
 aw
 bf
-be
+GX
 be
 be
 be
@@ -11900,49 +11132,49 @@ cF
 bP
 bP
 cC
-be
-KY
-No
-LI
-Io
-be
-be
-be
-HG
-Nr
-be
-be
-DS
-ac
-ac
-ce
-VN
-cp
-ce
-ac
-ac
-ZL
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
 bv
 be
 be
 be
 be
 be
+be
+cG
+bl
+bl
+uI
+be
+TQ
+ac
+ac
+ce
+ci
+cp
+ce
+ac
+ac
+be
+be
+be
+be
+YV
+Nl
+bl
+bl
+bp
+be
+be
+bv
+XU
+bP
+bP
+PK
+bv
+be
+be
+be
+be
+Ij
 be
 be
 be
@@ -12028,67 +11260,67 @@ aw
 bf
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+Nl
+bl
+bl
+bl
+bl
+bl
+bl
+bl
+bp
 bv
 bK
 bK
-bK
-bK
+kA
+bL
 bv
 bE
-Sj
-Sj
-zK
 be
 be
 be
-BP
-Sj
 be
 be
-DS
+TQ
+aw
+aw
+bq
+be
+be
 ac
 aJ
-lS
-VO
-vY
-DL
 aL
+aN
+aN
+aL
+eI
 ac
-ZL
 be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+IJ
+TQ
+aw
+aw
+bq
 be
 be
 bv
-be
-be
-be
-be
-be
-be
-be
-be
-be
+Yz
+cE
+bK
+bK
+bv
+Nl
+bl
+bl
+bl
+bl
+bl
+bl
+bl
+bp
 ac
 aw
 aw
@@ -12154,8 +11386,8 @@ aw
 aw
 aw
 aw
-zY
-kq
+ON
+eL
 aw
 aw
 aw
@@ -12170,67 +11402,67 @@ bf
 ac
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
 bK
 bK
-bK
-bK
+qw
+mi
 bv
-ms
-No
+be
+be
 cG
-iL
+bl
+bl
+bl
+pZ
+aw
+aw
+fj
+uI
 be
-be
-be
-iL
-cG
-be
-be
-DS
 ac
 aK
 aM
 dn
 dn
-KW
-vu
-Ba
-mG
+dN
+aR
+ac
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+Nl
+Sh
+Sh
+Sh
+pZ
+aw
+aw
+lj
+bp
 be
 bv
-be
-be
-be
-be
-be
-be
-be
-be
-be
+Ut
+cB
+bK
+mi
+bv
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 ac
 ac
 bo
@@ -12296,51 +11528,51 @@ aw
 aw
 aw
 aw
-Cd
+ON
 WS
 gt
-kc
-Ua
-Ke
-VF
-Ij
-Ij
-Ij
-Ij
-Ij
-Ij
-rS
-Ij
-Ij
-Ij
-Ij
-Ij
-Ij
-Ij
-Ij
-Ij
-Ij
-Ij
-NZ
-gX
-gX
-gX
-gX
-NZ
-lA
-No
-bj
-PP
-xC
-Sg
-vh
-zM
-mU
+gt
+gt
+gt
+VR
 be
 be
-DS
+be
+be
+be
+be
+VR
+be
+Ij
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
+bv
+gX
+bK
+qw
+Ob
+bv
+be
+be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
+be
 ac
-aL
+Rt
 bZ
 dK
 dM
@@ -12348,31 +11580,31 @@ dO
 aL
 ac
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 bv
-be
-be
-be
-be
-be
-be
-be
-be
-be
+wt
+cB
+bK
+bK
+bv
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 VR
 be
@@ -12438,11 +11670,11 @@ aw
 aw
 aw
 aw
-ri
-vj
-YN
-Ci
-TX
+ON
+WS
+gT
+gT
+gT
 gT
 VR
 be
@@ -12454,67 +11686,67 @@ be
 VR
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
+Xu
 bK
-bK
-bK
-bK
+qw
+gX
 bv
-ms
-No
 be
 be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
-KE
-DB
-be
-be
-be
-zg
-Tu
 ac
 aM
 cP
 dK
 dM
 dN
-aL
+Rt
 ac
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 bv
-be
-be
-be
-be
-be
-be
-be
-be
-be
+wt
+cB
+bK
+Ob
+bv
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 VR
 be
@@ -12580,8 +11812,8 @@ aw
 aw
 aw
 aw
-Ki
-mW
+ON
+eL
 aw
 aw
 aw
@@ -12596,33 +11828,33 @@ bf
 ac
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
 bK
 bK
-bK
-bK
+qw
+vV
 bv
-he
-tx
-cH
-cH
-cH
-om
-cH
-nf
 be
 be
-AV
-Kc
+cH
+bn
+bn
+bn
+NM
+aw
+aw
+xP
+cJ
+be
 ac
 aO
 dh
@@ -12632,31 +11864,31 @@ dO
 aR
 ac
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+IF
+bn
+bn
+bn
+NM
+aw
+aw
+xP
+Cx
 be
 bv
-be
-be
-be
-be
-be
-be
-be
-be
-be
+xw
+cB
+bK
+Ob
+bv
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 ac
 ac
 bo
@@ -12738,33 +11970,33 @@ aw
 bf
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+IF
+bn
+bn
+bn
+bn
+bn
+bn
+bn
+Cx
 bv
 bK
 bK
-bK
-bK
+XU
+bP
 bv
 be
 be
 be
 be
 be
-KE
 be
-No
+TQ
+aw
+aw
+bq
 be
 be
-be
-DS
 ac
 aP
 aL
@@ -12778,27 +12010,27 @@ be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+bq
 be
 be
 bv
-be
-be
-be
-be
-be
-be
-be
-be
-be
+bP
+cC
+bK
+bK
+bv
+IF
+bn
+bn
+bn
+bn
+bn
+bn
+bn
+Cx
 ac
 aw
 aw
@@ -12893,20 +12125,20 @@ bv
 ca
 bK
 bK
-bK
+JA
+bv
 be
 be
 be
 be
-nl
-TJ
-wf
 be
-he
-TJ
+be
+cH
+bn
+bn
 cJ
-YP
-Tu
+be
+TQ
 ac
 ac
 ce
@@ -12920,17 +12152,17 @@ be
 be
 be
 be
+IF
+bn
+bn
+Cx
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+bv
+Au
+bK
+bK
+jH
 bv
 be
 be
@@ -13036,28 +12268,27 @@ bK
 bK
 bK
 bK
+oB
 be
 be
 be
 be
 be
 be
-PX
-hr
-hr
-yD
-cJ
-er
-Kc
 be
 be
+be
+be
+be
+TQ
+bY
+bY
 ac
-EH
-em
+ci
+ci
 ac
 eE
-Qk
-OM
+bq
 be
 be
 be
@@ -13069,10 +12300,11 @@ be
 be
 be
 be
-be
-be
-be
-be
+oB
+bK
+bK
+bK
+bK
 bv
 be
 be
@@ -13178,43 +12410,43 @@ bL
 bL
 bL
 cE
-be
+bv
 bl
 bl
 bl
 bl
 bp
-GY
-GY
-GY
 be
 be
 be
-TN
 be
 be
+be
+TQ
+bY
+bY
 ac
-GI
-EZ
+ci
+ci
 ac
 bx
-Vi
-ud
+bq
 be
 be
 be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+Nl
+bl
+bl
+bl
+bl
+bv
+kA
+bL
+bL
+bL
 bv
 be
 be
@@ -13319,7 +12551,7 @@ bv
 cK
 by
 by
-cB
+HL
 bv
 bD
 bD
@@ -13328,35 +12560,35 @@ bD
 bq
 be
 be
+wl
 be
 be
 be
-be
-TN
-be
-be
+TQ
+bY
+bY
 ac
-rM
+ci
 ci
 ac
 cR
-wk
+bq
 be
 be
 be
+wl
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+bD
+bD
+bD
+bD
+bv
+qw
+by
+by
+by
 bv
 be
 be
@@ -13474,15 +12706,15 @@ bv
 bv
 bv
 bv
-iE
+oB
 bv
 ac
 ce
-rM
+ci
 cp
 ce
 ac
-gK
+oB
 bv
 bv
 bv
@@ -13604,39 +12836,39 @@ be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
+Nl
+bl
+bl
+bl
+bl
+bl
+bl
+bp
 bv
-bK
-bK
-DQ
-bQ
-Mx
-bK
+Ef
+ye
+bL
+ye
+bL
+bL
 bv
-rM
+ci
 ci
 bv
-bK
-TU
-bK
-bK
-bK
+Ef
+ye
+bL
+ye
+bL
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+Kr
+bl
+bl
+bl
+bl
+bl
+bl
+bp
 be
 be
 be
@@ -13746,39 +12978,39 @@ be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
+aF
+MF
+aF
+MF
 bK
-bK
-bK
-qN
-bK
-bK
+aF
 bv
-rM
+ci
 ci
 bv
-bK
-TU
-bK
-bK
-bK
+Fi
+MF
+QM
+MF
+QM
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 be
@@ -13888,39 +13120,39 @@ be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
+bN
+MF
+bN
+MF
 bK
-bK
-bK
-qN
-bK
-bK
+bN
 bv
-rM
+ci
 ci
 bv
-bK
-TU
-bK
-bK
-bK
+bN
+MF
+bN
+MF
+bN
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 be
@@ -14030,39 +13262,39 @@ be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
-bK
-bK
-bK
-qN
-bK
-bK
+zy
+MF
+zy
+MF
+bX
+zy
 bv
-rM
+ci
 ci
 bv
-bK
-TU
-bK
-bK
-bK
+zy
+MF
+zy
+MF
+zy
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 be
@@ -14172,39 +13404,39 @@ be
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
-bK
-bK
-bK
-qN
-bK
-bK
+Re
+MF
+Re
+MF
+bX
+Re
 bv
-rM
+ci
 ci
 bv
-bK
-TU
-bK
-bK
-bK
+Re
+MF
+Re
+MF
+Re
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 be
@@ -14314,39 +13546,39 @@ ac
 be
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
+aI
+MF
+aI
+MF
 bK
-bK
-bK
-qN
-bK
-bK
+aI
 bv
-rM
+ci
 ci
 bv
-bK
-TU
-bK
-bK
-bK
+Wq
+MF
+Wq
+MF
+Wq
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 be
 ac
@@ -14456,39 +13688,39 @@ aa
 ac
 be
 be
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 bv
-bK
-bK
-bK
-qN
-bK
-bK
+bP
+xF
+bP
+xF
+bP
+bP
 bv
-rM
+ci
 ci
 bv
-bK
-TU
-bK
-bK
-bK
+bP
+xF
+bP
+xF
+bP
 bv
-be
-be
-be
-be
-be
-be
-be
-be
+TQ
+aw
+aw
+aw
+aw
+aw
+aw
+bq
 be
 ac
 aa
@@ -14598,39 +13830,39 @@ aw
 aa
 ac
 be
-be
-be
-be
-be
-be
-be
-be
-be
+IF
+bn
+bn
+bn
+bn
+bn
+bn
+Cx
 bv
+Lb
 bK
-bK
-bK
+pX
 qN
 bK
-bK
+Mn
 bv
-rM
+ci
 ci
 bv
-bJ
-TU
+Mn
 bK
+vV
 bK
-bK
+FJ
 bv
 wP
-bl
-bl
-bl
-bl
-bl
-bl
-bl
+ts
+ts
+ts
+ts
+ts
+ts
+HT
 ce
 ac
 ac
@@ -14747,25 +13979,25 @@ bl
 bl
 bl
 bl
-wP
+bl
 bv
 bK
 bK
 bK
-qN
+bK
 bK
 bK
 bv
-Mu
+ci
 cq
-Hd
-ek
-lU
-AZ
-AZ
-AZ
-Hd
-BD
+cd
+bB
+bB
+bB
+bB
+bB
+cd
+bB
 bB
 bB
 bB
@@ -14889,25 +14121,25 @@ bB
 bB
 bB
 bB
-HV
-yZ
-iI
-iI
-iI
-uF
-iI
-iI
+bB
+bz
+bB
+bB
+bB
+bB
+bB
+bB
 cd
 cm
-Mx
-bv
-gQ
-bK
-bK
-bK
 bK
 bv
-Ae
+SJ
+VS
+Mn
+UK
+Mn
+bv
+bn
 bn
 bn
 bn
@@ -15031,16 +14263,16 @@ bn
 bn
 bn
 bn
-Ae
+bn
 bv
 cN
-bK
-bK
-bK
-bK
-bK
+UK
+UK
+UK
+JI
+UK
 bv
-gQ
+bK
 bK
 bv
 bv
@@ -15171,8 +14403,8 @@ aa
 ac
 be
 be
-be
-be
+AN
+AN
 be
 bv
 bv
@@ -15322,11 +14554,11 @@ be
 be
 be
 be
-Ff
+oB
 bK
 bK
 bK
-Ff
+oB
 be
 be
 be
@@ -15473,7 +14705,7 @@ be
 be
 be
 be
-be
+Ij
 be
 be
 be
@@ -15577,7 +14809,7 @@ aD
 bb
 aD
 aD
-aD
+OV
 dw
 aw
 aw
@@ -15602,7 +14834,7 @@ be
 be
 be
 be
-be
+Ij
 be
 be
 be
@@ -15611,13 +14843,13 @@ cO
 cO
 ac
 bv
+AN
+be
+AN
 be
 be
 be
-be
-be
-be
-be
+AN
 ac
 aa
 aw
@@ -15752,7 +14984,7 @@ ac
 cw
 cw
 ac
-be
+GK
 be
 be
 be
@@ -16604,7 +15836,7 @@ ac
 dW
 dX
 ac
-be
+IC
 ac
 aa
 aw

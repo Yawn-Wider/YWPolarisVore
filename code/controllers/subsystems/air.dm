@@ -326,7 +326,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	msg += "F [active_fire_zones.len] | "
 	msg += "H [active_hotspots.len] | "
 	msg += "Z [zones_to_update.len] "
-	msg += "B [zones_planet_temperature_to_update.len] "
+	msg += "B [zones_planet_temperature_to_update.len] " //YW Addition - zones_planet_temperature_to_update.len
 	msg += "}"
 	..(msg.Join())
 

@@ -252,16 +252,18 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 /datum/controller/subsystem/air/proc/process_boiler_zones_to_update(resumed = 0)
 	if (!resumed)
 		//I have no idea what this is for yet
-		src.currentrun = zones.Copy()
+		src.currentrun = zones_planet_temperature_to_update.Copy()
 
 	var/list/currentrun = src.currentrun
 	while(currentrun.len)
 		var/zone/zone = currentrun[currentrun.len]
 		currentrun.len--
 		if(!zone.invalid)
-			var/turf/T = zone.contents[1]
-			if(is_station_temp_change_turf(T))
-				equalize_temperature_to_planet(T, zone, thermal_energy_change)
+			var/turf/T = pick(zone.contents)
+			if(!is_station_temp_change_turf(T))
+				zones_planet_temperature_to_update.Remove(zone) //Remove from the global list so we do not spend time going over it again
+				continue
+			equalize_temperature_to_planet(T, zone, thermal_energy_change)
 		if(MC_TICK_CHECK)
 			testing("boiler MC TICK CHECK")
 			return
@@ -324,7 +326,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	msg += "F [active_fire_zones.len] | "
 	msg += "H [active_hotspots.len] | "
 	msg += "Z [zones_to_update.len] "
-	msg += "B [zones.len] "
+	msg += "B [zones_planet_temperature_to_update.len] "
 	msg += "}"
 	..(msg.Join())
 

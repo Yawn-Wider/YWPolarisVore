@@ -1,5 +1,11 @@
 # Yawn-Wider
 
+### Notice of Modification
+
+This code was forked on 1/28/2024 by Fennec82 (Arrhythmia_V) and will be modified.
+
+---
+
 [![forthebadge](http://forthebadge.com/images/badges/60-percent-of-the-time-works-every-time.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/compatibility-club-penguin.svg)](http://forthebadge.com) [![forthebadge](http://forthebadge.com/images/badges/no-ragrets.svg)](http://forthebadge.com)
 
 [Website (we dont have one)](https://www.youtube.com/watch?v=oHg5SJYRHA0) - [Forums](https://yawn-widerstation.proboards.com/) - [Wiki](https://yawn.izac.live/Main_Page) - [Discord](https://discord.gg/Wh27EAY)

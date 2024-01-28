@@ -2,6 +2,7 @@
 	name = "frozen plating"
 	icon_state = "snowyplating"
 	icon = 'icons/turf/snow_new.dmi'
+	edge_blending_priority = 0.1
 /turf/simulated/floor/snow
 	name = "heavy snow"
 	icon_state = "snow"

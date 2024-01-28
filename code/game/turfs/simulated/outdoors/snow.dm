@@ -52,7 +52,7 @@
 	name = "ice"
 	icon_state = "ice"
 	desc = "Looks slippery."
-	edge_blending_priority = 0
+	edge_blending_priority = 0.1 //YW Edit - allow edge blending
 	can_be_plated = FALSE
 
 /turf/simulated/floor/outdoors/ice/dark

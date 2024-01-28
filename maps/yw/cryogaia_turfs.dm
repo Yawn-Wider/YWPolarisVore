@@ -1,7 +1,6 @@
 //Simulated
 CRYOGAIA_TURF_CREATE(/turf/simulated/open)
 /turf/simulated/open/cryogaia
-	edge_blending_priority = 0.5 //Turfs which also have e_b_p and higher than this will plop decorative edges onto this turf
 	CRYOGAIA_SET_ATMOS
 
 /turf/simulated/open/cryogaia/Initialize(mapload)

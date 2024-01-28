@@ -4,7 +4,8 @@
 #define SSAIR_FIREZONES 3
 #define SSAIR_HOTSPOTS 4
 #define SSAIR_ZONES 5
-#define SSAIR_DONE 6
+#define SSAIR_BOILER 6 //YW Addition - Boiler ZAS
+#define SSAIR_DONE 7 //YW Edit 6 -> 7
 
 SUBSYSTEM_DEF(air)
 	name = "Air"
@@ -13,13 +14,15 @@ SUBSYSTEM_DEF(air)
 	wait = 2 SECONDS // seconds (We probably can speed this up actually)
 	flags = SS_BACKGROUND // TODO - Should this really be background? It might be important.
 	runlevels = RUNLEVEL_GAME | RUNLEVEL_POSTGAME
-	var/static/list/part_names = list("turfs", "edges", "fire zones", "hotspots", "zones")
+	var/static/list/part_names = list("turfs", "edges", "fire zones", "hotspots", "zones", "boiler") //YW: Add "boiler"
 
 	var/cost_turfs = 0
 	var/cost_edges = 0
 	var/cost_firezones = 0
 	var/cost_hotspots = 0
 	var/cost_zones = 0
+	var/cost_boiler = 0 //YW Addition - Boiler
+	var/thermal_energy_change = 4000 //YW Addition - Boiler
 
 	var/list/currentrun = null
 	var/current_step = null
@@ -57,19 +60,19 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	if(active_edges.len)
 		var/list/edge_log = list()
 		for(var/connection_edge/E in active_edges)
-			
+
 			var/a_temp = E.A.air.temperature
 			var/a_moles = E.A.air.total_moles
 			var/a_vol = E.A.air.volume
 			var/a_gas = ""
 			for(var/gas in E.A.air.gas)
 				a_gas += "[gas]=[E.A.air.gas[gas]]"
-			
+
 			var/b_temp
 			var/b_moles
 			var/b_vol
 			var/b_gas = ""
-			
+
 			// Two zones mixing
 			if(istype(E, /connection_edge/zone))
 				var/connection_edge/zone/Z = E
@@ -87,14 +90,14 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 				b_vol = "Unsim"
 				for(var/gas in U.air.gas)
 					b_gas += "[gas]=[U.air.gas[gas]]"
-			
+
 			edge_log += "Active Edge [E] ([E.type])"
 			edge_log += "Edge side A: T:[a_temp], Mol:[a_moles], Vol:[a_vol], Gas:[a_gas]"
 			edge_log += "Edge side B: T:[b_temp], Mol:[b_moles], Vol:[b_vol], Gas:[b_gas]"
-			
+
 			for(var/turf/T in E.connecting_turfs)
 				edge_log += "+--- Connecting Turf [T] ([T.type]) @ [T.x], [T.y], [T.z] ([T.loc])"
-				
+
 		log_debug("Active Edges on ZAS Startup\n" + edge_log.Join("\n"))
 		startup_active_edge_log = edge_log.Copy()
 
@@ -116,7 +119,8 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	INTERNAL_PROCESS_STEP(SSAIR_EDGES, FALSE, process_active_edges, cost_edges, SSAIR_FIREZONES)
 	INTERNAL_PROCESS_STEP(SSAIR_FIREZONES, FALSE, process_active_fire_zones, cost_firezones, SSAIR_HOTSPOTS)
 	INTERNAL_PROCESS_STEP(SSAIR_HOTSPOTS, FALSE, process_active_hotspots, cost_hotspots, SSAIR_ZONES)
-	INTERNAL_PROCESS_STEP(SSAIR_ZONES, FALSE, process_zones_to_update, cost_zones, SSAIR_DONE)
+	INTERNAL_PROCESS_STEP(SSAIR_ZONES, FALSE, process_zones_to_update, cost_zones, SSAIR_BOILER) //YW Edit SSAIR_DONE -> SSAIR_BOILER
+	INTERNAL_PROCESS_STEP(SSAIR_BOILER, FALSE, process_boiler_zones_to_update, cost_boiler, SSAIR_DONE) //YW Addition -> Boiler
 
 	// Okay, we're done! Woo! Got thru a whole air_master cycle!
 	if(LAZYLEN(currentrun) || current_step != SSAIR_DONE)
@@ -244,6 +248,63 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 		if(MC_TICK_CHECK)
 			return
 
+//YW Addition Start - boiler/heat engine temperature update
+/datum/controller/subsystem/air/proc/process_boiler_zones_to_update(resumed = 0)
+	if (!resumed)
+		//I have no idea what this is for yet
+		src.currentrun = zones.Copy()
+
+	var/list/currentrun = src.currentrun
+	while(currentrun.len)
+		var/zone/zone = currentrun[currentrun.len]
+		currentrun.len--
+		if(!zone.invalid)
+			var/turf/T = zone.contents[1]
+			if(is_station_temp_change_turf(T))
+				equalize_temperature_to_planet(T, zone, thermal_energy_change)
+		if(MC_TICK_CHECK)
+			testing("boiler MC TICK CHECK")
+			return
+
+/proc/equalize_temperature_to_planet(turf/T, zone/zone, max_thermal_change)
+	//Get planet weather
+	if(T.z in SSplanets.z_to_planet == 0)
+		return
+	var/datum/planet/P = SSplanets.z_to_planet[T.z]
+	if(!P)
+		//testing("No planet found for [T.z]")
+		return
+	var/datum/gas_mixture/currentAir = zone.air
+	var/neededEnergy = currentAir.get_thermal_energy_change(P.weather_holder.temperature)
+	if(neededEnergy > 0)
+		neededEnergy = min(neededEnergy, max_thermal_change)
+	else
+		neededEnergy = max(neededEnergy, -max_thermal_change)
+	//testing("Energy: [neededEnergy]")
+	currentAir.add_thermal_energy(neededEnergy)
+
+
+/proc/is_station_temp_change_turf(turf/T)
+	if(!T)
+		return 0
+
+	if(!(T.z in using_map.allow_global_temperature_change_levels))
+		return 0
+
+	if(istype(T.loc, /area/mine))
+		return 0
+
+	if(T.loc.flags & TEMPERATURE_SHIELDED) //Do not freeze dorms
+		return 0
+
+	if(T.is_outdoors())
+		return 0
+
+	return 1
+//YW Addition End
+
+
+
 /datum/controller/subsystem/air/stat_entry(msg_prefix)
 	var/list/msg = list(msg_prefix)
 	msg += "S:[current_step ? part_names[current_step] : ""] "
@@ -253,6 +314,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	msg += "F [round(cost_firezones, 1)] | "
 	msg += "H [round(cost_hotspots, 1)] | "
 	msg += "Z [round(cost_zones, 1)] "
+	msg += "B [round(cost_boiler, 1)] " //YW Addition - boiler cost
 	msg += "}"
 	msg += "Z: [zones.len] "
 	msg += "E: [edges.len] "
@@ -262,6 +324,7 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	msg += "F [active_fire_zones.len] | "
 	msg += "H [active_hotspots.len] | "
 	msg += "Z [zones_to_update.len] "
+	msg += "B [zones.len] "
 	msg += "}"
 	..(msg.Join())
 

@@ -2884,13 +2884,13 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8;
-	layer = 2.9
-	},
 /obj/machinery/holoposter{
 	dir = 1;
 	pixel_y = -32
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8;
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -17010,12 +17010,12 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
 	},
-/obj/effect/floor_decal/borderfloor{
-	layer = 2.9
-	},
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/floor_decal/spline/plain{
 	pixel_y = 10
+	},
+/obj/effect/floor_decal/borderfloor{
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -20695,12 +20695,12 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 5
 	},
-/obj/effect/floor_decal/borderfloor{
-	layer = 2.9
-	},
 /obj/effect/floor_decal/spline/plain,
 /obj/effect/floor_decal/spline/plain{
 	pixel_y = 10
+	},
+/obj/effect/floor_decal/borderfloor{
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -30359,12 +30359,12 @@
 	dir = 4;
 	pixel_x = -10
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4;
-	layer = 2.9
-	},
 /obj/machinery/holoposter{
 	pixel_y = 32
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4;
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -34252,14 +34252,14 @@
 	dir = 1;
 	pixel_y = -9
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1;
-	layer = 2.9
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1;
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -41537,23 +41537,6 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/security/hallway)
-"qoY" = (
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 6
-	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 8
-	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 8;
-	pixel_x = 9
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8;
-	layer = 2.9
-	},
-/turf/simulated/floor/tiled,
-/area/crew_quarters/locker)
 "qoZ" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/blue{
@@ -55918,16 +55901,16 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 9
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 4;
-	layer = 2.9
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 4;
 	pixel_x = -10
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 4;
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -57245,7 +57228,7 @@
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4;
-	layer = 2.9
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -57578,7 +57561,7 @@
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1;
-	layer = 2.9
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -58537,16 +58520,16 @@
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 6
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8;
-	layer = 2.9
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 8
 	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 8;
 	pixel_x = 9
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8;
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
@@ -58719,25 +58702,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/rnd/phoronics)
-"xtd" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1
-	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 1;
-	pixel_y = -9
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1;
-	layer = 2.9
-	},
-/obj/effect/floor_decal/corner_steel_grid{
-	dir = 10
-	},
-/turf/simulated/floor/tiled{
-	icon_state = "monotile"
-	},
-/area/crew_quarters/locker)
 "xtp" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 10
@@ -59944,16 +59908,16 @@
 /obj/effect/floor_decal/spline/plain{
 	dir = 1
 	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 1;
-	layer = 2.9
-	},
 /obj/effect/floor_decal/spline/plain{
 	dir = 1;
 	pixel_y = -9
 	},
 /obj/effect/floor_decal/corner_steel_grid{
 	dir = 10
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1;
+	layer = 2.5
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -78566,7 +78530,7 @@ apa
 aIc
 wEa
 isE
-qoY
+xoC
 xoC
 xoC
 bfa
@@ -79213,7 +79177,7 @@ anR
 juF
 hUr
 snP
-xtd
+xSp
 pBb
 pnS
 pnS

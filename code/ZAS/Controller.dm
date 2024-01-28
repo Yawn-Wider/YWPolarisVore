@@ -79,7 +79,7 @@ Class Procs:
 	var/list/active_fire_zones = list()
 	var/list/active_hotspots = list()
 	var/list/active_edges = list()
-	var/list/zones_planet_temperature_to_update = list()
+	var/list/zones_planet_temperature_to_update = list() // YW Addition - zones_planet_temperature_to_update
 
 	var/active_zones = 0
 	var/current_cycle = 0

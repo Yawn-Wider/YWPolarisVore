@@ -436,13 +436,16 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 8;
-	pixel_x = 9
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8;
 	layer = 2.4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8;
+	pixel_x = 9
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/crew_quarters/captain)
@@ -824,6 +827,7 @@
 	dir = 6
 	},
 /obj/effect/floor_decal/rust,
+/obj/effect/floor_decal/techfloor/hole,
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/bridge/blueshield)
 "apU" = (
@@ -2907,10 +2911,6 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
 "bfa" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 8;
-	pixel_x = 9
-	},
 /obj/machinery/holoposter{
 	dir = 1;
 	pixel_y = -32
@@ -2918,6 +2918,13 @@
 /obj/effect/floor_decal/borderfloor{
 	dir = 8;
 	layer = 2.5
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8;
+	pixel_x = 9
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -4837,19 +4844,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/storage/art)
-"bUj" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 8;
-	pixel_x = 9
-	},
-/obj/effect/floor_decal/borderfloor{
-	dir = 8;
-	layer = 2.5
-	},
-/turf/simulated/floor/tiled{
-	icon_state = "monotile"
-	},
-/area/crew_quarters/locker)
 "bUF" = (
 /obj/structure/closet/secure_closet/freezer/money,
 /obj/item/weapon/storage/secure/briefcase/money{
@@ -8533,6 +8527,10 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/ert_arrival)
+"dpr" = (
+/obj/effect/floor_decal/techfloor/hole,
+/turf/simulated/floor/tiled/old_tile/blue,
+/area/bridge/blueshield)
 "dpz" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering Drone Fabrication";
@@ -17079,11 +17077,12 @@
 "gHf" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/effect/floor_decal/spline/plain{
-	pixel_y = 10
-	},
 /obj/effect/floor_decal/borderfloor{
 	layer = 2.5
+	},
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/spline/plain{
+	pixel_y = 10
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -20739,11 +20738,12 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "iic" = (
-/obj/effect/floor_decal/spline/plain{
-	pixel_y = 10
-	},
 /obj/effect/floor_decal/borderfloor{
 	layer = 2.5
+	},
+/obj/effect/floor_decal/spline/plain,
+/obj/effect/floor_decal/spline/plain{
+	pixel_y = 10
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -22738,17 +22738,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/cryo)
-"jaj" = (
-/obj/effect/floor_decal/borderfloorblack{
-	dir = 8;
-	layer = 2.4
-	},
-/obj/effect/floor_decal/spline/plain{
-	dir = 8;
-	pixel_x = 9
-	},
-/turf/simulated/floor/wood/alt/parquet,
-/area/crew_quarters/captain)
 "jap" = (
 /obj/structure/cable{
 	d2 = 2;
@@ -30436,16 +30425,19 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/locker)
 "meK" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 4;
-	pixel_x = -10
-	},
 /obj/machinery/holoposter{
 	pixel_y = 32
 	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4;
 	layer = 2.5
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4;
+	pixel_x = -10
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -34340,15 +34332,18 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/delivery)
 "nvX" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1;
-	pixel_y = -9
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/floor_decal/borderfloor{
 	dir = 1;
 	layer = 2.5
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1;
+	pixel_y = -9
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -57400,13 +57395,16 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/patient_wing)
 "wMV" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 4;
-	pixel_x = -10
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 4;
 	layer = 2.5
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 4;
+	pixel_x = -10
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -58682,6 +58680,9 @@
 	layer = 2.5
 	},
 /obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
 	dir = 8;
 	pixel_x = 9
 	},
@@ -59308,6 +59309,9 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "xBO" = (
+/obj/effect/floor_decal/techfloor/hole{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/bridge/blueshield)
 "xCe" = (
@@ -60038,13 +60042,16 @@
 /turf/simulated/floor/tiled/red,
 /area/security/security_equiptment_storage)
 "xSa" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 8;
-	pixel_x = 9
-	},
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8;
 	layer = 2.4
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 8;
+	pixel_x = 9
 	},
 /turf/simulated/floor/wood/alt/parquet,
 /area/crew_quarters/captain)
@@ -60063,13 +60070,16 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "xSp" = (
-/obj/effect/floor_decal/spline/plain{
-	dir = 1;
-	pixel_y = -9
-	},
 /obj/effect/floor_decal/borderfloor{
 	dir = 1;
 	layer = 2.5
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/plain{
+	dir = 1;
+	pixel_y = -9
 	},
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
@@ -77974,7 +77984,7 @@ ubC
 xtL
 ait
 xSa
-jaj
+xSa
 lcR
 rAA
 fQq
@@ -78473,7 +78483,7 @@ aQA
 xRo
 mDC
 gdK
-xBO
+dpr
 rEk
 vmf
 dXV
@@ -78681,8 +78691,8 @@ aIc
 wEa
 isE
 xoC
-bUj
-bUj
+xoC
+xoC
 bfa
 aKm
 uUe
@@ -78942,16 +78952,16 @@ aJz
 jFI
 ovd
 fiK
-xbv
-xbv
-xbv
-xbv
-xbv
-xbv
-xbv
-xbv
-xbv
-xbv
+ubC
+ubC
+ubC
+ubC
+ubC
+ubC
+ubC
+ubC
+ubC
+ubC
 xau
 xbv
 gEY
@@ -79263,17 +79273,17 @@ uDf
 uDf
 uDf
 bCZ
-kGA
-kGA
-kGA
-kGA
-kGA
-kGA
-kGA
-kGA
-kGA
-kGA
-kGA
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
+xbv
 xbv
 xbv
 xbv

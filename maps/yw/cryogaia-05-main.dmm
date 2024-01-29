@@ -3960,6 +3960,12 @@
 /obj/effect/decal/cleanable/generic,
 /turf/simulated/floor/tiled,
 /area/engineering/engine_airlock)
+"bEY" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "bFR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -8527,10 +8533,6 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/ert_arrival)
-"dpr" = (
-/obj/effect/floor_decal/techfloor/hole,
-/turf/simulated/floor/tiled/old_tile/blue,
-/area/bridge/blueshield)
 "dpz" = (
 /obj/machinery/door/airlock/engineering{
 	name = "Engineering Drone Fabrication";
@@ -45511,6 +45513,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/heads/cmo)
+"rQz" = (
+/obj/effect/floor_decal/techfloor/hole,
+/turf/simulated/floor/tiled/old_tile/blue,
+/area/bridge/blueshield)
 "rQR" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/storage/photo_album{
@@ -77084,7 +77090,7 @@ fUq
 fUq
 fUq
 iKi
-qzq
+bEY
 uDf
 uDf
 uDf
@@ -78483,7 +78489,7 @@ aQA
 xRo
 mDC
 gdK
-dpr
+rQz
 rEk
 vmf
 dXV

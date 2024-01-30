@@ -23,6 +23,7 @@ SUBSYSTEM_DEF(air)
 	var/cost_zones = 0
 	var/cost_boiler = 0 //YW Addition - Boiler
 	var/thermal_energy_change = 4000 //YW Addition - Boiler
+	var/handle_planet_temperature_change = 0
 
 	var/list/currentrun = null
 	var/current_step = null
@@ -258,6 +259,8 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 	while(currentrun.len)
 		var/zone/zone = currentrun[currentrun.len]
 		currentrun.len--
+		if(!handle_planet_temperature_change)
+			continue
 		if(!zone.invalid)
 			var/turf/T = pick(zone.contents)
 			if(!is_station_temp_change_turf(T))

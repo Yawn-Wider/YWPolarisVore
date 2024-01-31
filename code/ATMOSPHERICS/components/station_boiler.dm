@@ -29,12 +29,37 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 
 /obj/machinery/atmospherics/binary/stationboiler/process()
 	..()
-	//STEP 1 - Pump gas through
-	pump_gas(src, air1, air2, moles_to_process)
-	if(network1)
-		network1.update = 1
-	if(network2)
-		network2.update = 1
+	//STEP 1 - Pump gas through - using the passive gate method
+	var/output_starting_pressure = air2.return_pressure()
+	var/input_starting_pressure = air1.return_pressure()
+	var/pressure_delta = input_starting_pressure - output_starting_pressure
+	var/datum/gas_mixture/source = air1
+	var/datum/gas_mixture/sink = air2
+
+	if((pressure_delta > 0.01) && (air1.temperature > 0 || air2.temperature > 0))
+		// If node1 is a network of more than 1 pipe, we want to transfer from that whole network, otw use just node1, as current
+		if(istype(node1, /obj/machinery/atmospherics/pipe))
+			var/obj/machinery/atmospherics/pipe/p = node1
+			if(istype(p.parent, /datum/pipeline)) // Nested if-blocks to avoid the mystical :
+				var/datum/pipeline/l = p.parent
+				if(istype(l.air, /datum/gas_mixture))
+					source = l.air
+		// If node2 is a network of more than 1 pipe, we want to transfer to that whole network, otw use just node2, as current
+		if(istype(node2, /obj/machinery/atmospherics/pipe))
+			var/obj/machinery/atmospherics/pipe/p = node2
+			if(istype(p.parent, /datum/pipeline))
+				var/datum/pipeline/l = p.parent
+				if(istype(l.air, /datum/gas_mixture))
+					sink = l.air
+
+		var/transfer_moles = max(0, calculate_equalize_moles(source, sink)) // Not regulated, don't care about flow rate
+		var/returnval = pump_gas_passive(src, source, sink, transfer_moles)
+
+		if(returnval >= 0)
+			if(network1)
+				network1.update = 1
+			if(network2)
+				network2.update = 1
 
 	//STEP 2 - Check if we can heat the gas
 	if(stored_material[MAT_LOG] < wood_per_process) //Out of wood
@@ -52,7 +77,10 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 	stored_material[MAT_LOG] = max(stored_material[MAT_LOG], 0)
 
 	//Heat up the air instantly, magically
-	air2.temperature = target_heat_temperature
+	if(sink)
+		sink.temperature = target_heat_temperature
+	else
+		air2.temperature = target_heat_temperature
 	update_icon()
 
 /obj/machinery/atmospherics/binary/stationboiler/update_icon()

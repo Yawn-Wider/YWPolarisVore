@@ -23,7 +23,7 @@ SUBSYSTEM_DEF(air)
 	var/cost_zones = 0
 	var/cost_boiler = 0 //YW Addition - Boiler
 	var/thermal_energy_change = 4000 //YW Addition - Boiler
-	var/handle_planet_temperature_change = 0
+	var/handle_planet_temperature_change = 0 //YW Addition - Boiler
 
 	var/list/currentrun = null
 	var/current_step = null

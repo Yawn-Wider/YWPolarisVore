@@ -3994,8 +3994,8 @@
 /area/cryogaia/station/pathfinder_office)
 "iK" = (
 /obj/structure/table/woodentable,
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 10
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/pathfinder_office)
@@ -4011,6 +4011,9 @@
 	},
 /obj/effect/landmark/start{
 	name = "Pathfinder"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/pathfinder_office)
@@ -4234,6 +4237,9 @@
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
+	dir = 1
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/pathfinder_office)
@@ -11534,12 +11540,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
-"NQ" = (
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds/upper)
 "NR" = (
 /obj/effect/floor_decal/corner/paleblue/full{
 	dir = 8
@@ -13797,6 +13797,24 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"Zs" = (
+/obj/structure/cable/green{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/micro_tunnel,
+/turf/simulated/floor/plating,
+/area/cryogaia/station/hallway/primary/upper/south)
 "Zt" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/northeast)
@@ -31977,17 +31995,17 @@ nQ
 nQ
 nQ
 nQ
-TK
-Sq
-Sq
-Sq
-Sq
-Sq
-Sq
-Sq
-Sq
-Sq
-Sq
+kW
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
+AN
 AN
 AN
 AN
@@ -32139,18 +32157,18 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-TK
+cN
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
 Sq
 Sq
 vT
@@ -33494,7 +33512,7 @@ KH
 KH
 bb
 dj
-vG
+Zs
 LC
 mD
 JG
@@ -34268,7 +34286,7 @@ nQ
 nQ
 nQ
 nQ
-NQ
+nQ
 nQ
 nQ
 nQ

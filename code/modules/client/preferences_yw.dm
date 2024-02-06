@@ -28,3 +28,10 @@
 	popup.set_content(dat)
 	popup.open()
 
+
+/datum/preferences/proc/export_prefs_json()
+	if(!path)				return 0
+	if(!fexists(path))		return 0
+	var/savefile/S = new /savefile(path)
+	if(!S)					return 0
+	S.cd = "/"

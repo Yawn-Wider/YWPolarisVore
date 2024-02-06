@@ -275,6 +275,7 @@ var/list/preferences_datums = list()
 		dat += "<a href='?src=\ref[src];reload=1'>Reload slot</a> - "
 		dat += "<a href='?src=\ref[src];resetslot=1'>Reset slot</a> - "
 		dat += "<a href='?src=\ref[src];copy=1'>Copy slot</a>"
+		dat += "<a href='?src=\ref[src];export=1'>Save &amp; export slot</a>" // YW Edit - "Add option to export character to JSON"
 
 	else
 		dat += "Please create an account to save your preferences."
@@ -383,6 +384,13 @@ var/list/preferences_datums = list()
 		// User closed preferences window, cleanup anything we need to.
 		clear_character_previews()
 		return 1
+	// YW Edit - "Add option to export character to JSON"
+	else if(href_list["export"])
+		save_preferences()
+		save_character()
+		export_prefs_json()
+		return 1
+	// YW Edit End
 	else
 		return 0
 

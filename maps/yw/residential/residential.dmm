@@ -62,32 +62,32 @@
 /obj/item/clothing/under/pants/greyjeans,
 /obj/structure/table/hardwoodtable,
 /obj/item/clothing/suit/nerdshirt{
-	pixel_y = -11;
-	pixel_x = -11
+	pixel_x = -11;
+	pixel_y = -11
 	},
 /obj/item/clothing/suit/storage/flannel/aqua{
-	pixel_y = -9;
-	pixel_x = -3
+	pixel_x = -3;
+	pixel_y = -9
 	},
 /obj/item/clothing/ears/earmuffs/headphones,
 /obj/machinery/light{
 	dir = 1
 	},
 /obj/item/weapon/storage/fancy/cigarettes/killthroat{
-	pixel_y = 9;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 9
 	},
 /obj/machinery/light/small/fairylights{
 	pixel_y = 15
 	},
 /obj/item/weapon/haircomb{
-	pixel_y = 8;
-	pixel_x = -5
+	pixel_x = -5;
+	pixel_y = 8
 	},
 /obj/item/modular_computer/laptop/preset/custom_loadout/elite{
 	icon_state = "elite-closed";
-	pixel_y = -6;
-	pixel_x = 14
+	pixel_x = 14;
+	pixel_y = -6
 	},
 /obj/structure/sign/poster{
 	dir = 1;
@@ -114,6 +114,20 @@
 	},
 /turf/space,
 /area/space)
+"az" = (
+/obj/machinery/media/jukebox,
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a"
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 4
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "aA" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -200,13 +214,31 @@
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
+"aV" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/item/weapon/reagent_containers/food/condiment/hotsauce,
+/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/obj/item/weapon/reagent_containers/food/condiment/enzyme,
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "aZ" = (
 /turf/space,
 /area/space)
+"ba" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 1
+	},
+/obj/effect/decal/shadow/floor,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "bg" = (
 /obj/machinery/door/airlock/silver,
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/eris/white,
 /area/residential/mroom4)
 "bh" = (
 /obj/machinery/door/airlock/silver,
@@ -244,6 +276,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/residential/room6)
+"bv" = (
+/obj/structure/table/standard,
+/obj/item/weapon/soap/nanotrasen,
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/obj/item/weapon/towel{
+	pixel_x = -2;
+	pixel_y = 9
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/residential/mroom4)
 "bx" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -253,6 +297,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/docking_lobby)
+"bz" = (
+/obj/structure/bed/chair/office/light{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "bG" = (
 /obj/machinery/light,
 /obj/structure/table/leadreinforcedwood,
@@ -261,6 +318,21 @@
 "bK" = (
 /turf/simulated/wall,
 /area/residential/mroom6)
+"bL" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 8
+	},
+/obj/structure/bed/chair/sofa/corp{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 10
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "bM" = (
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled/white,
@@ -354,6 +426,16 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"cr" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "ct" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -393,6 +475,22 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/space)
+"cz" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "cE" = (
 /obj/machinery/vending/cola,
 /turf/simulated/floor/wood,
@@ -432,7 +530,15 @@
 	name = "RM4";
 	req_access = list(8104)
 	},
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/corridors)
+"cO" = (
+/obj/machinery/door/firedoor/glass,
+/obj/machinery/door/airlock{
+	name = "RM4";
+	req_access = list(8104)
+	},
+/turf/simulated/floor/tiled/eris/white,
 /area/residential/corridors)
 "cP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -496,6 +602,40 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
+"dh" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/window/reinforced/tinted{
+	desc = "A thin sheet of metal used to separate rooms.";
+	dir = 8;
+	name = "thin wall"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/structure/closet/secure_closet/freezer/meat{
+	locked = 0
+	},
+/obj/item/weapon/storage/box/donkpockets/spicy,
+/obj/item/weapon/storage/box/donkpockets/spicy,
+/obj/item/weapon/storage/box/donkpockets/spicy,
+/obj/item/weapon/storage/box/donkpockets,
+/obj/item/weapon/storage/box/donkpockets,
+/obj/item/weapon/storage/box/donkpockets,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/storage/fancy/egg_box,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/drinks/milk,
+/obj/item/weapon/reagent_containers/food/drinks/milk,
+/obj/item/weapon/reagent_containers/food/drinks/milk,
+/obj/item/weapon/reagent_containers/food/drinks/milk,
+/obj/item/weapon/reagent_containers/food/drinks/milk,
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "di" = (
 /obj/machinery/light_switch{
 	dir = 8;
@@ -552,6 +692,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
+"dC" = (
+/obj/effect/floor_decal/spline/fancy/wood/corner{
+	color = "#7a412a";
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "dH" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -588,6 +735,28 @@
 /obj/machinery/door/airlock,
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
+"dR" = (
+/obj/effect/floor_decal/carpet/blue,
+/obj/effect/floor_decal/carpet/blue{
+	dir = 8
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 10
+	},
+/obj/structure/bed/chair/sofa/corp/corner{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
+"dT" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/curtain/black,
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "dU" = (
 /obj/structure/simple_door/wood,
 /turf/simulated/floor/carpet,
@@ -609,6 +778,14 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"ex" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/appliance/cooker/oven,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "eB" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
@@ -631,6 +808,12 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
 /turf/simulated/floor/plating,
 /area/residential/powerroom)
+"eK" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "eL" = (
 /obj/structure/handrail,
 /turf/simulated/floor/carpet/bcarpet,
@@ -668,6 +851,18 @@
 /obj/effect/forcefield,
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
+"eU" = (
+/obj/structure/table/steel,
+/obj/item/robot_parts/robot_component/diagnosis_unit{
+	desc = "A computer sensor used to scan electronic signals.";
+	name = "oscilloscope"
+	},
+/obj/machinery/light/small/neon/nif1{
+	pixel_x = 2;
+	pixel_y = 27
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "eV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -808,6 +1003,21 @@
 /obj/structure/closet/cabinet,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"fI" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/reagent_containers/food/condiment/carton/flour,
+/obj/item/weapon/material/kitchen/rollingpin,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "fK" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -817,6 +1027,24 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
+"fO" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/structure/window/reinforced/tinted{
+	desc = "A thin sheet of metal used to separate rooms.";
+	dir = 8;
+	name = "thin wall"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/machinery/microwave/advanced,
+/obj/structure/sign/poster{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "fP" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -861,6 +1089,21 @@
 /obj/item/weapon/material/knife,
 /turf/simulated/floor/wood,
 /area/residential/room7)
+"gg" = (
+/obj/effect/floor_decal/carpet/blue,
+/obj/effect/floor_decal/carpet/blue{
+	dir = 4
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 6
+	},
+/obj/structure/table/woodentable,
+/obj/structure/flora/pottedplant{
+	icon_state = "plant-10";
+	pixel_y = 11
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "gi" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 1
@@ -919,6 +1162,11 @@
 /obj/structure/table/rack,
 /turf/simulated/floor/wood,
 /area/residential/mansion)
+"gu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "gx" = (
 /obj/structure/closet/secure_closet/freezer/fridge,
 /obj/machinery/light{
@@ -1047,6 +1295,26 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom4)
+"gX" = (
+/obj/effect/decal/shadow/floor,
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	pixel_y = -4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/effect/decal/shadow,
+/obj/effect/decal/shadow,
+/obj/effect/decal/shadow,
+/obj/effect/decal/shadow,
+/obj/effect/decal/shadow,
+/obj/effect/decal/shadow,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "ha" = (
 /obj/structure/sink{
 	dir = 4;
@@ -1077,12 +1345,34 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/docking_lobby)
+"hh" = (
+/obj/effect/floor_decal/carpet/blue,
+/obj/structure/bed/chair/sofa/corp{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "hi" = (
 /obj/structure/toilet{
 	dir = 4
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
+"hk" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a"
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"hm" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "hq" = (
 /obj/machinery/door/airlock{
 	name = "RS4";
@@ -1150,6 +1440,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/room14)
+"hS" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "hV" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1266,6 +1560,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"iC" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "iG" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -1310,8 +1611,8 @@
 /obj/effect/floor_decal/borderfloorwhite,
 /obj/machinery/light,
 /obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
-	pixel_y = -4;
-	pixel_x = -11
+	pixel_x = -11;
+	pixel_y = -4
 	},
 /obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = -6;
@@ -1328,7 +1629,7 @@
 	dir = 4
 	},
 /obj/machinery/door/firedoor/glass,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/tiled/eris/white,
 /area/residential/mroom4)
 "ja" = (
 /obj/structure/grille,
@@ -1370,6 +1671,28 @@
 /obj/structure/closet/emcloset,
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
+"jk" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 8;
+	layer = 2.5
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"jp" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/structure/filingcabinet/chestdrawer,
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "jr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1384,6 +1707,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"jx" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "jA" = (
 /obj/structure/table/steel_reinforced,
 /obj/machinery/light{
@@ -1404,6 +1736,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/docking_lobby)
+"jJ" = (
+/obj/structure/table/steel,
+/obj/item/prop/alien/junk{
+	desc = "An artifact retrieved from Elise's foray into a crashed alien vessel."
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "jL" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/shorts/khaki,
@@ -1513,6 +1852,11 @@
 /obj/machinery/door/firedoor/glass/hidden,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"kB" = (
+/obj/structure/table/woodentable,
+/obj/item/device/flashlight/lamp/green,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "kC" = (
 /obj/structure/cable{
 	d1 = 4;
@@ -1599,6 +1943,17 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"ls" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/machinery/appliance/cooker/grill,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/machinery/chemical_dispenser/bar_coffee/full{
+	pixel_y = 29
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "lu" = (
 /obj/structure/coatrack,
 /obj/item/clothing/head/det/grey,
@@ -1618,6 +1973,15 @@
 /obj/machinery/vending/coffee,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"lE" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "lF" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1657,6 +2021,25 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/white,
 /area/residential/room6)
+"lL" = (
+/obj/structure/window/reinforced{
+	dir = 1;
+	health = 1e+006
+	},
+/obj/machinery/door/window/southright{
+	dir = 8;
+	name = "Shower"
+	},
+/obj/machinery/shower{
+	dir = 8;
+	pixel_y = -7
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 4
+	},
+/obj/effect/floor_decal/rust,
+/turf/simulated/floor/tiled/freezer,
+/area/residential/mroom4)
 "lN" = (
 /turf/simulated/wall,
 /area/residential/room14)
@@ -1673,11 +2056,25 @@
 /obj/machinery/optable,
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
+"mc" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/item/frame,
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "mg" = (
 /obj/structure/table/marble,
 /obj/machinery/reagentgrinder,
 /turf/simulated/floor/lino,
 /area/residential/mansion)
+"mk" = (
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "ml" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -1740,6 +2137,16 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room7)
+"mA" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 6
+	},
+/obj/effect/mist,
+/turf/simulated/floor/water/hotspring{
+	desc = "A Hot Tub kept at a comfortably hot temperature.";
+	name = "Hot Tub"
+	},
+/area/residential/mroom4)
 "mE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1777,6 +2184,23 @@
 /obj/machinery/computer/arcade,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"mK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/effect/decal/shadow/floor,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "mL" = (
 /obj/machinery/door/airlock/gold{
 	name = "Mansion";
@@ -1818,6 +2242,15 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/space)
+"mX" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a"
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "nc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -1865,6 +2298,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
+"nl" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "nr" = (
 /obj/effect/forcefield,
 /obj/machinery/door/airlock/engineering,
@@ -1957,6 +2399,18 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/residential/room6)
+"nO" = (
+/obj/structure/railing,
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	pixel_y = -4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "nQ" = (
 /obj/effect/floor_decal/corner/blue/border{
 	dir = 4
@@ -2015,6 +2469,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/room3)
+"oj" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "om" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -2103,6 +2570,25 @@
 /obj/structure/table/leadreinforcedwood,
 /turf/simulated/floor/wood,
 /area/residential/room7)
+"pc" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 4
+	},
+/obj/effect/decal/shadow/floor,
+/obj/effect/floor_decal/carpet/blue{
+	dir = 5
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/station_slot_machine{
+	desc = "A gambling machine owned by NanoTrasen, designed to take Thalers as opposed to casino chips. This one is scratched on the bottom... was it stolen?"
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "pi" = (
 /obj/structure/bed/chair/sofa/left/black{
 	dir = 1
@@ -2137,12 +2623,12 @@
 	},
 /obj/effect/floor_decal/corner_oldtile/gray/diagonal,
 /obj/item/weapon/storage/pill_bottle/citalopram{
-	pixel_y = 2;
-	pixel_x = -6
+	pixel_x = -6;
+	pixel_y = 2
 	},
 /obj/item/weapon/storage/pill_bottle/tramadol{
-	pixel_y = -1;
-	pixel_x = 6
+	pixel_x = 6;
+	pixel_y = -1
 	},
 /obj/structure/mirror/raider{
 	pixel_y = -29
@@ -2254,6 +2740,14 @@
 /obj/item/weapon/reagent_containers/food/drinks/dry_ramen,
 /turf/simulated/floor/lino,
 /area/residential/room13)
+"pR" = (
+/obj/structure/table/woodentable,
+/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/sol{
+	pixel_y = 13
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "pW" = (
 /obj/machinery/light{
 	dir = 1
@@ -2270,6 +2764,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom3)
+"qf" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 8
+	},
+/obj/structure/bed/chair/sofa/corp/left{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "qj" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -2312,6 +2815,16 @@
 /obj/machinery/meter,
 /turf/simulated/floor/plating,
 /area/residential/powerroom)
+"qz" = (
+/obj/machinery/door/airlock/silver,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/residential/mroom4)
 "qE" = (
 /obj/structure/bed/double/padded,
 /obj/item/weapon/bedsheet/bluedouble,
@@ -2337,11 +2850,15 @@
 "qL" = (
 /obj/structure/table/fancyblack,
 /obj/item/champagne{
-	pixel_y = 9;
-	pixel_x = -10
+	pixel_x = -10;
+	pixel_y = 9
 	},
 /turf/simulated/floor/wood,
 /area/residential/room13)
+"qN" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "qR" = (
 /obj/structure/bookcase{
 	name = "bookcase (Reference)"
@@ -2419,6 +2936,42 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"rA" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/snacks/chipplate/nachos,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"rB" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/item/weapon/deck/cards,
+/obj/item/weapon/deck/cah/black,
+/obj/item/weapon/deck/cah,
+/obj/item/weapon/deck/tarot,
+/obj/item/weapon/storage/pill_bottle/dice,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/item/weapon/storage/pill_bottle/dice_nerd,
+/obj/structure/closet/walllocker_double{
+	pixel_y = 31
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"rF" = (
+/obj/structure/table/woodentable,
+/obj/item/clothing/glasses/meson/aviator,
+/obj/item/weapon/paper_bin,
+/obj/item/weapon/pen/blue,
+/obj/item/weapon/reagent_containers/food/drinks/glass2/coffeemug/black{
+	desc = "A sleek black coffee mug with a blue lion in profile printed on it. An old earth souvenir from a Museum.";
+	pixel_y = 14
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "rJ" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
@@ -2498,6 +3051,34 @@
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"sl" = (
+/obj/structure/extinguisher_cabinet{
+	dir = 8;
+	pixel_x = 30
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
+"sp" = (
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"ss" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "sv" = (
 /obj/machinery/recharge_station,
 /turf/simulated/floor/bluegrid,
@@ -2685,6 +3266,9 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/room3)
+"tM" = (
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "tN" = (
 /turf/simulated/floor/plating,
 /area/residential/mroom4)
@@ -2693,6 +3277,23 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor,
 /area/residential/corridors)
+"tS" = (
+/obj/effect/floor_decal/steeldecal/steel_decals_central7{
+	dir = 1
+	},
+/obj/machinery/pump{
+	anchored = 1;
+	desc = "An electromechanical harness for doing all sorts of arcane things with machinery.";
+	name = "diagnostic harness";
+	pixel_x = -14;
+	pixel_y = 10
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
+"tY" = (
+/obj/effect/floor_decal/carpet/blue,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "ue" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2761,6 +3362,19 @@
 /obj/structure/table/rack,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
+"uB" = (
+/obj/structure/table/woodentable{
+	pixel_x = -15;
+	pixel_y = -16
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
+"uE" = (
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/residential/mroom4)
 "uG" = (
 /obj/machinery/light_switch{
 	dir = 4;
@@ -2768,6 +3382,20 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/room12)
+"uJ" = (
+/obj/structure/bed/chair/wood{
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a"
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/machinery/light,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "uK" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -2787,6 +3415,19 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/residential/room1)
+"uP" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "uR" = (
 /obj/structure/table/woodentable,
 /obj/item/weapon/flame/candle,
@@ -2840,6 +3481,16 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room1)
+"vF" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 4
+	},
+/obj/structure/dogbed,
+/mob/living/simple_mob/animal/passive/fox/renault{
+	desc = "Renault, Elise's trustworthy fox. I wonder what it says?"
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "vP" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -2881,6 +3532,30 @@
 "we" = (
 /turf/simulated/wall,
 /area/residential/mansion)
+"wf" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 5
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"wh" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "wk" = (
 /obj/structure/table/wooden_reinforced,
 /obj/item/weapon/flame/candle/candelabra/everburn,
@@ -2900,6 +3575,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"ws" = (
+/obj/structure/sign/directions/stairs_down{
+	pixel_x = 28;
+	pixel_y = -11
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "wu" = (
 /obj/structure/table/marble,
 /turf/simulated/floor/lino,
@@ -2986,6 +3674,15 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"xa" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/on{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "xb" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -2998,6 +3695,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"xe" = (
+/obj/effect/floor_decal/borderfloor{
+	dir = 8;
+	layer = 2.5
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "xk" = (
 /obj/structure/bed/chair/comfy/beige,
 /turf/simulated/floor/holofloor/wood,
@@ -3130,9 +3834,29 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/plating,
 /area/residential/docking_lobby)
+"yj" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "yk" = (
 /turf/simulated/floor/holofloor/wood,
 /area/residential/mansion)
+"yp" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 10
+	},
+/turf/simulated/floor/water/hotspring{
+	desc = "A Hot Tub kept at a comfortably hot temperature.";
+	name = "Hot Tub"
+	},
+/area/residential/mroom4)
 "yq" = (
 /obj/machinery/door/airlock/gold{
 	name = "Mansion";
@@ -3193,6 +3917,22 @@
 /obj/machinery/light,
 /turf/simulated/floor/wood,
 /area/residential/room1)
+"yI" = (
+/obj/machinery/light/small,
+/obj/machinery/alarm{
+	dir = 8;
+	pixel_x = 24
+	},
+/obj/structure/mopbucket,
+/obj/item/weapon/mop,
+/obj/item/weapon/reagent_containers/glass/bucket,
+/obj/item/weapon/reagent_containers/spray/cleaner,
+/obj/structure/extinguisher_cabinet{
+	dir = 4;
+	pixel_x = -30
+	},
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/mroom4)
 "yL" = (
 /obj/machinery/door/airlock/silver,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -3204,6 +3944,13 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/residential/mroom2)
+"yS" = (
+/obj/effect/floor_decal/carpet/blue,
+/obj/structure/bed/chair/sofa/corp/left{
+	dir = 1
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "yT" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/shuttle/engine/propulsion,
@@ -3215,6 +3962,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"yX" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "yZ" = (
 /turf/simulated/floor/lino,
 /area/residential/room13)
@@ -3242,6 +3996,11 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/residential/room2)
+"zj" = (
+/obj/structure/bed/double/padded,
+/obj/item/weapon/bedsheet/cedouble,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "zr" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
@@ -3349,6 +4108,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
+"zY" = (
+/obj/structure/flora/pottedplant{
+	icon_state = "plant-22"
+	},
+/obj/effect/floor_decal/carpet/blue,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "zZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3408,6 +4174,27 @@
 /mob/living/bot/medbot,
 /turf/simulated/floor/tiled/white,
 /area/residential/medbay)
+"AB" = (
+/obj/effect/decal/shadow/floor,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/inactive_stairs/east/top{
+	icon_scale_x = 2;
+	icon_scale_y = 2;
+	pixel_x = 0
+	},
+/obj/structure/inactive_stairs/east/top{
+	icon_scale_x = 2;
+	icon_scale_y = 2;
+	pixel_x = 0;
+	pixel_y = 16
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "AG" = (
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
@@ -3416,8 +4203,8 @@
 /obj/structure/table/fancyblack,
 /obj/item/weapon/material/ashtray/glass,
 /obj/item/weapon/bone/skull{
-	pixel_y = 5;
-	pixel_x = 9
+	pixel_x = 9;
+	pixel_y = 5
 	},
 /obj/item/weapon/bone,
 /turf/simulated/floor/wood,
@@ -3589,6 +4376,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/residential/room13)
+"BM" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a"
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "BO" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -3681,10 +4480,44 @@
 /obj/item/weapon/soap/nanotrasen,
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
+"Cr" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/weapon/material/kitchen/utensil/fork{
+	pixel_x = -5
+	},
+/obj/item/weapon/material/knife/table,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "Cu" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
+"Cv" = (
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a"
+	},
+/obj/item/weapon/material/kitchen/utensil/spoon,
+/obj/item/weapon/material/kitchen/utensil/fork{
+	pixel_x = -5
+	},
+/obj/item/weapon/material/knife/table,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"Cy" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "CB" = (
 /obj/structure/bed/chair/sofa/right/black{
 	dir = 1
@@ -3764,10 +4597,43 @@
 /obj/item/device/flashlight/lamp,
 /turf/simulated/floor/wood,
 /area/residential/room1)
+"CT" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "CX" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"CY" = (
+/obj/structure/bed/chair/wood{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"Dd" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 5
+	},
+/obj/effect/decal/shadow/floor,
+/turf/simulated/floor/water/hotspring{
+	desc = "A Hot Tub kept at a comfortably hot temperature.";
+	name = "Hot Tub"
+	},
+/area/residential/mroom4)
 "Dg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -3833,6 +4699,27 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/residential/room8)
+"Dw" = (
+/obj/machinery/media/jukebox,
+/obj/structure/sign/poster{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
+"Dz" = (
+/obj/structure/table/woodentable,
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/item/modular_computer/laptop/preset/custom_loadout/advanced,
+/obj/machinery/newscaster{
+	layer = 3.3;
+	pixel_x = 27
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "DF" = (
 /obj/structure/closet/cabinet,
 /obj/structure/window/basic{
@@ -4001,6 +4888,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"Er" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "Es" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -4064,6 +4964,20 @@
 "EG" = (
 /turf/simulated/wall,
 /area/residential/powerroom)
+"EL" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 8
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 9
+	},
+/obj/effect/decal/shadow/floor,
+/obj/effect/decal/shadow,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "EM" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -4129,6 +5043,28 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/powerroom)
+"Fg" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker,
+/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+	pixel_x = 4;
+	pixel_y = 4
+	},
+/obj/item/weapon/material/knife/butch{
+	pixel_x = -7;
+	pixel_y = 5
+	},
+/obj/structure/window/reinforced/tinted{
+	desc = "A thin sheet of metal used to separate rooms.";
+	dir = 8;
+	name = "thin wall"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "Fi" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
@@ -4142,6 +5078,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/powerroom)
+"Fn" = (
+/obj/structure/table/steel,
+/obj/item/weapon/hand_labeler{
+	pixel_x = -18;
+	pixel_y = 7
+	},
+/obj/item/robot_parts/robot_component/binary_communication_device,
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "Fr" = (
 /turf/simulated/floor/plating,
 /area/residential/mroom5)
@@ -4337,6 +5282,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom1)
+"GR" = (
+/obj/machinery/door/airlock/silver,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "GS" = (
 /obj/structure/table/rack,
 /obj/item/clothing/under/pj/red,
@@ -4438,6 +5389,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"Hw" = (
+/obj/structure/grille,
+/obj/machinery/door/firedoor/glass,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "Hy" = (
 /obj/structure/closet/cabinet,
 /obj/item/clothing/under/shorts/jeans,
@@ -4655,6 +5612,16 @@
 	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/residential/room13)
+"Ix" = (
+/obj/effect/floor_decal/spline/fancy/wood/three_quarters,
+/obj/machinery/shieldgen{
+	anchored = 1;
+	desc = "An advanced part of an experimental reactor core control system.";
+	name = "Negative-Variance Power Regulator";
+	pixel_y = 7
+	},
+/turf/simulated/floor/tiled/techfloor/grid,
+/area/residential/mroom4)
 "IB" = (
 /obj/structure/sign/double/barsign{
 	pixel_x = -2;
@@ -4739,6 +5706,14 @@
 	},
 /turf/simulated/floor/tiled/eris/white,
 /area/residential/lobby)
+"Jp" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/sink/kitchen{
+	dir = 1;
+	pixel_y = -9
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "Jw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/wood,
@@ -4760,6 +5735,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"JK" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor{
+	dir = 1
+	},
+/obj/effect/decal/shadow/floor,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "JL" = (
 /obj/structure/bed/chair{
 	dir = 8
@@ -4828,6 +5816,20 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/tiled/white,
 /area/residential/mansion)
+"Kg" = (
+/obj/machinery/door/airlock/silver,
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "Kj" = (
 /turf/simulated/floor/lino,
 /area/residential/room1)
@@ -4868,6 +5870,13 @@
 /obj/structure/table/leadreinforcedwood,
 /turf/simulated/floor/bluegrid,
 /area/residential/room7)
+"Kx" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 "Ky" = (
 /obj/machinery/door/airlock{
 	name = "Unit 3"
@@ -4896,6 +5905,51 @@
 /obj/structure/curtain/black,
 /turf/simulated/floor/plating,
 /area/residential/room7)
+"KM" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 4
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 5
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/structure/closet/crate/chest{
+	anchored = 1
+	},
+/obj/item/weapon/reagent_containers/food/drinks/bottle/peppermintschnapps,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/peppermintschnapps,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/jager,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/gin,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/gin,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/specialwhiskey,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/tequilla,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/whiskey,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/wine,
+/obj/item/weapon/reagent_containers/food/drinks/bottle/wine,
+/obj/item/weapon/reagent_containers/food/drinks/metaglass,
+/obj/item/weapon/reagent_containers/food/drinks/metaglass,
+/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint,
+/obj/item/weapon/reagent_containers/food/drinks/metaglass/metapint,
+/obj/item/weapon/handcuffs/legcuffs/fuzzy,
+/obj/item/weapon/handcuffs/fuzzy,
+/obj/item/clothing/mask/muzzle/ballgag/ringgag,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 5
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "KQ" = (
 /obj/structure/table/wooden_reinforced,
 /turf/simulated/floor/wood,
@@ -4918,6 +5972,28 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"KU" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/light{
+	dir = 1
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	dir = 9
+	},
+/obj/effect/decal/shadow/floor,
+/obj/effect/mist,
+/turf/simulated/floor/water/hotspring{
+	desc = "A Hot Tub kept at a comfortably hot temperature.";
+	name = "Hot Tub"
+	},
+/area/residential/mroom4)
 "KX" = (
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/supply,
@@ -4931,12 +6007,12 @@
 /obj/item/clothing/shoes/boots/jackboots/knee{
 	desc = "A pair of very heavy duty boots with silver spikes up and down the sides.";
 	name = "Spikey Boots";
-	pixel_y = 10;
-	pixel_x = 10
+	pixel_x = 10;
+	pixel_y = 10
 	},
 /obj/structure/coatrack{
-	pixel_y = 17;
-	pixel_x = -11
+	pixel_x = -11;
+	pixel_y = 17
 	},
 /obj/effect/decal/cleanable/dirt,
 /obj/machinery/light{
@@ -5056,6 +6132,23 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom6)
+"Mp" = (
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/structure/table/woodentable,
+/obj/item/clothing/head/wizard/fake{
+	desc = "A souvenir from when Elise was kidnapped by an evil Wizard";
+	name = "stolen wizard hat"
+	},
+/obj/item/weapon/coin/gold{
+	desc = "An old brass coin. Its center has been worn from years of anxious rubbing.";
+	name = "Weathered Coin";
+	pixel_x = -7;
+	pixel_y = 8
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "Mq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -5147,6 +6240,37 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/corridors)
+"Nm" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/effect/floor_decal/carpet/blue{
+	dir = 1
+	},
+/obj/structure/bookcase,
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/item/weapon/book/manual/bar_guide,
+/obj/item/weapon/book/manual/supermatter_engine{
+	desc = "By Elise Maschenny. This is the Author's Copy, and seems to contain many notes scrawled in the margins."
+	},
+/obj/item/weapon/book/manual/barman_recipes,
+/obj/item/weapon/book/manual/command_guide,
+/obj/item/weapon/book/manual/engineering_hacking,
+/obj/item/weapon/book/manual/engineering_particle_accelerator,
+/obj/item/weapon/book/manual/engineering_construction,
+/obj/item/weapon/book/manual/engineering_guide,
+/obj/item/weapon/book/manual/engineering_singularity_safety,
+/obj/item/weapon/book/manual/evaguide,
+/obj/item/weapon/book/manual/rotary_electric_generator,
+/obj/item/weapon/book/manual/rust_engine,
+/obj/item/weapon/book/manual/standard_operating_procedure,
+/obj/item/weapon/book/manual/tesla_engine,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "Ns" = (
 /obj/structure/bookcase,
 /turf/simulated/floor/holofloor/wood,
@@ -5216,6 +6340,19 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"NH" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "NI" = (
 /obj/machinery/light_switch{
 	dir = 4;
@@ -5320,6 +6457,43 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/space)
+"On" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a"
+	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"Oo" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"Op" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/floor_decal/borderfloor/corner{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "Or" = (
 /obj/structure/table/woodentable,
 /obj/machinery/light{
@@ -5570,6 +6744,11 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
+"PU" = (
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/atmospherics/unary/vent_pump/on,
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "PZ" = (
 /turf/simulated/wall,
 /area/residential/mroom5)
@@ -5691,6 +6870,30 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/mroom1)
+"QO" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/paper_bin{
+	pixel_x = -3;
+	pixel_y = 7
+	},
+/obj/item/weapon/pen/red{
+	pixel_x = -5;
+	pixel_y = -1
+	},
+/obj/item/weapon/pen/blue,
+/obj/item/weapon/folder/red,
+/obj/item/weapon/folder/white,
+/obj/item/weapon/folder/blue,
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/newscaster{
+	layer = 3.3;
+	pixel_x = 27
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "QQ" = (
 /obj/structure/curtain/black,
 /obj/item/weapon/stool/padded,
@@ -5718,6 +6921,19 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"Rb" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "Rc" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -5725,6 +6941,18 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"Rf" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a"
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"Rg" = (
+/obj/structure/bed/chair/office/light{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "Rl" = (
 /obj/structure/bookcase{
 	name = "bookcase (Adult)"
@@ -5776,6 +7004,11 @@
 /obj/item/modular_computer/laptop/preset/custom_loadout/elite,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
+"RQ" = (
+/obj/structure/bookcase,
+/obj/item/weapon/book/manual/security_space_law,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "RR" = (
 /obj/machinery/light,
 /obj/structure/disposalpipe/segment{
@@ -5804,6 +7037,25 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/powerroom)
+"RZ" = (
+/obj/structure/railing,
+/obj/structure/table/woodentable,
+/obj/structure/flora/pottedplant{
+	pixel_y = 12
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	pixel_y = -4
+	},
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 8
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 1
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "Sa" = (
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
@@ -5841,6 +7093,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/docking_lobby)
+"Sm" = (
+/obj/item/weapon/bedsheet/captaindouble,
+/obj/structure/bed/double/padded,
+/obj/item/toy/plushie/coffee_fox,
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "Sn" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -5902,6 +7160,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/space)
+"SD" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "SM" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
@@ -5972,6 +7239,15 @@
 "Td" = (
 /turf/simulated/wall,
 /area/residential/room9)
+"Tf" = (
+/obj/structure/toilet{
+	dir = 8
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/residential/mroom4)
 "Ti" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -6022,6 +7298,14 @@
 /obj/machinery/light/small,
 /turf/simulated/floor/plating,
 /area/space)
+"Tt" = (
+/obj/machinery/photocopier,
+/obj/effect/floor_decal/carpet/blue,
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "Tu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -6100,6 +7384,29 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/room14)
+"TU" = (
+/obj/machinery/door/airlock/silver,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
+"TV" = (
+/obj/structure/sink{
+	dir = 8;
+	pixel_x = -12;
+	pixel_y = -5
+	},
+/obj/structure/mirror{
+	dir = 4;
+	pixel_x = -25
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/turf/simulated/floor/tiled/freezer,
+/area/residential/mroom4)
 "TY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/wood,
@@ -6119,6 +7426,12 @@
 /obj/structure/simple_door/diamond,
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
+"Uk" = (
+/obj/machinery/vending/coffee{
+	dir = 8
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "Uo" = (
 /obj/machinery/power/apc{
 	dir = 1;
@@ -6212,6 +7525,22 @@
 /obj/structure/bed/chair/wood,
 /turf/simulated/floor/wood,
 /area/residential/room1)
+"Vj" = (
+/obj/structure/table/steel,
+/obj/item/device/electronic_assembly/large{
+	desc = "What does it do!?";
+	name = "Elise's Enigmatic Machine";
+	pixel_y = 13
+	},
+/obj/item/weapon/storage/bag/circuits/basic{
+	pixel_y = -7
+	},
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/item/clothing/ears/earmuffs/headphones,
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "Vl" = (
 /obj/machinery/alarm{
 	dir = 1;
@@ -6305,6 +7634,17 @@
 "Wl" = (
 /turf/simulated/floor/wood,
 /area/residential/lobby)
+"Wo" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 1
+	},
+/obj/effect/decal/shadow/floor,
+/obj/machinery/computer/security/telescreen/entertainment{
+	pixel_x = 16;
+	pixel_y = 27
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "Ws" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -6333,6 +7673,12 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
+"WD" = (
+/obj/machinery/holoposter{
+	pixel_y = 31
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "WG" = (
 /turf/simulated/floor/plating,
 /area/residential/powerroom)
@@ -6343,6 +7689,22 @@
 	},
 /turf/simulated/floor/plating,
 /area/residential/room9)
+"WN" = (
+/obj/machinery/door/airlock/silver,
+/turf/simulated/floor/tiled/eris/white,
+/area/residential/mroom4)
+"WO" = (
+/obj/structure/table/woodentable,
+/obj/item/weapon/storage/box/donut,
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/machinery/atmospherics/unary/vent_scrubber/on{
+	dir = 8
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "WQ" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -6414,6 +7776,15 @@
 	},
 /turf/simulated/floor/carpet,
 /area/residential/mansion)
+"Xq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 10
+	},
+/turf/simulated/floor/tiled/freezer,
+/area/residential/mroom4)
 "Xs" = (
 /obj/structure/closet,
 /obj/item/weapon/storage/box/lights/mixed,
@@ -6530,8 +7901,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/effect/floor_decal/spline/plain{
-	pixel_y = 29;
-	pixel_x = -1
+	pixel_x = -1;
+	pixel_y = 29
 	},
 /obj/machinery/door/airlock/silver{
 	name = "Kitchen"
@@ -6559,6 +7930,16 @@
 /obj/structure/table/marble,
 /turf/simulated/floor/lino,
 /area/residential/room2)
+"Ys" = (
+/obj/effect/floor_decal/carpet/blue{
+	dir = 4
+	},
+/obj/effect/floor_decal/carpet/blue,
+/obj/effect/floor_decal/carpet/blue{
+	dir = 6
+	},
+/turf/simulated/floor/carpet/bcarpet,
+/area/residential/mroom4)
 "Yu" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
@@ -6735,6 +8116,12 @@
 /obj/machinery/light/flamp/noshade,
 /turf/simulated/floor/reinforced,
 /area/residential/ship_bay)
+"ZF" = (
+/obj/machinery/cryopod/robot{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/residential/mroom4)
 "ZG" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/item/weapon/reagent_containers/glass/bucket,
@@ -6767,6 +8154,22 @@
 	},
 /turf/simulated/floor/wood,
 /area/residential/room6)
+"ZL" = (
+/obj/effect/floor_decal/spline/fancy/wood{
+	color = "#7a412a";
+	dir = 1
+	},
+/obj/structure/table/woodentable,
+/obj/item/weapon/towel{
+	pixel_x = -2;
+	pixel_y = 9
+	},
+/obj/item/weapon/towel{
+	pixel_x = -2;
+	pixel_y = 9
+	},
+/turf/simulated/floor/wood,
+/area/residential/mroom4)
 "ZM" = (
 /turf/simulated/floor/holofloor/tiled,
 /area/residential/docking_lobby)
@@ -6818,6 +8221,25 @@
 	},
 /turf/simulated/floor/tiled,
 /area/residential/corridors)
+"ZV" = (
+/obj/effect/floor_decal/corner/grey/diagonal,
+/obj/structure/table/standard,
+/obj/machinery/reagentgrinder,
+/obj/structure/window/reinforced/tinted{
+	desc = "A thin sheet of metal used to separate rooms.";
+	dir = 8;
+	name = "thin wall"
+	},
+/obj/effect/floor_decal/borderfloorwhite{
+	dir = 8
+	},
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/glass/beaker,
+/obj/item/weapon/reagent_containers/dropper,
+/turf/simulated/floor/tiled/white,
+/area/residential/mroom4)
 
 (1,1,1) = {"
 aZ
@@ -20855,7 +22277,7 @@ YI
 YI
 YI
 cM
-ad
+cO
 YI
 YI
 YI
@@ -21670,13 +23092,13 @@ Wi
 aZ
 aZ
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+jJ
+Vj
+ZF
+mc
+Nm
+Mp
+zj
 Wi
 aZ
 aZ
@@ -21832,14 +23254,14 @@ Wi
 aZ
 aZ
 Wi
+eU
 tN
 tN
-tN
-tN
-tN
-tN
-tN
-Wi
+PU
+KM
+vF
+Ys
+dT
 aZ
 aZ
 aZ
@@ -21994,14 +23416,14 @@ Wi
 aZ
 aZ
 Wi
+Fn
 tN
-tN
-tN
-tN
-tN
-tN
-tN
-Wi
+Ix
+qN
+Oo
+jx
+wf
+dT
 aZ
 aZ
 aZ
@@ -22156,14 +23578,14 @@ Wi
 aZ
 aZ
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-Wi
+Dw
+eK
+tS
+sl
+bz
+sp
+lE
+dT
 aZ
 aZ
 aZ
@@ -22318,13 +23740,13 @@ Wi
 Wi
 Wi
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+Wi
+Wi
+Wi
+Wi
+Dz
+rF
+lE
 Wi
 aZ
 aZ
@@ -22471,22 +23893,22 @@ aZ
 aZ
 aZ
 aZ
+dT
+KU
+yp
+mK
+iC
+cr
+uJ
 Wi
-tN
-tN
-cY
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+kB
+zY
+jp
+RQ
+Wi
+Wi
+Wi
+TU
 Wi
 aZ
 aZ
@@ -22633,23 +24055,23 @@ aZ
 aZ
 aZ
 aZ
+dT
+Dd
+mA
+JK
+sp
+Cr
+BM
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-Wi
+Sm
+tY
+Er
+gu
+GR
+uP
+RZ
+gX
+dT
 aZ
 aZ
 aZ
@@ -22796,22 +24218,22 @@ aZ
 aZ
 aZ
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+jk
+xe
+Op
+sp
+rA
+Cv
 Wi
+WD
+tY
+WO
+Rg
+Wi
+cz
+nO
+AB
+dT
 aZ
 aZ
 aZ
@@ -22958,22 +24380,22 @@ aZ
 aZ
 aZ
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+ZL
+sp
+nl
+sp
+CY
+hk
 Wi
+Uk
+Tt
+QO
+pR
+Wi
+oj
+ws
+Cy
+dT
 aZ
 aZ
 aZ
@@ -23120,21 +24542,21 @@ aZ
 aZ
 aZ
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+rB
+yj
+Rb
+yj
+dC
+xa
+Wi
+Wi
+Wi
+Wi
+Wi
+Wi
+Kg
+Wi
+Wi
 Wi
 aZ
 aZ
@@ -23282,21 +24704,21 @@ aZ
 aZ
 aZ
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+EL
+qf
+bL
+dR
+SD
+mk
+CT
+NH
+NH
+ss
+NH
+NH
+On
+WN
+yI
 Wi
 aZ
 aZ
@@ -23444,21 +24866,21 @@ aZ
 aZ
 aZ
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+Wo
+tM
+tM
+hh
+yX
+mX
+Wi
+fO
+Fg
+ZV
+dh
+Wi
+qz
+Wi
+Wi
 Wi
 aZ
 aZ
@@ -23606,21 +25028,21 @@ aZ
 aZ
 aZ
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+ba
+uB
+tM
+yS
+yX
+Rf
+Kx
+hS
+hS
+hS
+Jp
+Wi
+Xq
+TV
+uE
 Wi
 aZ
 aZ
@@ -23768,21 +25190,21 @@ aZ
 aZ
 aZ
 Wi
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
-tN
+pc
+hm
+hm
+gg
+wh
+az
+Wi
+ls
+ex
+aV
+fI
+Wi
+bv
+Tf
+lL
 Wi
 aZ
 aZ
@@ -23931,16 +25353,16 @@ aZ
 aZ
 Wi
 Wi
+dT
+dT
+dT
+dT
 Wi
 Wi
-Wi
-Wi
-Wi
-Wi
-Wi
-Wi
-Wi
-Wi
+Hw
+Hw
+Hw
+Hw
 Wi
 Wi
 Wi

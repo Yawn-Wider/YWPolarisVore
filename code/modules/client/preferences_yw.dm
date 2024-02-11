@@ -34,4 +34,39 @@
 	if(!fexists(path))		return 0
 	var/savefile/S = new /savefile(path)
 	if(!S)					return 0
+
+	if(tgui_alert(usr, "This will save and export all your character slots and user preferences to a file. Are you sure?","Export All",list("Yes","No"))=="No")
+		return
+
 	S.cd = "/"
+	var/save_json = rustg_savefile_to_json(S.ExportText())
+	var/datum/browser/popup = new(usr, "saveexport", "Save Export", 350, 380, src)
+	popup.set_content({"<script>
+	const raw = [save_json];
+	// Old browser, need to use blob builder
+	window.BlobBuilder = window.BlobBuilder 	 ||
+						window.WebKitBlobBuilder ||
+						window.MozBlobBuilder 	 ||
+						window.MSBlobBuilder;
+	var blob;
+	if (window.BlobBuilder) {
+		var bb = new BlobBuilder();
+		bb.append(JSON.stringify(raw, null, 2));
+		blob = bb.getBlob("application/pdf");
+	}
+	else {
+		window.alert("Failed to auto-download. Please copy-paste from the form in the window.");
+	}
+
+	if(blob) {
+		window.navigator.msSaveOrOpenBlob(blob, "save.json");
+	}
+	else {
+		window.alert("Failed to auto-download. Please copy-paste from the form in the window.");
+	}
+
+
+	</script>
+	<pre>[html_encode(save_json)]</pre>
+	"})
+	popup.open()

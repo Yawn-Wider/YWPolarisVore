@@ -10,7 +10,7 @@ env:
 jobs:
   file_tests:
     name: Run Linters
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04 # YW EDIT: 20.04 to 22.04
     steps:
       - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
@@ -36,7 +36,7 @@ jobs:
 
   dreamchecker:
     name: DreamChecker
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04 # YW EDIT: 20.04 to 22.04
     steps:
       - uses: actions/checkout@v4
 
@@ -71,7 +71,7 @@ jobs:
     # YW EDIT: end
     name: Integration Tests
     # needs: ['file_tests', 'dreamchecker']
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04 # YW EDIT: 20.04 to 22.04
     steps:
       - uses: actions/checkout@v4
       - name: Ensure +x on CI directory
@@ -83,11 +83,10 @@ jobs:
           path: $HOME/BYOND
           key: ${{ runner.os }}-byond
       - name: Install RUST_G Dependencies
-        # YW EDIT: "sudo apt install zlib1g-dev:i386 libssl-dev:i386" to "sudo apt install zlib1g-dev:i386 libssl-dev:i386 libc6"
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update || true
-          sudo apt install zlib1g-dev:i386 libssl-dev:i386 libc6
+          sudo apt install zlib1g-dev:i386 libssl-dev:i386
           ldd librust_g.so
       - name: Unit Tests
         run: |
@@ -129,7 +128,7 @@ jobs:
   tests_successful:
     name: Integration Tests
     needs: ['file_tests', 'dreamchecker', 'unit_tests']
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04 # YW EDIT: 20.04 to 22.04
     steps:
       - name: Report Success
         run: |

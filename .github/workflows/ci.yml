@@ -83,10 +83,11 @@ jobs:
           path: $HOME/BYOND
           key: ${{ runner.os }}-byond
       - name: Install RUST_G Dependencies
+        # YW EDIT: "sudo apt install zlib1g-dev:i386 libssl-dev:i386" to "sudo apt install zlib1g-dev:i386 libssl-dev:i386 libc6"
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update || true
-          sudo apt install zlib1g-dev:i386 libssl-dev:i386
+          sudo apt install zlib1g-dev:i386 libssl-dev:i386 libc6
           ldd librust_g.so
       - name: Unit Tests
         run: |

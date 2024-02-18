@@ -1,6 +1,13 @@
-import { Fragment } from 'inferno';
 import { useBackend } from '../backend';
-import { Box, Button, Dropdown, NumberInput, LabeledList, NoticeBox, Section } from '../components';
+import {
+  Box,
+  Button,
+  Dropdown,
+  LabeledList,
+  NoticeBox,
+  NumberInput,
+  Section,
+} from '../components';
 import { Window } from '../layouts';
 
 export const SuitCycler = (props) => {
@@ -18,7 +25,7 @@ export const SuitCycler = (props) => {
   }
 
   return (
-    <Window width={320} height={400} resizable>
+    <Window width={320} height={400}>
       <Window.Content>{subTemplate}</Window.Content>
     </Window>
   );
@@ -40,12 +47,13 @@ const SuitCyclerContent = (props) => {
   } = data;
 
   return (
-    <Fragment>
+    <>
       <Section
         title="Storage"
         buttons={
           <Button icon="lock" content="Lock" onClick={() => act('lock')} />
-        }>
+        }
+      >
         {!!(occupied && safeties) && (
           <NoticeBox>
             Biological entity detected in suit chamber. Please remove before
@@ -147,7 +155,7 @@ const SuitCyclerContent = (props) => {
           </LabeledList.Item>
         </LabeledList>
       </Section>
-    </Fragment>
+    </>
   );
 };
 

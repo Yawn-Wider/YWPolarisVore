@@ -64,6 +64,10 @@
 	name = "RM2 residential key"
 	access = list(8102)
 
+/obj/item/weapon/card/id/residential/rm4
+    name = "RM4 residential key"
+    access = list(8104)
+
 /obj/item/weapon/card/id/residential/mansion
 	name = "Mansion residential key"
 	access = list(8100)
@@ -146,6 +150,13 @@
 	description = "residential"
 	ckeywhitelist = list("")
 	character_name = list("")
+
+/datum/gear/fluff/res_key_rm4
+    path = /obj/item/weapon/card/id/residential/rm4
+    display_name = "RM4 keys"
+    description = "Residential keys for Large Room 4 on the Serenity"
+    ckeywhitelist = list("montessquio", "cryptidbun")
+    character_name = list("Elise Maschenny", "Sage Maschenny", "Muir Stormheil", "Alex Bettaschen", "Claire Glittertails")
 
 
 // SMALL KEYS

@@ -166,6 +166,11 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 				ignite()
 			update_icon()
 			. = TRUE
+/obj/machinery/atmospherics/binary/stationboiler/ui_assets(mob/user)
+	return list(
+		get_asset_datum(/datum/asset/spritesheet/station_boiler),
+	)
+
 /obj/machinery/atmospherics/binary/stationboiler/tgui_data(mob/user)
 	var/data[0]
 

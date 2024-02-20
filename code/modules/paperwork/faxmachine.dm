@@ -496,7 +496,6 @@ Extracted to its own procedure for easier logic handling with paper bundles.
  * Call the chat webhook to transmit a notification of a job request
  */
 /obj/machinery/photocopier/faxmachine/proc/message_chat_rolerequest(message_color, ping_name, reason, role) // YW EDIT: Adds rolerequest webhook
-	world << "It went through?"
 	SSwebhooks.send(
 		WEBHOOK_ROLEREQUEST,
 		list(

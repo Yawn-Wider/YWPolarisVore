@@ -3,10 +3,12 @@ CRYOGAIA_TURF_CREATE(/turf/simulated/open)
 /turf/simulated/open/cryogaia
 	CRYOGAIA_SET_ATMOS
 
+/*	Handled by parent now
 /turf/simulated/open/cryogaia/Initialize(mapload)
 	. = ..()
 	if(is_outdoors())
 		SSplanets.addTurf(src)
+*/
 
 CRYOGAIA_TURF_CREATE(/turf/simulated/floor)
 

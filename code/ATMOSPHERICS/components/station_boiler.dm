@@ -120,22 +120,20 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 		to_chat(user, "<span class='notice'>You cannot insert this item into \the [src]!</span>")
 		return
 
-/obj/machinery/atmospherics/binary/stationboiler/tgui_data(mob/user)
-	var/list/data = list(
-    "inputkpa" =  input_kpa,
-    "inputtemp" = input_temp,
-    "outputkpa" = output_kpa,
-    "outputemp" = outputtemp,
-    "wood" = wood,
-    "woodmax" = woodmax,
-    "timeleft" = timeleft,
-    )
+// Start of "TGUI stuff"
+/obj/machinery/atmospherics/binary/stationboiler/attack_ai(mob/user)
+	add_hiddenprint(user)
+	tgui_interact(user)
+
+/obj/machinery/atmospherics/binary/stationboiler/attack_hand(mob/user)
+	add_fingerprint(user)
+	tgui_interact(user)
 
 /obj/machinery/atmospherics/binary/stationboiler/tgui_interact(mob/user, datum/tgui/ui)
 	ui = SStgui.try_update_ui(user, src, ui)
-    if(!ui)
-        ui = new(user, src, "Station_boiler", name)
-        ui.open()
+	if(!ui)
+		ui = new(user, src, "StationBoiler", name)
+		ui.open()
 
 /obj/machinery/atmospherics/binary/stationboiler/tgui_act(action, params)
 	if(..())
@@ -147,11 +145,61 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 			var/matName = params["mat"]
 			if(!(matName in stored_material))
 				return
-			eject_materials(matName, 0)
+			var/choice = tgui_alert(usr, "Would you like to eject a stack, everything or a specific amount from the boiler ","Station Boiler - Eject",list("Stack","Everything","Specific Amount"))
+			switch(choice)
+				if("Stack")
+					eject_materials(matName, 0)
+					. = TRUE
+				if("Everything")
+					eject_materials(matName, -1)
+					. = TRUE
+				if("Specific Amount")
+					var/amount = tgui_input_number(usr, "How many logs would you like to Eject", "Station Boiler - Eject")
+					if(amount <= 0)
+						return
+					eject_materials(matName, amount)
+					. = TRUE
+
+		if("ignite")
+			var/matName = params["mat"]
+			if(!(matName in stored_material))
+				return
+			else
+				ignite()
+			update_icon()
 			. = TRUE
-		else if("ignite")
-            try_ignite()
-            . = TRUE
+/obj/machinery/atmospherics/binary/stationboiler/ui_assets(mob/user)
+	return list(
+		get_asset_datum(/datum/asset/spritesheet/station_boiler),
+	)
+
+/obj/machinery/atmospherics/binary/stationboiler/tgui_data(mob/user)
+	var/data[0]
+
+	var/materials_ui[0]
+	for(var/M in stored_material)
+		materials_ui[++materials_ui.len] = list(
+				"name" = M,
+				"display" = material_display_name(M),
+				"qty" = stored_material[M],
+				"max" = storage_capacity[M],
+				"percent" = (stored_material[M] / storage_capacity[M] * 100))
+	data["materials"] = materials_ui
+
+	#warn Implement this function properly before merging to master
+	data["timeleft"] = stationtime2text() // LOOK HERE WEEWOO >>>>>> REPLACE THIS WITH AN ACTUAL TIME CALC <<<<<< LOOK HERE WEEWOO
+
+	if(air1 && network1 && node1)
+		data["input"] = list(
+			"pressure" = air1.return_pressure(),
+			"temp" = air1.temperature)
+	if(air2 && network2 && node2)
+		data["output"] = list(
+			"pressure" = air2.return_pressure(),
+			"temp" = air2.temperature)
+
+	return data
+// End of "TGUI stuff"
 
 /obj/machinery/atmospherics/binary/stationboiler/fall_apart(var/severity = 3, var/scatter = TRUE)
 	return //Invincible machine
@@ -175,3 +223,8 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 	stored_material[material_name] -= ejected * S.perunit
 	if(recursive && stored_material[material_name] >= S.perunit)
 		eject_materials(material_name, -1)
+
+// temp proc LOOK HERE WEEWOO >>>>>> REPLACE THIS WITH AN ACTUAL IGNITE PROC <<<<<< LOOK HERE WEEWOO
+#warn Implement this proc properly before merging to master
+/obj/machinery/atmospherics/binary/stationboiler/proc/ignite()
+	message_admins("BURN THE WORLD")

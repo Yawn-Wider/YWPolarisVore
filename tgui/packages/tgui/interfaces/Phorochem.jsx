@@ -1,5 +1,5 @@
-import { Button, LabeledList, ProgressBar, Section } from '../components';
 import { useBackend } from '../backend';
+import { Button, LabeledList, ProgressBar, Section } from '../components';
 import { Window } from '../layouts';
 
 export const Phorochem = (props) => {
@@ -58,7 +58,8 @@ export const Phorochem = (props) => {
                   good: [0.35, Infinity],
                   average: [0.15, 0.35],
                   bad: [-Infinity, 0.15],
-                }}>
+                }}
+              >
                 {phoron + ' Moles'}
               </ProgressBar>
             </LabeledList.Item>

@@ -29,7 +29,6 @@ var/list/preferences_datums = list()
 	var/tgui_fancy = TRUE
 	var/tgui_lock = FALSE
 	var/tgui_input_mode = FALSE			// All the Input Boxes (Text,Number,List,Alert)
-	var/tgui_input_lock = FALSE
 	var/tgui_large_buttons = TRUE
 	var/tgui_swapped_buttons = FALSE
 	var/obfuscate_key = FALSE
@@ -274,8 +273,9 @@ var/list/preferences_datums = list()
 		dat += "<a href='?src=\ref[src];save=1'>Save slot</a> - "
 		dat += "<a href='?src=\ref[src];reload=1'>Reload slot</a> - "
 		dat += "<a href='?src=\ref[src];resetslot=1'>Reset slot</a> - "
-		dat += "<a href='?src=\ref[src];copy=1'>Copy slot</a>"
-
+		dat += "<a href='?src=\ref[src];copy=1'>Copy slot</a> - "
+		dat += "<a href='?src=\ref[src];export=1'>Save &amp; export all</a>" // YW Edit - "Add option to export character to JSON"
+		//dat += "<a href='?src=\ref[src];import=1'>Import all</a>" 		 // YW Edit - "Add option to import character from JSON"
 	else
 		dat += "Please create an account to save your preferences."
 
@@ -383,6 +383,13 @@ var/list/preferences_datums = list()
 		// User closed preferences window, cleanup anything we need to.
 		clear_character_previews()
 		return 1
+	// YW Edit - "Add option to export character to JSON"
+	else if(href_list["export"])
+		save_preferences()
+		save_character()
+		export_prefs_json()
+		return 1
+	// YW Edit End
 	else
 		return 0
 

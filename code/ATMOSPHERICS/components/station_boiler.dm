@@ -9,10 +9,11 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 	bullet_vulnerability = 0
 	anchored = TRUE
 	density = TRUE
+	pixel_x = -32
 
 	var/is_active = FALSE
+	var/ignited = TRUE
 	var/target_heat_temperature = T20C //The temperature we want the pipes to be heated to
-	var/moles_to_process = 10
 	var/wood_per_process = 1SECOND
 	var/list/stored_material =  list(MAT_LOG = 1HOUR) //1 hour of mats free
 	var/list/storage_capacity = list(MAT_LOG = 4HOUR) //can hold enough for 4 hours
@@ -62,7 +63,8 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 				network2.update = 1
 
 	//STEP 2 - Check if we can heat the gas
-	if(stored_material[MAT_LOG] < wood_per_process) //Out of wood
+	if(!ignited || stored_material[MAT_LOG] < wood_per_process) //Out of wood
+		ignited = FALSE
 		is_active = 0
 		SSair.handle_planet_temperature_change = 1 //Start cooling down the world
 		update_icon()
@@ -118,6 +120,23 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 		to_chat(user, "<span class='notice'>You cannot insert this item into \the [src]!</span>")
 		return
 
+/obj/machinery/atmospherics/binary/stationboiler/tgui_data(mob/user)
+	var/list/data = list(
+    "inputkpa" =  input_kpa,
+    "inputtemp" = input_temp,
+    "outputkpa" = output_kpa,
+    "outputemp" = outputtemp,
+    "wood" = wood,
+    "woodmax" = woodmax,
+    "timeleft" = timeleft,
+    )
+
+/obj/machinery/atmospherics/binary/stationboiler/tgui_interact(mob/user, datum/tgui/ui)
+	ui = SStgui.try_update_ui(user, src, ui)
+    if(!ui)
+        ui = new(user, src, "Station_boiler", name)
+        ui.open()
+
 /obj/machinery/atmospherics/binary/stationboiler/tgui_act(action, params)
 	if(..())
 		return TRUE
@@ -130,9 +149,17 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 				return
 			eject_materials(matName, 0)
 			. = TRUE
+		else if("ignite")
+            try_ignite()
+            . = TRUE
 
 /obj/machinery/atmospherics/binary/stationboiler/fall_apart(var/severity = 3, var/scatter = TRUE)
 	return //Invincible machine
+
+/obj/machinery/atmospherics/binary/stationboiler/proc/try_ignite()
+	if(stored_material[MAT_LOG] >= wood_per_process)
+		ignited = TRUE
+		update_icon()
 
 // 0 amount = 0 means ejecting a full stack; -1 means eject everything
 /obj/machinery/atmospherics/binary/stationboiler/proc/eject_materials(var/material_name, var/amount)

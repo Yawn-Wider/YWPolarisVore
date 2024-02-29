@@ -998,6 +998,7 @@
 	dir = 8;
 	name = "Ports to Waste"
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "aLg" = (
@@ -2671,6 +2672,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "bLj" = (
@@ -5593,6 +5595,15 @@
 	temperature = 80
 	},
 /area/tcommsat/chamber)
+"duH" = (
+/obj/machinery/atmospherics/pipe/simple/visible/yellow{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "duL" = (
 /obj/machinery/alarm{
 	dir = 4;
@@ -10035,6 +10046,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "gfs" = (
@@ -17100,6 +17112,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
+"jSz" = (
+/obj/structure/table/steel,
+/turf/simulated/floor,
+/area/maintenance/starboard)
 "jSA" = (
 /obj/item/weapon/storage/fancy/cigar/havana,
 /obj/effect/decal/cleanable/dirt,
@@ -22594,6 +22610,9 @@
 	dir = 8;
 	pixel_x = 24
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "mOQ" = (
@@ -24137,6 +24156,17 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_2)
+"nOa" = (
+/obj/structure/cable/cyan{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "nOd" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -25717,6 +25747,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
+"oHf" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/fiftyspawner/log,
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "oHk" = (
 /obj/machinery/door/firedoor/border_only,
 /obj/machinery/door/airlock/maintenance/common,
@@ -26988,6 +27025,21 @@
 /obj/machinery/door/firedoor/border_only,
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
+"pmM" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable/cyan{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/turf/simulated/floor/tiled,
+/area/engineering/atmos/monitoring)
 "pmO" = (
 /obj/structure/cable{
 	icon_state = "1-8"
@@ -27194,6 +27246,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "ptn" = (
@@ -33406,6 +33459,9 @@
 	c_tag = "Atmospherics Monitoring";
 	dir = 8
 	},
+/obj/machinery/atmospherics/pipe/simple/heat_exchanging/junction{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
 "tdC" = (
@@ -35731,7 +35787,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "ulv" = (
-/obj/machinery/hologram/holopad,
+/obj/machinery/atmospherics/binary/stationboiler{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "ulC" = (
@@ -35742,6 +35800,17 @@
 /obj/random/maintenance/research,
 /turf/simulated/floor,
 /area/maintenance/starboard)
+"umk" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on{
+	dir = 1;
+	external_pressure_bound = 0;
+	external_pressure_bound_default = 0
+	},
+/turf/simulated/floor,
+/area/engineering/atmos)
 "umm" = (
 /obj/item/weapon/bedsheet/orange,
 /obj/structure/bed/padded,
@@ -36129,6 +36198,23 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/structure/lattice,
+/turf/simulated/floor,
+/area/engineering/atmos)
+"uxp" = (
+/obj/structure/window/reinforced,
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "uxA" = (
@@ -37963,6 +38049,7 @@
 /area/maintenance/maintroom6)
 "vAc" = (
 /obj/effect/decal/cleanable/liquid_fuel,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "vAe" = (
@@ -38135,6 +38222,7 @@
 	dir = 10
 	},
 /obj/machinery/light,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "vDS" = (
@@ -41221,6 +41309,12 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/security_lower)
+"xsp" = (
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 9
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "xss" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -41981,6 +42075,9 @@
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 6
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
@@ -42885,10 +42982,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/aft)
-"ymn" = (
-/obj/structure/table/steel,
-/turf/simulated/floor,
-/area/maintenance/starboard)
 
 (1,1,1) = {"
 qDW
@@ -51596,13 +51689,13 @@ hTc
 eoL
 uQm
 qZY
-gxC
-fVE
-mJw
-tUr
+duH
+avh
+kEa
+eUb
 vDE
-oQX
-bzw
+uxp
+umk
 cQY
 gNV
 ssg
@@ -51920,8 +52013,8 @@ gxC
 tUr
 tUr
 tUr
-tUr
-fVE
+lDX
+oHf
 mJw
 gQC
 uCk
@@ -52082,7 +52175,7 @@ mmf
 vLO
 tAW
 wvV
-tAW
+oMq
 xWQ
 sgn
 tAW
@@ -52244,7 +52337,7 @@ fVE
 tUr
 tUr
 szG
-tAW
+oMq
 tAW
 sgn
 tAW
@@ -52406,7 +52499,7 @@ fVE
 tUr
 tUr
 tUr
-tUr
+lDX
 tUr
 wgv
 khA
@@ -52561,14 +52654,14 @@ qeg
 uGU
 uNn
 tUr
-tUr
+rOu
 vAc
 gfh
 aKM
-tUr
-tUr
-tUr
-tUr
+eUb
+eUb
+eUb
+xsp
 tUr
 tUr
 gQC
@@ -52723,7 +52816,7 @@ sXH
 xMP
 psm
 bLf
-bLf
+nOa
 gjY
 lWq
 qzN
@@ -52880,7 +52973,7 @@ uNn
 irb
 pNW
 wzM
-doR
+pmM
 tds
 mOL
 uNn
@@ -62855,7 +62948,7 @@ eNq
 qjE
 wso
 whU
-ymn
+jSz
 kpQ
 eNq
 mwy

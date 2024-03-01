@@ -1,11 +1,11 @@
 import { useBackend } from '../backend';
 import {
-  Button,
-  LabeledList,
-  Section,
-  ColorBox,
-  NoticeBox,
   Box,
+  Button,
+  ColorBox,
+  LabeledList,
+  NoticeBox,
+  Section,
 } from '../components';
 import { Window } from '../layouts';
 
@@ -142,10 +142,10 @@ const BiochemEditor = (props) => {
             <LabeledList.Item label="Available reagents">
               {beakerchems.map((item) => (
                 <Button
-                  key={item.displayname}
+                  key={item.name}
                   fluid
-                  content={item.displayname}
-                  onClick={() => act('add_chem', { target_chem: item.name })}
+                  content={item.name}
+                  onClick={() => act('add_chem', { target_chem: item.id })}
                 />
               ))}
             </LabeledList.Item>

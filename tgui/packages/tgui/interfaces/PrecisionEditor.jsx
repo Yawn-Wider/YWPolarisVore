@@ -142,10 +142,10 @@ const BiochemEditor = (props) => {
             <LabeledList.Item label="Available reagents">
               {beakerchems.map((item) => (
                 <Button
-                  key={item.displayname}
+                  key={item.name}
                   fluid
-                  content={item.displayname}
-                  onClick={() => act('add_chem', { target_chem: item.name })}
+                  content={item.name}
+                  onClick={() => act('add_chem', { target_chem: item.id })}
                 />
               ))}
             </LabeledList.Item>

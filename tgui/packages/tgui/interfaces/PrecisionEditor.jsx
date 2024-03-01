@@ -1,11 +1,11 @@
 import { useBackend } from '../backend';
 import {
-  Button,
-  LabeledList,
-  Section,
-  ColorBox,
-  NoticeBox,
   Box,
+  Button,
+  ColorBox,
+  LabeledList,
+  NoticeBox,
+  Section,
 } from '../components';
 import { Window } from '../layouts';
 

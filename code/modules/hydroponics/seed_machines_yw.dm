@@ -18,13 +18,12 @@
 		"mhydrogen",
 		"steel",
 		"plasteel",
-    "hydrophoron",
-
-    "macrocillin",     //ban everything that's already banned in seed.dm except nutriment
-    "microcillin",
-    "normalcillin",
-    "adminordrazine",
-    "magicdust"
+		"hydrophoron",
+    	"macrocillin",     //ban everything that's already banned in seed.dm except nutriment
+		"microcillin",
+		"normalcillin",
+		"adminordrazine",
+		"magicdust"
 		)
 
 	var/list/datum/reagent/allowed_reagents = list() //compile the list of reagents we're allowed to splice in

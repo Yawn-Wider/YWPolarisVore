@@ -710,3 +710,7 @@
 /area/hallway/secondary/exit_link
 	name = "\improper Docking Area link"
 	icon_state = "escape"
+
+/area/roofairpump
+	name = "\improper Roof air pump"
+	icon_state = "engineering_aft_hallway"

@@ -481,16 +481,6 @@
 	InsertAll("", 'icons/obj/stacks.dmi')
 	..()
 
-#warn Delete or Implement ui icon properly before merging to master
-// YW Addtion START: Sprite sheet for the station boiler
-/datum/asset/spritesheet/station_boiler
-	name = "station_boiler"
-
-/datum/asset/spritesheet/station_boiler/register()
-	for(var/each in list('icons/obj/machines/heat_boiler_yw.dmi'))
-		InsertAll("", each, global.alldirs)
-	..()
-
 // Nanomaps
 /datum/asset/simple/nanomaps
 	// It REALLY doesnt matter too much if these arent up to date

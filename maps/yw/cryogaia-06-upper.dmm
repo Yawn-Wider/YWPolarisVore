@@ -1563,7 +1563,9 @@
 /obj/structure/window/reinforced{
 	health = 1e+006
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "dA" = (
@@ -2862,7 +2864,9 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "gF" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "gG" = (
@@ -2888,7 +2892,9 @@
 	req_access = newlist();
 	req_one_access = list(68)
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "gL" = (
@@ -2905,7 +2911,9 @@
 	dir = 8;
 	pixel_x = 30
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "gN" = (
@@ -4836,7 +4844,9 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "ks" = (
@@ -6346,7 +6356,9 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "ny" = (
@@ -7505,7 +7517,9 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 4
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "sr" = (
@@ -9587,7 +9601,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "CH" = (
@@ -10563,7 +10579,9 @@
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/west)
 "HG" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
 "HH" = (
@@ -11248,7 +11266,9 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "KB" = (
@@ -11575,7 +11595,9 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
 "Mu" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Mv" = (
@@ -12502,7 +12524,9 @@
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 4
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/pathfinder_office)
 "Rr" = (
@@ -12820,7 +12844,9 @@
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/northeast)
 "SG" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
 "SH" = (
@@ -13564,6 +13590,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"WF" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/chapel/monastery/upper)
 "WG" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -13952,7 +13984,9 @@
 /area/security/watchtower)
 "Yo" = (
 /obj/structure/closet/crate,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/cryogaia/outpost/elevator/uppermining)
 "Yq" = (
@@ -14239,7 +14273,9 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "ZR" = (
@@ -29862,7 +29898,7 @@ xw
 GD
 GD
 TA
-ZV
+WF
 kD
 fX
 nQ

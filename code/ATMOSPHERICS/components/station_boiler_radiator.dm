@@ -1,8 +1,12 @@
 /obj/machinery/stationboiler_radiator
 	name = "Station Radiator"
 	desc = "A radiator pipe connected to the station boiler, used to keep the rooms warm"
-	icon = 'icons/obj/machines/antimatter.dmi'
-	icon_state = "control_on"
+	icon = 'icons/obj/machines/floor_radiator_yw.dmi'
+
+	plane = PLATING_PLANE
+	layer = FLOOR_HEATER_LAYER
+
+	icon_state = "off"
 	use_power = USE_POWER_OFF
 	bullet_vulnerability = 0 //Invincible machine
 	anchored = TRUE
@@ -20,8 +24,12 @@
 	if(!assignedBoiler)
 		assignedBoiler = pick(stationboilers)
 	if(!assignedBoiler || !assignedBoiler.is_active)
+		if(icon_state != "off")
+			icon_state = "off"
 		return
 
+	if(icon_state != "on")
+		icon_state = "on"
 	if(istype(loc, /turf/simulated/))
 		var/datum/gas_mixture/environment = loc.return_air()
 		var/neededEnergy = environment.get_thermal_energy_change(target_heat_temperature)

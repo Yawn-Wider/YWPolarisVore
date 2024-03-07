@@ -3,7 +3,9 @@
 /turf/simulated/wall/r_wall,
 /area/cryogaia/station/excursion_overhang)
 "aab" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/lawoffice)
 "aac" = (
@@ -1618,7 +1620,9 @@
 	name = "Common Channel";
 	pixel_y = -21
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
 "aFy" = (
@@ -1638,6 +1642,7 @@
 	pixel_y = 23;
 	req_access = list(3)
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/dark,
 /area/security/security_equiptment_storage)
 "aGl" = (
@@ -1908,7 +1913,9 @@
 	pixel_x = 26
 	},
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/airlock)
 "aLv" = (
@@ -2142,7 +2149,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "aQS" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_room)
 "aQW" = (
@@ -4241,7 +4250,9 @@
 /area/assembly/robotics)
 "bJL" = (
 /obj/effect/floor_decal/rust,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "bJS" = (
@@ -5057,7 +5068,9 @@
 /area/rnd/phoronics)
 "bXb" = (
 /obj/effect/floor_decal/industrial/warning,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/engineering/engine_airlock)
 "bXh" = (
@@ -8758,7 +8771,9 @@
 /obj/machinery/newscaster/security_unit{
 	pixel_y = 30
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/warden)
 "dpG" = (
@@ -9664,7 +9679,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/armoury)
 "dJS" = (
-/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/plating,
 /area/maintenance/security)
 "dJX" = (
@@ -12311,7 +12325,9 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/equipstorage)
 "eKy" = (
@@ -13491,7 +13507,9 @@
 /obj/effect/floor_decal/techfloor{
 	dir = 10
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/server)
 "fkJ" = (
@@ -15045,7 +15063,9 @@
 	icon_state = "4-8"
 	},
 /obj/effect/floor_decal/industrial/warning/corner,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/substation/civilian)
 "fOn" = (
@@ -16591,7 +16611,9 @@
 	c_tag = "Engineering Lobby South";
 	dir = 1
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/storage/tech)
 "gqK" = (
@@ -16630,7 +16652,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "gqQ" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/security_processing)
 "gqU" = (
@@ -17109,7 +17133,9 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "gzr" = (
@@ -17502,7 +17528,9 @@
 /area/maintenance/medbay)
 "gHQ" = (
 /obj/machinery/light,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "gHV" = (
@@ -17525,7 +17553,9 @@
 /turf/simulated/floor/tiled,
 /area/teleporter)
 "gIh" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/security/forensics)
 "gIp" = (
@@ -17826,7 +17856,9 @@
 /obj/machinery/alarm{
 	pixel_y = 22
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "gOS" = (
@@ -18111,7 +18143,9 @@
 	name = "Common Channel";
 	pixel_x = 21
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/wood,
 /area/bridge/meeting_room)
 "gVw" = (
@@ -18162,7 +18196,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
 "gWi" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
 "gWk" = (
@@ -18652,7 +18688,9 @@
 /area/engineering/engine_room)
 "hfR" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "hfZ" = (
@@ -21311,7 +21349,9 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/office)
 "ihZ" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/chapel/monastery)
 "iic" = (
@@ -21870,7 +21910,9 @@
 /area/engineering/engine_room)
 "itk" = (
 /obj/structure/table/glass,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/carpet,
 /area/engineering/workshop)
 "itn" = (
@@ -21910,7 +21952,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
 "iui" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "iuH" = (
@@ -22329,7 +22373,9 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 8
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery_hallway)
 "iDm" = (
@@ -22978,7 +23024,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "iQi" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/assembly/robotics)
 "iQD" = (
@@ -23431,7 +23479,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/checkpoint)
 "jcY" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "jde" = (
@@ -23637,7 +23687,9 @@
 	frequency = 1441;
 	pixel_y = 22
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "jhC" = (
@@ -23691,7 +23743,9 @@
 	layer = 3.3;
 	pixel_y = 26
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
 "jiq" = (
@@ -24146,7 +24200,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "jqZ" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/ert_arrival)
 "jrj" = (
@@ -24154,7 +24210,9 @@
 	dir = 8;
 	pixel_x = 30
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/east)
 "jrl" = (
@@ -24332,7 +24390,9 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/shuttle/security)
 "juY" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/chapel/monastery/brew)
 "jva" = (
@@ -24517,7 +24577,9 @@
 /obj/machinery/camera/autoname{
 	dir = 1
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "jxx" = (
@@ -25056,7 +25118,9 @@
 	dir = 10
 	},
 /obj/machinery/light,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgeryprep)
 "jHN" = (
@@ -25952,7 +26016,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
 "kca" = (
@@ -26471,7 +26537,9 @@
 /obj/effect/floor_decal/corner/white{
 	dir = 8
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit_link)
 "knw" = (
@@ -26621,7 +26689,9 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "kpL" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/reinforced,
 /area/rnd/phoronics)
 "kpT" = (
@@ -27015,7 +27085,9 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/corner/paleblue/full,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay)
 "kvD" = (
@@ -27495,7 +27567,9 @@
 /obj/item/weapon/reagent_containers/glass/bottle/biomass,
 /obj/item/weapon/reagent_containers/glass/bottle/biomass,
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/medical/resleeving)
 "kFd" = (
@@ -27779,10 +27853,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/security/security_aid_station)
-"kMf" = (
-/obj/machinery/stationboiler_radiator,
-/turf/simulated/floor/tiled/dark,
-/area/security/security_equiptment_storage)
 "kMh" = (
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 4
@@ -28312,7 +28382,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
 "kWn" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/security/airlock)
 "kWR" = (
@@ -29661,7 +29733,9 @@
 /area/maintenance/research_port)
 "lxW" = (
 /obj/effect/floor_decal/rust,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/storage/tech)
 "lyg" = (
@@ -30088,7 +30162,9 @@
 	dir = 1;
 	health = 1e+006
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/phoronics)
 "lIy" = (
@@ -30569,7 +30645,9 @@
 /obj/effect/floor_decal/spline/fancy/wood{
 	color = "#7a412a"
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/captain)
 "lQA" = (
@@ -30686,7 +30764,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 4
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "lSN" = (
@@ -30710,7 +30790,9 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/engineering/engine_airlock)
 "lTd" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/briefing_room)
 "lTA" = (
@@ -31324,7 +31406,9 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/power)
 "mgj" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_eva)
 "mgm" = (
@@ -32022,7 +32106,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/airlock)
 "msK" = (
@@ -32147,7 +32233,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/bridge)
 "mvY" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled{
 	icon_state = "techmaint"
 	},
@@ -33496,7 +33584,9 @@
 /obj/machinery/light/small{
 	dir = 1
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/medbay)
 "mPg" = (
@@ -36105,7 +36195,9 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/kitchen)
 "nMm" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/teleporter)
 "nMI" = (
@@ -37101,6 +37193,12 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/medical/medbay_emt_bay)
+"oeM" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research_port)
 "ofP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -38468,7 +38566,9 @@
 "oHC" = (
 /obj/structure/table/standard,
 /obj/item/weapon/soap/nanotrasen,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/hallway/secondary/entry/docking_lounge)
 "oIc" = (
@@ -41001,7 +41101,9 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/reception)
 "pBQ" = (
@@ -41460,7 +41562,9 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/maintenance/substation/engineering)
 "pMf" = (
@@ -41780,6 +41884,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
+"pTN" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/security)
 "pTT" = (
 /obj/random/trash_pile,
 /obj/effect/decal/cleanable/cobweb2{
@@ -44665,7 +44775,9 @@
 /turf/simulated/floor/tiled,
 /area/bridge_hallway)
 "raK" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/central_one)
 "raN" = (
@@ -44989,7 +45101,9 @@
 /turf/simulated/floor/tiled,
 /area/security/briefing_room)
 "rhR" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/crew_quarters/heads/hop)
 "rhS" = (
@@ -45365,7 +45479,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery)
 "rox" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/quartermaster)
 "roy" = (
@@ -45469,7 +45585,9 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaymain)
 "rrD" = (
@@ -46138,7 +46256,9 @@
 /obj/structure/cable/green{
 	icon_state = "2-8"
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/dark,
 /area/security/lobby)
 "rDG" = (
@@ -46344,7 +46464,9 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/bar)
 "rIy" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/surgery2)
 "rIX" = (
@@ -48305,7 +48427,9 @@
 /area/medical/medbay_primary_storage)
 "sve" = (
 /obj/item/clothing/head/cone,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor,
 /area/maintenance/medbay)
 "svg" = (
@@ -48825,7 +48949,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/freezer,
 /area/crew_quarters/captain)
 "sEz" = (
@@ -49296,7 +49422,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "sOX" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/entry/docking_lounge)
 "sPd" = (
@@ -49365,7 +49493,9 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "sPD" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/security/security_aid_station)
 "sPI" = (
@@ -51283,7 +51413,9 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
 "tEi" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
 "tEl" = (
@@ -52180,6 +52312,15 @@
 "tVE" = (
 /turf/simulated/wall,
 /area/medical/patient_b)
+"tVH" = (
+/obj/effect/floor_decal/corner_oldtile/purple{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/research)
 "tVT" = (
 /obj/machinery/computer/rdservercontrol{
 	dir = 4
@@ -52586,7 +52727,9 @@
 /area/borealis2/outdoors/grounds)
 "ugA" = (
 /obj/machinery/light/small,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/medbay)
 "uhi" = (
@@ -52619,7 +52762,9 @@
 	id = "meeting";
 	pixel_y = 25
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/carpet/bcarpet,
 /area/crew_quarters/meeting)
 "uhw" = (
@@ -52810,7 +52955,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery)
 "unJ" = (
@@ -53694,7 +53841,9 @@
 	name = "Common Channel";
 	pixel_x = 21
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/old_tile/blue,
 /area/bridge/blueshield)
 "uJK" = (
@@ -54249,7 +54398,9 @@
 /area/medical/surgery)
 "uVk" = (
 /obj/machinery/space_heater,
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/storage/emergency_storage/emergency5)
 "uVm" = (
@@ -55046,7 +55197,9 @@
 	dir = 2;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/bridge)
 "vnY" = (
@@ -55084,7 +55237,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 4
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/security_lockerroom)
 "vop" = (
@@ -55258,7 +55413,9 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 4
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/hallway)
 "vqw" = (
@@ -56110,7 +56267,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "vIw" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/wood,
 /area/medical/psych)
 "vII" = (
@@ -57218,7 +57377,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/equipstorage)
 "wgI" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/janitor)
 "wgK" = (
@@ -57252,7 +57413,9 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/lab)
 "whb" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor,
 /area/storage/auxillary)
 "whd" = (
@@ -58546,7 +58709,9 @@
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 8
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "wDa" = (
@@ -60360,7 +60525,9 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbay3)
 "xnK" = (
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/research)
 "xnO" = (
@@ -60526,7 +60693,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/machinery/stationboiler_radiator,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery)
 "xsk" = (
@@ -68307,7 +68476,7 @@ cJN
 qww
 aZy
 aZy
-gXU
+aWW
 bqO
 xso
 aZy
@@ -68623,7 +68792,7 @@ pZe
 emS
 aWW
 aWW
-gXU
+aWW
 aWW
 aWW
 cUk
@@ -70769,7 +70938,7 @@ wlm
 wRG
 tGV
 nWr
-kMf
+tGV
 tGV
 gES
 uoM
@@ -70929,7 +71098,7 @@ txy
 tKI
 lRs
 hIq
-kMf
+tGV
 hCg
 ybi
 poB
@@ -72211,7 +72380,7 @@ jkL
 sDk
 jkL
 jkL
-dJS
+pTN
 itN
 cpR
 epf
@@ -77437,7 +77606,7 @@ toA
 icL
 lip
 uGr
-olV
+oeM
 dPt
 fch
 fkJ
@@ -78714,7 +78883,7 @@ uiE
 uiE
 xjG
 fBX
-nln
+tVH
 aQH
 weG
 bYp

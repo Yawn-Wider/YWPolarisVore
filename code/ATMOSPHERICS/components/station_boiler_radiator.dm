@@ -15,13 +15,9 @@
 	var/thermal_energy_change = 4000 //How much energy we can process
 	var/obj/machinery/atmospherics/binary/stationboiler/assignedBoiler
 
-/obj/machinery/stationboiler_radiator/New()
-	..()
-	assignedBoiler = pick(stationboilers)
-
 /obj/machinery/stationboiler_radiator/process()
 	..()
-	if(!assignedBoiler)
+	if(!assignedBoiler && stationboilers)
 		assignedBoiler = pick(stationboilers)
 	if(!assignedBoiler || !assignedBoiler.is_active)
 		if(icon_state != "off")

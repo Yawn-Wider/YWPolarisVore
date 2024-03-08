@@ -544,6 +544,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
+"ala" = (
+/obj/machinery/light{
+	dir = 1
+	},
+/turf/simulated/wall,
+/area/storage/tech)
 "alo" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -38701,6 +38707,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 5
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/greengrid,
 /area/civilian/atrium/central)
 "oKs" = (
@@ -61224,6 +61233,12 @@
 /obj/item/weapon/reagent_containers/glass/rag,
 /turf/simulated/floor/lino,
 /area/crew_quarters/bar)
+"xAM" = (
+/obj/machinery/light{
+	dir = 4
+	},
+/turf/simulated/floor/greengrid,
+/area/civilian/atrium/central)
 "xBb" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -75815,8 +75830,8 @@ aWp
 tvJ
 nNn
 dji
-sPt
-sPt
+ala
+ala
 sPt
 sPt
 sPt
@@ -76273,7 +76288,7 @@ sNG
 qnP
 gPn
 mvY
-gPn
+xAM
 svg
 wBK
 hXc

@@ -268,7 +268,6 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 				continue
 			equalize_temperature_to_planet(T, zone, thermal_energy_change)
 		if(MC_TICK_CHECK)
-			testing("boiler MC TICK CHECK")
 			return
 
 /proc/equalize_temperature_to_planet(turf/T, zone/zone, max_thermal_change)

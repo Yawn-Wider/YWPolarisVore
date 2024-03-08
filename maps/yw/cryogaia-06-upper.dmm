@@ -7391,11 +7391,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
 	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "rE" = (
@@ -7648,11 +7643,6 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold4w/hidden/scrubbers,
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "tc" = (
@@ -7785,11 +7775,6 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -8124,9 +8109,6 @@
 "vA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -8840,15 +8822,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
-"yW" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/civilian/atrium/upper)
 "yX" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -9734,7 +9707,7 @@
 "Dj" = (
 /obj/structure/grille,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/roofairpump)
+/area/civilian/atrium/upper)
 "Dl" = (
 /obj/effect/overmap/visitable/sector/cryogaia,
 /turf/simulated/open/cryogaia,
@@ -10309,16 +10282,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
-"Ga" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/civilian/atrium/upper)
 "Gb" = (
 /obj/structure/cable/yellow{
 	d1 = 2;
@@ -10327,17 +10290,6 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
-"Ge" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on{
-	dir = 1
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
-/turf/simulated/floor/tiled,
-/area/civilian/atrium/upper)
 "Gf" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -10380,19 +10332,6 @@
 "Gt" = (
 /obj/machinery/light{
 	dir = 1
-	},
-/turf/simulated/floor/tiled,
-/area/civilian/atrium/upper)
-"Gu" = (
-/obj/structure/bed/chair/wood{
-	dir = 1
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/hidden/supply,
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -10732,9 +10671,6 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/checkpoint)
-"Iu" = (
-/turf/simulated/wall,
-/area/roofairpump)
 "Iw" = (
 /obj/structure/flora/pottedplant/large,
 /obj/effect/floor_decal/corner/paleblue{
@@ -11113,16 +11049,13 @@
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "Ki" = (
-/obj/structure/table/woodentable,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
-/obj/structure/cable{
-	icon_state = "2-8"
-	},
+/obj/structure/table/woodentable,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Kj" = (
@@ -11217,13 +11150,8 @@
 	frequency = 1441;
 	id_tag = "roof_air_out"
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 4;
-	icon_state = "1-4"
-	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/roofairpump)
+/area/civilian/atrium/upper)
 "Kv" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -11619,11 +11547,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 8
-	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -12636,11 +12559,6 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
 	},
-/obj/structure/cable{
-	d1 = 1;
-	d2 = 2;
-	icon_state = "1-2"
-	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "RK" = (
@@ -13397,22 +13315,13 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Vt" = (
-/obj/machinery/power/apc{
-	dir = 4;
-	name = "east bump";
-	pixel_x = 24
-	},
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
-	},
 /obj/machinery/air_sensor{
 	frequency = 1441;
 	id_tag = "roof_air_sensor";
 	output = 63
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/roofairpump)
+/area/civilian/atrium/upper)
 "Vu" = (
 /obj/machinery/camera/autoname{
 	dir = 1
@@ -14207,11 +14116,6 @@
 /obj/structure/sign/painting/public,
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
 	dir = 4
-	},
-/obj/structure/cable{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
 	},
 /turf/simulated/wall,
 /area/civilian/atrium/upper)
@@ -26061,10 +25965,10 @@ AN
 AN
 AN
 AN
-Iu
+Nj
 Dj
 Dj
-Iu
+Nj
 AN
 AN
 AN
@@ -26226,7 +26130,7 @@ Nj
 Nj
 Vt
 Ks
-Iu
+Nj
 AN
 AN
 AN
@@ -26696,21 +26600,21 @@ Vs
 EY
 Yf
 Ki
-Gu
-Ga
-Ga
+UM
+Oz
+Oz
 My
-Ga
-Ga
-Ga
-Ga
-Ga
+Oz
+Oz
+Oz
+Oz
+Oz
 RJ
-yW
-yW
-yW
-yW
-Ge
+cB
+cB
+cB
+cB
+Tn
 vA
 sa
 kl

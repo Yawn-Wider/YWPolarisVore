@@ -11143,12 +11143,14 @@
 "Ks" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on{
 	dir = 4;
-	internal_pressure_bound = 101.325;
-	internal_pressure_bound_default = 101.325;
+	internal_pressure_bound = 250;
+	internal_pressure_bound_default = 250;
 	pressure_checks = 2;
 	pressure_checks_default = 2;
 	frequency = 1441;
-	id_tag = "roof_air_out"
+	id_tag = "roof_air_out";
+	power_rating = 120000;
+	desc = "High power vent, Has a valve and pump attached to it"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/civilian/atrium/upper)

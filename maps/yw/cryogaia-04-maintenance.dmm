@@ -9673,6 +9673,18 @@
 /obj/structure/cryofeed,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/sleep/cryo)
+"fLc" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "fLg" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -34604,6 +34616,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
+"teR" = (
+/obj/machinery/atmospherics/binary/passive_gate/on{
+	regulate_mode = 1;
+	target_pressure = 4500;
+	dir = 8;
+	name = "Air pressure regulator"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "teZ" = (
 /obj/machinery/smartfridge/produce/persistent_lossy{
 	description_info = "Produce stored in here will remain for serveral rounds with a slight loss for each round depending on the amounts of produce inside.";
@@ -39247,6 +39268,27 @@
 /obj/structure/showcase/yw/chaplain2,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
+"vzA" = (
+/obj/structure/window/reinforced{
+	dir = 8
+	},
+/obj/machinery/door/firedoor/border_only,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 4
+	},
+/obj/machinery/door/blast/regular{
+	density = 0;
+	icon_state = "pdoor0";
+	id = "atmoslockdown";
+	name = "Atmospherics Lockdown";
+	opacity = 0
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/engineering/atmos)
 "vzD" = (
 /obj/structure/bed/chair/comfy/beige{
 	dir = 4
@@ -51430,9 +51472,9 @@ cZU
 ffV
 cZU
 dxe
-dxe
-dxe
 cHV
+jrb
+vzA
 jrb
 jrb
 jrb
@@ -51592,7 +51634,7 @@ cZU
 tPm
 sja
 lPS
-sla
+fLc
 raN
 mue
 xVX
@@ -51754,7 +51796,7 @@ lTY
 lNL
 lmT
 nZs
-tUr
+teR
 poI
 mCp
 dqG
@@ -51916,7 +51958,7 @@ ndL
 btV
 tUr
 tUr
-tUr
+lDX
 fky
 lLh
 avh
@@ -52078,7 +52120,7 @@ qFg
 tpP
 sQr
 tUr
-rOu
+lLh
 qKj
 mMI
 wiu

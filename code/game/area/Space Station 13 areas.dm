@@ -1323,7 +1323,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	dynamic_lighting = 0
 	sound_env = LARGE_ENCLOSED
 	forbid_events = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT|TEMPERATURE_SHIELDED // YW EDIT: makes the holodeck room temp shielded
 
 /area/holodeck/alphadeck
 	name = "\improper Holodeck Alpha"
@@ -1429,6 +1429,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
 	forbid_events = TRUE
+	flags = TEMPERATURE_SHIELDED // YW EDIT: makes the engine room temp shielded so the core does not freeze
 
 /area/engineering/engine_airlock
 	name = "\improper Engine Room Airlock"

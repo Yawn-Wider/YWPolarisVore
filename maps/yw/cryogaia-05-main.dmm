@@ -23865,6 +23865,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/engine_smes)
 "jlz" = (
@@ -25698,10 +25701,6 @@
 /obj/machinery/chem_master/condimaster,
 /turf/simulated/floor/tiled/freezer,
 /area/chapel/monastery/brew)
-"jVa" = (
-/obj/machinery/stationboiler_radiator,
-/turf/simulated/floor,
-/area/engineering/engine_room)
 "jVL" = (
 /obj/machinery/washing_machine,
 /obj/machinery/light{
@@ -71315,7 +71314,7 @@ iJV
 jwU
 guK
 aeP
-jVa
+nlN
 aNC
 xnU
 vuC

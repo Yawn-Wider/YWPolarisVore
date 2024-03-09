@@ -35889,7 +35889,9 @@
 /area/storage/primary)
 "nEq" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
-	dir = 4
+	dir = 4;
+	external_pressure_bound = 105;
+	external_pressure_bound_default = 105
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/engineering/engine_room)

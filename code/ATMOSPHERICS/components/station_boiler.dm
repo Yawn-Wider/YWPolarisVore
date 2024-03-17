@@ -80,10 +80,10 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 	update_icon()
 
 /obj/machinery/atmospherics/binary/stationboiler/update_icon()
-	if(stored_material[MAT_LOG] < wood_per_process)
-		icon_state = "boiler_off"
-	else
+	if(ignited)
 		icon_state = "boiler_on"
+	else
+		icon_state = "boiler_off"
 	return 1
 
 // Attept to load materials.  Returns 0 if item wasn't a stack of materials, otherwise 1 (even if failed to load)

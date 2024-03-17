@@ -16567,7 +16567,7 @@
 	tag_east = 2;
 	tag_west = 1;
 	tag_south = 5;
-	power_rating = 60000;
+	power_rating = 120000;
 	desc = "An advanced High power version of the gas filter, able to be configured for filtering of multiple gasses."
 	},
 /turf/simulated/floor/tiled,
@@ -19129,7 +19129,7 @@
 	tag_east = 2;
 	tag_south = 1;
 	tag_north = 4;
-	power_rating = 60000;
+	power_rating = 120000;
 	desc = "An advanced High power version of the gas filter, able to be configured for filtering of multiple gasses."
 	},
 /turf/simulated/floor/tiled,
@@ -20340,6 +20340,13 @@
 	},
 /turf/simulated/floor/wood,
 /area/maintenance/lowfloor1)
+"ldT" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4;
+	name = "N2 to Mix"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "leb" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -22052,6 +22059,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
+"lWH" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4;
+	name = "O2 to Mix"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "lXy" = (
 /obj/machinery/light/small{
 	dir = 1
@@ -22354,7 +22368,7 @@
 	tag_north = 3;
 	tag_south = 2;
 	tag_west = 1;
-	power_rating = 60000;
+	power_rating = 120000;
 	desc = "An advanced High power version of the gas filter, able to be configured for filtering of multiple gasses."
 	},
 /turf/simulated/floor/tiled,
@@ -40552,7 +40566,7 @@
 	tag_east = 1;
 	tag_west_con = 0.79;
 	tag_west = 1;
-	power_rating = 60000;
+	power_rating = 120000;
 	desc = "An advanced High power version of the gas mixer, able to be configured for mixing of multiple gasses."
 	},
 /turf/simulated/floor/tiled,
@@ -52284,7 +52298,7 @@ mJw
 tUr
 vJS
 dIn
-vJS
+ldT
 xRD
 veA
 mlu
@@ -52451,7 +52465,7 @@ khA
 oUp
 yir
 sQr
-vJS
+lWH
 fVE
 tUr
 tUr

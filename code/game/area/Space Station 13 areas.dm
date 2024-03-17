@@ -70,7 +70,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/shuttle
 	requires_power = 0
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT|TEMPERATURE_SHIELDED // YW EDIT: makes all shuttles temp shielded
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/space
 	forbid_events = TRUE
@@ -885,6 +885,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/hallway/secondary/entry/docking_lounge
 	name = "\improper Docking Lounge"
 	icon_state = "docking_lounge"
+	flags = TEMPERATURE_SHIELDED // YW EDIT: makes arrivals temp shielded
 
 /area/hallway/secondary/escape/dock_escape_pod_hallway_port
 	name = "\improper Dock Escape Pod Hallway Port"
@@ -1559,7 +1560,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Teleporter"
 	icon_state = "teleporter"
 	music = "signal"
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED|TEMPERATURE_SHIELDED // YW EDIT: makes arrivals teleporter temp shielded
 
 /area/gateway
 	name = "\improper Gateway"

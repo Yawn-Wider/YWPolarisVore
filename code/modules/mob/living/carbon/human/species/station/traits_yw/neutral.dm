@@ -61,7 +61,7 @@
 	desc = "You are a tri-headed creature. To use, format name like (Rucks-Sucks-Ducks)"
 	cost = 0
 
-/datum/trait/neutral/apply(var/datum/species/S,var/mob/living/carbon/human/H)
+/datum/trait/neutral/hydra_heads/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
 	H.verbs |= /mob/living/carbon/human/proc/hydra_activate
 	H.verbs |= /mob/living/carbon/human/proc/hydra_reset

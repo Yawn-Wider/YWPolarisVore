@@ -70,7 +70,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 
 /area/shuttle
 	requires_power = 0
-	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT
+	flags = RAD_SHIELDED | AREA_FLAG_IS_NOT_PERSISTENT|TEMPERATURE_SHIELDED // YW EDIT: makes all shuttles temp shielded
 	sound_env = SMALL_ENCLOSED
 	base_turf = /turf/space
 	forbid_events = TRUE
@@ -833,7 +833,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/hallway/secondary/exit
 	name = "\improper Escape Shuttle Hallway"
 	icon_state = "escape"
-
+	flags = TEMPERATURE_SHIELDED // YW EDIT: makes escape temp shielded
 /area/hallway/secondary/construction
 	name = "\improper Construction Area"
 	icon_state = "construction"
@@ -885,6 +885,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/hallway/secondary/entry/docking_lounge
 	name = "\improper Docking Lounge"
 	icon_state = "docking_lounge"
+	flags = TEMPERATURE_SHIELDED // YW EDIT: makes arrivals temp shielded
 
 /area/hallway/secondary/escape/dock_escape_pod_hallway_port
 	name = "\improper Dock Escape Pod Hallway Port"
@@ -1323,7 +1324,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	dynamic_lighting = 0
 	sound_env = LARGE_ENCLOSED
 	forbid_events = TRUE
-	flags = AREA_FLAG_IS_NOT_PERSISTENT
+	flags = AREA_FLAG_IS_NOT_PERSISTENT|TEMPERATURE_SHIELDED // YW EDIT: makes the holodeck room temp shielded
 
 /area/holodeck/alphadeck
 	name = "\improper Holodeck Alpha"
@@ -1429,6 +1430,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	icon_state = "engine"
 	sound_env = LARGE_ENCLOSED
 	forbid_events = TRUE
+	flags = TEMPERATURE_SHIELDED // YW EDIT: makes the engine room temp shielded so the core does not freeze
 
 /area/engineering/engine_airlock
 	name = "\improper Engine Room Airlock"
@@ -1558,7 +1560,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Teleporter"
 	icon_state = "teleporter"
 	music = "signal"
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED|TEMPERATURE_SHIELDED // YW EDIT: makes arrivals teleporter temp shielded
 
 /area/gateway
 	name = "\improper Gateway"

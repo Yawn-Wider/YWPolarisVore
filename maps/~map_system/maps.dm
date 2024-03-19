@@ -28,6 +28,7 @@ var/list/all_maps = list()
 	// Automatically populated lists made static for faster lookups
 	var/static/list/zlevels = list()
 	var/static/list/station_levels = list() // Z-levels the station exists on
+	var/static/list/allow_global_temperature_change_levels = list() // YW Add: Z-levels that can be cooled/heated by the boiler
 	var/static/list/admin_levels = list()   // Z-levels for admin functionality (Centcom, shuttle transit, etc)
 	var/static/list/contact_levels = list() // Z-levels that can be contacted from the station, for eg announcements
 	var/static/list/player_levels = list()  // Z-levels a character can typically reach
@@ -332,6 +333,11 @@ var/list/all_maps = list()
 		map.accessible_z_levels["[z]"] = transit_chance
 	if(flags & MAP_LEVEL_MAPPABLE)
 		map.mappable_levels |= z
+	//YW Add: temperature z levels
+	if(flags & MAP_LEVEL_TEMPERATURE_CHANGEABLE)
+		testing("Adding temp: [z]")
+		map.allow_global_temperature_change_levels += z
+	//YW Add End
 	// Holomaps
 	// Auto-center the map if needed (Guess based on maxx/maxy)
 	if (holomap_offset_x < 0)

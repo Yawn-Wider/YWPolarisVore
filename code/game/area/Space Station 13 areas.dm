@@ -833,7 +833,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/hallway/secondary/exit
 	name = "\improper Escape Shuttle Hallway"
 	icon_state = "escape"
-
+	flags = TEMPERATURE_SHIELDED // YW EDIT: makes escape temp shielded
 /area/hallway/secondary/construction
 	name = "\improper Construction Area"
 	icon_state = "construction"

@@ -1,3 +1,74 @@
+//Overrides
+/area/crew_quarters/sleep/Dorm_1
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
+/area/crew_quarters/sleep/Dorm_2
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
+/area/crew_quarters/sleep/Dorm_3
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
+/area/crew_quarters/sleep/Dorm_4
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
+/area/crew_quarters/sleep/Dorm_5
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
+/area/crew_quarters/sleep/Dorm_6
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
+/area/crew_quarters/sleep/Dorm_7
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
+/area/crew_quarters/sleep/Dorm_8
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
+/area/crew_quarters/sleep/Dorm_9
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
+/area/crew_quarters/sleep/Dorm_10
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	soundproofed = TRUE
+	limit_mob_size = FALSE
+	block_suit_sensors = TRUE
+	block_tracking = TRUE
+
 //Outdoors Area
 
 /area/borealis2

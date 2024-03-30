@@ -167,3 +167,12 @@ GLOBAL_VAR_INIT(round_start_time, 0)
 	if(hour)
 		hourT = " and [hour] hour[(hour != 1)? "s":""]"
 	return "[day] day[(day != 1)? "s":""][hourT][minuteT][secondT]"
+
+//YW ADDITIONS START
+//Takes seconds, returns in hh:mm:ss
+/proc/SecondsToTimestamp(seconds)
+	var/second = seconds%60
+	var/minute = FLOOR((seconds/60), 1)%60
+	var/hours = FLOOR((seconds/3600), 1)
+	return "[hours]:[minute]:[second]"
+//YW ADDITIONS END

@@ -1559,6 +1559,15 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/cryogaia/station/excursion_dock)
+"dz" = (
+/obj/structure/window/reinforced{
+	health = 1e+006
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/steel_grid,
+/area/cryogaia/station/explorer_prep)
 "dA" = (
 /obj/structure/cable/yellow{
 	d1 = 4;
@@ -1939,13 +1948,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
 "ep" = (
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/machinery/floodlight,
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
 "eq" = (
@@ -2452,7 +2461,7 @@
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/northeast)
 "fx" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -2854,6 +2863,12 @@
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"gF" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/hallway/primary/upper/south)
 "gG" = (
 /obj/machinery/light,
 /turf/simulated/floor/tiled/techmaint,
@@ -2877,6 +2892,9 @@
 	req_access = newlist();
 	req_one_access = list(68)
 	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "gL" = (
@@ -2892,6 +2910,9 @@
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
 	pixel_x = 30
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
@@ -3220,7 +3241,7 @@
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "hs" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -25
 	},
@@ -3728,7 +3749,7 @@
 /obj/item/clothing/under/explorer/utility/engineering,
 /obj/item/clothing/shoes/boots/winter/explorer,
 /obj/item/clothing/shoes/boots/winter/explorer,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -22
 	},
@@ -4018,7 +4039,7 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/pathfinder_office)
 "iN" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -4052,6 +4073,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "iP" = (
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "iQ" = (
@@ -4498,7 +4520,7 @@
 /area/chapel/monastery/upper)
 "jJ" = (
 /obj/structure/closet/secure_closet/explorer,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -4652,7 +4674,7 @@
 /area/chapel/monastery/upper)
 "jZ" = (
 /obj/structure/table/standard,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -4822,6 +4844,9 @@
 	dir = 8
 	},
 /obj/machinery/portable_atmospherics/canister/oxygen,
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "ks" = (
@@ -4884,7 +4909,7 @@
 	dir = 9
 	},
 /obj/random/medical/lite,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -22
 	},
@@ -5056,7 +5081,7 @@
 /turf/simulated/wall,
 /area/cryogaia/station/explorer_meeting)
 "kT" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -22
 	},
@@ -5616,7 +5641,7 @@
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -6002,6 +6027,7 @@
 /obj/structure/railing/grey{
 	dir = 1
 	},
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/south)
 "mP" = (
@@ -6305,7 +6331,7 @@
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
 "nu" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -6329,6 +6355,9 @@
 "nx" = (
 /obj/machinery/light{
 	dir = 1
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
@@ -6940,6 +6969,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
+"pm" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/plating,
+/area/constructionsite/medical/upper)
 "pn" = (
 /obj/structure/catwalk,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -6964,7 +6997,7 @@
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/northeast)
 "pu" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
 	},
@@ -7098,11 +7131,28 @@
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
+"qj" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/outpost/tower/northwest)
 "qk" = (
 /obj/structure/railing/grey,
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/checkpoint)
+"ql" = (
+/obj/structure/window/reinforced{
+	dir = 8;
+	layer = 3
+	},
+/obj/structure/window/reinforced,
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/zpipe/down,
+/turf/simulated/open,
+/area/civilian/atrium/upper)
 "qr" = (
 /obj/machinery/light{
 	dir = 8
@@ -7124,6 +7174,10 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/medical/medbayskybridge)
+"qA" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/chapel/monastery/upper)
 "qB" = (
 /turf/simulated/wall/titanium,
 /area/cryogaia/outpost/tower/east)
@@ -7166,7 +7220,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -7332,6 +7386,13 @@
 	},
 /turf/simulated/open,
 /area/civilian/atrium/upper)
+"rD" = (
+/obj/structure/flora/pottedplant/large,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "rE" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -7450,6 +7511,9 @@
 "sp" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -7772,7 +7836,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -23
 	},
@@ -7800,6 +7864,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"tW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "tX" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -7961,6 +8029,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
+"vi" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/quartermaster/miningdock)
 "vl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -8031,6 +8103,12 @@
 	dir = 4;
 	name = "Common Channel";
 	pixel_x = 21
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"vA" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -8197,6 +8275,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
+"wl" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "wm" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -8813,7 +8895,7 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/walkway)
 "zv" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -8821,7 +8903,7 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "zw" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -8954,6 +9036,12 @@
 	dir = 5
 	},
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief,
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"zW" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 9
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Ac" = (
@@ -9371,7 +9459,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/east)
 "Cb" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -9443,7 +9531,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "Cw" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -23
 	},
@@ -9476,6 +9564,21 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"CG" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "CH" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -9567,6 +9670,10 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
+"Df" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_meeting)
 "Dg" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
@@ -9597,6 +9704,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/southwest)
+"Dj" = (
+/obj/structure/grille,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/civilian/atrium/upper)
 "Dl" = (
 /obj/effect/overmap/visitable/sector/cryogaia,
 /turf/simulated/open/cryogaia,
@@ -9929,6 +10040,10 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/southeast)
+"EI" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_prep)
 "EM" = (
 /turf/simulated/open,
 /area/cryogaia/outpost/tower/east)
@@ -10075,6 +10190,13 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/northeast)
+"Fy" = (
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/outpost/tower/west)
 "Fz" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -10362,6 +10484,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
+"Hr" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/outpost/tower/southeast)
 "Hs" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -10391,6 +10517,12 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/west)
+"HG" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/quartermaster/miningdock)
 "HH" = (
 /obj/structure/railing/grey{
 	dir = 1
@@ -10675,7 +10807,7 @@
 	dir = 4
 	},
 /obj/item/weapon/deck/cards,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
 	},
@@ -10809,6 +10941,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"JF" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/plating,
+/area/cryogaia/outpost/elevator/uppermining)
 "JG" = (
 /obj/machinery/door/airlock/glass_external/public{
 	frequency = 1379;
@@ -10913,13 +11049,13 @@
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "Ki" = (
-/obj/structure/table/woodentable,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/table/woodentable,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Kj" = (
@@ -11004,6 +11140,20 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"Ks" = (
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on{
+	dir = 4;
+	internal_pressure_bound = 250;
+	internal_pressure_bound_default = 250;
+	pressure_checks = 2;
+	pressure_checks_default = 2;
+	frequency = 1441;
+	id_tag = "roof_air_out";
+	power_rating = 480000;
+	desc = "High power vent, Has a valve and pump attached to it"
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/civilian/atrium/upper)
 "Kv" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -11039,6 +11189,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
+"KA" = (
+/obj/effect/floor_decal/corner/paleblue{
+	dir = 6
+	},
+/obj/machinery/light{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/medical/medbayupper)
 "KB" = (
 /turf/simulated/shuttle/wall/voidcraft/blue,
 /area/cryogaia/outpost/elevator/uppermining)
@@ -11116,7 +11278,7 @@
 /area/quartermaster/miningdock)
 "KQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -11126,7 +11288,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -11154,6 +11316,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
+"Lf" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/plating,
+/area/maintenance/medical_upper)
 "Li" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11229,6 +11395,13 @@
 "Lv" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/northwest)
+"Lw" = (
+/obj/effect/floor_decal/corner/paleblue/diagonal{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/white,
+/area/crew_quarters/medbreak)
 "LC" = (
 /obj/structure/table/rack/shelf/steel,
 /turf/simulated/floor/plating,
@@ -11351,6 +11524,12 @@
 "Mt" = (
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
+"Mu" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "Mv" = (
 /obj/structure/sign/mining,
 /turf/simulated/wall,
@@ -11461,6 +11640,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/hallway/primary/upper/south)
+"Nu" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/outpost/checkpoint)
 "Nw" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
@@ -11513,7 +11696,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -12061,6 +12244,10 @@
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
+"Qu" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/outpost/tower/northeast)
 "Qv" = (
 /obj/machinery/power/thermoregulator/cryogaia{
 	pixel_y = 25
@@ -12221,7 +12408,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
 "Rl" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -12255,6 +12442,18 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/hallway/primary/upper/south)
+"Rq" = (
+/obj/effect/floor_decal/corner_oldtile/gray{
+	dir = 1
+	},
+/obj/effect/floor_decal/corner_oldtile/gray{
+	dir = 4
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/pathfinder_office)
 "Rr" = (
 /obj/machinery/door/airlock/maintenance/common,
 /obj/machinery/door/firedoor,
@@ -12332,6 +12531,7 @@
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
 "RE" = (
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
 "RG" = (
@@ -12563,6 +12763,12 @@
 /obj/structure/railing/grey,
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/northeast)
+"SG" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/cryogaia/station/hallway/primary/upper/south)
 "SH" = (
 /obj/machinery/vending/snack{
 	dir = 8
@@ -12710,6 +12916,10 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"TL" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/excursion_dock)
 "TQ" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/tiled,
@@ -12724,6 +12934,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
 /area/quartermaster/miningdock)
+"TZ" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/outpost/tower/east)
 "Ub" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -12758,7 +12972,7 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "Ug" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -12776,7 +12990,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -12786,7 +13000,7 @@
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "Ui" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
 	},
@@ -13088,6 +13302,10 @@
 "Vj" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
+"Vl" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/white,
+/area/medical/medbayskybridge)
 "Vs" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -13097,6 +13315,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
+"Vt" = (
+/obj/machinery/air_sensor{
+	frequency = 1441;
+	id_tag = "roof_air_sensor";
+	output = 63
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/civilian/atrium/upper)
 "Vu" = (
 /obj/machinery/camera/autoname{
@@ -13200,7 +13426,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
 	},
@@ -13210,7 +13436,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -13225,6 +13451,14 @@
 "Wj" = (
 /turf/simulated/shuttle/floor/white/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"Wk" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/white,
+/area/cryogaia/station/medical/upper)
+"Wn" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/wood,
+/area/chapel/monastery/music)
 "Wo" = (
 /obj/structure/cable/green{
 	icon_state = "32-2"
@@ -13267,6 +13501,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"WF" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/chapel/monastery/upper)
 "WG" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -13305,6 +13545,10 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/northeast)
+"WP" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/outpost/tower/southwest)
 "WR" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -13395,7 +13639,7 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Xe" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -13499,6 +13743,10 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"XE" = (
+/obj/machinery/stationboiler_radiator,
+/turf/simulated/floor/tiled,
+/area/cryogaia/station/explorer_entrance)
 "XF" = (
 /obj/machinery/firealarm{
 	layer = 3.3;
@@ -13516,7 +13764,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "XK" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -13645,6 +13893,13 @@
 "Yn" = (
 /turf/simulated/wall/r_wall,
 /area/security/watchtower)
+"Yo" = (
+/obj/structure/closet/crate,
+/obj/machinery/stationboiler_radiator{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/cryogaia/outpost/elevator/uppermining)
 "Yq" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply{
@@ -13859,6 +14114,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"ZC" = (
+/obj/structure/sign/painting/public,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/turf/simulated/wall,
+/area/civilian/atrium/upper)
 "ZE" = (
 /obj/structure/flora/pottedplant/large,
 /obj/effect/floor_decal/corner/white{
@@ -13913,9 +14175,12 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "ZP" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
+	},
+/obj/machinery/stationboiler_radiator{
+	dir = 8
 	},
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
@@ -13944,6 +14209,7 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
 "ZV" = (
+/obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
 "ZW" = (
@@ -15772,7 +16038,7 @@ om
 bv
 Yi
 Lv
-Lv
+qj
 Lv
 Lv
 yo
@@ -15828,7 +16094,7 @@ Rs
 au
 iL
 OT
-CZ
+Fy
 CZ
 sd
 yi
@@ -15884,7 +16150,7 @@ Rs
 pn
 js
 Di
-mm
+WP
 mm
 wG
 Mj
@@ -19362,7 +19628,7 @@ oJ
 rm
 Rm
 RK
-BM
+pm
 BM
 BM
 lb
@@ -19993,7 +20259,7 @@ oJ
 Kp
 Mt
 Mt
-Mt
+Lf
 Mt
 Mt
 Qp
@@ -20173,7 +20439,7 @@ wm
 wm
 WI
 XH
-py
+KA
 XH
 XH
 XH
@@ -20989,7 +21255,7 @@ AN
 AN
 AN
 wa
-ET
+CG
 wa
 AN
 AN
@@ -21777,7 +22043,7 @@ YF
 Jz
 ZT
 Lk
-YF
+Lw
 YF
 Dn
 Ag
@@ -22747,7 +23013,7 @@ MG
 Uq
 vg
 On
-Fi
+Wk
 uy
 OF
 Yb
@@ -23557,7 +23823,7 @@ sr
 jv
 PJ
 sf
-PJ
+Vl
 PJ
 JA
 PJ
@@ -25701,10 +25967,10 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-AN
+Nj
+Dj
+Dj
+Nj
 AN
 AN
 AN
@@ -25864,9 +26130,9 @@ Nj
 Nj
 Nj
 Nj
-AN
-AN
-AN
+Vt
+Ks
+Nj
 AN
 AN
 AN
@@ -26027,7 +26293,7 @@ DF
 of
 Nj
 Nj
-kl
+ZC
 Nj
 AN
 AN
@@ -26189,7 +26455,7 @@ sa
 sa
 Tw
 Em
-lP
+rD
 Nj
 Nj
 AN
@@ -26351,7 +26617,7 @@ cB
 cB
 cB
 Tn
-sa
+vA
 sa
 kl
 AN
@@ -26511,9 +26777,9 @@ fv
 BI
 Xl
 Xl
-aD
-sa
-sa
+ql
+tW
+zW
 sa
 Nj
 AN
@@ -26825,7 +27091,7 @@ EC
 EC
 EC
 LY
-sa
+Mu
 sa
 EC
 EC
@@ -29538,7 +29804,7 @@ xw
 GD
 GD
 TA
-ZV
+WF
 kD
 fX
 nQ
@@ -30260,7 +30526,7 @@ kn
 fS
 kV
 vD
-vD
+Df
 CP
 vD
 vD
@@ -30410,10 +30676,10 @@ fc
 fu
 ld
 gr
-gJ
+dz
 hg
 Al
-Al
+EI
 hE
 iZ
 jt
@@ -30521,7 +30787,7 @@ kD
 VY
 Ud
 Pe
-Ud
+Wn
 Ud
 uA
 pV
@@ -30568,7 +30834,7 @@ vT
 ej
 eo
 eA
-eo
+wl
 fx
 ld
 gu
@@ -31039,6 +31305,7 @@ AN
 AN
 vT
 ZU
+TL
 HS
 HS
 HS
@@ -31057,8 +31324,7 @@ HS
 HS
 HS
 HS
-HS
-HS
+TL
 hi
 HS
 nG
@@ -31241,7 +31507,7 @@ jR
 ow
 bR
 mD
-eT
+JF
 eT
 Ep
 Zg
@@ -31394,7 +31660,7 @@ ku
 nI
 jR
 lD
-kv
+XE
 mh
 mB
 kv
@@ -31406,7 +31672,7 @@ VV
 af
 ag
 Gh
-gi
+Yo
 gi
 mD
 Ru
@@ -31714,7 +31980,7 @@ iJ
 jf
 jy
 jX
-kv
+XE
 kG
 lh
 lF
@@ -31734,7 +32000,7 @@ BH
 BH
 KB
 Ru
-bR
+gF
 mD
 va
 rx
@@ -31871,7 +32137,7 @@ Cl
 jD
 iu
 hP
-ik
+Rq
 iK
 jg
 jA
@@ -33180,7 +33446,7 @@ UT
 gN
 QN
 KH
-KH
+vi
 KH
 ms
 KH
@@ -33434,7 +33700,7 @@ WZ
 Gr
 WZ
 WZ
-WZ
+qA
 WZ
 WZ
 WZ
@@ -33675,7 +33941,7 @@ KH
 ZR
 dj
 vG
-ji
+SG
 mD
 Qv
 gO
@@ -34632,7 +34898,7 @@ YW
 YW
 YW
 YW
-YW
+HG
 UT
 UT
 nQ
@@ -35001,7 +35267,7 @@ UP
 ez
 At
 At
-At
+Nu
 ol
 gP
 ez
@@ -37792,7 +38058,7 @@ Az
 kX
 an
 gs
-Zt
+Qu
 Zt
 hI
 Yt
@@ -37917,7 +38183,7 @@ kI
 aY
 SZ
 MB
-SZ
+Hr
 Pl
 GK
 Zy
@@ -38044,7 +38310,7 @@ YZ
 qB
 Fn
 PA
-PA
+TZ
 PA
 qB
 YZ

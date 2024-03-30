@@ -1948,13 +1948,13 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
 "ep" = (
-/obj/machinery/alarm{
-	pixel_y = 22
-	},
 /obj/machinery/light/small{
 	dir = 1
 	},
 /obj/machinery/floodlight,
+/obj/machinery/alarm{
+	pixel_y = 22
+	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
 "eq" = (
@@ -2461,7 +2461,7 @@
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/northeast)
 "fx" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -3241,7 +3241,7 @@
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "hs" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -25
 	},
@@ -3749,7 +3749,7 @@
 /obj/item/clothing/under/explorer/utility/engineering,
 /obj/item/clothing/shoes/boots/winter/explorer,
 /obj/item/clothing/shoes/boots/winter/explorer,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -22
 	},
@@ -4039,7 +4039,7 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/pathfinder_office)
 "iN" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -4520,7 +4520,7 @@
 /area/chapel/monastery/upper)
 "jJ" = (
 /obj/structure/closet/secure_closet/explorer,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -4674,7 +4674,7 @@
 /area/chapel/monastery/upper)
 "jZ" = (
 /obj/structure/table/standard,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -4909,7 +4909,7 @@
 	dir = 9
 	},
 /obj/random/medical/lite,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -22
 	},
@@ -5081,7 +5081,7 @@
 /turf/simulated/wall,
 /area/cryogaia/station/explorer_meeting)
 "kT" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -22
 	},
@@ -5641,7 +5641,7 @@
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -6331,7 +6331,7 @@
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
 "nu" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -6997,7 +6997,7 @@
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/northeast)
 "pu" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
 	},
@@ -7220,7 +7220,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -7836,7 +7836,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 9
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -23
 	},
@@ -8895,7 +8895,7 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/walkway)
 "zv" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -8903,7 +8903,7 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "zw" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -9459,7 +9459,7 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/east)
 "Cb" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -9531,7 +9531,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "Cw" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -23
 	},
@@ -10807,7 +10807,7 @@
 	dir = 4
 	},
 /obj/item/weapon/deck/cards,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
 	},
@@ -11149,7 +11149,7 @@
 	pressure_checks_default = 2;
 	frequency = 1441;
 	id_tag = "roof_air_out";
-	power_rating = 240000;
+	power_rating = 480000;
 	desc = "High power vent, Has a valve and pump attached to it"
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
@@ -11278,7 +11278,7 @@
 /area/quartermaster/miningdock)
 "KQ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -11288,7 +11288,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 8
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -11696,7 +11696,7 @@
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -12408,7 +12408,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
 "Rl" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -12972,7 +12972,7 @@
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
 "Ug" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -12990,7 +12990,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -13000,7 +13000,7 @@
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "Ui" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
 	},
@@ -13426,7 +13426,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
 	},
@@ -13436,7 +13436,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -13639,7 +13639,7 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Xe" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -13764,7 +13764,7 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "XK" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -14175,7 +14175,7 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "ZP" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},

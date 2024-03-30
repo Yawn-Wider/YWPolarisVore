@@ -373,7 +373,7 @@
 	},
 /obj/item/weapon/clipboard,
 /obj/item/weapon/pen,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	pixel_y = 23
 	},
 /obj/structure/table/glass,
@@ -510,7 +510,7 @@
 /obj/structure/closet,
 /obj/item/toy/figure/scientist,
 /obj/item/clothing/accessory/armband/science,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -655,7 +655,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology)
 "bz" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -668,7 +668,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/rnd/xenobiology/failsafe)
 "bA" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -738,7 +738,7 @@
 /area/outpost/research/isolation_a)
 "bJ" = (
 /obj/structure/table/standard,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -2184,7 +2184,7 @@
 /area/vacant/vacant_site/east)
 "fs" = (
 /obj/effect/floor_decal/corner/purple,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -2459,7 +2459,7 @@
 	pixel_y = 3
 	},
 /obj/item/roller,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -2557,7 +2557,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/surgery)
 "gh" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -2602,7 +2602,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 8
 	},
-/obj/machinery/alarm/monitor/isolation{
+/obj/machinery/alarm/yw/monitor/isolation{
 	alarm_id = "isolation_three";
 	dir = 8;
 	pixel_x = 22
@@ -3080,7 +3080,7 @@
 /area/rnd/xenobiology)
 "hq" = (
 /obj/machinery/atmospherics/portables_connector,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 22
 	},
@@ -3133,7 +3133,7 @@
 	dir = 1;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -3312,7 +3312,7 @@
 /turf/simulated/wall/r_wall,
 /area/outpost/mining_main/airlock)
 "hS" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -3440,7 +3440,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 5
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -3851,7 +3851,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -4275,7 +4275,7 @@
 /area/rnd/workshop)
 "ku" = (
 /obj/machinery/radiocarbon_spectrometer,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -4465,7 +4465,7 @@
 /turf/simulated/mineral/ignore_mapgen/cave,
 /area/mine/unexplored)
 "kU" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	pixel_y = 23
 	},
 /turf/simulated/floor/plating,
@@ -4509,7 +4509,7 @@
 /obj/effect/floor_decal/industrial/warning/cee{
 	dir = 1
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -4771,7 +4771,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -5030,7 +5030,7 @@
 /area/outpost/mining_main/north_hall)
 "mi" = (
 /obj/machinery/washing_machine,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -5142,7 +5142,7 @@
 /obj/structure/table/standard,
 /obj/item/weapon/melee/baton/slime/loaded,
 /obj/item/weapon/gun/energy/taser/xeno,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -5363,7 +5363,7 @@
 /turf/simulated/floor/tiled,
 /area/maintenance/shelter3)
 "mW" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -5519,7 +5519,7 @@
 /turf/simulated/floor/tiled,
 /area/gateway)
 "nq" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -6213,7 +6213,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/outpost/research/longtermstorage)
 "pd" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -6319,7 +6319,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "pr" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -6417,7 +6417,7 @@
 	dir = 1
 	},
 /obj/item/weapon/storage/box/solution_trays,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -6497,7 +6497,7 @@
 /area/rnd/xenobiology/xenoflora/lab_atmos)
 "pO" = (
 /obj/effect/floor_decal/industrial/warning/dust,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -7462,7 +7462,7 @@
 /turf/simulated/floor/tiled,
 /area/rnd/xenobiology/hallway)
 "rU" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -7650,7 +7650,7 @@
 /area/outpost/research/hallway/mid)
 "sv" = (
 /obj/structure/closet,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -7880,7 +7880,7 @@
 /turf/simulated/floor/tiled,
 /area/gateway)
 "tj" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -8067,7 +8067,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -8142,7 +8142,7 @@
 /turf/simulated/floor/reinforced,
 /area/rnd/xenobiology/secure)
 "tW" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -8584,7 +8584,7 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 6
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -8916,7 +8916,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -9783,7 +9783,7 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -9975,7 +9975,7 @@
 	name = "south bump";
 	pixel_y = -32
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -10272,7 +10272,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/isolation_a)
 "za" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -10637,7 +10637,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -10761,7 +10761,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -11037,7 +11037,7 @@
 /turf/simulated/wall/r_wall,
 /area/vacant/vacant_site/east)
 "AQ" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -22
 	},
@@ -11153,7 +11153,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
 "Bf" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -11314,7 +11314,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/hallway/mid)
 "Bx" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -11568,7 +11568,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/xenoflora)
 "BU" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -25
 	},
@@ -11944,7 +11944,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -12031,7 +12031,7 @@
 /area/rnd/xenobiology/control)
 "Dc" = (
 /obj/structure/dispenser/oxygen,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	pixel_y = 22
 	},
 /turf/simulated/floor/tiled,
@@ -12232,7 +12232,7 @@
 	dir = 4;
 	pixel_x = 11
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -12481,7 +12481,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/outpost/research/eva)
 "Ej" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -22
 	},
@@ -12612,7 +12612,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/research/anomaly)
 "Ex" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -12961,7 +12961,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -13461,7 +13461,7 @@
 /turf/simulated/floor/plating,
 /area/rnd/xenobiology)
 "Gs" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -13496,7 +13496,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -13532,7 +13532,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 8
 	},
-/obj/machinery/alarm/monitor/isolation{
+/obj/machinery/alarm/yw/monitor/isolation{
 	alarm_id = "isolation_two";
 	dir = 8;
 	pixel_x = 22
@@ -13609,7 +13609,7 @@
 /turf/simulated/floor/tiled/steel,
 /area/rnd/xenobiology/failsafe)
 "GN" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	pixel_y = 22
 	},
 /obj/machinery/chem_master,
@@ -13798,7 +13798,7 @@
 /turf/simulated/floor/tiled,
 /area/outpost/mining_main/south_hall)
 "Hl" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -13973,7 +13973,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/hallway)
 "HA" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -14403,7 +14403,7 @@
 /area/outpost/mining_main/refinery)
 "ID" = (
 /obj/structure/table/standard,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -14423,7 +14423,7 @@
 "IE" = (
 /obj/structure/table/standard,
 /obj/item/weapon/storage/box/donkpockets,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -14704,7 +14704,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -14949,7 +14949,7 @@
 	dir = 8;
 	icon_state = "pipe-c"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -15056,7 +15056,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/rnd/outpost/storage)
 "Kc" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -15368,7 +15368,7 @@
 /obj/effect/floor_decal/corner/green{
 	dir = 5
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -15416,7 +15416,7 @@
 /obj/machinery/atmospherics/unary/vent_scrubber{
 	dir = 8
 	},
-/obj/machinery/alarm/monitor/isolation{
+/obj/machinery/alarm/yw/monitor/isolation{
 	alarm_id = "isolation_one";
 	dir = 8;
 	pixel_x = 22
@@ -15616,7 +15616,7 @@
 /obj/effect/floor_decal/industrial/warning/corner{
 	dir = 4
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -15639,7 +15639,7 @@
 /turf/simulated/floor/plating,
 /area/rnd/outpost/hallway)
 "Lv" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -22
 	},
@@ -15854,7 +15854,7 @@
 /area/maintenance/shelter)
 "LT" = (
 /obj/structure/table/standard,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 1;
 	pixel_y = -25
 	},
@@ -16282,7 +16282,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -16980,7 +16980,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/gateway)
 "OA" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -17309,7 +17309,7 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -17413,7 +17413,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -18098,7 +18098,7 @@
 	pixel_y = 15
 	},
 /obj/item/weapon/melee/baton/loaded,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -18684,7 +18684,7 @@
 	name = "east bump";
 	pixel_x = 24
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	frequency = 1441;
 	pixel_y = 22
 	},
@@ -18750,7 +18750,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/anomaly_analysis)
 "SN" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -19374,7 +19374,7 @@
 /area/outpost/research/hallway/mid)
 "Uk" = (
 /obj/machinery/atmospherics/pipe/simple/visible/scrubbers,
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -19547,7 +19547,7 @@
 	pixel_x = 24;
 	pixel_y = 32
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -19717,7 +19717,7 @@
 /turf/simulated/floor/tiled/white,
 /area/outpost/research/tempstorage)
 "UY" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -22
 	},
@@ -20633,7 +20633,7 @@
 	d2 = 2;
 	icon_state = "1-2"
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 4;
 	pixel_x = -25
 	},
@@ -20723,7 +20723,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/outpost/mixing)
 "Xu" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	pixel_y = 24
 	},
 /obj/item/device/radio/intercom{
@@ -21279,7 +21279,7 @@
 /turf/simulated/floor/tiled/white,
 /area/rnd/xenobiology/hallway)
 "YN" = (
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -21728,7 +21728,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 24
 	},
@@ -21790,7 +21790,7 @@
 /obj/item/weapon/folder/red{
 	pixel_y = 3
 	},
-/obj/machinery/alarm{
+/obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
 	},

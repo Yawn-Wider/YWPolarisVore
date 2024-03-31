@@ -592,7 +592,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/hydroponics)
 "avh" = (
-/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
+/obj/machinery/atmospherics/pipe/manifold4w/visible/blue,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "avn" = (
@@ -614,6 +614,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/aft)
+"awB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light{
+	dir = 8
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "awE" = (
 /turf/simulated/mineral/cave,
 /area/maintenance/security_lower)
@@ -3766,6 +3775,14 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/fish)
+"cnm" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/black{
+	dir = 6
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "cnp" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -4445,7 +4462,6 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -4456,9 +4472,10 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 6
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "cIb" = (
@@ -5363,7 +5380,7 @@
 /area/maintenance/lowfloor1)
 "dlm" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow,
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -5601,10 +5618,10 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbaylower)
 "dqG" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 6
 	},
-/obj/machinery/meter,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "drj" = (
@@ -7230,7 +7247,7 @@
 /turf/simulated/floor,
 /area/mine/explored/lower_rock)
 "emz" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 10
 	},
 /turf/simulated/floor/tiled,
@@ -8408,7 +8425,7 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/fitness)
 "eUb" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/visible/blue,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "eUg" = (
@@ -9680,7 +9697,7 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -11984,6 +12001,12 @@
 /obj/effect/decal/cleanable/liquid_fuel,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
+"gXB" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/purple{
+	dir = 1
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "gXE" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 8
@@ -12181,6 +12204,12 @@
 "hdp" = (
 /turf/simulated/wall/r_wall,
 /area/ai_server_room)
+"hdq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "hdr" = (
 /obj/machinery/door/blast/regular{
 	density = 0;
@@ -13198,7 +13227,6 @@
 "hEo" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -13210,9 +13238,10 @@
 	opacity = 0
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "hEv" = (
@@ -13829,9 +13858,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/cryogaia/outpost/tower/northwest)
 "hVC" = (
-/obj/machinery/atmospherics/binary/pump/on{
+/obj/machinery/atmospherics/binary/pump/high_power/on{
+	name = "Air to Supply";
 	dir = 1;
-	name = "Air to Supply"
+	target_pressure = 250.325
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -14262,7 +14292,6 @@
 /obj/machinery/atmospherics/pipe/simple/visible/red,
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -14273,9 +14302,10 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "ifD" = (
@@ -14325,6 +14355,14 @@
 /obj/machinery/optable,
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/medical/morgue)
+"ifY" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/visible/black{
+	dir = 5
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "igd" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/closet,
@@ -15210,13 +15248,13 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
 "iDK" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/purple{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -16090,6 +16128,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen/lower)
+"jby" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red,
+/obj/machinery/atmospherics/pipe/simple/visible/purple{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "jbB" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 1
@@ -16567,8 +16612,9 @@
 	tag_east = 2;
 	tag_west = 1;
 	tag_south = 5;
-	power_rating = 240000;
-	desc = "An advanced High power version of the gas filter, able to be configured for filtering of multiple gasses."
+	power_rating = 480000;
+	desc = "An advanced High power version of the gas filter, able to be configured for filtering of multiple gasses.";
+	active_power_usage = 7500
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -16659,7 +16705,6 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -16670,7 +16715,8 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
+/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "jrH" = (
@@ -17284,13 +17330,13 @@
 /area/crew_quarters/sleep/cryo)
 "jHf" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 4
-	},
 /obj/structure/cable{
 	d1 = 1;
 	d2 = 2;
 	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/purple{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -17604,6 +17650,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/brig/visitation)
+"jNT" = (
+/obj/machinery/atmospherics/pipe/manifold/visible/blue{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "jNU" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -19129,8 +19181,9 @@
 	tag_east = 2;
 	tag_south = 1;
 	tag_north = 4;
-	power_rating = 240000;
-	desc = "An advanced High power version of the gas filter, able to be configured for filtering of multiple gasses."
+	power_rating = 480000;
+	desc = "An advanced High power version of the gas filter, able to be configured for filtering of multiple gasses.";
+	active_power_usage = 7500
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -19388,7 +19441,6 @@
 "kEa" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -19399,9 +19451,10 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "kEq" = (
@@ -20874,6 +20927,13 @@
 "lqO" = (
 /turf/simulated/wall/r_wall,
 /area/security/perma/court)
+"lqV" = (
+/obj/machinery/atmospherics/pipe/simple/visible/red{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/purple,
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "lqY" = (
 /turf/simulated/floor/carpet,
 /area/maintenance/maintroom2)
@@ -21591,7 +21651,7 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/entrance)
 "lLh" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+/obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 1
 	},
 /turf/simulated/floor/tiled,
@@ -22368,8 +22428,9 @@
 	tag_north = 3;
 	tag_south = 2;
 	tag_west = 1;
-	power_rating = 240000;
-	desc = "An advanced High power version of the gas filter, able to be configured for filtering of multiple gasses."
+	power_rating = 480000;
+	desc = "An advanced High power version of the gas filter, able to be configured for filtering of multiple gasses.";
+	active_power_usage = 7500
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -22647,7 +22708,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan,
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -23145,7 +23206,6 @@
 "mGA" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -23162,9 +23222,10 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 5
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "mGC" = (
@@ -23408,7 +23469,6 @@
 "mLN" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -23425,9 +23485,10 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "mMp" = (
@@ -23448,10 +23509,10 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_1)
 "mMI" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 4
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/blue,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "mNe" = (
@@ -23847,6 +23908,16 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/aft)
+"mZa" = (
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/air/airlock{
+	name = "Buffer Canister \[Air\]";
+	start_pressure = 7500
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "mZs" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
@@ -26887,7 +26958,7 @@
 /area/crew_quarters/sleep/Dorm_5)
 "oMq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red,
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -29682,6 +29753,13 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/carpet,
 /area/chapel/main)
+"qgb" = (
+/obj/machinery/atmospherics/binary/pump{
+	dir = 4;
+	name = "Intake to Mix"
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "qgi" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -30037,7 +30115,14 @@
 "qqI" = (
 /obj/machinery/atmospherics/binary/pump/on{
 	dir = 4;
-	name = "Intake CO2 to Outside"
+	name = "Intake CO2 to Outside";
+	target_pressure = 250.325
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
+"qqU" = (
+/obj/machinery/atmospherics/pipe/simple/visible/purple{
+	dir = 4
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -30571,7 +30656,7 @@
 /area/library)
 "qKj" = (
 /obj/machinery/meter,
-/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
+/obj/machinery/atmospherics/pipe/manifold4w/visible/purple,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "qKs" = (
@@ -30839,6 +30924,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/recreation_area_restroom)
+"qVR" = (
+/obj/machinery/atmospherics/pipe/simple/visible/black{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "qWx" = (
 /obj/machinery/shower{
 	dir = 1
@@ -31054,8 +31145,8 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "rdi" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan,
 /obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible/purple,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "rdm" = (
@@ -32298,7 +32389,7 @@
 /turf/simulated/mineral/cave,
 /area/maintenance/lowfloor3)
 "rOu" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 6
 	},
 /turf/simulated/floor/tiled,
@@ -34633,7 +34724,7 @@
 "teR" = (
 /obj/machinery/atmospherics/binary/passive_gate/on{
 	regulate_mode = 1;
-	target_pressure = 4500;
+	target_pressure = 7500;
 	dir = 8;
 	name = "Air pressure regulator"
 	},
@@ -36424,10 +36515,10 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/sleep/Dorm_6)
 "tZC" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 4
 	},
-/obj/machinery/meter,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "tZE" = (
@@ -37247,7 +37338,7 @@
 /area/crew_quarters/recreation_area_restroom)
 "utS" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/purple{
 	dir = 4
 	},
 /turf/simulated/floor/tiled,
@@ -38586,9 +38677,7 @@
 	},
 /area/tcommsat/chamber)
 "veA" = (
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
-	dir = 4
-	},
+/obj/machinery/atmospherics/pipe/manifold4w/visible/purple,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "veC" = (
@@ -38667,7 +38756,6 @@
 "vgp" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -38678,9 +38766,10 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "vgD" = (
@@ -39141,13 +39230,13 @@
 /turf/simulated/floor/tiled,
 /area/hallway/primary/starboard)
 "vuu" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
-	dir = 5
-	},
 /obj/structure/cable{
 	d1 = 4;
 	d2 = 8;
 	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/visible/purple{
+	dir = 5
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
@@ -39289,7 +39378,6 @@
 	dir = 8
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 4
 	},
@@ -39300,9 +39388,10 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/manifold/visible/cyan{
+/obj/machinery/atmospherics/pipe/manifold/visible/black{
 	dir = 8
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "vzD" = (
@@ -39660,6 +39749,11 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/lowfloor1)
+"vIO" = (
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold/visible/cyan,
+/turf/simulated/floor/tiled,
+/area/engineering/atmos)
 "vJx" = (
 /obj/structure/closet/crate,
 /obj/random/maintenance/security,
@@ -40568,7 +40662,7 @@
 	tag_east = 1;
 	tag_west_con = 0.79;
 	tag_west = 1;
-	power_rating = 240000;
+	power_rating = 480000;
 	desc = "An advanced High power version of the gas mixer, able to be configured for mixing of multiple gasses."
 	},
 /turf/simulated/floor/tiled,
@@ -42557,7 +42651,6 @@
 	dir = 1
 	},
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/door/blast/regular{
@@ -42567,9 +42660,10 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 10
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "xqB" = (
@@ -43239,7 +43333,6 @@
 "xFS" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -43250,9 +43343,10 @@
 	name = "Atmospherics Lockdown";
 	opacity = 0
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 5
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "xGP" = (
@@ -43437,7 +43531,6 @@
 "xLC" = (
 /obj/structure/window/reinforced,
 /obj/machinery/door/firedoor/border_only,
-/obj/structure/grille,
 /obj/structure/window/reinforced{
 	dir = 1
 	},
@@ -43451,9 +43544,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 4
 	},
+/obj/structure/grille,
 /turf/simulated/floor,
 /area/engineering/atmos)
 "xLU" = (
@@ -43624,10 +43718,10 @@
 /turf/simulated/floor/tiled/dark,
 /area/ai)
 "xRD" = (
-/obj/machinery/atmospherics/pipe/simple/visible/cyan{
+/obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/simple/visible/blue{
 	dir = 10
 	},
-/obj/machinery/meter,
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "xRU" = (
@@ -51657,10 +51751,10 @@ xVX
 sla
 raN
 jCr
-lPS
-sla
-raN
-jCr
+cnm
+awB
+hdq
+ifY
 xqp
 mGA
 rgM
@@ -51811,7 +51905,7 @@ cZU
 lTY
 lNL
 lmT
-nZs
+vIO
 teR
 poI
 mCp
@@ -51822,7 +51916,7 @@ jmT
 tZC
 egf
 bjJ
-lDX
+qVR
 puh
 mLN
 hDy
@@ -51973,12 +52067,12 @@ cRB
 ndL
 btV
 tUr
-tUr
 lDX
+qqU
 fky
 lLh
-avh
-eUb
+beo
+tAW
 kxv
 nZs
 rOu
@@ -52135,10 +52229,10 @@ voi
 qFg
 tpP
 sQr
-tUr
-lLh
+lDX
+gXB
 qKj
-mMI
+lqV
 wiu
 rOu
 mMI
@@ -52297,12 +52391,12 @@ cRB
 rMt
 btV
 mJw
-tUr
+qgb
 vJS
 dIn
 ldT
 xRD
-veA
+jNT
 mlu
 tAW
 oMq
@@ -52459,7 +52553,7 @@ pcB
 iDY
 vbG
 wpL
-khA
+luw
 luw
 utS
 luw
@@ -52785,7 +52879,7 @@ slE
 jRK
 egf
 gxC
-lDX
+qqU
 tFV
 jAE
 wyA
@@ -52947,7 +53041,7 @@ eZO
 xwB
 wdp
 jtz
-lDX
+qqU
 tFV
 caj
 rJV
@@ -53109,7 +53203,7 @@ btV
 tUr
 tUr
 fVE
-lDX
+qqU
 cia
 hTc
 eoL
@@ -53271,7 +53365,7 @@ gXw
 tUr
 iPc
 gqZ
-oMq
+jby
 egf
 tvU
 lOy
@@ -53433,7 +53527,7 @@ pop
 lmT
 egf
 beo
-oMq
+jby
 qZY
 gxC
 tUr
@@ -53919,7 +54013,7 @@ uNn
 kue
 bZj
 voP
-tUr
+mZa
 iDK
 fVE
 tUr

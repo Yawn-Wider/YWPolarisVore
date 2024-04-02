@@ -131,6 +131,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/unmake_mentor,
 	/client/proc/removetickets,
 	/client/proc/delbook,
+	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/setckey, //YW add - readds SetCkey proc
 	/client/proc/dbcon_fix //YW add - adds Fix Database Connection proc
 	)
@@ -562,7 +563,8 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/cmd_admin_delete,		//delete an instance/object/mob/etc,
 	/client/proc/cmd_debug_del_all,
 	/client/proc/toggle_random_events,
-	/client/proc/modify_server_news
+	/client/proc/modify_server_news,
+	/client/proc/toggle_spawning_with_recolour
 
 )
 

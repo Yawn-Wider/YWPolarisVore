@@ -681,3 +681,21 @@
 	mobs_to_pick_from = list(
 		/mob/living/simple_mob/animal/passive/gaslamp/snow = 3,
 		)
+
+/obj/tether_away_spawner/cryogaia_spiders
+	name = "Aggressive spider mobs"
+	faction = "spiders"
+	prob_spawn = 100
+	prob_fall = 0
+	atmos_comp = 1
+	mobs_to_pick_from = list(
+		/mob/living/simple_mob/animal/giant_spider/frost = 1
+	)
+
+/obj/structure/prop/spiderhole
+	name = "spider hole"
+	desc = "Frost spiders often come out of those"
+	icon = 'icons/obj/structures_yw32x32.dmi'
+	icon_state = "spiderhole"
+	density = FALSE
+	anchored = TRUE

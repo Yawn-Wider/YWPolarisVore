@@ -700,7 +700,9 @@
 /turf/simulated/open,
 /area/cryogaia/outpost/elevator/scicargo)
 "anU" = (
-/mob/living/simple_mob/animal/passive/penguin,
+/mob/living/simple_mob/animal/passive/penguin{
+	max_co2 = 0
+	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
 "aoc" = (
@@ -5685,6 +5687,11 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/assembly/chargebay)
+"chN" = (
+/obj/tether_away_spawner/cryogaia_spiders,
+/obj/structure/prop/spiderhole,
+/turf/simulated/floor/outdoors/snow/snow/cryogaia,
+/area/borealis2/outdoors/exterior)
 "cia" = (
 /obj/item/weapon/folder/red,
 /obj/structure/table/glass,
@@ -21957,6 +21964,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/secondary/exit)
+"iug" = (
+/obj/tether_away_spawner/cryogaia_spiders,
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/exterior)
 "iui" = (
 /obj/machinery/stationboiler_radiator{
 	dir = 8
@@ -63619,6 +63630,7 @@ vaU
 vaU
 vaU
 vaU
+chN
 vaU
 vaU
 vaU
@@ -63690,8 +63702,7 @@ vaU
 vaU
 vaU
 vaU
-vaU
-vaU
+chN
 vaU
 vaU
 vaU
@@ -65678,7 +65689,7 @@ iSE
 iSE
 iSE
 iSE
-vaU
+chN
 vaU
 vaU
 vaU
@@ -71672,7 +71683,7 @@ iSE
 iSE
 iSE
 iSE
-iSE
+iug
 vaU
 vaU
 vaU
@@ -84975,7 +84986,7 @@ vaU
 xzt
 vaU
 vaU
-vaU
+chN
 vaU
 vaU
 vaU
@@ -88593,7 +88604,7 @@ xzt
 vaU
 vaU
 vaU
-vaU
+chN
 vaU
 vaU
 vaU

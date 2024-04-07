@@ -71,11 +71,11 @@
 	virus_immune = 1
 
 	//YW changes - breathing boyes now
-	var/breath_type = "oxygen"								// Non-oxygen gas breathed, if any.
-	var/poison_type = "phoron"								// Poisonous air.
-	var/exhale_type = "carbon_dioxide"						// Exhaled gas type.
-	var/water_breather = FALSE
-	var/bad_swimmer = FALSE
+	breath_type = "oxygen"								// Non-oxygen gas breathed, if any.
+	poison_type = "phoron"								// Poisonous air.
+	exhale_type = "carbon_dioxide"						// Exhaled gas type.
+	water_breather = FALSE
+	bad_swimmer = FALSE
 	//End YW changes
 
 	vision_flags = SEE_SELF
@@ -91,7 +91,8 @@
 		O_BRAIN =		/obj/item/organ/internal/brain/shadekin,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine
+		O_INTESTINE =	/obj/item/organ/internal/intestine,
+		O_LUNGS =	/obj/item/organ/internal/lungs // YW Add - Lungs
 		)
 
 	has_limbs = list(

@@ -113,6 +113,9 @@
 	var/energy_light = 0.25
 	var/energy_dark = 0.75
 
+	var/phase_gentle = TRUE //CHOMPEdit - Add gentle phasing, defaults to on.
+	var/doing_phase = FALSE //CHOMPEdit - Prevent bugs when spamming phase button
+
 /datum/species/shadekin/New()
 	..()
 	for(var/power in shadekin_abilities)
@@ -303,27 +306,27 @@
 
 	switch(eyecolor_type)
 		if(BLUE_EYES)
-			total_health = 100
+			total_health = 75 //ChompEDIT - balance tweaks
 			energy_light = 0.5
 			energy_dark = 0.5
 		if(RED_EYES)
-			total_health = 200
+			total_health = 150 //ChompEDIT - balance tweaks
 			energy_light = -1
 			energy_dark = 0.1
 		if(PURPLE_EYES)
-			total_health = 150
+			total_health = 100 //ChompEDIT - balance tweaks
 			energy_light = -0.5
 			energy_dark = 1
 		if(YELLOW_EYES)
-			total_health = 100
+			total_health = 50 //ChompEDIT - balance tweaks
 			energy_light = -2
 			energy_dark = 3
 		if(GREEN_EYES)
-			total_health = 100
+			total_health = 100 //ChompEDIT - balance tweaks
 			energy_light = 0.125
 			energy_dark = 2
 		if(ORANGE_EYES)
-			total_health = 175
+			total_health = 125 //ChompEDIT - balance tweaks
 			energy_light = -0.5
 			energy_dark = 0.25
 

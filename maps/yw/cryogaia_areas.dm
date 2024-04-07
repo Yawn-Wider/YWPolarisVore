@@ -1,69 +1,69 @@
 //Overrides
 /area/crew_quarters/sleep/Dorm_1
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_2
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_3
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_4
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_5
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_6
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_7
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_8
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_9
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
 	block_tracking = TRUE
 
 /area/crew_quarters/sleep/Dorm_10
-	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	soundproofed = TRUE
 	limit_mob_size = FALSE
 	block_suit_sensors = TRUE
@@ -504,9 +504,11 @@
 /area/security/brig/visitation
 	name = "\improper Visitation"
 	icon_state = "security"
+	flags = PHASE_SHIELDED
 /area/security/brig/bathroom
 	name = "\improper Brig Bathroom"
 	icon_state = "security"
+	flags = PHASE_SHIELDED
 /area/security/armory/blue
 	name = "\improper Armory - Blue"
 	icon_state = "armory"
@@ -545,6 +547,7 @@
 /area/security/sorting
 	name = "\improper Security disposals processing"
 	icon_state = "security"
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to tcoms
 
 /area/maintenance/security
 	name = "Security Maintenance"

@@ -26,6 +26,7 @@
 	verbpath = /mob/living/carbon/human/proc/phase_shift
 	ability_icon_state = "tech_passwall"
 
+/* //ChompEDIT - Moved to modular_chomp
 /mob/living/carbon/human/proc/phase_shift()
 	set name = "Phase Shift (100)"
 	set desc = "Shift yourself out of alignment with realspace to travel quickly to different areas."
@@ -164,6 +165,13 @@
 		density = FALSE
 		force_max_speed = TRUE
 		ability_flags &= ~AB_PHASE_SHIFTING
+*/ //ChompEDIT END - moved to modular_chomp
+
+//CHOMPEdit Start - Shadekin probably shouldn't be hit while phasing
+/datum/modifier/shadekin_phase
+	name = "Shadekin Phasing"
+	evasion = 100
+//CHOMPEdit End
 
 /datum/modifier/shadekin_phase_vision
 	name = "Shadekin Phase Vision"

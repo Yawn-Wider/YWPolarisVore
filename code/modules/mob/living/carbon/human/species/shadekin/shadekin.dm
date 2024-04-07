@@ -70,11 +70,15 @@
 
 	virus_immune = 1
 
-	breath_type = null
-	poison_type = null
-	water_breather = TRUE	//They don't quite breathe
+	//YW changes - breathing boyes now
+	breath_type = "oxygen"								// Non-oxygen gas breathed, if any.
+	poison_type = "phoron"								// Poisonous air.
+	exhale_type = "carbon_dioxide"						// Exhaled gas type.
+	water_breather = FALSE
+	bad_swimmer = FALSE
+	//End YW changes
 
-	vision_flags = SEE_SELF|SEE_MOBS
+	vision_flags = SEE_SELF
 	appearance_flags = HAS_HAIR_COLOR | HAS_LIPS | HAS_SKIN_COLOR | HAS_EYE_COLOR | HAS_UNDERWEAR
 
 	move_trail = /obj/effect/decal/cleanable/blood/tracks/paw
@@ -87,7 +91,8 @@
 		O_BRAIN =		/obj/item/organ/internal/brain/shadekin,
 		O_EYES =		/obj/item/organ/internal/eyes,
 		O_STOMACH =		/obj/item/organ/internal/stomach,
-		O_INTESTINE =	/obj/item/organ/internal/intestine
+		O_INTESTINE =	/obj/item/organ/internal/intestine,
+		O_LUNGS =	/obj/item/organ/internal/lungs // YW Add - Lungs
 		)
 
 	has_limbs = list(

@@ -192,7 +192,7 @@
 /area/security/outpost
 	name = "\improper Security outpost"
 	icon_state = "security"
-	flags = RAD_SHIELDED
+	flags = RAD_SHIELDED | PHASE_SHIELDED
 
 /area/security/labor
 	name = "Labor camp access"

@@ -172,6 +172,7 @@
 /area/security/perma
 	name = "\improper Prison"
 	icon_state = "security"
+	flags = PHASE_SHIELDED
 
 /area/security/perma/bathroom
 	name = "\improper Prison Bathroom"

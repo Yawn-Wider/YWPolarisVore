@@ -972,6 +972,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Command - Site Manager's Office"
 	icon_state = "captain"
 	sound_env = MEDIUM_SOFTFLOOR
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to site manager's office
 
 /area/crew_quarters/heads/hop
 	name = "\improper Command - HoP's Office"
@@ -1756,6 +1757,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/brig
 	name = "\improper Security - Brig"
 	icon_state = "brig"
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to brig
 
 /area/security/brig/prison_break()
 	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
@@ -1768,6 +1770,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/prison
 	name = "\improper Security - Prison Wing"
 	icon_state = "sec_prison"
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to brig
 
 /area/security/prison/prison_break()
 	for(var/obj/structure/closet/secure_closet/brig/temp_closet in src)
@@ -1785,6 +1788,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Security - Armory"
 	icon_state = "armory"
 	ambience = AMBIENCE_HIGHSEC
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to armoury
 
 /area/security/briefing_room
 	name = "\improper Security - Briefing Room"
@@ -1814,6 +1818,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 /area/security/range
 	name = "\improper Security - Firing Range"
 	icon_state = "firingrange"
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to perma
 
 /area/security/security_aid_station
 	name = "\improper Security - Security Aid Station"
@@ -1844,7 +1849,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Security - Tactical Equipment"
 	icon_state = "Tactical"
 	ambience = AMBIENCE_HIGHSEC
-
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to tactical
 
 /*
 	New()
@@ -1867,6 +1872,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Vault"
 	icon_state = "nuke_storage"
 	ambience = AMBIENCE_HIGHSEC
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to vault
 
 /area/security/checkpoint
 	name = "\improper Security Checkpoint"
@@ -2334,12 +2340,14 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper AI Upload Chamber"
 	icon_state = "ai_upload"
 	ambience = AMBIENCE_AI
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to ai upload
 
 /area/ai_upload_foyer
 	name = "AI Upload Access"
 	icon_state = "ai_foyer"
 	sound_env = SMALL_ENCLOSED
 	ambience = AMBIENCE_AI
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to ai upload
 
 /area/ai_server_room
 	name = "Messaging Server Room"
@@ -2351,6 +2359,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper AI Chamber"
 	icon_state = "ai_chamber"
 	ambience = AMBIENCE_AI
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to ai chamber
 
 /area/ai_cyborg_station
 	name = "\improper Cyborg Station"
@@ -2437,6 +2446,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 // Telecommunications Satellite
 /area/tcommsat/
 	ambience = AMBIENCE_ENGINEERING
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to tcoms
 
 /area/tcommsat/entrance
 	name = "\improper Telecomms Teleporter"
@@ -2455,6 +2465,7 @@ NOTE: there are two lists of areas in the end of this file: centcom and station 
 	name = "\improper Telecomms Foyer"
 	icon_state = "tcomsatfoyer"
 	ambience = AMBIENCE_ENGINEERING
+	flags = PHASE_SHIELDED // YW Addition adds phase shielding to tcoms
 
 /area/tcomwest
 	name = "\improper Telecommunications Satellite West Wing"

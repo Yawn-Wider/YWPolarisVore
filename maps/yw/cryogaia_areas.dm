@@ -269,28 +269,28 @@
 /area/crew_quarters/sleep/Dorm_1/holo
 	name = "\improper Dorm 1 Holodeck"
 	icon_state = "dk_yellow"
-	flags = RAD_SHIELDED | BLUE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	limit_mob_size = FALSE
 	block_suit_sensors = FALSE
 
 /area/crew_quarters/sleep/Dorm_3/holo
 	name = "\improper Dorm 3 Holodeck"
 	icon_state = "dk_yellow"
-	flags = RAD_SHIELDED | BLUE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	limit_mob_size = FALSE
 	block_suit_sensors = FALSE
 
 /area/crew_quarters/sleep/Dorm_5/holo
 	name = "\improper Dorm 5 Holodeck"
 	icon_state = "dk_yellow"
-	flags = RAD_SHIELDED | BLUE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	limit_mob_size = FALSE
 	block_suit_sensors = FALSE
 
 /area/crew_quarters/sleep/Dorm_7/holo
 	name = "\improper Dorm 7 Holodeck"
 	icon_state = "dk_yellow"
-	flags = RAD_SHIELDED | BLUE_SHIELDED
+	flags = RAD_SHIELDED | BLUE_SHIELDED | TEMPERATURE_SHIELDED | PHASE_SHIELDED
 	limit_mob_size = FALSE
 	block_suit_sensors = FALSE
 

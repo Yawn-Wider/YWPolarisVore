@@ -4820,12 +4820,8 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "kp" = (
-/obj/machinery/holoposter{
-	dir = 8;
-	pixel_x = 30
-	},
-/turf/simulated/floor/tiled,
-/area/civilian/atrium/upper)
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/grounds/upper)
 "kq" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -8099,12 +8095,8 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "vx" = (
-/obj/item/device/radio/intercom{
-	dir = 4;
-	name = "Common Channel";
-	pixel_x = 21
-	},
-/turf/simulated/floor/tiled,
+/obj/effect/wingrille_spawn/reinforced,
+/turf/simulated/floor/plating,
 /area/civilian/atrium/upper)
 "vA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/black{
@@ -9980,6 +9972,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"Eu" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/camera/network/civilian{
+	dir = 4
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "Ev" = (
 /obj/machinery/light,
 /obj/machinery/light_switch{
@@ -10530,6 +10530,14 @@
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/southwest)
+"HI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/camera/network/civilian{
+	dir = 8
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "HJ" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -11142,15 +11150,15 @@
 /area/civilian/atrium/upper)
 "Ks" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on{
+	desc = "High power vent, Has a valve and pump attached to it";
 	dir = 4;
-	internal_pressure_bound = 280;
-	internal_pressure_bound_default = 280;
-	pressure_checks = 2;
-	pressure_checks_default = 2;
 	frequency = 1441;
 	id_tag = "roof_air_out";
+	internal_pressure_bound = 280;
+	internal_pressure_bound_default = 280;
 	power_rating = 960000;
-	desc = "High power vent, Has a valve and pump attached to it"
+	pressure_checks = 2;
+	pressure_checks_default = 2
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/civilian/atrium/upper)
@@ -26268,9 +26276,9 @@ AN
 AN
 Nj
 kl
-Nj
-Nj
-kl
+Pi
+Pi
+Pi
 Nj
 kl
 Nj
@@ -26283,10 +26291,10 @@ nH
 lP
 Nj
 kl
-Nj
-kl
-Nj
-kl
+vx
+vx
+vx
+vx
 Nj
 kl
 DF
@@ -26430,10 +26438,10 @@ AN
 Nj
 Nj
 VK
-Tw
+sa
+sa
+sa
 ZB
-sa
-sa
 sa
 VK
 sa
@@ -26447,7 +26455,7 @@ VK
 sa
 sa
 sa
-ZB
+sa
 sa
 VK
 sa
@@ -26609,7 +26617,7 @@ My
 Oz
 Oz
 Oz
-Oz
+HI
 Oz
 RJ
 cB
@@ -26769,9 +26777,9 @@ Xl
 aD
 fv
 sa
-TQ
-TQ
-TQ
+vx
+vx
+kl
 sa
 fv
 BI
@@ -26781,7 +26789,7 @@ ql
 tW
 zW
 sa
-Nj
+vx
 AN
 AN
 AN
@@ -26933,7 +26941,7 @@ sa
 sa
 rC
 EC
-TQ
+vx
 sa
 sa
 rC
@@ -27095,7 +27103,7 @@ Mu
 sa
 EC
 EC
-TQ
+vx
 Gt
 sa
 rC
@@ -27257,7 +27265,7 @@ sa
 sa
 rC
 EC
-TQ
+vx
 sa
 sa
 rC
@@ -27417,9 +27425,9 @@ Nk
 Qj
 vK
 sa
-TQ
-TQ
-TQ
+vx
+vx
+kl
 sa
 vK
 VU
@@ -27429,7 +27437,7 @@ Qj
 sa
 sa
 sa
-Nj
+vx
 AN
 AN
 AN
@@ -27581,7 +27589,7 @@ Yq
 Oz
 Oz
 Oz
-Oz
+Eu
 Oz
 mC
 cB
@@ -27743,7 +27751,7 @@ iU
 sa
 sa
 sa
-vx
+sa
 sa
 iU
 sa
@@ -27895,18 +27903,18 @@ Nj
 kl
 Nj
 PZ
-kp
+sa
 sa
 pu
 sa
-kp
+sa
 lP
 Nj
 kl
-Nj
-kl
-Nj
-kl
+vx
+vx
+vx
+vx
 Nj
 kl
 di
@@ -28053,15 +28061,15 @@ Nj
 uj
 Js
 Nj
-AN
-AN
+kp
+kp
 Nj
 kl
+vx
+vx
 Nj
-Nj
-Nj
-Nj
-Nj
+vx
+vx
 kl
 Nj
 AN
@@ -28215,9 +28223,9 @@ DL
 Sg
 Fz
 Nj
-AN
-AN
-AN
+kp
+kp
+ab
 AN
 AN
 AN
@@ -28377,9 +28385,9 @@ DL
 GL
 Ft
 Nj
-AN
-AN
-AN
+ab
+ab
+ab
 AN
 AN
 AN

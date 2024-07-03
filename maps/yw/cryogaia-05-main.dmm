@@ -502,6 +502,10 @@
 /obj/structure/railing{
 	dir = 4
 	},
+/obj/effect/step_trigger/message{
+	message = "Entering the Upper Atrium, a air of sterile serenity pervades the hall, as it's high ceiling and ornate lighting therein invite introspection among the displays.";
+	name = "upper atrium message"
+	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "akP" = (
@@ -50005,6 +50009,10 @@
 	},
 /obj/structure/railing{
 	dir = 4
+	},
+/obj/effect/step_trigger/message{
+	message = "Entering the Upper Atrium, a air of sterile serenity pervades the hall, as it's high ceiling and ornate lighting therein invite introspection among the displays.";
+	name = "upper atrium message"
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)

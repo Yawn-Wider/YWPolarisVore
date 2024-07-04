@@ -531,6 +531,12 @@
 "asH" = (
 /turf/simulated/mineral/ignore_mapgen/cave,
 /area/mine/unexplored/lower_rock)
+"asL" = (
+/obj/structure/table/rack,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "asN" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/structure/disposalpipe/segment{
@@ -4088,6 +4094,7 @@
 "crD" = (
 /obj/structure/railing,
 /obj/effect/decal/cleanable/dirt,
+/obj/structure/ore_box,
 /turf/simulated/floor/plating,
 /area/maintenance/lowfloor1)
 "crE" = (
@@ -4332,6 +4339,12 @@
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
+"cyT" = (
+/obj/effect/floor_decal/rust,
+/obj/effect/decal/cleanable/dirt,
+/obj/random/obstruction,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "czb" = (
 /obj/machinery/atmospherics/pipe/simple/visible/green,
 /obj/structure/lattice,
@@ -6643,6 +6656,12 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/ai_upload)
+"dQJ" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/table/rack,
+/obj/random/medical/lite,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "dQL" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
@@ -10366,6 +10385,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"fUR" = (
+/obj/structure/railing,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "fVE" = (
 /obj/machinery/atmospherics/pipe/simple/visible/red{
 	dir = 4
@@ -13979,7 +14004,7 @@
 /obj/item/clothing/head/fedora/fluff/bowler,
 /obj/item/clothing/head/bowler,
 /obj/item/clothing/head/that,
-/turf/simulated/floor/plating,
+/turf/simulated/floor/water/indoors,
 /area/maintenance/lowfloor1)
 "hKf" = (
 /turf/simulated/wall,
@@ -14410,6 +14435,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/crew_quarters/sleep/cryo)
+"hVu" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/barricade,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "hVA" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -19533,6 +19566,12 @@
 /obj/random/trash_pile,
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
+"kmq" = (
+/obj/structure/closet/crate,
+/obj/random/maintenance/security,
+/obj/random/maintenance/security,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "kmy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -19875,6 +19914,16 @@
 	can_open = 1
 	},
 /area/chapel/main)
+"kuN" = (
+/obj/structure/table/rack,
+/obj/random/medical/lite,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
+"kuO" = (
+/obj/effect/floor_decal/rust,
+/obj/random/obstruction,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "kuS" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -24844,6 +24893,7 @@
 	dir = 4
 	},
 /obj/effect/decal/cleanable/dirt,
+/obj/random/maintenance/medical,
 /turf/simulated/floor/plating,
 /area/maintenance/lowfloor1)
 "mWk" = (
@@ -31899,6 +31949,12 @@
 /obj/item/weapon/stool/padded,
 /turf/simulated/floor/tiled,
 /area/security/perma)
+"qFb" = (
+/obj/structure/railing,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/closet/wardrobe/suit,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "qFg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -34410,6 +34466,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/chemistry)
+"sbt" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "sbO" = (
 /obj/structure/sink/kitchen{
 	pixel_y = 22
@@ -35299,7 +35363,9 @@
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
 "sDi" = (
-/obj/structure/closet/wardrobe/suit,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/bed/roller,
+/obj/random/maintenance/medical,
 /turf/simulated/floor/plating,
 /area/maintenance/lowfloor1)
 "sDm" = (
@@ -36864,6 +36930,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/kitchen/lower)
+"tqT" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "trc" = (
 /obj/effect/gibspawner/human,
 /turf/simulated/floor/tiled/white,
@@ -50998,8 +51069,8 @@ rBe
 iHZ
 fad
 sFq
-qEB
-sDi
+eHc
+eHc
 rHb
 eHc
 rBv
@@ -51160,7 +51231,7 @@ uAp
 iHZ
 iHZ
 cDR
-qEB
+enk
 hKb
 kBN
 gOL
@@ -51322,11 +51393,11 @@ rBe
 iHZ
 iHZ
 sFq
-qEB
-sDi
+enk
 kBN
 kBN
-oWt
+kBN
+rBv
 qeS
 ttU
 jFD
@@ -51484,7 +51555,7 @@ sFq
 sFq
 sFq
 sFq
-qEB
+enk
 kBN
 wXD
 kBN
@@ -51646,9 +51717,9 @@ sFq
 gOL
 gOL
 kBN
-qEB
+enk
 kBN
-qEB
+eHc
 kBN
 oWt
 qeS
@@ -52129,9 +52200,9 @@ mwy
 mwy
 mwy
 mwy
-gRe
+sDi
 ksi
-ksi
+sbt
 kBN
 kBN
 gOL
@@ -52291,9 +52362,9 @@ mwy
 mwy
 mwy
 mwy
-gRe
+tqT
 mWj
-mWj
+hVu
 kBN
 kBN
 gOL
@@ -52453,7 +52524,7 @@ mwy
 mwy
 mwy
 mwy
-crD
+qFb
 fnw
 fnw
 fnw
@@ -52615,7 +52686,7 @@ mwy
 mwy
 mwy
 mwy
-crD
+fUR
 enk
 enk
 fnw
@@ -53106,7 +53177,7 @@ mwy
 gOL
 qEB
 kBN
-qEB
+kmq
 gOL
 gOL
 iCJ
@@ -53270,7 +53341,7 @@ pzi
 kBN
 qEB
 gOL
-gOL
+kuN
 hoI
 gOL
 xpA
@@ -53911,7 +53982,7 @@ mwy
 gOL
 gOL
 kBN
-hoI
+cyT
 eHc
 kBN
 kBN
@@ -54238,7 +54309,7 @@ hoI
 wKr
 wKr
 eHc
-pzi
+kuO
 pzi
 qEB
 gRe
@@ -54406,7 +54477,7 @@ kBN
 cJC
 gRe
 gRe
-qEB
+asL
 ttU
 evD
 xWI
@@ -54561,14 +54632,14 @@ kBN
 wKr
 wKr
 wKr
-hoI
+cyT
 kBN
 gOL
 gOL
 qEB
 cJC
 gRe
-gRe
+dQJ
 ttU
 rqp
 mBq
@@ -56990,7 +57061,7 @@ hGp
 qEB
 gRe
 hoI
-pzi
+kuO
 lFc
 gOL
 rWM

@@ -2019,12 +2019,10 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
 "ey" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 5
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 6
 	},
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
 "ez" = (
@@ -4824,7 +4822,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "kp" = (
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/upper)
+/area/civilian/atrium/upper)
 "kq" = (
 /obj/structure/cable/heavyduty{
 	icon_state = "1-2"
@@ -7232,6 +7230,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
+"qL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "qS" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -7499,8 +7503,8 @@
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/south)
 "rX" = (
-/turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/upper)
+/turf/simulated/floor/plating,
+/area/cryogaia/station/excursion_dock)
 "sa" = (
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -10158,6 +10162,10 @@
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
+"EL" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "EM" = (
 /turf/simulated/open,
 /area/cryogaia/outpost/tower/east)
@@ -10741,6 +10749,12 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/excursion)
+"HQ" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "HS" = (
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
@@ -10957,6 +10971,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
+"Jd" = (
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "Je" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 1
@@ -12434,7 +12454,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/upper)
+/area/cryogaia/station/excursion_dock)
 "Qj" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -14409,7 +14429,7 @@
 "Zm" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/upper)
+/area/cryogaia/station/excursion_dock)
 "Zo" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -14422,24 +14442,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
-"Zs" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/micro_tunnel,
-/turf/simulated/floor/plating,
-/area/cryogaia/station/hallway/primary/upper/south)
 "Zt" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/northeast)
@@ -14558,7 +14560,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/upper)
+/area/cryogaia/station/excursion_dock)
 "ZR" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -28451,7 +28453,7 @@ Nj
 Nj
 kp
 kp
-ab
+Nj
 DY
 DY
 DY
@@ -28592,7 +28594,7 @@ Fz
 Nj
 kp
 kp
-ab
+Nj
 AN
 AN
 AN
@@ -28610,10 +28612,10 @@ DY
 DY
 DY
 DY
-ab
+Nj
 kp
 kp
-ab
+Nj
 DY
 DY
 un
@@ -28752,9 +28754,9 @@ DL
 GL
 Ft
 Nj
-ab
-ab
-ab
+Nj
+Nj
+Nj
 AN
 AN
 AN
@@ -28772,10 +28774,10 @@ DY
 DY
 DY
 DY
-ab
+Nj
 kp
 kp
-ab
+Nj
 DY
 DY
 AN
@@ -28934,10 +28936,10 @@ LX
 CD
 DY
 DY
-ab
+Nj
 kp
 kp
-ab
+Nj
 DY
 DY
 AN
@@ -29096,10 +29098,10 @@ AN
 XA
 DY
 DY
-ab
-ab
-ab
-ab
+Nj
+Nj
+Nj
+Nj
 DY
 DY
 vv
@@ -29963,10 +29965,10 @@ va
 AN
 Wi
 Wi
-rE
-AN
-AN
-AN
+Wi
+Wi
+Wi
+PN
 nQ
 nQ
 nQ
@@ -30068,16 +30070,16 @@ AN
 AN
 AN
 AN
-ab
-ab
+vT
+vT
 Zm
 Zm
-ab
-ab
+vT
+vT
 Zm
 Zm
-ab
-fS
+vT
+ld
 gk
 gK
 hd
@@ -30125,10 +30127,10 @@ va
 AN
 AN
 AN
+AN
+AN
+AN
 YD
-AN
-AN
-AN
 nQ
 nQ
 nQ
@@ -30230,8 +30232,8 @@ AN
 AN
 AN
 AN
-ab
-kp
+vT
+rX
 Qe
 Qe
 Qe
@@ -30239,7 +30241,7 @@ Qe
 Qe
 Qe
 Qe
-fS
+ld
 gm
 gJ
 he
@@ -30287,10 +30289,10 @@ va
 AN
 AN
 AN
+AN
+AN
+AN
 YD
-AN
-AN
-AN
 nQ
 nQ
 nQ
@@ -30392,16 +30394,16 @@ AN
 AN
 AN
 AN
-ab
+vT
 ZQ
-rX
-rX
-rX
-rX
-rX
-rX
-rX
-fS
+eg
+eg
+eg
+eX
+eo
+eo
+eo
+ld
 fS
 gL
 Al
@@ -30446,13 +30448,13 @@ rx
 Sa
 oS
 va
+AN
+AN
+AN
 Sq
 Sq
 Sq
 nq
-AN
-AN
-AN
 nQ
 nQ
 nQ
@@ -30554,16 +30556,16 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
-rX
-rX
-rX
-rX
-rX
-rX
-fS
+vT
+eo
+eo
+eo
+eo
+eo
+eo
+eo
+eo
+ld
 gn
 gM
 Al
@@ -30607,10 +30609,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+nq
 nQ
 nQ
 nQ
@@ -30716,14 +30718,14 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
+vT
+ej
 eo
 eo
 eo
 eo
-eo
+Jd
+EL
 vT
 ld
 fS
@@ -30769,9 +30771,9 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -30878,14 +30880,14 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
+vT
 eo
-eg
-eg
-eg
-eX
+eo
+eo
+eo
+eo
+qL
+eo
 ft
 ld
 gp
@@ -30931,9 +30933,9 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -31040,9 +31042,9 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
+vT
+eo
+eo
 eo
 ei
 en
@@ -31093,9 +31095,9 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -31202,11 +31204,11 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
+vT
 eo
-ej
+eo
+HQ
+eo
 eo
 eA
 wl
@@ -31255,9 +31257,9 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
+nq
 nQ
 nQ
 nQ
@@ -31417,8 +31419,8 @@ va
 rx
 Sa
 oS
-gc
-AN
+va
+YD
 nQ
 nQ
 nQ
@@ -31579,8 +31581,8 @@ va
 rx
 Sa
 oS
-gc
-AN
+va
+YD
 nQ
 nQ
 nQ
@@ -31741,8 +31743,8 @@ va
 rx
 Sa
 oS
-gc
-AN
+va
+YD
 nQ
 nQ
 nQ
@@ -31903,10 +31905,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
-AN
+Wi
+PN
 nQ
 nQ
 nQ
@@ -32065,10 +32067,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32227,10 +32229,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32389,10 +32391,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32551,10 +32553,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32713,10 +32715,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32875,10 +32877,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -33037,10 +33039,10 @@ va
 rx
 tc
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -33197,12 +33199,12 @@ Sa
 oS
 va
 va
-IQ
-IQ
-gf
+va
+va
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -33358,13 +33360,13 @@ rx
 Sa
 oS
 va
-gc
 AN
 AN
 AN
 AN
 AN
 AN
+YD
 nQ
 nQ
 nQ
@@ -33519,14 +33521,14 @@ va
 va
 hG
 va
-IQ
-gf
+va
 AN
 AN
 AN
 AN
 AN
 AN
+YD
 nQ
 nQ
 nQ
@@ -33680,15 +33682,15 @@ oS
 va
 va
 hG
-gc
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+va
+IQ
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+OS
 nQ
 nQ
 nQ
@@ -34153,7 +34155,7 @@ KH
 KH
 bb
 dj
-Zs
+vG
 LC
 mD
 JG

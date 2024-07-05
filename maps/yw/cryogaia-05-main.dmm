@@ -368,11 +368,6 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/east)
-"ahb" = (
-/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia{
-	edge_blending_priority = 0
-	},
-/area/borealis2/outdoors/grounds)
 "ahl" = (
 /obj/machinery/power/breakerbox/activated{
 	RCon_tag = "Security Substation Bypass"
@@ -16524,6 +16519,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled,
 /area/rnd/lab)
+"glz" = (
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/light_switch/breaker{
+	dir = 4;
+	pixel_x = -26
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research_starboard)
 "glH" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -62427,6 +62430,11 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/ward)
+"xUL" = (
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia{
+	edge_blending_priority = 0
+	},
+/area/borealis2/outdoors/grounds)
 "xUZ" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /obj/effect/floor_decal/corner/blue{
@@ -79536,7 +79544,7 @@ rPL
 wKd
 pEe
 aHr
-mCf
+glz
 iae
 aHr
 aHr
@@ -84714,7 +84722,7 @@ uDf
 uDf
 uDf
 sko
-ahb
+xUL
 cTl
 uDf
 uDf
@@ -84876,7 +84884,7 @@ uDf
 uDf
 uDf
 sko
-ahb
+xUL
 cTl
 uDf
 uDf
@@ -85038,7 +85046,7 @@ uDf
 uDf
 uDf
 sko
-ahb
+xUL
 jpD
 uDf
 uDf
@@ -85200,7 +85208,7 @@ uDf
 uDf
 uDf
 rJN
-ahb
+xUL
 cTl
 uDf
 uDf
@@ -85362,7 +85370,7 @@ uDf
 uDf
 uDf
 iqv
-ahb
+xUL
 cTl
 uDf
 uDf
@@ -85524,7 +85532,7 @@ uDf
 uDf
 uDf
 sko
-ahb
+xUL
 cTl
 uDf
 uDf
@@ -85686,7 +85694,7 @@ uDf
 uDf
 uDf
 bSW
-ahb
+xUL
 jsp
 vAX
 uDf
@@ -85847,9 +85855,9 @@ uDf
 uDf
 uDf
 xIz
-ahb
-ahb
-ahb
+xUL
+xUL
+xUL
 aYa
 cTl
 uDf
@@ -86008,9 +86016,9 @@ uDf
 uDf
 uDf
 sko
-ahb
+xUL
 qho
-ahb
+xUL
 hPS
 aYa
 cTl
@@ -86170,10 +86178,10 @@ uDf
 uDf
 uDf
 sko
-ahb
-ahb
-ahb
-ahb
+xUL
+xUL
+xUL
+xUL
 uGI
 uDf
 uDf
@@ -86333,9 +86341,9 @@ uDf
 uDf
 sko
 hPS
-ahb
+xUL
 xpQ
-ahb
+xUL
 jsp
 uDf
 uDf
@@ -86495,9 +86503,9 @@ uDf
 uDf
 uDf
 aYs
-ahb
-ahb
-ahb
+xUL
+xUL
+xUL
 qho
 cTl
 uDf
@@ -86657,10 +86665,10 @@ uDf
 uDf
 uDf
 sko
-ahb
+xUL
 qho
-ahb
-ahb
+xUL
+xUL
 szc
 uDf
 uDf
@@ -86819,8 +86827,8 @@ uDf
 uDf
 uDf
 sko
-ahb
-ahb
+xUL
+xUL
 baS
 mrU
 uDf

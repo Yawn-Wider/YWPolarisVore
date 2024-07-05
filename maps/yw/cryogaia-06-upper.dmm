@@ -1734,17 +1734,12 @@
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
 "dO" = (
-/obj/structure/cable{
-	d2 = 2;
-	icon_state = "0-2"
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
 	},
-/obj/machinery/power/apc{
-	dir = 1;
-	name = "north bump";
-	pixel_y = 24
-	},
-/turf/simulated/floor/plating,
-/area/constructionsite/cryogaia/upper)
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/upper)
 "dP" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/stool,
@@ -1864,6 +1859,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
+"ec" = (
+/obj/structure/ore_box,
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/upper)
+"ed" = (
+/obj/structure/closet/crate,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/upper)
 "ee" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/item/stack/cable_coil/lime,
@@ -2541,6 +2546,12 @@
 /obj/structure/closet/crate,
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
+"fI" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 9
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "fJ" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -5438,6 +5449,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "lD" = (
@@ -7041,6 +7053,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"pz" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/upper)
 "pF" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -7149,6 +7165,12 @@
 /obj/machinery/atmospherics/pipe/zpipe/down,
 /turf/simulated/open,
 /area/civilian/atrium/upper)
+"qq" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "qr" = (
 /obj/machinery/light{
 	dir = 8
@@ -7157,10 +7179,24 @@
 /area/cryogaia/station/excursion_dock)
 "qs" = (
 /obj/structure/cable{
-	icon_state = "1-2"
+	d2 = 2;
+	icon_state = "0-2"
 	},
+/obj/machinery/power/apc{
+	dir = 1;
+	name = "north bump";
+	pixel_y = 24
+	},
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
+"qt" = (
+/obj/structure/closet/toolcloset,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/obj/random/tech_supply,
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/upper)
 "qv" = (
 /obj/machinery/atmospherics/unary/vent_pump/on,
 /turf/simulated/floor/tiled,
@@ -7289,6 +7325,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "rm" = (
@@ -7312,6 +7350,15 @@
 	},
 /turf/simulated/shuttle/plating/airless/carry,
 /area/shuttle/belter)
+"rq" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "rs" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey,
@@ -7609,6 +7656,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"sQ" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/effect/decal/cleanable/dirt,
+/obj/item/weapon/toolbox_tiles,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "sR" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
 	dir = 1
@@ -7919,6 +7975,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
+"uo" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "ux" = (
 /obj/structure/closet/crate/medical,
 /obj/machinery/light{
@@ -8029,21 +8089,6 @@
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
-"vl" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/constructionsite/cryogaia/upper)
 "vm" = (
 /obj/structure/table/woodentable,
 /turf/simulated/floor/tiled,
@@ -8068,6 +8113,15 @@
 	},
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
+"vr" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/loot_pile/maint/boxfort,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "vs" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -8557,7 +8611,10 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "xF" = (
@@ -8621,6 +8678,12 @@
 	},
 /turf/simulated/floor/plating,
 /area/chapel/monastery/upper)
+"xS" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "xW" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass_security{
@@ -8696,9 +8759,6 @@
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/tiled,
 /area/security/breakroom)
-"yt" = (
-/turf/simulated/floor/plating,
-/area/constructionsite/cryogaia/upper)
 "yv" = (
 /obj/structure/catwalk,
 /obj/structure/railing/grey{
@@ -8815,9 +8875,7 @@
 /turf/simulated/floor/plating,
 /area/cryogaia/station/hallway/primary/upper/south)
 "yX" = (
-/obj/machinery/light/small{
-	dir = 1
-	},
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "za" = (
@@ -8911,6 +8969,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"zy" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 8
+	},
+/obj/effect/floor_decal/industrial/warning{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/upper)
 "zB" = (
 /obj/machinery/light_switch{
 	dir = 8;
@@ -8941,6 +9008,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"zG" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "zI" = (
 /turf/simulated/wall,
 /area/security/watchtower)
@@ -9206,6 +9280,18 @@
 "AN" = (
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"AO" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/loot_pile/maint/boxfort,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "AP" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 4
@@ -9267,6 +9353,16 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery/upper)
+"Bi" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/obj/structure/table/rack,
+/obj/random/maintenance/medical,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "Bl" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -9353,6 +9449,13 @@
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
+"BD" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/girder,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "BG" = (
 /obj/machinery/door/firedoor/glass,
 /obj/machinery/door/airlock/glass,
@@ -9437,6 +9540,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
+"BS" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing,
+/obj/structure/loot_pile/maint/boxfort,
+/obj/random/mainttoyloot,
+/obj/effect/decal/cleanable/cobweb2{
+	icon_state = "cobweb1"
+	},
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "BW" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 1
@@ -9698,6 +9813,7 @@
 /area/cryogaia/outpost/tower/southwest)
 "Dj" = (
 /obj/structure/grille,
+/obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/civilian/atrium/upper)
 "Dl" = (
@@ -9828,6 +9944,16 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/northeast)
+"DI" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/loot_pile/maint/boxfort,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "DL" = (
 /obj/machinery/door/firedoor/glass,
 /obj/effect/wingrille_spawn/reinforced,
@@ -9839,6 +9965,14 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
+"DQ" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/random/junk,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "DV" = (
 /turf/simulated/floor/holofloor/tiled/dark,
 /area/cryogaia/outpost/elevator/uppermining)
@@ -10190,6 +10324,12 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/northeast)
+"Fw" = (
+/obj/effect/floor_decal/industrial/warning/corner{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Fy" = (
 /obj/structure/railing/grey{
 	dir = 4
@@ -10212,6 +10352,26 @@
 "FC" = (
 /turf/simulated/wall/r_wall,
 /area/borealis2/outdoors/grounds/upper)
+"FD" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/machinery/alarm/yw{
+	frequency = 1441;
+	pixel_y = 22
+	},
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "FG" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/table/rack/shelf,
@@ -10679,6 +10839,12 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/checkpoint)
+"Iu" = (
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "Iw" = (
 /obj/structure/flora/pottedplant/large,
 /obj/effect/floor_decal/corner/paleblue{
@@ -10774,6 +10940,13 @@
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
 /area/civilian/atrium/upper)
+"IT" = (
+/obj/structure/railing,
+/obj/structure/closet/emcloset,
+/obj/effect/decal/cleanable/cobweb2,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "IU" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10853,6 +11026,12 @@
 	},
 /turf/simulated/shuttle/floor/yellow,
 /area/shuttle/belter)
+"Jl" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Jn" = (
 /obj/structure/railing{
 	dir = 4
@@ -11308,6 +11487,14 @@
 	},
 /turf/simulated/wall/rshull,
 /area/shuttle/excursion)
+"KV" = (
+/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "Lc" = (
 /obj/machinery/light,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -11443,6 +11630,13 @@
 "LK" = (
 /turf/simulated/open,
 /area/cryogaia/outpost/tower/southeast)
+"LM" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "LO" = (
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
@@ -11589,15 +11783,14 @@
 /turf/simulated/wall,
 /area/crew_quarters/medbreak)
 "Nd" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/structure/catwalk,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "Ni" = (
@@ -11795,6 +11988,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"Oc" = (
+/obj/effect/floor_decal/industrial/warning{
+	dir = 10
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Od" = (
 /turf/simulated/floor/reinforced/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
@@ -12089,9 +12288,41 @@
 	},
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/northeast)
+"Pz" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/table/rack,
+/obj/random/maintenance/medical,
+/obj/random/maintenance/medical,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "PA" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/east)
+"PB" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/catwalk,
+/obj/machinery/light_switch/breaker{
+	pixel_y = 26
+	},
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "PC" = (
 /obj/effect/landmark{
 	name = "carpspawn"
@@ -12128,6 +12359,17 @@
 "PJ" = (
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
+"PM" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/loot_pile/maint/boxfort,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "PN" = (
 /obj/structure/railing/grey,
 /obj/structure/railing/grey{
@@ -12734,6 +12976,9 @@
 	},
 /turf/simulated/floor/plating/snow/plating,
 /area/cryogaia/outpost/checkpoint)
+"Sw" = (
+/turf/simulated/floor/plating,
+/area/maintenance/auxsolarport)
 "Sx" = (
 /obj/machinery/door/airlock/glass_external/freezable{
 	req_one_access = list()
@@ -12846,6 +13091,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"Tk" = (
+/obj/structure/catwalk,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Tn" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
@@ -12894,6 +13143,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
+"Tx" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "TA" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
@@ -12928,6 +13184,13 @@
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
+"TN" = (
+/obj/effect/floor_decal/industrial/warning,
+/obj/effect/floor_decal/industrial/warning{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/upper)
 "TQ" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/tiled,
@@ -12979,6 +13242,13 @@
 "Ud" = (
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
+"Ue" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Ug" = (
 /obj/machinery/alarm/yw{
 	frequency = 1441;
@@ -13128,7 +13398,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/light/small,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "UH" = (
@@ -13338,6 +13609,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"Vz" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/light/small,
+/obj/effect/decal/cleanable/dirt,
+/obj/structure/reagent_dispensers/fueltank,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "VB" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -13369,6 +13652,17 @@
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery/music)
+"VJ" = (
+/obj/machinery/stationboiler_radiator{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/random/junk,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "VK" = (
 /obj/machinery/light{
 	dir = 8
@@ -13387,6 +13681,18 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"VP" = (
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/upper)
+"VT" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "VU" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -13683,6 +13989,14 @@
 	},
 /turf/simulated/open,
 /area/civilian/atrium/upper)
+"Xm" = (
+/obj/structure/largecrate,
+/turf/simulated/floor/plating/snow/plating,
+/area/borealis2/outdoors/grounds/upper)
+"Xn" = (
+/obj/structure/railing,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Xo" = (
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
@@ -13718,6 +14032,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
+"Xt" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Xu" = (
 /obj/structure/railing/grey{
 	dir = 8
@@ -13742,6 +14062,7 @@
 	dir = 4
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/supply,
+/obj/structure/catwalk,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "XD" = (
@@ -13942,7 +14263,8 @@
 /turf/simulated/floor/plating,
 /area/maintenance/medical_upper)
 "Yy" = (
-/obj/machinery/atmospherics/unary/vent_scrubber/on,
+/obj/structure/catwalk,
+/obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "YB" = (
@@ -13971,6 +14293,12 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
+"YG" = (
+/obj/structure/railing,
+/obj/random/junk,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "YL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 5
@@ -13984,6 +14312,17 @@
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
+"YN" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/structure/loot_pile/maint/boxfort,
+/obj/effect/decal/cleanable/dirt,
+/turf/simulated/floor/plating,
+/area/constructionsite/cryogaia/upper)
 "YQ" = (
 /obj/machinery/door/airlock/multi_tile/glass{
 	name = "Mining Shuttle Hangar";
@@ -14048,6 +14387,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
+"Zn" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Zo" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -14171,6 +14516,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
+"ZN" = (
+/obj/structure/girder,
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "ZO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -14183,12 +14532,10 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "ZP" = (
-/obj/machinery/alarm/yw{
-	frequency = 1441;
-	pixel_y = 22
-	},
-/obj/machinery/stationboiler_radiator{
-	dir = 8
+/obj/structure/window/reinforced/full,
+/obj/structure/grille,
+/obj/structure/window/reinforced{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
@@ -22877,15 +23224,15 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-wa
+ab
+ab
+zy
+zy
 wa
 wa
 bG
 wa
-AN
+wa
 AN
 AN
 AN
@@ -23039,15 +23386,15 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+ab
+ed
+VP
+VP
 wa
-dO
 qs
 lC
+BD
 wa
-AN
 AN
 AN
 AN
@@ -23201,16 +23548,16 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+dO
+VP
+VP
 wa
-yt
-yt
+wa
+KV
 Nd
+DI
 wa
-AN
-AN
+wa
 AN
 AN
 AN
@@ -23363,16 +23710,16 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+dO
+VP
+Xm
 wa
-yt
+yX
 Yy
 xz
+yX
+yX
 wa
-AN
-AN
 AN
 AN
 AN
@@ -23525,16 +23872,16 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+dO
+VP
+Xm
 wa
 yX
-yt
-vl
+Yy
+UF
+Yy
+yX
 wa
-AN
-AN
 AN
 AN
 AN
@@ -23687,16 +24034,16 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+dO
+VP
+VP
 wa
-yt
-yt
-vl
 wa
-AN
-AN
+sQ
+UF
+AO
+wa
+wa
 AN
 AN
 AN
@@ -23849,15 +24196,15 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+ab
+qt
+VP
+VP
 wa
-yt
-yt
-vl
+IT
+UF
+zG
 wa
-AN
 AN
 AN
 AN
@@ -24011,15 +24358,15 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+ab
+ab
+zy
+zy
 wa
-yt
-yt
-vl
 wa
-AN
+PB
+wa
+wa
 AN
 AN
 AN
@@ -24176,12 +24523,12 @@ AN
 AN
 AN
 AN
-wa
-yt
-yt
-vl
-wa
 AN
+wa
+BS
+UF
+Pz
+wa
 AN
 AN
 AN
@@ -24338,12 +24685,12 @@ AN
 AN
 AN
 AN
-wa
-yt
-yt
-vl
-wa
 AN
+wa
+yX
+UF
+Yy
+wa
 AN
 AN
 AN
@@ -24500,12 +24847,12 @@ AN
 AN
 AN
 AN
-wa
-ZP
-yt
-UF
-wa
 AN
+ZP
+Yy
+UF
+Yy
+Iu
 AN
 AN
 AN
@@ -24662,12 +25009,12 @@ AN
 AN
 AN
 AN
-wa
-yt
-yt
-vl
-wa
 AN
+wa
+Yy
+UF
+Yy
+wa
 AN
 AN
 AN
@@ -24824,12 +25171,12 @@ AN
 AN
 AN
 AN
-wa
-yt
-yt
-vl
-wa
 AN
+wa
+Bi
+UF
+YN
+wa
 AN
 AN
 AN
@@ -24983,13 +25330,14 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+ab
+ab
+zy
+zy
 wa
-yt
-yt
-vl
+wa
+FD
+wa
 wa
 AN
 AN
@@ -25002,11 +25350,10 @@ AN
 AN
 AN
 AN
+Zn
 AN
 AN
-AN
-AN
-AN
+Zn
 AN
 AN
 AN
@@ -25145,13 +25492,14 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+ab
+ec
+VP
+VP
 wa
-yt
-yt
+YG
 rj
+DQ
 wa
 AN
 AN
@@ -25162,15 +25510,14 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+Zn
+Tx
+Tk
+Tk
+Tk
+Tk
+rq
+Zn
 AN
 AN
 AN
@@ -25307,13 +25654,15 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+TN
+VP
+VP
 wa
-yt
-yt
+wa
+vr
 rj
+Vz
+wa
 wa
 AN
 AN
@@ -25322,18 +25671,16 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+Xn
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -25469,13 +25816,15 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+dO
+VP
+VP
 wa
 yX
-yt
+Yy
 rj
+Yy
+yX
 wa
 AN
 AN
@@ -25484,18 +25833,16 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+Xn
+Tk
+Tk
+ab
+fI
+Oc
+ab
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -25631,32 +25978,32 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+ab
+ed
+VP
 wa
-yt
-yt
+yX
+Yy
 rj
+Yy
+yX
 wa
+Zn
+Zn
+Zn
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+Zn
+Zn
+Tx
+Tk
+Tk
+fI
+qq
+Fw
+Oc
+Tk
+Tk
 AN
 AN
 AN
@@ -25793,32 +26140,32 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+ab
+ed
+VP
 wa
-yt
-yt
+wa
+VJ
 rj
+PM
 wa
+wa
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Jl
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+uo
+Tk
+Tk
 AN
 AN
 AN
@@ -25955,33 +26302,33 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
+dO
+VP
+VP
+pz
 wa
-yt
 Kd
 Xz
+zG
 wa
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+ZN
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
 Nj
 Dj
 Dj
 Nj
-AN
-AN
-AN
+Tk
+Tk
+rq
 AN
 AN
 AN
@@ -26117,8 +26464,8 @@ AN
 AN
 AN
 AN
-AN
-AN
+dO
+VP
 Nj
 kl
 Nj
@@ -26128,12 +26475,12 @@ Nj
 Nj
 kl
 Nj
-AN
-AN
-AN
-AN
-AN
-AN
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
 Nj
 Nj
 Nj
@@ -26141,10 +26488,10 @@ Nj
 Vt
 Ks
 Nj
-AN
-AN
-AN
-AN
+Tk
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -26303,10 +26650,10 @@ Nj
 Nj
 ZC
 Nj
-AN
-AN
-AN
-AN
+Tk
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -26464,11 +26811,11 @@ sa
 Tw
 Em
 rD
+kl
 Nj
-Nj
-AN
-AN
-AN
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -26628,9 +26975,9 @@ Tn
 vA
 sa
 kl
-AN
-AN
-AN
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -26790,9 +27137,9 @@ tW
 zW
 sa
 vx
-AN
-AN
-AN
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -26951,10 +27298,10 @@ LY
 eZ
 sa
 sa
-kl
-AN
-AN
-AN
+vx
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -27114,9 +27461,9 @@ fe
 sa
 zw
 Nj
-AN
-AN
-AN
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -27275,10 +27622,10 @@ LY
 vc
 sa
 sa
-kl
-AN
-AN
-AN
+vx
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -27438,9 +27785,9 @@ sa
 sa
 sa
 vx
-AN
-AN
-AN
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -27600,9 +27947,9 @@ Tn
 sa
 sa
 kl
-AN
-AN
-AN
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -27760,11 +28107,11 @@ sa
 sa
 Rn
 lP
+kl
 Nj
-Nj
-AN
-AN
-AN
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -27923,10 +28270,10 @@ Nj
 Nj
 kl
 Nj
-AN
-AN
-AN
-AN
+Tk
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -28072,23 +28419,23 @@ vx
 vx
 kl
 Nj
-AN
-AN
-AN
-AN
-AN
-AN
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
 Nj
 Nj
 Nj
 Nj
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+kp
+kp
+ab
+Tk
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -28233,23 +28580,23 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+ab
+kp
+kp
+ab
+Tk
+Tk
+VT
 AN
 AN
 AN
@@ -28395,22 +28742,22 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+ab
+kp
+kp
+ab
+Tk
+Tk
 AN
 AN
 AN
@@ -28557,22 +28904,22 @@ AN
 AN
 AN
 AN
+Xt
+Xt
+Xt
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+Xt
+Xt
+LM
+Tk
+Tk
+ab
+kp
+kp
+ab
+Tk
+Tk
 AN
 AN
 AN
@@ -28726,16 +29073,16 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+Xn
+Tk
+Tk
+ab
+ab
+ab
+ab
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -28888,16 +29235,16 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+Xn
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+Tk
+xS
 AN
 AN
 AN
@@ -29051,6 +29398,14 @@ AN
 AN
 AN
 AN
+Xt
+Ue
+Tk
+Tk
+Tk
+Tk
+VT
+Xt
 AN
 AN
 AN
@@ -29066,21 +29421,13 @@ AN
 AN
 AN
 AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+QY
+Sw
+Sw
+Sw
+Sw
+Sw
+Sw
 mD
 nk
 ny
@@ -29215,10 +29562,10 @@ AN
 AN
 AN
 AN
+Xt
 AN
 AN
-AN
-AN
+Xt
 AN
 AN
 AN
@@ -29597,9 +29944,9 @@ AN
 Wi
 Wi
 rE
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -29759,9 +30106,9 @@ AN
 AN
 AN
 YD
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -29921,9 +30268,9 @@ AN
 AN
 AN
 YD
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -30083,9 +30430,9 @@ Sq
 Sq
 Sq
 nq
-nQ
-nQ
-nQ
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -30243,7 +30590,7 @@ oS
 gc
 AN
 AN
-nQ
+AN
 nQ
 nQ
 nQ

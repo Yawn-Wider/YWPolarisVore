@@ -10815,12 +10815,6 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/chapel/monastery/upper)
-"In" = (
-/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/cryogaia/station/excursion_dock)
 "Io" = (
 /obj/structure/railing{
 	dir = 1
@@ -11932,12 +11926,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
-"NK" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/cryogaia/station/excursion_dock)
 "NL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
@@ -12275,6 +12263,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"Pq" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "Pr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -14525,6 +14519,12 @@
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
+"ZL" = (
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "ZO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -29955,10 +29955,10 @@ va
 AN
 Wi
 Wi
-rE
-AN
-AN
-AN
+Wi
+Wi
+Wi
+PN
 nQ
 nQ
 nQ
@@ -30117,10 +30117,10 @@ va
 AN
 AN
 AN
+AN
+AN
+AN
 YD
-AN
-AN
-AN
 nQ
 nQ
 nQ
@@ -30279,10 +30279,10 @@ va
 AN
 AN
 AN
+AN
+AN
+AN
 YD
-AN
-AN
-AN
 nQ
 nQ
 nQ
@@ -30438,13 +30438,13 @@ rx
 Sa
 oS
 va
+AN
+AN
+AN
 Sq
 Sq
 Sq
 nq
-AN
-AN
-AN
 nQ
 nQ
 nQ
@@ -30599,10 +30599,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+nq
 nQ
 nQ
 nQ
@@ -30714,7 +30714,7 @@ eo
 eo
 eo
 eo
-In
+ZL
 eo
 vT
 ld
@@ -30761,9 +30761,9 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -30876,7 +30876,7 @@ eo
 eo
 eo
 eo
-NK
+Pq
 eo
 ft
 ld
@@ -30923,9 +30923,9 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -31085,9 +31085,9 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -31247,9 +31247,9 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
+nq
 nQ
 nQ
 nQ
@@ -31409,8 +31409,8 @@ va
 rx
 Sa
 oS
-gc
-AN
+va
+YD
 nQ
 nQ
 nQ
@@ -31571,8 +31571,8 @@ va
 rx
 Sa
 oS
-gc
-AN
+va
+YD
 nQ
 nQ
 nQ
@@ -31733,8 +31733,8 @@ va
 rx
 Sa
 oS
-gc
-AN
+va
+YD
 nQ
 nQ
 nQ
@@ -31895,10 +31895,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
-AN
-AN
+Wi
+PN
 nQ
 nQ
 nQ
@@ -32057,10 +32057,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32219,10 +32219,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32381,10 +32381,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32543,10 +32543,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32705,10 +32705,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -32867,10 +32867,10 @@ va
 rx
 Sa
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -33029,10 +33029,10 @@ va
 rx
 tc
 oS
-gc
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -33189,12 +33189,12 @@ Sa
 oS
 va
 va
-IQ
-IQ
-gf
+va
+va
+va
 AN
 AN
-AN
+YD
 nQ
 nQ
 nQ
@@ -33350,13 +33350,13 @@ rx
 Sa
 oS
 va
-gc
 AN
 AN
 AN
 AN
 AN
 AN
+YD
 nQ
 nQ
 nQ
@@ -33511,14 +33511,14 @@ va
 va
 hG
 va
-IQ
-gf
+va
 AN
 AN
 AN
 AN
 AN
 AN
+YD
 nQ
 nQ
 nQ
@@ -33672,15 +33672,15 @@ oS
 va
 va
 hG
-gc
-AN
-AN
-AN
-AN
-AN
-AN
-AN
-AN
+va
+IQ
+Sq
+Sq
+Sq
+Sq
+Sq
+Sq
+OS
 nQ
 nQ
 nQ

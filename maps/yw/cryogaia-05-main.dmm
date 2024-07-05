@@ -4921,10 +4921,10 @@
 /area/security/hallway)
 "bSx" = (
 /obj/structure/micro_tunnel{
-	dir = 8
+	pixel_y = -32
 	},
-/turf/simulated/wall/titanium,
-/area/cryogaia/outpost/wall)
+/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
+/area/borealis2/outdoors/exterior)
 "bSS" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -10260,6 +10260,25 @@
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery)
+"dTP" = (
+/obj/structure/cable{
+	icon_state = "4-8"
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/structure/disposalpipe/segment{
+	dir = 4
+	},
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/research_port)
 "dUi" = (
 /turf/simulated/wall,
 /area/security/security_processing)
@@ -18809,6 +18828,14 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery)
+"hfG" = (
+/obj/effect/floor_decal/corner_oldtile/purple/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner_oldtile/purple/diagonal,
+/obj/structure/table/glass,
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway)
 "hfK" = (
 /obj/machinery/portable_atmospherics/canister/carbon_dioxide/engine_setup,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -20973,6 +21000,9 @@
 /area/crew_quarters/captain)
 "hWz" = (
 /obj/effect/floor_decal/corner_oldtile/purple,
+/obj/machinery/light/small{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway)
 "hXc" = (
@@ -38646,6 +38676,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
+"oEw" = (
+/obj/structure/micro_tunnel{
+	dir = 8;
+	pixel_x = -32
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/exterior)
 "oEE" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -40001,6 +40038,16 @@
 	},
 /turf/simulated/floor/tiled/steel,
 /area/maintenance/medbay)
+"pfk" = (
+/obj/effect/floor_decal/corner_oldtile/purple/diagonal{
+	dir = 4
+	},
+/obj/effect/floor_decal/corner_oldtile/purple/diagonal,
+/obj/structure/bed/chair/comfy/purp{
+	dir = 1
+	},
+/turf/simulated/floor/tiled/white,
+/area/rnd/hallway)
 "pfq" = (
 /obj/structure/extinguisher_cabinet{
 	dir = 8;
@@ -47746,6 +47793,9 @@
 	d2 = 8;
 	icon_state = "0-8"
 	},
+/obj/structure/micro_tunnel{
+	pixel_y = -32
+	},
 /turf/simulated/floor,
 /area/storage/emergency_storage/emergency5)
 "ser" = (
@@ -48596,6 +48646,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/equipstorage)
+"suL" = (
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/bridge)
 "suO" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
@@ -50625,6 +50682,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner_oldtile/purple/diagonal,
+/obj/structure/bed/chair/comfy/purp,
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway)
 "tkf" = (
@@ -54869,9 +54927,18 @@
 /turf/simulated/floor/tiled,
 /area/bridge_hallway)
 "vaN" = (
-/obj/structure/micro_tunnel,
-/turf/simulated/wall/titanium,
-/area/cryogaia/outpost/wall)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/tiled/dark,
+/area/chapel/monastery)
 "vaP" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -76461,7 +76528,7 @@ iNn
 iNn
 iNn
 bzU
-vQV
+dTP
 hxd
 uDf
 uDf
@@ -79224,8 +79291,8 @@ fUq
 seZ
 kyi
 tka
-tka
-tka
+hfG
+pfk
 fUq
 fUq
 fUq
@@ -80899,7 +80966,7 @@ uDf
 uDf
 uDf
 pPH
-vAL
+vaN
 mIw
 pPH
 jfa
@@ -81091,7 +81158,7 @@ lCj
 uDf
 uDf
 xbv
-dbb
+suL
 aOp
 ubC
 mAE
@@ -86399,8 +86466,8 @@ xzt
 vaU
 vaU
 vaU
-iSE
-vaN
+bSx
+dAA
 dAA
 uDf
 mKU
@@ -87452,7 +87519,7 @@ dAA
 dAA
 dAA
 dAA
-bSx
+dAA
 qFK
 mUx
 mUx
@@ -87614,7 +87681,7 @@ iSE
 iSE
 ouQ
 jrA
-wHV
+oEw
 aaX
 wHV
 rzY

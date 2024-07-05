@@ -439,10 +439,11 @@
 /area/crew_quarters/sleep/Dorm_2)
 "apB" = (
 /obj/structure/micro_tunnel{
-	dir = 1
+	dir = 8;
+	pixel_x = -32
 	},
-/turf/simulated/wall,
-/area/maintenance/security_lower)
+/turf/simulated/floor/wood/sif,
+/area/maintenance/blueserg)
 "apJ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -998,9 +999,10 @@
 /area/cryogaia/outpost/elevator/medbasement)
 "aGn" = (
 /obj/structure/micro_tunnel{
-	dir = 8
+	dir = 1;
+	pixel_y = 32
 	},
-/turf/simulated/wall/durasteel/blueserg,
+/turf/simulated/floor/wood/sif,
 /area/maintenance/blueserg)
 "aGo" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -2636,10 +2638,11 @@
 /area/medical/virology)
 "bDc" = (
 /obj/structure/micro_tunnel{
-	dir = 4
+	dir = 4;
+	pixel_x = 32
 	},
-/turf/simulated/wall/r_wall,
-/area/maintenance/medical_lower)
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor1)
 "bDk" = (
 /turf/simulated/mineral/floor/mud,
 /area/mine/explored/lower_rock)
@@ -4546,6 +4549,10 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/catwalk,
 /obj/random/maintenance/medical,
+/obj/structure/micro_tunnel{
+	dir = 4;
+	pixel_x = 32
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
 "cDm" = (
@@ -6257,11 +6264,13 @@
 /turf/simulated/floor/tiled,
 /area/crew_quarters/fitness)
 "dzy" = (
+/obj/effect/decal/cleanable/flour,
 /obj/structure/micro_tunnel{
-	dir = 1
+	dir = 8;
+	pixel_x = -32
 	},
-/turf/simulated/wall,
-/area/maintenance/maintroom2)
+/turf/simulated/floor,
+/area/maintenance/starboard)
 "dzG" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -11988,10 +11997,11 @@
 /area/civilian/atrium/lower)
 "gHn" = (
 /obj/structure/micro_tunnel{
-	dir = 1
+	dir = 1;
+	pixel_y = 32
 	},
-/turf/simulated/wall/durasteel/blueserg,
-/area/maintenance/blueserg)
+/turf/simulated/mineral/floor,
+/area/maintenance/medical_lower)
 "gHy" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -15823,12 +15833,13 @@
 /turf/simulated/floor/grass,
 /area/civilian/atrium/lower)
 "ixd" = (
+/obj/effect/floor_decal/rust,
 /obj/structure/micro_tunnel{
-	dir = 4;
-	layer = 2.8
+	dir = 8;
+	pixel_x = -32
 	},
-/turf/simulated/wall,
-/area/maintenance/lowfloor1)
+/turf/simulated/floor/plating,
+/area/maintenance/lowfloor3)
 "ixD" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -16748,10 +16759,11 @@
 /area/medical/virologyaccess)
 "iVw" = (
 /obj/structure/micro_tunnel{
-	dir = 8
+	dir = 8;
+	pixel_x = -32
 	},
-/turf/simulated/wall,
-/area/maintenance/starboard)
+/turf/simulated/mineral/floor,
+/area/mine/explored/lower_rock)
 "iVJ" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -17195,11 +17207,6 @@
 	pixel_x = -7;
 	pixel_y = -24;
 	req_one_access = list(10)
-	},
-/obj/machinery/light_switch{
-	dir = 1;
-	pixel_x = 4;
-	pixel_y = -24
 	},
 /turf/simulated/floor,
 /area/maintenance/medical_lower)
@@ -20860,6 +20867,10 @@
 "kOj" = (
 /obj/structure/table/standard,
 /obj/structure/plushie/drone,
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
+	},
 /turf/simulated/floor/carpet,
 /area/maintenance/maintroom2)
 "kOC" = (
@@ -22674,7 +22685,8 @@
 "lKp" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/micro_tunnel{
-	dir = 1
+	dir = 1;
+	pixel_y = 32
 	},
 /turf/simulated/floor,
 /area/maintenance/maintroom7)
@@ -22924,6 +22936,10 @@
 	},
 /obj/random/tech_supply,
 /obj/item/clothing/head/flatcap,
+/obj/structure/micro_tunnel{
+	dir = 4;
+	pixel_x = 32
+	},
 /turf/simulated/floor/tiled,
 /area/security/perma)
 "lPw" = (
@@ -23343,11 +23359,23 @@
 /turf/simulated/floor,
 /area/maintenance/starboard)
 "maW" = (
-/obj/structure/micro_tunnel{
-	dir = 8
+/obj/structure/cable{
+	d1 = 4;
+	d2 = 8;
+	icon_state = "4-8"
 	},
-/turf/simulated/wall/r_wall,
-/area/maintenance/medical_lower)
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/security_lower)
 "maY" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
@@ -23763,12 +23791,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
-"mqa" = (
-/obj/structure/micro_tunnel{
-	dir = 8
-	},
-/turf/simulated/wall/r_wall,
-/area/maintenance/lowfloor3)
 "mqr" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -23845,6 +23867,10 @@
 /obj/structure/table/steel,
 /obj/effect/floor_decal/corner_techfloor_grid/full{
 	dir = 1
+	},
+/obj/structure/micro_tunnel{
+	dir = 1;
+	pixel_y = 32
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/cryogaia/outpost/tower/south)
@@ -27685,13 +27711,6 @@
 "otV" = (
 /turf/simulated/wall,
 /area/chapel/office)
-"oun" = (
-/obj/structure/micro_tunnel{
-	dir = 4;
-	layer = 2.8
-	},
-/turf/simulated/wall,
-/area/security/perma/bathroom)
 "ouo" = (
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
@@ -28429,12 +28448,6 @@
 /obj/random/maintenance/clean,
 /turf/simulated/floor,
 /area/maintenance/lowfloor1)
-"oOd" = (
-/obj/structure/micro_tunnel{
-	dir = 1
-	},
-/turf/simulated/wall/titanium,
-/area/cryogaia/outpost/tower/south)
 "oOe" = (
 /obj/effect/floor_decal/corner/yellow{
 	dir = 5
@@ -30509,7 +30522,8 @@
 /obj/item/device/binoculars/spyglass,
 /obj/structure/loot_pile/maint/boxfort,
 /obj/structure/micro_tunnel{
-	layer = 2.8
+	dir = 1;
+	pixel_y = 32
 	},
 /turf/simulated/floor,
 /area/maintenance/maintroom8)
@@ -35973,9 +35987,6 @@
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "sRe" = (
-/obj/structure/micro_tunnel{
-	dir = 1
-	},
 /turf/unsimulated/mineral,
 /area/maintenance/medical_lower)
 "sRo" = (
@@ -47558,7 +47569,7 @@ qFS
 qFS
 qFS
 qFS
-mqa
+qFS
 qFS
 mwy
 xPk
@@ -47720,7 +47731,7 @@ pko
 sUf
 fQS
 qUH
-pko
+ixd
 qFS
 mwy
 mwy
@@ -49341,9 +49352,9 @@ kya
 aLl
 ixT
 eCX
-maW
 eCX
-bDc
+eCX
+eCX
 eCX
 eCX
 eCX
@@ -49503,7 +49514,7 @@ sUj
 aLl
 ixT
 jqX
-kOT
+iVw
 kOT
 kOT
 kOT
@@ -50736,8 +50747,8 @@ sFq
 qdm
 sFq
 sFq
-gHn
-iHZ
+sFq
+aGn
 tOw
 tOw
 tOw
@@ -51383,7 +51394,7 @@ pbe
 sFq
 sFq
 iHZ
-aGn
+sFq
 sFq
 reE
 xhI
@@ -51545,7 +51556,7 @@ pbe
 hYh
 sFq
 iHZ
-iHZ
+apB
 sFq
 iHZ
 pQJ
@@ -51763,7 +51774,7 @@ ixT
 ixT
 ixT
 ixT
-dzy
+rsY
 kOj
 vkd
 xIc
@@ -54203,8 +54214,8 @@ xVh
 xVh
 xVh
 xoJ
-apB
-tQz
+xoJ
+maW
 wDe
 gEt
 gEt
@@ -54703,7 +54714,7 @@ xYx
 wlF
 gvc
 hkp
-oun
+hkp
 hkp
 lwk
 ueP
@@ -54832,7 +54843,7 @@ vRU
 mBq
 oOP
 sRe
-jqX
+gHn
 hPz
 hPz
 hPz
@@ -55602,7 +55613,7 @@ mwy
 kBN
 aOE
 qEB
-qEB
+bDc
 kHP
 kBN
 bsw
@@ -55764,7 +55775,7 @@ mwy
 kBN
 kBN
 toq
-ixd
+kBN
 kBN
 kBN
 kBN
@@ -56533,7 +56544,7 @@ mwy
 mwy
 mwy
 kOT
-oOd
+oJV
 msy
 sSM
 tFd
@@ -66641,7 +66652,7 @@ eNq
 gZI
 eNq
 eNq
-iVw
+eNq
 eNq
 eNq
 eNq
@@ -66803,7 +66814,7 @@ mKT
 eNq
 qjE
 wso
-fik
+dzy
 jSz
 kpQ
 eNq

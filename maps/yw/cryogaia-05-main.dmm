@@ -4919,12 +4919,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/hallway)
-"bSx" = (
-/obj/structure/micro_tunnel{
-	pixel_y = -32
-	},
-/turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
-/area/borealis2/outdoors/exterior)
 "bSS" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -10260,25 +10254,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/chapel/monastery)
-"dTP" = (
-/obj/structure/cable{
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/micro_tunnel{
-	dir = 1;
-	pixel_y = 32
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/research_port)
 "dUi" = (
 /turf/simulated/wall,
 /area/security/security_processing)
@@ -22881,7 +22856,10 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Science Maintenance";
+	req_access = list(7)
+	},
 /turf/simulated/floor/plating,
 /area/maintenance/research_port)
 "iKn" = (
@@ -38669,13 +38647,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/assembly/robotics)
-"oEw" = (
-/obj/structure/micro_tunnel{
-	dir = 8;
-	pixel_x = -32
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/exterior)
 "oEE" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -46364,7 +46335,10 @@
 /obj/structure/disposalpipe/segment{
 	dir = 4
 	},
-/obj/machinery/door/airlock/maintenance/common,
+/obj/machinery/door/airlock/maintenance/rnd{
+	name = "Science Maintenance";
+	req_access = list(7)
+	},
 /turf/simulated/floor/plating,
 /area/rnd/hallway)
 "rBy" = (
@@ -48639,13 +48613,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/equipstorage)
-"suL" = (
-/obj/structure/micro_tunnel{
-	dir = 1;
-	pixel_y = 32
-	},
-/turf/simulated/floor/plating,
-/area/maintenance/bridge)
 "suO" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/cable/green{
@@ -57397,7 +57364,6 @@
 	dir = 8
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
-/obj/machinery/door/airlock/angled_bay/double/glass/research,
 /obj/structure/cable/green{
 	d1 = 1;
 	d2 = 2;
@@ -76521,7 +76487,7 @@ iNn
 iNn
 iNn
 bzU
-dTP
+vQV
 hxd
 uDf
 uDf
@@ -81151,7 +81117,7 @@ lCj
 uDf
 uDf
 xbv
-suL
+dbb
 aOp
 ubC
 mAE
@@ -86459,7 +86425,7 @@ xzt
 vaU
 vaU
 vaU
-bSx
+iSE
 dAA
 dAA
 uDf
@@ -87674,7 +87640,7 @@ iSE
 iSE
 ouQ
 jrA
-oEw
+wHV
 aaX
 wHV
 rzY

@@ -7498,9 +7498,6 @@
 	},
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/south)
-"rX" = (
-/turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds/upper)
 "sa" = (
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
@@ -12434,7 +12431,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/upper)
+/area/cryogaia/station/excursion_dock)
 "Qj" = (
 /obj/structure/window/reinforced{
 	dir = 4
@@ -14409,7 +14406,7 @@
 "Zm" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/upper)
+/area/cryogaia/station/excursion_dock)
 "Zo" = (
 /obj/structure/disposalpipe/segment,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
@@ -14423,23 +14420,8 @@
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
 "Zs" = (
-/obj/structure/cable/green{
-	d1 = 4;
-	d2 = 8;
-	icon_state = "4-8"
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/obj/machinery/atmospherics/pipe/simple/hidden/supply{
-	dir = 4
-	},
-/obj/structure/disposalpipe/segment{
-	dir = 4
-	},
-/obj/structure/micro_tunnel,
 /turf/simulated/floor/plating,
-/area/cryogaia/station/hallway/primary/upper/south)
+/area/cryogaia/station/excursion_dock)
 "Zt" = (
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/tower/northeast)
@@ -14558,7 +14540,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds/upper)
+/area/cryogaia/station/excursion_dock)
 "ZR" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 10
@@ -30068,16 +30050,16 @@ AN
 AN
 AN
 AN
-ab
-ab
+vT
+vT
 Zm
 Zm
-ab
-ab
+vT
+vT
 Zm
 Zm
-ab
-fS
+vT
+ld
 gk
 gK
 hd
@@ -30230,8 +30212,8 @@ AN
 AN
 AN
 AN
-ab
-kp
+vT
+Zs
 Qe
 Qe
 Qe
@@ -30239,7 +30221,7 @@ Qe
 Qe
 Qe
 Qe
-fS
+ld
 gm
 gJ
 he
@@ -30392,16 +30374,16 @@ AN
 AN
 AN
 AN
-ab
+vT
 ZQ
-rX
-rX
-rX
-rX
-rX
-rX
-rX
-fS
+eg
+eg
+eg
+eX
+eo
+eo
+eo
+ld
 fS
 gL
 Al
@@ -30554,16 +30536,16 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
-rX
-rX
-rX
-rX
-rX
-rX
-fS
+vT
+eo
+eo
+eo
+eo
+eo
+eo
+eo
+eo
+ld
 gn
 gM
 Al
@@ -30716,9 +30698,9 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
+vT
+eo
+eo
 eo
 eo
 eo
@@ -30878,14 +30860,14 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
+vT
 eo
-eg
-eg
-eg
-eX
+eo
+eo
+eo
+eo
+eo
+eo
 ft
 ld
 gp
@@ -31040,9 +31022,9 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
+vT
+eo
+eo
 eo
 ei
 en
@@ -31202,9 +31184,9 @@ AN
 AN
 AN
 AN
-ab
-rX
-rX
+vT
+eo
+eo
 eo
 ej
 eo
@@ -34153,7 +34135,7 @@ KH
 KH
 bb
 dj
-Zs
+vG
 LC
 mD
 JG

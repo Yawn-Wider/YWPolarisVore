@@ -1515,6 +1515,9 @@
 	d2 = 8;
 	icon_state = "4-8"
 	},
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/tiled/techfloor,
 /area/rnd/workshop)
 "aDv" = (
@@ -13179,6 +13182,9 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 5
+	},
+/obj/machinery/light/small{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/white,
 /area/rnd/hallway)
@@ -80525,8 +80531,8 @@ cQQ
 ncL
 fGW
 cQQ
-eot
-eot
+cQQ
+cQQ
 lzM
 mBa
 kJV

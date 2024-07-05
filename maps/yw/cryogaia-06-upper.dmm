@@ -7230,6 +7230,12 @@
 	},
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
+"qL" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "qS" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 5
@@ -10156,6 +10162,10 @@
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
+"EL" = (
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "EM" = (
 /turf/simulated/open,
 /area/cryogaia/outpost/tower/east)
@@ -10739,6 +10749,12 @@
 	},
 /turf/simulated/floor/reinforced,
 /area/shuttle/excursion)
+"HQ" = (
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "HS" = (
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/excursion_dock)
@@ -10955,6 +10971,12 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/wood,
 /area/chapel/monastery/upper)
+"Jd" = (
+/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/techmaint,
+/area/cryogaia/station/excursion_dock)
 "Je" = (
 /obj/effect/floor_decal/corner/brown{
 	dir = 1
@@ -12263,12 +12285,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
-"Pq" = (
-/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/cryogaia/station/excursion_dock)
 "Pr" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -14519,12 +14535,6 @@
 	},
 /turf/simulated/floor/wood,
 /area/security/breakroom)
-"ZL" = (
-/obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/techmaint,
-/area/cryogaia/station/excursion_dock)
 "ZO" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -30709,13 +30719,13 @@ AN
 AN
 AN
 vT
+ej
 eo
 eo
 eo
 eo
-eo
-ZL
-eo
+Jd
+EL
 vT
 ld
 fS
@@ -30876,7 +30886,7 @@ eo
 eo
 eo
 eo
-Pq
+qL
 eo
 ft
 ld
@@ -31197,8 +31207,8 @@ AN
 vT
 eo
 eo
+HQ
 eo
-ej
 eo
 eA
 wl

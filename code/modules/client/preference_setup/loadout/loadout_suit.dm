@@ -647,30 +647,15 @@
 
 /datum/gear/suit/snowsuit/command_vore // YW EDIT command to command_vore
 	display_name = "snowsuit, command"
-	path = /obj/item/clothing/suit/storage/snowsuit/command
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command // YW EDIT Replaced by our snowsuits
 	allowed_roles = list("Site Manager","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard") //YW ADDITIONS
 	show_roles = FALSE
 
 /datum/gear/suit/snowsuit/security_vore //YW EDIT security to security_vore
 	display_name = "snowsuit, security"
-	path = /obj/item/clothing/suit/storage/snowsuit/security
+	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security // YW EDIT Replaced by our snowsuits
 	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective")
 	show_roles = FALSE
-
-// YW Addition START
-/datum/gear/suit/snowsuit/command
-	display_name = "snowsuit, command (Yawn)"
-	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/command
-	allowed_roles = list("Site Manager","Research Director","Head of Personnel","Head of Security","Chief Engineer","Command Secretary","Blueshield Guard") //YW ADDITIONS
-	show_roles = FALSE
-
-/datum/gear/suit/snowsuit/security
-	display_name = "snowsuit, security (Yawn)"
-	path = /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit/security
-	allowed_roles = list("Security Officer", "Head of Security", "Warden", "Detective","Blueshield Guard","Security Pilot")
-	show_roles = FALSE
-
-//  YW Addition END
 
 /datum/gear/suit/snowsuit/medical
 	display_name = "snowsuit, medical"

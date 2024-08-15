@@ -3511,6 +3511,19 @@
 	},
 /turf/simulated/floor/plating,
 /area/cryogaia/station/pathfinder_office)
+"hR" = (
+/obj/structure/ladder,
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "hS" = (
 /obj/machinery/door/airlock/research{
 	name = "Exploration Storage Room";
@@ -7046,6 +7059,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"pA" = (
+/obj/structure/railing/grey{
+	dir = 8
+	},
+/obj/structure/catwalk,
+/turf/simulated/open/cryogaia,
+/area/borealis2/outdoors/grounds/walkway)
 "pE" = (
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
@@ -8477,6 +8497,16 @@
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
+"wL" = (
+/obj/structure/catwalk,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/turf/simulated/open/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "wO" = (
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
@@ -11999,6 +12029,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
+"NT" = (
+/obj/structure/catwalk,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/turf/simulated/open/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "NU" = (
 /turf/simulated/open,
 /area/cryogaia/outpost/tower/south)
@@ -12237,6 +12274,14 @@
 /obj/machinery/camera/network/security,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/outpost/checkpoint)
+"Pb" = (
+/obj/structure/catwalk,
+/obj/structure/railing/grey{
+	dir = 4
+	},
+/obj/structure/railing/grey,
+/turf/simulated/open/cryogaia,
+/area/borealis2/outdoors/grounds/upper)
 "Pe" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -15235,8 +15280,8 @@ gv
 gv
 gv
 gv
-gv
-gv
+WS
+WS
 uP
 gv
 gv
@@ -15397,8 +15442,8 @@ gv
 gv
 gv
 gv
-gv
-gv
+WS
+WS
 gv
 gv
 gv
@@ -15559,8 +15604,8 @@ gv
 gv
 gv
 gv
-gv
-gv
+WS
+WS
 gv
 gv
 gv
@@ -15721,8 +15766,8 @@ gv
 gv
 gv
 gv
-gv
-gv
+WS
+WS
 gv
 gv
 gv
@@ -15883,8 +15928,8 @@ gv
 gv
 gv
 gv
-gv
-gv
+WS
+WS
 gv
 gv
 gv
@@ -16045,8 +16090,8 @@ gv
 gv
 gv
 gv
-gv
-gv
+WS
+WS
 gv
 gv
 gv
@@ -16207,8 +16252,8 @@ gv
 gv
 gv
 gv
-gv
-gv
+WS
+WS
 gv
 gv
 gv
@@ -16365,12 +16410,12 @@ Op
 Op
 Op
 Op
-Op
-Op
-Op
-Op
-Op
-Op
+pA
+pA
+pA
+pA
+pA
+pA
 Op
 Op
 Op
@@ -16527,12 +16572,12 @@ Rs
 zT
 Rs
 Rs
-Rs
-Rs
-Rs
-Rs
-Rs
-Rs
+li
+li
+li
+li
+li
+li
 Rs
 Rs
 Rs
@@ -16683,18 +16728,18 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
+AN
+wL
+NT
+NT
+NT
+NT
+Pb
 nQ
 nQ
 nQ
@@ -16845,12 +16890,12 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -17007,12 +17052,12 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -17169,12 +17214,12 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -17331,12 +17376,12 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+kW
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -17492,13 +17537,13 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+hR
+AN
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -17655,12 +17700,12 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+kW
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -17818,11 +17863,11 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -17980,11 +18025,11 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ
@@ -18142,11 +18187,11 @@ nQ
 nQ
 nQ
 nQ
-nQ
-nQ
-nQ
-nQ
-nQ
+AN
+AN
+AN
+AN
+AN
 nQ
 nQ
 nQ

@@ -453,6 +453,9 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
+"apR" = (
+/turf/simulated/wall/r_concrete,
+/area/mine/explored/lower_rock)
 "apS" = (
 /obj/random/cutout,
 /turf/simulated/floor/plating,
@@ -2185,6 +2188,13 @@
 /obj/effect/decal/shadow/floor,
 /turf/simulated/floor/water/hotspring,
 /area/maintenance/aft)
+"blj" = (
+/obj/structure/railing,
+/obj/structure/railing{
+	dir = 8
+	},
+/turf/simulated/floor,
+/area/mine/explored/lower_rock)
 "blw" = (
 /obj/effect/floor_decal/corner/white{
 	dir = 4
@@ -2402,6 +2412,10 @@
 	},
 /turf/simulated/floor/wood,
 /area/library_conference_room)
+"bsq" = (
+/obj/structure/girder,
+/turf/simulated/mineral/floor,
+/area/mine/unexplored/lower_rock)
 "bsw" = (
 /obj/structure/railing{
 	dir = 8
@@ -6414,6 +6428,9 @@
 "dFr" = (
 /turf/simulated/wall/r_wall,
 /area/security/sorting)
+"dFA" = (
+/turf/simulated/wall/concrete,
+/area/mine/unexplored/lower_rock)
 "dFP" = (
 /obj/structure/table/standard,
 /obj/machinery/newscaster{
@@ -6610,6 +6627,9 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai_server_room)
+"dMA" = (
+/turf/simulated/wall/r_concrete,
+/area/mine/unexplored/lower_rock)
 "dML" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/reagent_containers/glass/beaker/large,
@@ -10100,6 +10120,9 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
+"fGL" = (
+/turf/simulated/wall/concrete,
+/area/mine/explored/lower_rock)
 "fGN" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced,
@@ -22729,6 +22752,9 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 1
 	},
+/obj/structure/railing/grey{
+	dir = 1
+	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos)
 "lLB" = (
@@ -22752,6 +22778,11 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/chapel)
+"lMw" = (
+/obj/structure/railing,
+/obj/item/clothing/head/cone,
+/turf/simulated/floor,
+/area/mine/explored/lower_rock)
 "lMA" = (
 /obj/machinery/atmospherics/unary/outlet_injector{
 	dir = 8;
@@ -23926,6 +23957,12 @@
 	},
 /turf/simulated/floor/wood/sif,
 /area/maintenance/blueserg)
+"mvN" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "mvX" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/disposalpipe/segment,
@@ -30388,6 +30425,10 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/cryogaia/outpost/tower/southwest)
+"pLI" = (
+/obj/effect/decal/shadow/floor,
+/turf/simulated/mineral/floor,
+/area/mine/explored/lower_rock)
 "pLL" = (
 /obj/effect/catwalk_plated/dark,
 /turf/simulated/floor,
@@ -37119,6 +37160,9 @@
 /obj/structure/closet/secure_closet/scientist,
 /turf/simulated/floor/tiled/steel_dirty,
 /area/rnd/storage)
+"ttR" = (
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "ttU" = (
 /turf/simulated/wall,
 /area/maintenance/medical_lower)
@@ -39003,6 +39047,12 @@
 	icon_state = "techmaint"
 	},
 /area/mine/explored/lower_rock)
+"uoj" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/atmos_control)
 "uoM" = (
 /obj/machinery/hologram/holopad,
 /obj/structure/cable/green{
@@ -41727,6 +41777,10 @@
 /obj/structure/table,
 /turf/simulated/floor/carpet,
 /area/maintenance/maintroom6)
+"vGh" = (
+/obj/structure/railing,
+/turf/simulated/floor,
+/area/mine/explored/lower_rock)
 "vGJ" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/loot_pile/maint/boxfort,
@@ -46156,6 +46210,10 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/coffee_shop)
+"xVF" = (
+/obj/structure/sign/signnew/memetic,
+/turf/simulated/wall,
+/area/maintenance/atmos_control)
 "xVT" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -47428,9 +47486,9 @@ pbe
 pbe
 pbe
 nRz
+pbe
 nRz
-nRz
-nRz
+pbe
 pbe
 pbe
 pbe
@@ -47587,14 +47645,14 @@ pbe
 pbe
 pbe
 pbe
-pbe
-pbe
+dMA
+dMA
 nRz
 nRz
 nRz
 pbe
-pbe
-pbe
+dMA
+dMA
 pbe
 pbe
 pbe
@@ -47749,14 +47807,14 @@ pbe
 pbe
 pbe
 pbe
-pbe
-pbe
+dMA
+dMA
 nRz
 pbe
 nRz
 nRz
-pbe
-pbe
+dMA
+dMA
 pbe
 pbe
 pbe
@@ -47912,7 +47970,7 @@ pbe
 pbe
 pbe
 pbe
-pbe
+nRz
 nRz
 pbe
 pbe
@@ -48074,7 +48132,7 @@ pbe
 pbe
 pbe
 pbe
-pbe
+nRz
 nRz
 pbe
 pbe
@@ -48235,14 +48293,14 @@ pbe
 pbe
 pbe
 pbe
-pbe
-nRz
-nRz
-pbe
-pbe
-pbe
+dMA
+dMA
 nRz
 pbe
+pbe
+bsq
+dMA
+dMA
 pbe
 pbe
 pbe
@@ -48397,14 +48455,14 @@ pbe
 pbe
 pbe
 pbe
-pbe
+dMA
+dMA
 nRz
 pbe
 pbe
-pbe
-pbe
-nRz
-pbe
+bsq
+dMA
+dMA
 pbe
 pbe
 pbe
@@ -48552,13 +48610,7 @@ pbe
 pbe
 pbe
 pbe
-pbe
-pbe
-pbe
-pbe
-pbe
-pbe
-pbe
+nRz
 nRz
 nRz
 pbe
@@ -48566,6 +48618,12 @@ pbe
 pbe
 pbe
 nRz
+dMA
+nRz
+nRz
+pbe
+nRz
+dMA
 nRz
 pbe
 pbe
@@ -48713,21 +48771,21 @@ nRz
 pbe
 pbe
 pbe
+nRz
+nRz
 pbe
-pbe
-pbe
-pbe
-pbe
+nRz
+nRz
+nRz
+nRz
+nRz
+bsq
+bsq
+nRz
 pbe
 pbe
 nRz
 nRz
-pbe
-pbe
-pbe
-pbe
-pbe
-pbe
 nRz
 pbe
 pbe
@@ -48875,21 +48933,21 @@ nRz
 pbe
 pbe
 pbe
+nRz
 pbe
-pbe
+dMA
+dMA
+dFA
+dFA
+dFA
+dFA
+dMA
+dMA
 pbe
 pbe
 pbe
 pbe
 nRz
-nRz
-pbe
-pbe
-pbe
-pbe
-pbe
-pbe
-pbe
 nRz
 nRz
 pbe
@@ -49037,16 +49095,16 @@ nRz
 nRz
 pbe
 pbe
-pbe
-pbe
-pbe
-pbe
 nRz
 nRz
-nRz
-pbe
-pbe
-pbe
+dMA
+dFA
+dFA
+dFA
+dFA
+dFA
+dFA
+dMA
 pbe
 pbe
 pbe
@@ -49200,15 +49258,15 @@ nRz
 nRz
 pbe
 pbe
-pbe
 nRz
-nRz
-nRz
+dFA
+dFA
 pbe
 pbe
 pbe
 pbe
-pbe
+dFA
+dFA
 pbe
 pbe
 pbe
@@ -49363,14 +49421,14 @@ nRz
 pbe
 pbe
 nRz
-nRz
+dFA
+dFA
 pbe
 pbe
 pbe
 pbe
-pbe
-pbe
-pbe
+dFA
+dFA
 pbe
 pbe
 pbe
@@ -49525,14 +49583,14 @@ nRz
 nRz
 nRz
 nRz
+dFA
+dFA
 pbe
 pbe
 pbe
 pbe
-pbe
-pbe
-pbe
-pbe
+dFA
+dFA
 pbe
 pbe
 pbe
@@ -49687,14 +49745,14 @@ pbe
 nRz
 nRz
 pbe
+dFA
+dFA
 pbe
 pbe
 pbe
 pbe
-pbe
-pbe
-pbe
-pbe
+dFA
+dFA
 pbe
 pbe
 pbe
@@ -49849,14 +49907,14 @@ pbe
 nRz
 nRz
 nRz
+dMA
+dFA
+dFA
 pbe
 pbe
 pbe
-pbe
-pbe
-pbe
-pbe
-pbe
+dFA
+dFA
 pbe
 pbe
 pbe
@@ -50011,14 +50069,14 @@ nRz
 nRz
 pbe
 nRz
-nRz
+dMA
+dMA
+dFA
 pbe
 pbe
 pbe
-pbe
-pbe
-pbe
-pbe
+dFA
+dFA
 pbe
 pbe
 pbe
@@ -50172,15 +50230,15 @@ nRz
 nRz
 pbe
 pbe
-pbe
 nRz
 nRz
+dFA
+dFA
 pbe
 pbe
 pbe
-pbe
-pbe
-pbe
+dFA
+dFA
 pbe
 pbe
 pbe
@@ -50335,14 +50393,14 @@ pbe
 pbe
 pbe
 pbe
-pbe
 nRz
-nRz
-pbe
-pbe
-pbe
-pbe
-pbe
+dMA
+dFA
+dFA
+dFA
+dFA
+dFA
+dMA
 pbe
 pbe
 pbe
@@ -50497,14 +50555,14 @@ hYh
 hYh
 hYh
 hYh
-hYh
-hYh
 kOT
-kOT
-kOT
-kOT
-kOT
-hYh
+apR
+apR
+fGL
+fGL
+fGL
+apR
+apR
 hYh
 hYh
 hYh
@@ -50659,12 +50717,12 @@ hYh
 hYh
 hYh
 hYh
+kOT
+kOT
 hYh
 hYh
 hYh
-hYh
-hYh
-hYh
+kOT
 kOT
 kOT
 kOT
@@ -50822,11 +50880,11 @@ hYh
 hYh
 hYh
 hYh
-hYh
-hYh
-hYh
-hYh
-hYh
+kOT
+kOT
+kOT
+kOT
+kOT
 hYh
 hYh
 hYh
@@ -51646,7 +51704,7 @@ hYh
 hYh
 hYh
 hYh
-hYh
+kOT
 kOT
 kOT
 kOT
@@ -51808,8 +51866,8 @@ hYh
 hYh
 hYh
 hYh
-hYh
-hYh
+blj
+pLI
 hYh
 kOT
 kOT
@@ -51969,9 +52027,9 @@ hYh
 hYh
 hYh
 hYh
-hYh
-hYh
-hYh
+emb
+vGh
+pLI
 hYh
 mwy
 mwy
@@ -52119,21 +52177,21 @@ hYh
 hYh
 hYh
 hYh
+emb
+emb
 hYh
 hYh
 hYh
 hYh
 hYh
-hYh
-hYh
 mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
+emb
+emb
+kOT
+emb
+kOT
+lMw
+pLI
 mwy
 mwy
 mwy
@@ -52271,6 +52329,19 @@ vAe
 eyv
 gJV
 ewy
+mvN
+mwy
+mwy
+mwy
+mwy
+mwy
+mwy
+mwy
+mwy
+mwy
+emb
+emb
+hYh
 mwy
 mwy
 mwy
@@ -52281,21 +52352,8 @@ mwy
 mwy
 mwy
 mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
+vGh
+pLI
 mwy
 mwy
 mwy
@@ -52433,31 +52491,31 @@ nnR
 xAE
 ojz
 ewy
-ewy
+uoj
 mwy
 mwy
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
 mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
+vGh
+pLI
 mwy
 mwy
 mwy
@@ -52595,31 +52653,31 @@ bxK
 pkc
 cbC
 jAD
-ewy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
+uoj
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+ttR
+emb
+emb
+xPk
 mwy
 mwy
 mwy
@@ -52757,7 +52815,12 @@ ewy
 rGw
 ewy
 ewy
-ewy
+uoj
+ttR
+mwy
+ttR
+mwy
+ttR
 mwy
 mwy
 mwy
@@ -52774,12 +52837,7 @@ mwy
 mwy
 mwy
 mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
+emb
 mwy
 mwy
 mwy
@@ -52919,8 +52977,8 @@ ewy
 rHv
 bxK
 ewy
-mwy
-mwy
+mvN
+ttR
 gZI
 mwy
 mwy
@@ -53081,8 +53139,8 @@ ewy
 ewy
 ewy
 ewy
-mwy
-mwy
+ttR
+ttR
 gZI
 mwy
 mwy
@@ -53244,7 +53302,7 @@ ewy
 ewy
 ewy
 mwy
-mwy
+ttR
 gZI
 mwy
 mwy
@@ -53405,8 +53463,8 @@ jai
 cHw
 jAD
 ewy
-mwy
-mwy
+ttR
+ttR
 gZI
 mwy
 mwy
@@ -53567,8 +53625,8 @@ llo
 vAe
 jAD
 eyv
-ewy
-ewy
+rGw
+rGw
 eyv
 eyv
 eyv
@@ -53890,7 +53948,7 @@ eyv
 kzw
 kzw
 kzw
-eyv
+xVF
 kzw
 kzw
 eyv

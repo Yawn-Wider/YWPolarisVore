@@ -3875,6 +3875,15 @@
 /obj/random/maintenance/cargo,
 /turf/simulated/floor,
 /area/mine/explored/lower_rock)
+"ckg" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "ckt" = (
 /obj/effect/decal/cleanable/dirt,
 /obj/structure/cable/green{
@@ -4006,6 +4015,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/tcommsat/entrance)
+"cmI" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/atmos_control)
 "cmR" = (
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
@@ -9221,6 +9239,15 @@
 	},
 /turf/simulated/floor/tiled,
 /area/crew_quarters/recreation_area)
+"fie" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 9
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 9
+	},
+/turf/simulated/floor,
+/area/mine/explored/lower_rock)
 "fii" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -9608,6 +9635,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/fore)
+"fqv" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "fqJ" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -11054,6 +11093,18 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/chapel/main)
+"ghW" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/atmos_control)
 "gie" = (
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
@@ -12899,6 +12950,13 @@
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
+"hdH" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/shadow/silhouette,
+/turf/simulated/floor,
+/area/mine/explored/lower_rock)
 "hdU" = (
 /obj/machinery/fitness/punching_bag,
 /obj/effect/floor_decal/spline/plain,
@@ -13240,6 +13298,12 @@
 	},
 /turf/simulated/floor/bluegrid,
 /area/ai_upload)
+"hkH" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "hlF" = (
 /obj/effect/floor_decal/corner/brown/full{
 	dir = 1
@@ -15340,6 +15404,10 @@
 	icon_state = "monotile"
 	},
 /area/civilian/atrium/lower)
+"imx" = (
+/obj/effect/decal/shadow/silhouette,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "imE" = (
 /obj/structure/table/rack,
 /obj/item/weapon/storage/toolbox/mechanical,
@@ -16703,6 +16771,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/hallway_lower)
+"iUf" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "iUA" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -22293,6 +22366,14 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/lower/central)
+"lzC" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/decal/shadow/silhouette,
+/obj/structure/railing,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "lzG" = (
 /obj/machinery/light_switch{
 	name = "light switch ";
@@ -22781,6 +22862,12 @@
 "lMw" = (
 /obj/structure/railing,
 /obj/item/clothing/head/cone,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/mine/explored/lower_rock)
 "lMA" = (
@@ -24802,6 +24889,14 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
+"mNV" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/shadow/silhouette,
+/obj/structure/railing,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "mOm" = (
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 4
@@ -25955,6 +26050,21 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
 /area/maintenance/aft)
+"ntW" = (
+/obj/structure/cable{
+	d1 = 1;
+	d2 = 2;
+	icon_state = "1-2"
+	},
+/obj/machinery/atmospherics/pipe/manifold/visible/supply{
+	dir = 4
+	},
+/obj/effect/decal/cleanable/dirt,
+/obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/maintenance/atmos_control)
 "nux" = (
 /turf/simulated/floor/wood,
 /area/library)
@@ -26174,6 +26284,13 @@
 /obj/structure/disposalpipe/segment,
 /turf/simulated/floor/plating,
 /area/maintenance/medical_lower)
+"nCd" = (
+/obj/structure/railing{
+	dir = 4
+	},
+/obj/effect/decal/shadow/silhouette,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "nCx" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 4
@@ -28911,6 +29028,11 @@
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor,
 /area/maintenance/medical_lower)
+"oZo" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/turf/simulated/floor,
+/area/mine/explored/lower_rock)
 "oZW" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -30733,6 +30855,18 @@
 	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
+"pSj" = (
+/obj/structure/railing{
+	dir = 1
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 6
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 6
+	},
+/turf/simulated/floor/plating,
+/area/maintenance/atmos_control)
 "pSz" = (
 /obj/machinery/portable_atmospherics/hydroponics,
 /obj/machinery/atmospherics/unary/vent_pump/on,
@@ -31187,6 +31321,10 @@
 	},
 /turf/simulated/floor/tiled,
 /area/engineering/atmos/monitoring)
+"qew" = (
+/obj/structure/railing,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "qeB" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -37596,6 +37734,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/dorms)
+"tFT" = (
+/obj/effect/decal/shadow/silhouette,
+/obj/structure/railing,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "tFV" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled,
@@ -41396,6 +41539,13 @@
 	},
 /turf/simulated/floor/tiled,
 /area/hallway/lower/aft)
+"vxR" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/decal/shadow/silhouette,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "vxS" = (
 /obj/machinery/door/airlock/multi_tile/metal/mait{
 	dir = 1;
@@ -41779,6 +41929,12 @@
 /area/maintenance/maintroom6)
 "vGh" = (
 /obj/structure/railing,
+/obj/machinery/atmospherics/pipe/zpipe/up/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/zpipe/up/scrubbers{
+	dir = 4
+	},
 /turf/simulated/floor,
 /area/mine/explored/lower_rock)
 "vGJ" = (
@@ -43691,6 +43847,16 @@
 "wKr" = (
 /turf/simulated/floor/water/deep/indoors,
 /area/maintenance/lowfloor1)
+"wKs" = (
+/obj/structure/railing,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/turf/simulated/floor,
+/area/mine/explored/lower_rock)
 "wKJ" = (
 /obj/machinery/door/airlock/atmos,
 /turf/simulated/floor/plating,
@@ -52172,18 +52338,18 @@ mwy
 hYh
 hYh
 hYh
-hYh
-hYh
-hYh
-hYh
-hYh
-emb
-emb
-hYh
-hYh
-hYh
-hYh
-hYh
+imx
+imx
+imx
+imx
+imx
+imx
+imx
+imx
+tFT
+ttR
+ttR
+ttR
 mwy
 emb
 emb
@@ -52334,25 +52500,25 @@ mwy
 mwy
 mwy
 mwy
+xPk
+nCd
+nCd
+xPk
+nCd
+hdH
+xPk
+nCd
+mNV
+xPk
+ttR
+ttR
 mwy
 mwy
 mwy
 mwy
 mwy
-emb
-emb
-hYh
 mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-vGh
+wKs
 pLI
 mwy
 mwy
@@ -52514,7 +52680,7 @@ ttR
 ttR
 ttR
 mwy
-vGh
+wKs
 pLI
 mwy
 mwy
@@ -52653,30 +52819,30 @@ bxK
 pkc
 cbC
 jAD
-uoj
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-ttR
-emb
-emb
+pSj
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+iUf
+hkH
+iUf
+oZo
+fie
 xPk
 mwy
 mwy
@@ -52815,23 +52981,23 @@ ewy
 rGw
 ewy
 ewy
-uoj
-ttR
+ghW
+qew
 mwy
 ttR
 mwy
+xPk
+vxR
+vxR
+xPk
+vxR
+vxR
+xPk
+vxR
+lzC
+xPk
 ttR
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
+ttR
 mwy
 mwy
 mwy
@@ -52977,22 +53143,22 @@ ewy
 rHv
 bxK
 ewy
-mvN
-ttR
+fqv
+qew
 gZI
 mwy
 mwy
 mwy
+imx
 mwy
 mwy
+imx
+imx
 mwy
+imx
 mwy
-mwy
-mwy
-mwy
-mwy
-mwy
-mwy
+ttR
+ttR
 mwy
 mwy
 mwy
@@ -53139,8 +53305,8 @@ ewy
 ewy
 ewy
 ewy
-ttR
-ttR
+ckg
+qew
 gZI
 mwy
 mwy
@@ -53148,13 +53314,13 @@ mwy
 mwy
 mwy
 mwy
+imx
 mwy
 mwy
 mwy
 mwy
 mwy
-mwy
-mwy
+ttR
 mwy
 mwy
 mwy
@@ -53301,8 +53467,8 @@ ewy
 ewy
 ewy
 ewy
-mwy
-ttR
+ckg
+qew
 gZI
 mwy
 mwy
@@ -53463,7 +53629,7 @@ jai
 cHw
 jAD
 ewy
-ttR
+ckg
 ttR
 gZI
 mwy
@@ -53625,7 +53791,7 @@ llo
 vAe
 jAD
 eyv
-rGw
+cmI
 rGw
 eyv
 eyv
@@ -53787,7 +53953,7 @@ oXR
 mHJ
 xss
 lYm
-xss
+ntW
 nqC
 sxb
 cRA
@@ -55243,7 +55409,7 @@ eyv
 bHG
 goH
 hxo
-eyv
+jai
 eyv
 pbe
 ens
@@ -55405,7 +55571,7 @@ eyv
 pAt
 shs
 eyv
-eyv
+jai
 eyv
 kzw
 ens
@@ -55729,7 +55895,7 @@ eyv
 kzw
 eyv
 eyv
-eyv
+jai
 mxM
 hXl
 qxR

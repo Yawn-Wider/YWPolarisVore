@@ -31267,6 +31267,9 @@
 /area/hallway/secondary/exit)
 "lJp" = (
 /obj/effect/floor_decal/industrial/danger,
+/obj/machinery/light/floortube{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/exterior)
 "lJw" = (
@@ -33460,6 +33463,7 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
+/obj/machinery/light/floortube,
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/exterior)
 "mxS" = (

@@ -92,13 +92,6 @@
 	if(load && !(load in buckled_mobs) && !istype(load, /datum/vehicle_dummy_load))
 		load.forceMove(loc)
 
-//YW ADDITION: start - pr #1294
-/obj/vehicle/Move(var/newloc, var/direction, var/movetime)
-	// NOTICE - do not put checks here, put them in vehicle_move() otherwise you will break falling and other forced movements!
-	// as well, vehicles should call vehicle_move() instead, so they do their checks...
-	. = ..()
-//YW ADDITION: end
-
 /obj/vehicle/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/hand_labeler))
 		return

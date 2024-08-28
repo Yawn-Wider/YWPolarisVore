@@ -244,7 +244,7 @@
 	return pick(prob(10);/obj/item/weapon/storage/firstaid/regular,
 				prob(8);/obj/item/weapon/storage/firstaid/toxin,
 				prob(8);/obj/item/weapon/storage/firstaid/o2,
-				prob(6);/obj/item/weapon/storage/firstaid/adv,
+				prob(4);/obj/item/weapon/storage/firstaid/adv, //VOREStation Edit: 6 to 4
 				prob(8);/obj/item/weapon/storage/firstaid/fire,
 				prob(1);/obj/item/device/denecrotizer/medical, //VOREStation Add,
 				prob(1);/obj/item/weapon/storage/firstaid/combat)
@@ -823,7 +823,8 @@
 				/obj/item/toy/mecha/seraph,
 				/obj/item/toy/mecha/mauler,
 				/obj/item/toy/mecha/odysseus,
-				/obj/item/toy/mecha/phazon)
+				/obj/item/toy/mecha/phazon,
+				/obj/item/weapon/toy/monster_bait)
 
 /obj/random/mouseremains
 	name = "random mouseremains"

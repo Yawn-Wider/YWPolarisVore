@@ -340,11 +340,10 @@
 /obj/mecha/can_fall()
 	return TRUE
 
-//YW ADDITION: start - pr #1294
-// same as above, but vehicles!
+// VOREstation edit - Falling vehicles.
 /obj/vehicle/can_fall()
 	return TRUE
-//YW ADDITION: end
+// VOREstation edit end
 
 /obj/item/pipe/can_fall()
 	. = ..()

@@ -511,10 +511,6 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/step_trigger/message{
-	message = "Entering the Upper Atrium, a air of sterile serenity pervades the hall, as it's high ceiling and ornate lighting therein invite introspection among the displays.";
-	name = "upper atrium message"
-	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "akP" = (
@@ -51459,10 +51455,6 @@
 /obj/structure/railing{
 	dir = 4
 	},
-/obj/effect/step_trigger/message{
-	message = "Entering the Upper Atrium, a air of sterile serenity pervades the hall, as it's high ceiling and ornate lighting therein invite introspection among the displays.";
-	name = "upper atrium message"
-	},
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/central)
 "sZT" = (
@@ -53363,6 +53355,16 @@
 /obj/item/clothing/suit/tajaran/furs,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningwing)
+"tIL" = (
+/obj/structure/railing/grey{
+	dir = 1
+	},
+/obj/structure/catwalk,
+/obj/structure/sign/warning/falling{
+	pixel_y = -32
+	},
+/turf/simulated/open/cryogaia,
+/area/borealis2/outdoors/grounds)
 "tIN" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -71177,7 +71179,7 @@ dAX
 lZh
 kJq
 mCr
-bom
+tIL
 hAk
 uDf
 uDf

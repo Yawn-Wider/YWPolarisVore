@@ -9720,6 +9720,13 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayupper)
+"Ct" = (
+/obj/effect/step_trigger/message{
+	message = "Entering the Upper Atrium, a air of sterile serenity pervades the hall, as it's high ceiling and ornate lighting therein invite introspection among the displays.";
+	name = "upper atrium message"
+	},
+/turf/simulated/floor/tiled,
+/area/civilian/atrium/upper)
 "Cw" = (
 /obj/machinery/alarm/yw{
 	dir = 4;
@@ -27670,7 +27677,7 @@ sa
 TQ
 EC
 EC
-sa
+Ct
 wW
 rC
 EC
@@ -27680,7 +27687,7 @@ EC
 EC
 LY
 Mu
-sa
+Ct
 EC
 EC
 vx

@@ -6,7 +6,7 @@
 /*********************/
 
 //define USE_MAP_TETHER
-#define USE_MAP_STELLARDELIGHT
+#define USE_MAP_CRYOGAIA // YW edit
 //#define USE_MAP_GROUNDBASE
 
 // Debug
@@ -35,4 +35,10 @@
 
 #ifdef USE_MAP_MINITEST
 #include "../virgo_minitest/virgo_minitest.dm"
+#endif
+
+////YW
+// Cryogaia
+#ifdef USE_MAP_CRYOGAIA
+#include "../maps/yw/cryogaia.dm"
 #endif

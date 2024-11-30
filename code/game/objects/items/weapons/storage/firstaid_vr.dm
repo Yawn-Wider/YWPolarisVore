@@ -14,7 +14,7 @@
 
 /obj/item/storage/firstaid/regular
 	starts_with = list(
-		/obj/item/device/healthanalyzer, /*YW EDIT*/
+		/obj/item/healthanalyzer, /*YW EDIT*/
 		/obj/item/stack/medical/bruise_pack,
 		/obj/item/stack/medical/bruise_pack,
 		/obj/item/stack/medical/bruise_pack,

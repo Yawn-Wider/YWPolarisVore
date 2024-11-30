@@ -348,12 +348,12 @@
 	name = "Revolver Crate"
 	num_contained = 2
 	contains = list(
-			/obj/item/weapon/gun/projectile/revolver/cerberus,
-			/obj/item/weapon/gun/projectile/revolver/nova,
-			/obj/item/weapon/gun/projectile/revolver/detective,
-			/obj/item/weapon/gun/projectile/revolver/deckard,
-		    /obj/item/weapon/gun/projectile/revolver/mateba,
-			/obj/item/weapon/gun/projectile/derringer
+			/obj/item/gun/projectile/revolver/cerberus,
+			/obj/item/gun/projectile/revolver/nova,
+			/obj/item/gun/projectile/revolver/detective,
+			/obj/item/gun/projectile/revolver/deckard,
+		    /obj/item/gun/projectile/revolver/mateba,
+			/obj/item/gun/projectile/derringer
 			)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
@@ -364,9 +364,9 @@
 	name = "Assault rifle crate"
 	num_contained = 2
 	contains = list(
-			/obj/item/weapon/gun/projectile/automatic/tommygun,
-			/obj/item/weapon/gun/projectile/automatic/c20r,
-			/obj/item/weapon/gun/projectile/automatic/sts35
+			/obj/item/gun/projectile/automatic/tommygun,
+			/obj/item/gun/projectile/automatic/c20r,
+			/obj/item/gun/projectile/automatic/sts35
 			)
 	cost = 250
 	containertype = /obj/structure/closet/crate/secure
@@ -377,8 +377,8 @@
 	name = "Smg crate"
 	num_contained = 2
 	contains = list(
-			/obj/item/weapon/gun/projectile/automatic/c20r,
-			/obj/item/weapon/gun/projectile/automatic/pdw
+			/obj/item/gun/projectile/automatic/c20r,
+			/obj/item/gun/projectile/automatic/pdw
 			)
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure
@@ -387,7 +387,7 @@
 
 /datum/supply_pack/munitions/munitions/yw_mg
 	name = "Light machine gun crate"
-	contains = list(/obj/item/weapon/gun/projectile/automatic/l6_saw = 1)
+	contains = list(/obj/item/gun/projectile/automatic/l6_saw = 1)
 	cost = 500
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Light machine gun crate"

@@ -88,7 +88,7 @@
 	charge = 0
 	update_icon()
 
-/obj/item/weapon/cell/device/super
+/obj/item/cell/device/super
 	name = "super device power cell"
 	desc = "A small upgraded power cell designed to power handheld devices."
 	icon = 'icons/obj/power_yw.dmi'
@@ -97,12 +97,12 @@
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 3)
 
-/obj/item/weapon/cell/device/super/empty/Initialize()
+/obj/item/cell/device/super/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()
 
-/obj/item/weapon/cell/device/hyper
+/obj/item/cell/device/hyper
 	name = "hyper device power cell"
 	desc = "A small upgraded power cell designed to hold much more power for handheld devices."
 	icon = 'icons/obj/power_yw.dmi'
@@ -111,7 +111,7 @@
 	charge_amount = 20
 	origin_tech = list(TECH_POWER = 4)
 
-/obj/item/weapon/cell/device/hyper/empty/Initialize()
+/obj/item/cell/device/hyper/empty/Initialize()
 	. = ..()
 	charge = 0
 	update_icon()

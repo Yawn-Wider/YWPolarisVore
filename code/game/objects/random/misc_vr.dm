@@ -327,10 +327,10 @@
 				prob(4);/obj/item/potion_material/solid_mist,
 				prob(2);/obj/item/potion_material/spider_leg,
 				prob(2);/obj/item/potion_material/folded_dark,
-				prob(1);/obj/item/potion_material/glamour_transparent,
-				prob(1);/obj/item/potion_material/glamour_shrinking,
-				prob(1);/obj/item/potion_material/glamour_twinkling,
-				prob(1);/obj/item/potion_material/glamour_shard
+				// YW COMMENT lleill prob(1);/obj/item/potion_material/glamour_transparent,
+				// YW COMMENT lleill prob(1);/obj/item/potion_material/glamour_shrinking,
+				// YW COMMENT lleill prob(1);/obj/item/potion_material/glamour_twinkling,
+				// YW COMMENT lleill prob(1);/obj/item/potion_material/glamour_shard
 				)
 
 /obj/random/potion_base

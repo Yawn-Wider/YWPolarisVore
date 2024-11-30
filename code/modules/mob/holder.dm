@@ -351,7 +351,7 @@ var/list/holder_mob_icon_cache = list()
 	slot_flags = SLOT_BACK
 
 //YW Addition Start - Holder code for tesh
-/obj/item/weapon/holder/human/Initialize(mapload, mob/held)
+/obj/item/holder/human/Initialize(mapload, mob/held)
 	. = ..()
 	// Generate appropriate on-mob icons.
 	var/mob/living/carbon/human/owner = held

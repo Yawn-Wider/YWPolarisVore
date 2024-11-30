@@ -40,5 +40,5 @@
 ////YW
 // Cryogaia
 #ifdef USE_MAP_CRYOGAIA
-#include "../maps/yw/cryogaia.dm"
+#include "../yw/cryogaia.dm"
 #endif

@@ -1,7 +1,7 @@
 /datum/supply_pack/security/loyaltyimplants
 	name = "Loyalty Implant Lockbox"
 	contains = list(
-			/obj/item/weapon/storage/lockbox/loyalty
+			/obj/item/storage/lockbox/loyalty
 			)
 	cost = 100
 	containertype = /obj/structure/closet/crate/secure/gear
@@ -11,11 +11,11 @@
 /datum/supply_pack/security/covenantmeleeweapons
 	name = "Covenant melee weapon pack"
 	contains = list(
-			/obj/item/weapon/melee/energy/elite_sword,
-			/obj/item/weapon/melee/energy/elite_sword/dagger,
-			/obj/item/weapon/melee/energy/elite_sword/dagger,
-			/obj/item/weapon/melee/blamite/dagger,
-			/obj/item/weapon/melee/blamite/dagger
+			/obj/item/melee/energy/elite_sword,
+			/obj/item/melee/energy/elite_sword/dagger,
+			/obj/item/melee/energy/elite_sword/dagger,
+			/obj/item/melee/blamite/dagger,
+			/obj/item/melee/blamite/dagger
 			)
 	cost = 200
 	containertype = /obj/structure/closet/crate/secure/gear

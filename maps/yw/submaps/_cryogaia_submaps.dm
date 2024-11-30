@@ -26,7 +26,7 @@
 
 //////////////////////////////////////////////////////////////////////////////
 /// Away Missions
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "cryogaia_plains/cryogaia_plains.dmm"
 #endif
 
@@ -62,7 +62,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "admin_use/spa.dmm"
 #endif
 
@@ -295,7 +295,7 @@
 #include "../../offmap_vr/talon/talon_v2.dm"
 #include "../../offmap_vr/talon/talon_v2_areas.dm"
 
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "../../offmap_vr/talon/talon_v2.dmm"
 #endif
 
@@ -306,8 +306,8 @@
 #include "../../offmap_vr/om_ships/screebarge.dm"
 #include "../../offmap_vr/om_ships/aro.dm"
 #include "../../offmap_vr/om_ships/aro2.dm"
+#include "../../offmap_vr/om_ships/aro3.dm"
 #include "../../offmap_vr/om_ships/bearcat.dm"
-#include "../../offmap_vr/om_ships/cruiser.dm"
 #include "../../offmap_vr/om_ships/vespa.dm"
 #include "../../offmap_vr/om_ships/generic_shuttle.dm"
 #include "../../offmap_vr/om_ships/salamander.dm"
@@ -318,11 +318,12 @@
 #include "../../offmap_vr/om_ships/curashuttle.dm"
 #include "../../offmap_vr/om_ships/itglight.dm"
 #include "../../offmap_vr/om_ships/abductor.dm"
+#include "../../offmap_vr/om_ships/lunaship.dm"
+#include "../../offmap_vr/om_ships/sdf_corvettes.dm"
 
 //////////////////////////////////////////////////////////////////////////////
 //Capsule deployed ships
 #include "../../offmap_vr/om_ships/shelter_5.dm"
-#include "../../offmap_vr/om_ships/shelter_6.dm"
 
 // Talon offmap spawn
 /datum/map_template/cryogaia_lateload/offmap/talon_v2

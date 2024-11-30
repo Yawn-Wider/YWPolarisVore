@@ -169,7 +169,7 @@
 		/obj/item/megaphone,
 		/obj/item/clothing/mask/gas/half,
 		/obj/item/clothing/mask/gas/sechailer/swat/warden,
-		/obj/item/weapon/gun/projectile/revolvershotgun,
+		/obj/item/gun/projectile/revolvershotgun,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag,
 		/obj/item/ammo_magazine/m12gdrumjack/beanbag)
 

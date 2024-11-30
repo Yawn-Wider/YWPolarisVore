@@ -76,8 +76,8 @@
 					),
 
 			list( //the doc,
-					/obj/item/weapon/storage/firstaid/combat,
-					/obj/item/weapon/reagent_containers/hypospray
+					/obj/item/storage/firstaid/combat,
+					/obj/item/reagent_containers/hypospray
 					),
 
 			list( //the sapper,

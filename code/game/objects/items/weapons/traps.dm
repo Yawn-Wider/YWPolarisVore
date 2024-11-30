@@ -396,6 +396,6 @@
 	default_material = MAT_PLASTIC
 
 // YW ADDITION
-/obj/item/weapon/beartrap/armed
+/obj/item/beartrap/armed
 	icon_state = "beartrap1"
 	deployed = 1

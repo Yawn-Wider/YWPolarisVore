@@ -125,7 +125,7 @@
 		/obj/item/rig_module/self_destruct
 		)
 
-/obj/item/weapon/rig/vox/civilian
+/obj/item/rig/vox/civilian
 	name = "matte alien control module"
 	suit_type = "sinister alien"
 	icon_state = "voxstealth_rig"
@@ -134,7 +134,7 @@
 
 	req_access = list()
 	req_one_access = list()
-	allowed = list(/obj/item/device/flashlight,/obj/item/weapon/tank,/obj/item/device/suit_cooling_unit)
+	allowed = list(/obj/item/flashlight,/obj/item/tank,/obj/item/suit_cooling_unit)
 	offline_vision_restriction = 1
 
 	initial_modules = list(

@@ -521,8 +521,8 @@
 			Tar.verbs |= /mob/living/carbon/human/proc/shapeshifter_select_wings
 			Tar.verbs |= /mob/living/carbon/human/proc/shapeshifter_select_tail
 			Tar.verbs |= /mob/living/carbon/human/proc/shapeshifter_select_ears
-			Tar.verbs |= /mob/living/carbon/human/proc/lleill_select_shape //designed for non-shapeshifter mobs
-			Tar.verbs |= /mob/living/carbon/human/proc/lleill_select_colour
+			// YW COMMENT OUT: Tar.verbs |= /mob/living/carbon/human/proc/lleill_select_shape //designed for non-shapeshifter mobs
+			// YW COMMENT OUT: Tar.verbs |= /mob/living/carbon/human/proc/lleill_select_colour
 
 		if("set_size")
 			var/mob/living/Tar = target
@@ -530,6 +530,8 @@
 				return
 			Tar.verbs |= /mob/living/proc/set_size
 
+// YW COMMENT lleill OUT : START
+/*
 		if("lleill_energy")
 			var/mob/living/carbon/human/Tar = target
 			if(!istype(Tar))
@@ -568,7 +570,8 @@
 			if(!istype(Tar))
 				return
 			Tar.verbs |= /mob/living/carbon/human/proc/lleill_contact
-
+*/
+// YW COMMENT lleill OUT : END
 		if("brutal_pred")
 			var/mob/living/Tar = target
 			if(!istype(Tar))

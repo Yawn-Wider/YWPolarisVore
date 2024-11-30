@@ -42,7 +42,7 @@
 	broadcasting = 1 //yw edit starts
 	listening = 0
 
-/obj/item/device/radio/intercom/interrogation/observation
+/obj/item/radio/intercom/interrogation/observation
 	listening = 1
 	broadcasting = 0 //yw edit ends
 

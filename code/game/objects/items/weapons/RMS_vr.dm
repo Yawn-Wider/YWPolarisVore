@@ -177,7 +177,7 @@
 									5;new /obj/item/trash/rkibble,
 									10;new /obj/item/stack/tile/grass,
 									10;new /obj/item/stack/tile/carpet,
-									10;new /obj/item/reagent_containers/spray/waterflower
+									10;new /obj/item/reagent_containers/spray/waterflower)
 									//YW EDIT: 10;new /obj/item/bikehorn,
 									//YW EDIT: 10;new /obj/item/storage/backpack/clown,
 									//YW EDIT: 10;new /obj/item/clothing/under/rank/clown,

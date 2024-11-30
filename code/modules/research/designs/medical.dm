@@ -95,7 +95,7 @@
 	id = "phasic_analyzer"
 	req_tech = list(TECH_MAGNET = 7, TECH_BIO = 8, TECH_BLUESPACE = 6, TECH_PHORON = 5)
 	materials = list(MAT_STEEL = 2000, MAT_GLASS = 1000, MAT_GOLD = 1500, MAT_GOLD = 2000, MAT_URANIUM = 1250, MAT_DIAMOND = 750, MAT_PHORON = 500, MAT_PLASTIC = 1000, MAT_OSMIUM = 500)
-	build_path = /obj/item/device/healthanalyzer/phasic
+	build_path = /obj/item/healthanalyzer/phasic
 	sort_string = "KBAAD"
 
 /datum/design/item/medical/large_bodybag

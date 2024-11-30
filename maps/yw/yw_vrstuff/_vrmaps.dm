@@ -1,4 +1,4 @@
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "vrmaps.dmm"
 #endif
 

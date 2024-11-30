@@ -235,14 +235,14 @@
 			var/mob/living/carbon/human/H = M
 			if(H == user)
 				if(icon_state == "scrap" && H.check_has_mouth()) //YW Edit Start
-					user << "<span class='warning'>You begin to stuff \the [src] into your mouth!</span>"
+					user << span_warning("You begin to stuff \the [src] into your mouth!")
 					if(do_after(user, 30))
-						user << "<span class='warning'>You stuff \the [src] into your mouth!</span>"
+						user << span_warning("You stuff \the [src] into your mouth!")
 						H.ingested.add_reagent("paper", 10)
 						H.adjustOxyLoss(10)
 						qdel(src)
-				else // YW EDIT End
-					to_chat(user, span_notice("You wipe off the lipstick with [src]."))
+				else
+					user << span_notice("You wipe off the lipstick with [src].")
 					H.lip_style = null
 					H.update_icons_body()
 			else
@@ -735,6 +735,6 @@
 	var/is_copy = 1
 
 // YW Additions Start
-/obj/item/weapon/paper/shieldgen
+/obj/item/paper/shieldgen
 	name = "Memo:Station Bubble Shield Generator."
 	info = "<B>Hello Engineers</B><BR>\n<BR>\nYou might be wondering what happened to the shield generator.<BR>\nWell, Long story short, a bottle of vodka, and one 'enlightened' scientist later,<BR>\n It's particularly non-existing. We don't have time to replace it this shift, so grab a spare from your Secure storage. Good luck! -Interim Construction Specialist Tahls"

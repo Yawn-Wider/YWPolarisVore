@@ -201,7 +201,7 @@
 					/obj/item/clothing/under/rank/pilot1,
 					/obj/item/gun/energy/gun/protector/pilotgun/locked,
 					/obj/item/clothing/gloves/watch/survival,
-					/obj/item/device/cataloguer/compact // YW EDIT
+					/obj/item/cataloguer/compact // YW EDIT
 					)
 	cost=20
 	containertype = /obj/structure/closet/crate/secure/xion

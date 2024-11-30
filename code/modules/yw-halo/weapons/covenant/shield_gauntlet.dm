@@ -21,7 +21,7 @@
 	var/active_slowdown_amount = 0.8 //Bracing to hide behind the shield.
 	var/overloaded = 0
 
-	var/obj/item/weapon/gauntlet_shield/connected_shield
+	var/obj/item/gauntlet_shield/connected_shield
 	matter = list("nanolaminate" = 1)
 	var/time_next_warning = 0
 

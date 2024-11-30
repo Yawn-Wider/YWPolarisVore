@@ -636,7 +636,7 @@ You can also set the stat of a NIF to NIF_TEMPFAIL without any issues to disable
 	durability = 1000
 
 // YW Addition: START
-/obj/item/device/nif/authenticbio
+/obj/item/nif/authenticbio
 	name = "Bioadaptive Authentic NIF"
 	desc = "The cutting-edge of NIF technology, this is the strongest, most reliable, and most adaptive framework developed to date. Extremely expensive to produce."
 	durability = 1000

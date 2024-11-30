@@ -227,3 +227,6 @@
 
 // Links!
 #define span_linkify(str) ("<span class='linkify'>" + str + "</span>")
+
+// YW stuff
+#define span_wingdings(str) ("<span class='wingdings'>" + str + "</span>")

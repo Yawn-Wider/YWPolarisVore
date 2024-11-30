@@ -67,6 +67,7 @@
 	#define JOB_ALT_RESEARCH_INTERN "Research Intern"
 	#define JOB_ALT_SECURITY_CADET "Security Cadet"
 	#define JOB_ALT_JR_CARGO_TECH "Jr. Cargo Tech"
+	#define JOB_ALT_JR_EXPLORER_TECH "Jr. Explorer"
 	#define JOB_ALT_SERVER "Server"
 	#define JOB_ALT_ASSISTANT "Assistant"
 		//Assistant/Visitor/Whatever

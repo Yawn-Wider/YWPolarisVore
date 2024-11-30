@@ -45,9 +45,6 @@
 // YW Addition: 8 used for persistence block somewhere else
 #define PHASE_SHIELDED 16 // YW Addition: Prevents shadekin phasing in/out in this area
 
-//Assistant/Visitor/Whatever
-#define USELESS_JOB "Visitor"
-
 //Herm Gender
 #define HERM "herm"
 

@@ -36,6 +36,7 @@
 	noisy = client.prefs_vr.noisy
 	selective_preference = client.prefs_vr.selective_preference
 	eating_privacy_global = client.prefs_vr.eating_privacy_global
+	allow_mimicry = client.prefs_vr.allow_mimicry
 
 	drop_vore = client.prefs_vr.drop_vore
 	stumble_vore = client.prefs_vr.stumble_vore
@@ -46,13 +47,14 @@
 	show_vore_fx = client.prefs_vr.show_vore_fx
 	step_mechanics_pref = client.prefs_vr.step_mechanics_pref
 	pickup_pref = client.prefs_vr.pickup_pref
+	allow_mind_transfer = client.prefs_vr.allow_mind_transfer
 
 /mob/living/simple_mob/proc/set_name()
 	set name = "Set Name"
 	set desc = "Sets your mobs name. You only get to do this once."
 	set category = "Abilities"
 	if(limit_renames && nameset)
-		to_chat(src, "<span class='userdanger'>You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must.</span>")
+		to_chat(src, span_userdanger("You've already set your name. Ask an admin to toggle \"nameset\" to 0 if you really must."))
 		return
 	var/newname
 	newname = sanitizeSafe(tgui_input_text(src,"Set your name. You only get to do this once. Max 52 chars.", "Name set","", MAX_NAME_LEN), MAX_NAME_LEN)

@@ -10,14 +10,14 @@
 	icon = 'icons/mob/vore64x64.dmi'
 	vis_height = 64
 
-	faction = "panther"
+	faction = FACTION_PANTHER
 	maxHealth = 200
 	health = 200
 	movement_cooldown = 0.5
 	see_in_dark = 8
 
 	meat_amount = 8
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	melee_damage_lower = 5
 	melee_damage_upper = 15
@@ -41,6 +41,8 @@
 
 	say_list_type = /datum/say_list/panther
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
+
+	allow_mind_transfer = TRUE
 
 // Activate Noms!
 /mob/living/simple_mob/vore/aggressive/panther

@@ -14,7 +14,7 @@
 
 /obj/item/borg/upgrade/proc/action(var/mob/living/silicon/robot/R)
 	if(R.stat == DEAD)
-		to_chat(usr, "<span class='warning'>The [src] will not function on a deceased robot.</span>")
+		to_chat(usr, span_warning("The [src] will not function on a deceased robot."))
 		return 1
 	return 0
 
@@ -234,9 +234,9 @@
 /obj/item/borg/upgrade/advanced/bellysizeupgrade/action(var/mob/living/silicon/robot/R)
 	if(..()) return 0
 
-	var/obj/T = R.has_upgrade_module(/obj/item/device/dogborg/sleeper)
+	var/obj/T = R.has_upgrade_module(/obj/item/dogborg/sleeper)
 	if(!T)
-		to_chat(usr, "<span class='warning'>This robot has had its processor removed!</span>")
+		to_chat(usr, span_warning("This robot has had its processor removed!"))
 		return 0
 
 	if(R.has_advanced_upgrade(type))
@@ -244,7 +244,7 @@
 		to_chat(usr, "There's no room for another capacity upgrade!")
 		return 0
 
-	var/obj/item/device/dogborg/sleeper/B = T
+	var/obj/item/dogborg/sleeper/B = T
 	var/X = B.max_item_count*2
 	B.max_item_count = X	//I couldn't do T = maxitem*2 for some reason.
 	to_chat(R, "Internal capacity doubled.")
@@ -266,8 +266,8 @@
 		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/tank/jetpack/carbondioxide(R.module)
-	for(var/obj/item/weapon/tank/jetpack/carbondioxide in R.module.modules)
+	R.module.modules += new/obj/item/tank/jetpack/carbondioxide(R.module)
+	for(var/obj/item/tank/jetpack/carbondioxide in R.module.modules)
 		R.internals = src
 	return 1
 
@@ -285,7 +285,7 @@
 		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/device/healthanalyzer/advanced(R.module)
+	R.module.modules += new/obj/item/healthanalyzer/advanced(R.module)
 	return 1
 
 //Robot size gun
@@ -303,7 +303,7 @@
 		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/gun/energy/sizegun/mounted(R.module)
+	R.module.modules += new/obj/item/gun/energy/sizegun/mounted(R.module)
 	return 1
 
 /*	##############################################################################
@@ -326,9 +326,9 @@
 		generic_error(R, type)
 		return 0
 
-	var/obj/T = R.has_upgrade_module(/obj/item/device/dogborg/sleeper)
+	var/obj/T = R.has_upgrade_module(/obj/item/dogborg/sleeper)
 	if(!T)
-		to_chat(usr, "<span class='warning'>This robot has had its processor removed!</span>")
+		to_chat(usr, span_warning("This robot has had its processor removed!"))
 		return 0
 
 	if(R.has_restricted_upgrade(type))
@@ -336,7 +336,7 @@
 		to_chat(usr, "There's no room for another capability upgrade!")
 		return 0
 
-	var/obj/item/device/dogborg/sleeper/B = T
+	var/obj/item/dogborg/sleeper/B = T
 	var/X = B.max_item_count*2 //double the capacity from 1 to 2 to allow sleepers to store some items, at most 4 with both upgrades
 	B.max_item_count = X	//I couldn't do T = maxitem*2 for some reason.
 	to_chat(R, "Internal capability upgraded.")
@@ -360,9 +360,9 @@
 		generic_error(R, type)
 		return 0
 
-	var/obj/T = R.has_upgrade_module(/obj/item/weapon/gun/energy/taser/mounted/cyborg)
+	var/obj/T = R.has_upgrade_module(/obj/item/gun/energy/taser/mounted/cyborg)
 	if(!T)
-		to_chat(usr, "<span class='warning'>This robot has had its taser removed!</span>")
+		to_chat(usr, span_warning("This robot has had its taser removed!"))
 		return 0
 
 	if(R.has_restricted_upgrade(type))
@@ -370,7 +370,7 @@
 		to_chat(usr, "There's no room for another cooling unit!")
 		return 0
 
-	var/obj/item/weapon/gun/energy/taser/mounted/cyborg/B = T
+	var/obj/item/gun/energy/taser/mounted/cyborg/B = T
 	B.recharge_time = max(2 , B.recharge_time - 4)
 	return 1
 
@@ -394,7 +394,7 @@
 		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/storage/part_replacer/adv(R.module)
+	R.module.modules += new/obj/item/storage/part_replacer/adv(R.module)
 	return 1
 
 //Diamond Drill
@@ -417,7 +417,7 @@
 		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/pickaxe/diamonddrill(R.module)
+	R.module.modules += new/obj/item/pickaxe/diamonddrill(R.module)
 	return 1
 
 //PKA
@@ -440,7 +440,7 @@
 		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/gun/energy/kinetic_accelerator/cyborg(R.module)
+	R.module.modules += new/obj/item/gun/energy/kinetic_accelerator/cyborg(R.module)
 	return 1
 
 /*	###############################################
@@ -452,7 +452,7 @@
 
 //cyborg foam dart gun
 /obj/item/borg/upgrade/no_prod/toygun
-	name = "Donk-Soft Cyborg Blaster module" //Cyborg Blaster is capitalized because it's the brand name
+	name = "Donk-Soft " + JOB_CYBORG + " Blaster module" //Cyborg Blaster is capitalized because it's the brand name
 	desc = "A foam dart gun designed for mounting into cyborgs. It's Donk or Don't! DISCLAIMER: Donk-Soft bears no responsibility for incidents relating to cyborgs becoming too accustomed to shooting at crew. Installation of the Donk-Soft Cyborg Blaster must be performed only by a licensed roboticist."
 	icon_state = "cyborg_upgrade5"
 	item_state = "cyborg_upgrade"
@@ -465,7 +465,7 @@
 		generic_error(R, type)
 		return 0
 
-	R.module.modules += new/obj/item/weapon/gun/projectile/cyborgtoy(R.module)
+	R.module.modules += new/obj/item/gun/projectile/cyborgtoy(R.module)
 	return 1
 
 /obj/item/borg/upgrade/no_prod/vision_xray

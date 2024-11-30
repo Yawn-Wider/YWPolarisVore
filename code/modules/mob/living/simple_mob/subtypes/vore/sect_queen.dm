@@ -36,13 +36,13 @@
 	vore_eyes = TRUE
 	custom_eye_color = "#FF0000"
 
-	faction = "insects"
+	faction = FACTION_INSECTS
 	maxHealth = 200
 	health = 200
 	see_in_dark = 8
 
 	meat_amount = 8
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/xenomeat/spidermeat
+	meat_type = /obj/item/reagent_containers/food/snacks/xenomeat/spidermeat
 
 	melee_damage_lower = 8
 	melee_damage_upper = 16
@@ -84,6 +84,8 @@
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee
 	say_list_type = /datum/say_list/sect_queen
+
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/sect_queen/Login()
 	. = ..()

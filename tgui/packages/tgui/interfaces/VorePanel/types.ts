@@ -15,6 +15,7 @@ export type Data = {
     maximum_size: number;
     resize_cost: number;
   };
+  vore_words: Record<string, string[]>;
 };
 
 export type hostMob = {
@@ -160,6 +161,7 @@ export type prefData = {
   step_mechanics_active: BooleanLike;
   pickup_mechanics_active: BooleanLike;
   noisy: BooleanLike;
+  allow_mind_transfer: BooleanLike;
   drop_vore: BooleanLike;
   slip_vore: BooleanLike;
   stumble_vore: BooleanLike;
@@ -171,6 +173,7 @@ export type prefData = {
   weight_message_visible: BooleanLike;
   weight_messages: string[];
   eating_privacy_global: BooleanLike;
+  allow_mimicry: BooleanLike;
   vore_sprite_color: { stomach: string; 'taur belly': string };
   vore_sprite_multiply: { stomach: BooleanLike; 'taur belly': BooleanLike };
 };
@@ -198,9 +201,11 @@ export type localPrefs = {
   remains: preferenceData;
   pickuppref: preferenceData;
   spontaneous_tf: preferenceData;
+  mind_transfer: preferenceData;
   examine_nutrition: preferenceData;
   examine_weight: preferenceData;
   eating_privacy_global: preferenceData;
+  allow_mimicry: preferenceData;
 };
 
 export type preferenceData = {

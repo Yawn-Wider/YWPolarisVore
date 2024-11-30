@@ -14,7 +14,7 @@
 	icon_rest = "rabbit_brown_rest"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "rabbit"
+	faction = FACTION_RABBIT
 	maxHealth = 30
 	health = 30
 
@@ -33,7 +33,7 @@
 	ai_holder_type = /datum/ai_holder/simple_mob/passive
 
 	meat_amount = 3
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	// Vore vars
 	vore_active = 1
@@ -42,6 +42,8 @@
 	vore_pounce_maxhealth = 100 // They won't pounce by default, as they're passive. This is just so the nom check succeeds. :u
 	vore_default_mode = DM_HOLD
 	vore_icons = SA_ICON_LIVING
+
+	allow_mind_transfer = TRUE
 
 	var/body_color 				//brown, black and white, leave blank for random
 

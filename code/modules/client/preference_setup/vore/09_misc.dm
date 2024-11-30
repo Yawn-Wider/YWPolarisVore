@@ -2,27 +2,27 @@
 	name = "Misc Settings"
 	sort_order = 9
 
-/datum/category_item/player_setup_item/vore/misc/load_character(var/savefile/S)
-	S["show_in_directory"]		>> pref.show_in_directory
-	S["directory_tag"]			>> pref.directory_tag
-	S["directory_erptag"]		>> pref.directory_erptag
-	S["directory_ad"]			>> pref.directory_ad
-	S["sensorpref"]				>> pref.sensorpref
-	S["capture_crystal"]		>> pref.capture_crystal
-	S["auto_backup_implant"]	>> pref.auto_backup_implant
-	S["borg_petting"]			>> pref.borg_petting
-	S["stomach_vision"]			>> pref.stomach_vision
+/datum/category_item/player_setup_item/vore/misc/load_character(list/save_data)
+	pref.show_in_directory		= save_data["show_in_directory"]
+	pref.directory_tag			= save_data["directory_tag"]
+	pref.directory_erptag		= save_data["directory_erptag"]
+	pref.directory_ad			= save_data["directory_ad"]
+	pref.sensorpref				= save_data["sensorpref"]
+	pref.capture_crystal		= save_data["capture_crystal"]
+	pref.auto_backup_implant	= save_data["auto_backup_implant"]
+	pref.borg_petting			= save_data["borg_petting"]
+	pref.stomach_vision			= save_data["stomach_vision"]
 
-/datum/category_item/player_setup_item/vore/misc/save_character(var/savefile/S)
-	S["show_in_directory"]		<< pref.show_in_directory
-	S["directory_tag"]			<< pref.directory_tag
-	S["directory_erptag"]		<< pref.directory_erptag
-	S["directory_ad"]			<< pref.directory_ad
-	S["sensorpref"]				<< pref.sensorpref
-	S["capture_crystal"]		<< pref.capture_crystal
-	S["auto_backup_implant"]	<< pref.auto_backup_implant
-	S["borg_petting"]			<< pref.borg_petting
-	S["stomach_vision"]			<< pref.stomach_vision
+/datum/category_item/player_setup_item/vore/misc/save_character(list/save_data)
+	save_data["show_in_directory"]		= pref.show_in_directory
+	save_data["directory_tag"]			= pref.directory_tag
+	save_data["directory_erptag"]		= pref.directory_erptag
+	save_data["directory_ad"]			= pref.directory_ad
+	save_data["sensorpref"]				= pref.sensorpref
+	save_data["capture_crystal"]		= pref.capture_crystal
+	save_data["auto_backup_implant"]	= pref.auto_backup_implant
+	save_data["borg_petting"]			= pref.borg_petting
+	save_data["stomach_vision"]			= pref.stomach_vision
 
 /datum/category_item/player_setup_item/vore/misc/copy_to_mob(var/mob/living/carbon/human/character)
 	if(pref.sensorpref > 5 || pref.sensorpref < 1)
@@ -31,12 +31,7 @@
 	character.capture_crystal = pref.capture_crystal
 	//Vore Stomach Sprite Preference
 	character.stomach_vision = pref.stomach_vision
-	if((character && !istype(character,/mob/living/carbon/human/dummy)) && character.stomach_vision && !(VIS_CH_STOMACH in character.vis_enabled))
-		character.plane_holder.set_vis(VIS_CH_STOMACH,TRUE)
-		character.vis_enabled += VIS_CH_STOMACH
-	else if((character && !istype(character,/mob/living/carbon/human/dummy)) && !character.stomach_vision && (VIS_CH_STOMACH in character.vis_enabled))
-		character.plane_holder.set_vis(VIS_CH_STOMACH,FALSE)
-		character.vis_enabled -= VIS_CH_STOMACH
+	character.recalculate_vis()
 
 /datum/category_item/player_setup_item/vore/misc/sanitize_character()
 	pref.show_in_directory		= sanitize_integer(pref.show_in_directory, 0, 1, initial(pref.show_in_directory))

@@ -8,7 +8,7 @@
 	icon_dead = "horse-dead"
 	icon = 'icons/mob/vore.dmi'
 
-	faction = "horse"
+	faction = FACTION_HORSE
 	maxHealth = 60
 	health = 60
 
@@ -24,7 +24,7 @@
 	attacktext = list("kicked")
 
 	meat_amount = 6
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	max_buckled_mobs = 1 //Yeehaw
 	can_buckle = TRUE
@@ -34,6 +34,8 @@
 
 	say_list_type = /datum/say_list/horse
 	ai_holder_type = /datum/ai_holder/simple_mob/retaliate
+
+	allow_mind_transfer = TRUE
 
 /mob/living/simple_mob/vore/horse/big
 	name = "horse"

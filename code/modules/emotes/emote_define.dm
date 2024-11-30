@@ -29,8 +29,8 @@ var/global/list/emotes_by_key
 	var/emote_message_radio_synthetic                   // As above, but for synthetics.
 	var/emote_message_muffled                           // A message to show if the emote is audible and the user is muzzled.
 
-	var/list/emote_sound                                // A sound for the emote to play. 
-	                                                    // Can either be a single sound, a list of sounds to pick from, or an 
+	var/list/emote_sound                                // A sound for the emote to play.
+	                                                    // Can either be a single sound, a list of sounds to pick from, or an
 	                                                    // associative array of gender to single sounds/a list of sounds.
 	var/list/emote_sound_synthetic                      // As above, but used when check_synthetic() is true.
 	var/emote_volume = 50                               // Volume of sound to play.
@@ -42,8 +42,8 @@ var/global/list/emotes_by_key
 	var/check_range                                     // falsy, or a range outside which the emote will not work
 	var/conscious = TRUE                                // Do we need to be awake to emote this?
 	var/emote_range = 0                                 // If >0, restricts emote visibility to viewers within range.
-	
-	var/sound_preferences = list(/datum/client_preference/emote_noises) // Default emote sound_preferences is just emote_noises. Belch emote overrides this list for pref-checks.
+
+	var/sound_preferences = list(/datum/preference/toggle/emote_noises) // Default emote sound_preferences is just emote_noises. Belch emote overrides this list for pref-checks.
 	var/sound_vary = FALSE
 
 /decl/emote/Initialize()
@@ -85,7 +85,7 @@ var/global/list/emotes_by_key
 	if(ismob(user) && check_restraints)
 		var/mob/M = user
 		if(M.restrained())
-			to_chat(user, SPAN_WARNING("You are restrained and cannot do that."))
+			to_chat(user, span_warning("You are restrained and cannot do that."))
 			return
 
 	var/atom/target
@@ -106,14 +106,14 @@ var/global/list/emotes_by_key
 				target = thing
 
 		if(!target)
-			to_chat(user, SPAN_WARNING("You cannot see a '[extra_params]' within range."))
+			to_chat(user, span_warning("You cannot see a '[extra_params]' within range."))
 			return
 
 	var/use_1p = get_emote_message_1p(user, target, extra_params)
 	if(use_1p)
 		if(target)
 			use_1p = replace_target_tokens(use_1p, target)
-		use_1p = "<span class='emote'>[capitalize(replace_user_tokens(use_1p, user))]</span>"
+		use_1p = span_emote("[capitalize(replace_user_tokens(use_1p, user))]")
 	var/prefinal_3p
 	var/use_3p
 	var/raw_3p = get_emote_message_3p(user, target, extra_params)
@@ -121,7 +121,7 @@ var/global/list/emotes_by_key
 		if(target)
 			raw_3p = replace_target_tokens(raw_3p, target)
 		prefinal_3p = replace_user_tokens(raw_3p, user)
-		use_3p = "<span class='emote'><b>\The [user]</b> [prefinal_3p]</span>"
+		use_3p = span_emote("<b>\The [user]</b> [prefinal_3p]")
 	var/use_radio = get_radio_message(user)
 	if(use_radio)
 		if(target)

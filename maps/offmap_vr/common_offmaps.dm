@@ -1,5 +1,5 @@
 /// Away Missions
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "../expedition_vr/beach/beach.dmm"
 #include "../expedition_vr/beach/cave.dmm"
 #include "../expedition_vr/alienship/alienship.dmm"
@@ -358,7 +358,7 @@
 
 //////////////////////////////////////////////////////////////////////////////////////
 // Admin-use z-levels for loading whenever an admin feels like
-#if AWAY_MISSION_TEST
+#ifdef AWAY_MISSION_TEST
 #include "../submaps/admin_use_vr/spa.dmm"
 #endif
 #include "../submaps/admin_use_vr/fun.dm"
@@ -530,7 +530,7 @@
 	icon = 'icons/mob/vore_shadekin.dmi'
 	icon_state = "spawner"
 
-	faction = "shadekin"
+	faction = FACTION_SHADEKIN
 	prob_spawn = 1
 	prob_fall = 1
 	//guard = 10 //Don't wander too far, to stay alive.
@@ -594,7 +594,6 @@
 #include "../offmap_vr/om_ships/aro2.dm"
 #include "../offmap_vr/om_ships/aro3.dm"
 #include "../offmap_vr/om_ships/bearcat.dm"
-#include "../offmap_vr/om_ships/cruiser.dm"
 #include "../offmap_vr/om_ships/vespa.dm"
 #include "../offmap_vr/om_ships/generic_shuttle.dm"
 #include "../offmap_vr/om_ships/salamander.dm"
@@ -611,14 +610,13 @@
 //////////////////////////////////////////////////////////////////////////////
 //Capsule deployed ships
 #include "../offmap_vr/om_ships/shelter_5.dm"
-#include "../offmap_vr/om_ships/shelter_6.dm"
 
 //////////////////////////////////////////////////////////////////////////////
 //Offmap Spawn Locations
 #include "../offmap_vr/talon/talon_v2.dm"
 #include "../offmap_vr/talon/talon_v2_areas.dm"
 
-#if MAP_TEST
+#ifdef MAP_TEST
 #include "../offmap_vr/talon/talon_v2.dmm"
 #endif
 

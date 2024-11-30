@@ -7,7 +7,7 @@
 	icon_dead = "bear_dead"
 	icon_gib = "bear_gib"
 
-	faction = "russian"
+	faction = FACTION_RUSSIAN
 
 	maxHealth = 125
 	health = 125
@@ -22,10 +22,12 @@
 	melee_attack_delay = 1 SECOND
 	attacktext = list("mauled")
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/bearmeat
+	meat_type = /obj/item/reagent_containers/food/snacks/bearmeat
 	meat_amount = 8
 
 	say_list_type = /datum/say_list/bear
+
+	allow_mind_transfer = TRUE
 
 /datum/say_list/bear
 	speak = list("RAWR!","Rawr!","GRR!","Growl!")

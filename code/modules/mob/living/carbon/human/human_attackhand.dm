@@ -44,6 +44,17 @@
 		if(!temp || !temp.is_usable())
 			to_chat(H, span_warning("You can't use your hand."))
 			return
+
+		for(var/thing in GetViruses())
+			var/datum/disease/D = thing
+			if(D.IsSpreadByTouch())
+				H.ContractDisease(D)
+
+		for(var/thing in H.GetViruses())
+			var/datum/disease/D = thing
+			if(D.IsSpreadByTouch())
+				ContractDisease(D)
+
 	if(H.lying)
 		return
 	M.break_cloak()
@@ -64,7 +75,7 @@
 			if(!hit_zone)
 				H.do_attack_animation(src)
 				playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-				visible_message(span_filter_combat("[span_red("<B>[H] reaches for [src], but misses!</B>")]"))
+				visible_message(span_filter_combat("[span_red(span_bold("[H] reaches for [src], but misses!"))]"))
 				return FALSE
 
 		if(H != src && check_shields(0, null, H, H.zone_sel.selecting, H.name))
@@ -72,8 +83,9 @@
 			return FALSE
 
 	if(istype(M,/mob/living/carbon))
-		var/mob/living/carbon/C = M
-		C.spread_disease_to(src, "Contact")
+		for(var/datum/disease/D in M.GetViruses())
+			if(D.spread_flags & CONTACT_HANDS)
+				ContractDisease(D)
 
 	switch(M.a_intent)
 		if(I_HELP)
@@ -82,7 +94,7 @@
 			if (istype(H) && attempt_to_scoop(H))
 				return 0;
 			// VOREStation Edit - End
-			if(istype(H) && health < config.health_threshold_crit)
+			if(istype(H) && health < CONFIG_GET(number/health_threshold_crit))
 				if(!H.check_has_mouth())
 					to_chat(H, span_danger("You don't have a mouth, you cannot perform CPR!"))
 					return
@@ -111,7 +123,7 @@
 				H.visible_message(span_danger("\The [H] performs CPR on \the [src]!"))
 				to_chat(H, span_warning("Repeat at least every 7 seconds."))
 
-				if(istype(H) && health > config.health_threshold_dead)
+				if(istype(H) && health > CONFIG_GET(number/health_threshold_dead))
 					adjustOxyLoss(-(min(getOxyLoss(), 5)))
 					updatehealth()
 					to_chat(src, span_notice("You feel a breath of fresh air enter your lungs. It feels good."))
@@ -273,8 +285,12 @@
 					var/obj/item/clothing/gloves/G = H.gloves
 					real_damage += G.punch_force
 					hit_dam_type = G.punch_damtype
-					if(H.pulling_punches && !attack.sharp && !attack.edge)	//SO IT IS DECREED: PULLING PUNCHES WILL PREVENT THE ACTUAL DAMAGE FROM RINGS AND KNUCKLES, BUT NOT THE ADDED PAIN, BUT YOU CAN'T "PULL" A KNIFE
-						hit_dam_type = AGONY
+				else if(istype(H.gloves, /obj/item/clothing/accessory))
+					var/obj/item/clothing/accessory/G = H.gloves
+					real_damage += G.punch_force
+					hit_dam_type = G.punch_damtype
+				if(H.pulling_punches && !attack.sharp && !attack.edge)	//SO IT IS DECREED: PULLING PUNCHES WILL PREVENT THE ACTUAL DAMAGE FROM RINGS AND KNUCKLES, BUT NOT THE ADDED PAIN, BUT YOU CAN'T "PULL" A KNIFE
+					hit_dam_type = AGONY
 			real_damage *= damage_multiplier
 			rand_damage *= damage_multiplier
 			if(HULK in H.mutations)
@@ -346,7 +362,7 @@
 						return
 
 			playsound(src, 'sound/weapons/punchmiss.ogg', 25, 1, -1)
-			visible_message(span_filter_combat("[span_red("<B>[M] attempted to disarm [src]!</B>")]"))
+			visible_message(span_filter_combat("[span_red(span_bold("[M] attempted to disarm [src]!"))]"))
 	return
 
 /mob/living/carbon/human/proc/afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, inrange, params)
@@ -459,19 +475,19 @@
 
 /mob/living/carbon/human/verb/check_attacks()
 	set name = "Check Attacks"
-	set category = "IC"
+	set category = "IC.Game"
 	set src = usr
 
-	var/dat = "<b><font size = 5>Known Attacks</font></b><br/><br/>"
+	var/dat = span_bold(span_giant("Known Attacks")) + "<br/><br/>"
 
 	if(default_attack)
 		dat += "Current default attack: [default_attack.attack_name] - <a href='byond://?src=\ref[src];default_attk=reset_attk'>reset</a><br/><br/>"
 
 	for(var/datum/unarmed_attack/u_attack in species.unarmed_attacks)
 		if(u_attack == default_attack)
-			dat += "<b>Primarily [u_attack.attack_name]</b> - default - <a href='byond://?src=\ref[src];default_attk=reset_attk'>reset</a><br/><br/><br/>"
+			dat += span_bold("Primarily [u_attack.attack_name]") + " - default - <a href='byond://?src=\ref[src];default_attk=reset_attk'>reset</a><br/><br/><br/>"
 		else
-			dat += "<b>Primarily [u_attack.attack_name]</b> - <a href='byond://?src=\ref[src];default_attk=\ref[u_attack]'>set default</a><br/><br/><br/>"
+			dat += span_bold("Primarily [u_attack.attack_name]") + " - <a href='byond://?src=\ref[src];default_attk=\ref[u_attack]'>set default</a><br/><br/><br/>"
 
 	src << browse(dat, "window=checkattack")
 

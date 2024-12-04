@@ -16,9 +16,9 @@
 		if("run")
 			if(drowsyness > 0)
 				. += 6
-			. += config.run_speed
+			. += CONFIG_GET(number/run_speed)
 		if("walk")
-			. += config.walk_speed
+			. += CONFIG_GET(number/walk_speed)
 
 /client/proc/client_dir(input, direction=-1)
 	return turn(input, direction*dir2angle(dir))
@@ -350,14 +350,27 @@
 	switch(mob.incorporeal_move)
 		if(1)
 			var/turf/T = get_step(mob, direct)
+			var/area/A = T.loc	//RS Port #658
 			if(!T)
 				return
 			if(mob.check_holy(T))
 				to_chat(mob, span_warning("You cannot get past holy grounds while you are in this plane of existence!"))
 				return
-			else
-				mob.forceMove(get_step(mob, direct))
-				mob.dir = direct
+			//RS Port #658 Start
+			if(!holder)
+				if(isliving(mob) && A.block_phase_shift)
+					to_chat(mob, span_warning("Something blocks you from entering this location while phased out."))
+					return
+				if(isobserver(mob) && A.block_ghosts)
+					to_chat(mob, span_warning("Ghosts can't enter this location."))
+					var/area/our_area = mobloc.loc
+					if(our_area.block_ghosts)
+						var/mob/observer/dead/D = mob
+						D.return_to_spawn()
+					return
+			mob.forceMove(get_step(mob, direct))
+			mob.dir = direct
+			//RS Port #658 End
 		if(2)
 			if(prob(50))
 				var/locx
@@ -428,7 +441,7 @@
 
 	//Check to see if we slipped
 	if(prob(Process_Spaceslipping(5)) && !buckled)
-		to_chat(src, span_notice("<B>You slipped!</B>"))
+		to_chat(src, span_boldnotice("You slipped!"))
 		inertia_dir = last_move
 		step(src, src.inertia_dir) // Not using Move for smooth glide here because this is a 'slip' so should be sudden.
 		return 0

@@ -97,17 +97,17 @@
 	switch(action)
 		// Actual assembly actions
 		if("rename")
-			rename(usr)
+			rename(ui.user)
 			return TRUE
 
 		if("remove_cell")
 			if(!battery)
-				to_chat(usr, span_warning("There's no power cell to remove from \the [src]."))
+				to_chat(ui.user, span_warning("There's no power cell to remove from \the [src]."))
 				return FALSE
 			var/turf/T = get_turf(src)
 			battery.forceMove(T)
 			playsound(T, 'sound/items/Crowbar.ogg', 50, 1)
-			to_chat(usr, span_notice("You pull \the [battery] out of \the [src]'s power supplier."))
+			to_chat(ui.user, span_notice("You pull \the [battery] out of \the [src]'s power supplier."))
 			battery = null
 			return TRUE
 
@@ -158,14 +158,14 @@
 			var/obj/item/integrated_circuit/C = locate(params["ref"]) in contents
 			if(!istype(C))
 				return
-			C.tgui_interact(usr, null, ui)
+			C.tgui_interact(ui.user, null, ui)
 			return TRUE
 
 		if("remove_circuit")
 			var/obj/item/integrated_circuit/C = locate(params["ref"]) in contents
 			if(!istype(C))
 				return
-			C.remove(usr)
+			C.remove(ui.user)
 			return TRUE
 
 	return FALSE
@@ -272,7 +272,7 @@
 			if(S.scan(target))
 				scanned = TRUE
 		if(scanned)
-			visible_message("<b>\The [user]</b> waves \the [src] around [target].")
+			visible_message(span_infoplain(span_bold("\The [user]") + " waves \the [src] around [target]."))
 
 /obj/item/electronic_assembly/attackby(var/obj/item/I, var/mob/user)
 	if(can_anchor && I.has_tool_quality(TOOL_WRENCH))
@@ -306,8 +306,8 @@
 			tgui_interact(user)
 			return TRUE
 		else
-			to_chat(user, "<span class='warning'>\The [src] isn't opened, so you can't fiddle with the internal components.  \
-			Try using a crowbar.</span>")
+			to_chat(user, span_warning("\The [src] isn't opened, so you can't fiddle with the internal components.  \
+			Try using a crowbar."))
 			return FALSE
 
 	else if(istype(I, /obj/item/integrated_electronics/detailer))

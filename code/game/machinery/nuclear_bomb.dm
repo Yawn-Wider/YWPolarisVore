@@ -85,7 +85,7 @@ var/bomb_set
 
 	if(extended)
 		if(istype(O, /obj/item/disk/nuclear))
-			usr.drop_item()
+			user.drop_item()
 			O.loc = src
 			auth = O
 			add_fingerprint(user)
@@ -392,13 +392,13 @@ var/bomb_set
 		ticker.station_explosion_cinematic(off_station,null)
 		if(ticker.mode)
 			ticker.mode.explosion_in_progress = 0
-			to_world("<B>The station was destoyed by the nuclear blast!</B>")
+			to_world(span_boldannounce("The station was destoyed by the nuclear blast!"))
 
 			ticker.mode.station_was_nuked = (off_station<2)	//offstation==1 is a draw. the station becomes irradiated and needs to be evacuated.
 															//kinda shit but I couldn't  get permission to do what I wanted to do.
 
 			if(!ticker.mode.check_finished())//If the mode does not deal with the nuke going off so just reboot because everyone is stuck as is
-				to_world("<B>Resetting in 30 seconds!</B>")
+				to_world(span_boldannounce("Resetting in 30 seconds!"))
 
 				feedback_set_details("end_error","nuke - unhandled ending")
 

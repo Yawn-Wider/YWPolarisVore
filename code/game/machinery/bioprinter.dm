@@ -150,7 +150,7 @@
 	if(anomalous_organs)
 		possible_list |= anomalous_products
 
-	var/choice = tgui_input_list(usr, "What would you like to print?", "Print Choice", possible_list)
+	var/choice = tgui_input_list(user, "What would you like to print?", "Print Choice", possible_list)
 
 	if(!choice || printing || (stat & (BROKEN|NOPOWER)))
 		return
@@ -164,7 +164,7 @@
 	printing = 1
 	update_icon()
 
-	visible_message("<b>\The [src]</b> begins churning.")
+	visible_message(span_infoplain(span_bold("\The [src]") + " begins churning."))
 
 	sleep(print_delay)
 
@@ -212,7 +212,7 @@
 /obj/machinery/organ_printer/proc/can_print(var/choice, var/masscount = 0)
 	var/biomass = get_biomass_volume()
 	if(biomass < masscount)
-		visible_message("<b>\The [src]</b> displays a warning: 'Not enough biomass. [biomass] stored and [masscount] needed.'")
+		visible_message(span_infoplain(span_bold("\The [src]") + " displays a warning: 'Not enough biomass. [biomass] stored and [masscount] needed.'"))
 		return 0
 
 	if(!loaded_dna || !loaded_dna["donor"])

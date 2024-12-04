@@ -60,7 +60,7 @@
 	data["bloodsamp_desc"] = (bloodsamp ? (bloodsamp.desc ? bloodsamp.desc : "No information on record.") : "")
 	return data
 
-/obj/machinery/dnaforensics/tgui_act(action, list/params)
+/obj/machinery/dnaforensics/tgui_act(action, list/params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -77,10 +77,10 @@
 				if(bloodsamp)
 					scanner_progress = 0
 					scanning = TRUE
-					to_chat(usr, span_notice("Scan initiated."))
+					to_chat(ui.user, span_notice("Scan initiated."))
 					update_icon()
 				else
-					to_chat(usr, span_warning("Insert an item to scan."))
+					to_chat(ui.user, span_warning("Insert an item to scan."))
 			. = TRUE
 
 		if("ejectItem")
@@ -121,8 +121,8 @@
 				data += "<font color='blue'>Blood type: [bloodsamp.dna[blood]]<br>\nDNA: [blood]<br><br></font>"
 		else
 			data += "No DNA found.<br>"
-		P.info = "<b>[src] analysis report #[report_num]</b><br>"
-		P.info += "<b>Scanned item:</b><br>[bloodsamp.name]<br>[bloodsamp.desc]<br><br>" + data
+		P.info = span_bold("[src] analysis report #[report_num]") + "<br>"
+		P.info += span_bold("Scanned item:") + "<br>[bloodsamp.name]<br>[bloodsamp.desc]<br><br>" + data
 		P.forceMove(loc)
 		P.update_icon()
 		scanning = FALSE

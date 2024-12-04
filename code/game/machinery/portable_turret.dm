@@ -443,7 +443,7 @@
 /obj/machinery/porta_turret/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
-	if(isLocked(usr))
+	if(isLocked(ui.user))
 		return TRUE
 	. = TRUE
 
@@ -564,7 +564,7 @@
 			take_damage(incoming_damage)
 			S.do_attack_animation(src)
 			return 1
-		visible_message("<b>\The [L]</b> bonks \the [src]'s casing!")
+		visible_message(span_infoplain(span_bold("\The [L]") + " bonks \the [src]'s casing!"))
 	return ..()
 
 /obj/machinery/porta_turret/emag_act(var/remaining_charges, var/mob/user)
@@ -572,7 +572,7 @@
 		//Emagging the turret makes it go bonkers and stun everyone. It also makes
 		//the turret shoot much, much faster.
 		to_chat(user, span_warning("You short out [src]'s threat assessment circuits."))
-		visible_message("[src] hums oddly...")
+		visible_message(span_info("[src] hums oddly..."))
 		emagged = TRUE
 		controllock = TRUE
 		enabled = FALSE //turns off the turret temporarily
@@ -1094,7 +1094,7 @@
 		var/t = sanitizeSafe(tgui_input_text(user, "Enter new turret name", name, finish_name, MAX_NAME_LEN), MAX_NAME_LEN)
 		if(!t)
 			return
-		if(!in_range(src, usr) && loc != usr)
+		if(!in_range(src, user) && loc != user)
 			return
 
 		finish_name = t

@@ -10,7 +10,7 @@
 	throwforce = 6
 	preserve_item = 1
 	w_class = ITEMSIZE_LARGE
-	action_button_name = "Remove/Replace Handset"
+	actions_types = list(/datum/action/item_action/remove_replace_handset)
 
 	var/obj/item/radio/bluespacehandset/linked/handset = /obj/item/radio/bluespacehandset/linked
 
@@ -23,7 +23,7 @@
 	. = ..()
 	QDEL_NULL(handset)
 
-/obj/item/bluespaceradio/ui_action_click()
+/obj/item/bluespaceradio/ui_action_click(mob/user, actiontype)
 	toggle_handset()
 
 /obj/item/bluespaceradio/attack_hand(var/mob/user)
@@ -64,7 +64,7 @@
 	if(!slot_check())
 		to_chat(user, span_warning("You need to equip [src] before taking out [handset]."))
 	else
-		if(!usr.put_in_hands(handset)) //Detach the handset into the user's hands
+		if(!user.put_in_hands(handset)) //Detach the handset into the user's hands
 			to_chat(user, span_warning("You need a free hand to hold the handset!"))
 		update_icon() //success
 

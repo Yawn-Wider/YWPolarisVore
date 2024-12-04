@@ -46,7 +46,7 @@
 
 /obj/item/tool/wirecutters/attack(mob/living/carbon/C as mob, mob/user as mob)
 	if(istype(C) && user.a_intent == I_HELP && (C.handcuffed) && (istype(C.handcuffed, /obj/item/handcuffs/cable)))
-		usr.visible_message("\The [usr] cuts \the [C]'s restraints with \the [src]!",\
+		user.visible_message("\The [user] cuts \the [C]'s restraints with \the [src]!",\
 		"You cut \the [C]'s restraints with \the [src]!",\
 		"You hear cable being cut.")
 		C.handcuffed = null
@@ -82,13 +82,13 @@
 
 /obj/item/tool/wirecutters/cyborg
 	name = "wirecutters"
-	desc = "This cuts wires.  With science."
+	desc = "This cuts wires. With science."
 	usesound = 'sound/items/jaws_cut.ogg'
 	toolspeed = 0.5
 
 /obj/item/tool/wirecutters/hybrid
 	name = "strange wirecutters"
-	desc = "This cuts wires.  With <span class='alien'>Science!</span>"
+	desc = "This cuts wires. With " + span_purple("Science!")
 	icon_state = "hybcutters"
 	w_class = ITEMSIZE_NORMAL
 	origin_tech = list(TECH_MATERIAL = 3, TECH_ENGINEERING = 3, TECH_PHORON = 2)

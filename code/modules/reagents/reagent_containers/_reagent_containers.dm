@@ -48,6 +48,9 @@
 	if(!istype(target))
 		return 0
 
+	if(target.open_top)
+		return 0
+
 	if(!target.reagents || !target.reagents.total_volume)
 		to_chat(user, span_notice("[target] is empty."))
 		return 1
@@ -74,7 +77,7 @@
 
 	var/contained = reagentlist()
 	add_attack_logs(user,target,"Splashed with [src.name] containing [contained]")
-	user.visible_message(span_danger("[target] has been splashed with something by [user]!"), "<span class = 'notice'>You splash the solution onto [target].</span>")
+	user.visible_message(span_danger("[target] has been splashed with something by [user]!"), span_notice("You splash the solution onto [target]."))
 	reagents.splash(target, reagents.total_volume)
 	return 1
 

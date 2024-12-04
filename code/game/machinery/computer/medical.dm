@@ -172,8 +172,10 @@
 					medical["empty"] = 1
 			if(MED_DATA_V_DATA)
 				data["virus"] = list()
-				for(var/ID in virusDB)
-					var/datum/data/record/v = virusDB[ID]
+				for(var/datum/disease/D in active_diseases)
+					if(!D.discovered)
+						continue
+					var/datum/data/record/v = active_diseases[D]
 					data["virus"] += list(list("name" = v.fields["name"], "D" = "\ref[v]"))
 			if(MED_DATA_MEDBOT)
 				data["medbots"] = list()
@@ -200,7 +202,7 @@
 	data["modal"] = tgui_modal_data(src)
 	return data
 
-/obj/machinery/computer/med_data/tgui_act(action, params)
+/obj/machinery/computer/med_data/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -219,13 +221,13 @@
 		if("scan")
 			if(scan)
 				scan.forceMove(loc)
-				if(ishuman(usr) && !usr.get_active_hand())
-					usr.put_in_hands(scan)
+				if(ishuman(ui.user) && !ui.user.get_active_hand())
+					ui.user.put_in_hands(scan)
 				scan = null
 			else
-				var/obj/item/I = usr.get_active_hand()
+				var/obj/item/I = ui.user.get_active_hand()
 				if(istype(I, /obj/item/card/id))
-					usr.drop_item()
+					ui.user.drop_item()
 					I.forceMove(src)
 					scan = I
 		if("login")
@@ -234,12 +236,12 @@
 				if(check_access(scan))
 					authenticated = scan.registered_name
 					rank = scan.assignment
-			else if(login_type == LOGIN_TYPE_AI && isAI(usr))
-				authenticated = usr.name
+			else if(login_type == LOGIN_TYPE_AI && isAI(ui.user))
+				authenticated = ui.user.name
 				rank = JOB_AI
-			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(usr))
-				authenticated = usr.name
-				var/mob/living/silicon/robot/R = usr
+			else if(login_type == LOGIN_TYPE_ROBOT && isrobot(ui.user))
+				authenticated = ui.user.name
+				var/mob/living/silicon/robot/R = ui.user
 				rank = "[R.modtype] [R.braintype]"
 			if(authenticated)
 				active1 = null
@@ -257,8 +259,8 @@
 			if("logout")
 				if(scan)
 					scan.forceMove(loc)
-					if(ishuman(usr) && !usr.get_active_hand())
-						usr.put_in_hands(scan)
+					if(ishuman(ui.user) && !ui.user.get_active_hand())
+						ui.user.put_in_hands(scan)
 					scan = null
 				authenticated = null
 				screen = null
@@ -419,7 +421,7 @@
   */
 /obj/machinery/computer/med_data/proc/print_finish()
 	var/obj/item/paper/P = new(loc)
-	P.info = "<center><b>Medical Record</b></center><br>"
+	P.info = "<center>" + span_bold("Medical Record") + "</center><br>"
 	if(istype(active1, /datum/data/record) && data_core.general.Find(active1))
 		P.info += {"Name: [active1.fields["name"]] ID: [active1.fields["id"]]
 		<br>\nSex: [active1.fields["sex"]]
@@ -429,7 +431,7 @@
 		<br>\nPhysical Status: [active1.fields["p_stat"]]
 		<br>\nMental Status: [active1.fields["m_stat"]]<br>"}
 	else
-		P.info += "<b>General Record Lost!</b><br>"
+		P.info += span_bold("General Record Lost!") + "<br>"
 	if(istype(active2, /datum/data/record) && data_core.medical.Find(active2))
 		P.info += {"<br>\n<center><b>Medical Data</b></center>
 		<br>\nGender Identity: [active2.fields["id_gender"]]
@@ -451,7 +453,7 @@
 		for(var/c in active2.fields["comments"])
 			P.info += "[c["header"]]<br>[c["text"]]<br>"
 	else
-		P.info += "<b>Medical Record Lost!</b><br>"
+		P.info += span_bold("Medical Record Lost!") + "<br>"
 	P.info += "</tt>"
 	P.name = "paper - 'Medical Record: [active1.fields["name"]]'"
 	printing = FALSE

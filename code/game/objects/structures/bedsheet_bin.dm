@@ -30,7 +30,7 @@ LINEN BINS
 
 /obj/item/bedsheet/attackby(obj/item/I, mob/user)
 	if(is_sharp(I))
-		user.visible_message("<b>\The [user]</b> begins cutting up [src] with [I].", span_notice("You begin cutting up [src] with [I]."))
+		user.visible_message(span_infoplain(span_bold("\The [user]") + " begins cutting up [src] with [I]."), span_notice("You begin cutting up [src] with [I]."))
 		if(do_after(user, 50))
 			to_chat(user, span_notice("You cut [src] into pieces!"))
 			for(var/i in 1 to rand(2,5))
@@ -38,6 +38,23 @@ LINEN BINS
 			qdel(src)
 		return
 	..()
+
+/obj/item/bedsheet/verb/turn_around()
+	set name = "Turn Around"
+	set category = "Object"
+	set src in oview(1)
+
+	if(!usr || !isturf(usr.loc))
+		return
+	if(usr.stat || usr.restrained())
+		return
+	if(ismouse(usr) || (isobserver(usr) && !CONFIG_GET(flag/ghost_interaction)))
+		return
+
+	if(dir >= 2)
+		src.set_dir(1)
+	else
+		src.set_dir(2)
 
 /obj/item/bedsheet/blue
 	icon_state = "sheetblue"

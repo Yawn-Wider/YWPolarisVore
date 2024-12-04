@@ -9,6 +9,8 @@ var/list/_human_default_emotes = list(
 	/decl/emote/audible/synth/dwoop,
 	/decl/emote/audible/synth/boop,
 	/decl/emote/audible/synth/robochirp,
+	/decl/emote/audible/synth/ding,
+	/decl/emote/audible/synth/microwave,
 	/decl/emote/visible/nod,
 	/decl/emote/visible/shake,
 	/decl/emote/visible/shiver,
@@ -339,7 +341,7 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/verb/pose()
 	set name = "Set Pose"
 	set desc = "Sets a description which will be shown when someone examines you."
-	set category = "IC"
+	set category = "IC.Settings"
 
 	var/datum/gender/T = gender_datums[get_visible_gender()]
 
@@ -348,11 +350,11 @@ var/list/_simple_mob_default_emotes = list(
 /mob/living/carbon/human/verb/set_flavor()
 	set name = "Set Flavour Text"
 	set desc = "Sets an extended description of your character's features."
-	set category = "IC"
+	set category = "IC.Settings"
 
 	var/HTML = "<body>"
 	HTML += "<tt><center>"
-	HTML += "<b>Update Flavour Text</b> <hr />"
+	HTML += span_bold("Update Flavour Text") + " <hr />"
 	HTML += "<br></center>"
 	HTML += "<a href='byond://?src=\ref[src];flavor_change=general'>General:</a> "
 	HTML += TextPreview(flavor_texts["general"])

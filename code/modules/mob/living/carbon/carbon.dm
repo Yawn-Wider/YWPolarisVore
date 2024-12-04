@@ -11,8 +11,6 @@
 /mob/living/carbon/Life()
 	..()
 
-	handle_viruses()
-
 	// Increase germ_level regularly
 	if(germ_level < GERM_LEVEL_AMBIENT && prob(30))	//if you're just standing there, you shouldn't get more germs beyond an ambient level
 		germ_level++
@@ -78,7 +76,7 @@
 		M.loc = src.loc
 		for(var/mob/N in viewers(src, null))
 			if(N.client)
-				N.show_message(span_red(text("<B>[M] bursts out of [src]!</B>")), 2)
+				N.show_message(span_bolddanger("[M] bursts out of [src]!"), 2)
 	..()
 
 /mob/living/carbon/attack_hand(mob/M as mob)
@@ -89,7 +87,7 @@
 		if (H.hand)
 			temp = H.organs_by_name["l_hand"]
 		if(temp && !temp.is_usable())
-			to_chat(H, span_red("You can't use your [temp.name]"))
+			to_chat(H, span_warning("You can't use your [temp.name]"))
 			return
 
 	return
@@ -106,7 +104,7 @@
 	var/weaken_dur = (rand(2,4)-severity)*species.emp_stun_mod //0-3 knockdown, on par with.. you get the idea
 	var/blind_dur = (rand(3,6)-severity)*species.emp_stun_mod //0-5 blind
 	if(species.emp_sensitivity) //receive warning message and basic effects
-		to_chat(src, span_danger("<B>*BZZZT*</B>"))
+		to_chat(src, span_bolddanger("*BZZZT*"))
 		switch(severity)
 			if(1)
 				to_chat(src, span_danger("DANGER: Extreme EM flux detected!"))
@@ -194,7 +192,7 @@
 	return shock_damage
 
 /mob/living/carbon/proc/help_shake_act(mob/living/carbon/M)
-	if (src.health >= config.health_threshold_crit)
+	if (src.health >= CONFIG_GET(number/health_threshold_crit))
 		if(src == M && istype(src, /mob/living/carbon/human))
 			var/mob/living/carbon/human/H = src
 			var/datum/gender/T = gender_datums[H.get_visible_gender()]
@@ -243,9 +241,9 @@
 				if(!org.is_usable() || org.is_dislocated())
 					status += "dangling uselessly"
 				if(status.len)
-					src.show_message("My [org.name] is <span class='warning'> [english_list(status)].</span>",1)
+					src.show_message("My [org.name] is " + span_warning("[english_list(status)]."),1)
 				else
-					src.show_message("My [org.name] is <span class='notice'> OK.</span>",1)
+					src.show_message("My [org.name] is " + span_notice("OK."),1)
 
 			if((SKELETON in H.mutations) && (!H.w_uniform) && (!H.wear_suit))
 				H.play_xylophone()
@@ -398,7 +396,10 @@
 		return
 	..()
 	if(istype(A, /mob/living/carbon) && prob(10))
-		spread_disease_to(A, "Contact")
+		var/mob/living/carbon/human/H = A
+		for(var/datum/disease/D in GetViruses())
+			if(D.spread_flags & CONTACT_GENERAL)
+				H.ContractDisease(D)
 
 /mob/living/carbon/cannot_use_vents()
 	return
@@ -455,7 +456,7 @@
 		throw_alert("handcuffed", /obj/screen/alert/restrained/handcuffed, new_master = handcuffed)
 	else
 		clear_alert("handcuffed")
-	update_action_buttons() //some of our action buttons might be unusable when we're handcuffed.
+	update_mob_action_buttons() //some of our action buttons might be unusable when we're handcuffed.
 	update_inv_handcuffed()
 
 // Clears blood overlays
@@ -542,3 +543,12 @@
 	if(allergen_type in species.food_preference)
 		return species.food_preference_bonus
 	return 0
+
+/mob/living/carbon/handle_diseases()
+	for(var/thing in GetViruses())
+		var/datum/disease/D = thing
+		if(prob(D.infectivity))
+			D.spread()
+
+		if(stat != DEAD || D.allow_dead)
+			D.stage_act()

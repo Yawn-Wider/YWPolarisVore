@@ -53,6 +53,8 @@
 	var/bulb_shards = 0
 	// when we get this many shards, we get a free bulb.
 	var/shards_required = 4
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/lightreplacer/New()
 	failmsg = "The [name]'s refill light blinks red."
@@ -132,14 +134,14 @@
 		var/mob/living/silicon/robot/R = user
 		if(R.emagged)
 			src.Emag()
-			to_chat(usr, You short circuit the [src].")
+			to_chat(user, You short circuit the [src].")
 			return
 	*/
-	to_chat(usr, "It has [uses] lights remaining.")
-	var/new_color = input(usr, "Choose a color to set the light to! (Default is [LIGHT_COLOR_INCANDESCENT_TUBE])", "", selected_color) as color|null
+	to_chat(user, "It has [uses] lights remaining.")
+	var/new_color = input(user, "Choose a color to set the light to! (Default is [LIGHT_COLOR_INCANDESCENT_TUBE])", "", selected_color) as color|null
 	if(new_color)
 		selected_color = new_color
-		to_chat(usr, "The light color has been changed.")
+		to_chat(user, "The light color has been changed.")
 
 /obj/item/lightreplacer/update_icon()
 	icon_state = "lightreplacer[emagged]"

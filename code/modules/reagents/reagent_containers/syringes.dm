@@ -32,7 +32,7 @@
 	var/used = FALSE
 	var/dirtiness = 0
 	var/list/targets
-	var/list/datum/disease2/disease/viruses
+	var/list/datum/disease/viruses
 	drop_sound = 'sound/items/drop/glass.ogg'
 	pickup_sound = 'sound/items/pickup/glass.ogg'
 
@@ -121,7 +121,7 @@
 						return
 
 					if(T.isSynthetic())
-						to_chat(user, "<span class = 'warning'>You can't draw blood from a synthetic!</span>")
+						to_chat(user, span_warning("You can't draw blood from a synthetic!"))
 						return
 
 					if(drawing)
@@ -276,7 +276,7 @@
 
 		if (target != user && H.getarmor(target_zone, "melee") > 5 && prob(50))
 			for(var/mob/O in viewers(world.view, user))
-				O.show_message(span_red(text("<B>[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!</B>")), 1)
+				O.show_message(span_bolddanger("[user] tries to stab [target] in \the [hit_area] with [src.name], but the attack is deflected by armor!"), 1)
 			user.remove_from_mob(src)
 			qdel(src)
 
@@ -402,10 +402,10 @@
 	targets |= hash
 
 	//Grab any viruses they have
-	if(iscarbon(target) && LAZYLEN(target.virus2.len))
+	if(iscarbon(target) && LAZYLEN(target.viruses.len))
 		LAZYINITLIST(viruses)
-		var/datum/disease2/disease/virus = pick(target.virus2.len)
-		viruses[hash] = virus.getcopy()
+		var/datum/disease/virus = pick(target.viruses.len)
+		viruses[hash] = virus.Copy()
 
 	//Dirtiness should be very low if you're the first injectee. If you're spam-injecting 4 people in a row around you though,
 	//This gives the last one a 30% chance of infection.
@@ -421,8 +421,8 @@
 	if(LAZYLEN(viruses) && prob(75))
 		var/old_hash = pick(viruses)
 		if(hash != old_hash) //Same virus you already had?
-			var/datum/disease2/disease/virus = viruses[old_hash]
-			infect_virus2(target,virus.getcopy())
+			var/datum/disease/virus = viruses[old_hash]
+			target.ContractDisease(virus)
 
 	if(!used)
 		START_PROCESSING(SSobj, src)

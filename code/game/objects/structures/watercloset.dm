@@ -18,8 +18,8 @@
 
 /obj/structure/toilet/attack_hand(mob/living/user as mob)
 	if(swirlie)
-		usr.setClickCooldown(user.get_attack_speed())
-		usr.visible_message(span_danger("[user] slams the toilet seat onto [swirlie.name]'s head!"), span_notice("You slam the toilet seat onto [swirlie.name]'s head!"), "You hear reverberating porcelain.")
+		user.setClickCooldown(user.get_attack_speed())
+		user.visible_message(span_danger("[user] slams the toilet seat onto [swirlie.name]'s head!"), span_notice("You slam the toilet seat onto [swirlie.name]'s head!"), "You hear reverberating porcelain.")
 		swirlie.adjustBruteLoss(5)
 		return
 
@@ -519,13 +519,13 @@
 	..()
 	if(!istype(thing) || !thing.is_open_container())
 		return ..()
-	if(!usr.Adjacent(src))
+	if(!user.Adjacent(src))
 		return ..()
 	if(!thing.reagents || thing.reagents.total_volume == 0)
-		to_chat(usr, span_warning("\The [thing] is empty."))
+		to_chat(user, span_warning("\The [thing] is empty."))
 		return
 	// Clear the vessel.
-	visible_message("<b>\The [usr]</b> tips the contents of \the [thing] into \the [src].")
+	visible_message(span_infoplain(span_bold("\The [user]") + " tips the contents of \the [thing] into \the [src]."))
 	thing.reagents.clear_reagents()
 	thing.update_icon()
 
@@ -549,19 +549,32 @@
 		to_chat(user, span_warning("Someone's already washing here."))
 		return
 
-	to_chat(usr, span_notice("You start washing your hands."))
+	to_chat(user, span_notice("You start washing your hands."))
 	playsound(src, 'sound/effects/sink_long.ogg', 75, 1)
 
 	busy = 1
 	if(!do_after(user, 40, src))
 		busy = 0
-		to_chat(usr, span_notice("You stop washing your hands."))
+		to_chat(user, span_notice("You stop washing your hands."))
 		return
 	busy = 0
 
-	user.clean_blood()
 	if(ishuman(user))
-		user:update_inv_gloves()
+		var/mob/living/carbon/human/H = user
+		H.gunshot_residue = null
+		if(H.gloves)
+			H.gloves.clean_blood()
+			H.update_inv_gloves()
+			H.gloves.germ_level = 0
+		else
+			if(H.r_hand)
+				H.r_hand.clean_blood()
+			if(H.l_hand)
+				H.l_hand.clean_blood()
+			H.bloody_hands = 0
+			H.germ_level = 0
+	else
+		user.clean_blood()
 	for(var/mob/V in viewers(src, null))
 		V.show_message(span_notice("[user] washes their hands using \the [src]."))
 
@@ -607,12 +620,12 @@
 	var/obj/item/I = O
 	if(!I || !istype(I,/obj/item)) return
 
-	to_chat(usr, span_notice("You start washing \the [I]."))
+	to_chat(user, span_notice("You start washing \the [I]."))
 
 	busy = 1
 	if(!do_after(user, 40, src))
 		busy = 0
-		to_chat(usr, span_notice("You stop washing \the [I]."))
+		to_chat(user, span_notice("You stop washing \the [I]."))
 		return
 	busy = 0
 

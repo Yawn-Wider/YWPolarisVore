@@ -326,6 +326,13 @@
 	drop_sound = 'sound/items/drop/gloves.ogg'
 	pickup_sound = 'sound/items/pickup/gloves.ogg'
 
+	valid_accessory_slots = (\
+		ACCESSORY_SLOT_RING\
+		|ACCESSORY_SLOT_WRIST)
+	restricted_accessory_slots = (\
+		ACCESSORY_SLOT_RING\
+		|ACCESSORY_SLOT_WRIST)
+
 /obj/item/clothing/proc/set_clothing_index()
 	return
 
@@ -422,8 +429,6 @@
 	if(special_attack_type && ispath(special_attack_type))
 		special_attack = new special_attack_type
 
-
-
 /////////////////////////////////////////////////////////////////////
 //Rings
 
@@ -485,7 +490,7 @@
 		update_light()
 
 	update_icon(user)
-	user.update_action_buttons()
+	user.update_mob_action_buttons()
 
 /obj/item/clothing/head/attack_ai(var/mob/user)
 	if(!mob_wear_hat(user))
@@ -631,7 +636,7 @@
 /obj/item/clothing/shoes/proc/draw_knife()
 	set name = "Draw Boot Knife"
 	set desc = "Pull out your boot knife."
-	set category = "IC"
+	set category = "IC.Game"
 	set src in usr
 
 	if(usr.stat || usr.restrained() || usr.incapacitated())
@@ -671,7 +676,7 @@
 		user.unEquip(I)
 		I.forceMove(src)
 		holding = I
-		user.visible_message("<b>\The [user]</b> shoves \the [I] into \the [src].")
+		user.visible_message(span_infoplain(span_bold("\The [user]") + " shoves \the [I] into \the [src]."))
 		verbs |= /obj/item/clothing/shoes/proc/draw_knife
 		update_icon()
 	else
@@ -851,7 +856,9 @@
 		|ACCESSORY_SLOT_TIE\
 		|ACCESSORY_SLOT_RANK\
 		|ACCESSORY_SLOT_DEPT\
-		|ACCESSORY_SLOT_OVER)
+		|ACCESSORY_SLOT_OVER\
+		|ACCESSORY_SLOT_RING\
+		|ACCESSORY_SLOT_WRIST)
 	restricted_accessory_slots = (\
 		ACCESSORY_SLOT_UTILITY\
 		|ACCESSORY_SLOT_WEAPON\

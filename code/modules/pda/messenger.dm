@@ -86,7 +86,7 @@
 			active_conversation = null
 		if("Message")
 			var/obj/item/pda/P = locate(params["target"])
-			create_message(usr, P)
+			create_message(ui.user, P)
 			if(params["target"] in conversations)            // Need to make sure the message went through, if not welp.
 				active_conversation = params["target"]
 		if("Select Conversation")
@@ -100,12 +100,12 @@
 
 			var/obj/item/pda/P = locate(params["target"])
 			if(!P)
-				to_chat(usr, "PDA not found.")
+				to_chat(ui.user, "PDA not found.")
 
 			var/datum/data/pda/messenger_plugin/plugin = locate(params["plugin"])
 			if(plugin && (plugin in pda.cartridge.messenger_plugins))
 				plugin.messenger = src
-				plugin.user_act(usr, P)
+				plugin.user_act(ui.user, P)
 		if("Back")
 			active_conversation = null
 
@@ -142,7 +142,7 @@
 	if(last_text && world.time < last_text + 5)
 		return
 
-	if(!pda.can_use(usr))
+	if(!pda.can_use(U))
 		return
 
 	last_text = world.time
@@ -175,13 +175,13 @@
 			to_chat(U, "ERROR: Cannot reach recipient.")
 			return
 		useMS.send_pda_message("[P.owner]","[pda.owner]","[t]")
-		pda.investigate_log(span_game(span_say("PDA Message - <span class='name'>[U.key] - [pda.owner]</span> -> <span class='name'>[P.owner]</span>: <span class='message'>[t]</span>")), "pda")
+		pda.investigate_log(span_game(span_say("PDA Message - " + span_name("[U.key] - [pda.owner]") + " -> " + span_name("[P.owner]") + ": " + span_message("[t]"))), "pda")
 
 		receive_message(list("sent" = 1, "owner" = "[P.owner]", "job" = "[P.ownjob]", "message" = "[t]", "target" = "\ref[P]"), "\ref[P]")
 		PM.receive_message(list("sent" = 0, "owner" = "[pda.owner]", "job" = "[pda.ownjob]", "message" = "[t]", "target" = "\ref[pda]"), "\ref[pda]")
 
 		SStgui.update_user_uis(U, P) // Update the sending user's PDA UI so that they can see the new message
-		log_pda("(PDA: [src.name]) sent \"[t]\" to [P.name]", usr)
+		log_pda("(PDA: [src.name]) sent \"[t]\" to [P.name]", U)
 		to_chat(U, "[icon2html(pda,U.client)] <b>Sent message to [P.owner] ([P.ownjob]), </b>\"[t]\"")
 	else
 		to_chat(U, span_notice("ERROR: Messaging server is not responding."))
@@ -223,7 +223,7 @@
 		var/owner = data["owner"]
 		var/job = data["job"]
 		var/message = data["message"]
-		notify("<b>Message from [owner] ([job]), </b>\"[message]\" (<a href='?src=\ref[src];choice=Message;target=[ref]'>Reply</a>)")
+		notify(span_bold("Message from [owner] ([job]), ") + "\"[message]\" (<a href='?src=\ref[src];choice=Message;target=[ref]'>Reply</a>)")
 
 /datum/data/pda/app/messenger/multicast
 /datum/data/pda/app/messenger/multicast/receive_message(list/data, ref)

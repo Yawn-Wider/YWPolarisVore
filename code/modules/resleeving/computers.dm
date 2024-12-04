@@ -230,7 +230,7 @@
 
 	return data
 
-/obj/machinery/computer/transhuman/resleeving/tgui_act(action, params)
+/obj/machinery/computer/transhuman/resleeving/tgui_act(action, params, datum/tgui/ui)
 	. = ..()
 	if(.)
 		return
@@ -338,7 +338,7 @@
 							return
 
 						//Disabled in config.
-						else if(!config.revival_cloning)
+						else if(!CONFIG_GET(flag/revival_cloning))
 							set_temp("Error: Unable to initiate growing cycle.", "danger")
 							active_br = null
 							return
@@ -391,7 +391,7 @@
 								subtargets += H
 							if(subtargets.len)
 								var/oc_sanity = sleever.occupant
-								override = tgui_input_list(usr,"Multiple bodies detected. Select target for resleeving of [active_mr.mindname] manually. Sleeving of primary body is unsafe with sub-contents, and is not listed.", "Resleeving Target", subtargets)
+								override = tgui_input_list(ui.user,"Multiple bodies detected. Select target for resleeving of [active_mr.mindname] manually. Sleeving of primary body is unsafe with sub-contents, and is not listed.", "Resleeving Target", subtargets)
 								if(!override || oc_sanity != sleever.occupant || !(override in sleever.occupant))
 									set_temp("Error: Target selection aborted.", "danger")
 									active_mr = null

@@ -101,13 +101,18 @@
 
 /obj/structure/ladder/proc/climbLadder(var/mob/M, var/obj/target_ladder)
 	var/direction = (target_ladder == target_up ? "up" : "down")
-	M.visible_message("<b>\The [M]</b> begins climbing [direction] \the [src]!",
-		"You begin climbing [direction] \the [src]!",
-		"You hear the grunting and clanging of a metal ladder being used.")
+	M.visible_message(span_infoplain(span_bold("\The [M]") + " begins climbing [direction] \the [src]!"),
+		span_info("You begin climbing [direction] \the [src]!"),
+		span_info("You hear the grunting and clanging of a metal ladder being used."))
 
 	target_ladder.audible_message(span_notice("You hear something coming [direction] \the [src]"), runemessage = "clank clank")
 
-	if(do_after(M, climb_time, src))
+	var/climb_modifier = 1
+	if(istype(M, /mob/living/carbon/human))
+		var/mob/living/carbon/human/MS = M
+		climb_modifier = MS.species.climb_mult
+
+	if(do_after(M, (climb_time * climb_modifier), src))
 		var/turf/T = get_turf(target_ladder)
 		for(var/atom/A in T)
 			if(!A.CanPass(M, M.loc, 1.5, 0))

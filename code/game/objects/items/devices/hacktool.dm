@@ -1,14 +1,16 @@
 /obj/item/multitool/hacktool
 	var/is_hacking = 0
 	var/max_known_targets
-	var/hackspeed = 1
-	var/max_level = 4		//what's the max door security_level we can handle?
+	var/hackspeed = 1		//time taken to hack: lower is faster
+	var/max_level = 4		//what's the max door security_level we can handle? default is 1, med/eng/atmos are 1.5, sec/sci are 2, command is 3, vault is 5
 	var/full_override = FALSE	//can we override door bolts too? defaults to false for event/safety reasons
 
 	var/in_hack_mode = 0
 	var/list/known_targets
 	var/list/supported_types
 	var/datum/tgui_state/default/must_hack/hack_state
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/multitool/hacktool/override
 	hackspeed = 0.75
@@ -71,7 +73,7 @@
 		to_chat(user, span_warning("You are already hacking!"))
 		return 0
 	if(!is_type_in_list(target, supported_types))
-		to_chat(user, "[icon2html(src, user.client)] <span class='warning'>Unable to hack this target, invalid target type.</span>")
+		to_chat(user, "[icon2html(src, user.client)] " + span_warning("Unable to hack this target, invalid target type."))
 		return 0
 
 	if(istype(target, /obj/structure/closet/crate/secure))
@@ -101,7 +103,7 @@
 	if(istype(target, /obj/machinery/door/airlock))
 		var/obj/machinery/door/airlock/D = target
 		if(D.security_level > max_level)
-			to_chat(user, "[icon2html(src, user.client)] <span class='warning'>Target's electronic security is too complex.</span>")
+			to_chat(user, "[icon2html(src, user.client)] " + span_warning("Target's electronic security is too complex."))
 			return 0
 
 		var/found = known_targets.Find(D)
@@ -153,3 +155,16 @@
 	if(!hacktool || !hacktool.in_hack_mode || !(src_object in hacktool.known_targets))
 		return STATUS_CLOSE
 	return ..()
+
+/obj/item/multitool/hacktool/modified
+	name = "modified multitool"
+	desc = "Used for pulsing wires to test which to cut. Not recommended by doctors. This ones seems a bit larger and heavier than the usual model, for some reason. Maybe it's an older version?"
+	description_info = "You can use this on airlocks or APCs to try to hack them without cutting wires."
+	icon_state = "multitool_modified"
+
+/obj/item/multitool/hacktool/obvious
+	name = "non-standard multitool"
+	desc = "Used for pulsing wires to test which to cut. Not recommended by doctors. This one doesn't look like the usual model at all!"
+	description_info = "You can use this on airlocks or APCs to try to hack them without cutting wires."
+	icon_state = "multitool_suspicious"
+	in_hack_mode = 1	//start in hackmode

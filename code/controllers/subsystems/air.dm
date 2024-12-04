@@ -100,6 +100,7 @@ SUBSYSTEM_DEF(air)
 	var/list/active_fire_zones = list()
 	var/list/active_hotspots = list()
 	var/list/active_edges = list()
+	var/list/zones_planet_temperature_to_update = list() // YW Addition - zones_planet_temperature_to_update
 
 	var/active_zones = 0
 	var/current_cycle = 0
@@ -441,11 +442,13 @@ Total Unsimulated Turfs: [world.maxx*world.maxy*world.maxz - simulated_turf_coun
 /datum/controller/subsystem/air/proc/add_zone(zone/z)
 	zones.Add(z)
 	z.name = "Zone [next_id++]"
+	zones_planet_temperature_to_update.Add(z) //YW Addition - planet temp
 	mark_zone_update(z)
 
 /datum/controller/subsystem/air/proc/remove_zone(zone/z)
 	zones.Remove(z)
 	zones_to_update.Remove(z)
+	zones_planet_temperature_to_update.Remove(z) //YW Addition - planet temp
 
 /datum/controller/subsystem/air/proc/air_blocked(turf/A, turf/B)
 	#ifdef ZASDBG

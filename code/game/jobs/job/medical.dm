@@ -245,7 +245,7 @@
 	outfit_type = /decl/hierarchy/outfit/job/medical/paramedic
 	job_description = "A " + JOB_PARAMEDIC + " is primarily concerned with the recovery of patients who are unable to make it to the Medical Department on their own. \
 						They may also be called upon to keep patients stable when Medical is busy or understaffed."
-	alt_titles = list(JOB_ALT_EMERGENCY_MEDICAL_TECHNICIAN = /datum/alt_title/emt, JOB_ALT_MEDICAL_RESPONDER = /datum/alt_title/medical_responder, JOB_ALT_SEARCH_AND_RESCUE = /datum/alt_title/sar)
+	alt_titles = list(JOB_ALT_EMERGENCY_MEDICAL_TECHNICIAN = /datum/alt_title/emt, JOB_ALT_MEDICAL_RESPONDER = /datum/alt_title/medical_responder) // YW Edit: removes search and rescue
 	banned_job_species = list(SPECIES_DIONA)
 
 	min_age_by_species = list(SPECIES_PROMETHEAN = 2)

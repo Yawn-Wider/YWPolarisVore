@@ -81,6 +81,7 @@
 					  JOB_ALT_RESEARCH_INTERN = /datum/alt_title/intern_sci,
 					  JOB_ALT_SECURITY_CADET = /datum/alt_title/intern_sec,
 					  JOB_ALT_JR_CARGO_TECH = /datum/alt_title/intern_crg,
+					  "Jr. Explorer" = /datum/alt_title/intern_exp, // YW EDIT
 					  JOB_ALT_SERVER = /datum/alt_title/server,
 					  JOB_ALT_ASSISTANT = /datum/alt_title/assistant)
 	job_description = "An " + JOB_INTERN + " does whatever is requested of them, often doing so in process of learning \
@@ -117,13 +118,13 @@
 	title_blurb = "A " + JOB_ALT_JR_CARGO_TECH + " attempts to provide whatever the Cargo department needs. They are not proper Cargo Technicians, and are \
 					often in training to become a " + JOB_CARGO_TECHNICIAN + ". A " + JOB_ALT_JR_CARGO_TECH + " has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/cargo
-/*
+// YW Changes start un-comment
 /datum/alt_title/intern_exp
 	title = "Jr. " + JOB_EXPLORER + ""
 	title_blurb = "A Jr. " + JOB_EXPLORER + " attempts to provide whatever the Exploration department needs. They are not proper " + JOB_EXPLORER + "s, and are \
 					often in training to become an " + JOB_EXPLORER + ". A Jr. " + JOB_EXPLORER + " has no real authority."
 	title_outfit = /decl/hierarchy/outfit/job/assistant/explorer
-*/
+// YW Changes end un-comment
 /datum/alt_title/server
 	title = JOB_ALT_SERVER
 	title_blurb = "A " + JOB_ALT_SERVER + " helps out kitchen and diner staff with various tasks, primarily food delivery. A " + JOB_ALT_SERVER + " has no real authority."
@@ -156,7 +157,8 @@
 	job_description = "A " + JOB_ALT_VISITOR + " is just there to visit the place. They have no real authority or responsibility."
 	timeoff_factor = 0
 	requestable = FALSE
-	alt_titles = list("Guest" = /datum/alt_title/guest, "Traveler" = /datum/alt_title/traveler)
+	alt_titles = list("Guest" = /datum/alt_title/guest, "Traveler" = /datum/alt_title/traveler,
+	"Serenity Resident" = /datum/alt_title/resident) //YW Addition - Resident
 
 /datum/job/assistant/New()
 	..()

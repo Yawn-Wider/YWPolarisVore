@@ -7,7 +7,7 @@ var/datum/controller/transfer_controller/transfer_controller
 	var/shift_last_vote = 0 //VOREStation Edit
 /datum/controller/transfer_controller/New()
 	timerbuffer = CONFIG_GET(number/vote_autotransfer_initial)
-	shift_hard_end = CONFIG_GET(number/vote_autotransfer_initial) + (CONFIG_GET(number/vote_autotransfer_interval) * CONFIG_GET(number/vote_autotransfer_times)) //YW Edit: made that '1' a config //VOREStation Edit //Change this "1" to how many extend votes you want there to be.
+	shift_hard_end = CONFIG_GET(number/vote_autotransfer_initial) + (CONFIG_GET(number/vote_autotransfer_interval) * CONFIG_GET(number/vote_autotransfer_amount)) //YW Edit: made that '1' a config //VOREStation Edit //Change this "1" to how many extend votes you want there to be.
 	shift_last_vote = shift_hard_end - CONFIG_GET(number/vote_autotransfer_interval) //VOREStation Edit
 	START_PROCESSING(SSprocessing, src)
 

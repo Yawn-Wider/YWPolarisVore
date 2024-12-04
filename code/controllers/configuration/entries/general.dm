@@ -116,6 +116,11 @@
 	default = 36000
 	min_val = 0
 
+/// number of extension votes before the final one
+/datum/config_entry/number/vote_autotransfer_amount
+	default = 1
+	min_val = 0
+
 ///Length of time before round start when autogamemode vote is called (in seconds, default 100).
 /datum/config_entry/number/vote_autogamemode_timeleft
 	default = 100

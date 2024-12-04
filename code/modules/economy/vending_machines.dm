@@ -717,8 +717,8 @@
 					/obj/item/circuitboard/sleeper,
 					/obj/item/circuitboard/dna_analyzer,
 					/obj/item/clothing/glasses/omnihud/eng = 6)
-	contraband = list(/obj/item/cell/potato = 3,
-						/obj/item/rms = 5)
+	contraband = list(/obj/item/cell/potato = 3
+					//YW Removal:	/obj/item/rms = 5)
 	premium = list(/obj/item/storage/belt/utility = 3)
 	product_records = list()
 	req_log_access = access_ce

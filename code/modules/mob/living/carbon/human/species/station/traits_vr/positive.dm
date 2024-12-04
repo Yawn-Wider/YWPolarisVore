@@ -261,7 +261,7 @@
 
 /datum/trait/positive/bloodsucker_plus/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
-	H.verbs |= /mob/living/carbon/human/proc/bloodsuck
+	add_verb(H, /mob/living/carbon/human/proc/bloodsuck)
 
 /datum/trait/positive/sonar
 	name="Perceptive Hearing"
@@ -269,7 +269,7 @@
 	cost = 1
 /datum/trait/positive/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
-	H.verbs |= /mob/living/carbon/human/proc/sonar_ping
+	add_verb(H, /mob/living/carbon/human/proc/sonar_ping
 
 
 /datum/trait/positive/coldadapt

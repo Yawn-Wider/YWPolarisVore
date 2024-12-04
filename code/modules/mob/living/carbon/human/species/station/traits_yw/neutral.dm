@@ -63,6 +63,6 @@
 
 /datum/trait/neutral/hydra_heads/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..()
-	H.verbs |= /mob/living/carbon/human/proc/hydra_activate
-	H.verbs |= /mob/living/carbon/human/proc/hydra_reset
+	add_verb(H, /mob/living/carbon/human/proc/hydra_activate
+	add_verb(H, /mob/living/carbon/human/proc/hydra_reset
 //End hydra

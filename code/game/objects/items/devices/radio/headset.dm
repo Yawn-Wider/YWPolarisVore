@@ -524,13 +524,13 @@
 	icon_state = "pilot_headset_alt"
 
 /obj/item/radio/headset/explorer
-	name = "away team member's headset"
+	name = "explorer's headset" // YW EDIT
 	icon_state = "exp_headset"
 	adhoc_fallback = TRUE
 	ks2type = /obj/item/encryptionkey/explorer
 
 /obj/item/radio/headset/alt/explorer
-	name = "away team's bowman headset"
+	name = "explorer's bowman headset" // YW EDIT
 	icon_state = "exp_headset_alt"
 
 /obj/item/radio/headset/sar

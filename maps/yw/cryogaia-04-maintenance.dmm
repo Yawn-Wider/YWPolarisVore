@@ -3,7 +3,6 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/antibody_scanner,
 /obj/item/reagent_containers/spray/cleaner,
 /obj/effect/floor_decal/corner/lime,
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
@@ -4346,12 +4345,10 @@
 /area/crew_quarters/sleep/engi_wash)
 "cwj" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random,
-/obj/item/virusdish/random,
-/obj/item/virusdish/random,
 /obj/machinery/light{
 	dir = 8
 	},
+/obj/item/reagent_containers/glass/bottle/culture/flu,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "cwo" = (
@@ -5832,9 +5829,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/range)
 "doh" = (
-/obj/machinery/computer/diseasesplicer{
-	dir = 1
-	},
 /obj/structure/window/phoronreinforced,
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 4
@@ -5989,13 +5983,13 @@
 /turf/simulated/floor/wood,
 /area/crew_quarters/sleep/Dorm_1)
 "dsw" = (
-/obj/machinery/disease2/diseaseanalyser,
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 6
 	},
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 9
 	},
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "dsG" = (
@@ -15687,8 +15681,10 @@
 /turf/simulated/floor/tiled/techfloor,
 /area/tcommsat/entrance)
 "iuv" = (
-/obj/machinery/disease2/isolator,
 /obj/effect/floor_decal/corner/lime/full,
+/obj/structure/table/standard{
+	name = "plastic table frame"
+	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "iux" = (
@@ -16338,9 +16334,7 @@
 /area/maintenance/blueserg)
 "iIe" = (
 /obj/structure/closet/crate/freezer,
-/obj/item/virusdish/random,
-/obj/item/virusdish/random,
-/obj/item/virusdish/random,
+/obj/item/reagent_containers/glass/bottle/culture/cold,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "iIg" = (
@@ -24756,13 +24750,13 @@
 /turf/simulated/floor/water/indoors,
 /area/crew_quarters/kitchen/fish_farm)
 "mND" = (
-/obj/machinery/computer/centrifuge,
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 9
 	},
 /obj/effect/floor_decal/corner_techfloor_grid{
 	dir = 6
 	},
+/obj/machinery/computer/pandemic,
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)
 "mOm" = (
@@ -35885,9 +35879,11 @@
 /turf/simulated/floor,
 /area/maintenance/atmos_control)
 "sNA" = (
-/obj/machinery/disease2/incubator,
 /obj/effect/floor_decal/corner/lime/full{
 	dir = 8
+	},
+/obj/structure/table/standard{
+	name = "plastic table frame"
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/virology)

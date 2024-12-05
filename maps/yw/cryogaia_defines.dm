@@ -449,5 +449,5 @@
 /datum/map_template/common_lateload/away_aerostat
 	name = "Remmi Aerostat - Z1 Aerostat"
 	desc = "The Virgo 2 Aerostat away mission."
-	mappath = 'maps/expedition_vr/aerostat/aerostat.dmm'
+	mappath = "maps/expedition_vr/aerostat/aerostat.dmm"
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat

@@ -63,7 +63,7 @@
 /datum/map_template/common_lateload/away_aerostat_surface
 	name = "Remmi Aerostat - Z2 Surface"
 	desc = "The surface from the Virgo 2 Aerostat."
-	mappath = 'maps/expedition_vr/aerostat/surface_yw.dmm' //YW Edit - _yw surface
+	mappath = "maps/expedition_vr/aerostat/surface_yw.dmm" //YW Edit - _yw surface
 	associated_map_datum = /datum/map_z_level/common_lateload/away_aerostat_surface
 
 /datum/map_template/common_lateload/away_aerostat_surface/on_map_loaded(z)
@@ -85,7 +85,7 @@
 /datum/map_template/common_lateload/away_debrisfield
 	name = "Debris Field - Z1 Space"
 	desc = "The Virgo 3 Debris Field away mission."
-	mappath = 'maps/expedition_vr/space/debrisfield_yw.dmm' //YW Edit - _yw debris field
+	mappath = "maps/expedition_vr/space/debrisfield_yw.dmm" //YW Edit - _yw debris field
 	associated_map_datum = /datum/map_z_level/common_lateload/away_debrisfield
 
 /datum/map_template/common_lateload/away_debrisfield/on_map_loaded(z)

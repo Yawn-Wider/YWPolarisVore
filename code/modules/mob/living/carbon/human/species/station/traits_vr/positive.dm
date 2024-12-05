@@ -269,7 +269,7 @@
 	cost = 1
 /datum/trait/positive/sonar/apply(var/datum/species/S,var/mob/living/carbon/human/H)
 	..(S,H)
-	add_verb(H, /mob/living/carbon/human/proc/sonar_ping
+	add_verb(H, /mob/living/carbon/human/proc/sonar_ping)
 
 
 /datum/trait/positive/coldadapt

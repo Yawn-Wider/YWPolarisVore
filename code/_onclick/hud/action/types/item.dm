@@ -158,3 +158,17 @@
 
 /datum/action/item_action/toggle_mlembulance
 	name = "Toggle Mlembulance Mode"
+
+// YW Additions
+
+/datum/action/item_action/toggle_headphones
+	name = "Toggle Headphones"
+
+/datum/action/item_action/flip_aviation_goggles
+	name = "Flip Aviation Goggles"
+
+/datum/action/item_action/toggle_cloak_hood
+	name = "Toggle Cloak Hood"
+
+/datum/action/item_action/toggle_shield_gauntlet
+	name = "Toggle Shield Gauntlet"

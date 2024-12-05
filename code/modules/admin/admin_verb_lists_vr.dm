@@ -129,7 +129,7 @@ var/list/admin_verbs_admin = list(
 	/client/proc/delbook,
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
-	/client/proc/setckey, //YW add - readds SetCkey proc
+	/client/proc/setCKey, //YW add - readds SetCkey proc
 	/client/proc/dbcon_fix //YW add - adds Fix Database Connection proc
 	)
 

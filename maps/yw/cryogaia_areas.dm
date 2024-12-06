@@ -148,6 +148,32 @@
 /area/borealis2/outdoors/grounds/walkway/exploration
 	name = "Exploration - Exterior Rooftop"
 
+//Outpost Area - Logging
+
+/area/borealis2/logging
+	name = "\The Logging Camp"
+	icon_state = "outdoors2"
+	flags = AREA_FLAG_IS_NOT_PERSISTENT
+
+/area/borealis2/logging/camp
+	name = "\improper Logging Installation"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "quartstorage"
+	outdoors = OUTDOORS_NO
+
+/area/borealis2/logging/bath
+	name = "\improper Logging Outhouse"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "green"
+	outdoors = OUTDOORS_NO
+
+/area/borealis2/logging/outside
+	name = "\improper Western Wilderness"
+	icon = 'icons/turf/areas.dmi'
+	icon_state = "away"
+	sound_env = SOUND_ENVIRONMENT_MOUNTAINS
+	outdoors = OUTDOORS_YES
+
 //Outpost Area
 
 /area/cryogaia/outpost/bonfire
@@ -549,6 +575,10 @@
 	icon_state = "security"
 	flags = PHASE_SHIELDED // YW Addition adds phase shielding to tcoms
 
+/area/security/gatehouse
+	name = "\improper Security Gatehouse"
+	icon_state = "security"
+
 /area/maintenance/security
 	name = "Security Maintenance"
 	icon_state = "maint_security_starboard"
@@ -663,6 +693,11 @@
 	name = "\improper Telecommunications Storage"
 	icon_state = "tcomsateast"
 	ambience = AMBIENCE_ENGINEERING
+
+/area/garage
+	name = "\improper Garage"
+	icon_state = "submap_trespass_area"
+	sound_env = SMALL_ENCLOSED
 
 // vacant
 /area/vacant/vacant_site/east

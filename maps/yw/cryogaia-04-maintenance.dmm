@@ -2688,6 +2688,14 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/lower)
+"bEG" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "bEO" = (
 /obj/machinery/hologram/holopad,
 /turf/simulated/floor/wood,
@@ -3874,6 +3882,11 @@
 /obj/structure/closet,
 /obj/random/maintenance/cargo,
 /turf/simulated/floor,
+/area/mine/explored/lower_rock)
+"ckd" = (
+/obj/effect/decal/shadow/silhouette,
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
 /area/mine/explored/lower_rock)
 "ckg" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -13503,6 +13516,12 @@
 	},
 /turf/simulated/floor/carpet,
 /area/crew_quarters/recreation_area)
+"hqJ" = (
+/obj/machinery/atmospherics/pipe/simple/hidden/supply,
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "hqO" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -24136,6 +24155,12 @@
 	},
 /turf/simulated/floor,
 /area/maintenance/dorm)
+"mxt" = (
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "mxE" = (
 /obj/machinery/light{
 	dir = 1
@@ -28425,6 +28450,14 @@
 	},
 /turf/simulated/floor/tiled/techfloor,
 /area/maintenance/lowfloor3)
+"oKO" = (
+/obj/structure/railing{
+	dir = 8
+	},
+/obj/effect/decal/shadow/silhouette,
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "oLj" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -44327,6 +44360,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/maintenance/maintroom6)
+"wXZ" = (
+/obj/random/trash_pile,
+/turf/simulated/floor/plating,
+/area/mine/explored/lower_rock)
 "wYe" = (
 /obj/effect/floor_decal/techfloor{
 	dir = 1
@@ -52338,20 +52375,20 @@ mwy
 hYh
 hYh
 hYh
+ckd
 imx
 imx
 imx
-imx
-imx
+ckd
 imx
 imx
 imx
 tFT
 ttR
-ttR
+wXZ
 ttR
 mwy
-emb
+ewM
 emb
 kOT
 emb
@@ -52517,7 +52554,7 @@ mwy
 mwy
 mwy
 mwy
-mwy
+emb
 wKs
 pLI
 mwy
@@ -52664,9 +52701,8 @@ ttR
 ttR
 ttR
 ttR
-ttR
-ttR
-ttR
+wXZ
+mxt
 ttR
 ttR
 ttR
@@ -52680,6 +52716,7 @@ ttR
 ttR
 ttR
 mwy
+emb
 wKs
 pLI
 mwy
@@ -52830,8 +52867,8 @@ iUf
 iUf
 iUf
 iUf
-iUf
-iUf
+bEG
+hqJ
 iUf
 iUf
 iUf
@@ -52987,7 +53024,7 @@ mwy
 ttR
 mwy
 xPk
-vxR
+oKO
 vxR
 xPk
 vxR
@@ -53152,7 +53189,7 @@ mwy
 imx
 mwy
 mwy
-imx
+ckd
 imx
 mwy
 imx

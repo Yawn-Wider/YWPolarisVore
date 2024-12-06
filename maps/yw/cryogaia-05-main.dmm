@@ -10991,8 +10991,15 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
 "eaD" = (
-/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
-/area/borealis2/outdoors/grounds/walkway)
+/obj/effect/floor_decal/snow/floor/edges{
+	dir = 1
+	},
+/obj/effect/floor_decal/industrial/warning/dust,
+/obj/machinery/trailblazer/yellow{
+	pixel_y = 5
+	},
+/turf/simulated/floor/concrete,
+/area/borealis2/outdoors/grounds)
 "ebl" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -13382,6 +13389,9 @@
 	},
 /obj/machinery/stationboiler_radiator{
 	dir = 8
+	},
+/obj/machinery/light/small{
+	dir = 1
 	},
 /turf/simulated/floor/tiled/red,
 /area/security/gatehouse)
@@ -33001,6 +33011,15 @@
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
 /area/borealis2/outdoors/grounds)
+"mpT" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 1
+	},
+/obj/machinery/trailblazer/yellow{
+	pixel_y = 5
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "mpZ" = (
 /obj/machinery/stationboiler_radiator,
 /turf/simulated/floor/tiled/dark,
@@ -36392,6 +36411,9 @@
 	dir = 1
 	},
 /obj/structure/table/rack/shelf,
+/obj/machinery/light{
+	dir = 1
+	},
 /turf/simulated/floor/tiled/steel,
 /area/security/gatehouse)
 "nrP" = (
@@ -63244,6 +63266,9 @@
 /obj/effect/floor_decal/snow/floor/edges{
 	dir = 9
 	},
+/obj/machinery/trailblazer/yellow{
+	pixel_y = 5
+	},
 /turf/simulated/floor/concrete,
 /area/borealis2/outdoors/grounds)
 "xAL" = (
@@ -67298,7 +67323,7 @@ gnM
 cpw
 cpw
 nqj
-jde
+mpT
 cpw
 cpw
 uDf
@@ -68265,7 +68290,7 @@ uVF
 xbE
 liw
 uVF
-fgG
+eaD
 gnM
 cpw
 cpw
@@ -69728,7 +69753,7 @@ ikj
 ikj
 ikj
 ikj
-eaD
+ikj
 ikj
 ikj
 ikj

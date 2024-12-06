@@ -45,7 +45,7 @@
 /hook/living_new/proc/vore_setup(mob/living/M)
 	//Tries to load prefs if a client is present otherwise gives freebie stomach
 	spawn(2 SECONDS)
-		if(M)
+		if(!QDELETED(M))
 			M.init_vore()
 
 	//return TRUE to hook-caller
@@ -79,6 +79,11 @@
 			if(istype(H.species,/datum/species/monkey))
 				allow_spontaneous_tf = TRUE
 		return TRUE
+
+/mob/living/init_vore()
+	if(no_vore)
+		return FALSE
+	return ..()
 
 //
 // Hide vore organs in contents
@@ -525,6 +530,14 @@
 	else if(istype(loc, /obj/item/weapon/holder/micro) && (istype(loc.loc, /obj/machinery/microwave)))
 		forceMove(get_turf(src))
 		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a microwave.")
+
+	//You are in food and for some reason can't resist out
+	else if(istype(loc, /obj/item/weapon/reagent_containers/food))
+		var/obj/item/weapon/reagent_containers/food/F = src.loc
+		if(F.food_inserted_micros)
+			F.food_inserted_micros -= src
+		src.forceMove(get_turf(F))
+		log_and_message_admins("[key_name(src)] used the OOC escape button to get out of a food item.")
 
 	//Don't appear to be in a vore situation
 	else

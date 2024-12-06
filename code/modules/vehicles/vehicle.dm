@@ -69,17 +69,21 @@
 		riding_datum.restore_position(buckled_mob)
 		riding_datum.handle_vehicle_offsets() // So the person in back goes to the front.
 
-/obj/vehicle/proc/vehicle_move(var/newloc, var/direction, var/movetime) // YW Edit - pr #1294
-	if(world.time < l_move_time + move_delay) //This AND the riding datum move speed limit?
+/obj/vehicle/Move(var/newloc, var/direction, var/movetime)
+	// VOREstation edit - Zmoving for falling
+	var/turf/newturf = newloc
+	var/zmove = (newturf && z != newturf.z)
+
+	if(!zmove && world.time < l_move_time + move_delay) //This AND the riding datum move speed limit? // VOREstation edit end
 		return
 
-	if(mechanical && on && powered && cell.charge < charge_use)
+	if(!zmove && mechanical && on && powered && cell.charge < charge_use) // VOREstation edit - zmove doesn't run this
 		turn_off()
 		return
 
 	. = Move(newloc, direction, movetime) // YW Edit - pr #1294
 
-	if(mechanical && on && powered)
+	if(!zmove && mechanical && on && powered) // VOREstation edit - zmove doesn't run this
 		cell.use(charge_use)
 
 	//Dummy loads do not have to be moved as they are just an overlay
@@ -87,13 +91,6 @@
 	//Also mobs are buckled to the vehicle and get moved in atom/movable/Move's call to take care of that
 	if(load && !(load in buckled_mobs) && !istype(load, /datum/vehicle_dummy_load))
 		load.forceMove(loc)
-
-//YW ADDITION: start - pr #1294
-/obj/vehicle/Move(var/newloc, var/direction, var/movetime)
-	// NOTICE - do not put checks here, put them in vehicle_move() otherwise you will break falling and other forced movements!
-	// as well, vehicles should call vehicle_move() instead, so they do their checks...
-	. = ..()
-//YW ADDITION: end
 
 /obj/vehicle/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if(istype(W, /obj/item/weapon/hand_labeler))

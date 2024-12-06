@@ -1,7 +1,15 @@
-import React from 'react';
+import { KeyboardEvent } from 'react';
 
 import { useBackend } from '../../backend';
-import { Box, Button, Dropdown, Flex, Input, Modal } from '../../components';
+import {
+  Box,
+  Button,
+  Dropdown,
+  Flex,
+  Image,
+  Input,
+  Modal,
+} from '../../components';
 
 type Data = { modal: { id: string; args: {}; text: string; type: string } };
 let bodyOverrides = {};
@@ -98,7 +106,7 @@ export const ComplexModal = (props) => {
 
   const { id, text, type } = modal;
 
-  let modalOnEnter: Function | undefined;
+  let modalOnEnter: ((e: KeyboardEvent<HTMLDivElement>) => void) | undefined;
   let modalBody: React.JSX.Element | undefined;
   let modalFooter: React.JSX.Element = (
     <Button icon="arrow-left" color="grey" onClick={() => modalClose(null)}>
@@ -114,6 +122,7 @@ export const ComplexModal = (props) => {
     modalOnEnter = (e) => modalAnswer(id, curValue, {});
     modalBody = (
       <Input
+        key={id}
         value={modal.value}
         placeholder="ENTER to submit"
         width="100%"
@@ -155,6 +164,7 @@ export const ComplexModal = (props) => {
         : modal.choices;
     modalBody = (
       <Dropdown
+        autoScroll={false}
         options={realChoices}
         selected={modal.value}
         width="100%"
@@ -171,7 +181,7 @@ export const ComplexModal = (props) => {
               selected={i + 1 === parseInt(modal.value, 10)}
               onClick={() => modalAnswer(id, (i + 1).toString(), {})}
             >
-              <img src={c} />
+              <Image src={c} />
             </Button>
           </Flex.Item>
         ))}

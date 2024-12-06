@@ -10975,8 +10975,8 @@
 /turf/simulated/floor/tiled,
 /area/engineering/engineering_monitoring)
 "eaD" = (
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/cryogaia/outpost/wall)
+/turf/simulated/floor/outdoors/snow/gravsnow/cryogaia,
+/area/borealis2/outdoors/grounds/walkway)
 "ebl" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -16763,12 +16763,6 @@
 /obj/item/seeds/harebell,
 /turf/simulated/floor/grass2,
 /area/chapel/monastery)
-"ggJ" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/turf/simulated/floor/concrete,
-/area/cryogaia/outpost/wall)
 "ggY" = (
 /obj/machinery/meter,
 /obj/machinery/atmospherics/pipe/manifold/visible/black,
@@ -34217,12 +34211,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/sleeper)
-"mHl" = (
-/obj/effect/floor_decal/industrial/warning/dust{
-	dir = 1
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/cryogaia/outpost/wall)
 "mHr" = (
 /obj/structure/sign/directions/science,
 /turf/simulated/wall,
@@ -38672,7 +38660,6 @@
 /turf/simulated/floor/tiled/dark,
 /area/security/hangar)
 "ojU" = (
-/obj/effect/decal/cleanable/dirt,
 /obj/structure/railing/grey{
 	dir = 1
 	},
@@ -43698,10 +43685,6 @@
 	},
 /turf/simulated/floor/tiled,
 /area/medical/autoresleeving)
-"qdi" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/cryogaia/outpost/wall)
 "qdm" = (
 /obj/effect/floor_decal/corner/grey/diagonal,
 /obj/structure/disposalpipe/segment{
@@ -54771,10 +54754,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/hallway/secondary/entry/docking_lounge)
-"urA" = (
-/obj/effect/floor_decal/industrial/warning/dust,
-/turf/simulated/floor/concrete,
-/area/cryogaia/outpost/wall)
 "urG" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -66954,12 +66933,12 @@ dAA
 dAA
 dAA
 dAA
-urA
-mHl
-eaD
-eaD
-qdi
-ggJ
+fxA
+jXE
+wHV
+wHV
+dBB
+rTd
 dAA
 dAA
 dAA
@@ -69713,7 +69692,7 @@ ikj
 ikj
 ikj
 ikj
-ikj
+eaD
 ikj
 ikj
 ikj

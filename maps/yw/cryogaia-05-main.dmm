@@ -7074,8 +7074,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
 	},
-/obj/effect/map_effect/portal/line/side_a{
-	dir = 4
+/obj/effect/map_effect/portal/master/side_a{
+	dir = 4;
+	portal_id = "cryogaia_log"
 	},
 /turf/simulated/floor/plating,
 /area/borealis2/outdoors/exterior)
@@ -28004,6 +28005,15 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/medical/exam_room)
+"kuC" = (
+/obj/effect/floor_decal/industrial/warning/dust/corner{
+	dir = 1
+	},
+/obj/machinery/trailblazer/yellow{
+	pixel_y = 5
+	},
+/turf/simulated/floor/plating/snow/plating/cryogaia,
+/area/borealis2/outdoors/grounds)
 "kuG" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -33010,15 +33020,6 @@
 	dir = 1
 	},
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
-/area/borealis2/outdoors/grounds)
-"mpT" = (
-/obj/effect/floor_decal/industrial/warning/dust/corner{
-	dir = 1
-	},
-/obj/machinery/trailblazer/yellow{
-	pixel_y = 5
-	},
-/turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds)
 "mpZ" = (
 /obj/machinery/stationboiler_radiator,
@@ -67323,7 +67324,7 @@ gnM
 cpw
 cpw
 nqj
-mpT
+kuC
 cpw
 cpw
 uDf

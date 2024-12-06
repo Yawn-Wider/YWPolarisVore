@@ -101,7 +101,7 @@
 /obj/item/dnainjector/attack(mob/M as mob, mob/user as mob)
 	if (!istype(M, /mob))
 		return
-	if (!usr.IsAdvancedToolUser())
+	if (!user.IsAdvancedToolUser())
 		return
 	if(inuse)
 		return 0
@@ -128,7 +128,7 @@
 	// Used by admin log.
 	var/injected_with_monkey = ""
 	if((buf.types & DNA2_BUF_SE) && (block ? (GetState() && block == MONKEYBLOCK) : GetState(MONKEYBLOCK)))
-		injected_with_monkey = " <span class='danger'>(MONKEY)</span>"
+		injected_with_monkey = span_danger("(MONKEY)")
 
 	add_attack_logs(user,M,"[injected_with_monkey] used the [name] on")
 

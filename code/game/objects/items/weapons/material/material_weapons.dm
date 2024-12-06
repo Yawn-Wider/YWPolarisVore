@@ -147,12 +147,12 @@
 			to_chat(M, "You should repair [src] first. Try using [kit] on it.")
 			return FALSE
 		M.visible_message("[M] begins to replace parts of [src] with [kit].", "You begin to replace parts of [src] with [kit].")
-		if(do_after(usr, sharpen_time))
+		if(do_after(M, sharpen_time))
 			M.visible_message("[M] has finished replacing parts of [src].", "You finish replacing parts of [src].")
 			src.set_material(material)
 			return TRUE
 	else
-		to_chat(M, "<span class = 'warning'>You can't sharpen and re-edge [src].</span>")
+		to_chat(M, span_warning("You can't sharpen and re-edge [src]."))
 		return FALSE
 
 /*

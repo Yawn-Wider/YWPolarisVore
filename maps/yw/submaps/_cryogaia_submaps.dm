@@ -6,7 +6,7 @@
 /datum/map_template/cryogaia_lateload/cryogaia_plains
 	name = "Snow plains"
 	desc = "The Borealis away mission."
-	mappath = 'cryogaia_plains/cryogaia_plains.dmm'
+	mappath = "maps/yw/submaps/cryogaia_plains/cryogaia_plains.dmm"
 	annihilate = TRUE
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/cryogaia_plains
 
@@ -34,7 +34,7 @@
 /datum/map_template/cryogaia_lateload/away_beach
 	name = "Desert Planet - Z1 Beach"
 	desc = "The beach away mission."
-	mappath = 'beach/beach.dmm'
+	mappath = "maps/yw/submaps/beach/beach.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_beach
 
 /datum/map_z_level/cryogaia_lateload/away_beach
@@ -44,7 +44,7 @@
 /datum/map_template/cryogaia_lateload/away_beach_cave
 	name = "Desert Planet - Z2 Cave"
 	desc = "The beach away mission's cave."
-	mappath = 'beach/cave.dmm'
+	mappath = "maps/yw/submaps/beach/cave.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/away_beach_cave
 
 /datum/map_template/cryogaia_lateload/away_beach_cave/on_map_loaded(z)
@@ -70,7 +70,7 @@
 /datum/map_template/cryogaia_lateload/fun/spa
 	name = "Space Spa"
 	desc = "A pleasant spa located in a spaceship."
-	mappath = 'admin_use/spa.dmm'
+	mappath = "maps/yw/submaps/admin_use/spa.dmm"
 
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/fun/spa
 
@@ -246,7 +246,7 @@
 /datum/map_template/cryogaia_lateload/cryogaia_roguemines1
 	name = "Asteroid Belt 1"
 	desc = "Mining, but rogue. Zone 1"
-	mappath = 'rogue_mines/rogue_mine1.dmm'
+	mappath = "maps/yw/submaps/rogue_mines/rogue_mine1.dmm"
 
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines1
 
@@ -258,7 +258,7 @@
 /datum/map_template/cryogaia_lateload/cryogaia_roguemines2
 	name = "Asteroid Belt 2"
 	desc = "Mining, but rogue. Zone 2"
-	mappath = 'rogue_mines/rogue_mine2.dmm'
+	mappath = "maps/yw/submaps/rogue_mines/rogue_mine2.dmm"
 
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/roguemines2
 
@@ -274,7 +274,7 @@
 /datum/map_template/cryogaia_lateload/cryogaia_underdark
 	name = "Cryogaia - Underdark"
 	desc = "Mining, but harder."
-	mappath = 'cryogaia_underdark.dmm'
+	mappath = "maps/yw/submaps/cryogaia_underdark.dmm"
 
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/underdark
 
@@ -329,7 +329,7 @@
 /datum/map_template/cryogaia_lateload/offmap/talon_v2
 	name = "Offmap Ship - Talon V2"
 	desc = "Offmap spawn ship, the Talon."
-	mappath = 'maps/offmap_vr/talon/talon_v2.dmm'
+	mappath = "maps/offmap_vr/talon/talon_v2.dmm"
 	associated_map_datum = /datum/map_z_level/cryogaia_lateload/talon_v2
 
 /datum/map_z_level/cryogaia_lateload/talon_v2

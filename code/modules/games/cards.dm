@@ -59,7 +59,7 @@
 			for(var/datum/playingcard/P in H.cards)
 				cards += P
 			qdel(H)
-			to_chat(user,"<span class='notice'>You place your cards on the bottom of \the [src]</span>.")
+			to_chat(user,span_notice("You place your cards on the bottom of \the [src]."))
 			return
 		else
 			to_chat(user,span_warning("You can't mix cards from other decks!"))
@@ -111,7 +111,7 @@
 	cards -= P
 	H.parentdeck = src
 	H.update_icon()
-	user.visible_message("<b>\The [user]</b> draws a card.")
+	user.visible_message(span_infoplain(span_bold("\The [user]") + " draws a card."))
 	to_chat(user,span_notice("It's the [P]."))
 
 /obj/item/deck/verb/deal_card()
@@ -176,9 +176,9 @@
 		H.update_icon()
 	if(user==target)
 		var/datum/gender/TU = gender_datums[user.get_visible_gender()]
-		user.visible_message("<span class = 'notice'>\The [user] deals [dcard] card(s) to [TU.himself].</span>")
+		user.visible_message(span_notice("\The [user] deals [dcard] card(s) to [TU.himself]."))
 	else
-		user.visible_message("<span class = 'notice'>\The [user] deals [dcard] card(s) to \the [target].</span>")
+		user.visible_message(span_notice("\The [user] deals [dcard] card(s) to \the [target]."))
 	H.throw_at(get_step(target,target.dir),10,1,H)
 
 
@@ -186,7 +186,7 @@
 	if(cards.len == 1 && istype(O, /obj/item/pen))
 		var/datum/playingcard/P = cards[1]
 		if(P.name != "Blank Card")
-			to_chat(user,"<span class = 'notice'>You cannot write on that card.</span>")
+			to_chat(user,span_notice("You cannot write on that card."))
 			return
 		var/cardtext = sanitize(tgui_input_text(user, "What do you wish to write on the card?", "Card Editing", null, MAX_PAPER_MESSAGE_LEN), MAX_PAPER_MESSAGE_LEN)
 		if(!cardtext)
@@ -206,13 +206,13 @@
 			H.update_icon()
 			return
 		else
-			to_chat(user,"<span class = 'notice'>You cannot mix cards from other decks!</span>")
+			to_chat(user,span_notice("You cannot mix cards from other decks!"))
 			return
 
 	..()
 
-/obj/item/deck/attack_self()
-	shuffle()
+/obj/item/deck/attack_self(mob/user)
+	shuffle(user)
 
 
 /obj/item/deck/verb/verb_shuffle()
@@ -220,10 +220,9 @@
 	set name = "Shuffle"
 	set desc = "Shuffle the cards in the deck."
 	set src in view(1)
-	shuffle()
+	shuffle(usr)
 
-/obj/item/deck/proc/shuffle()
-	var/mob/living/user = usr
+/obj/item/deck/proc/shuffle(mob/user)
 	if (cooldown < world.time - 10) // 15 ticks cooldown
 		var/list/newcards = list()
 		while(cards.len)
@@ -231,7 +230,7 @@
 			newcards += P
 			cards -= P
 		cards = newcards
-		user.visible_message("<span class = 'notice'>\The [user] shuffles [src].</span>")
+		user.visible_message(span_notice("\The [user] shuffles [src]."))
 		playsound(src, 'sound/items/cardshuffle.ogg', 50, 1)
 		cooldown = world.time
 	else
@@ -288,7 +287,7 @@
 
 
 /obj/item/pack/attack_self(var/mob/user as mob)
-	user.visible_message("<span class ='danger'>[user] rips open \the [src]!</span>")
+	user.visible_message(span_danger("[user] rips open \the [src]!"))
 	var/obj/item/hand/H = new()
 
 	H.cards += cards
@@ -342,7 +341,7 @@
 		H.parentdeck = src.parentdeck
 		H.update_icon()
 		src.update_icon()
-		usr.visible_message("<span class = 'notice'>\The [usr] plays \the [discarding].</span>")
+		usr.visible_message(span_notice("\The [usr] plays \the [discarding]."))
 		H.loc = get_turf(usr)
 		H.Move(get_step(usr,usr.dir))
 
@@ -352,7 +351,7 @@
 /obj/item/hand/attack_self(var/mob/user as mob)
 	concealed = !concealed
 	update_icon()
-	user.visible_message("<span class = 'notice'>\The [user] [concealed ? "conceals" : "reveals"] their hand.</span>")
+	user.visible_message(span_notice("\The [user] [concealed ? "conceals" : "reveals"] their hand."))
 
 /obj/item/hand/examine(mob/user)
 	. = ..()

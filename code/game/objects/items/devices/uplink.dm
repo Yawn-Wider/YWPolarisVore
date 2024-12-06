@@ -24,6 +24,8 @@
 	var/compact_mode = FALSE
 
 	icon = 'icons/obj/device.dmi'
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/uplink/Initialize(var/mapload)
 	. = ..()
@@ -195,7 +197,7 @@
 	switch(action)
 		if("buy")
 			var/datum/uplink_item/UI = (locate(params["ref"]) in uplink.items)
-			UI.buy(src, usr)
+			UI.buy(src, ui.user)
 			return TRUE
 		if("lock")
 			toggle()

@@ -86,7 +86,7 @@
 	if(pdiff >= FIREDOOR_MAX_PRESSURE_DIFF)
 		. += span_warning("WARNING: Current pressure differential is [pdiff]kPa! Opening door may result in injury!")
 
-	. += "<b>Sensor readings:</b>"
+	. += span_bold("Sensor readings:")
 	for(var/index = 1; index <= tile_info.len; index++)
 		var/o = "&nbsp;&nbsp;"
 		switch(index)
@@ -104,7 +104,7 @@
 			continue
 		var/celsius = convert_k2c(tile_info[index][1])
 		var/pressure = tile_info[index][2]
-		var/temperature_string = "[celsius]&deg;C</span> "
+		var/temperature_string = "[celsius]&deg;C "
 		o += ((dir_alerts[index] & (FIREDOOR_ALERT_HOT|FIREDOOR_ALERT_COLD)) ? span_warning(temperature_string) : span_blue(temperature_string))
 		o += span_blue("[pressure]kPa")
 		o += "</li>"
@@ -501,15 +501,15 @@
 
 
 	update_nearby_tiles(need_rebuild)
-		if(!air_master) return 0
+		if(!SSair) return 0
 
 		var/turf/simulated/source = loc
 		var/turf/simulated/destination = get_step(source,dir)
 
 		update_heat_protection(loc)
 
-		if(istype(source)) air_master.tiles_to_update += source
-		if(istype(destination)) air_master.tiles_to_update += destination
+		if(istype(source)) SSair.tiles_to_update += source
+		if(istype(destination)) SSair.tiles_to_update += destination
 		return 1
 */
 

@@ -36,11 +36,11 @@
 	if(!partner)
 		return 0
 
-	if(!air_master || air_master.current_cycle <= update_cycle)
+	if(!SSair || SSair.current_cycle <= update_cycle)
 		return 0
 
-	update_cycle = air_master.current_cycle
-	partner.update_cycle = air_master.current_cycle
+	update_cycle = SSair.current_cycle
+	partner.update_cycle = SSair.current_cycle
 
 	var/air_heat_capacity = air_contents.heat_capacity()
 	var/other_air_heat_capacity = partner.air_contents.heat_capacity()
@@ -81,7 +81,7 @@
 	to_chat(user, span_notice("You begin to unfasten \the [src]..."))
 	if (do_after(user, 40 * W.toolspeed))
 		user.visible_message( \
-			"<b>\The [user]</b> unfastens \the [src].", \
+			span_infoplain(span_bold("\The [user]") + " unfastens \the [src]."), \
 			span_notice("You have unfastened \the [src]."), \
 			"You hear a ratchet.")
 		deconstruct()

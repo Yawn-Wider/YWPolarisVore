@@ -1,6 +1,7 @@
 /obj/item/hailer
 	name = "hailer"
 	desc = "Used by obese officers to save their breath for running."
+	icon = 'icons/obj/device.dmi'
 	icon_state = "voice0"
 	item_state = "flashbang"	//looks exactly like a flash (and nothing like a flashbang)
 	w_class = ITEMSIZE_TINY
@@ -9,6 +10,9 @@
 	var/use_message = "Halt! Security!"
 	var/spamcheck = 0
 	var/insults
+
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/hailer/verb/set_message()
 	set name = "Set Hailer Message"

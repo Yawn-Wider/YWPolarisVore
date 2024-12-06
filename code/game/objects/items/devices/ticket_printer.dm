@@ -6,25 +6,27 @@
 	slot_flags = SLOT_BELT | SLOT_HOLSTER
 	var/print_cooldown = 1 MINUTE
 	var/last_print
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/ticket_printer/attack_self(mob/user)
 	. = ..()
 	if(last_print + print_cooldown <= world.time)
 		print_a_ticket(user)
 	else
-		to_chat(user, "<span class = 'warning'>\The [src] is not ready to print another ticket yet.</span>")
+		to_chat(user, span_warning("\The [src] is not ready to print another ticket yet."))
 
 /obj/item/ticket_printer/proc/print_a_ticket(mob/user)
 
 	var/ticket_name = sanitize(tgui_input_text(user, "The Name of the person you are issuing the ticket to.", "Name", max_length = 100))
 	if(length(ticket_name) > 100)
-		tgui_alert_async(usr, "Entered name too long. 100 character limit.","Error")
+		tgui_alert_async(user, "Entered name too long. 100 character limit.","Error")
 		return
 	if(!ticket_name)
 		return
 	var/details = sanitize(tgui_input_text(user, "What is the ticket for? Avoid entering personally identifiable information in this section. This information should not be used to harrass or otherwise make the person feel uncomfortable. (Max length: 200)", "Ticket Details", max_length = 200))
 	if(length(details) > 200)
-		tgui_alert_async(usr, "Entered details too long. 200 character limit.","Error")
+		tgui_alert_async(user, "Entered details too long. 200 character limit.","Error")
 		return
 	if(!details)
 		return
@@ -69,13 +71,13 @@
 
 	var/ticket_name = sanitize(tgui_input_text(user, "The Name of the person you are issuing the ticket to.", "Name", max_length = 100))
 	if(length(ticket_name) > 100)
-		tgui_alert_async(usr, "Entered name too long. 100 character limit.","Error")
+		tgui_alert_async(user, "Entered name too long. 100 character limit.","Error")
 		return
 	if(!ticket_name)
 		return
 	var/details = sanitize(tgui_input_text(user, "What is the ticket for? This could be anything like travel to a destination or permission to do something! This is not official and does not override any rules or authorities on the station.", "Ticket Details", max_length = 200))
 	if(length(details) > 200)
-		tgui_alert_async(usr, "Entered details too long. 200 character limit.","Error")
+		tgui_alert_async(user, "Entered details too long. 200 character limit.","Error")
 		return
 	if(!details)
 		return

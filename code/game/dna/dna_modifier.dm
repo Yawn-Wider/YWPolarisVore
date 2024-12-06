@@ -212,7 +212,7 @@
 		if(!M.client && M.mind)
 			for(var/mob/observer/dead/ghost in player_list)
 				if(ghost.mind == M.mind)
-					to_chat(ghost, span_interface("<font size = 3><b>Your corpse has been placed into a cloning scanner. Return to your body if you want to be resurrected/cloned!</b> (Verbs -> Ghost -> Re-enter corpse)</font>"))
+					to_chat(ghost, span_interface(span_large(span_bold("Your corpse has been placed into a cloning scanner. Return to your body if you want to be resurrected/cloned!") + " (Verbs -> Ghost -> Re-enter corpse)")))
 					break
 	SStgui.update_uis(src)
 
@@ -428,7 +428,7 @@
 			occupantData["isViableSubject"] = 0
 		occupantData["health"] = connected.occupant.health
 		occupantData["maxHealth"] = connected.occupant.maxHealth
-		occupantData["minHealth"] = config.health_threshold_dead
+		occupantData["minHealth"] = CONFIG_GET(number/health_threshold_dead)
 		occupantData["uniqueEnzymes"] = connected.occupant.dna.unique_enzymes
 		occupantData["uniqueIdentity"] = connected.occupant.dna.uni_identity
 		occupantData["structuralEnzymes"] = connected.occupant.dna.struc_enzymes
@@ -449,17 +449,17 @@
 
 	return data
 
-/obj/machinery/computer/scan_consolenew/tgui_act(action, params)
+/obj/machinery/computer/scan_consolenew/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
-	if(!istype(usr.loc, /turf))
+	if(!istype(ui.user.loc, /turf))
 		return TRUE
 	if(!src || !src.connected)
 		return TRUE
 	if(irradiating) // Make sure that it isn't already irradiating someone...
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 	if(tgui_act_modal(action, params))
 		return TRUE

@@ -435,7 +435,7 @@
 
 /obj/item/toy/chewtoy/attack_self(mob/user)
 	playsound(loc, 'sound/items/drop/plushie.ogg', 50, 1)
-	user.visible_message(span_notice("<b>\The [user]</b> gnaws on [src]!"),span_notice("You gnaw on [src]!"))
+	user.visible_message(span_notice(span_bold("\The [user]") + " gnaws on [src]!"),span_notice("You gnaw on [src]!"))
 
 /*
  * Cat toys
@@ -557,35 +557,6 @@
 	cooldown = 0
 
 /*
- * Hand buzzer
- */
-/obj/item/clothing/gloves/ring/buzzer/toy
-	name = "steel ring"
-	desc = "Torus shaped finger decoration. It has a small piece of metal on the palm-side."
-	icon_state = "seal-signet"
-	drop_sound = 'sound/items/drop/ring.ogg'
-
-/obj/item/clothing/gloves/ring/buzzer/toy/Touch(var/atom/A, var/proximity)
-	if(proximity && istype(usr, /mob/living/carbon/human))
-
-		return zap(usr, A, proximity)
-	return 0
-
-/obj/item/clothing/gloves/ring/buzzer/toy/zap(var/mob/living/carbon/human/user, var/atom/movable/target, var/proximity)
-	. = FALSE
-	if(user.a_intent == I_HELP && battery.percent() >= 50)
-		if(isliving(target))
-			var/mob/living/L = target
-
-			to_chat(L, span_warning("You feel a powerful shock!"))
-			if(!.)
-				playsound(L, 'sound/effects/sparks7.ogg', 40, 1)
-				L.electrocute_act(battery.percent() * 0, src)
-			return .
-
-	return 0
-
-/*
  * Toy cuffs
  */
 /obj/item/handcuffs/fake
@@ -635,7 +606,7 @@
 			icon_state = "nuketoyidle"
 	else
 		var/timeleft = (cooldown - world.time)
-		to_chat(user, span_warning("Nothing happens, and '</span>[round(timeleft/10)]<span class='alert'>' appears on a small display."))
+		to_chat(user, span_warning("Nothing happens, and") + " '[round(timeleft/10)]' " + span_warning("appears on a small display."))
 
 /obj/item/toy/nuke/attackby(obj/item/I as obj, mob/living/user as mob)
 	if(istype(I, /obj/item/disk/nuclear))
@@ -677,7 +648,7 @@
 				O.forceMove(src)
 				stored_minature = O
 		else
-			user.visible_message(span_notice("You stop feeding \the [O] into \the [src].</span>"),"<span class='notice'>[user] stops feeding \the [O] into \the [src]!/span>")
+			user.visible_message(span_notice("You stop feeding \the [O] into \the [src]."),span_notice("[user] stops feeding \the [O] into \the [src]!"))
 
 	else ..()
 
@@ -1052,9 +1023,9 @@
 	activate(user)
 
 /obj/item/toy/desk/MouseDrop(mob/user as mob) // Code from Paper bin, so you can still pick up the deck
-	if((user == usr && (!( usr.restrained() ) && (!( usr.stat ) && (usr.contents.Find(src) || in_range(src, usr))))))
-		if(!istype(usr, /mob/living/simple_mob))
-			if( !usr.get_active_hand() )		//if active hand is empty
+	if((user == usr && (!( user.restrained() ) && (!( user.stat ) && (user.contents.Find(src) || in_range(src, user))))))
+		if(!istype(user, /mob/living/simple_mob))
+			if(!user.get_active_hand())		//if active hand is empty
 				var/mob/living/carbon/human/H = user
 				var/obj/item/organ/external/temp = H.organs_by_name["r_hand"]
 
@@ -1174,5 +1145,5 @@
 	if(M.stat)
 		to_chat(user, span_notice("\The [M] doesn't look like it's any condition to do that."))
 		return
-	user.visible_message("<span class='danger'>\The [user] waves \the [src] in front of the [M]!</span>!")
+	user.visible_message(span_danger("\The [user] waves \the [src] in front of the [M]!"))
 	M.PounceTarget(user,100)

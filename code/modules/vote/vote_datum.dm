@@ -90,14 +90,14 @@
             if(length(winning_options) == 1)
                 var/res = winning_options[1]
                 if(res in choices)
-                    to_chat(world, span_interface("<b><code>[res]</code> won the vote!</b>"))
+                    to_chat(world, span_interface(span_bold("<code>[res]</code> won the vote!")))
                     return res
                 else
                     to_chat(world, span_interface("The winner of the vote ([sanitize(res)]) isn't a valid choice? What the heck?"))
                     stack_trace("Vote concluded with an invalid answer. Answer was [sanitize(res)], choices were [json_encode(choices)]")
                     return null
 
-            to_chat(world, span_interface("<b>No clear winner. The vote did not pass.</b>"))
+            to_chat(world, span_interface(span_bold("No clear winner. The vote did not pass.")))
             return null
 
         if(VOTE_RESULT_TYPE_SKEWED)
@@ -105,21 +105,21 @@
             if(maxvotes >= required_votes && length(winning_options) == 1)
                 var/res = winning_options[1]
                 if(res in choices)
-                    to_chat(world, span_interface("<b><code>[res]</code> won the vote with a 70% majority!</b>"))
+                    to_chat(world, span_interface(span_bold("<code>[res]</code> won the vote with a 70% majority!")))
                     return res
                 else
                     to_chat(world, span_interface("The winner of the vote ([sanitize(res)]) isn't a valid choice? What the heck?"))
                     stack_trace("Vote concluded with an invalid answer. Answer was [sanitize(res)], choices were [json_encode(choices)]")
                     return null
 
-            to_chat(world, span_interface("<b>No option received 70% of the votes. The vote did not pass.</b>"))
+            to_chat(world, span_interface(span_bold("No option received 70% of the votes. The vote did not pass.")))
             return null
 
     return null
 
-/datum/vote/proc/announce(start_text, var/time = vote_time/10)
+/datum/vote/proc/announce(start_text, var/time = vote_time)
     to_chat(world, span_lightpurple("Type <b>vote</b> or click <a href='?src=\ref[src];[HrefToken()];vote=open'>here</a> to place your vote. \
-        You have [time] seconds to vote."))
+        You have [time/10] seconds to vote."))
     world << sound('sound/ambience/alarm4.ogg', repeat = 0, wait = 0, volume = 50, channel = 3)
 
 /datum/vote/Topic(href, list/href_list)
@@ -195,6 +195,6 @@
 	switch(action)
 		if("vote")
 			if(params["target"] in choices)
-				voted[usr.ckey] = params["target"]
+				voted[ui.user.ckey] = params["target"]
 			else
-				message_admins(span_warning("User [key_name_admin(usr)] spoofed a vote in the vote panel!"))
+				message_admins(span_warning("User [key_name_admin(ui.user)] spoofed a vote in the vote panel!"))

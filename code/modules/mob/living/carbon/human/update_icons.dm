@@ -57,52 +57,6 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		cut_overlay(I)
 		overlays_standing[cache_index] = null
 
-// These are used as the layers for the icons, as well as indexes in a list that holds onto them.
-// Technically the layers used are all -100+layer to make them FLOAT_LAYER overlays.
-//Human Overlays Indexes/////////
-#define MUTATIONS_LAYER			1		//Mutations like fat, and lasereyes
-#define SKIN_LAYER				2		//Skin things added by a call on species
-#define BLOOD_LAYER				3		//Bloodied hands/feet/anything else
-#define MOB_DAM_LAYER			4		//Injury overlay sprites like open wounds
-#define SURGERY_LAYER			5		//Overlays for open surgical sites
-#define UNDERWEAR_LAYER  		6		//Underwear/bras/etc
-#define TAIL_LOWER_LAYER		7		//Tail as viewed from the south
-#define WING_LOWER_LAYER		8		//Wings as viewed from the south
-#define SHOES_LAYER_ALT			9		//Shoe-slot item (when set to be under uniform via verb)
-#define UNIFORM_LAYER			10		//Uniform-slot item
-#define ID_LAYER				11		//ID-slot item
-#define SHOES_LAYER				12		//Shoe-slot item
-#define GLOVES_LAYER			13		//Glove-slot item
-#define BELT_LAYER				14		//Belt-slot item
-#define SUIT_LAYER				15		//Suit-slot item
-#define TAIL_UPPER_LAYER		16		//Some species have tails to render (As viewed from the N, E, or W)
-#define GLASSES_LAYER			17		//Eye-slot item
-#define BELT_LAYER_ALT			18		//Belt-slot item (when set to be above suit via verb)
-#define SUIT_STORE_LAYER		19		//Suit storage-slot item
-#define BACK_LAYER				20		//Back-slot item
-#define HAIR_LAYER				21		//The human's hair
-#define HAIR_ACCESSORY_LAYER	22		//VOREStation edit. Simply move this up a number if things are added.
-#define EARS_LAYER				23		//Both ear-slot items (combined image)
-#define EYES_LAYER				24		//Mob's eyes (used for glowing eyes)
-#define FACEMASK_LAYER			25		//Mask-slot item
-#define GLASSES_LAYER_ALT		26		//So some glasses can appear on top of hair and things
-#define HEAD_LAYER				27		//Head-slot item
-#define HANDCUFF_LAYER			28		//Handcuffs, if the human is handcuffed, in a secret inv slot
-#define LEGCUFF_LAYER			29		//Same as handcuffs, for legcuffs
-#define L_HAND_LAYER			30		//Left-hand item
-#define R_HAND_LAYER			31		//Right-hand item
-#define WING_LAYER				32		//Wings or protrusions over the suit.
-#define TAIL_UPPER_LAYER_ALT	33		//Modified tail-sprite layer. Tend to be larger.
-#define MODIFIER_EFFECTS_LAYER	34		//Effects drawn by modifiers
-#define FIRE_LAYER				35		//'Mob on fire' overlay layer
-// # define MOB_WATER_LAYER			36		//'Mob submerged' overlay layer // Moved to global defines
-#define TARGETED_LAYER			37		//'Aimed at' overlay layer
-#define VORE_BELLY_LAYER		38
-#define VORE_TAIL_LAYER			39
-
-#define TOTAL_LAYERS			39		//VOREStation edit. <---- KEEP THIS UPDATED, should always equal the highest number here, used to initialize a list.
-//////////////////////////////////
-
 /mob/living/carbon/human
 	var/list/overlays_standing[TOTAL_LAYERS]
 	var/previous_damage_appearance // store what the body last looked like, so we only have to update it if something changed
@@ -244,6 +198,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 /mob/living/carbon/human/update_icons_body()
 	if(QDESTROYING(src))
 		return
+
+	remove_layer(BODYPARTS_LAYER)
 
 	var/husk_color_mod = rgb(96,88,80)
 	var/hulk_color_mod = rgb(48,224,40)
@@ -427,6 +383,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//END CACHED ICON GENERATION.
 	stand_icon.Blend(base_icon,ICON_OVERLAY)
+
+	var/image/body = image(stand_icon)
+	if (body)
+		body.layer = BODY_LAYER + BODYPARTS_LAYER
+		overlays_standing[BODYPARTS_LAYER] = body
+		apply_layer(BODYPARTS_LAYER)
+
 	icon = stand_icon
 
 	//tail
@@ -555,7 +518,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 		if(ears_s.Height() > face_standing.Height()) // Tol ears
 			face_standing.Crop(1, 1, face_standing.Width(), ears_s.Height())
 		face_standing.Blend(ears_s, ICON_OVERLAY)
-		if(ear_style?.em_block)
+		// todo: these should be considered separately, but it'd take a slight refactor to how sprite acc's are rendered (or atleast ears)
+		if(ear_style?.em_block || ear_secondary_style?.em_block)
 			em_block_ears = em_block_image_generic(image(ears_s))
 
 	var/image/semifinal = image(face_standing, layer = BODY_LAYER+HAIR_LAYER, "pixel_y" = head_organ.head_offset)
@@ -1315,10 +1279,12 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 /mob/living/carbon/human/proc/get_ears_overlay()
 	//If you are FBP with ear style and didn't set a custom one
 	var/datum/robolimb/model = isSynthetic()
-	if(istype(model) && model.includes_ears && !ear_style)
+	if(istype(model) && model.includes_ears && !ear_style && !ear_secondary_style)
 		var/icon/ears_s = new/icon("icon" = synthetic.icon, "icon_state" = "ears")
 		ears_s.Blend(rgb(src.r_ears, src.g_ears, src.b_ears), species.color_mult ? ICON_MULTIPLY : ICON_ADD)
 		return ears_s
+
+	var/icon/rendered
 
 	if(ear_style && !(head && (head.flags_inv & BLOCKHEADHAIR)))
 		var/icon/ears_s = new/icon("icon" = ear_style.icon, "icon_state" = ear_style.icon_state)
@@ -1334,9 +1300,35 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			overlay.Blend(rgb(src.r_ears3, src.g_ears3, src.b_ears3), ear_style.color_blend_mode)
 			ears_s.Blend(overlay, ICON_OVERLAY)
 			qdel(overlay)
-		return ears_s
-	return null
+		rendered = ears_s
 
+	// todo: this is utterly horrible but i don't think i should be violently refactoring sprite acc rendering in a feature PR ~silicons
+	if(ear_secondary_style && !(head && (head.flags_inv & BLOCKHEADHAIR)))
+		var/icon/ears_s = new/icon("icon" = ear_secondary_style.icon, "icon_state" = ear_secondary_style.icon_state)
+		if(ear_secondary_style.do_colouration)
+			var/color = LAZYACCESS(ear_secondary_colors, 1)
+			if(color)
+				ears_s.Blend(color, ear_secondary_style.color_blend_mode)
+		if(ear_secondary_style.extra_overlay)
+			var/icon/overlay = new/icon("icon" = ear_secondary_style.icon, "icon_state" = ear_secondary_style.extra_overlay)
+			var/color = LAZYACCESS(ear_secondary_colors, 2)
+			if(color)
+				overlay.Blend(color, ear_secondary_style.color_blend_mode)
+			ears_s.Blend(overlay, ICON_OVERLAY)
+			qdel(overlay)
+		if(ear_secondary_style.extra_overlay2) //MORE COLOURS IS BETTERER
+			var/icon/overlay = new/icon("icon" = ear_secondary_style.icon, "icon_state" = ear_secondary_style.extra_overlay2)
+			var/color = LAZYACCESS(ear_secondary_colors, 3)
+			if(color)
+				overlay.Blend(color, ear_secondary_style.color_blend_mode)
+			ears_s.Blend(overlay, ICON_OVERLAY)
+			qdel(overlay)
+		if(!rendered)
+			rendered = ears_s
+		else
+			rendered.Blend(ears_s, ICON_OVERLAY)
+
+	return rendered
 
 /mob/living/carbon/human/proc/get_tail_image()
 	//If you are FBP with tail style and didn't set a custom one
@@ -1348,13 +1340,13 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 
 	//If you have a custom tail selected
 	if(tail_style && !(wear_suit && wear_suit.flags_inv & HIDETAIL && !istaurtail(tail_style)) && !tail_hidden)
-		var/icon/tail_s = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = (wagging && tail_style.ani_state ? tail_style.ani_state : tail_style.icon_state)) //CHOMPEdit
+		var/icon/tail_s = new/icon("icon" = (tail_style.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = (wagging && tail_style.ani_state ? tail_style.ani_state : tail_style.icon_state))
 		if(tail_style.can_loaf && !is_shifted)
 			pixel_y = (resting) ? -tail_style.loaf_offset*size_multiplier : default_pixel_y //move player down, then taur up, to fit the overlays correctly // VOREStation Edit: Taur Loafing
 		if(tail_style.do_colouration)
 			tail_s.Blend(rgb(src.r_tail, src.g_tail, src.b_tail), tail_style.color_blend_mode)
 		if(tail_style.extra_overlay)
-			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay) //CHOMPEdit
+			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay)
 			if(wagging && tail_style.ani_state)
 				overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay_w)	//RS EDIT
 				overlay.Blend(rgb(src.r_tail2, src.g_tail2, src.b_tail2), tail_style.color_blend_mode)
@@ -1366,7 +1358,7 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 				qdel(overlay)
 
 		if(tail_style.extra_overlay2)
-			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2) //CHOMPEdit
+			var/icon/overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2)
 			if(wagging && tail_style.ani_state)
 				overlay = new/icon("icon" = (tail_style?.can_loaf && resting) ? tail_style.icon_loaf : tail_style.icon, "icon_state" = tail_style.extra_overlay2_w)	//RS EDIT
 				overlay.Blend(rgb(src.r_tail3, src.g_tail3, src.b_tail3), tail_style.color_blend_mode)
@@ -1387,8 +1379,8 @@ var/global/list/damage_icon_parts = list() //see UpdateDamageIcon()
 			working.pixel_y = tail_style.offset_y
 			if(taurtype.can_ride && !riding_datum)
 				riding_datum = new /datum/riding/taur(src)
-				verbs |= /mob/living/carbon/human/proc/taur_mount
-				verbs |= /mob/living/proc/toggle_rider_reins
+				add_verb(src, /mob/living/carbon/human/proc/taur_mount)
+				add_verb(src, /mob/living/proc/toggle_rider_reins)
 		else if(islongtail(tail_style))
 			working.pixel_x = tail_style.offset_x
 			working.pixel_y = tail_style.offset_y

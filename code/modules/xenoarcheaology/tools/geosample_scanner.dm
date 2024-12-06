@@ -64,7 +64,7 @@
 		to_chat(user, span_warning("You can't do that while [src] is scanning!"))
 	else
 		if(istype(I, /obj/item/stack/nanopaste))
-			var/choice = tgui_alert(usr, "What do you want to do with the nanopaste?","Radiometric Scanner",list("Scan nanopaste","Fix seal integrity"))
+			var/choice = tgui_alert(user, "What do you want to do with the nanopaste?","Radiometric Scanner",list("Scan nanopaste","Fix seal integrity"))
 			if(!choice)
 				return
 			if(choice == "Fix seal integrity")
@@ -77,7 +77,7 @@
 			var/obj/item/reagent_containers/glass/G = I
 			if(!G.is_open_container())
 				return
-			var/choice = tgui_alert(usr, "What do you want to do with the container?","Radiometric Scanner",list("Add coolant","Empty coolant","Scan container"))
+			var/choice = tgui_alert(user, "What do you want to do with the container?","Radiometric Scanner",list("Add coolant","Empty coolant","Scan container"))
 			if(!choice)
 				return
 			if(choice == "Add coolant")
@@ -93,12 +93,12 @@
 				update_coolant()
 				return
 		if(scanned_item)
-			to_chat(user, "<span class=warning>\The [src] already has \a [scanned_item] inside!</span>")
+			to_chat(user, span_warning("\The [src] already has \a [scanned_item] inside!"))
 			return
 		user.drop_item()
 		I.loc = src
 		scanned_item = I
-		to_chat(user, "<span class=notice>You put \the [I] into \the [src].</span>")
+		to_chat(user, span_notice("You put \the [I] into \the [src]."))
 
 /obj/machinery/radiocarbon_spectrometer/proc/update_coolant()
 	var/total_purity = 0
@@ -164,7 +164,7 @@
 	if(..())
 		return TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	switch(action)
 		if("scanItem")
 			if(scanning)
@@ -175,11 +175,11 @@
 						scanner_progress = 0
 						scanning = 1
 						t_left_radspike = pick(5,10,15)
-						to_chat(usr, span_notice("Scan initiated."))
+						to_chat(ui.user, span_notice("Scan initiated."))
 					else
-						to_chat(usr, span_warning("Could not initiate scan, seal requires replacing."))
+						to_chat(ui.user, span_warning("Could not initiate scan, seal requires replacing."))
 				else
-					to_chat(usr, span_warning("Insert an item to scan."))
+					to_chat(ui.user, span_warning("Insert an item to scan."))
 			return TRUE
 
 		if("maserWavelength")
@@ -354,8 +354,8 @@
 		if(!anom_found)
 			data += " - No anomalous data<br>"
 
-		P.info = "<b>[src] analysis report #[report_num]</b><br>"
-		P.info += "<b>Scanned item:</b> [scanned_item.name]<br><br>" + data
+		P.info = span_bold("[src] analysis report #[report_num]") + "<br>"
+		P.info += span_bold("Scanned item:") + " [scanned_item.name]<br><br>" + data
 		last_scan_data = P.info
 		P.loc = src.loc
 

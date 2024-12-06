@@ -28,6 +28,8 @@
 	var/obj/item/wrapped = null // Item currently being held.
 
 	var/force_holder = null //
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/gripper/examine(mob/user)
 	. = ..()
@@ -175,6 +177,23 @@
 		/obj/item/material/gravemarker
 		)
 
+/obj/item/gripper/scene
+	name = "misc gripper"
+	desc = "A simple grasping tool that can hold a variety of 'general' objects..."
+
+	can_hold = list(
+		/obj/item/capture_crystal,
+		/obj/item/clothing,
+		/obj/item/implanter,
+		/obj/item/disk/nifsoft/compliance,
+		/obj/item/handcuffs,
+		/obj/item/toy,
+		/obj/item/petrifier,
+		/obj/item/dice,
+		/obj/item/casino_platinum_chip,
+		/obj/item/spacecasinocash
+	)
+
 /obj/item/gripper/no_use/organ
 	name = "organ gripper"
 	icon_state = "gripper-flesh"
@@ -265,7 +284,7 @@
 
 	set name = "Drop Item"
 	set desc = "Release an item from your magnetic gripper."
-	set category = "Robot Commands"
+	set category = "Abilities.Silicon"
 
 	drop_item()
 
@@ -562,15 +581,15 @@
 	<B>Installed Modules</B><BR><BR>"}
 
 
-	var/tools = "<B>Tools and devices</B><BR>"
-	var/resources = "<BR><B>Resources</B><BR>"
+	var/tools = span_bold("Tools and devices") + "<BR>"
+	var/resources = "<BR>" + span_bold("Resources") + "<BR>"
 
 	for (var/O in module.modules)
 
 		var/module_string = ""
 
 		if (!O)
-			module_string += text("<B>Resource depleted</B><BR>")
+			module_string += span_bold("Resource depleted") + "<BR>"
 		else if(activated(O))
 			module_string += text("[O]: <B>Activated</B><BR>")
 		else
@@ -587,7 +606,7 @@
 			var/module_string = ""
 
 			if (!O)
-				module_string += text("<B>Resource depleted</B><BR>")
+				module_string += span_bold("Resource depleted") + "<BR>"
 			else if(activated(O))
 				module_string += text("[O]: <B>Activated</B><BR>")
 			else

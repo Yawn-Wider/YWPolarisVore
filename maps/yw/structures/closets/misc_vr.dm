@@ -94,7 +94,7 @@
 		/obj/item/clothing/shoes/boots/winter/explorer,
 		/obj/item/clothing/gloves/black,
 		/obj/item/radio/headset/pathfinder,
-		/obj/item/radio/headset/pathfinder/alt,
+		/obj/item/radio/headset/alt/pathfinder,
 		/obj/item/cartridge/explorer,
 		/obj/item/flashlight,
 		/obj/item/gps/explorer,

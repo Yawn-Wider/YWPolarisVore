@@ -39,17 +39,16 @@
 		/obj/item/storage/secure/safe,
 		/obj/machinery/iv_drip,
 		/obj/structure/medical_stand, //VOREStation Add,
-		/obj/machinery/disease2/incubator,
 		/obj/machinery/disposal,
 		/mob/living/simple_mob/animal/passive/cow,
 		/mob/living/simple_mob/animal/goat,
-		/obj/machinery/computer/centrifuge,
 		/obj/machinery/sleeper,
 		/obj/machinery/smartfridge/,
 		/obj/machinery/biogenerator,
 		/obj/structure/frame,
 		/obj/machinery/radiocarbon_spectrometer,
-		/obj/machinery/portable_atmospherics/powered/reagent_distillery
+		/obj/machinery/portable_atmospherics/powered/reagent_distillery,
+		/obj/machinery/computer/pandemic
 		)
 
 /obj/item/reagent_containers/glass/Initialize()
@@ -75,10 +74,10 @@
 /obj/item/reagent_containers/glass/attack_self()
 	..()
 	if(is_open_container())
-		to_chat(usr, "<span class = 'notice'>You put the lid on \the [src].</span>")
+		to_chat(usr, span_notice("You put the lid on \the [src]."))
 		flags ^= OPENCONTAINER
 	else
-		to_chat(usr, "<span class = 'notice'>You take the lid off \the [src].</span>")
+		to_chat(usr, span_notice("You take the lid off \the [src]."))
 		flags |= OPENCONTAINER
 	update_icon()
 
@@ -399,11 +398,18 @@
 	name = "water-cooler bottle"
 	icon = 'icons/obj/vending.dmi'
 	icon_state = "water_cooler_bottle"
-	matter = list(MAT_GLASS = 2000)
-	w_class = ITEMSIZE_NORMAL
+	matter = list(MAT_PLASTIC = 2000)
+	w_class = ITEMSIZE_NO_CONTAINER
 	amount_per_transfer_from_this = 20
 	possible_transfer_amounts = list(10,20,30,60,120)
-	volume = 120
+	volume = 2000
+	slowdown = 2
+
+	can_be_placed_into = list(
+		/obj/structure/table,
+		/obj/structure/closet,
+		/obj/structure/sink
+		)
 
 /obj/item/reagent_containers/glass/pint_mug
 	desc = "A rustic pint mug designed for drinking ale."

@@ -5,9 +5,10 @@
 /* FOR LIVE SERVER   */
 /*********************/
 
-//define USE_MAP_TETHER
-#define USE_MAP_CRYOGAIA // YW edit
+//#define USE_MAP_TETHER
+//#define USE_MAP_STELLARDELIGHT
 //#define USE_MAP_GROUNDBASE
+#define USE_MAP_CRYOGAIA // YW edit
 
 // Debug
 // #define USE_MAP_MINITEST

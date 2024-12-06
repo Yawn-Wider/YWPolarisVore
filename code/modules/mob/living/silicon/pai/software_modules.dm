@@ -50,7 +50,7 @@
 	return data
 
 /datum/pai_software/directives/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P))
 		return TRUE
 	if(..())
@@ -64,7 +64,7 @@
 		while(!istype(M, /mob/living))
 			if(!M || !M.loc || count > 6)
 				//For a runtime where M ends up in nullspace (similar to bluespace but less colourful)
-				to_chat(src, "You are not being carried by anyone!")
+				to_chat(src, span_infoplain("You are not being carried by anyone!"))
 				return 0
 			M = M.loc
 			count++
@@ -77,13 +77,13 @@
 			for (var/mob/v in viewers(T))
 				v.show_message(span_notice("[M] presses [TM.his] thumb against [P]."), 3, span_notice("[P] makes a sharp clicking sound as it extracts DNA material from [M]."), 2)
 			var/datum/dna/dna = M.dna
-			to_chat(P, span_red("<h3>[M]'s UE string : [dna.unique_enzymes]</h3>"))
+			to_chat(P, span_infoplain(span_red("<h3>[M]'s UE string : [dna.unique_enzymes]</h3>")))
 			if(dna.unique_enzymes == P.master_dna)
-				to_chat(P, "<b>DNA is a match to stored Master DNA.</b>")
+				to_chat(P, span_infoplain(span_bold("DNA is a match to stored Master DNA.")))
 			else
-				to_chat(P, "<b>DNA does not match stored Master DNA.</b>")
+				to_chat(P, span_infoplain(span_bold("DNA does not match stored Master DNA.")))
 		else
-			to_chat(P, "[M] does not seem like [TM.he] is going to provide a DNA sample willingly.")
+			to_chat(P, span_infoplain("[M] does not seem like [TM.he] is going to provide a DNA sample willingly."))
 		return TRUE
 
 /datum/pai_software/radio_config
@@ -160,7 +160,7 @@
 
 /datum/pai_software/med_records/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	. = ..()
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P))
 		return
 
@@ -216,7 +216,7 @@
 
 /datum/pai_software/sec_records/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
 	. = ..()
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P))
 		return
 
@@ -267,7 +267,7 @@
 	return data
 
 /datum/pai_software/door_jack/tgui_act(action, list/params, datum/tgui/ui, datum/tgui_state/state)
-	var/mob/living/silicon/pai/P = usr
+	var/mob/living/silicon/pai/P = ui.user
 	if(!istype(P) || ..())
 		return TRUE
 
@@ -293,9 +293,9 @@
 	var/turf/T = get_turf(src)
 	for(var/mob/living/silicon/ai/AI in player_list)
 		if(T.loc)
-			to_chat(AI, span_red("<b>Network Alert: Brute-force encryption crack in progress in [T.loc].</b>"))
+			to_chat(AI, span_bolddanger("Network Alert: Brute-force encryption crack in progress in [T.loc]."))
 		else
-			to_chat(AI, span_red("<b>Network Alert: Brute-force encryption crack in progress. Unable to pinpoint location.</b>"))
+			to_chat(AI, span_bolddanger("Network Alert: Brute-force encryption crack in progress. Unable to pinpoint location."))
 	var/obj/machinery/door/D = cable.machine
 	if(!istype(D))
 		hack_aborted = 1
@@ -494,7 +494,7 @@
 	if(..())
 		return TRUE
 
-	var/mob/living/silicon/pai/user = usr
+	var/mob/living/silicon/pai/user = ui.user
 	if(istype(user))
 		var/obj/item/radio/integrated/signal/R = user.sradio
 

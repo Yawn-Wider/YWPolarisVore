@@ -190,7 +190,7 @@
 		occupantData["stat"] = occupant.stat
 		occupantData["health"] = occupant.health
 		occupantData["maxHealth"] = occupant.maxHealth
-		occupantData["minHealth"] = config.health_threshold_dead
+		occupantData["minHealth"] = CONFIG_GET(number/health_threshold_dead)
 		occupantData["bruteLoss"] = occupant.getBruteLoss()
 		occupantData["oxyLoss"] = occupant.getOxyLoss()
 		occupantData["toxLoss"] = occupant.getToxLoss()
@@ -296,10 +296,10 @@
 /obj/machinery/sleeper/tgui_act(action, params, datum/tgui/ui, datum/tgui_state/state)
 	if(..())
 		return TRUE
-	if(!controls_inside && usr == occupant)
+	if(!controls_inside && ui.user == occupant)
 		return
 	if(panel_open)
-		to_chat(usr, span_notice("Close the maintenance panel first."))
+		to_chat(ui.user, span_notice("Close the maintenance panel first."))
 		return
 
 	. = TRUE
@@ -309,16 +309,16 @@
 				return
 			if(occupant.stat == DEAD)
 				var/datum/gender/G = gender_datums[occupant.get_visible_gender()]
-				to_chat(usr, span_danger("This person has no life to preserve anymore. Take [G.him] to a department capable of reanimating [G.him]."))
+				to_chat(ui.user, span_danger("This person has no life to preserve anymore. Take [G.him] to a department capable of reanimating [G.him]."))
 				return
 			var/chemical = params["chemid"]
 			var/amount = text2num(params["amount"])
 			if(!length(chemical) || amount <= 0)
 				return
 			if(occupant.health > min_health) //|| (chemical in emergency_chems))
-				inject_chemical(usr, chemical, amount)
+				inject_chemical(ui.user, chemical, amount)
 			else
-				to_chat(usr, span_danger("This person is not in good enough condition for sleepers to be effective! Use another means of treatment, such as cryogenics!"))
+				to_chat(ui.user, span_danger("This person is not in good enough condition for sleepers to be effective! Use another means of treatment, such as cryogenics!"))
 		if("removebeaker")
 			remove_beaker()
 		if("togglefilter")
@@ -328,7 +328,7 @@
 		if("ejectify")
 			go_out()
 		if("changestasis")
-			var/new_stasis = tgui_input_list(usr, "Levels deeper than 50% stasis level will render the patient unconscious.","Stasis Level", stasis_choices)
+			var/new_stasis = tgui_input_list(ui.user, "Levels deeper than 50% stasis level will render the patient unconscious.","Stasis Level", stasis_choices)
 			if(new_stasis)
 				stasis_level = stasis_choices[new_stasis]
 		if("auto_eject_dead_on")
@@ -337,7 +337,7 @@
 			auto_eject_dead = FALSE
 		else
 			return FALSE
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 
 /obj/machinery/sleeper/process()
 	if(stat & (NOPOWER|BROKEN))
@@ -384,7 +384,7 @@
 			beaker = I
 			user.drop_item()
 			I.loc = src
-			user.visible_message("<b>\The [user]</b> adds \a [I] to \the [src].", span_notice("You add \a [I] to \the [src]."))
+			user.visible_message(span_infoplain(span_bold("\The [user]") + " adds \a [I] to \the [src]."), span_notice("You add \a [I] to \the [src]."))
 		else
 			to_chat(user, span_warning("\The [src] has a beaker already."))
 		return
@@ -459,6 +459,8 @@
 		return
 	if(stat & (BROKEN|NOPOWER))
 		return
+	if(M.buckled)
+		return
 	if(occupant)
 		to_chat(user, span_warning("\The [src] is already occupied."))
 		return
@@ -471,6 +473,8 @@
 		visible_message("\The [user] starts putting [M] into \the [src].")
 
 	if(do_after(user, 20))
+		if(M.buckled)
+			return
 		if(occupant)
 			to_chat(user, span_warning("\The [src] is already occupied."))
 			return

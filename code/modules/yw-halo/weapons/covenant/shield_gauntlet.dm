@@ -11,7 +11,7 @@
 	icon = SHIELD_GAUNTLET_ICON
 	icon_state = "gauntlet"
 
-	action_button_name = "Toggle Shield Gauntlet"
+	actions_types = list(/datum/action/item_action/toggle_shield_gauntlet)
 
 	var/shield_max_charge = 380
 	var/shield_current_charge = 380

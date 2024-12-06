@@ -28,6 +28,8 @@
 	item_state = "analyzer"
 	var/datum/seed/last_seed
 	var/list/last_reagents
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 /obj/item/analyzer/plant_analyzer/Destroy()
 	. = ..()
@@ -64,7 +66,7 @@
 
 	switch(action)
 		if("print")
-			print_report(usr)
+			print_report(ui.user)
 			return TRUE
 		if("close")
 			last_seed = null

@@ -3544,7 +3544,6 @@
 /turf/simulated/shuttle/wall,
 /area/shuttle/arrival/pre_game)
 "qq" = (
-/obj/machinery/disease2/incubator,
 /obj/effect/floor_decal/corner/green/full{
 	dir = 8
 	},
@@ -4737,10 +4736,10 @@
 	},
 /area/centcom/medical)
 "vC" = (
-/obj/machinery/disease2/diseaseanalyser,
 /obj/effect/floor_decal/corner/green{
 	dir = 10
 	},
+/obj/machinery/computer/pandemic,
 /turf/unsimulated/floor{
 	icon_state = "white"
 	},
@@ -6128,15 +6127,6 @@
 	},
 /turf/simulated/shuttle/floor/white,
 /area/centcom/evac)
-"BN" = (
-/obj/machinery/computer/centrifuge,
-/obj/effect/floor_decal/corner/green{
-	dir = 9
-	},
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/centcom/medical)
 "BO" = (
 /obj/structure/bed/chair{
 	dir = 1
@@ -8240,15 +8230,6 @@
 	name = "grass"
 	},
 /area/centcom/main_hall)
-"Lw" = (
-/obj/machinery/computer/diseasesplicer,
-/obj/effect/floor_decal/corner/green/full{
-	dir = 4
-	},
-/turf/unsimulated/floor{
-	icon_state = "white"
-	},
-/area/centcom/medical)
 "Ly" = (
 /obj/effect/floor_decal/corner/orange{
 	dir = 6
@@ -11465,7 +11446,6 @@
 	},
 /area/centcom/specops)
 "ZN" = (
-/obj/machinery/disease2/isolator,
 /obj/effect/floor_decal/corner/green/full{
 	dir = 1
 	},
@@ -21674,7 +21654,7 @@ Bz
 VT
 oQ
 oQ
-BN
+oQ
 tN
 Lf
 VT
@@ -22162,7 +22142,7 @@ Ac
 Dd
 Co
 rt
-Lw
+ib
 VT
 kL
 kL

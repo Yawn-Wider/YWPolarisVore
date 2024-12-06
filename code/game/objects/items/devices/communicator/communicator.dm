@@ -88,6 +88,8 @@ var/global/list/obj/item/communicator/all_communicators = list()
 								"spark" = 'sound/effects/sparks4.ogg',
 								"rad" = 'sound/items/geiger/high1.ogg',
 								"servo" = 'sound/machines/rig/rigservo.ogg')
+	pickup_sound = 'sound/items/pickup/device.ogg'
+	drop_sound = 'sound/items/drop/device.ogg'
 
 // Proc: New()
 // Parameters: None
@@ -277,11 +279,10 @@ var/global/list/obj/item/communicator/all_communicators = list()
 // Parameters: None
 // Description: Removes the ghost's address and nulls the exonet datum, to allow qdel()ing.
 /mob/observer/dead/Destroy()
-	. = ..()
 	if(exonet)
 		exonet.remove_address()
 		qdel_null(exonet)
-	return ..()
+	. = ..()
 
 // Proc: register_device()
 // Parameters: 1 (user - the person to use their name for)

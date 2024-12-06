@@ -17,7 +17,7 @@
 	var/charges = 1
 
 /obj/machinery/syndicate_beacon/attack_hand(var/mob/user as mob)
-	usr.set_machine(src)
+	user.set_machine(src)
 	var/dat = "<font color=#005500><i>Scanning [pick("retina pattern", "voice print", "fingerprints", "dna sequence")]...<br>Identity confirmed,<br></i></font>"
 	if(istype(user, /mob/living/carbon/human) || istype(user, /mob/living/silicon/ai))
 		if(is_special_character(user))
@@ -58,7 +58,7 @@
 				return
 		if(istype(M, /mob/living/carbon/human))
 			var/mob/living/carbon/human/N = M
-			to_chat(N, "<B>You have joined the ranks of the Syndicate and become a traitor to the station!</B>")
+			to_chat(N, span_infoplain(span_bold("You have joined the ranks of the Syndicate and become a traitor to the station!")))
 			traitors.add_antagonist(N.mind)
 			traitors.equip(N)
 			message_admins("[N]/([N.ckey]) has accepted a traitor objective from a syndicate beacon.")

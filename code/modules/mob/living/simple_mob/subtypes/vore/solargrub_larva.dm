@@ -60,7 +60,7 @@ var/global/list/grub_machine_overlays = list()
 	sparks = new(src)
 	sparks.set_up()
 	sparks.attach(src)
-	verbs += /mob/living/proc/ventcrawl
+	add_verb(src, /mob/living/proc/ventcrawl)
 
 /mob/living/simple_mob/animal/solargrub_larva/death()
 	powermachine.draining = 0
@@ -88,7 +88,7 @@ var/global/list/grub_machine_overlays = list()
 		return
 
 	if(istype(loc, /obj/machinery))
-		if(machine_effect && air_master.current_cycle%30)
+		if(machine_effect && SSair.current_cycle%30)
 			for(var/mob/M in player_list)
 				M << machine_effect
 		if(prob(10))

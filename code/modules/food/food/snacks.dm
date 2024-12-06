@@ -320,7 +320,7 @@
 				user.visible_message(span_notice("\The [user] crudely slices \the [src] with [W]!"), span_notice("You crudely slice \the [src] with your [W]!"))
 				slices_lost = rand(1,min(1,round(slices_num/2)))
 			else
-				user.visible_message(span_notice("<b>\The [user]</b> slices \the [src]!"), span_notice("You slice \the [src]!"))
+				user.visible_message(span_notice(span_bold("\The [user]") + " slices \the [src]!"), span_notice("You slice \the [src]!"))
 
 			var/reagents_per_slice = reagents.total_volume/slices_num
 			for(var/i=1 to (slices_num-slices_lost))
@@ -334,9 +334,13 @@
 							S.food_inserted_micros = list()
 						S.food_inserted_micros += F
 						food_inserted_micros -= F
+			on_slice_extra()
 
 			qdel(src)
 			return
+
+/obj/item/reagent_containers/food/snacks/proc/on_slice_extra()
+	return
 
 /obj/item/reagent_containers/food/snacks/MouseDrop_T(mob/living/M, mob/user)
 	if(!user.stat && istype(M) && (M == user) && Adjacent(M) && (M.get_effective_size(TRUE) <= 0.50) && food_can_insert_micro)
@@ -390,7 +394,7 @@
 /obj/item/reagent_containers/food/snacks/attack_generic(var/mob/living/user)
 	if(!isanimal(user) && !isalien(user))
 		return
-	user.visible_message("<b>[user]</b> nibbles away at \the [src].","You nibble away at \the [src].")
+	user.visible_message(span_infoplain(span_bold("[user]") + " nibbles away at \the [src]."),span_info("You nibble away at \the [src]."))
 	bitecount++
 	if(reagents)
 		reagents.trans_to_mob(user, bitesize, CHEM_INGEST)
@@ -1862,7 +1866,7 @@
 		Unwrap(user)
 
 /obj/item/reagent_containers/food/snacks/monkeycube/proc/Expand()
-	src.visible_message("<b>\The [src]</b> expands!")
+	src.visible_message(span_infoplain(span_bold("\The [src]") + " expands!"))
 	var/mob/living/carbon/human/H = new(get_turf(src))
 	H.set_species(monkey_type)
 	H.real_name = H.species.get_random_name()
@@ -3510,6 +3514,7 @@
 	trash = /obj/item/trash/plate
 	bitesize = 2
 
+/* OLD RECIPE
 /obj/item/reagent_containers/food/snacks/sliceable/turkey
 	name = "turkey"
 	desc = "Tastes like chicken."
@@ -3535,6 +3540,51 @@
 	icon = 'icons/obj/food.dmi'
 	icon_state = "turkey_drumstick"
 	trash = /obj/item/trash/plate
+	bitesize = 2
+*/
+
+/obj/item/reagent_containers/food/snacks/sliceable/turkey
+	name = "turkey"
+	desc = "Tastes like chicken."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "roastturkey"
+	slice_path = /obj/item/reagent_containers/food/snacks/turkeyslice
+	slices_num = 6
+	w_class = 2
+	nutriment_amt = 20
+	nutriment_desc = list("turkey" = 20)
+	bitesize = 5
+	trash = /obj/item/trash/turkeybones
+	var/list/extra_product = list(/obj/item/reagent_containers/food/snacks/turkeydrumstick = 2,
+									/obj/item/trash/turkeybones = 1)
+
+/obj/item/reagent_containers/food/snacks/sliceable/turkey/Initialize()
+	. = ..()
+	reagents.add_reagent("blackpepper", 1)
+	reagents.add_reagent("sodiumchloride", 1)
+	reagents.add_reagent("cookingoil", 1)
+
+/obj/item/reagent_containers/food/snacks/sliceable/turkey/on_slice_extra()
+	for(var/i in extra_product)
+		for(var/j=1 to extra_product[i])
+			new i(src.loc)
+
+/obj/item/reagent_containers/food/snacks/turkeyslice
+	name = "turkey'n'mash"
+	desc = "Turkey slices with some delicious stuffing."
+	icon = 'icons/obj/food.dmi'
+	icon_state = "roastturkeynmash"
+	trash = /obj/item/trash/plate
+	bitesize = 2
+
+/obj/item/reagent_containers/food/snacks/turkeydrumstick
+	name = "turkey drumstick"
+	desc = "The best part!"
+	icon = 'icons/obj/food.dmi'
+	icon_state = "roastturkeydrumstick"
+	trash = null
+	nutriment_amt = 8
+	nutriment_desc = list("turkey" = 20)
 	bitesize = 2
 
 /obj/item/reagent_containers/food/snacks/sliceable/suppermatter
@@ -6892,6 +6942,7 @@
 				"zombiepowder",
 				"cryptobiolin",
 				"psilocybin")), 5)
+	reagents.add_reagent("salmonella", 5)
 
 /obj/item/reagent_containers/food/snacks/old/pizza
 	name = "\improper Pizza!"

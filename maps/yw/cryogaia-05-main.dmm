@@ -924,7 +924,7 @@
 	dir = 1
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "aqL" = (
 /obj/structure/window/reinforced,
 /obj/structure/bed/chair{
@@ -982,7 +982,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "asn" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -1797,7 +1797,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "aIf" = (
 /obj/machinery/shieldwallgen,
 /obj/effect/floor_decal/industrial/outline/yellow,
@@ -1828,7 +1828,7 @@
 "aJf" = (
 /obj/machinery/computer/security/engineering,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "aJh" = (
 /obj/structure/table/steel,
 /obj/machinery/recharger,
@@ -3262,7 +3262,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "bkx" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -3526,7 +3526,7 @@
 	},
 /obj/structure/catwalk,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "boY" = (
 /obj/structure/disposalpipe/segment{
 	dir = 1;
@@ -3758,7 +3758,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief,
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "btf" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -6617,7 +6617,7 @@
 	tag_interior_door = "Garage_exit_interior"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "cuR" = (
 /obj/machinery/computer/telescience{
 	dir = 4
@@ -7063,6 +7063,22 @@
 /obj/machinery/shield_diffuser,
 /turf/simulated/floor/tiled/dark,
 /area/hallway/secondary/exit)
+"cCn" = (
+/obj/structure/cable/heavyduty{
+	icon_state = "4-8"
+	},
+/obj/structure/railing,
+/obj/machinery/atmospherics/pipe/simple/hidden/supply{
+	dir = 4
+	},
+/obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
+	dir = 4
+	},
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
+/turf/simulated/floor/plating,
+/area/borealis2/outdoors/exterior)
 "cCt" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -7154,7 +7170,7 @@
 	icon_state = "1-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "cDU" = (
 /obj/structure/grille,
 /obj/structure/cable/green{
@@ -9462,7 +9478,7 @@
 "dzf" = (
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "dzh" = (
 /obj/structure/sink{
 	dir = 8;
@@ -9576,7 +9592,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "dBm" = (
 /obj/machinery/door/firedoor/glass/hidden,
 /obj/effect/decal/cleanable/dirt,
@@ -10087,7 +10103,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "dMC" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -10470,7 +10486,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "dTj" = (
 /obj/structure/filingcabinet/chestdrawer,
 /obj/machinery/light{
@@ -12184,7 +12200,7 @@
 "ezC" = (
 /obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "ezV" = (
 /obj/effect/wingrille_spawn/reinforced,
 /turf/simulated/floor/tiled/steel,
@@ -12277,7 +12293,7 @@
 	tag_interior_door = "Loggingpost_exit_interior"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "eBj" = (
 /turf/simulated/wall,
 /area/medical/patient_wing)
@@ -12536,7 +12552,7 @@
 	dir = 9
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "eHs" = (
 /obj/effect/floor_decal/industrial/warning/dust{
 	dir = 6
@@ -12648,7 +12664,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "eJt" = (
 /obj/effect/floor_decal/borderfloorblack,
 /obj/effect/floor_decal/industrial/danger,
@@ -13028,7 +13044,7 @@
 	req_one_access = newlist()
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "eRd" = (
 /obj/structure/bed/chair{
 	dir = 4
@@ -13368,7 +13384,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/red,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "eXf" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -13409,7 +13425,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "eYh" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -13521,7 +13537,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "fau" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /obj/effect/floor_decal/corner/pink{
@@ -13625,7 +13641,7 @@
 /obj/structure/grille,
 /obj/structure/window/reinforced/full,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "fcl" = (
 /obj/machinery/light{
 	dir = 8
@@ -13840,7 +13856,7 @@
 	pixel_y = 24
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "fhc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -14241,6 +14257,9 @@
 /obj/effect/floor_decal/industrial/danger{
 	dir = 1
 	},
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/exterior)
 "fnW" = (
@@ -14526,7 +14545,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "fsP" = (
 /obj/structure/table/reinforced,
 /obj/item/weapon/book/manual/barman_recipes,
@@ -15429,7 +15448,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "fLb" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4;
@@ -16117,7 +16136,7 @@
 	},
 /obj/machinery/space_heater,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "fXd" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -16492,7 +16511,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "gcK" = (
 /obj/structure/window/reinforced,
 /obj/structure/bed/chair{
@@ -16987,7 +17006,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "glc" = (
 /obj/machinery/light{
 	dir = 8
@@ -17375,7 +17394,7 @@
 /turf/simulated/floor/tiled{
 	icon_state = "monotile"
 	},
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "grO" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -18468,7 +18487,7 @@
 /obj/effect/decal/cleanable/blood/oil/streak,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "gOH" = (
 /obj/effect/floor_decal/borderfloorblack{
 	dir = 8
@@ -18613,7 +18632,7 @@
 /obj/structure/reagent_dispensers/fueltank,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "gRG" = (
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
 	dir = 8
@@ -19006,7 +19025,7 @@
 	pixel_y = 28
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "gZe" = (
 /obj/item/weapon/stool/padded,
 /obj/machinery/button/windowtint{
@@ -19111,7 +19130,7 @@
 /obj/effect/floor_decal/corner_oldtile/red,
 /obj/machinery/recharge_station,
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "haF" = (
 /obj/effect/decal/shadow/floor,
 /obj/structure/railing/grey{
@@ -20162,7 +20181,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "hvR" = (
 /obj/structure/stairs/spawner/north,
 /turf/simulated/floor/tiled/techmaint,
@@ -20438,7 +20457,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "hAk" = (
 /turf/simulated/wall,
 /area/borealis2/outdoors/grounds)
@@ -20524,7 +20543,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/red,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "hBo" = (
 /obj/structure/cable{
 	icon_state = "2-4"
@@ -22421,7 +22440,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "ioh" = (
 /obj/structure/bed/chair/wood/wings,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -22696,7 +22715,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "itN" = (
 /turf/simulated/wall,
 /area/crew_quarters/barrestroom)
@@ -25115,7 +25134,7 @@
 	icon_state = "0-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "jsY" = (
 /obj/tether_away_spawner/cryogaia_spiders,
 /obj/structure/prop/spiderhole,
@@ -25772,7 +25791,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "jES" = (
 /obj/structure/grille,
 /obj/machinery/door/blast/shutters{
@@ -25834,7 +25853,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "jFG" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 6
@@ -26182,7 +26201,7 @@
 	},
 /obj/item/weapon/toy/desk/fan,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "jMN" = (
 /obj/structure/table/standard{
 	name = "plastic table frame"
@@ -26248,7 +26267,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "jOI" = (
 /obj/machinery/computer/secure_data{
 	dir = 8
@@ -27361,7 +27380,7 @@
 	},
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "kkm" = (
 /obj/structure/stairs/spawner/north,
 /turf/simulated/floor/tiled/techmaint,
@@ -28645,7 +28664,7 @@
 /obj/effect/decal/cleanable/blood/oil,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "kJA" = (
 /turf/simulated/floor/tiled/dark,
 /area/rnd/research/testingrange)
@@ -29451,7 +29470,7 @@
 "kYx" = (
 /obj/structure/table/steel,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "kYL" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 1
@@ -29936,7 +29955,7 @@
 /obj/structure/grille,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "liO" = (
 /obj/structure/table/standard,
 /obj/machinery/photocopier/faxmachine{
@@ -31145,7 +31164,7 @@
 	dir = 8
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "lHb" = (
 /obj/structure/table/steel,
 /obj/machinery/recharger,
@@ -31324,7 +31343,7 @@
 	icon_state = "1-2"
 	},
 /turf/simulated/floor/tiled/red,
-/area/cryogaia/outpost/wall)
+/area/security/gatehouse)
 "lJS" = (
 /obj/machinery/embedded_controller/radio/airlock/access_controller{
 	id_tag = "Engineering_exit_control";
@@ -31775,7 +31794,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "lRL" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -32111,7 +32130,7 @@
 	},
 /obj/structure/table/steel,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "lZl" = (
 /obj/machinery/door/airlock/multi_tile/metal{
 	frequency = 1380;
@@ -33099,7 +33118,7 @@
 	icon_state = "0-2"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "mrJ" = (
 /obj/structure/cable/green{
 	d1 = 2;
@@ -33324,7 +33343,7 @@
 "mvp" = (
 /obj/structure/sign/hangar/two,
 /turf/simulated/wall,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "mvt" = (
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
 /turf/simulated/floor/tiled/dark,
@@ -33746,7 +33765,7 @@
 /obj/effect/floor_decal/milspec/monotile,
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "mCz" = (
 /obj/structure/flora/pottedplant{
 	icon_state = "plant-10"
@@ -34097,7 +34116,7 @@
 	},
 /obj/structure/bed,
 /turf/simulated/floor/tiled/red,
-/area/cryogaia/outpost/wall)
+/area/security/gatehouse)
 "mFV" = (
 /obj/machinery/firealarm{
 	dir = 8;
@@ -34627,7 +34646,7 @@
 /area/maintenance/bridge)
 "mNH" = (
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "mNQ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 9
@@ -34772,7 +34791,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "mPL" = (
 /obj/structure/grille,
 /obj/structure/window/reinforced{
@@ -35067,7 +35086,7 @@
 /obj/effect/floor_decal/industrial/hatch/yellow,
 /obj/machinery/door/firedoor/glass,
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "mUx" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall/titanium,
@@ -36374,7 +36393,7 @@
 	},
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "nrP" = (
 /obj/structure/disposalpipe/segment,
 /turf/simulated/wall,
@@ -38246,7 +38265,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/red,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "ocg" = (
 /obj/effect/floor_decal/industrial/warning/dust/corner{
 	dir = 8
@@ -38434,7 +38453,7 @@
 	req_one_access = newlist()
 	},
 /turf/simulated/floor/plating/snow/plating/cryogaia,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "ofP" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
@@ -38668,7 +38687,7 @@
 	},
 /obj/machinery/light/small,
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "ojZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled,
@@ -39952,7 +39971,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "oJT" = (
 /obj/structure/bed/chair/comfy/black{
 	dir = 4
@@ -40186,7 +40205,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "oOq" = (
 /obj/machinery/atmospherics/pipe/simple/visible/yellow{
 	dir = 10
@@ -40864,7 +40883,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "pbl" = (
 /obj/structure/bed/chair/office/dark{
 	dir = 8
@@ -41491,7 +41510,7 @@
 	},
 /obj/machinery/atmospherics/pipe/manifold/hidden/scrubbers,
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "plp" = (
 /obj/structure/disposalpipe/segment,
 /obj/structure/cable/green{
@@ -42008,7 +42027,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "pts" = (
 /obj/machinery/newscaster/security_unit{
 	pixel_x = -30
@@ -42615,7 +42634,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "pET" = (
 /obj/structure/fence,
 /turf/simulated/floor/outdoors/snow/snow/snow2/cryogaia,
@@ -45489,7 +45508,7 @@
 	req_one_access = list(13,1,52)
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "qLY" = (
 /obj/structure/reagent_dispensers/beerkeg/vat,
 /obj/structure/window/reinforced{
@@ -46182,7 +46201,7 @@
 "qYA" = (
 /obj/structure/table/rack/shelf,
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "qYH" = (
 /obj/effect/wingrille_spawn/reinforced,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
@@ -46821,7 +46840,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "rln" = (
 /obj/machinery/access_button/airlock_exterior{
 	master_tag = "SecurityPost_Exit";
@@ -47060,7 +47079,7 @@
 	name = "Thermal Regulator Vent"
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "rqM" = (
 /turf/simulated/floor/tiled/dark,
 /area/chapel/monastery)
@@ -47634,7 +47653,7 @@
 /area/bridge_hallway)
 "rBL" = (
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "rCa" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -49042,7 +49061,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "sed" = (
 /obj/structure/disposalpipe/segment{
 	dir = 4
@@ -50604,6 +50623,9 @@
 	},
 /turf/simulated/floor/tiled,
 /area/teleporter)
+"sGg" = (
+/turf/simulated/wall,
+/area/garage)
 "sGl" = (
 /obj/machinery/conveyor{
 	dir = 4;
@@ -51123,7 +51145,7 @@
 	name = "Security Post Locker"
 	},
 /turf/simulated/floor/tiled/red,
-/area/cryogaia/outpost/wall)
+/area/security/gatehouse)
 "sRZ" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
@@ -52224,7 +52246,7 @@
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "tpG" = (
 /obj/structure/cable{
 	icon_state = "2-8"
@@ -53341,7 +53363,7 @@
 	pixel_y = -32
 	},
 /turf/simulated/open/cryogaia,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "tIN" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -53375,7 +53397,7 @@
 	dir = 10
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "tJQ" = (
 /obj/machinery/atmospherics/pipe/simple/visible/black{
 	dir = 9
@@ -53787,7 +53809,7 @@
 	dir = 1
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "tSD" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 6
@@ -54587,7 +54609,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "ukZ" = (
 /obj/structure/stairs/spawner/north,
 /turf/simulated/floor/plating,
@@ -54878,6 +54900,9 @@
 "uuZ" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
 /obj/effect/floor_decal/industrial/danger,
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/exterior)
 "uvx" = (
@@ -55652,7 +55677,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "uKL" = (
 /obj/structure/table/reinforced,
 /obj/structure/window/reinforced{
@@ -55941,7 +55966,7 @@
 	dir = 4
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "uRB" = (
 /obj/machinery/disposal,
 /obj/structure/disposalpipe/trunk{
@@ -56158,6 +56183,9 @@
 "uVA" = (
 /turf/simulated/wall,
 /area/storage/emergency_storage/emergency)
+"uVF" = (
+/turf/simulated/wall,
+/area/security/gatehouse)
 "uVW" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -56332,7 +56360,7 @@
 	icon_state = "plant-06"
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "uZB" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -56603,6 +56631,11 @@
 	},
 /turf/simulated/floor/tiled,
 /area/quartermaster/storage)
+"vfM" = (
+/obj/structure/grille,
+/obj/structure/window/reinforced/full,
+/turf/simulated/floor/plating,
+/area/garage)
 "vfN" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
@@ -58179,7 +58212,7 @@
 	},
 /obj/structure/table/reinforced,
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "vLy" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -58335,7 +58368,7 @@
 	},
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "vOa" = (
 /obj/machinery/power/terminal{
 	dir = 1
@@ -59624,7 +59657,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "wlS" = (
 /obj/effect/floor_decal/corner_oldtile/purple,
 /obj/structure/cable/green{
@@ -59718,7 +59751,7 @@
 /obj/structure/window/reinforced/full,
 /obj/structure/grille,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "wmT" = (
 /obj/structure/closet/crate/freezer,
 /obj/machinery/atmospherics/unary/vent_pump/on{
@@ -60130,7 +60163,7 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "wvx" = (
 /obj/structure/cable/green{
 	d1 = 1;
@@ -60623,7 +60656,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/vehicle/train/engine/quadbike/random,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "wDa" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -61392,6 +61425,9 @@
 /area/chapel/monastery)
 "wPZ" = (
 /obj/machinery/atmospherics/pipe/simple/heat_exchanging,
+/obj/effect/map_effect/portal/line/side_a{
+	dir = 4
+	},
 /turf/simulated/floor/tiled/techmaint,
 /area/borealis2/outdoors/exterior)
 "wRg" = (
@@ -61838,7 +61874,7 @@
 	req_one_access = list(1,52)
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "xbH" = (
 /obj/effect/floor_decal/corner_oldtile/purple{
 	dir = 8
@@ -62507,7 +62543,7 @@
 	dir = 8
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "xnU" = (
 /obj/machinery/camera/network/engine{
 	c_tag = "ENG - Engine Core West";
@@ -63155,7 +63191,7 @@
 	},
 /obj/effect/decal/cleanable/dirt,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "xzL" = (
 /obj/structure/cable/green{
 	d1 = 4;
@@ -63825,7 +63861,7 @@
 /obj/structure/girder,
 /obj/effect/floor_decal/rust,
 /turf/simulated/floor/plating,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "xOG" = (
 /obj/machinery/door/airlock{
 	name = "Unisex Restrooms"
@@ -64133,7 +64169,7 @@
 /obj/effect/decal/cleanable/dirt,
 /obj/item/weapon/vehicle_assembly/snowmobile,
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "xTH" = (
 /obj/structure/cable/yellow{
 	d2 = 2;
@@ -64192,7 +64228,7 @@
 	icon_state = "1-4"
 	},
 /turf/simulated/floor/tiled/steel,
-/area/borealis2/outdoors/grounds)
+/area/security/gatehouse)
 "xUo" = (
 /obj/machinery/status_display,
 /turf/simulated/wall/r_wall,
@@ -64807,7 +64843,7 @@
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/techmaint,
-/area/borealis2/outdoors/grounds)
+/area/garage)
 "yfL" = (
 /obj/effect/floor_decal/corner_oldtile/purple,
 /obj/effect/floor_decal/corner_oldtile/purple{
@@ -65475,7 +65511,7 @@ lbT
 lbT
 lbT
 lrv
-vQw
+cCn
 fnR
 wPZ
 wPZ
@@ -67251,12 +67287,12 @@ uDf
 cpw
 rzG
 xEX
-hAk
-hAk
+uVF
+uVF
 eWS
 hBm
 obD
-hAk
+uVF
 xAz
 gnM
 cpw
@@ -67413,12 +67449,12 @@ uDf
 uDf
 rzG
 szT
-hAk
+uVF
 uZy
 jOF
 mNH
 hat
-hAk
+uVF
 omh
 gnM
 cpw
@@ -67737,7 +67773,7 @@ uDf
 uDf
 rzG
 rHd
-hAk
+uVF
 bsZ
 plf
 xUi
@@ -68061,12 +68097,12 @@ uDf
 uDf
 rzG
 cIG
-hAk
+uVF
 nrM
 qYA
 gYG
 vLk
-hAk
+uVF
 fgG
 gnM
 cpw
@@ -68223,12 +68259,12 @@ uDf
 uDf
 rzG
 rHd
-hAk
-hAk
-hAk
+uVF
+uVF
+uVF
 xbE
 liw
-hAk
+uVF
 fgG
 gnM
 cpw
@@ -68386,11 +68422,11 @@ uDf
 rzG
 tIp
 tfj
-hAk
+uVF
 eBb
 tpy
 fan
-hAk
+uVF
 qUQ
 gnM
 cpw
@@ -68548,7 +68584,7 @@ uDf
 nqj
 iKn
 rHd
-hAk
+uVF
 fWG
 jsQ
 vNF
@@ -68710,11 +68746,11 @@ uDf
 uDf
 rzG
 rHd
-hAk
-hAk
-hAk
-hAk
-hAk
+uVF
+uVF
+uVF
+uVF
+uVF
 gHH
 gnM
 cpw
@@ -70170,18 +70206,18 @@ uDf
 uNy
 cpw
 wuX
-hAk
-hAk
-hAk
-fci
+sGg
+sGg
+sGg
+vfM
 tcZ
 rqn
 rqn
-hAk
+sGg
 rqn
 rqn
 mvp
-hAk
+sGg
 uDf
 uDf
 uDf
@@ -70332,7 +70368,7 @@ toE
 toE
 mUf
 ofF
-hAk
+sGg
 kYx
 jMo
 aJf
@@ -70343,7 +70379,7 @@ fKR
 wlI
 xnS
 ojU
-hAk
+sGg
 uDf
 uDf
 uDf
@@ -70667,7 +70703,7 @@ uRz
 dMl
 dMl
 lGZ
-fci
+vfM
 uDf
 uDf
 uDf
@@ -70829,7 +70865,7 @@ rlb
 mCr
 kJq
 aqH
-fci
+vfM
 uDf
 uDf
 uDf
@@ -70991,7 +71027,7 @@ bkp
 wCI
 grC
 bom
-fci
+vfM
 uDf
 uDf
 uDf
@@ -71153,7 +71189,7 @@ lZh
 kJq
 mCr
 tIL
-hAk
+sGg
 uDf
 uDf
 uDf
@@ -71307,15 +71343,15 @@ oIs
 oIs
 pvl
 vtz
-hAk
+sGg
 xOF
-hAk
-hAk
+sGg
+sGg
 xOF
 xOF
-hAk
-hAk
-hAk
+sGg
+sGg
+sGg
 uDf
 uDf
 uDf

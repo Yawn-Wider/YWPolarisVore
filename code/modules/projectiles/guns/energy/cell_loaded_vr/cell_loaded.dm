@@ -1,11 +1,9 @@
 // The Gun //
 /obj/item/gun/projectile/cell_loaded //this one can load both medical and security cells! for ERT/admin use.
 	name = "multipurpose cell-loaded revolver"
-	desc = "Variety is the spice of life! This weapon is a hybrid of the HI-102b 'Nanotech Selectable-Cell Weapon' and the Vey-Med ML-3 'Medigun'. \
+	desc = "Variety is the spice of life! This weapon is a hybrid of the Hephaestus 102b 'Nanotech Selectable-Fire Weapon' and the Vey-Med ML-3 'Medigun', dubbed the 'NSCW-ML3M'. \
 	It can fire both harmful and healing cells with an internal nanite fabricator and energy weapon cell loader. Up to three combinations of \
-	energy beams can be configured at once. Ammo not included."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus,
-							/datum/category_item/catalogue/information/organization/vey_med)
+	energy beams can be configured at once. Ammo not included." // YW EDIT NSFW TO NSCW
 
 	icon = 'icons/vore/custom_guns_vr.dmi'
 	icon_state = "nsfw"
@@ -210,7 +208,6 @@
 /obj/item/ammo_casing/microbattery
 	name = "\'NSCW\' microbattery - UNKNOWN"
 	desc = "A miniature battery for an energy weapon."
-	catalogue_data = list(/datum/category_item/catalogue/information/organization/hephaestus)
 	icon = 'icons/obj/ammo_vr.dmi'
 	icon_state = "nsfw_batt"
 	slot_flags = SLOT_BELT | SLOT_EARS

@@ -40,11 +40,6 @@
 //Shuttle madness!
 #define SHUTTLE_CRASHED 3 // Yup that can happen now
 
-#define BLUE_SHIELDED 2 // Shield from bluespace teleportation (telescience)
-#define TEMPERATURE_SHIELDED 4 // YW Addition: Temperature change shielding
-// YW Addition: 8 used for persistence block somewhere else
-#define PHASE_SHIELDED 16 // YW Addition: Prevents shadekin phasing in/out in this area
-
 //Herm Gender
 #define HERM "herm"
 

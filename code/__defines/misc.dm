@@ -108,6 +108,8 @@
 #define AREA_ALLOW_LARGE_SIZE		0x400	// If mob size is limited in the area.
 #define AREA_BLOCK_SUIT_SENSORS		0x800	// If suit sensors are blocked in the area.
 #define AREA_BLOCK_TRACKING			0x1000	// If camera tracking is blocked in the area.
+#define TEMPERATURE_SHIELDED 		0x1200 // YW Addition: Temperature change shielding
+#define PHASE_SHIELDED				0x1400 // YW Addition: Prevents shadekin phasing in/out in this area
 
 // OnTopic return values
 #define TOPIC_NOACTION 0

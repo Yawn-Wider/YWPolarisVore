@@ -178,7 +178,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/luxury_boat/Initialize()
 	. = ..()
-	var/datum/lore/organization/O = loremaster.organizations[/datum/lore/organization/gov/almachi] //YW Change - gov we actually have
+	var/datum/lore/organization/O = loremaster.organizations[/datum/lore/organization/gov/ares] //YW Change - gov we actually have
 	var/newname = "ECS-T [pick(O.ship_names)]"
 	name = newname
 	scanner_desc = {"\[i\]Registration\[/i\]: [newname]

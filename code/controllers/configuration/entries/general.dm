@@ -116,9 +116,9 @@
 	default = 36000
 	min_val = 0
 
-/// number of extension votes before the final one
+/// number of extension votes before the final one YW ADDITION
 /datum/config_entry/number/vote_autotransfer_amount
-	default = 1
+	default = 3
 	min_val = 0
 
 ///Length of time before round start when autogamemode vote is called (in seconds, default 100).
@@ -258,7 +258,7 @@
 
 /// time before a dead player is allowed to respawn (in ds, though the config file asks for minutes, and it's converted below)
 /datum/config_entry/number/respawn_time
-	default = 3000
+	default = 60 // YW EDIT 3000 to 60
 
 /datum/config_entry/number/respawn_time/ValidateAndSet(num_val)
 	return num_val MINUTES

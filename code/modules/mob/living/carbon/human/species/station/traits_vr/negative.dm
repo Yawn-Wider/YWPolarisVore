@@ -162,6 +162,8 @@
 	desc = "Increases your susceptibility to electric shocks by 100%"
 	cost = -4
 	var_changes = list("siemens_coefficient" = 2.0) //This makes you extremely weak to tasers.
+	varchange_type = TRAIT_VARCHANGE_LESS_BETTER
+
 //YW ADDITIONS: END
 
 /datum/trait/negative/haemophilia
@@ -239,10 +241,12 @@
 	varchange_type = TRAIT_VARCHANGE_MORE_BETTER
 /datum/trait/negative/bad_swimmer
 	name = "Bad Swimmer"
-	desc = "You can't swim very well, all water slows you down a lot and you drown in deep water."
+	desc = "You can't swim very well, all water slows you down a lot and you drown in deep water. You also swim up and down 25% slower."
 	cost = -1
 	custom_only = FALSE
-	var_changes = list("bad_swimmer" = 1, "water_movement" = 4)
+	var_changes = list("bad_swimmer" = 1, "water_movement" = 4, "swim_mult" = 1.25)
+	varchange_type = TRAIT_VARCHANGE_LESS_BETTER
+	excludes = list(/datum/trait/positive/good_swimmer)
 
 //YW ADDITIONS: START
 /datum/trait/negative/light_sensitivity
@@ -250,10 +254,12 @@
 	desc = "You have trouble dealing with sudden flashes of light, taking some time for you to recover. The effects of flashes from cameras and security equipment leaves you stunned for some time."
 	cost = -1
 	var_changes = list("flash_mod" = 1.5)
+	varchange_type = TRAIT_VARCHANGE_LESS_BETTER
 
 /datum/trait/negative/light_sensitivity_plus
 	name = "Photosensitivity Extreme"
 	desc = "You have trouble dealing with sudden flashes of light, taking quite a long time for you to be able to recover. The effects of flashes from cameras and security equipment leave you stunned for some time."
 	cost = -2
 	var_changes = list("flash_mod" = 2.0)
+	varchange_type = TRAIT_VARCHANGE_LESS_BETTER
 //YW ADDITIONS: END

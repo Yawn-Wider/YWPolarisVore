@@ -19,6 +19,7 @@ cfg/
 #Ignore everything in datafolder and subdirectories
 /data/**/*
 /tmp/**/*
+/cache/**/*
 
 #Visual studio stuff
 *.vscode/*
@@ -30,5 +31,12 @@ cfg/
 temp.dmi
 node_modules/
 package-lock.json
-# YW ADDITION: start
-# YW ADDITION: end
+
+# CBT Things
+.cache
+
+#These get built by some automatic process
+tgui/public/tgui.bundle.css
+tgui/public/tgui.bundle.js
+#ignore tracy dll
+prof.dll

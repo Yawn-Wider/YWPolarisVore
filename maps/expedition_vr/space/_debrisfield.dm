@@ -131,7 +131,7 @@
 
 
 /area/submap/debrisfield/luxury_boat
-	secret_name = 0
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS
 
 /area/submap/debrisfield/luxury_boat/bridge
 	name = "Captain's Quarters"
@@ -178,7 +178,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/luxury_boat/Initialize()
 	. = ..()
-	var/datum/lore/organization/O = loremaster.organizations[/datum/lore/organization/gov/almachi] //YW Change - gov we actually have
+	var/datum/lore/organization/O = loremaster.organizations[/datum/lore/organization/gov/ares] //YW Change - gov we actually have
 	var/newname = "ECS-T [pick(O.ship_names)]"
 	name = newname
 	scanner_desc = {"\[i\]Registration\[/i\]: [newname]
@@ -222,7 +222,7 @@
 	name = "POI - Destroyed Mining Outpost"
 
 /area/submap/debrisfield/tinyshuttle
-	secret_name = 0
+	flags = RAD_SHIELDED | AREA_FORBID_EVENTS
 
 /area/submap/debrisfield/tinyshuttle/crew
 	name = "Crew Bay"
@@ -316,7 +316,7 @@
 
 /obj/structure/fuel_port/empty_tank/Initialize()
 	. = ..()
-	var/obj/item/weapon/tank/phoron/T = locate() in src
+	var/obj/item/tank/phoron/T = locate() in src
 	if(T)
 		T.air_contents.remove(T.air_contents.total_moles)
 

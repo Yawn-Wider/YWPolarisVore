@@ -182,7 +182,7 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/excursion)
 "ay" = (
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
@@ -237,10 +237,10 @@
 	name = "plastic table frame"
 	},
 /obj/machinery/atmospherics/unary/vent_scrubber/on,
-/obj/item/weapon/reagent_containers/food/condiment/small/peppermill{
+/obj/item/reagent_containers/food/condiment/small/peppermill{
 	pixel_x = 5
 	},
-/obj/item/weapon/reagent_containers/food/condiment/small/saltshaker{
+/obj/item/reagent_containers/food/condiment/small/saltshaker{
 	pixel_x = -5
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -301,11 +301,11 @@
 /area/shuttle/excursion)
 "aQ" = (
 /obj/structure/table/rack,
-/obj/item/weapon/storage/belt/utility/full,
+/obj/item/storage/belt/utility/full,
 /obj/item/clothing/head/pilot,
 /obj/item/clothing/head/pilot,
-/obj/item/weapon/storage/box/survival/space,
-/obj/item/weapon/storage/toolbox/emergency,
+/obj/item/storage/box/survival/space,
+/obj/item/storage/toolbox/emergency,
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 10
 	},
@@ -343,7 +343,7 @@
 	pixel_x = 28;
 	pixel_y = 28
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Common Channel";
 	pixel_x = 21
@@ -504,7 +504,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/item/device/radio/intercom/department/medbay{
+/obj/item/radio/intercom/department/medbay{
 	dir = 4;
 	pixel_x = 32
 	},
@@ -804,8 +804,8 @@
 /area/cryogaia/outpost/tower/west)
 "bT" = (
 /obj/structure/closet/crate/freezer/rations,
-/obj/item/weapon/storage/mre/menu11,
-/obj/item/weapon/storage/mre/menu10,
+/obj/item/storage/mre/menu11,
+/obj/item/storage/mre/menu10,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
 "bU" = (
@@ -968,7 +968,7 @@
 /obj/structure/bed,
 /obj/structure/medical_stand,
 /obj/structure/curtain/open/privacy,
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	pixel_y = 30
 	},
 /turf/simulated/floor/tiled/techmaint,
@@ -1128,10 +1128,10 @@
 	req_access = list();
 	req_one_access = list()
 	},
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
-/obj/item/weapon/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
+/obj/item/reagent_containers/blood/OMinus,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 9
 	},
@@ -1150,7 +1150,7 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/weapon/material/ashtray/plastic,
+/obj/item/material/ashtray/plastic,
 /turf/simulated/floor/tiled/white,
 /area/medical/medbayskybridge)
 "cH" = (
@@ -1227,15 +1227,15 @@
 	req_access = list();
 	req_one_access = list()
 	},
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/clotting,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/brute,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/brute,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/burn,
-/obj/item/weapon/reagent_containers/hypospray/autoinjector/biginjector/burn,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/reagent_containers/syringe/antiviral,
-/obj/item/weapon/reagent_containers/syringe/inaprovaline,
-/obj/item/weapon/storage/firstaid/regular,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/clotting,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/brute,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/brute,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/burn,
+/obj/item/reagent_containers/hypospray/autoinjector/biginjector/burn,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/antiviral,
+/obj/item/reagent_containers/syringe/inaprovaline,
+/obj/item/storage/firstaid/regular,
 /turf/simulated/floor/tiled/techmaint,
 /area/shuttle/excursion)
 "cQ" = (
@@ -1464,14 +1464,14 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
 "dq" = (
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 1;
 	pixel_y = -30
 	},
@@ -1750,7 +1750,7 @@
 /area/borealis2/outdoors/grounds/upper)
 "dP" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/stool,
+/obj/item/stool,
 /obj/structure/cable/yellow{
 	d1 = 4;
 	d2 = 8;
@@ -1793,7 +1793,7 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "dV" = (
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
@@ -1893,7 +1893,7 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /obj/machinery/holoposter{
 	dir = 8;
 	pixel_x = 30
@@ -1993,7 +1993,7 @@
 "eu" = (
 /obj/effect/floor_decal/industrial/outline/red,
 /obj/structure/closet/secure_closet/guncabinet/excursion,
-/obj/item/weapon/pickaxe,
+/obj/item/pickaxe,
 /obj/structure/window/reinforced{
 	dir = 8
 	},
@@ -2424,7 +2424,7 @@
 /obj/structure/fuel_port{
 	pixel_y = 32
 	},
-/obj/item/weapon/tank/phoron,
+/obj/item/tank/phoron,
 /obj/structure/handrail{
 	dir = 8
 	},
@@ -2469,7 +2469,7 @@
 /obj/structure/table/steel,
 /obj/random/maintenance/engineering,
 /obj/item/clothing/glasses/welding,
-/obj/item/weapon/weldingtool,
+/obj/item/weldingtool,
 /turf/simulated/floor/tiled/techmaint,
 /area/cryogaia/station/excursion_dock)
 "fy" = (
@@ -2679,7 +2679,7 @@
 /obj/effect/floor_decal/corner/red{
 	dir = 6
 	},
-/obj/item/device/radio/intercom/department/security{
+/obj/item/radio/intercom/department/security{
 	dir = 4;
 	pixel_x = 24
 	},
@@ -2719,8 +2719,8 @@
 "gk" = (
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/shoes/magboots,
-/obj/item/device/suit_cooling_unit,
-/obj/item/weapon/tank/oxygen,
+/obj/item/suit_cooling_unit,
+/obj/item/tank/oxygen,
 /obj/item/clothing/suit/space/void/medical,
 /obj/item/clothing/head/helmet/space/void/medical,
 /obj/machinery/light{
@@ -2735,14 +2735,14 @@
 "gm" = (
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/shoes/magboots,
-/obj/item/device/suit_cooling_unit,
-/obj/item/weapon/tank/oxygen,
+/obj/item/suit_cooling_unit,
+/obj/item/tank/oxygen,
 /obj/item/clothing/suit/space/void/medical,
 /obj/item/clothing/head/helmet/space/void/medical,
 /turf/simulated/floor/tiled/steel_grid,
 /area/cryogaia/station/explorer_prep)
 "gn" = (
-/obj/item/device/bluespaceradio/cryogaia_prelinked,
+/obj/item/bluespaceradio/cryogaia_prelinked,
 /obj/structure/table/rack/shelf,
 /obj/machinery/light{
 	dir = 1
@@ -2769,8 +2769,8 @@
 /area/medical/medbayupper)
 "gr" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/tank/oxygen,
-/obj/item/device/suit_cooling_unit,
+/obj/item/tank/oxygen,
+/obj/item/suit_cooling_unit,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/pilot,
 /obj/item/clothing/head/helmet/space/void/pilot,
@@ -2794,8 +2794,8 @@
 /area/quartermaster/miningdock)
 "gu" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/tank/oxygen,
-/obj/item/device/suit_cooling_unit,
+/obj/item/tank/oxygen,
+/obj/item/suit_cooling_unit,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/pilot/alt,
 /obj/item/clothing/head/helmet/space/void/pilot/alt,
@@ -2822,7 +2822,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
@@ -3071,8 +3071,8 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/weapon/reagent_containers/food/drinks/britcup,
-/obj/item/weapon/reagent_containers/food/drinks/britcup,
+/obj/item/reagent_containers/food/drinks/britcup,
+/obj/item/reagent_containers/food/drinks/britcup,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -3238,7 +3238,7 @@
 	dir = 6
 	},
 /obj/structure/table/steel,
-/obj/item/device/radio,
+/obj/item/radio,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "hs" = (
@@ -3286,7 +3286,7 @@
 	d2 = 4;
 	icon_state = "2-4"
 	},
-/obj/item/device/radio/intercom/department/security{
+/obj/item/radio/intercom/department/security{
 	dir = 8;
 	pixel_x = -24
 	},
@@ -3329,19 +3329,19 @@
 /area/cryogaia/station/explorer_prep)
 "hC" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -4;
 	pixel_y = -4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = -4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 4
 	},
@@ -3590,7 +3590,7 @@
 /area/cryogaia/station/explorer_prep)
 "ib" = (
 /obj/structure/filingcabinet/filingcabinet,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	pixel_x = -24
 	},
@@ -3706,11 +3706,11 @@
 /area/cryogaia/station/pathfinder_office)
 "im" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/gps/explorer{
+/obj/item/gps/explorer{
 	pixel_x = -6;
 	pixel_y = -4
 	},
-/obj/item/device/gps/explorer{
+/obj/item/gps/explorer{
 	pixel_x = 5;
 	pixel_y = -4
 	},
@@ -4055,19 +4055,19 @@
 /area/cryogaia/station/pathfinder_office)
 "iO" = (
 /obj/structure/table/rack/shelf,
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -4;
 	pixel_y = -4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = -4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/item/device/radio{
+/obj/item/radio{
 	pixel_x = 5;
 	pixel_y = 4
 	},
@@ -4169,7 +4169,7 @@
 /area/cryogaia/station/explorer_prep)
 "jb" = (
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/super;
+	cell_type = /obj/item/cell/super;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
@@ -4235,11 +4235,11 @@
 /area/cryogaia/station/pathfinder_office)
 "jg" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 1;
 	pixel_y = 9
 	},
-/obj/item/weapon/pen,
+/obj/item/pen,
 /obj/machinery/atmospherics/unary/vent_scrubber/on{
 	dir = 1
 	},
@@ -4256,7 +4256,7 @@
 	pixel_x = 26;
 	pixel_y = -26
 	},
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 8
@@ -4287,8 +4287,8 @@
 /area/constructionsite/medical/upper)
 "jl" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/tank/oxygen,
-/obj/item/device/suit_cooling_unit,
+/obj/item/tank/oxygen,
+/obj/item/suit_cooling_unit,
 /obj/effect/floor_decal/steeldecal/steel_decals9,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 4
@@ -4457,19 +4457,19 @@
 /area/cryogaia/station/pathfinder_office)
 "jC" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/storage/backpack/parachute{
+/obj/item/storage/backpack/parachute{
 	pixel_x = -4;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/backpack/parachute{
+/obj/item/storage/backpack/parachute{
 	pixel_x = 5;
 	pixel_y = 4
 	},
-/obj/item/weapon/storage/backpack/parachute{
+/obj/item/storage/backpack/parachute{
 	pixel_x = -4;
 	pixel_y = -6
 	},
-/obj/item/weapon/storage/backpack/parachute{
+/obj/item/storage/backpack/parachute{
 	pixel_x = 5;
 	pixel_y = -6
 	},
@@ -4590,7 +4590,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = 24
 	},
@@ -4762,8 +4762,8 @@
 /area/quartermaster/miningdock)
 "kk" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/tank/oxygen,
-/obj/item/device/suit_cooling_unit,
+/obj/item/tank/oxygen,
+/obj/item/suit_cooling_unit,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 8
 	},
@@ -4784,7 +4784,7 @@
 /turf/simulated/wall,
 /area/civilian/atrium/upper)
 "km" = (
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
@@ -4792,7 +4792,7 @@
 /area/chapel/monastery/upper)
 "kn" = (
 /obj/structure/table/rack/shelf,
-/obj/item/weapon/tank/oxygen,
+/obj/item/tank/oxygen,
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 8
 	},
@@ -4803,7 +4803,7 @@
 /obj/effect/floor_decal/steeldecal/steel_decals9{
 	dir = 4
 	},
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/item/clothing/shoes/magboots,
 /obj/item/clothing/suit/space/void/exploration,
 /obj/item/clothing/head/helmet/space/void/exploration,
@@ -5241,7 +5241,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Common Channel";
 	pixel_y = 21
@@ -5261,7 +5261,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
@@ -5518,7 +5518,7 @@
 /area/cryogaia/station/explorer_meeting)
 "lJ" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin{
+/obj/item/paper_bin{
 	pixel_x = 1;
 	pixel_y = 9
 	},
@@ -5526,12 +5526,12 @@
 /area/cryogaia/station/explorer_meeting)
 "lK" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/pen,
+/obj/item/pen,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "lM" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/folder/blue,
+/obj/item/folder/blue,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "lN" = (
@@ -5662,12 +5662,12 @@
 /area/cryogaia/outpost/tower/northwest)
 "mc" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/folder/yellow,
+/obj/item/folder/yellow,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "md" = (
 /obj/structure/table/woodentable,
-/obj/item/device/universal_translator,
+/obj/item/universal_translator,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "me" = (
@@ -5707,13 +5707,13 @@
 /area/cryogaia/station/explorer_entrance)
 "mg" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/folder/yellow,
+/obj/item/folder/yellow,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "mh" = (
 /obj/structure/table/woodentable,
-/obj/item/weapon/paper_bin,
-/obj/item/weapon/pen,
+/obj/item/paper_bin,
+/obj/item/pen,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "mi" = (
@@ -5740,14 +5740,14 @@
 /obj/structure/closet/crate/centauri{
 	name = "Liquid Rations"
 	},
-/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-/obj/item/weapon/reagent_containers/food/snacks/liquidfood,
-/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
-/obj/item/weapon/reagent_containers/food/snacks/liquidprotein,
+/obj/item/reagent_containers/food/snacks/liquidfood,
+/obj/item/reagent_containers/food/snacks/liquidfood,
+/obj/item/reagent_containers/food/snacks/liquidfood,
+/obj/item/reagent_containers/food/snacks/liquidfood,
+/obj/item/reagent_containers/food/snacks/liquidprotein,
+/obj/item/reagent_containers/food/snacks/liquidprotein,
+/obj/item/reagent_containers/food/snacks/liquidprotein,
+/obj/item/reagent_containers/food/snacks/liquidprotein,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "ml" = (
@@ -5823,7 +5823,7 @@
 /obj/structure/bed/chair{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -5954,11 +5954,11 @@
 	},
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/structure/table/standard,
-/obj/item/weapon/storage/box/cups,
+/obj/item/storage/box/cups,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_entrance)
 "mG" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	pixel_x = 24
 	},
@@ -6087,7 +6087,7 @@
 /area/cryogaia/outpost/elevator/medupper)
 "mV" = (
 /obj/structure/table/woodentable,
-/obj/item/device/camera,
+/obj/item/camera,
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 8
@@ -6111,7 +6111,7 @@
 /area/cryogaia/station/explorer_meeting)
 "mX" = (
 /obj/structure/table/woodentable,
-/obj/item/device/taperecorder,
+/obj/item/taperecorder,
 /obj/effect/floor_decal/corner_oldtile/gray,
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 8
@@ -6152,12 +6152,12 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_meeting)
 "nb" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	pixel_x = -24
 	},
 /obj/structure/table/glass,
-/obj/item/weapon/material/ashtray/plastic,
+/obj/item/material/ashtray/plastic,
 /obj/effect/floor_decal/corner_oldtile/gray{
 	dir = 8
 	},
@@ -6186,7 +6186,7 @@
 /obj/item/clothing/suit/space/void/mining,
 /obj/item/clothing/mask/breath,
 /obj/item/clothing/head/helmet/space/void/mining,
-/obj/item/weapon/mining_scanner,
+/obj/item/mining_scanner,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "ne" = (
@@ -6234,7 +6234,7 @@
 /area/cryogaia/outpost/tower/southeast)
 "ni" = (
 /obj/structure/bookcase/manuals/medical,
-/obj/item/weapon/book/manual/stasis,
+/obj/item/book/manual/stasis,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -6485,7 +6485,7 @@
 "nL" = (
 /obj/effect/floor_decal/corner/paleblue/full,
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/super;
+	cell_type = /obj/item/cell/super;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
@@ -6554,7 +6554,7 @@
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
 "ob" = (
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
@@ -6736,7 +6736,7 @@
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
@@ -6917,7 +6917,7 @@
 	name = "plastic table frame"
 	},
 /obj/machinery/microwave,
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
@@ -7128,7 +7128,7 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
 "qi" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Common Channel";
 	pixel_y = 21
@@ -7445,7 +7445,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -7493,7 +7493,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "rT" = (
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
@@ -7514,7 +7514,7 @@
 /turf/simulated/floor/wood,
 /area/security/breakroom)
 "sd" = (
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 1;
 	pixel_y = -30
 	},
@@ -7540,7 +7540,7 @@
 /turf/simulated/floor/plating/snow/plating,
 /area/civilian/atrium/upper)
 "sm" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -7716,14 +7716,14 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper/solars)
 "td" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Common Channel";
 	pixel_x = 21
@@ -7797,7 +7797,7 @@
 /turf/simulated/floor/tiled/white,
 /area/cryogaia/station/medical/upper)
 "tw" = (
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
@@ -7811,7 +7811,7 @@
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/east)
 "tF" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Common Channel";
 	pixel_x = 21
@@ -7915,7 +7915,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 10
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 1;
 	pixel_y = -30
 	},
@@ -7966,7 +7966,7 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
@@ -8048,7 +8048,7 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /obj/machinery/atmospherics/unary/vent_pump/siphon/on/atmos/relief{
 	dir = 8
 	},
@@ -8487,7 +8487,7 @@
 /obj/structure/bed/chair{
 	dir = 4
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -8569,7 +8569,7 @@
 /area/quartermaster/miningdock)
 "xk" = (
 /obj/machinery/portable_atmospherics/canister/oxygen,
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Common Channel";
 	pixel_x = 21
@@ -8664,7 +8664,7 @@
 	pixel_y = -28
 	},
 /obj/machinery/power/apc{
-	cell_type = /obj/item/weapon/cell/super;
+	cell_type = /obj/item/cell/super;
 	dir = 8;
 	name = "west bump";
 	pixel_x = -28
@@ -8878,8 +8878,8 @@
 	dir = 4
 	},
 /obj/machinery/recharger,
-/obj/item/device/defib_kit/loaded,
-/obj/item/device/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
+/obj/item/defib_kit/loaded,
 /obj/machinery/newscaster{
 	layer = 3.3;
 	pixel_x = 28
@@ -8895,8 +8895,8 @@
 /area/civilian/atrium/upper)
 "yR" = (
 /obj/structure/table/steel,
-/obj/item/weapon/gun/energy/netgun,
-/obj/item/weapon/gun/energy/netgun,
+/obj/item/gun/energy/netgun,
+/obj/item/gun/energy/netgun,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/explorer_prep)
 "yT" = (
@@ -8940,7 +8940,7 @@
 	dir = 5
 	},
 /obj/structure/table/steel,
-/obj/item/weapon/paper/rogueminer,
+/obj/item/paper/rogueminer,
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "zi" = (
@@ -9015,7 +9015,7 @@
 	dir = 10
 	},
 /obj/structure/table/steel,
-/obj/item/device/radio,
+/obj/item/radio,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "zE" = (
@@ -9093,7 +9093,7 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/excursion)
 "zR" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -9799,7 +9799,7 @@
 /turf/simulated/floor/tiled,
 /area/civilian/atrium/upper)
 "Di" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Common Channel";
 	pixel_y = 21
@@ -9822,14 +9822,14 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
 "Do" = (
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 8;
 	pixel_x = 30
 	},
@@ -9976,7 +9976,7 @@
 /obj/structure/bed/chair/wood{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Common Channel";
 	pixel_x = 21
@@ -10279,7 +10279,7 @@
 /obj/machinery/light{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Common Channel";
 	pixel_y = 21
@@ -10313,7 +10313,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
@@ -10997,7 +10997,7 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/deck/cards,
+/obj/item/deck/cards,
 /obj/machinery/alarm/yw{
 	dir = 8;
 	pixel_x = 25
@@ -11046,14 +11046,14 @@
 /turf/simulated/open,
 /area/chapel/monastery/upper)
 "Jp" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
 /obj/machinery/light{
 	dir = 4
 	},
-/obj/item/device/radio/intercom/department/medbay{
+/obj/item/radio/intercom/department/medbay{
 	dir = 4;
 	pixel_x = 32
 	},
@@ -11103,7 +11103,7 @@
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "Jz" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -11169,7 +11169,7 @@
 	dir = 9
 	},
 /obj/structure/table/steel,
-/obj/item/device/binoculars,
+/obj/item/binoculars,
 /turf/simulated/floor/tiled,
 /area/security/watchtower)
 "JN" = (
@@ -11287,7 +11287,7 @@
 /obj/structure/handrail{
 	dir = 1
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	name = "Common Channel";
 	pixel_y = -21
 	},
@@ -11807,7 +11807,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Common Channel";
 	pixel_x = -21
@@ -11857,7 +11857,7 @@
 /obj/structure/table/rack/shelf,
 /obj/item/clothing/suit/storage/hooded/wintercoat/snowsuit,
 /obj/item/clothing/shoes/boots/winter,
-/obj/item/weapon/ice_pick,
+/obj/item/ice_pick,
 /turf/simulated/floor/tiled,
 /area/cryogaia/station/hallway/primary/upper/south)
 "Ns" = (
@@ -11885,7 +11885,7 @@
 /obj/effect/floor_decal/corner/paleblue{
 	dir = 6
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 4;
 	name = "Common Channel";
 	pixel_x = 21
@@ -11898,7 +11898,7 @@
 	},
 /obj/structure/railing,
 /obj/effect/decal/cleanable/dirt,
-/obj/item/weapon/toolbox_tiles,
+/obj/item/toolbox_tiles,
 /turf/simulated/floor/plating,
 /area/constructionsite/cryogaia/upper)
 "Nz" = (
@@ -11980,7 +11980,7 @@
 	dir = 4
 	},
 /obj/effect/floor_decal/corner/red/full,
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
@@ -12130,7 +12130,7 @@
 /obj/machinery/light{
 	dir = 8
 	},
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Common Channel";
 	pixel_x = -21
@@ -12398,7 +12398,7 @@
 	dir = 4
 	},
 /obj/structure/disposalpipe/segment,
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /turf/simulated/floor/tiled/white,
 /area/crew_quarters/medbreak)
 "PW" = (
@@ -12892,7 +12892,7 @@
 /obj/machinery/atmospherics/pipe/simple/hidden/supply{
 	dir = 4
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 1;
 	pixel_y = -30
 	},
@@ -13118,7 +13118,7 @@
 	name = "plastic table frame"
 	},
 /obj/item/pizzabox,
-/obj/item/weapon/material/ashtray/plastic,
+/obj/item/material/ashtray/plastic,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
@@ -13190,7 +13190,7 @@
 /turf/simulated/floor/plating/snow/plating/cryogaia,
 /area/borealis2/outdoors/grounds/upper)
 "Tw" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 8;
 	name = "Common Channel";
 	pixel_x = -21
@@ -13269,7 +13269,7 @@
 /obj/structure/table/standard{
 	name = "plastic table frame"
 	},
-/obj/item/weapon/storage/box/donkpockets,
+/obj/item/storage/box/donkpockets,
 /obj/machinery/atmospherics/unary/vent_pump/on{
 	dir = 8
 	},
@@ -13371,7 +13371,7 @@
 /turf/simulated/open/cryogaia,
 /area/cryogaia/outpost/tower/southwest)
 "Ux" = (
-/obj/item/device/radio/intercom/department/security{
+/obj/item/radio/intercom/department/security{
 	dir = 4;
 	pixel_x = 24
 	},
@@ -13956,7 +13956,7 @@
 /turf/simulated/floor/reinforced,
 /area/shuttle/excursion)
 "WX" = (
-/obj/item/device/radio/intercom{
+/obj/item/radio/intercom{
 	dir = 1;
 	name = "Common Channel";
 	pixel_y = 21
@@ -14064,7 +14064,7 @@
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/machinery/light_switch{
 	dir = 8;
 	pixel_x = 28
@@ -14147,7 +14147,7 @@
 	c_tag = "Solar Array Shed - Interior";
 	dir = 4
 	},
-/obj/item/device/geiger/wall{
+/obj/item/geiger/wall{
 	dir = 4;
 	pixel_x = -30
 	},
@@ -14320,8 +14320,8 @@
 /area/chapel/monastery/music)
 "YC" = (
 /obj/structure/table/steel,
-/obj/item/device/suit_cooling_unit,
-/obj/item/device/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
+/obj/item/suit_cooling_unit,
 /obj/effect/floor_decal/corner/brown{
 	dir = 6
 	},
@@ -14570,7 +14570,7 @@
 /turf/simulated/floor/tiled,
 /area/quartermaster/miningdock)
 "ZT" = (
-/obj/item/weapon/stool/padded,
+/obj/item/stool/padded,
 /obj/effect/floor_decal/corner/paleblue/diagonal{
 	dir = 4
 	},

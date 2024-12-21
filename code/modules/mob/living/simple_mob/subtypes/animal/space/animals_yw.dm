@@ -73,7 +73,7 @@
 	say_got_target = list("Purge!","Cleanse!","Burn!") */
 
 	meat_amount = 0
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 
 	var/turns_since_scan = 0
 	var/mob/flee_target
@@ -237,7 +237,7 @@
 	charging = 1
 	movement_shake_radius = 3
 	movement_sound = 'sound/effects/mob_effects/snowbull_charge.ogg'
-	visible_message(span("danger","\The [src] prepares to charge at \the [A]!"))
+	visible_message(span_warning("\The [src] prepares to charge at \the [A]!"))
 	update_icon()
 	sleep(charging_warning)
 	var/chargeturf = get_turf(A)
@@ -251,7 +251,7 @@
 		movement_shake_radius = null
 		movement_sound = null
 		update_icon()
-		visible_message(span("danger", "\The [src] desists from charging at \the [A]"))
+		visible_message(span_warning("\The [src] desists from charging at \the [A]"))
 		return
 	for(var/distance = get_dist(src.loc, T), src.loc!=T && distance>0, distance--)
 		var/movedir = get_dir(src.loc, T)

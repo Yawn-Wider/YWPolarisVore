@@ -1,10 +1,12 @@
 var/list/preferences_datums = list()
 
 /datum/preferences
-	//doohickeys for savefiles
+	/// The path to the general savefile for this datum
 	var/path
-	var/default_slot = 1				//Holder so it doesn't default to slot 1, rather the last one used
-	var/savefile_version = 0
+	/// Whether or not we allow saving/loading. Used for guests, if they're enabled
+	var/load_and_save = TRUE
+	/// Ensures that we always load the last used save, QOL
+	var/default_slot = 1
 
 	//non-preference stuff
 	var/warns = 0
@@ -45,6 +47,7 @@ var/list/preferences_datums = list()
 	var/spawnpoint = "Arrivals Shuttle" //where this character will spawn (0-2).
 	var/b_type = "A+"					//blood type (not-chooseable)
 	var/blood_reagents = "default"		//blood restoration reagents
+	var/headset = 1						//headset type
 	var/backbag = 2						//backpack type
 	var/pdachoice = 1					//PDA type
 	var/shoe_hater = FALSE				//RS ADD - if true, will spawn with no shoes
@@ -119,15 +122,11 @@ var/list/preferences_datums = list()
 	//Keeps track of preferrence for not getting any wanted jobs
 	var/alternate_option = 1
 
-	var/used_skillpoints = 0
-	var/skill_specialization = null
-	var/list/skills = list() // skills can range from 0 to 3
-
 	// maps each organ to either null(intact), "cyborg" or "amputated"
 	// will probably not be able to do this for head and torso ;)
 	var/list/organ_data = list()
 	var/list/rlimb_data = list()
-	var/list/player_alt_titles = new()		// the default name of a job like "Medical Doctor"
+	var/list/player_alt_titles = new()		// the default name of a job like JOB_MEDICAL_DOCTOR
 
 	var/list/body_markings = list() // "name" = "#rgbcolor" //VOREStation Edit: "name" = list(BP_HEAD = list("on" = <enabled>, "color" = "#rgbcolor"), BP_TORSO = ...)
 
@@ -171,92 +170,70 @@ var/list/preferences_datums = list()
 	var/examine_text_mode = 0 // Just examine text, include usage (description_info), switch to examine panel.
 	var/multilingual_mode = 0 // Default behaviour, delimiter-key-space, delimiter-key-delimiter, off
 
+	// THIS IS NOT SAVED
+	// WE JUST HAVE NOWHERE ELSE TO STORE IT
+	var/list/action_button_screen_locs
+
 	var/list/volume_channels = list()
 
 	///If they are currently in the process of swapping slots, don't let them open 999 windows for it and get confused
 	var/selecting_slots = FALSE
 
+	/// The json savefile for this datum
+	var/datum/json_savefile/savefile
 
 /datum/preferences/New(client/C)
+	client = C
+
+	for(var/middleware_type in subtypesof(/datum/preference_middleware))
+		middleware += new middleware_type(src)
+
+	if(istype(C)) // IS_CLIENT_OR_MOCK
+		client_ckey = C.ckey
+		load_and_save = !IsGuestKey(C.key)
+		load_path(C.ckey)
+		if(load_and_save && !fexists(path))
+			try_savefile_type_migration()
+	else
+		CRASH("attempted to create a preferences datum without a client or mock!")
+	load_savefile()
+
+	// Legacy code
+	gear = list()
+	gear_list = list()
+	gear_slot = 1
+	// End legacy code
+
 	player_setup = new(src)
+
+	var/loaded_preferences_successfully = load_preferences()
+	if(loaded_preferences_successfully)
+		if(load_character())
+			return
+
+	// Didn't load a character, so let's randomize
 	set_biological_gender(pick(MALE, FEMALE))
 	real_name = random_name(identifying_gender,species)
 	b_type = RANDOM_BLOOD_TYPE
 
-	gear = list()
-	gear_list = list()
-	gear_slot = 1
+	if(client)
+		apply_all_client_preferences()
 
-	if(istype(C))
-		client = C
-		client_ckey = C.ckey
-		if(!IsGuestKey(C.key))
-			load_path(C.ckey)
-			if(load_preferences())
-				load_character()
-
+	if(!loaded_preferences_successfully)
+		save_preferences()
+	save_character() // Save random character
 
 /datum/preferences/Destroy()
-	. = ..()
 	QDEL_LIST_ASSOC_VAL(char_render_holders)
-
-/datum/preferences/proc/ZeroSkills(var/forced = 0)
-	for(var/V in SKILLS) for(var/datum/skill/S in SKILLS[V])
-		if(!skills.Find(S.ID) || forced)
-			skills[S.ID] = SKILL_NONE
-
-/datum/preferences/proc/CalculateSkillPoints()
-	used_skillpoints = 0
-	for(var/V in SKILLS) for(var/datum/skill/S in SKILLS[V])
-		var/multiplier = 1
-		switch(skills[S.ID])
-			if(SKILL_NONE)
-				used_skillpoints += 0 * multiplier
-			if(SKILL_BASIC)
-				used_skillpoints += 1 * multiplier
-			if(SKILL_ADEPT)
-				// secondary skills cost less
-				if(S.secondary)
-					used_skillpoints += 1 * multiplier
-				else
-					used_skillpoints += 3 * multiplier
-			if(SKILL_EXPERT)
-				// secondary skills cost less
-				if(S.secondary)
-					used_skillpoints += 3 * multiplier
-				else
-					used_skillpoints += 6 * multiplier
-
-/datum/preferences/proc/GetSkillClass(points)
-	return CalculateSkillClass(points, age)
-
-/proc/CalculateSkillClass(points, age)
-	if(points <= 0) return "Unconfigured"
-	// skill classes describe how your character compares in total points
-	points -= min(round((age - 20) / 2.5), 4) // every 2.5 years after 20, one extra skillpoint
-	if(age > 30)
-		points -= round((age - 30) / 5) // every 5 years after 30, one extra skillpoint
-	switch(points)
-		if(-1000 to 3)
-			return "Terrifying"
-		if(4 to 6)
-			return "Below Average"
-		if(7 to 10)
-			return "Average"
-		if(11 to 14)
-			return "Above Average"
-		if(15 to 18)
-			return "Exceptional"
-		if(19 to 24)
-			return "Genius"
-		if(24 to 1000)
-			return "God"
+	QDEL_NULL(middleware)
+	value_cache = null
+	return ..()
 
 /datum/preferences/proc/ShowChoices(mob/user)
 	if(!user || !user.client)	return
 
 	if(!get_mob_by_key(client_ckey))
-		to_chat(user, "<span class='danger'>No mob exists for the given client!</span>")
+		to_chat(user, span_danger("No mob exists for the given client!"))
 		return
 
 	if(!char_render_holders)
@@ -345,10 +322,10 @@ var/list/preferences_datums = list()
 	if(!istype(user, /mob/new_player))	return
 
 	if(href_list["preference"] == "open_whitelist_forum")
-		if(config.forumurl)
-			user << link(config.forumurl)
+		if(CONFIG_GET(string/forumurl))
+			user << link(CONFIG_GET(string/forumurl))
 		else
-			to_chat(user, "<span class='danger'>The forum URL is not set in the server configuration.</span>")
+			to_chat(user, span_danger("The forum URL is not set in the server configuration."))
 			return
 	ShowChoices(usr)
 	return 1
@@ -358,8 +335,8 @@ var/list/preferences_datums = list()
 		return 1
 
 	if(href_list["save"])
-		save_preferences()
 		save_character()
+		save_preferences()
 	else if(href_list["reload"])
 		load_preferences()
 		load_character()
@@ -374,7 +351,7 @@ var/list/preferences_datums = list()
 			return 0
 		if("Yes" != tgui_alert(usr, "Are you completely sure that you want to reset this character slot?", "Reset current slot?", list("No", "Yes")))
 			return 0
-		load_character(SAVE_RESET)
+		reset_slot()
 		sanitize_preferences()
 	else if(href_list["copy"])
 		if(!IsGuestKey(usr.key))
@@ -410,6 +387,12 @@ var/list/preferences_datums = list()
 	// Ask the preferences datums to apply their own settings to the new mob
 	player_setup.copy_to_mob(character)
 
+	for(var/datum/preference/preference as anything in get_preferences_in_priority_order())
+		if(preference.savefile_identifier != PREFERENCE_CHARACTER)
+			continue
+
+		preference.apply_to_human(character, read_preference(preference.type))
+
 	// VOREStation Edit - Sync up all their organs and species one final time
 	character.force_update_organs()
 
@@ -426,28 +409,25 @@ var/list/preferences_datums = list()
 
 /datum/preferences/proc/open_load_dialog(mob/user)
 	if(selecting_slots)
-		to_chat(user, "<span class='warning'>You already have a slot selection dialog open!</span>")
+		to_chat(user, span_warning("You already have a slot selection dialog open!"))
 		return
-	var/savefile/S = new /savefile(path)
-	if(!S)
-		error("Somehow missing savefile path?! [path]")
+	if(!savefile)
 		return
 
-	var/name
-	var/nickname //vorestation edit - This set appends nicknames to the save slot
+	var/default
 	var/list/charlist = list()
-	var/default //VOREStation edit
-	for(var/i=1, i<= config.character_slots, i++)
-		S.cd = "/character[i]"
-		S["real_name"] >> name
-		S["nickname"] >> nickname //vorestation edit
+
+	for(var/i in 1 to CONFIG_GET(number/character_slots))
+		var/list/save_data = savefile.get_entry("character[i]", list())
+		var/name = save_data["real_name"]
+		var/nickname = save_data["nickname"]
 		if(!name)
 			name = "[i] - \[Unused Slot\]"
 		else if(i == default_slot)
 			name = "►[i] - [name]"
 		else
 			name = "[i] - [name]"
-		if (i == default_slot) //VOREStation edit
+		if(i == default_slot)
 			default = "[name][nickname ? " ([nickname])" : ""]"
 		charlist["[name][nickname ? " ([nickname])" : ""]"] = i
 
@@ -462,33 +442,34 @@ var/list/preferences_datums = list()
 		error("Player picked [choice] slot to load, but that wasn't one we sent.")
 		return
 
+	load_preferences()
 	load_character(slotnum)
 	attempt_vr(user.client?.prefs_vr,"load_vore","") //VOREStation Edit
 	sanitize_preferences()
+	save_preferences()
 	ShowChoices(user)
 
 /datum/preferences/proc/open_copy_dialog(mob/user)
 	if(selecting_slots)
-		to_chat(user, "<span class='warning'>You already have a slot selection dialog open!</span>")
+		to_chat(user, span_warning("You already have a slot selection dialog open!"))
 		return
-	var/savefile/S = new /savefile(path)
-	if(!S)
-		error("Somehow missing savefile path?! [path]")
+	if(!savefile)
 		return
 
-	var/name
-	var/nickname //vorestation edit - This set appends nicknames to the save slot
 	var/list/charlist = list()
-	for(var/i=1, i<= config.character_slots, i++)
-		S.cd = "/character[i]"
-		S["real_name"] >> name
-		S["nickname"] >> nickname //vorestation edit
+
+	for(var/i in 1 to CONFIG_GET(number/character_slots))
+		var/list/save_data = savefile.get_entry("character[i]", list())
+		var/name = save_data["real_name"]
+		var/nickname = save_data["nickname"]
+
 		if(!name)
 			name = "[i] - \[Unused Slot\]"
-		if(i == default_slot)
+		else if(i == default_slot)
 			name = "►[i] - [name]"
 		else
 			name = "[i] - [name]"
+
 		charlist["[name][nickname ? " ([nickname])" : ""]"] = i
 
 	selecting_slots = TRUE
@@ -502,6 +483,250 @@ var/list/preferences_datums = list()
 		error("Player picked [choice] slot to copy to, but that wasn't one we sent.")
 		return
 
-	overwrite_character(slotnum)
-	sanitize_preferences()
-	ShowChoices(user)
+	if(tgui_alert(user, "Are you sure you want to override slot [slotnum], [choice]'s savedata?", "Confirm Override", list("No", "Yes")) == "Yes")
+		overwrite_character(slotnum)
+		sanitize_preferences()
+		save_preferences()
+		save_character()
+		attempt_vr(user.client?.prefs_vr,"load_vore","")
+		ShowChoices(user)
+
+/datum/preferences/proc/vanity_copy_to(var/mob/living/carbon/human/character, var/copy_name, var/copy_flavour = TRUE, var/copy_ooc_notes = FALSE, var/convert_to_prosthetics = FALSE)
+	//snowflake copy_to, does not copy anything but the vanity things
+	//does not check if the name is the same, do that in any proc that calls this proc
+	/*
+	name, nickname, flavour, OOC notes
+	gender, sex
+	custom species name, custom bodytype, weight, scale, scaling center, sound type, sound freq
+	custom say verbs
+	ears, wings, tail, hair, facial hair
+	ears colors, wings colors, tail colors
+	body color, prosthetics (if they're a protean) (convert to DSI if protean and not prosthetic), eye color, hair color etc
+	markings
+	custom synth markings toggle, custom synth color toggle
+	digitigrade
+	blood color
+	*/
+	if (copy_name)
+		if(CONFIG_GET(flag/humans_need_surnames))
+			var/firstspace = findtext(real_name, " ")
+			var/name_length = length(real_name)
+			if(!firstspace)	//we need a surname
+				real_name += " [pick(last_names)]"
+			else if(firstspace == name_length)
+				real_name += "[pick(last_names)]"
+		character.real_name = real_name
+		character.name = character.real_name
+		if(character.dna)
+			character.dna.real_name = character.real_name
+		character.nickname = nickname
+	character.gender = biological_gender
+	character.identifying_gender = identifying_gender
+
+	character.r_eyes	= r_eyes
+	character.g_eyes	= g_eyes
+	character.b_eyes	= b_eyes
+	character.h_style	= h_style
+	character.r_hair	= r_hair
+	character.g_hair	= g_hair
+	character.b_hair	= b_hair
+	character.r_grad	= r_grad
+	character.g_grad	= g_grad
+	character.b_grad	= b_grad
+	character.f_style	= f_style
+	character.r_facial	= r_facial
+	character.g_facial	= g_facial
+	character.b_facial	= b_facial
+	character.r_skin	= r_skin
+	character.g_skin	= g_skin
+	character.b_skin	= b_skin
+	character.s_tone	= s_tone
+	character.h_style	= h_style
+	character.grad_style= grad_style
+	character.f_style	= f_style
+	character.grad_style= grad_style
+	character.b_type	= b_type
+	character.synth_color = synth_color
+	character.r_synth	= r_synth
+	character.g_synth	= g_synth
+	character.b_synth	= b_synth
+	character.synth_markings = synth_markings
+
+	var/list/ear_styles = get_available_styles(global.ear_styles_list)
+	character.ear_style =  ear_styles[ear_style]
+	character.r_ears =     r_ears
+	character.b_ears =     b_ears
+	character.g_ears =     g_ears
+	character.r_ears2 =    r_ears2
+	character.b_ears2 =    b_ears2
+	character.g_ears2 =    g_ears2
+	character.r_ears3 =    r_ears3
+	character.b_ears3 =    b_ears3
+	character.g_ears3 =    g_ears3
+
+	character.ear_secondary_style = ear_styles[ear_secondary_style]
+	character.ear_secondary_colors = SANITIZE_LIST(ear_secondary_colors)
+
+	var/list/tail_styles = get_available_styles(global.tail_styles_list)
+	character.tail_style = tail_styles[tail_style]
+	character.r_tail =     r_tail
+	character.b_tail =     b_tail
+	character.g_tail =     g_tail
+	character.r_tail2 =    r_tail2
+	character.b_tail2 =    b_tail2
+	character.g_tail2 =    g_tail2
+	character.r_tail3 =    r_tail3
+	character.b_tail3 =    b_tail3
+	character.g_tail3 =    g_tail3
+
+	var/list/wing_styles = get_available_styles(global.wing_styles_list)
+	character.wing_style = wing_styles[wing_style]
+	character.r_wing =     r_wing
+	character.b_wing =     b_wing
+	character.g_wing =     g_wing
+	character.r_wing2 =    r_wing2
+	character.b_wing2 =    b_wing2
+	character.g_wing2 =    g_wing2
+	character.r_wing3 =    r_wing3
+	character.b_wing3 =    b_wing3
+	character.g_wing3 =    g_wing3
+
+	character.set_gender(biological_gender)
+
+	// Destroy/cyborgize organs and limbs.
+	if (convert_to_prosthetics) //should only really be run for proteans
+		var/list/organs_to_edit = list()
+		for (var/name in list(BP_TORSO, BP_HEAD, BP_GROIN, BP_L_ARM, BP_R_ARM, BP_L_HAND, BP_R_HAND, BP_L_LEG, BP_R_LEG, BP_L_FOOT, BP_R_FOOT))
+			var/obj/item/organ/external/O = character.organs_by_name[name]
+			if (O)
+				var/x = organs_to_edit.Find(O.parent_organ)
+				if (x == 0)
+					organs_to_edit += name
+				else
+					organs_to_edit.Insert(x+(O.robotic == ORGAN_NANOFORM ? 1 : 0), name)
+		for(var/name in organs_to_edit)
+			var/status = organ_data[name]
+			var/obj/item/organ/external/O = character.organs_by_name[name]
+			if(O)
+				if(status == "amputated")
+					continue
+				else if(status == "cyborg")
+					O.robotize(rlimb_data[name])
+				else
+					var/bodytype
+					var/datum/species/selected_species = GLOB.all_species[species]
+					if(selected_species.selects_bodytype)
+						bodytype = custom_base
+					else
+						bodytype = selected_species.get_bodytype()
+					var/dsi_company = GLOB.dsi_to_species[bodytype]
+					if (!dsi_company)
+						dsi_company = "DSI - Adaptive"
+					O.robotize(dsi_company)
+
+	for(var/N in character.organs_by_name)
+		var/obj/item/organ/external/O = character.organs_by_name[N]
+		O.markings.Cut()
+
+	var/priority = 0
+	for(var/M in body_markings)
+		priority += 1
+		var/datum/sprite_accessory/marking/mark_datum = body_marking_styles_list[M]
+
+		for(var/BP in mark_datum.body_parts)
+			var/obj/item/organ/external/O = character.organs_by_name[BP]
+			if(O)
+				O.markings[M] = list("color" = body_markings[M][BP]["color"], "datum" = mark_datum, "priority" = priority, "on" = body_markings[M][BP]["on"])
+	character.markings_len = priority
+
+	var/list/last_descriptors = list()
+	if(islist(body_descriptors))
+		last_descriptors = body_descriptors.Copy()
+	body_descriptors = list()
+
+	var/datum/species/mob_species = GLOB.all_species[species]
+	if(LAZYLEN(mob_species.descriptors))
+		for(var/entry in mob_species.descriptors)
+			var/datum/mob_descriptor/descriptor = mob_species.descriptors[entry]
+			if(istype(descriptor))
+				if(isnull(last_descriptors[entry]))
+					body_descriptors[entry] = descriptor.default_value // Species datums have initial default value.
+				else
+					body_descriptors[entry] = CLAMP(last_descriptors[entry], 1, LAZYLEN(descriptor.standalone_value_descriptors))
+	character.descriptors = body_descriptors
+
+	if (copy_flavour)
+		character.flavor_texts["general"]	= flavor_texts["general"]
+		character.flavor_texts["head"]		= flavor_texts["head"]
+		character.flavor_texts["face"]		= flavor_texts["face"]
+		character.flavor_texts["eyes"]		= flavor_texts["eyes"]
+		character.flavor_texts["torso"]		= flavor_texts["torso"]
+		character.flavor_texts["arms"]		= flavor_texts["arms"]
+		character.flavor_texts["hands"]		= flavor_texts["hands"]
+		character.flavor_texts["legs"]		= flavor_texts["legs"]
+		character.flavor_texts["feet"]		= flavor_texts["feet"]
+	if (copy_ooc_notes)
+		character.ooc_notes 				= metadata
+
+	character.weight			= weight_vr
+	character.weight_gain		= weight_gain
+	character.weight_loss		= weight_loss
+	character.fuzzy				= fuzzy
+	character.offset_override	= offset_override
+	character.voice_freq		= voice_freq
+	character.resize(size_multiplier, animate = FALSE, ignore_prefs = TRUE)
+
+	var/list/traits_to_copy = list(/datum/trait/neutral/tall,
+									/datum/trait/neutral/taller,
+									/datum/trait/neutral/short,
+									/datum/trait/neutral/shorter,
+									/datum/trait/neutral/obese,
+									/datum/trait/neutral/fat,
+									/datum/trait/neutral/thin,
+									/datum/trait/neutral/thinner,
+									/datum/trait/neutral/micro_size_down,
+									/datum/trait/neutral/micro_size_up)
+	//reset all the above trait vars
+	if (character.species)
+		character.species.micro_size_mod = 0
+		character.species.icon_scale_x = 1
+		character.species.icon_scale_y = 1
+		for (var/trait in neu_traits)
+			if (trait in traits_to_copy)
+				var/datum/trait/instance = all_traits[trait]
+				if (!instance)
+					continue
+				for (var/to_edit in instance.var_changes)
+					character.species.vars[to_edit] = instance.var_changes[to_edit]
+	character.update_transform()
+	if(!voice_sound)
+		character.voice_sounds_list = talk_sound
+	else
+		character.voice_sounds_list = get_talk_sound(voice_sound)
+
+	character.species?.blood_color = blood_color
+
+	var/datum/species/selected_species = GLOB.all_species[species]
+	var/bodytype_selected
+	if(selected_species.selects_bodytype)
+		bodytype_selected = custom_base
+	else
+		bodytype_selected = selected_species.get_bodytype(character)
+
+	character.dna.base_species = bodytype_selected
+	character.species.base_species = bodytype_selected
+	character.species.vanity_base_fit = bodytype_selected
+	if (istype(character.species, /datum/species/shapeshifter))
+		wrapped_species_by_ref["\ref[character]"] = bodytype_selected
+
+	character.custom_species	= custom_species
+	character.custom_say		= lowertext(trim(custom_say))
+	character.custom_ask		= lowertext(trim(custom_ask))
+	character.custom_whisper	= lowertext(trim(custom_whisper))
+	character.custom_exclaim	= lowertext(trim(custom_exclaim))
+
+	character.digitigrade = selected_species.digi_allowed ? digitigrade : 0
+
+	character.dna.ResetUIFrom(character)
+	character.force_update_limbs()
+	character.regenerate_icons()

@@ -14,7 +14,7 @@
 			/obj/item/clothing/head/helmet/space/void/atmos = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2,
+			/obj/item/tank/oxygen = 2,
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/aether
@@ -28,7 +28,7 @@
 			/obj/item/clothing/head/helmet/space/void/atmos/alt = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2,
+			/obj/item/tank/oxygen = 2,
 			)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/aether
@@ -42,7 +42,7 @@
 			/obj/item/clothing/head/helmet/space/void/engineering = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/xion
@@ -56,7 +56,7 @@
 			/obj/item/clothing/head/helmet/space/void/engineering/construction = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/xion
@@ -70,7 +70,7 @@
 			/obj/item/clothing/head/helmet/space/void/engineering/hazmat = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/xion
@@ -84,7 +84,7 @@
 			/obj/item/clothing/head/helmet/space/void/engineering/alt = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/xion
@@ -98,7 +98,7 @@
 			/obj/item/clothing/head/helmet/space/void/medical = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/veymed
@@ -112,7 +112,7 @@
 			/obj/item/clothing/head/helmet/space/void/medical/emt = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/veymed
@@ -126,7 +126,7 @@
 			/obj/item/clothing/head/helmet/space/void/medical/bio = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/nanomed
@@ -140,7 +140,7 @@
 			/obj/item/clothing/head/helmet/space/void/medical/alt = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/veymed
@@ -154,7 +154,7 @@
 			/obj/item/clothing/head/helmet/space/void/medical/alt/tesh = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	containername = "Vey-Med Autoadaptive voidsuit (teshari) crate"
 
@@ -165,7 +165,7 @@
 			/obj/item/clothing/head/helmet/space/void/security = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/heph
@@ -178,7 +178,7 @@
 			/obj/item/clothing/head/helmet/space/void/security/riot = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/heph
@@ -192,7 +192,7 @@
 			/obj/item/clothing/head/helmet/space/void/security/alt = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/heph
@@ -205,7 +205,7 @@
 			/obj/item/clothing/suit/space/void/mining = 2,
 			/obj/item/clothing/head/helmet/space/void/mining = 2,
 			/obj/item/clothing/mask/breath = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/xion
@@ -218,7 +218,7 @@
 			/obj/item/clothing/suit/space/void/mining/alt = 2,
 			/obj/item/clothing/head/helmet/space/void/mining/alt = 2,
 			/obj/item/clothing/mask/breath = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 60
 	containertype = /obj/structure/closet/crate/secure/grayson
@@ -237,45 +237,45 @@
 	access = null
 
 /datum/supply_pack/voidsuits/explorer
-	name = "Expedition voidsuits" //YW Edit
+	name = JOB_EXPLORER + " voidsuits"
 	contains = list(
 			/obj/item/clothing/suit/space/void/exploration = 2,
 			/obj/item/clothing/head/helmet/space/void/exploration = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
-	containername = "Exploration voidsuit crate" //YW Edit
+	containername = JOB_EXPLORER + "voidsuit crate"
 	access = list(access_eva, access_explorer)
 
 /datum/supply_pack/voidsuits/explorer_medic
-	name = "Expedition Medic voidsuits" //YW Edit
+	name = JOB_FIELD_MEDIC + " voidsuits"
 	contains = list(
 			/obj/item/clothing/suit/space/void/exploration = 2,
 			/obj/item/clothing/head/helmet/space/void/exploration = 2,
 			/obj/item/clothing/mask/breath = 2,
 			/obj/item/clothing/shoes/magboots = 2,
-			/obj/item/weapon/tank/oxygen = 2
+			/obj/item/tank/oxygen = 2
 			)
 	cost = 45
 	containertype = /obj/structure/closet/crate/secure
-	containername = "Exploration Medic voidsuit crate" //YW Edit
-	access = access_explorer // YW EDIT
+	containername = JOB_FIELD_MEDIC + " voidsuit crate"
+	access = access_explorer // YW EDI
 
 /datum/supply_pack/voidsuits/pilot
-	name = "Pilot voidsuits"
+	name = JOB_PILOT + " voidsuits"
 	contains = list(
 			/obj/item/clothing/suit/space/void/pilot = 1,
 			/obj/item/clothing/head/helmet/space/void/pilot = 1,
 			/obj/item/clothing/mask/breath = 1,
 			/obj/item/clothing/shoes/magboots = 1,
-			/obj/item/weapon/tank/oxygen = 1
+			/obj/item/tank/oxygen = 1
 			)
 	cost = 20
 	containertype = /obj/structure/closet/crate/secure
-	containername = "Pilot voidsuit crate"
+	containername = JOB_PILOT + " voidsuit crate"
 	access = access_pilot
 
 // Surplus!
@@ -383,7 +383,7 @@
 	contains = list(
 		/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
 		/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,
-		/obj/item/weapon/tank/jetpack/breaker
+		/obj/item/tank/jetpack/breaker
 	)
 	cost = 100
 	containertype = /obj/structure/closet/crate/coyote_salvage
@@ -391,7 +391,7 @@
 
 /datum/supply_pack/voidsuits/unathi_bs_yw
 	name = "Unathi breacher chassis"
-	contains = list(/obj/item/weapon/rig/breacher) //YW Edit
+	contains = list(/obj/item/rig/breacher) //YW Edit
 	cost = 350
 	containertype = /obj/structure/closet/crate/secure
 	containername = "Unathi breacher chassis crate"

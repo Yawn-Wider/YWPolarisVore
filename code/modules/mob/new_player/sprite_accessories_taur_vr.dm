@@ -9,7 +9,7 @@
 // Taur sprites are now a subtype of tail since they are mutually exclusive anyway.
 
 /datum/sprite_accessory/tail/taur
-	name = "You should not see this..."
+	name = DEVELOPER_WARNING_NAME
 	icon = 'icons/mob/vore/taurs_vr.dmi'
 	do_colouration = 1 // Yes color, using tail color
 	color_blend_mode = ICON_MULTIPLY  // The sprites for taurs are designed for ICON_MULTIPLY
@@ -84,22 +84,22 @@
 
 /datum/sprite_accessory/tail/taur/wolf/fatwolf_2c
 	name = "Fat Wolf 3-color (Taur)"
-	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
+	icon = 'icons/mob/vore/taurs_ch.dmi' //Ported from Chomp
 	icon_state = "fatwolf_s"
 	extra_overlay = "fatwolf_markings"
-	extra_overlay2 = "fatwolf_markings_2" //CHOMPEdit
+	extra_overlay2 = "fatwolf_markings_2" //Ported from Chomp
 	//icon_sprite_tag = "fatwolf2c"
 	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/wolf/wolf_2c_wag
 	name = "Wolf 3-color (Taur, Fat vwag)"
-	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
+	icon = 'icons/mob/vore/taurs_ch.dmi' //Ported from Chomp
 	icon_state = "wolf_s"
 	extra_overlay = "wolf_markings"
 	extra_overlay2 = "wolf_markings_2"
 	ani_state = "fatwolf_s"
 	extra_overlay_w = "fatwolf_markings"
-	extra_overlay2_w = "fatwolf_markings_2" //CHOMPEdit
+	extra_overlay2_w = "fatwolf_markings_2" //Ported from Chomp
 
 /datum/sprite_accessory/tail/taur/wolf/synthwolf
 	name = "SynthWolf dual-color (Taur)"
@@ -137,13 +137,14 @@
 	vore_tail_sprite_variant = "Skunk" //Sadly there appears to be no sprites... For now!
 	belly_variant_when_loaf = TRUE
 	fullness_icons = 1
-	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/naga
 	name = "Naga (Taur)"
 	icon_state = "naga_s"
 	suit_sprites = 'icons/mob/taursuits_naga_vr.dmi'
 	//icon_sprite_tag = "naga"
+	vore_tail_sprite_variant = "Naga"
+	fullness_icons = 1
 
 	msg_owner_help_walk = "You carefully slither around %prey."
 	msg_prey_help_walk = "%owner's huge tail slithers past beside you!"
@@ -172,43 +173,34 @@
 	msg_prey_stepunder = "You jump over %prey's thick tail."
 	msg_owner_stepunder = "%owner bounds over your tail."
 
-/datum/sprite_accessory/tail/taur/naga/vore_compatable
-	name = "Naga (Taur) (Vore Compatable)"
-	vore_tail_sprite_variant = "Naga"
-	fullness_icons = 1
-	struggle_anim = TRUE
-
-/datum/sprite_accessory/tail/taur/naga/vore_compatable/naga_2c
+/datum/sprite_accessory/tail/taur/naga/naga_2c
 	name = "Naga dual-color (Taur)"
 	icon_state = "naga_s"
 	extra_overlay = "naga_markings"
 	//icon_sprite_tag = "naga2c"
-	vore_tail_sprite_variant = "Naga"
-	fullness_icons = 1
-	struggle_anim = TRUE
 
-/datum/sprite_accessory/tail/taur/naga/vore_compatable/alt_2c
+/datum/sprite_accessory/tail/taur/naga/alt_2c
 	name = "Naga alt style dual-color (Taur)"
 	suit_sprites = 'icons/mob/taursuits_naga_alt_vr.dmi'
 	icon_state = "altnaga_s"
 	extra_overlay = "altnaga_markings"
 	//icon_sprite_tag = "altnaga2c"
 
-/datum/sprite_accessory/tail/taur/naga/vore_compatable/alt_3c
+/datum/sprite_accessory/tail/taur/naga/alt_3c
 	name = "Naga alt style tri-color (Taur)"
 	suit_sprites = 'icons/mob/taursuits_naga_alt_vr.dmi'
 	icon_state = "altnaga_s"
 	extra_overlay = "altnaga_markings"
 	extra_overlay2 = "altnaga_stripes"
 
-/datum/sprite_accessory/tail/taur/naga/vore_compatable/alt_3c_rattler
+/datum/sprite_accessory/tail/taur/naga/alt_3c_rattler
 	name = "Naga alt style tri-color, rattler (Taur)"
 	suit_sprites = 'icons/mob/taursuits_naga_alt_vr.dmi'
 	icon_state = "altnaga_s"
 	extra_overlay = "altnaga_markings"
 	extra_overlay2 = "altnaga_rattler"
 
-/datum/sprite_accessory/tail/taur/naga/vore_compatable/alt_3c_tailmaw
+/datum/sprite_accessory/tail/taur/naga/alt_3c_tailmaw
 	name = "Naga alt style tri-color, tailmaw (Taur)"
 	suit_sprites = 'icons/mob/taursuits_naga_alt_vr.dmi'
 	icon_state = "altnagatailmaw_s"
@@ -226,7 +218,6 @@
 	loaf_offset = 4
 	vore_tail_sprite_variant = "Horse"
 	fullness_icons = 1
-	struggle_anim = TRUE
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their hoof!"
@@ -263,7 +254,6 @@
 	loaf_offset = 3
 	vore_tail_sprite_variant = "Cow"
 	fullness_icons = 1
-	struggle_anim = TRUE
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their hoof!"
@@ -292,7 +282,6 @@
 	vore_tail_sprite_variant = "Deer"
 	belly_variant_when_loaf = TRUE
 	fullness_icons = 1
-	struggle_anim = TRUE
 
 	msg_owner_disarm_run = "You quickly push %prey to the ground with your hoof!"
 	msg_prey_disarm_run = "%owner pushes you down to the ground with their hoof!"
@@ -323,7 +312,7 @@
 /datum/sprite_accessory/tail/taur/lizard
 	name = "Lizard (Taur)"
 	icon_state = "lizard_s"
-//	suit_sprites = 'icons/mob/taursuits_lizard_vr.dmi'	///Chomp edit
+//	suit_sprites = 'icons/mob/taursuits_lizard_vr.dmi'	//Ported from Chomp
 	suit_sprites = 'icons/mob/taursuits_lizard_ch.dmi'
 	icon_sprite_tag = "lizard"
 	can_loaf = TRUE
@@ -331,7 +320,6 @@
 	loaf_offset = 5
 	vore_tail_sprite_variant = "Lizard"
 	fullness_icons = 1
-	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/lizard/fatlizard
 	name = "Fat Lizard (Taur)"
@@ -380,7 +368,6 @@
 	loaf_offset = 3
 	vore_tail_sprite_variant = "SynthLiz"
 	fullness_icons = 1
-	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/lizard/fatsynthlizard
 	name = "Fat SynthLizard dual-color (Taur)"
@@ -459,7 +446,6 @@
 	vore_tail_sprite_variant = "Feline"
 	belly_variant_when_loaf = TRUE
 	fullness_icons = 1
-	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/fatfeline
 	name = "Fat Feline (Taur)"
@@ -488,10 +474,10 @@
 
 /datum/sprite_accessory/tail/taur/feline/fatfeline_2c
 	name = "Fat Feline 3-color (Taur)"
-	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
+	icon = 'icons/mob/vore/taurs_ch.dmi' //Ported from Chomp
 	icon_state = "fatfeline_s"
 	extra_overlay = "fatfeline_markings"
-	extra_overlay2 = "fatfeline_markings_2" //CHOMPEdit
+	extra_overlay2 = "fatfeline_markings_2" //Ported from Chomp
 	//icon_sprite_tag = "fatfeline2c"
 	can_loaf = TRUE
 	icon_loaf = 'icons/mob/vore/taurs_vr_loaf.dmi'
@@ -499,13 +485,13 @@
 
 /datum/sprite_accessory/tail/taur/feline/feline_2c_wag
 	name = "Feline 3-color (Taur, Fat vwag)"
-	icon = 'icons/mob/vore/taurs_ch.dmi' //CHOMPEdit
+	icon = 'icons/mob/vore/taurs_ch.dmi' //Ported from Chomp
 	icon_state = "feline_s"
 	extra_overlay = "feline_markings"
 	extra_overlay2 = "feline_markings_2"
 	ani_state = "fatfeline_s"
 	extra_overlay_w = "fatfeline_markings"
-	extra_overlay2_w = "fatfeline_markings_2" //CHOMPEdit
+	extra_overlay2_w = "fatfeline_markings_2" //Ported from Chomp
 	loaf_offset = 3
 
 /datum/sprite_accessory/tail/taur/feline/synthfeline
@@ -567,7 +553,6 @@
 	icon_sprite_tag = "slug"
 	vore_tail_sprite_variant = "Slug"
 	fullness_icons = 1
-	struggle_anim = TRUE
 
 	msg_owner_help_walk = "You carefully slither around %prey."
 	msg_prey_help_walk = "%owner's huge tail slithers past beside you!"
@@ -632,7 +617,7 @@
 	name = "Drake (Taur)"
 	icon_state = "drake_s"
 	extra_overlay = "drake_markings"
-///	suit_sprites = 'icons/mob/taursuits_drake_vr.dmi'	///Chomp edit
+///	suit_sprites = 'icons/mob/taursuits_drake_vr.dmi'
 	suit_sprites = 'icons/mob/taursuits_drake_ch.dmi'
 	icon_sprite_tag = "drake"
 	can_loaf = TRUE
@@ -672,7 +657,6 @@
 	vore_tail_sprite_variant = "Otie"
 	belly_variant_when_loaf = TRUE
 	fullness_icons = 1
-	struggle_anim = TRUE
 
 /datum/sprite_accessory/tail/taur/alraune/alraune_2c
 	name = "Alraune (dual color)"
@@ -904,7 +888,7 @@
 	suit_sprites = 'icons/mob/taursuits_noodle_vr.dmi'
 	clip_mask_state = "taur_clip_mask_noodle"
 	icon_sprite_tag = "noodle"
-/* CHOMPEdit - removed as a sprite accessory of the same name already exists for us, and having this here stops it from registering as a sprite accessory.
+
 /datum/sprite_accessory/tail/taur/sect_drone
 	name = "Sect Drone (Taur)"
 	icon_state = "sect_drone"
@@ -925,12 +909,12 @@
 
 	msg_owner_grab_fail = "You step down onto %prey, squishing them and forcing them down to the ground!"
 	msg_prey_grab_fail = "%owner steps down and squishes you with their leg, forcing you down to the ground!"
-*/
+
 /datum/sprite_accessory/tail/taur/sect_drone/fat
 	name = "Fat Sect Drone (Taur)"
 	icon_state = "fat_sect_drone"
 	extra_overlay = "fat_sect_drone_markings"
-	icon_sprite_tag = "sect_drone" //CHOMPEdit addition
+	icon_sprite_tag = "sect_drone" //Ported from Chomp
 
 /datum/sprite_accessory/tail/taur/sect_drone/drone_wag
 	name = "Sect Drone (Taur, Fat vwag)"
@@ -938,7 +922,7 @@
 	extra_overlay = "sect_drone_markings"
 	ani_state = "fat_sect_drone"
 	extra_overlay_w = "fat_sect_drone_markings"
-	icon_sprite_tag = "sect_drone" //CHOMPEdit addition
+	icon_sprite_tag = "sect_drone" //Ported from Chomp
 
 /datum/sprite_accessory/tail/taur/giantspider_colorable//these are honestly better fit for vass icontypes whoops
 	name = "Giant Spider dual-color (Taur)"
@@ -1119,3 +1103,22 @@
 	offset_y = -11
 	mob_offset_y = 11
 */
+
+//RS ADD START
+
+
+/datum/sprite_accessory/tail/taur/bunny
+	name = "Bunny (Taur, Fat vwag)"
+	icon = 'icons/rogue-star/tails_64x32_rs.dmi'
+	icon_state = "bnytr"
+	extra_overlay = "bnytr-m1"
+	extra_overlay2 = "bnytr-m2"
+	ani_state = "bnytr-f"
+	extra_overlay_w = "bnytr-m1"
+	extra_overlay2_w = "bnytr-f-m2"
+
+	can_loaf = TRUE
+	icon_loaf = 'icons/rogue-star/loafs_64x32.dmi'
+	loaf_offset = 4
+
+//RS ADD END

@@ -238,30 +238,30 @@ update_flag
 		healthcheck()
 	..()
 
-/obj/machinery/portable_atmospherics/canister/attackby(var/obj/item/weapon/W as obj, var/mob/user as mob)
+/obj/machinery/portable_atmospherics/canister/attackby(var/obj/item/W as obj, var/mob/user as mob)
 	if(W.has_tool_quality(TOOL_WELDER)) //Vorestart: Deconstructable Canisters
-		var/obj/item/weapon/weldingtool/WT = W.get_welder()
+		var/obj/item/weldingtool/WT = W.get_welder()
 		if(!WT.remove_fuel(0, user))
 			to_chat(user, "The welding tool must be on to complete this task.")
 			return
 		if(air_contents.return_pressure() > 1 && !destroyed) // Empty or broken cans are able to be deconstructed
-			to_chat(user, "<span class ='warning'>\The [src]'s internal pressure is too high! Empty the canister before attempting to weld it apart.</span>")
+			to_chat(user, span_warning("\The [src]'s internal pressure is too high! Empty the canister before attempting to weld it apart."))
 			return
 		playsound(src, WT.usesound, 50, 1)
 		if(do_after(user, 20 * WT.toolspeed))
 			if(!src || !WT.isOn()) return
-			to_chat(user, "<span class='notice'>You deconstruct the [src].</span>")
+			to_chat(user, span_notice("You deconstruct the [src]."))
 			new /obj/item/stack/material/steel( src.loc, 10)
 			qdel(src)
 			return
 	//Voreend
-	if(!W.has_tool_quality(TOOL_WRENCH) && !istype(W, /obj/item/weapon/tank) && !istype(W, /obj/item/device/analyzer) && !istype(W, /obj/item/device/pda))
-		visible_message("<span class='warning'>\The [user] hits \the [src] with \a [W]!</span>")
+	if(!W.has_tool_quality(TOOL_WRENCH) && !istype(W, /obj/item/tank) && !istype(W, /obj/item/analyzer) && !istype(W, /obj/item/pda))
+		visible_message(span_warning("\The [user] hits \the [src] with \a [W]!"))
 		src.health -= W.force
 		src.add_fingerprint(user)
 		healthcheck()
 
-	if(istype(user, /mob/living/silicon/robot) && istype(W, /obj/item/weapon/tank/jetpack))
+	if(istype(user, /mob/living/silicon/robot) && istype(W, /obj/item/tank/jetpack))
 		var/datum/gas_mixture/thejetpack = W:air_contents
 		var/env_pressure = thejetpack.return_pressure()
 		var/pressure_delta = min(10*ONE_ATMOSPHERE - env_pressure, (air_contents.return_pressure() - env_pressure)/2)
@@ -315,7 +315,7 @@ update_flag
 
 	return data
 
-/obj/machinery/portable_atmospherics/canister/tgui_act(action, params)
+/obj/machinery/portable_atmospherics/canister/tgui_act(action, params, datum/tgui/ui)
 	if(..())
 		return TRUE
 
@@ -331,7 +331,7 @@ update_flag
 					"\[Air\]" = "grey", \
 					"\[CAUTION\]" = "yellow", \
 				)
-				var/label = tgui_input_list(usr, "Choose canister label", "Gas canister", colors)
+				var/label = tgui_input_list(ui.user, "Choose canister label", "Gas canister", colors)
 				if(label)
 					canister_color = colors[label]
 					icon_state = colors[label]
@@ -348,7 +348,7 @@ update_flag
 				pressure = 10*ONE_ATMOSPHERE
 				. = TRUE
 			else if(pressure == "input")
-				pressure = tgui_input_number(usr, "New release pressure ([ONE_ATMOSPHERE/10]-[10*ONE_ATMOSPHERE] kPa):", name, release_pressure, 10*ONE_ATMOSPHERE, ONE_ATMOSPHERE/10)
+				pressure = tgui_input_number(ui.user, "New release pressure ([ONE_ATMOSPHERE/10]-[10*ONE_ATMOSPHERE] kPa):", name, release_pressure, 10*ONE_ATMOSPHERE, ONE_ATMOSPHERE/10)
 				if(!isnull(pressure) && !..())
 					. = TRUE
 			else if(text2num(pressure) != null)
@@ -359,14 +359,14 @@ update_flag
 		if("valve")
 			if(valve_open)
 				if(holding)
-					release_log += "Valve was <b>closed</b> by [usr] ([usr.ckey]), stopping the transfer into the [holding]<br>"
+					release_log += "Valve was " + span_bold("closed") + " by [ui.user] ([ui.user.ckey]), stopping the transfer into the [holding]<br>"
 				else
-					release_log += "Valve was <b>closed</b> by [usr] ([usr.ckey]), stopping the transfer into the <font color='red'><b>air</b></font><br>"
+					release_log += "Valve was " + span_bold("closed") + " by [ui.user] ([ui.user.ckey]), stopping the transfer into the " + span_red(span_bold("air")) + "<br>"
 			else
 				if(holding)
-					release_log += "Valve was <b>opened</b> by [usr] ([usr.ckey]), starting the transfer into the [holding]<br>"
+					release_log += "Valve was " + span_bold("opened") + " by [ui.user] ([ui.user.ckey]), starting the transfer into the [holding]<br>"
 				else
-					release_log += "Valve was <b>opened</b> by [usr] ([usr.ckey]), starting the transfer into the <font color='red'><b>air</b></font><br>"
+					release_log += "Valve was " + span_bold("opened") + " by [ui.user] ([ui.user.ckey]), starting the transfer into the " + span_red(span_bold("air")) + "<br>"
 					log_open()
 			valve_open = !valve_open
 			. = TRUE
@@ -374,14 +374,14 @@ update_flag
 			if(holding)
 				if(valve_open)
 					valve_open = 0
-					release_log += "Valve was <b>closed</b> by [usr] ([usr.ckey]), stopping the transfer into the [holding]<br>"
-				if(istype(holding, /obj/item/weapon/tank))
-					holding.manipulated_by = usr.real_name
+					release_log += "Valve was " + span_bold("closed") + " by [ui.user] ([ui.user.ckey]), stopping the transfer into the [holding]<br>"
+				if(istype(holding, /obj/item/tank))
+					holding.manipulated_by = ui.user.real_name
 				holding.loc = loc
 				holding = null
 			. = TRUE
 
-	add_fingerprint(usr)
+	add_fingerprint(ui.user)
 	update_icon()
 
 /obj/machinery/portable_atmospherics/canister/phoron/New()

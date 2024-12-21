@@ -32,7 +32,7 @@
 /datum/reagent/numbing_enzyme/affect_blood(var/mob/living/carbon/M, var/alien, var/removed)
 	M.add_chemical_effect(CE_PAINKILLER, 200)
 	if(prob(0.01)) //1 in 10000 chance per tick. Extremely rare.
-		to_chat(M,"<span class='warning'>Your body feels numb as a light, tingly sensation spreads throughout it, like some odd warmth.</span>")
+		to_chat(M,span_warning("Your body feels numb as a light, tingly sensation spreads throughout it, like some odd warmth."))
 	//Not noted here, but a movement debuff of 1.5 is handed out in human_movement.dm when numbing_enzyme is in a person's bloodstream!
 
 /datum/reagent/numbing_enzyme/overdose(var/mob/living/carbon/M, var/alien)
@@ -40,24 +40,24 @@
 	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		if(prob(1))
-			to_chat(H,"<span class='warning'>Your entire body feels numb and the sensation of pins and needles continually assaults you. You blink and the next thing you know, your legs give out momentarily!</span>")
+			to_chat(H,span_warning("Your entire body feels numb and the sensation of pins and needles continually assaults you. You blink and the next thing you know, your legs give out momentarily!"))
 			H.AdjustWeakened(5) //Fall onto the floor for a few moments.
 			H.Confuse(15) //Be unable to walk correctly for a bit longer.
 		if(prob(1))
 			if(H.losebreath <= 1 && H.oxyloss <= 20) //Let's not suffocate them to the point that they pass out.
-				to_chat(H,"<span class='warning'>You feel a sharp stabbing pain in your chest and quickly realize that your lungs have stopped functioning!</span>") //Let's scare them a bit.
+				to_chat(H,span_warning("You feel a sharp stabbing pain in your chest and quickly realize that your lungs have stopped functioning!")) //Let's scare them a bit.
 				H.losebreath = 10
 				H.adjustOxyLoss(5)
 		if(prob(2))
-			to_chat(H,"<span class='warning'>You feel a dull pain behind your eyes and at thee back of your head...</span>")
+			to_chat(H,span_warning("You feel a dull pain behind your eyes and at thee back of your head..."))
 			H.hallucination += 20 //It messes with your mind for some reason.
 			H.eye_blurry += 20 //Groggy vision for a small bit.
 		if(prob(3))
-			to_chat(H,"<span class='warning'>You shiver, your body continually being assaulted by the sensation of pins and needles.</span>")
+			to_chat(H,span_warning("You shiver, your body continually being assaulted by the sensation of pins and needles."))
 			H.emote("shiver")
 			H.make_jittery(10)
 		if(prob(3))
-			to_chat(H,"<span class='warning'>Your tongue feels numb and unresponsive.</span>")
+			to_chat(H,span_warning("Your tongue feels numb and unresponsive."))
 			H.stuttering += 20
 
 /datum/reagent/vermicetol
@@ -79,10 +79,10 @@
 		M.heal_organ_damage(8 * removed * chem_effective, 0)
 
 /datum/reagent/sleevingcure
-	name = "Vey-Med Resleeving Booster"
+	name = "Resleeving Sickness Cure"
 	id = "sleevingcure"
-	description = "A rare medication provided by Vey-Med that helps counteract negative side effects of using resleeving machinery. The instructions say to numb tongue before swallowing."
-	taste_description = "indescribably awful"
+	description = "A rare medication provided by Vey-Med that helps counteract negative side effects of using imperfect resleeving machinery."
+	taste_description = "chocolate peanut butter"
 	taste_mult = 2
 	reagent_state = LIQUID
 	color = "#b4dcdc"
@@ -98,7 +98,7 @@
 /datum/reagent/prussian_blue //We don't have iodine, so prussian blue we go.
 	name = "Prussian Blue"
 	id = "prussian_blue"
-	description = "Prussian Blue is an medication used to temporarily pause the effects of radiation poisoning to allow for treatment. Does not treat radiation sickness on its own."
+	description = "Prussian Blue is a medication used to temporarily pause the effects of radiation poisoning to allow for treatment. Does not treat radiation sickness on its own."
 	taste_description = "salt"
 	reagent_state = SOLID
 	color = "#003153" //Blue!
@@ -234,7 +234,7 @@
 			log_debug("polymorph human")
 			for(var/obj/item/W in M)
 				log_debug("polymorph items")
-				if(istype(W, /obj/item/weapon/implant/backup) || istype(W, /obj/item/device/nif))
+				if(istype(W, /obj/item/implant/backup) || istype(W, /obj/item/nif))
 					log_debug("polymorph implants")
 					continue
 				M.drop_from_inventory(W)
@@ -324,7 +324,7 @@
 	scannable = 1
 
 /datum/reagent/glamour/affect_blood(var/mob/living/carbon/target, var/removed)
-	target.verbs |= /mob/living/carbon/human/proc/enter_cocoon
+	add_verb(target, /mob/living/carbon/human/proc/enter_cocoon)
 	target.bloodstr.clear_reagents() //instantly clears reagents afterwards
 	target.ingested.clear_reagents()
 	target.touching.clear_reagents()

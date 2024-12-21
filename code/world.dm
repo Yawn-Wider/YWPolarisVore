@@ -17,5 +17,5 @@
 	hub_password = "kMZy3U5jJHSiBQjr"
 	name = "Space Station 13" // YW Edit
 	visibility = 1 // YW Edit
-	cache_lifespan = 7
+	cache_lifespan = 0
 	fps = 20 // If this isnt hard-defined, anything relying on this variable before world load will cry a lot

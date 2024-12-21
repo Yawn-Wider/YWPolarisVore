@@ -1,3 +1,4 @@
+// deprecated 2024-12-4 update to new config system if this is going to be used again
 /datum/configuration
 	var/shipping_auth = "memes"
 	var/list/authedservers = list()

@@ -3,7 +3,7 @@
 	icon = null
 	icon_state = null
 
-/obj/item/weapon/melee/energy/elite_sword
+/obj/item/melee/energy/elite_sword
 	name = "Type-1 Energy Weapon"
 	desc = "A small handle conceals the equipment required to generate a long shimmering blade of shaped plasma, capable of burning through most armor with ease."
 	icon = 'code/modules/yw-halo/weapons/icons/Covenant_Weapons.dmi'
@@ -25,27 +25,27 @@
 	unacidable = 1
 	var/decapitate = TRUE
 
-/obj/item/weapon/melee/energy/elite_sword/New()
+/obj/item/melee/energy/elite_sword/New()
 	. = ..()
-	verbs += /obj/item/weapon/melee/energy/elite_sword/proc/enable_failsafe
+	verbs += /obj/item/melee/energy/elite_sword/proc/enable_failsafe
 
-/obj/item/weapon/melee/energy/elite_sword/proc/enable_failsafe()
+/obj/item/melee/energy/elite_sword/proc/enable_failsafe()
 	set name = "Enable weapon failsafe"
 	set category = "IC"
 	failsafe = 1
 	to_chat(usr,"<span class='info'>WARNING! You enable [src]'s failsafe. [src] will now self destruct if you drop it while active.</span>")
-	verbs -= /obj/item/weapon/melee/energy/elite_sword/proc/enable_failsafe
-	verbs += /obj/item/weapon/melee/energy/elite_sword/proc/disable_failsafe
+	verbs -= /obj/item/melee/energy/elite_sword/proc/enable_failsafe
+	verbs += /obj/item/melee/energy/elite_sword/proc/disable_failsafe
 
-/obj/item/weapon/melee/energy/elite_sword/proc/disable_failsafe()
+/obj/item/melee/energy/elite_sword/proc/disable_failsafe()
 	set name = "Disable weapon failsafe"
 	set category = "IC"
 	failsafe = 0
 	to_chat(usr,"<span class='info'>You disable [src]'s failsafe. [src] will no longer self destruct if you drop it.</span>")
-	verbs += /obj/item/weapon/melee/energy/elite_sword/proc/enable_failsafe
-	verbs -= /obj/item/weapon/melee/energy/elite_sword/proc/disable_failsafe
+	verbs += /obj/item/melee/energy/elite_sword/proc/enable_failsafe
+	verbs -= /obj/item/melee/energy/elite_sword/proc/disable_failsafe
 
-/obj/item/weapon/melee/energy/elite_sword/proc/change_misc_variables(var/deactivate = 0)
+/obj/item/melee/energy/elite_sword/proc/change_misc_variables(var/deactivate = 0)
 	if(deactivate)
 		item_icons = list(slot_l_hand_str = null,slot_r_hand_str = null)
 		item_state_slots = null
@@ -57,7 +57,7 @@
 		slot_r_hand_str = "[inhand_icon_state] r" )
 		hitsound = 'code/modules/yw-halo/sounds/Energyswordhit.ogg'
 
-/obj/item/weapon/melee/energy/elite_sword/activate(mob/living/user)
+/obj/item/melee/energy/elite_sword/activate(mob/living/user)
 	..()
 	to_chat(user, "<span class='notice'>\The [src] bursts from its handle.</span>")
 	icon_state = icon_state_deployed
@@ -67,7 +67,7 @@
 	flags = NOBLOODY
 	change_misc_variables()
 
-/obj/item/weapon/melee/energy/elite_sword/deactivate(mob/living/user)
+/obj/item/melee/energy/elite_sword/deactivate(mob/living/user)
 	..()
 	icon_state = initial(icon_state)
 	to_chat(user, "<span class='notice'>\The [src] disappears in a flash of light.</span>")
@@ -75,7 +75,7 @@
 	flags = null
 	change_misc_variables(1)
 
-/obj/item/weapon/melee/energy/elite_sword/dropped(var/mob/user)
+/obj/item/melee/energy/elite_sword/dropped(var/mob/user)
 	. = ..()
 	if(loc == null) //We probably shouldn't be exploding if we're in nullspace.
 		return
@@ -97,12 +97,12 @@
 			else
 				deactivate(user)
 
-/obj/item/weapon/melee/energy/elite_sword/attack(var/mob/m,var/mob/user)
+/obj/item/melee/energy/elite_sword/attack(var/mob/m,var/mob/user)
 	if(ismob(m) && hits_burn_mobs)
 		damtype = BURN
 	return ..()
 
-/obj/item/weapon/melee/energy/elite_sword/dagger
+/obj/item/melee/energy/elite_sword/dagger
 	name = "Energy Dagger"
 	desc = "Utilising the same technology as the type-1 energy weapon, this dagger projects blades of plasma."
 	icon = 'code/modules/yw-halo/weapons/icons/Covenant_Weapons.dmi'
@@ -115,15 +115,15 @@
 	edge = 0
 	sharp = 0
 
-/obj/item/weapon/melee/energy/elite_sword/dagger/activate(mob/living/user)
+/obj/item/melee/energy/elite_sword/dagger/activate(mob/living/user)
 	..()
 	w_class = ITEMSIZE_NORMAL
 
-/obj/item/weapon/melee/energy/elite_sword/dagger/deactivate(mob/living/user)
+/obj/item/melee/energy/elite_sword/dagger/deactivate(mob/living/user)
 	..()
 	w_class = ITEMSIZE_SMALL
 
-/obj/item/weapon/melee/energy/elite_sword/dagger/change_misc_variables(var/deactivate = 0)
+/obj/item/melee/energy/elite_sword/dagger/change_misc_variables(var/deactivate = 0)
 	if(deactivate)
 		item_icons = list(slot_l_hand_str = null,slot_r_hand_str = null)
 		item_state_slots = null
@@ -137,7 +137,7 @@
 
 //HONOUR GUARD STAFF
 
-/obj/item/weapon/melee/energy/elite_sword/honour_staff
+/obj/item/melee/energy/elite_sword/honour_staff
 	name = "Honour Guard Staff"
 	desc = "A ceremonial staff typically wielded by Sangheili Honour Guards. While not fit for a true battle, it serves well for beating unruly unngoy."
 	icon = 'code/modules/yw-halo/weapons/icons/Covenant_Weapons.dmi'
@@ -157,7 +157,7 @@
 		slot_r_hand_str = 'code/modules/yw-halo/weapons/icons/Weapon_Inhands_right.dmi',
 		)
 
-/obj/item/weapon/melee/energy/elite_sword/honour_staff/change_misc_variables(var/deactivate = 0)
+/obj/item/melee/energy/elite_sword/honour_staff/change_misc_variables(var/deactivate = 0)
 	if(deactivate)
 		hitsound = "swing_hit"
 		damtype = HALLOSS
@@ -165,10 +165,10 @@
 		hitsound = 'code/modules/yw-halo/sounds/Energyswordhit.ogg'
 		damtype = BURN
 
-/obj/item/weapon/material/shard/shrapnel/blamite
+/obj/item/material/shard/shrapnel/blamite
 	name = "Blamite Blade"
 
-/obj/item/weapon/melee/blamite
+/obj/item/melee/blamite
 	name = "Blamite Weapon"
 	desc = "\
 A weapon with a blade made of Blamite. An internal mechanism cultivates the quick growth of a blamite crystal, \
@@ -189,7 +189,7 @@ Luckily, this isn't a downside due to the explosive properties of such a large a
 	var/regen_at = -1
 	var/explode_damage = 60
 
-/obj/item/weapon/melee/blamite/update_icon()
+/obj/item/melee/blamite/update_icon()
 	if(regen_at != -1)
 		icon_state = "[initial(icon_state)]_handle"
 	else if(explode_at != -1)
@@ -197,7 +197,7 @@ Luckily, this isn't a downside due to the explosive properties of such a large a
 	else
 		icon_state = initial(icon_state)
 
-/obj/item/weapon/melee/blamite/proc/set_blade_active(var/active)
+/obj/item/melee/blamite/proc/set_blade_active(var/active)
 	if(active)
 		force = initial(force)
 		throwforce = initial(throwforce)
@@ -207,12 +207,12 @@ Luckily, this isn't a downside due to the explosive properties of such a large a
 		throwforce = 5
 		armor_penetration = 0
 
-/obj/item/weapon/melee/blamite/proc/regen_crystal()
+/obj/item/melee/blamite/proc/regen_crystal()
 	regen_at = -1
 	update_icon()
 	set_blade_active(1)
 
-/obj/item/weapon/melee/blamite/proc/det_in_hand()
+/obj/item/melee/blamite/proc/det_in_hand()
 	regen_at = world.time + regen_delay * 2
 	explode_at = -1
 	update_icon()
@@ -225,14 +225,14 @@ Luckily, this isn't a downside due to the explosive properties of such a large a
 	else
 		visible_message("<span class = 'warning'>[name] overloads, singing the air around it!</span>")
 
-/obj/item/weapon/melee/blamite/proc/do_explode_in_player(var/mob/living/player, var/silent = FALSE)
+/obj/item/melee/blamite/proc/do_explode_in_player(var/mob/living/player, var/silent = FALSE)
 	//Kabloeey in a player//
 	if(player)
 		player.adjustFireLoss(explode_damage)
 		if(!silent)
 			player.visible_message("<span class = 'notice'>The embedded Blamite Blade overloads, burning [player.name]!</span>")
 
-/obj/item/weapon/melee/blamite/proc/pre_explode_in_player(var/mob/living/user,var/mob/living/carbon/human/target, var/silent = FALSE)
+/obj/item/melee/blamite/proc/pre_explode_in_player(var/mob/living/user,var/mob/living/carbon/human/target, var/silent = FALSE)
 	if(!istype(target))
 		return
 	if(!silent)
@@ -242,15 +242,15 @@ Luckily, this isn't a downside due to the explosive properties of such a large a
 	update_icon()
 	set_blade_active(0)
 	//Create shard, embed in enemy. Delay explosion by timeframe, then check for shard again. If present, call do_explode_in_player()//
-	var/obj/shard = new /obj/item/weapon/material/shard/shrapnel/blamite
+	var/obj/shard = new /obj/item/material/shard/shrapnel/blamite
 	shard.name = initial(shard.name)
 	var/obj/item/organ/external/embed_organ = pick(target.organs)
 	embed_organ.embed(shard)
 	spawn(explode_delay)
-		if(target && locate(/obj/item/weapon/material/shard/shrapnel/blamite) in target.embedded)
+		if(target && locate(/obj/item/material/shard/shrapnel/blamite) in target.embedded)
 			do_explode_in_player(target, silent)
 
-/obj/item/weapon/melee/blamite/attack_self(var/mob/user)
+/obj/item/melee/blamite/attack_self(var/mob/user)
 	if(regen_at != -1)
 		to_chat(user,"<span class = 'notice'>[name] has no blade to prime for explosion!</span>")
 		return
@@ -262,33 +262,33 @@ Luckily, this isn't a downside due to the explosive properties of such a large a
 	update_icon()
 
 
-/obj/item/weapon/melee/blamite/process()
+/obj/item/melee/blamite/process()
 	if(explode_at != -1 && world.time > explode_at)
 		det_in_hand()
 	if(regen_at != -1 && world.time > regen_at)
 		regen_crystal()
 
-/obj/item/weapon/melee/blamite/apply_hit_effect(var/mob/living/carbon/human/target, mob/living/user, var/hit_zone)
+/obj/item/melee/blamite/apply_hit_effect(var/mob/living/carbon/human/target, mob/living/user, var/hit_zone)
 	. = ..()
 	if(explode_at == -1 || . == 100 || !istype(target))
 		return
 	pre_explode_in_player(user,target)
 
-/obj/item/weapon/melee/blamite/cutlass
+/obj/item/melee/blamite/cutlass
 	name = "Blamite Cutlass"
 	icon_state = "bl_cutlass"
 	item_state = "blamite_cutlass"
 	force = 35
 	throwforce = 15
 
-/obj/item/weapon/melee/blamite/dagger
+/obj/item/melee/blamite/dagger
 	name = "Blamite Dagger"
 	icon_state = "bl_dag"
 	item_state = "blamite_dagger"
 	force = 25
 	throwforce = 10
 
-/obj/item/weapon/melee/baton/humbler/covenant
+/obj/item/melee/baton/humbler/covenant
 	name = "Type-12 Antipersonnel Incapacitator"
 	desc = "A retractable baton capable of inducing a large amount of pain via electrical shocks."
 	icon = 'code/modules/yw-halo/weapons/icons/Covenant_Weapons.dmi'

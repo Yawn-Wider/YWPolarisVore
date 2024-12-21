@@ -25,7 +25,7 @@ SUBSYSTEM_DEF(persistence)
 
 /datum/controller/subsystem/persistence/proc/track_value(var/atom/value, var/track_type)
 
-	if(config.persistence_disabled) //if the config is set to persistence disabled, nothing will save or load.
+	if(CONFIG_GET(flag/persistence_disabled)) //if the config is set to persistence disabled, nothing will save or load.
 		return
 
 	var/turf/T = get_turf(value)
@@ -33,7 +33,7 @@ SUBSYSTEM_DEF(persistence)
 		return
 
 	var/area/A = get_area(T)
-	if(!A || (A.flags & AREA_FLAG_IS_NOT_PERSISTENT))
+	if(!A || (A.flag_check(AREA_FLAG_IS_NOT_PERSISTENT)))
 		return
 
 	if(!(T.z in using_map.persist_levels))

@@ -110,6 +110,7 @@
 
 	water_breather = TRUE
 	water_movement = -4 //Negates shallow. Halves deep.
+	swim_mult = 0.5
 
 	flesh_color = "#AFA59E"
 	base_color = "#777777"
@@ -346,7 +347,7 @@
 
 /datum/species/zaddat/equip_survival_gear(var/mob/living/carbon/human/H)
 	.=..()
-	var/obj/item/weapon/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
+	var/obj/item/storage/toolbox/lunchbox/survival/zaddat/L = new(get_turf(H))
 	if(H.backbag == 1)
 		H.equip_to_slot_or_del(L, slot_r_hand)
 	else

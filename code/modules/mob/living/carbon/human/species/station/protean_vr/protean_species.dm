@@ -1,13 +1,12 @@
-#define DAM_SCALE_FACTOR 0.01
-#define METAL_PER_TICK 100
+#define METAL_PER_TICK SHEET_MATERIAL_AMOUNT/20
 /datum/species/protean
 	name =             SPECIES_PROTEAN
 	name_plural =      "Proteans"
 	blurb =            "Sometimes very advanced civilizations will produce the ability to swap into manufactured, robotic bodies. And sometimes \
-						<i>VERY</i> advanced civilizations have the option of 'nanoswarm' bodies. Effectively a single robot body comprised \
+						" + span_italics("VERY") + " advanced civilizations have the option of 'nanoswarm' bodies. Effectively a single robot body comprised \
 						of millions of tiny nanites working in concert to maintain cohesion."
 	show_ssd =         "totally quiescent"
-	death_message =    "rapidly loses cohesion, dissolving into a cloud of gray dust..."
+	death_message =    "rapidly loses cohesion, retreating into their hardened control module..."
 	knockout_message = "collapses inwards, forming a disordered puddle of gray goo."
 	remains_type = /obj/effect/decal/cleanable/ash
 
@@ -26,50 +25,52 @@
 	num_alternate_languages = 3
 	species_language = LANGUAGE_EAL
 	assisted_langs = list(LANGUAGE_ROOTLOCAL, LANGUAGE_ROOTGLOBAL, LANGUAGE_VOX)
+	speech_bubble_appearance = "synthetic"
 	color_mult = TRUE
 
 	breath_type = null
 	poison_type = null
 
-	virus_immune =	1
-	blood_volume =	0
-	min_age =		18
-	max_age =		200
-	brute_mod =		0.8
-	burn_mod =		1.5
-	oxy_mod =		0
-	item_slowdown_mod = 1.33
+	// male_scream_sound = null
+	// female_scream_sound = null
 
-	cold_level_1 = 280 //Default 260 - Lower is better
-	cold_level_2 = 220 //Default 200
-	cold_level_3 = 130 //Default 120
-
-	heat_level_1 = 320 //Default 360
-	heat_level_2 = 370 //Default 400
-	heat_level_3 = 600 //Default 1000
+	virus_immune = 1
+	blood_volume = 0
+	min_age = 18
+	max_age = 200
+	oxy_mod = 0
+	//radiation_mod = 0	//Can't be assed with fandangling rad protections while blob formed/suited
+	siemens_coefficient = 2
+	brute_mod =        0.8
+	burn_mod =        1.5
+	emp_dmg_mod = 0.8
+	emp_sensitivity = EMP_BLIND | EMP_DEAFEN | EMP_BRUTE_DMG | EMP_BURN_DMG
+	item_slowdown_mod = 1.5	//Gentle encouragement to let others wear you
 
 	hazard_low_pressure = -1 //Space doesn't bother them
-	hazard_high_pressure = 200 //They can cope with slightly higher pressure
 
-	//Cold/heat does affect them, but it's done in special ways below
 	cold_level_1 = -INFINITY
 	cold_level_2 = -INFINITY
 	cold_level_3 = -INFINITY
-	heat_level_1 = INFINITY
-	heat_level_2 = INFINITY
-	heat_level_3 = INFINITY
+	heat_level_1 = 420
+	heat_level_2 = 480
+	heat_level_3 = 1100
 
-	body_temperature =      290
+	body_temperature = 290
 
-	siemens_coefficient =   1.5 //Very bad zappy times
-	rarity_value =          5
+	rarity_value = 5
+
+	// species_sounds = "Robotic"
+
+	// crit_mod = 4	//Unable to go crit
+	var/obj/item/rig/protean/OurRig
 
 	genders = list(MALE, FEMALE, PLURAL, NEUTER)
 
 	has_organ = list(
 		O_BRAIN = /obj/item/organ/internal/mmi_holder/posibrain/nano,
 		O_ORCH = /obj/item/organ/internal/nano/orchestrator,
-		O_FACT = /obj/item/organ/internal/nano/refactory
+		O_FACT = /obj/item/organ/internal/nano/refactory,
 		)
 	has_limbs = list(
 		BP_TORSO =  list("path" = /obj/item/organ/external/chest/unbreakable/nano),
@@ -85,7 +86,7 @@
 		BP_R_FOOT = list("path" = /obj/item/organ/external/foot/right/unbreakable/nano)
 		)
 
-	heat_discomfort_strings = list("You feel too warm.")
+	heat_discomfort_strings = list("WARNING: Temperature exceeding acceptable thresholds!.")
 	cold_discomfort_strings = list("You feel too cool.")
 
 	//These verbs are hidden, for hotkey use only
@@ -94,7 +95,11 @@
 		/mob/living/carbon/human/proc/nano_partswap,
 		/mob/living/carbon/human/proc/nano_metalnom,
 		/mob/living/carbon/human/proc/nano_blobform,
-		/mob/living/carbon/human/proc/nano_set_size,
+		/mob/living/carbon/human/proc/nano_rig_transform,
+		/mob/living/carbon/human/proc/nano_copy_body,
+		/mob/living/carbon/human/proc/appearance_switch,
+		/mob/living/carbon/human/proc/nano_latch,
+		/mob/living/proc/set_size,
 		/mob/living/carbon/human/proc/nano_change_fitting, //These verbs are displayed normally,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair,
 		/mob/living/carbon/human/proc/shapeshifter_select_hair_colors,
@@ -103,12 +108,30 @@
 		/mob/living/carbon/human/proc/shapeshifter_select_gender,
 		/mob/living/carbon/human/proc/shapeshifter_select_wings,
 		/mob/living/carbon/human/proc/shapeshifter_select_tail,
-		/mob/living/carbon/human/proc/shapeshifter_select_ears
-		)
+		/mob/living/carbon/human/proc/shapeshifter_select_ears,
+		/mob/living/carbon/human/proc/shapeshifter_select_secondary_ears,
+		/mob/living/proc/flying_toggle,
+		/mob/living/proc/flying_vore_toggle,
+		/mob/living/proc/start_wings_hovering,
+		) //removed fetish verbs, since non-customs can pick neutral traits now. Also added flight, cause shapeshifter can grow wings.
 
 	var/global/list/abilities = list()
 
 	var/monochromatic = FALSE //IGNORE ME
+
+	var/blob_appearance = "puddle1"
+	var/blob_color_1 = "#363636"
+	var/blob_color_2 = "#ba3636"
+	var/list/dragon_overlays = list(
+		"dragon_underSmooth" = "#FFFFFF",
+		"dragon_bodySmooth" = "#FFFFFF",
+		"dragon_earsNormal" = "#FFFFFF",
+		"dragon_maneShaggy" = "#FFFFFF",
+		"dragon_hornsPointy" = "#FFFFFF",
+		"dragon_eyesNormal" = "#FFFFFF"
+	)
+
+	var/pseudodead = 0
 
 /datum/species/protean/New()
 	..()
@@ -118,7 +141,7 @@
 			abilities += new path()
 
 /datum/species/protean/create_organs(var/mob/living/carbon/human/H)
-	var/obj/item/device/nif/saved_nif = H.nif
+	var/obj/item/nif/saved_nif = H.nif
 	if(saved_nif)
 		H.nif.unimplant(H) //Needs reference to owner to unimplant right.
 		H.nif.moveToNullspace()
@@ -126,20 +149,62 @@
 	if(saved_nif)
 		saved_nif.quick_implant(H)
 
+/datum/species/protean/get_race_key()
+	var/datum/species/real = GLOB.all_species[base_species]
+	return real.race_key
+
 /datum/species/protean/get_bodytype(var/mob/living/carbon/human/H)
 	if(!H || base_species == name) return ..()
 	var/datum/species/S = GLOB.all_species[base_species]
 	return S.get_bodytype(H)
 
+/datum/species/protean/get_icobase(var/mob/living/carbon/human/H, var/get_deform)
+	if(!H || base_species == name) return ..(null, get_deform)
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_icobase(H, get_deform)
+
 /datum/species/protean/get_valid_shapeshifter_forms(var/mob/living/carbon/human/H)
-	return GLOB.playable_species
+	var/static/list/protean_shapeshifting_forms = GLOB.playable_species.Copy() - SPECIES_PROMETHEAN
+	return protean_shapeshifting_forms
+
+/datum/species/protean/get_tail(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_tail(H)
+
+/datum/species/protean/get_tail_animation(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_tail_animation(H)
+
+/datum/species/protean/get_tail_hair(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_tail_hair(H)
+
+/datum/species/protean/get_blood_mask(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_blood_mask(H)
+
+/datum/species/protean/get_damage_mask(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_damage_mask(H)
+
+/datum/species/protean/get_damage_overlays(var/mob/living/carbon/human/H)
+	if(!H || base_species == name) return ..()
+	var/datum/species/S = GLOB.all_species[base_species]
+	return S.get_damage_overlays(H)
 
 /datum/species/protean/handle_post_spawn(var/mob/living/carbon/human/H)
 	..()
 	H.synth_color = TRUE
 
 /datum/species/protean/equip_survival_gear(var/mob/living/carbon/human/H)
-	var/obj/item/stack/material/steel/metal_stack = new(null, 3)
+	..()
+	var/obj/item/stack/material/steel/metal_stack = new()
+	metal_stack.set_amount(5)
 
 	var/obj/item/clothing/accessory/permit/nanotech/permit = new()
 	permit.set_name(H.real_name)
@@ -155,10 +220,12 @@
 		if(!H) //Human could have been deleted in this amount of time. Observing does this, mannequins, etc.
 			return
 		if(!H.nif)
-			var/obj/item/device/nif/protean/new_nif = new()
+			var/obj/item/nif/protean/new_nif = new()
 			new_nif.quick_implant(H)
 		else
 			H.nif.durability = 25
+
+		new /obj/item/rig/protean(H,H)
 
 /datum/species/protean/hug(var/mob/living/carbon/human/H, var/mob/living/target)
 	return ..() //Wut
@@ -171,18 +238,22 @@
 
 /datum/species/protean/handle_death(var/mob/living/carbon/human/H)
 	if(!H)
-		return // Iono!
-
+		return //No body?
+	if(OurRig.dead)
+		return
+	OurRig.dead = 1
+	var/mob/temp = H
 	if(H.temporary_form)
-		H.forceMove(H.temporary_form.drop_location())
-		H.ckey = H.temporary_form.ckey
-		QDEL_NULL(H.temporary_form)
-
-	to_chat(H, "<span class='warning'>You died as a Protean. Please sit out of the round for at least 60 minutes before respawning, to represent the time it would take to ship a new-you to the station.</span>")
-
-	spawn(1)
-		if(H)
-			H.gib()
+		temp = H.temporary_form
+	playsound(temp, 'sound/voice/borg_deathsound.ogg', 50, 1)
+	temp.visible_message(span_bold("[temp.name]") + " shudders and retreats inwards, coalescing into a single core componant!")
+	to_chat(temp, span_warning("You've died as a Protean! While dead, you will be locked to your core RIG control module until you can be repaired. Instructions to your revival can be found in the Examine tab when examining your module."))
+	if(H.temporary_form)
+		if(!istype(H.temporary_form.loc, /obj/item/rig/protean))
+			H.nano_rig_transform(1)
+	else
+		H.nano_rig_transform(1)
+	pseudodead = 1
 
 /datum/species/protean/handle_environment_special(var/mob/living/carbon/human/H)
 	if((H.getActualBruteLoss() + H.getActualFireLoss()) > H.maxHealth*0.5 && isturf(H.loc)) //So, only if we're not a blob (we're in nullspace) or in someone (or a locker, really, but whatever)
@@ -212,22 +283,32 @@
 /datum/species/protean/get_additional_examine_text(var/mob/living/carbon/human/H)
 	return ..() //Hmm, what could be done here?
 
-/datum/species/protean/Stat(var/mob/living/carbon/human/H)
+/datum/species/protean/update_misc_tabs(var/mob/living/carbon/human/H)
 	..()
-	if(statpanel("Protean"))
-		var/obj/item/organ/internal/nano/refactory/refactory = H.nano_get_refactory()
-		if(refactory && !(refactory.status & ORGAN_DEAD))
-			stat(null, "- -- --- Refactory Metal Storage --- -- -")
-			var/max = refactory.max_storage
-			for(var/material in refactory.materials)
-				var/amount = refactory.get_stored_material(material)
-				stat("[capitalize(material)]", "[amount]/[max]")
-		else
-			stat(null, "- -- --- REFACTORY ERROR! --- -- -")
+	var/list/L = list()
+	var/obj/item/organ/internal/nano/refactory/refactory = H.nano_get_refactory()
+	if(refactory && !(refactory.status & ORGAN_DEAD))
+		L[++L.len] = list("- -- --- Refactory Metal Storage --- -- -", null, null, null, null)
+		var/max = refactory.max_storage
+		for(var/material in refactory.materials)
+			var/amount = refactory.get_stored_material(material)
+			L[++L.len] = list("[capitalize(material)]: [amount]/[max]", null, null, null, null)
+	else
+		L[++L.len] = list("- -- --- REFACTORY ERROR! --- -- -", null, null, null, null)
 
-		stat(null, "- -- --- Abilities (Shift+LMB Examines) --- -- -")
-		for(var/obj/effect/protean_ability/A as anything in abilities)
-			stat("[A.ability_name]",A.atom_button_text())
+	L[++L.len] = list("- -- --- Abilities (Shift+LMB Examines) --- -- -", null, null, null, null)
+	for(var/obj/effect/protean_ability/A as anything in abilities)
+		var/client/C = H.client
+		var/img
+		if(C && istype(C)) //sanity checks
+			if(A.ability_name in C.misc_cache)
+				img = C.misc_cache[A.ability_name]
+			else
+				img = icon2html(A,C,sourceonly=TRUE)
+				C.misc_cache[A.ability_name] = img
+
+		L[++L.len] = list("[A.ability_name]", A.ability_name, img, A.atom_button_text(), REF(A))
+	H.misc_tabs["Protean"] = L
 
 // Various modifiers
 /datum/modifier/protean
@@ -263,8 +344,8 @@
 	name = "Protean Effect - M.Hydrogen"
 	desc = "You're affected by the presence of metallic hydrogen."
 
-	on_created_text = "<span class='notice'>You feel yourself accelerate, the metallic hydrogen increasing your speed temporarily.</span>"
-	on_expired_text = "<span class='notice'>Your refactory finishes consuming the metallic hydrogen, and you return to normal speed.</span>"
+	on_created_text = span_notice("You feel yourself accelerate, the metallic hydrogen increasing your speed temporarily.")
+	on_expired_text = span_notice("Your refactory finishes consuming the metallic hydrogen, and you return to normal speed.")
 
 	material_name = MAT_METALHYDROGEN
 
@@ -274,8 +355,8 @@
 	name = "Protean Effect - Uranium"
 	desc = "You're affected by the presence of uranium."
 
-	on_created_text = "<span class='notice'>You feel yourself become nearly impervious to physical attacks as uranium is incorporated in your nanites.</span>"
-	on_expired_text = "<span class='notice'>Your refactory finishes consuming the uranium, and you return to your normal nanites.</span>"
+	on_created_text = span_notice("You feel yourself become nearly impervious to physical attacks as uranium is incorporated in your nanites.")
+	on_expired_text = span_notice("Your refactory finishes consuming the uranium, and you return to your normal nanites.")
 
 	material_name = MAT_URANIUM
 
@@ -285,8 +366,8 @@
 	name = "Protean Effect - Gold"
 	desc = "You're affected by the presence of gold."
 
-	on_created_text = "<span class='notice'>You feel yourself become more reflective, able to resist heat and fire better for a time.</span>"
-	on_expired_text = "<span class='notice'>Your refactory finishes consuming the gold, and you return to your normal nanites.</span>"
+	on_created_text = span_notice("You feel yourself become more reflective, able to resist heat and fire better for a time.")
+	on_expired_text = span_notice("Your refactory finishes consuming the gold, and you return to your normal nanites.")
 
 	material_name = MAT_GOLD
 
@@ -296,8 +377,8 @@
 	name = "Protean Effect - Silver"
 	desc = "You're affected by the presence of silver."
 
-	on_created_text = "<span class='notice'>Your physical control is improved for a time, making it easier to hit targets, and avoid being hit.</span>"
-	on_expired_text = "<span class='notice'>Your refactory finishes consuming the silver, and your motor control returns to normal.</span>"
+	on_created_text = span_notice("Your physical control is improved for a time, making it easier to hit targets, and avoid being hit.")
+	on_expired_text = span_notice("Your refactory finishes consuming the silver, and your motor control returns to normal.")
 
 	material_name = MAT_SILVER
 
@@ -308,22 +389,32 @@
 	name = "Protean Effect - Steel"
 	desc = "You're affected by the presence of steel."
 
-	on_created_text = "<span class='notice'>You feel new nanites being produced from your stockpile of steel, healing you slowly.</span>"
-	on_expired_text = "<span class='notice'>Your steel supply has either run out, or is no longer needed, and your healing stops.</span>"
+	on_created_text = span_notice("You feel new nanites being produced from your stockpile of steel, healing you slowly.")
+	on_expired_text = span_notice("Your steel supply has either run out, or is no longer needed, and your healing stops.")
 
 	material_name = MAT_STEEL
 
 /datum/modifier/protean/steel/tick()
-	holder.adjustBruteLoss(-1,include_robo = TRUE) //Modified by species resistances
-	holder.adjustFireLoss(-0.5,include_robo = TRUE) //Modified by species resistances
-	var/mob/living/carbon/human/H = holder
-	for(var/obj/item/organ/O as anything in H.internal_organs)
-		// Fix internal damage
-		if(O.damage > 0)
-			O.damage = max(0,O.damage-0.1)
-		// If not damaged, but dead, fix it
-		else if(O.status & ORGAN_DEAD)
-			O.status &= ~ORGAN_DEAD //Unset dead if we repaired it entirely
+	//Heal a random damaged limb by 1,1 per tick
+	holder.adjustBruteLoss(-1,include_robo = TRUE)
+	holder.adjustFireLoss(-1,include_robo = TRUE)
+	holder.adjustToxLoss(-1)
+
+	var/mob/living/carbon/human/H
+	if(ishuman(holder))
+		H = holder
+
+	//Then heal every damaged limb by a smaller amount
+	if(H)
+		for(var/obj/item/organ/external/O in H.organs)
+			O.heal_damage(0.5, 0.5, 0, 1)
+
+		//Heal the organs a little bit too, as a treat
+		for(var/obj/item/organ/O as anything in H.internal_organs)
+			if(O.damage > 0)
+				O.damage = max(0,O.damage-0.3)
+			else if(O.status & ORGAN_DEAD)
+				O.status &= ~ORGAN_DEAD //Unset dead if we repaired it entirely
 
 // PAN Card
 /obj/item/clothing/accessory/permit/nanotech
@@ -346,6 +437,4 @@
 	. = ..()
 	. += validstring
 	. += registring
-
-#undef DAM_SCALE_FACTOR
 #undef METAL_PER_TICK

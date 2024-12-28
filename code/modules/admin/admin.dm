@@ -72,6 +72,7 @@ var/global/floorIsLava = 0
 		<b>Inactivity time:</b> [M.client ? "[M.client.inactivity/600] minutes" : "Logged out"]<br/><br/>
 	"} //YW Change: start, make sure you have admin or mod rights to mess with player notes
 	if (check_rights(R_ADMIN|R_MOD, 0))
+		body += {"
 			<A href='byond://?src=\ref[src];[HrefToken()];boot2=\ref[M]'>Kick</A> |
 			<A href='byond://?_src_=holder;[HrefToken()];warn=[M.ckey]'>Warn</A> |
 			<A href='byond://?src=\ref[src];[HrefToken()];newban=\ref[M]'>Ban</A> |

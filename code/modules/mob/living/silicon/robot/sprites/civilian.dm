@@ -206,13 +206,13 @@
 	rest_sprite_options = list("Default")
 	has_extra_customization = TRUE
 
-	var/list/booze_options = list("Beer" = "booze",
+	var/list/booze_options = list(REAGENT_BEER = "booze",
 								  "Space Mountain Wind" = "boozegreen",
 								  "Curacao" = "boozeblue",
-								  "Grape Soda" = "boozepurple",
+								  REAGENT_GRAPESODA = "boozepurple",
 								  "Demon's Blood" = "boozered",
-								  "Whiskey Soda" = "boozeorange",
-								  "Coffee" = "boozebrown")
+								  REAGENT_WHISKEYSODA = "boozeorange",
+								  REAGENT_COFFEE = "boozebrown")
 
 /datum/robot_sprite/dogborg/service/booze/handle_extra_icon_updates(var/mob/living/silicon/robot/ourborg)
 	if(!("boozehound" in ourborg.sprite_extra_customization) || !ourborg.sprite_extra_customization["boozehound"])
@@ -220,11 +220,11 @@
 	else
 		ourborg.icon_state = booze_options[ourborg.sprite_extra_customization["boozehound"]]
 
-/datum/robot_sprite/dogborg/service/booze/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1)
-	if(!("boozehound" in ourborg.sprite_extra_customization) || !ourborg.sprite_extra_customization["boozehound"])
+/datum/robot_sprite/dogborg/service/booze/get_belly_overlay(var/mob/living/silicon/robot/ourborg, var/size = 1, var/b_class)
+	if(!("boozehound" in ourborg.sprite_extra_customization) || !ourborg.sprite_extra_customization["boozehound"] || b_class != "sleeper")
 		return ..()
 	else
-		return "[booze_options[ourborg.sprite_extra_customization["boozehound"]]]-sleeper-[size]"
+		return "[booze_options[ourborg.sprite_extra_customization["boozehound"]]]-[b_class]-[size]"
 
 /datum/robot_sprite/dogborg/service/booze/get_rest_sprite(var/mob/living/silicon/robot/ourborg)
 	if(!(ourborg.rest_style in rest_sprite_options))

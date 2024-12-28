@@ -341,18 +341,29 @@
 /mob/proc/SelfMove(turf/n, direct, movetime)
 	return Move(n, direct, movetime)
 
+/client
+	var/is_leaving_belly = FALSE
+
 ///Process_Incorpmove
 ///Called by client/Move()
 ///Allows mobs to run though walls
 /client/proc/Process_Incorpmove(direct)
+	if(isbelly(mob.loc) && isobserver(mob))
+		if(is_leaving_belly)
+			return
+		is_leaving_belly = TRUE
+		if(tgui_alert(mob, "Do you want to leave your predator's belly?", "Leave belly?", list("Yes", "No")) != "Yes")
+			is_leaving_belly = FALSE
+			return
+		is_leaving_belly = FALSE
 	var/turf/mobloc = get_turf(mob)
 
 	switch(mob.incorporeal_move)
 		if(1)
 			var/turf/T = get_step(mob, direct)
-			var/area/A = T.loc	//RS Port #658
 			if(!T)
 				return
+			var/area/A = T.loc	//RS Port #658
 			if(mob.check_holy(T))
 				to_chat(mob, span_warning("You cannot get past holy grounds while you are in this plane of existence!"))
 				return
@@ -361,10 +372,10 @@
 				if(isliving(mob) && A.flag_check(AREA_BLOCK_PHASE_SHIFT))
 					to_chat(mob, span_warning("Something blocks you from entering this location while phased out."))
 					return
-				if(isobserver(mob) && A.flag_check(AREA_BLOCK_GHOSTS))
+				if(isobserver(mob) && A.flag_check(AREA_BLOCK_GHOSTS) && !isbelly(mob.loc))
 					to_chat(mob, span_warning("Ghosts can't enter this location."))
 					var/area/our_area = mobloc.loc
-					if(our_area.flag_check(AREA_BLOCK_GHOSTS))
+					if(our_area.flag_check(AREA_BLOCK_GHOSTS) && !isbelly(mob.loc))
 						var/mob/observer/dead/D = mob
 						D.return_to_spawn()
 					return

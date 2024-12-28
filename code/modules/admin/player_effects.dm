@@ -1,7 +1,7 @@
 /client/proc/player_effects(var/mob/target in mob_list)
 	set name = "Player Effects"
 	set desc = "Modify a player character with various 'special treatments' from a list."
-	set category = "Fun"
+	set category = "Fun.Event Kit"
 	if(!check_rights(R_FUN))
 		return
 
@@ -104,6 +104,7 @@
 			var/mob/living/simple_mob/shadekin/red/shadekin = new(Ts)
 			//Abuse of shadekin
 			shadekin.real_name = shadekin.name
+			shadekin.voremob_loaded = TRUE
 			shadekin.init_vore()
 			shadekin.ability_flags |= 0x1
 			shadekin.phase_shift()
@@ -157,6 +158,7 @@
 			target.transforming = TRUE //Cheap hack to stop them from moving
 			var/mob/living/simple_mob/shadekin/shadekin = new kin_type(Tt)
 			shadekin.real_name = shadekin.name
+			shadekin.voremob_loaded = TRUE
 			shadekin.init_vore()
 			shadekin.can_be_drop_pred = TRUE
 			shadekin.dir = SOUTH

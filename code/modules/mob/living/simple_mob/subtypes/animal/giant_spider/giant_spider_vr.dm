@@ -24,7 +24,7 @@
 
 	poison_chance = 15
 	poison_per_bite = 2
-	poison_type = "psilocybin"
+	poison_type = REAGENT_ID_PSILOCYBIN
 
 	ai_holder_type = /datum/ai_holder/simple_mob/ranged/electric_spider
 
@@ -63,9 +63,3 @@
 
 /mob/living/simple_mob/animal/giant_spider/nurse/queen/eggless
 	can_lay_eggs = FALSE
-
-/mob/living/simple_mob/animal/giant_spider/webslinger/event // YW CHANGE
-	ai_holder_type = /datum/ai_holder/simple_mob/event
-
-/mob/living/simple_mob/animal/giant_spider/nurse/queen/event // YW CHANGE
-	ai_holder_type = /datum/ai_holder/simple_mob/event

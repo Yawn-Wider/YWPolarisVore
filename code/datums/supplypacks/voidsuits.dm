@@ -9,6 +9,7 @@
 
 /datum/supply_pack/voidsuits/atmos
 	name = "Atmospheric voidsuits"
+	desc = "A pair of standard Atmospherics voidsuits. Requires Atmospherics access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/atmos = 2,
 			/obj/item/clothing/head/helmet/space/void/atmos = 2,
@@ -23,6 +24,7 @@
 
 /datum/supply_pack/voidsuits/atmos/alt
 	name = "Heavy Duty Atmospheric voidsuits"
+	desc = "A pair of heavy duty Atmospherics voidsuits. Requires Atmospherics access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/atmos/alt = 2,
 			/obj/item/clothing/head/helmet/space/void/atmos/alt = 2,
@@ -37,6 +39,7 @@
 
 /datum/supply_pack/voidsuits/engineering
 	name = "Engineering voidsuits"
+	desc = "A pair of standard Engineering voidsuits. Requires Engineering access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/engineering = 2,
 			/obj/item/clothing/head/helmet/space/void/engineering = 2,
@@ -51,6 +54,7 @@
 
 /datum/supply_pack/voidsuits/engineering/construction
 	name = "Engineering Construction voidsuits"
+	desc = "A pair of Engineering construction voidsuits. Requires Engineering access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/engineering/construction = 2,
 			/obj/item/clothing/head/helmet/space/void/engineering/construction = 2,
@@ -65,6 +69,7 @@
 
 /datum/supply_pack/voidsuits/engineering/hazmat
 	name = "Engineering Hazmat voidsuits"
+	desc = "A pair of Engineering hazmat voidsuits. Requires Engineering access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/engineering/hazmat = 2,
 			/obj/item/clothing/head/helmet/space/void/engineering/hazmat = 2,
@@ -79,6 +84,7 @@
 
 /datum/supply_pack/voidsuits/engineering/alt
 	name = "Reinforced Engineering voidsuits"
+	desc = "A pair of reinforced Engineering voidsuits. Requires Engineering access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/engineering/alt = 2,
 			/obj/item/clothing/head/helmet/space/void/engineering/alt = 2,
@@ -93,6 +99,7 @@
 
 /datum/supply_pack/voidsuits/medical
 	name = "Medical voidsuits"
+	desc = "A pair of standard Medical voidsuits. Requires Medical access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/medical = 2,
 			/obj/item/clothing/head/helmet/space/void/medical = 2,
@@ -107,6 +114,7 @@
 
 /datum/supply_pack/voidsuits/medical/emt
 	name = "Medical EMT voidsuits"
+	desc = "A pair of Medical Emergency Response voidsuits. Requires Medical access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/medical/emt = 2,
 			/obj/item/clothing/head/helmet/space/void/medical/emt = 2,
@@ -121,6 +129,7 @@
 
 /datum/supply_pack/voidsuits/medical/bio
 	name = "Medical Biohazard voidsuits"
+	desc = "A pair of Medical Biohazard Response voidsuits. Requires Medical access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/medical/bio = 2,
 			/obj/item/clothing/head/helmet/space/void/medical/bio = 2,
@@ -135,6 +144,7 @@
 
 /datum/supply_pack/voidsuits/medical/alt
 	name = "Vey-Med Autoadaptive voidsuits (humanoid)"
+	desc = "A pair of advanced Vey-Med Adaptive Medical voidsuits. Requires Medical access, fits most humanoids."
 	contains = list(
 			/obj/item/clothing/suit/space/void/medical/alt = 2,
 			/obj/item/clothing/head/helmet/space/void/medical/alt = 2,
@@ -149,6 +159,7 @@
 
 /datum/supply_pack/voidsuits/medical/alt/tesh
 	name = "Vey-Med Autoadaptive voidsuits (teshari)"
+	desc = "A pair of advanced Vey-Med Adaptive Medical voidsuits. Requires Medical access, fits teshari only."
 	contains = list(
 			/obj/item/clothing/suit/space/void/medical/alt/tesh = 2,
 			/obj/item/clothing/head/helmet/space/void/medical/alt/tesh = 2,
@@ -160,6 +171,7 @@
 
 /datum/supply_pack/voidsuits/security
 	name = "Security voidsuits"
+	desc = "A pair of standard Security voidsuits."
 	contains = list(
 			/obj/item/clothing/suit/space/void/security = 2,
 			/obj/item/clothing/head/helmet/space/void/security = 2,
@@ -170,9 +182,11 @@
 	cost = 35
 	containertype = /obj/structure/closet/crate/secure/heph
 	containername = "Security voidsuit crate"
+	access = access_armory
 
 /datum/supply_pack/voidsuits/security/crowd
 	name = "Security Crowd Control voidsuits"
+	desc = "A pair of Security Crowd Control voidsuits. Requires Armory access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/security/riot = 2,
 			/obj/item/clothing/head/helmet/space/void/security/riot = 2,
@@ -187,6 +201,7 @@
 
 /datum/supply_pack/voidsuits/security/alt
 	name = "Security EVA voidsuits"
+	desc = "A pair of Security EVA voidsuits. Requires Armory access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/security/alt = 2,
 			/obj/item/clothing/head/helmet/space/void/security/alt = 2,
@@ -201,6 +216,7 @@
 
 /datum/supply_pack/voidsuits/supply
 	name = "Mining voidsuits"
+	desc = "A pair of standard Mining voidsuits. Requires Mining access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/mining = 2,
 			/obj/item/clothing/head/helmet/space/void/mining = 2,
@@ -214,6 +230,7 @@
 
 /datum/supply_pack/voidsuits/supply/alt
 	name = "Frontier Mining voidsuits"
+	desc = "A pair of Frontier Mining voidsuits. Requires Mining access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/mining/alt = 2,
 			/obj/item/clothing/head/helmet/space/void/mining/alt = 2,
@@ -227,6 +244,7 @@
 
 /datum/supply_pack/voidsuits/zaddat
 	name = "Zaddat Shroud"
+	desc = "A standard zaddat shroud - a special kind of hazardous encounter suit, used by the zaddat species."
 	contains = list(
 		/obj/item/clothing/suit/space/void/zaddat = 1,
 		/obj/item/clothing/mask/gas/zaddat = 1
@@ -238,6 +256,7 @@
 
 /datum/supply_pack/voidsuits/explorer
 	name = JOB_EXPLORER + " voidsuits"
+	desc = "A pair of standard Exploration voidsuits. Requires EVA and Exploration access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/exploration = 2,
 			/obj/item/clothing/head/helmet/space/void/exploration = 2,
@@ -252,6 +271,7 @@
 
 /datum/supply_pack/voidsuits/explorer_medic
 	name = JOB_FIELD_MEDIC + " voidsuits"
+	desc = "A pair of standard Field Medic voidsuits. Requires Medical access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/exploration = 2,
 			/obj/item/clothing/head/helmet/space/void/exploration = 2,
@@ -266,6 +286,7 @@
 
 /datum/supply_pack/voidsuits/pilot
 	name = JOB_PILOT + " voidsuits"
+	desc = "A pair of standard Pilot's voidsuits. Requires Pilot's access."
 	contains = list(
 			/obj/item/clothing/suit/space/void/pilot = 1,
 			/obj/item/clothing/head/helmet/space/void/pilot = 1,
@@ -280,7 +301,8 @@
 
 // Surplus!
 /datum/supply_pack/voidsuits/com_mining
-	name = "SolGov mining voidsuit" //YW Edit
+	name = "SolGov mining voidsuit" // YW Edit
+	desc = "A standard SolGov Mining voidsuit. Requires Mining access." // YW EDIT
 	contains = list(
 		/obj/item/clothing/suit/space/void/mining/alt2,
 		/obj/item/clothing/head/helmet/space/void/mining/alt2
@@ -291,7 +313,8 @@
 	access = access_mining
 
 /datum/supply_pack/voidsuits/com_anomaly
-	name = "SolGov anomaly suit" //YW Edit
+	name = "SolGov anomaly suit" // YW Edit
+	desc = "A standard SolGov Anomalous Materials Handling voidsuit. Requires Xenoarchaeology access." // YW EDIT
 	contains = list(
 		/obj/item/clothing/suit/space/anomaly/alt,
 		/obj/item/clothing/head/helmet/space/anomaly/alt
@@ -303,17 +326,19 @@
 
 /datum/supply_pack/voidsuits/com_riot
 	name = "SolGov riot voidsuit" //YW Edit
+	desc = "A standard SolGov Riot Control voidsuit. Requires Armory access." // YW Edit
 	contains = list(
 		/obj/item/clothing/suit/space/void/security/riot/alt,
 		/obj/item/clothing/head/helmet/space/void/security/riot/alt
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-	name = "SolGov riot voidsuit crate" //YW Edit
-	access = access_brig
+	name = "SolGov riot voidsuit crate" // YW Edit
+	access = access_armory
 
 /datum/supply_pack/voidsuits/com_pilot
-	name = "SolGov pilot voidsuit" //YW Edit
+	name = "SolGov pilot voidsuit" // YW Edit
+	desc = "A standard SolGov Pilot's voidsuit. Requires Pilot's access." // YW Edit
 	contains = list(
 		/obj/item/clothing/suit/space/void/pilot/alt2,
 		/obj/item/clothing/head/helmet/space/void/pilot/alt2
@@ -324,18 +349,20 @@
 	access = access_pilot
 
 /datum/supply_pack/voidsuits/com_medical
-	name = "SolGov medical voidsuit" //YW Edit
+	name = "SolGov medical voidsuit" // YW Edit
+	desc = "A standard SolGov Medical voidsuit. Requires Medical access." // YW EDIT
 	contains = list(
 		/obj/item/clothing/suit/space/void/medical/alt2,
 		/obj/item/clothing/head/helmet/space/void/medical/alt2
 	)
 	cost = 150
 	containertype = /obj/structure/closet/crate/secure
-	name = "SolGov medical voidsuit crate" //YW Edit
+	name = "SolGov medical voidsuit crate" // YW Edit
+	access = access_medical
 
 /datum/supply_pack/voidsuits/com_explore
-
-	name = "SolGov exploration voidsuit" //YW Edit
+	name = "SolGov exploration voidsuit" // YW Edit
+	desc = "A standard SolGov Exploration voidsuit. Requires EVA and Exploration access." // YW Edit
 	contains = list(
 		/obj/item/clothing/suit/space/void/exploration/alt2,
 		/obj/item/clothing/head/helmet/space/void/exploration/alt2
@@ -346,7 +373,8 @@
 	access = list(access_eva, access_explorer)
 
 /datum/supply_pack/voidsuits/com_engineer
-	name = "SolGov engineering voidsuit" //YW Edit
+	name = "SolGov engineering voidsuit" // YW Edit
+	desc = "A standard SolGov Engineering voidsuit. Requires Engineering access." // YW Edit
 	contains = list(
 		/obj/item/clothing/suit/space/void/engineering/alt2,
 		/obj/item/clothing/head/helmet/space/void/engineering/alt2
@@ -357,7 +385,8 @@
 	access = access_engine
 
 /datum/supply_pack/voidsuits/com_atmos
-	name = "SolGov atmos voidsuit" //YW Edit
+	name = "SolGov atmos voidsuit" // YW Edit
+	desc = "A standard SolGov Atmospherics voidsuit. Requires Atmospherics access." // YW Edit
 	contains = list(
 		/obj/item/clothing/suit/space/void/atmos/alt2,
 		/obj/item/clothing/head/helmet/space/void/atmos/alt2
@@ -368,7 +397,8 @@
 	access = access_atmospherics
 
 /datum/supply_pack/voidsuits/com_captain
-	name = "SolGov captain voidsuit" //YW Edit
+	name = "SolGov captain voidsuit" // YW Edit
+	desc = "A standard SolGov Captain's voidsuit. Requires Captain's access." // YW Edit
 	contains = list(
 		/obj/item/clothing/suit/space/void/captain/alt,
 		/obj/item/clothing/head/helmet/space/void/captain/alt
@@ -380,6 +410,7 @@
 
 /datum/supply_pack/voidsuits/csc_breaker
 	name = "Shipbreaker's Industrial Suit (inc. jetpack)"
+	desc = "A Coyote Salvage Corporation Shipbreaker's voidsuit. Includes h-fuel jetpack."
 	contains = list(
 		/obj/item/clothing/suit/space/void/salvagecorp_shipbreaker,
 		/obj/item/clothing/head/helmet/space/void/salvagecorp_shipbreaker,

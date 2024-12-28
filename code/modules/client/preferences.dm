@@ -244,11 +244,11 @@ var/list/preferences_datums = list()
 
 	if(path)
 		dat += "Slot - "
-		dat += "<a href='?src=\ref[src];load=1'>Load slot</a> - "
-		dat += "<a href='?src=\ref[src];save=1'>Save slot</a> - "
-		dat += "<a href='?src=\ref[src];reload=1'>Reload slot</a> - "
-		dat += "<a href='?src=\ref[src];resetslot=1'>Reset slot</a> - "
-		dat += "<a href='?src=\ref[src];copy=1'>Copy slot</a> - "
+		dat += "<a href='byond://?src=\ref[src];load=1'>Load slot</a> - "
+		dat += "<a href='byond://?src=\ref[src];save=1'>Save slot</a> - "
+		dat += "<a href='byond://?src=\ref[src];reload=1'>Reload slot</a> - "
+		dat += "<a href='byond://?src=\ref[src];resetslot=1'>Reset slot</a> - "
+		dat += "<a href='byond://?src=\ref[src];copy=1'>Copy slot</a>"
 		dat += "<a href='?src=\ref[src];export=1'>Save &amp; export all</a>" // YW Edit - "Add option to export character to JSON"
 		//dat += "<a href='?src=\ref[src];import=1'>Import all</a>" 		 // YW Edit - "Add option to import character from JSON"
 	else
@@ -667,6 +667,8 @@ var/list/preferences_datums = list()
 		character.flavor_texts["feet"]		= flavor_texts["feet"]
 	if (copy_ooc_notes)
 		character.ooc_notes 				= metadata
+		character.ooc_notes_dislikes 		= metadata_dislikes
+		character.ooc_notes_likes 			= metadata_likes
 
 	character.weight			= weight_vr
 	character.weight_gain		= weight_gain

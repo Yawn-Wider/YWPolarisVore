@@ -58,6 +58,8 @@ jobs:
           tools/bootstrap/python -c ''
       - name: Run Grep Checks
         run: tools/ci/validate_files.sh
+      - name: Run Define Sanity Checks
+        run: tools/bootstrap/python -m define_sanity.check
       - name: Run TGUI Checks
         run: tools/build/build --ci lint tgui-test
 
@@ -111,7 +113,7 @@ jobs:
         run: |
           sudo dpkg --add-architecture i386
           sudo apt update || true
-          sudo apt install zlib1g-dev:i386 libssl-dev:i386
+          sudo apt install zlib1g-dev:i386
           ldd librust_g.so
           ldd libbapi_dmm_reader.so
           ldd libverdigris.so

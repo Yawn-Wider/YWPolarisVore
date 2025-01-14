@@ -71,6 +71,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/pickup_pref = TRUE
 
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+	var/vore_sprite_multiply = list("stomach" = FALSE, "taur belly" = FALSE)
 	var/allow_mind_transfer = FALSE
 
 	var/list/belly_prefs = list()
@@ -121,7 +122,12 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 //	Check if an object is capable of eating things, based on vore_organs
 //
 /proc/is_vore_predator(mob/living/O)
-	if(istype(O,/mob/living))
+	if(isliving(O))
+		if(isanimal(O)) //On-demand belly loading.
+			var/mob/living/simple_mob/SM = O
+			if(SM.vore_active && !SM.voremob_loaded)
+				SM.voremob_loaded = TRUE
+				SM.init_vore()
 		if(O.vore_organs.len > 0)
 			return TRUE
 

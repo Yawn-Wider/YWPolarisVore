@@ -23,18 +23,18 @@
 	var/applies_material_colour = 1
 	var/flippable = TRUE
 
-/obj/structure/bed/New(var/newloc, var/new_material, var/new_padding_material)
+/obj/structure/bed/Initialize(var/newloc, var/new_material, var/new_padding_material)
 	..(newloc)
 	color = null
 	if(!new_material)
 		new_material = MAT_STEEL
 	material = get_material_by_name(new_material)
 	if(!istype(material))
-		qdel(src)
-		return
+		return INITIALIZE_HINT_QDEL
 	if(new_padding_material)
 		padding_material = get_material_by_name(new_padding_material)
 	update_icon()
+	return INITIALIZE_HINT_NORMAL
 
 /obj/structure/bed/get_material()
 	return material
@@ -104,7 +104,7 @@
 			return
 		var/padding_type //This is awful but it needs to be like this until tiles are given a material var.
 		if(istype(W,/obj/item/stack/tile/carpet))
-			padding_type = "carpet"
+			padding_type = MAT_CARPET
 		else if(istype(W,/obj/item/stack/material))
 			var/obj/item/stack/material/M = W
 			if(M.material && (M.material.flags & MATERIAL_PADDING))
@@ -199,19 +199,19 @@
 	icon_state = "psychbed"
 	base_icon = "psychbed"
 
-/obj/structure/bed/psych/New(var/newloc)
-	..(newloc,"wood","leather")
+/obj/structure/bed/psych/Initialize(var/newloc)
+	. = ..(newloc,MAT_WOOD,MAT_LEATHER)
 
-/obj/structure/bed/padded/New(var/newloc)
-	..(newloc,"plastic","cotton")
+/obj/structure/bed/padded/Initialize(var/newloc)
+	. = ..(newloc,MAT_PLASTIC,MAT_COTTON)
 
 /obj/structure/bed/double
 	name = "double bed"
 	icon_state = "doublebed"
 	base_icon = "doublebed"
 
-/obj/structure/bed/double/padded/New(var/newloc)
-	..(newloc,"wood","cotton")
+/obj/structure/bed/double/padded/Initialize(var/newloc)
+	. = ..(newloc,MAT_WOOD,MAT_COTTON)
 
 /obj/structure/bed/double/post_buckle_mob(mob/living/M as mob)
 	if(M.buckled == src)
@@ -305,8 +305,8 @@
 	icon_state = "rollerbed"
 	var/obj/item/roller/held
 
-/obj/item/roller_holder/New()
-	..()
+/obj/item/roller_holder/Initialize()
+	. = ..()
 	held = new /obj/item/roller(src)
 
 /obj/item/roller_holder/attack_self(mob/user as mob)

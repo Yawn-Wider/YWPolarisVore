@@ -4,7 +4,7 @@ set -euo pipefail
 # nb: must be bash to support shopt globstar
 shopt -s globstar extglob
 
-source _build_dependencies.sh
+source dependencies.sh
 
 # ANSI Colors
 RED='\033[0;31m'
@@ -134,6 +134,14 @@ if [ "$pcre2_support" -eq 1 ]; then
 	retVal=$?
 	if [ $retVal -ne 0 ]; then
 		echo -e "${RED}A broken span tag class is present (check quotes).${NC}"
+		FAILED=1
+	fi
+
+	part "old style hrefs"
+	(! $grep -Pn "href[\s='\"\\ ]*\?" $code_files)
+	retVal=$?
+	if [ $retVal -ne 0 ]; then
+		echo -e "${RED}old-style hrefs detected, see ripgrep output.${NC}"
 		FAILED=1
 	fi
 else

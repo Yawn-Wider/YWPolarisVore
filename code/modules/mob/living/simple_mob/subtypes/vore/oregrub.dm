@@ -52,7 +52,7 @@
 	say_list_type = /datum/say_list/oregrub
 
 	var/poison_per_bite = 2.5
-	var/poison_type = "thermite_v" //burn baby burn
+	var/poison_type = REAGENT_ID_THERMITEV //burn baby burn
 	var/poison_chance = 50
 
 	var/min_ore = 4
@@ -164,7 +164,9 @@
 //I'm no good at writing this stuff, so I've just left it as placeholders and disabled the chances of them eating you.
 /*
 /mob/living/simple_mob/vore/oregrub/init_vore()
-	..()
+	if(!voremob_loaded)
+		return
+	. = ..()
 	var/obj/belly/B = vore_selected
 	B.name = "stomach"
 	B.desc = "PLACEHOLDER!"

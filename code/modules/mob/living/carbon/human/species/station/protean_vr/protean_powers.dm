@@ -314,7 +314,7 @@
 ////
 //	Rig Transform
 ////
-/mob/living/carbon/human/proc/nano_rig_transform(var/forced)
+/mob/living/carbon/human/proc/nano_rig_transform(var/forced, var/devour = FALSE)
 	set name = "Modify Form - Hardsuit"
 	set desc = "Allows a protean to retract its mass into its hardsuit module at will."
 	//set category = "Abilities.Protean"
@@ -337,14 +337,15 @@
 			var/mob/living/simple_mob/protean_blob/P = temporary_form
 			if(S.OurRig) //Do we even have a RIG?
 				if(P.loc == S.OurRig)	//we're inside our own RIG
+					var/mob/wearer = S.OurRig.wearer
 					if(ismob(S.OurRig.loc))
 						var/mob/m = S.OurRig.loc
 						m.drop_from_inventory(S.OurRig)
-					if(S.OurRig.wearer) //We're being worn. Engulf em', if prefs align.. otherwise just drop off.
-						var/mob/living/carbon/human/victim = S.OurRig.wearer
-						if(P.can_be_drop_pred && victim.devourable && victim.can_be_drop_prey)
-							if(P.vore_selected)
-								perform_the_nom(P,victim,P,P.vore_selected,1)
+					if(wearer && devour) //We're being worn. Engulf em', if prefs align.. otherwise just drop off.
+						if(P.can_be_drop_pred && wearer.devourable && wearer.can_be_drop_prey && P.vore_selected)
+							perform_the_nom(P,wearer,P,P.vore_selected,1)
+						else
+							to_chat(P, span_vwarning("You can't assimilate your current host."))
 					P.forceMove(get_turf(S.OurRig))
 					S.OurRig.forceMove(src)
 					S.OurRig.myprotean = src
@@ -569,7 +570,7 @@
 	var/obj/held_item = protie.get_active_hand()
 	if(istype(held_item,/obj/item/grab))
 		var/obj/item/grab/G = held_item
-		if(istype(G.affecting, /mob/living/carbon/human))
+		if(ishuman(G.affecting))
 			target = G.affecting
 			if(istype(target.species, /datum/species/protean))
 				to_chat(protie, span_danger("You can't latch onto a fellow Protean!"))
@@ -594,6 +595,25 @@
 			to_chat(protie, span_warning("You can only latch onto humanoid mobs!"))
 	else
 		to_chat(protie, span_warning("You need to be grabbing a humanoid mob aggressively to latch onto them."))
+
+/mob/living/carbon/human/proc/nano_assimilate()
+	set name = "Assimilate Host"
+	set desc = "Allows a protean to assimilate a latched host, allowing them to devour them right away."
+	set hidden = 1
+
+	var/mob/living/protie = src
+	var/mob/living/carbon/human/target
+	var/datum/species/protean/S = src.species
+	if(nano_dead_check(src))
+		return
+	if(temporary_form)
+		protie = temporary_form
+		if(protie.loc == S.OurRig)
+			target = S.OurRig.wearer
+			if(!target)
+				to_chat(protie, span_vwarning("You need a host to assimilate."))
+				return
+			nano_rig_transform(TRUE, TRUE)
 
 /// /// /// A helper to reuse
 /mob/living/proc/nano_get_refactory(obj/item/organ/internal/nano/refactory/R)
@@ -703,6 +723,12 @@
 	desc = "Forcibly latch or unlatch your RIG from a host mob."
 	icon_state = "latch"
 	to_call = /mob/living/carbon/human/proc/nano_latch
+
+/obj/effect/protean_ability/assimilate_host
+	ability_name = "Assimilate Host"
+	desc = "Allows a protean to assimilate a latched host, allowing them to devour them right away."
+	icon_state = "assimilate"
+	to_call = /mob/living/carbon/human/proc/nano_assimilate
 
 /obj/effect/protean_ability/copy_form
 	ability_name = "Copy Form"

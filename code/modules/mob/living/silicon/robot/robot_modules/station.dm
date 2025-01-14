@@ -260,7 +260,7 @@ var/global/list/robot_modules = list(
 
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
 	src.emag += PS
-	PS.reagents.add_reagent("pacid", 250)
+	PS.reagents.add_reagent(REAGENT_ID_PACID, 250)
 	PS.name = "Polyacid spray"
 
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(10000)
@@ -296,7 +296,7 @@ var/global/list/robot_modules = list(
 
 	var/obj/item/reagent_containers/spray/PS = locate() in src.emag
 	if(PS)
-		PS.reagents.add_reagent("pacid", 2 * amount)
+		PS.reagents.add_reagent(REAGENT_ID_PACID, 2 * amount)
 
 	..()
 
@@ -319,7 +319,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/inflatable_dispenser/robot(src)
 	var/obj/item/reagent_containers/spray/PS = new /obj/item/reagent_containers/spray(src)
 	src.emag += PS
-	PS.reagents.add_reagent("pacid", 250)
+	PS.reagents.add_reagent(REAGENT_ID_PACID, 250)
 	PS.name = "Polyacid spray"
 
 	var/datum/matter_synth/medicine = new /datum/matter_synth/medicine(15000)
@@ -355,7 +355,7 @@ var/global/list/robot_modules = list(
 
 	var/obj/item/reagent_containers/spray/PS = locate() in src.emag
 	if(PS)
-		PS.reagents.add_reagent("pacid", 2 * amount)
+		PS.reagents.add_reagent(REAGENT_ID_PACID, 2 * amount)
 
 	..()
 
@@ -479,12 +479,12 @@ var/global/list/robot_modules = list(
 	..()
 	src.modules += new /obj/item/handcuffs/cyborg(src)
 	src.modules += new /obj/item/melee/baton/robot(src)
-	src.modules += new /obj/item/gun/energy/taser/mounted/cyborg(src)
+	src.modules += new /obj/item/gun/energy/robotic/taser(src)
 	src.modules += new /obj/item/taperoll/police(src)
 	src.modules += new /obj/item/reagent_containers/spray/pepper(src)
 	src.modules += new /obj/item/gripper/security(src)
 	src.modules += new /obj/item/ticket_printer(src)	//VOREStation Add
-	src.emag += new /obj/item/gun/energy/laser/mounted(src)
+	src.emag += new /obj/item/gun/energy/robotic/laser/rifle(src)
 
 	src.modules += new /obj/item/dogborg/sleeper/K9(src) //Eat criminals. Bring them to the brig.
 	src.modules += new /obj/item/dogborg/pounce(src) //Pounce
@@ -497,7 +497,9 @@ var/global/list/robot_modules = list(
 		F.icon_state = "flash"
 	else if(F.times_used)
 		F.times_used--
-	var/obj/item/gun/energy/taser/mounted/cyborg/T = locate() in src.modules
+	var/obj/item/gun/energy/robotic/taser/T = locate() in src.modules
+	if(!T)
+		return
 	if(T.power_supply.charge < T.power_supply.maxcharge)
 		T.power_supply.give(T.charge_cost * amount)
 		T.update_icon()
@@ -519,7 +521,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/borg/sight/janitor(src)
 	var/obj/item/reagent_containers/spray/LS = new /obj/item/reagent_containers/spray(src)
 	src.emag += LS
-	LS.reagents.add_reagent("lube", 250)
+	LS.reagents.add_reagent(REAGENT_ID_LUBE, 250)
 	LS.name = "Lube spray"
 
 	//Starts empty. Can only recharge with recycled material.
@@ -568,7 +570,7 @@ var/global/list/robot_modules = list(
 
 	var/obj/item/reagent_containers/spray/LS = locate() in src.emag
 	if(LS)
-		LS.reagents.add_reagent("lube", 2 * amount)
+		LS.reagents.add_reagent(REAGENT_ID_LUBE, 2 * amount)
 
 /obj/item/robot_module/robot/clerical
 	name = "service robot module"
@@ -634,7 +636,7 @@ var/global/list/robot_modules = list(
 	var/datum/reagents/R = new/datum/reagents(50)
 	PB.reagents = R
 	R.my_atom = PB
-	R.add_reagent("beer2", 50)
+	R.add_reagent(REAGENT_ID_BEER2, 50)
 	PB.name = "Auntie Hong's Final Sip"
 	PB.desc = "A bottle of very special mix of alcohol and poison. Some may argue that there's alcohol to die for, but Auntie Hong took it to next level."
 
@@ -645,7 +647,7 @@ var/global/list/robot_modules = list(
 /obj/item/robot_module/robot/clerical/butler/respawn_consumable(var/mob/living/silicon/robot/R, var/amount)
 	var/obj/item/reagent_containers/food/drinks/bottle/small/beer/PB = locate() in src.emag
 	if(PB)
-		PB.reagents.add_reagent("beer2", 2 * amount)
+		PB.reagents.add_reagent(REAGENT_ID_BEER2, 2 * amount)
 
 /obj/item/robot_module/robot/clerical/general
 	name = "clerical robot module"
@@ -715,7 +717,7 @@ var/global/list/robot_modules = list(
 	src.modules += new /obj/item/storage/part_replacer(src)
 	src.modules += new /obj/item/shockpaddles/robot/jumper(src)
 	src.modules += new /obj/item/melee/baton/slime/robot(src)
-	src.modules += new /obj/item/gun/energy/taser/xeno/robot(src)
+	src.modules += new /obj/item/gun/energy/robotic/taser/xeno(src)
 	src.modules += new /obj/item/xenoarch_multi_tool(src)
 	src.modules += new /obj/item/pickaxe/excavationdrill(src)
 
@@ -759,15 +761,15 @@ var/global/list/robot_modules = list(
 	..()
 	src.modules += new /obj/item/handcuffs/cyborg(src)
 	src.modules += new /obj/item/taperoll/police(src)
-	src.modules += new /obj/item/gun/energy/laser/mounted(src)
-	src.modules += new /obj/item/gun/energy/taser/mounted/cyborg/ertgun(src)
+	src.modules += new /obj/item/gun/energy/robotic/laser/rifle(src)
+	src.modules += new /obj/item/gun/energy/robotic/disabler(src)
 	src.modules += new /obj/item/pickaxe/plasmacutter/borg(src)
-	src.modules += new /obj/item/melee/combat_borgblade(src)
+	src.modules += new /obj/item/melee/robotic/dagger(src)
 	src.modules += new /obj/item/borg/combat/shield(src)
 	src.modules += new /obj/item/borg/combat/mobility(src)
-	src.modules += new /obj/item/melee/borg_combat_shocker(src)
+	src.modules += new /obj/item/melee/robotic/borg_combat_shocker(src)
 	src.modules += new /obj/item/ticket_printer(src)
-	src.emag += new /obj/item/gun/energy/lasercannon/mounted(src)
+	src.emag += new /obj/item/gun/energy/robotic/laser/heavy(src)
 
 	src.modules += new /obj/item/dogborg/sleeper/K9/ert(src)
 	src.modules += new /obj/item/dogborg/pounce(src)

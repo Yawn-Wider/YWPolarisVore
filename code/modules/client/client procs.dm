@@ -288,15 +288,6 @@
 		void = new()
 	screen += void
 
-	//disabled because we don't use the ingame changelog system any more
-	/*
-	if((prefs.lastchangelog != changelog_hash) && isnewplayer(src.mob)) //bolds the changelog button on the interface so we know there are updates.
-		to_chat(src, span_info("You have unread updates in the changelog."))
-		winset(src, "rpane.changelog", "background-color=#eaeaea;font-style=bold")
-		if(config.aggressive_changelog)
-			src.changes()
-	*/
-
 	if(CONFIG_GET(flag/paranoia_logging))
 		var/alert = FALSE //VOREStation Edit start.
 		if(isnum(player_age) && player_age == 0)
@@ -713,7 +704,7 @@
 /client/proc/check_panel_loaded()
 	if(stat_panel && stat_panel.is_ready())
 		return
-	to_chat(src, "<span class='danger'>Statpanel failed to load, click <a href='?src=[REF(src)];reload_statbrowser=1'>here</a> to reload the panel. If this does not work, reconnecting will reassign a new panel.</span>")
+	to_chat(src, span_danger("Statpanel failed to load, click <a href='byond://?src=[REF(src)];reload_statbrowser=1'>here</a> to reload the panel. If this does not work, reconnecting will reassign a new panel."))
 
 /**
  * Handles incoming messages from the stat-panel TGUI.

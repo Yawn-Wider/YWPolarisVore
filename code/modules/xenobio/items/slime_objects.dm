@@ -120,7 +120,7 @@
 	filling_color = "#FFBB00"
 	center_of_mass = list("x"=17, "y"=10)
 	nutriment_amt = 25 // Very filling.
-	nutriment_desc = list("slime" = 10, "sweetness" = 10, "bliss" = 5)
+	nutriment_desc = list("slime" = 10, "sweetness" = 10, REAGENT_ID_BLISS = 5)
 
 /obj/item/reagent_containers/food/snacks/slime/Initialize()
 	. = ..()
@@ -142,8 +142,8 @@
 	on = 1 //Bio-luminesence has one setting, on.
 	power_use = 0
 
-/obj/item/flashlight/slime/New()
-	..()
+/obj/item/flashlight/slime/Initialize()
+	. = ..()
 	set_light(light_range, light_power, light_color)
 
 /obj/item/flashlight/slime/update_brightness()
@@ -165,10 +165,10 @@
 	light_range = 2
 	w_class = ITEMSIZE_TINY
 
-/obj/item/slime_irradiator/New()
+/obj/item/slime_irradiator/Initialize()
+	. = ..()
 	START_PROCESSING(SSobj, src)
 	set_light(light_range, light_power, light_color)
-	return ..()
 
 /obj/item/slime_irradiator/process()
 	SSradiation.radiate(src, 5)
@@ -190,21 +190,21 @@
 
 /datum/reagent/myelamine/slime
 	name = "Agent A"
-	id = "slime_bleed_fixer"
+	id = REAGENT_ID_SLIMEBLEEDFIXER
 	description = "A slimy liquid which appears to rapidly clot internal hemorrhages by increasing the effectiveness of platelets at low quantities.  Toxic in high quantities."
 	taste_description = "slime"
 	overdose = 5
 
 /datum/reagent/osteodaxon/slime
 	name = "Agent B"
-	id = "slime_bone_fixer"
+	id = REAGENT_ID_SLIMEBONEFIXER
 	description = "A slimy liquid which can be used to heal bone fractures at low quantities.  Toxic in high quantities."
 	taste_description = "slime"
 	overdose = 5
 
 /datum/reagent/peridaxon/slime
 	name = "Agent C"
-	id = "slime_organ_fixer"
+	id = REAGENT_ID_SLIMEORGANFIXER
 	description = "A slimy liquid which is used to encourage recovery of internal organs and nervous systems in low quantities.  Toxic in high quantities."
 	taste_description = "slime"
 	overdose = 5

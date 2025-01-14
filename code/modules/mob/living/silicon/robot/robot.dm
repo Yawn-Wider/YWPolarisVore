@@ -24,6 +24,7 @@
 	var/crisis //Admin-settable for combat module use.
 	var/crisis_override = 0
 	var/integrated_light_power = 6
+	var/robotdecal_on = 0
 	var/datum/wires/robot/wires
 
 	can_be_antagged = TRUE
@@ -130,6 +131,11 @@
 	can_buckle = TRUE
 	buckle_movable = TRUE
 	buckle_lying = FALSE
+
+	var/list/vore_light_states = list() //Robot exclusive
+	vore_capacity_ex = list()
+	vore_fullness_ex = list()
+	vore_icon_bellies = list()
 
 /mob/living/silicon/robot/New(loc, var/unfinished = 0)
 	spark_system = new /datum/effect/effect/system/spark_spread()
@@ -348,6 +354,8 @@
 			sprite_datum = module_sprites[1]
 			sprite_datum.do_equipment_glamour(module)
 			return
+	if(mind)
+		sprite_name = mind.name
 	if(!selecting_module)
 		var/datum/tgui_module/robot_ui_module/ui = new(src)
 		ui.tgui_interact(src)
@@ -396,11 +404,9 @@
 		else
 			flavor_text = client.prefs.flavour_texts_robot["Default"]
 		// Vorestation Edit: and meta info
-		var/meta_info = client.prefs.metadata
-		if (meta_info)
-			ooc_notes = meta_info
-			ooc_notes_likes = client.prefs.metadata_likes
-			ooc_notes_dislikes = client.prefs.metadata_dislikes
+		ooc_notes = client.prefs.read_preference(/datum/preference/text/living/ooc_notes)
+		ooc_notes_likes = client.prefs.read_preference(/datum/preference/text/living/ooc_notes_likes)
+		ooc_notes_dislikes = client.prefs.read_preference(/datum/preference/text/living/ooc_notes_dislikes)
 		custom_link = client.prefs.custom_link
 
 /mob/living/silicon/robot/verb/namepick()
@@ -436,6 +442,13 @@
 	lights_on = !lights_on
 	to_chat(usr, span_filter_notice("You [lights_on ? "enable" : "disable"] your integrated light."))
 	handle_light()
+	update_icon()
+
+/mob/living/silicon/robot/verb/toggle_robot_decals() // loads overlay UNDER lights.
+	set category = "Abilities.Silicon"
+	set name = "Toggle extras"
+	robotdecal_on = !robotdecal_on
+	to_chat(usr, span_filter_notice("You [robotdecal_on ? "enable" : "disable"] your extra apperances."))
 	update_icon()
 
 /mob/living/silicon/robot/verb/spark_plug() //So you can still sparkle on demand without violence.
@@ -775,6 +788,9 @@
 	updatename("Default")
 	has_recoloured = FALSE
 	robotact?.update_static_data_for_all_viewers()
+	vore_capacity_ex = list()
+	vore_fullness_ex = list()
+	vore_light_states = list()
 
 /mob/living/silicon/robot/proc/ColorMate()
 	set name = "Recolour Module"
@@ -816,7 +832,7 @@
 				to_chat(user, span_filter_notice("You remove \the [broken_device]."))
 				user.put_in_active_hand(broken_device)
 
-		if(istype(user,/mob/living/carbon/human) && !opened)
+		if(ishuman(user) && !opened)
 			var/mob/living/carbon/human/H = user
 			//Adding borg petting. Help intent pets if preferences allow, Disarm intent taps and Harm is punching(no damage)
 			switch(H.a_intent)
@@ -870,12 +886,12 @@
 	//check if it doesn't require any access at all
 	if(check_access(null))
 		return 1
-	if(istype(M, /mob/living/carbon/human))
+	if(ishuman(M))
 		var/mob/living/carbon/human/H = M
 		//if they are holding or wearing a card that has access, that works
 		if(check_access(H.get_active_hand()) || check_access(H.wear_id))
 			return 1
-	else if(istype(M, /mob/living/silicon/robot))
+	else if(isrobot(M))
 		var/mob/living/silicon/robot/R = M
 		if(check_access(R.get_active_hand()) || istype(R.get_active_hand(), /obj/item/card/robot))
 			return TRUE
@@ -918,52 +934,24 @@
 		old_x = sprite_datum.pixel_x
 
 	if(stat == CONSCIOUS)
-		var/belly_size = 0
-		if(sprite_datum.has_vore_belly_sprites && vore_selected.belly_overall_mult != 0)
-			if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
-				if(sleeper_state)
-					belly_size = sprite_datum.max_belly_size
-			else if(vore_selected.silicon_belly_overlay_preference == "Vorebelly" || vore_selected.silicon_belly_overlay_preference == "Both")
-				if(sleeper_state && vore_selected.silicon_belly_overlay_preference == "Both")
-					belly_size += 1
-				if(LAZYLEN(vore_selected.contents) > 0)
-					for(var/borgfood in vore_selected.contents) //"inspired" (kinda copied) from Chompstation's belly fullness system's procs
-						if(istype(borgfood, /mob/living))
-							if(vore_selected.belly_mob_mult <= 0) //If mobs dont contribute, dont calculate further
-								continue
-							var/mob/living/prey = borgfood //typecast to living
-							belly_size += (prey.size_multiplier / size_multiplier) / vore_selected.belly_mob_mult //Smaller prey are less filling to larger bellies
-						else if(istype(borgfood, /obj/item))
-							if(vore_selected.belly_item_mult <= 0) //If items dont contribute, dont calculate further
-								continue
-							var/obj/item/junkfood = borgfood //typecast to item
-							var/fullness_to_add = 0
-							switch(junkfood.w_class)
-								if(ITEMSIZE_TINY)
-									fullness_to_add = ITEMSIZE_COST_TINY
-								if(ITEMSIZE_SMALL)
-									fullness_to_add = ITEMSIZE_COST_SMALL
-								if(ITEMSIZE_NORMAL)
-									fullness_to_add = ITEMSIZE_COST_NORMAL
-								if(ITEMSIZE_LARGE)
-									fullness_to_add = ITEMSIZE_COST_LARGE
-								if(ITEMSIZE_HUGE)
-									fullness_to_add = ITEMSIZE_COST_HUGE
-								else
-									fullness_to_add = ITEMSIZE_COST_NO_CONTAINER
-							belly_size += (fullness_to_add / 32) //* vore_selected.overlay_item_multiplier //Enable this later when vorepanel is reworked.
-						else
-							belly_size += 1 //if it's not a person, nor an item... lets just go with 1
-
-					belly_size *= vore_selected.belly_overall_mult //Enable this after vore panel rework
-					belly_size = round(belly_size, 1)
-					belly_size = clamp(belly_size, 0, sprite_datum.max_belly_size) //Value from 0 to however many bellysizes the borg has
-
-		if(belly_size > 0) //Borgs probably only have 1 belly size. but here's support for larger ones if that changes.
-			if(resting && sprite_datum.has_vore_belly_resting_sprites)
-				add_overlay(sprite_datum.get_belly_resting_overlay(src, belly_size))
-			else if(!resting)
-				add_overlay(sprite_datum.get_belly_overlay(src, belly_size))
+		update_fullness()
+		for(var/belly_class in vore_fullness_ex)
+			reset_belly_lights(belly_class)
+			var/vs_fullness = vore_fullness_ex[belly_class]
+			if(belly_class == "sleeper" && sleeper_state == 0 && vore_selected.silicon_belly_overlay_preference == "Sleeper") continue
+			if(belly_class == "sleeper" && sleeper_state != 0 && !(vs_fullness + 1 > vore_capacity_ex[belly_class]))
+				if(vore_selected.silicon_belly_overlay_preference == "Sleeper")
+					vs_fullness = vore_capacity_ex[belly_class]
+				else if(vore_selected.silicon_belly_overlay_preference == "Both")
+					vs_fullness += 1
+			if(!vs_fullness > 0) continue
+			if(resting)
+				if(!sprite_datum.has_vore_belly_resting_sprites)
+					continue
+				add_overlay(sprite_datum.get_belly_resting_overlay(src, vs_fullness, belly_class))
+			else
+				update_belly_lights(belly_class)
+				add_overlay(sprite_datum.get_belly_overlay(src, vs_fullness, belly_class))
 
 		sprite_datum.handle_extra_icon_updates(src)			// Various equipment-based sprites go here.
 
@@ -975,6 +963,12 @@
 				var/eyes_overlay = sprite_datum.get_eyes_overlay(src)
 				if(eyes_overlay)
 					add_overlay(eyes_overlay)
+
+		if(robotdecal_on && sprite_datum.has_robotdecal_sprites)
+			if(!shell || deployed) // Shell borgs that are not deployed will have no eyes.
+				var/robotdecal_overlay = sprite_datum.get_robotdecal_overlay(src)
+				if(robotdecal_overlay)
+					add_overlay(robotdecal_overlay)
 
 		if(lights_on && sprite_datum.has_eye_light_sprites)
 			if(!shell || deployed) // Shell borgs that are not deployed will have no eyes.
@@ -1150,7 +1144,7 @@
 			if(first_arg != second_arg)
 				to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - [braintype] reclassification detected: [first_arg] is now designated as [second_arg].") + "<br>"))
 		if(ROBOT_NOTIFICATION_AI_SHELL) //New Shell
-			to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - New AI shell detected: <a href='?src=[REF(connected_ai)];track2=[html_encode(name)]'>[name]</a>") + "<br>"))
+			to_chat(connected_ai, span_filter_notice("<br><br>" + span_notice("NOTICE - New AI shell detected: <a href='byond://?src=[REF(connected_ai)];track2=[html_encode(name)]'>[name]</a>") + "<br>"))
 
 /mob/living/silicon/robot/proc/disconnect_from_ai()
 	if(connected_ai)
@@ -1457,7 +1451,7 @@
 		else
 			return FALSE
 	if(given_type == /obj/item/borg/upgrade/restricted/tasercooler)
-		var/obj/item/gun/energy/taser/mounted/cyborg/T = has_upgrade_module(/obj/item/gun/energy/taser/mounted/cyborg)
+		var/obj/item/gun/energy/robotic/taser/T = has_upgrade_module(/obj/item/gun/energy/robotic/taser)
 		if(T && T.recharge_time <= 2)
 			return T
 		else if(!T)
@@ -1501,3 +1495,12 @@
 			robotact?.update_static_data_for_all_viewers()
 
 	. = ..()
+
+/// This proc checks to see if a borg has access to whatever they're interacting with
+/obj/proc/siliconaccess(mob/user)
+	var/mob/living/silicon/robot/R = user
+	if(istype(R))
+		return check_access(R.idcard)
+	if(issilicon(user))
+		return TRUE
+	return FALSE

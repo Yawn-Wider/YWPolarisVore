@@ -35,7 +35,6 @@ var/list/admin_verbs_admin = list(
 	/datum/admins/proc/announce,		//priority announce something to all clients.,
 	/datum/admins/proc/intercom,		//send a fake intercom message, like an arrivals announcement,
 	/datum/admins/proc/intercom_convo,	//send a fake intercom conversation, like an ATC exchange,
-	/client/proc/colorooc,				//allows us to set a custom colour for everythign we say in ooc,
 	/client/proc/admin_ghost,			//allows us to ghost/reenter body at will,
 	/datum/admins/proc/show_player_panel,	//shows an interface for individual players, with various links (links require additional flags, //VOREStation Add,
 	/client/proc/player_panel_new, //shows an interface for all players, with links to various panels, //VOREStation Add,
@@ -283,6 +282,8 @@ var/list/admin_verbs_debug = list(
 	/datum/admins/proc/set_uplink, //VOREStation Add,
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
+	/client/proc/cmd_regenerate_asset_cache,
+	/client/proc/cmd_clear_smart_asset_cache,
 	/client/proc/admin_give_modifier,
 	/client/proc/simple_DPS,
 	/datum/admins/proc/view_feedback,
@@ -315,7 +316,6 @@ var/list/admin_verbs_hideable = list(
 	/datum/admins/proc/toggleenter,
 	/datum/admins/proc/toggleguests,
 	/datum/admins/proc/announce,
-	/client/proc/colorooc,
 	/client/proc/admin_ghost,
 	/client/proc/toggle_view_range,
 	/datum/admins/proc/view_txt_log,
@@ -405,7 +405,6 @@ var/list/admin_verbs_mod = list(
 	/client/proc/cmd_event_say,
 	/datum/admins/proc/show_player_info,
 	/datum/admins/proc/show_traitor_panel,
-	/client/proc/colorooc,
 	/client/proc/player_panel_new,
 	/client/proc/dsay,
 	/datum/admins/proc/show_player_panel,
@@ -455,6 +454,8 @@ var/list/admin_verbs_event_manager = list(
 	/proc/release,
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
+	/client/proc/cmd_regenerate_asset_cache,
+	/client/proc/cmd_clear_smart_asset_cache,
 	/client/proc/admin_give_modifier,
 	/client/proc/Jump,
 	/client/proc/jumptomob,
@@ -482,6 +483,8 @@ var/list/admin_verbs_event_manager = list(
 	// /client/proc/show_gm_status,  // VOREStation Edit - We don't use SSgame_master yet.
 	/datum/admins/proc/change_weather,
 	/datum/admins/proc/change_time,
+	/client/proc/cmd_regenerate_asset_cache,
+	/client/proc/cmd_clear_smart_asset_cache,
 	/client/proc/admin_give_modifier,
 	/datum/admins/proc/cmd_admin_dress,
 	/client/proc/cmd_admin_gib_self,
@@ -495,7 +498,6 @@ var/list/admin_verbs_event_manager = list(
 	/datum/admins/proc/announce,            //priority announce something to all clients.,
 	/datum/admins/proc/intercom,            //send a fake intercom message, like an arrivals announcement,
 	/datum/admins/proc/intercom_convo,      //send a fake intercom conversation, like an ATC exchange,
-	/client/proc/colorooc,                          //allows us to set a custom colour for everythign we say in ooc,
 	/client/proc/admin_ghost,                       //allows us to ghost/reenter body at will,
 	/client/proc/toggle_view_range,         //changes how far we can see,
 	/client/proc/cmd_admin_pm_context,      //right-click adminPM interface,
@@ -567,7 +569,9 @@ var/list/admin_verbs_event_manager = list(
 	/client/proc/toggle_spawning_with_recolour,
 	/client/proc/start_vote,
 	/client/proc/AdminCreateVirus,
-	/client/proc/ReleaseVirus
+	/client/proc/ReleaseVirus,
+	/client/proc/add_hidden_area,
+	/client/proc/remove_hidden_area
 )
 
 /client/proc/add_admin_verbs()

@@ -545,7 +545,7 @@ YW change end */
 	cost = 0
 	custom_only = FALSE
 	var_changes = list("chem_strength_alcohol" = 1)
-	allowed_species = list(SPECIES_SKRELL,SPECIES_TAJ,SPECIES_UNATHI,SPECIES_DIONA,SPECIES_PROMETHEAN)
+	allowed_species = list(SPECIES_SKRELL,SPECIES_TAJARAN,SPECIES_UNATHI,SPECIES_DIONA,SPECIES_PROMETHEAN)
 
 /datum/trait/neutral/alcohol_tolerance_basic
 	name = "Liver of Iron"

@@ -75,7 +75,8 @@
 	cost = -1
 	var_changes = list("brute_mod" = 1.1) //YW EDIT
 	custom_only = FALSE
-	banned_species = list(SPECIES_TESHARI, SPECIES_TAJ, SPECIES_ZADDAT, SPECIES_SHADEKIN_CREW) //These are already this weak.
+	var_changes = list("brute_mod" = 1.1) //YW EDIT
+	banned_species = list(SPECIES_TESHARI, SPECIES_TAJARAN, SPECIES_ZADDAT, SPECIES_SHADEKIN_CREW) //These are already this weak.
 
 /datum/trait/negative/brute_weak
 	name = "Brute Weakness"

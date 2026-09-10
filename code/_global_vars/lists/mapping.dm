@@ -31,19 +31,21 @@ GLOBAL_LIST_INIT(cww_dir, list( // cww_dir[dir] = counter-clockwise rotation of 
 	48, 56, 52, 60, 49, 57, 53, 61, 50, 58, 54, 62, 51, 59, 55, 63  // UP+DOWN - Same as first line but +48
 ))
 
+// YW Addtion Start
 GLOBAL_LIST_INIT(ore_types, list(
-	"hematite" = /obj/item/weapon/ore/iron,
-	"uranium" = /obj/item/weapon/ore/uranium,
-	"gold" = /obj/item/weapon/ore/gold,
-	"silver" = /obj/item/weapon/ore/silver,
-	"diamond" = /obj/item/weapon/ore/diamond,
-	"phoron" = /obj/item/weapon/ore/phoron,
-	"platinum" = /obj/item/weapon/ore/osmium,
-	"mhydrogen" = /obj/item/weapon/ore/hydrogen,
-	"silicates" = /obj/item/weapon/ore/glass,
-	"carbon" = /obj/item/weapon/ore/coal,
-	"verdantium" = /obj/item/weapon/ore/verdantium,
-	"marble" = /obj/item/weapon/ore/marble,
-	"lead" = /obj/item/weapon/ore/lead,
-	"rutile" = /obj/item/weapon/ore/rutile //VOREStation Add
+	"hematite" = /obj/item/ore/iron,
+	"uranium" = /obj/item/ore/uranium,
+	"gold" = /obj/item/ore/gold,
+	"silver" = /obj/item/ore/silver,
+	"diamond" = /obj/item/ore/diamond,
+	"phoron" = /obj/item/ore/phoron,
+	"platinum" = /obj/item/ore/osmium,
+	"mhydrogen" = /obj/item/ore/hydrogen,
+	"silicates" = /obj/item/ore/glass,
+	"carbon" = /obj/item/ore/coal,
+	"verdantium" = /obj/item/ore/verdantium,
+	"marble" = /obj/item/ore/marble,
+	"lead" = /obj/item/ore/lead,
+	"rutile" = /obj/item/ore/rutile //VOREStation Add
 ))
+// YW addition End

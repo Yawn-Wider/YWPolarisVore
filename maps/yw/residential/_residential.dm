@@ -69,7 +69,7 @@ var/global/list/latejoin_residential = list()
 
 /datum/spawnpoint/residential
 	display_name = "NCS Serenity Residential"
-	restrict_job = list("Off-duty Worker", "Off-duty Cargo", "Off-duty Engineer", "Off-duty Medic", "Off-duty Scientist", "Off-duty Officer", USELESS_JOB)
+	restrict_job = list("Off-duty Worker", "Off-duty Cargo", "Off-duty Engineer", "Off-duty Medic", "Off-duty Scientist", "Off-duty Officer", JOB_ALT_VISITOR)
 	msg = "has arrived on the NCS Serenity Residential level"
 	announce_channel = "Common"
 

@@ -54,6 +54,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/permit_healbelly = TRUE
 	var/noisy = FALSE
 	var/eating_privacy_global = FALSE //Makes eating attempt/success messages only reach for subtle range if true, overwritten by belly-specific var
+	var/allow_mimicry = TRUE
 
 	// These are 'modifier' prefs, do nothing on their own but pair with drop_prey/drop_pred settings.
 	var/drop_vore = TRUE
@@ -70,6 +71,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	var/pickup_pref = TRUE
 
 	var/vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+	var/allow_mind_transfer = FALSE
 
 	var/list/belly_prefs = list()
 	var/vore_taste = "nothing in particular"
@@ -195,7 +197,9 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 	weight_message_visible = json_from_file["weight_message_visible"]
 	weight_messages = json_from_file["weight_messages"]
 	eating_privacy_global = json_from_file["eating_privacy_global"]
+	allow_mimicry = json_from_file["allow_mimicry"]
 	vore_sprite_color = json_from_file["vore_sprite_color"]
+	allow_mind_transfer = json_from_file["allow_mind_transfer"]
 
 	//Quick sanitize
 	if(isnull(digestable))
@@ -252,6 +256,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 		weight_message_visible = TRUE
 	if(isnull(eating_privacy_global))
 		eating_privacy_global = FALSE
+	if(isnull(allow_mimicry))
+		allow_mimicry = TRUE
 	if(isnull(nutrition_messages))
 		nutrition_messages = list(
 							"They are starving! You can hear their stomach snarling from across the room!",
@@ -284,6 +290,8 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			weight_messages.Add("")
 	if(isnull(vore_sprite_color))
 		vore_sprite_color = list("stomach" = "#000", "taur belly" = "#000")
+	if(isnull(allow_mind_transfer))
+		allow_mind_transfer = FALSE
 	return TRUE
 
 /datum/vore_preferences/proc/save_vore()
@@ -317,6 +325,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"slip_vore"				= slip_vore,
 			"stumble_vore"			= stumble_vore,
 			"throw_vore" 			= throw_vore,
+			"allow_mind_transfer"	= allow_mind_transfer,
 			"food_vore" 			= food_vore,
 			"digest_pain"			= digest_pain,
 			"nutrition_message_visible"	= nutrition_message_visible,
@@ -324,6 +333,7 @@ V::::::V           V::::::VO:::::::OOO:::::::ORR:::::R     R:::::REE::::::EEEEEE
 			"weight_message_visible"	= weight_message_visible,
 			"weight_messages"			= weight_messages,
 			"eating_privacy_global"		= eating_privacy_global,
+			"allow_mimicry"				= allow_mimicry,
 			"vore_sprite_color"		= vore_sprite_color,
 		)
 

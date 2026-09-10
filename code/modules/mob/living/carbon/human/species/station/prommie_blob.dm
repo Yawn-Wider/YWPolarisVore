@@ -12,13 +12,15 @@
 	//appearance_flags = RADIATION_GLOWS
 	shock_resist = 0 // Lets not be immune to zaps.
 	friendly = list("nuzzles", "glomps", "snuggles", "cuddles", "squishes") // lets be cute :3
-	melee_damage_upper = 0
-	melee_damage_lower = 0
+	harm_intent_damage = 3
+	melee_damage_lower = 5
+	melee_damage_upper = 5
 	player_msg = "You're a little squisher! Your cuteness level has increased tenfold."
 	heat_damage_per_tick = 20 // Hot and cold are bad, but cold is AS bad for prommies as it is for slimes.
 	cold_damage_per_tick = 20
 	//glow_range = 0
 	//glow_intensity = 0
+	has_hands = 1  // brings in line with Proteans' own blob form.
 
 	var/mob/living/carbon/human/humanform
 	var/datum/modifier/healing
@@ -42,15 +44,14 @@
 		/decl/emote/visible/floorspin
 	)
 /mob/living/simple_mob/slime/promethean/Initialize(mapload, null)
-	//verbs -= /mob/living/proc/ventcrawl
-	verbs += /mob/living/simple_mob/slime/promethean/proc/prommie_blobform
-	verbs += /mob/living/proc/set_size
-	verbs += /mob/living/proc/hide
-	verbs += /mob/living/simple_mob/proc/animal_nom
-	verbs += /mob/living/proc/shred_limb
-	verbs += /mob/living/simple_mob/slime/promethean/proc/toggle_expand
-	verbs += /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour
-	verbs += /mob/living/simple_mob/slime/promethean/proc/toggle_shine
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_blobform)
+	add_verb(src, /mob/living/proc/set_size)
+	add_verb(src, /mob/living/proc/hide)
+	add_verb(src, /mob/living/simple_mob/proc/animal_nom)
+	add_verb(src, /mob/living/proc/shred_limb)
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_expand)
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour)
+	add_verb(src, /mob/living/simple_mob/slime/promethean/proc/toggle_shine)
 	update_mood()
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
@@ -81,12 +82,19 @@
 		QDEL_NULL(stored_blob)
 	return ..()
 
-/mob/living/simple_mob/slime/promethean/Stat()
-	..()
+/mob/living/simple_mob/slime/promethean/update_misc_tabs()
+	. = ..()
 	if(humanform)
-		humanform.species.Stat(humanform)
+		humanform.species.update_misc_tabs(src)
 
 /mob/living/simple_mob/slime/promethean/handle_special() // Should disable default slime healing, we'll use nutrition based heals instead.
+// They already heal from their carbon form while even in slime form, but this is for a small bonus healing for being unformed.
+	adjustOxyLoss(-0.2)
+	adjustToxLoss(-0.2)
+	adjustFireLoss(-0.2)
+	adjustCloneLoss(-0.2)
+	adjustBruteLoss(-0.2)
+	adjustHalLoss(-6) // HalLoss ticks down FAST
 	if(rad_glow)
 		rad_glow = CLAMP(rad_glow,0,250)
 		set_light(max(1,min(5,rad_glow/15)), max(1,min(10,rad_glow/25)), color)
@@ -236,25 +244,25 @@
 /mob/living/simple_mob/slime/promethean/proc/prommie_blobform()
 	set name = "Toggle Blobform"
 	set desc = "Switch between amorphous and humanoid forms."
-	set category = "Abilities"
+	set category = "Abilities.Promethean"
 	set hidden = FALSE
 
 	var/atom/movable/to_locate = src
 	if(!isturf(to_locate.loc))
-		to_chat(src,"<span class='warning'>You need more space to perform this action!</span>")
+		to_chat(src,span_warning("You need more space to perform this action!"))
 		return
 
 	//Blob form
 	if(!ishuman(src))
 		if(humanform.temporary_form.stat || paralysis || stunned || weakened || restrained())
-			to_chat(src,"<span class='warning'>You can only do this while not stunned.</span>")
+			to_chat(src,span_warning("You can only do this while not stunned."))
 		else
 			humanform.prommie_outofblob(src)
 
 /mob/living/simple_mob/slime/promethean/proc/toggle_expand()
 	set name = "Toggle Width"
 	set desc = "Switch between smole and lorge."
-	set category = "Abilities"
+	set category = "Abilities.Promethean"
 	set hidden = FALSE
 
 	if(stat || world.time < last_special)
@@ -264,17 +272,17 @@
 
 	if(is_wide)
 		is_wide = FALSE
-		src.visible_message("<b>[src.name]</b> pulls together, compacting themselves into a small ball!")
+		src.visible_message(span_infoplain(span_bold("[src.name]") + " pulls together, compacting themselves into a small ball!"))
 		update_icon()
 	else
 		is_wide = TRUE
-		src.visible_message("<b>[src.name]</b> flows outwards, their goop expanding!")
+		src.visible_message(span_infoplain(span_bold("[src.name]") + " flows outwards, their goop expanding!"))
 		update_icon()
 
 /mob/living/simple_mob/slime/promethean/proc/toggle_shine()
 	set name = "Toggle Shine"
 	set desc = "Shine on you crazy diamond."
-	set category = "Abilities"
+	set category = "Abilities.Promethean"
 	set hidden = FALSE
 
 	if(stat || world.time < last_special)
@@ -284,24 +292,24 @@
 
 	if(shiny)
 		shiny = FALSE
-		src.visible_message("<b>[src.name]</b> dulls their shine, becoming more translucent.")
+		src.visible_message(span_infoplain(span_bold("[src.name]") + " dulls their shine, becoming more translucent."))
 		update_icon()
 	else
 		shiny = TRUE
-		src.visible_message("<b>[src.name]</b> glistens and sparkles, shining brilliantly.")
+		src.visible_message(span_infoplain(span_bold("[src.name]") + " glistens and sparkles, shining brilliantly."))
 		update_icon()
 
 /mob/living/simple_mob/slime/promethean/proc/prommie_select_colour()
 
 	set name = "Select Body Colour"
-	set category = "Abilities"
+	set category = "Abilities.Promethean"
 
 	if(stat || world.time < last_special)
 		return
 
 	last_special = world.time + 25
 
-	var/new_skin = input(usr, "Please select a new body color.", "Shapeshifter Colour", color) as null|color
+	var/new_skin = input(src, "Please select a new body color.", "Shapeshifter Colour", color) as null|color
 	if(!new_skin)
 		return
 	color = new_skin
@@ -326,7 +334,7 @@
 // Helpers - Unsafe, WILL perform change.
 /mob/living/carbon/human/proc/prommie_intoblob(force)
 	if(!force && !isturf(loc))
-		to_chat(src,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(src,span_warning("You can't change forms while inside something."))
 		return
 
 	handle_grasp() //It's possible to blob out before some key parts of the life loop. This results in things getting dropped at null. TODO: Fix the code so this can be done better.
@@ -369,25 +377,14 @@
 			drop_from_inventory(H)
 			things_to_drop -= H
 
-	for(var/obj/item/I in things_to_drop) //rip hoarders
-		drop_from_inventory(I)
-
-	if(w_uniform && istype(w_uniform,/obj/item/clothing)) //No webbings tho. We do this after in case a suit was in the way
-		var/obj/item/clothing/uniform = w_uniform
-		if(LAZYLEN(uniform.accessories))
-			for(var/obj/item/clothing/accessory/A in uniform.accessories)
-				if(is_type_in_list(A, disallowed_protean_accessories))
-					uniform.remove_accessory(null,A) //First param is user, but adds fingerprints and messages
-
 	//Size update
 	blob.transform = matrix()*size_multiplier
 	blob.size_multiplier = size_multiplier
 
-	if(l_hand) blob.prev_left_hand = l_hand //Won't save them if dropped above, but necessary if handdrop is disabled.
-	if(r_hand) blob.prev_right_hand = r_hand
+	if(l_hand) drop_from_inventory(l_hand)
+	if(r_hand) drop_from_inventory(r_hand)
 
 	//Put our owner in it (don't transfer var/mind)
-	blob.Weaken(2)
 	blob.transforming = TRUE
 	blob.ckey = ckey
 	blob.ooc_notes = ooc_notes
@@ -395,6 +392,7 @@
 	blob.ooc_notes_dislikes = ooc_notes_dislikes
 	blob.transforming = FALSE
 	blob.name = name
+	blob.real_name = real_name
 	blob.nutrition = nutrition
 	blob.color = rgb(r_skin, g_skin, b_skin)
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
@@ -409,14 +407,26 @@
 		new_hat.forceMove(src)
 
 	blob.update_icon()
-	blob.verbs -= /mob/living/proc/ventcrawl // Absolutely not.
-	blob.verbs -= /mob/living/simple_mob/proc/set_name // We already have a name.
+	remove_verb(blob, /mob/living/proc/ventcrawl) // Absolutely not.
+	remove_verb(blob, /mob/living/simple_mob/proc/set_name) // We already have a name.
 	temporary_form = blob
+
+	var/obj/item/radio/R = null
+	if(isradio(l_ear))
+		R = l_ear
+	if(isradio(r_ear))
+		R = r_ear
+	if(R)
+		blob.mob_radio = R
+		R.forceMove(blob)
+	if(wear_id)
+		blob.myid = wear_id.GetID()
+
 	//Mail them to nullspace
 	moveToNullspace()
 
 	//Message
-	blob.visible_message("<b>[src.name]</b> squishes into their true form!")
+	blob.visible_message(span_infoplain(span_bold("[src.name]") + " squishes into their true form!"))
 
 	//Transfer vore organs
 	blob.vore_organs = vore_organs
@@ -436,7 +446,7 @@
 		return
 
 	if(!force && !isturf(blob.loc))
-		to_chat(blob,"<span class='warning'>You can't change forms while inside something.</span>")
+		to_chat(blob,span_warning("You can't change forms while inside something."))
 		return
 
 	if(buckled)
@@ -449,7 +459,7 @@
 	stop_pulling()
 
 	//Message
-	blob.visible_message("<b>[src.name]</b> pulls together, forming a humanoid shape!")
+	blob.visible_message(span_infoplain(span_bold("[src.name]") + " pulls together, forming a humanoid shape!"))
 
 	//Record where they should go
 	var/atom/reform_spot = blob.drop_location()
@@ -461,7 +471,6 @@
 	forceMove(reform_spot)
 
 	//Put our owner in it (don't transfer var/mind)
-	Weaken(2)
 	playsound(src.loc, "sound/effects/slime_squish.ogg", 15)
 	transforming = TRUE
 	ckey = blob.ckey
@@ -494,8 +503,15 @@
 		B.owner = src
 
 	//vore_organs.Cut()
-	if(blob.prev_left_hand) put_in_l_hand(blob.prev_left_hand) //The restore for when reforming.
-	if(blob.prev_right_hand) put_in_r_hand(blob.prev_right_hand)
+
+	if(blob.l_hand) blob.drop_from_inventory(blob.l_hand)
+	if(blob.r_hand) blob.drop_from_inventory(blob.r_hand)
+
+	if(blob.mob_radio)
+		blob.mob_radio.forceMove(src)
+		blob.mob_radio = null
+	if(blob.myid)
+		blob.myid = null
 
 	Life(1) //Fix my blindness right meow //Has to be moved up here, there exists a circumstance where blob could be deleted without vore organs moving right.
 
@@ -523,3 +539,8 @@
 	else if(humanform.say_understands(other, speaking))		//So they're speaking something other than promethean or sign, let's just ask our original mob if it understands
 		return TRUE
 	else return FALSE
+
+/mob/living/simple_mob/slime/promethean/character_directory_species()
+	if (humanform)
+		return "[humanform.custom_species ? humanform.custom_species : (humanform.species ? humanform.species.name : "Promethean Blob")]"
+	return "Promethean Blob"

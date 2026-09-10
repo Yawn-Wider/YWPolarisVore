@@ -11,13 +11,13 @@ obj/item/weapon/shield/riot/stun
 	w_class = ITEMSIZE_NORMAL
 	var/active = 0
 /*
-/obj/item/weapon/shield/energy/IsShield()
+/obj/item/shield/energy/IsShield()
 	if(active)
 		return 1
 	else
 		return 0
 */
-/obj/item/weapon/shield/riot/tele/attack_self(mob/living/user)
+/obj/item/shield/riot/tele/attack_self(mob/living/user)
 	active = !active
 	icon_state = "teleriot[active]"
 	playsound(src.loc, 'sound/weapons/empty.ogg', 50, 1)
@@ -44,4 +44,3 @@ obj/item/weapon/shield/riot/stun
 
 	add_fingerprint(user)
 	return
-

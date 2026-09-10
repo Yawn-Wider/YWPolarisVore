@@ -25,13 +25,15 @@
 	melee_damage_lower = 5
 	melee_damage_upper = 12
 
-	meat_type = /obj/item/weapon/reagent_containers/food/snacks/meat
+	meat_type = /obj/item/reagent_containers/food/snacks/meat
 	meat_amount = 5
 
 	minbodytemp = 200
 
 	ai_holder_type = /datum/ai_holder/simple_mob/melee/evasive
 	catalogue_data = list(/datum/category_item/catalogue/fauna/wolf)
+
+	allow_mind_transfer = TRUE
 
 // Activate Noms!
 /mob/living/simple_mob/vore/wolf
@@ -100,8 +102,8 @@
 	. = ..()
 	if(!riding_datum)
 		riding_datum = new /datum/riding/simple_mob(src)
-	verbs |= /mob/living/simple_mob/proc/animal_mount
-	verbs |= /mob/living/proc/toggle_rider_reins
+	add_verb(src, /mob/living/simple_mob/proc/animal_mount)
+	add_verb(src, /mob/living/proc/toggle_rider_reins)
 	movement_cooldown = -1
 
 /mob/living/simple_mob/vore/wolf/direwolf/MouseDrop_T(mob/living/M, mob/living/user)
@@ -141,7 +143,7 @@
 	icon_living = "rykka"
 	icon_state = "rykka"
 	icon_rest = "rykka_rest"
-	faction = "underdark"
+	faction = FACTION_UNDERDARK
 	has_eye_glow = TRUE
 
 	min_oxy = 0

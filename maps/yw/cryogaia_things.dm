@@ -320,17 +320,17 @@
 	desc = "Wall-mounted Medical Equipment dispenser. This limited-use version dispenses antitoxins with mild painkillers for surface EVAs."
 	icon_state = "wallmed"
 	density = 0 //It is wall-mounted, and thus, not dense. --Superxpdude
-	products = list(/obj/item/weapon/reagent_containers/pill/airlock = 10,/obj/item/device/healthanalyzer = 1)
-	contraband = list(/obj/item/weapon/reagent_containers/pill/tox = 2)
+	products = list(/obj/item/reagent_containers/pill/airlock = 10,/obj/item/healthanalyzer = 1)
+	contraband = list(/obj/item/reagent_containers/pill/tox = 2)
 	req_log_access = access_cmo
 	has_logs = 1
 
-/obj/item/weapon/reagent_containers/pill/airlock
+/obj/item/reagent_containers/pill/airlock
 	name = "\'Airlock\' Pill"
 	desc = "Neutralizes toxins and provides a mild analgesic effect."
 	icon_state = "pill2"
 
-/obj/item/weapon/reagent_containers/pill/airlock/New()
+/obj/item/reagent_containers/pill/airlock/New()
 	..()
 	reagents.add_reagent("anti_toxin", 15)
 	reagents.add_reagent("paracetamol", 5)
@@ -369,15 +369,15 @@
 	//Associate objects with the number of seconds it would take to de-ice a door.
 	//Most items are either more or less effecient at it.
 	//For items with very specific cases (like welders using fuel, or needing to be on) see attackby().
-	deiceTools[/obj/item/weapon/ice_pick] = 3 //Ice Pick
-	deiceTools[/obj/item/weapon/tool/crowbar] = 5 //Crowbar
-	deiceTools[/obj/item/weapon/pen] = 30 //Pen
-	deiceTools[/obj/item/weapon/card] = 35 //Cards. (Mostly ID cards)
+	deiceTools[/obj/item/ice_pick] = 3 //Ice Pick
+	deiceTools[/obj/item/tool/crowbar] = 5 //Crowbar
+	deiceTools[/obj/item/pen] = 30 //Pen
+	deiceTools[/obj/item/card] = 35 //Cards. (Mostly ID cards)
 
 	//Generic weapon items. Tools are better then weapons.
 	//This is for preventing "Sierra" syndrome that could result from needing very specific objects.
-	deiceTools[/obj/item/weapon/tool] = 10
-	deiceTools[/obj/item/weapon] = 12
+	deiceTools[/obj/item/tool] = 10
+	deiceTools[/obj/item] = 12
 	..()
 
 /obj/machinery/door/airlock/glass_external/freezable/attackby(obj/item/I, mob/user as mob)
@@ -390,8 +390,8 @@
 	if(frozen)
 
 		//the welding tool is a special snowflake.
-		if(istype(I, /obj/item/weapon/weldingtool))
-			var/obj/item/weapon/weldingtool/welder = I
+		if(istype(I, /obj/item/weldingtool))
+			var/obj/item/weldingtool/welder = I
 			if(welder.remove_fuel(0,user) && welder && welder.isOn())
 				to_chat(user, "<span class='notice'>You start to melt the ice off \the [src]</span>")
 				playsound(src, welder.usesound, 50, 1)
@@ -400,7 +400,7 @@
 					unFreeze()
 					return
 
-		if(istype(I, /obj/item/weapon/pen/crayon))
+		if(istype(I, /obj/item/pen/crayon))
 			to_chat(user, "<span class='notice'>You try to use \the [I] to clear the ice, but it crumbles away!</span>")
 			qdel(I)
 			return
@@ -417,7 +417,7 @@
 		return
 	..()
 
-/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/weapon/W as obj, mob/user as mob, var/time = 15 as num)
+/obj/machinery/door/airlock/glass_external/freezable/proc/handleRemoveIce(obj/item/W as obj, mob/user as mob, var/time = 15 as num)
 	to_chat(user, "<span class='notice'>You start to chip at the ice covering \the [src]</span>")
 	if(do_after(user, text2num(time SECONDS)))
 		unFreeze()
@@ -492,9 +492,9 @@
 /obj/structure/closet/secure_closet/guncabinet/excursion/New()
 	..()
 	for(var/i = 1 to 4)
-		new /obj/item/weapon/gun/energy/locked/frontier(src)
+		new /obj/item/gun/energy/locked/frontier(src)
 	for(var/i = 1 to 4)
-		new /obj/item/weapon/gun/energy/locked/frontier/holdout(src)
+		new /obj/item/gun/energy/locked/frontier/holdout(src)
 
 // Used at centcomm for the elevator
 /obj/machinery/cryopod/robot/door/dorms
@@ -512,9 +512,9 @@
 // ### Wall Machines On Full Windows ###
 // To make sure wall-mounted machines placed on full-tile windows are clickable they must be above the window
 //
-/obj/item/device/radio/intercom
+/obj/item/radio/intercom
 	layer = ABOVE_WINDOW_LAYER
-/obj/item/weapon/storage/secure/safe
+/obj/item/storage/secure/safe
 	layer = ABOVE_WINDOW_LAYER
 /obj/machinery/airlock_sensor
 	layer = ABOVE_WINDOW_LAYER

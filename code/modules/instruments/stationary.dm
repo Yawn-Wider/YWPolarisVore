@@ -17,7 +17,7 @@
 /obj/structure/musician/attack_hand(mob/M)
 	if(!M.IsAdvancedToolUser())
 		return
-	
+
 	interact(M)
 
 /obj/structure/musician/proc/should_stop_playing(mob/user)
@@ -59,7 +59,7 @@
 		icon_state = "piano"
 
 // YW Addition: makes it so you can move the piano using the wrench
-/obj/structure/musician/piano/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/structure/musician/piano/attackby(obj/item/W as obj, mob/user as mob)
 	if(!W.is_wrench())
 		return FALSE
 	playsound(src, W.usesound, 50, 1)

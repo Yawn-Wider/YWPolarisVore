@@ -106,7 +106,7 @@ var/global/list/stationboilers = list() //Should only ever have one, caching to 
 		to_chat(user, "<span class='warning'>\The [src] cannot hold more [S.name].</span>")
 	return 1
 
-/obj/machinery/atmospherics/binary/stationboiler/attackby(obj/item/weapon/W as obj, mob/user as mob)
+/obj/machinery/atmospherics/binary/stationboiler/attackby(obj/item/W as obj, mob/user as mob)
 	add_fingerprint(user)
 	if(try_load_materials(user, W))
 		return

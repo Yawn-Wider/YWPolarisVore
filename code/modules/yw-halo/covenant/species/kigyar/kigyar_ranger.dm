@@ -25,7 +25,7 @@
 		)
 	matter = list("nanolaminate" = 1)
 	allowed = list(
-		/obj/item/weapon/tank)
+		/obj/item/tank)
 
 
 /obj/item/clothing/shoes/magboots/ranger_kigyar

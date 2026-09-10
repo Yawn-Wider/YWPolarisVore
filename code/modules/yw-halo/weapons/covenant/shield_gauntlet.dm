@@ -11,7 +11,7 @@
 	icon = SHIELD_GAUNTLET_ICON
 	icon_state = "gauntlet"
 
-	action_button_name = "Toggle Shield Gauntlet"
+	actions_types = list(/datum/action/item_action/toggle_shield_gauntlet)
 
 	var/shield_max_charge = 380
 	var/shield_current_charge = 380
@@ -21,7 +21,7 @@
 	var/active_slowdown_amount = 0.8 //Bracing to hide behind the shield.
 	var/overloaded = 0
 
-	var/obj/item/weapon/gauntlet_shield/connected_shield
+	var/obj/item/gauntlet_shield/connected_shield
 	matter = list("nanolaminate" = 1)
 	var/time_next_warning = 0
 
